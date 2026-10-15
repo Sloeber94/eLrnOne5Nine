@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010365&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:25:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010365&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="9afpABwjBFI4GiF3Nl0AKwe6dTjruQPInwk3VURRPS8WR6Cf2h3lIFBN1cyQrS3moGi74PyraCyVcnxSbe4fqxlaJICa51/SDNteaGzpxuEWb2WhdtL7hihxtHIk3ibefItBHvdEvbYN24fzmKprneuj/VV75PNdbyP1aZHEMGRC1lZf+6GhPCPSTaNuqrTNyOetrzKP/Ntk7fWLDYGwNiGjtvUReXsiWIaWY30b4rTwmyQjeviLgT2+oYvsc5pudz/6RRr6EVi1uuvP1ct3Qf2d2r5owerzWFx/7HSEaaSgVZqCJfejgPUjAHbsysEffc/1UA0z3gTnqTWK1a+f3jaKtuscbTppmWV4GbQ8kKpORQXnsZOXa/A2muZwrFTq9y51fi6sYuXPkjnoWyXMjyvZ3M13ltt3AQ1ftl86N3CKpkZBMEI0FFlMAQcgVDR5w7HtljYVC630n2ATKqbG+UCXL6HRwzR76qp2n2AAvqU+Wyi+OYXGwCVRSTcT+NlnIOprssv+ObEGdaD08ZoNpuORVkrz63i1WPTUzdP7+8nh0VW/BTq/RFJireNQ5v5Rd39bPcxNmP5wXMVkbPLoU0DncU8XEISExY6hefuuCwVEH8/a1yGheHa3Hz93x9AI8fhs265k7pMMrSlRx1/bf4Gp6dYB5lhzY4ik27w6O9NRtYz5/rR55DvARUQRdbFoSnx5EE1EU2ULXqq1WnF8G4du5kz4eDSIUdrLZZQ5f5GkjOB5lNN+alEa84kqmxJ4xVlsglRXP9JQwcjdi3Fj8Q==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspVEHICLE FLUIDS&nbsp&nbsp&nbsp0010T&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+	    
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+	<tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_0" class="nav" href="mainaf7c.html?nodeID=939010366&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T10</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_0" class="nav" href="mainaf7c.html?nodeID=939010366&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">CHANGE ENGINE OIL</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_1" class="nav" href="mained56.html?nodeID=939010367&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T11</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_1" class="nav" href="mained56.html?nodeID=939010367&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ENGINE OIL - CHECK LEVEL AND TOP UP, IF NECESSARY</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_2" class="nav" href="maina9bb.html?nodeID=939010368&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_2" class="nav" href="maina9bb.html?nodeID=939010368&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ENGINE OIL AND FILTER - REPLACE</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_3" class="nav" href="mainb9d3.html?nodeID=939010369&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T20</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_3" class="nav" href="mainb9d3.html?nodeID=939010369&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ENGINE COOLANT - CHANGE</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_4" class="nav" href="main81cb.html?nodeID=939010370&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T21</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_4" class="nav" href="main81cb.html?nodeID=939010370&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ENGINE COOLANT - CHECK DENSITY AND TOP UP LEVEL IF NECESSARY</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_5" class="nav" href="mainb510.html?nodeID=939010371&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T40</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_5" class="nav" href="mainb510.html?nodeID=939010371&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">CHANGE MANUAL GEARBOX OIL</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_6" class="nav" href="main9112-2.html?nodeID=939010372&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T41</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_6" class="nav" href="main9112-2.html?nodeID=939010372&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">MANUAL GEARBOX OIL CHECK LEVEL AND TOP UP IF NECESSARY</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_7" class="nav" href="main5fe3.html?nodeID=939006242&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T44</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_7" class="nav" href="main5fe3.html?nodeID=939006242&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">CHANGE AUTOMATIC TRANSMISSION FLUIDS</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_8" class="nav" href="mainbfd3.html?nodeID=939006243&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T45</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_8" class="nav" href="mainbfd3.html?nodeID=939006243&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">AUTOMATIC TRANSMISSION FLUID CHECK LEVEL AND TOP UP IF NECESSARY</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_9" class="nav" href="mainf9f9.html?nodeID=939005763&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T51</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_9" class="nav" href="mainf9f9.html?nodeID=939005763&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">GEAR DRIVE IDLER UNIT OIL - REPLACE</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_10" class="nav" href="main7a67.html?nodeID=939005790&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T52</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_10" class="nav" href="main7a67.html?nodeID=939005790&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">GEAR DRIVE IDLER UNIT OIL - CHECK LEVEL AND TOP UP, IF NECESSARY</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_11" class="nav" href="main55a7.html?nodeID=939005230&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T54</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_11" class="nav" href="main55a7.html?nodeID=939005230&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">REAR DIFFERENTIAL FLUID - REPLACE</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_12" class="nav" href="main5551.html?nodeID=939005231&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T62</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_12" class="nav" href="main5551.html?nodeID=939005231&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">BRAKE AND/OR CLUTCH FLUID - REPLACE FLUID INCLUDES WASHING PIPES AND BLEEDING AIR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_13" class="nav" href="maine1da.html?nodeID=939010373&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T64</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_13" class="nav" href="maine1da.html?nodeID=939010373&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">BRAKE AND/OR CLUTCH FLUID CHECK LEVEL AND TOP UP AS NECESSARY</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_14" class="nav" href="mainf26e.html?nodeID=939010374&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T65</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_14" class="nav" href="mainf26e.html?nodeID=939010374&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">HYDRAULIC BRAKE SYSTEM - BLEED AIR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_15" class="nav" href="main9bf6.html?nodeID=939010375&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T67</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_15" class="nav" href="main9bf6.html?nodeID=939010375&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">HYDRAULIC CLUTCH SYSTEM - BLEED AIR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_16" class="nav" href="main28ca-2.html?nodeID=939010377&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T71</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_16" class="nav" href="main28ca-2.html?nodeID=939010377&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">POWER STEERING FLUID - CHECK LEVEL AND TOP UP IF NECESSARY</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_17" class="nav" href="main5ca3.html?nodeID=939010378&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T75</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_17" class="nav" href="main5ca3.html?nodeID=939010378&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">HYDRAULIC POWER STEERING SYSTEM - BLEED AIR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_18" class="nav" href="main7ae1.html?nodeID=939010379&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T82</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_18" class="nav" href="main7ae1.html?nodeID=939010379&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">DIESEL SYSTEM - BLEED WATER FROM DIESEL FILTER RESEVOIR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_19" class="nav" href="main8a72.html?nodeID=939010380&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">0010T84</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_19" class="nav" href="main8a72.html?nodeID=939010380&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">AIR CONDITIONING SYSTEM REFRIGERANT - DEHYDRATING AND REPRESSURIZING</a></TD>
+				</td>
+	</tr>
+</table></P>
+
+	</body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010365&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:25:13 GMT -->
+</HTML>

@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003402&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Dati+Tecnici&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 03:28:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003402&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Dati+Tecnici&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="9j7xpxSA4sJUNW+8nl85EiJU5ST3u4sUhfBJwqgCoZSlnJbrzI6s93sX8YubhIJTOnXpdfaoWeYDsPIKg/OoanKAQHYZSUw954VhclMH8feTLTvcXjlHIu3u0w5DtbCXaGUlIpglJyn1yx+WTQPFI7F6J4yinOBFmoBv7IRcgZUDgwFAU+mbnBr1Hlr0o6TViCcC6735BZLlqD7VgOSPSX+dP0VFalPnT138u5zzMI6faCPaqCC5hhmXiYd/HWopiiWwbLUnUGBoDjqml3r6M6nMGkON9q+1IiwovTcJPUcHxP5slR1l2afMjRbmi2HYRdV50Gz7NCgrtNyIfosol8SDlCjKq4HfSOmswOQd6gGvbisM9ShsYWPEm8/CkjI/2TqgUTKjibLvA9NT0ObXiZ0v79d32Gzeuvn3wQUmeg6Vn1Koc2/PNdcBv1VHYv93hf6fU0UR2ovfy0wmXwIa5BrDDRU09qsQU2dwiDk+OuUHgujyEpcZp6uN4szNeNmu8vGwvYkBE6TS+GTlRK/AGlednzwJuOoBVHJjPwbqRpnagpIjlnTEqPjEaZWJmeoRwoMdYukgDHQj7QLWRI0Yz+KOU7/pgtyI0y2W+2dDjwPKKJxK6IurKcJfOU51TLsxl/AUulq8isqeqZvwDRbxvgYlKneNNEIOF6JZEnwlyN0Ztfg7CrUAPySX8RM8xL3jOSR6u5mmuY/s44LwcxLivEx/4gR+jvbq6BM33cHYz+GkMNPMIxWdsAZYyowrYRZYFCnb1yTlYR41hR+wGcxKlXKcPKxAZvqCaZ8Rl+D/2zw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspCAMSHAFTS&nbsp&nbsp&nbsp3.2.5.1&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nominal intake cam lift</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10.30 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTS</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.2 JTS</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nominal intake/exhaust cam lift</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.2 JTS</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nominal exhaust cam lift</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10.30 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTS</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.2 JTS</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nominal intake/exhaust cam lift</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8.0 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nominal intake cam lift</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8.5 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 8v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nominal intake cam lift</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1750 TBi</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nominal exhaust cam lift</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8.0 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nominal exhaust cam lift</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9.0 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 8v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nominal exhaust cam lift</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8.8 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1750 TBi</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft first journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,600 ÷ 43,615 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft second journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,400 ÷ 43,415 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft third journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,200 ÷ 43,215 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft fourth journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,000 ÷ 43,015 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft fifth journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30,000 ÷ 30,015 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26,000 ÷ 26,015 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 8v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1750 TBi</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft first journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,800 ÷ 43,815 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft second journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,600 ÷ 43,615 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft third journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,400 ÷ 43,415 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft fourth journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,200 ÷ 43,215 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft fifth journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,000 ÷ 43,015 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft sixth journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30,000 ÷ 30,015 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft journal diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26,936 ÷ 26,960 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.2 JTS</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft first support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,646 ÷ 43,671 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft second support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,446 ÷ 43,471 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft third support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,246 ÷ 43,271 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft fourth support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,046 ÷ 43,071 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft fifth support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30,045 ÷ 30,070 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 16v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26,045 ÷ 26,070 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 8v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1750 TBi</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">27.000 ÷ 27.020 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.2 JTS</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft support diameter - timing side</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">35.000 ÷ 35.020 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.2 JTS</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft first support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43.846 ÷ 43.871 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft second support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,646 ÷ 43,671 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft third support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,446 ÷ 43,471 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft fourth support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,246 ÷ 43,271 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft fifth support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43,046 ÷ 43,071 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft and exhaust shaft sixth support diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30,045 ÷ 30,070 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4 JTD 20v</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Camshaft end float</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.100 ÷ 0.230 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTD 8v</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.0 JTDM</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003402&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Dati+Tecnici&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 03:28:08 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

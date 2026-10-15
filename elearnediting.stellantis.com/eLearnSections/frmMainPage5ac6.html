@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003548&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:45:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003548&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="IzLXc3891H6piWu+EtHyxQf3CdAyxZfzmiL58LscaHHo++JGmZ+aVcjyLHzpYD3lig6egVbh0Mvy8i+bWVUi0MxvWOwg80dh++kPEA07MLb8HcUVIyykDdPnkq2wG9IX0zMazjUaT4NhAvcc9mnqPyyy1hiycm0oGNWYryYzsirP89zVrg0yA82JRQNpy7lb6d4ikD+jU9fnJWAG+zuGfMKP7nYaLbEu3jabOrD1Q5bOLg3zZzHmGukABRqHw+9CvKWA561TPJ032G7wFGeb2SJF0qfI+no5FG5tLuJTkhPFkz8fHVVHJvTCus1Huznsch41jbcQYxXLF4J7LkzQL+X5th4ykc4xCwQ0RnOD+jk4UEkxRIVaCxuAY/h4B1LwSBFDiNgicKhIaiuU6gvZLmkvHqPwgw1atUFhjOdkptmUIXx2j37zsb5TyoDX6J5MLOVgAUfHDQbM8CW8vLG5cuJ9XLw+O95D6ooJ5kckY/MYKbA63RsktD7a3fwl5ks+9WTlHaODLw+tUHLBSkHLGbcf70v745D1TSJlDmyPk51MVyZsbqX/7gvSPUhUuG2/zcj78GBph9AzotbiUUwu+5QIZhwMSKTFQocd39LVflsR/aQgLAaZdIH1XsjWK4dSVOaTiaQuQZpN1WvysId/bwcsY7A0Z0ZF8Z49O0Qpflu6NYfd/Ycr+WQkexqMpsJz9hnSCA3nzAUIDBNgfyd9qoDhdaln6UawYFSW/hQ/t3dBIU0qQlYCNEs9Aizwy2R0ZtQUSa95oAhR3GujJLgH9y5wTnFtPXGxI2os649G0AJuN0a/hqr6KRThSexf0uws" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspBODY INTERIOR FITTINGS AND TRIM&nbsp&nbsp&nbsp7040&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">Dashboard and interior trim</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The trim material used for the car interior features contributes significantly to the pleasing sensation enjoyed by the car''s passengers.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Even the synthetic leathers immediately convey a gratifying sensation of comfort, solidity, luxury and sportiness.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The slush moulding tecnique used for the dashboard and interior trim ensures outstanding results.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Though this manufacturing process is not new, it has been continually refined through the use of new materials and new processing technologies to create vehicle interior parts that offer high standards of visual and tactile satisfaction.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the production of parts with complex shapes, trim materials may undergo stretching, polishing and loss of surface texture definition. The importance of these features assumes increasing weight when it comes to assessing the qualitative level of a car.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On the Alfa 159, our choice fell on trim materials with a natural feel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The original material used to trim the first style model was a faithful reproduction of real leather with all the characteristic physiological traits of natural hide. After undergoing various processes, this symbol of tradition and innovation is transferred to the nickel shells that give rise to the synthetic leathers that are applied to the car''s invisible, functional trim structures.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Slush technology allows us to make the most of this feature and convey it more effectively while enhancing it with high tactile performance due to the pleasing nature of the material and its softness or yield, conferred by the presence of a layer of medium-density expanded polyurethane.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The "leather" trim production stage is followed by foam application. This involves the positioning firstly of the trim and then of a rigid plastic insert required to give the component its structural properties in a resin mould that is the mirror image of the synthetic leather shell.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The polyurethane resin poured into the gap between shell and structure expands to fill the free spaces with soft material.</p>
+          <center>
+            <img src="images/jpg/939003870_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h1 class="bigtext1">COURTESY LIGHTS</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The front courtesy light includes three lamps with three control switches: it is possible to switch on the corresponding spot light using the outside buttons; the centre button switches the centre light on and off, which is also turned on with a timed delay as described below.</p>
+          <center>
+            <img src="images/jpg/939003871_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are two bulbs in the rear courtesy light which can be switched on or off using the relevant button or through a delay timer as described below.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The courtesy light lighting delay is based on a logic managed by the Body Computer whilst the rear courtesy light is operated by the door control units in accordance with a logic transmitted by the Body Computer via the CAN:</p>
+          <h2 class="bigtext2">Courtesy light activation strategy</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Pressing the button in the front courtesy light operates both the front courtesy light and the rear courtesy light: in particular, with the courtesy lights off, both are switched on and, with the courtesy lights on, both are switched off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- When any of the doors is opened both the front and rear courtesy lights come on and there is a timed delay of 3 minutes which is reactivated each time a door is opened.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When, on the other hand, the button in the front courtesy light is pressed during the timed delay, the courtesy lights are switched off and the timed delay in progress is zeroed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- When all the doors are closed at the key-off (TEG extrated), the previous timed delay is zeroed and a 10 second timed delay is activated; (this delay is interrupted in the case of a key-on (insertion of the TEG).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When all the doors are closed at key-on (insertion of the TEG) the courtesy lights are immediately switched off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- When the TEG is extracted both the front courtesy light and the rear courtesy light come on and a timed delay of 10 seconds is activated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Both the front and rear courtesy lights go out at the "door locking" command.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Both the front courtesy light and the rear courtesy light come on at the "door release" command and a timed delay of 10 seconds is activated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- If the inertia switch is operated the courtesy lights come on for 15 minutes.</p>
+          <h2 class="bigtext2">Courtesy light control is deactivated on door opening</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The button on the front courtesy light may also disable the control of the courtesy lights upon door opening.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Normally, they come on when one door is opened. It is, however, possible to set the system so that the courtesy lights do not come on when a door is opened.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is achieved by holding the button down continuously for at least 1.5 seconds (the user is informed of disablement by a confirmation beep).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the courtesy light is on when the key is pressed, it goes off immediately.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the courtesy light is off, it comes on when the key is pressed but goes off again after the confirmation beep.</p>
+          <h3 class="bigtext3">Reactivation of courtesy light control</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To re-enable control by the doors, simply press the key again, even for a short time.</p>
+          <h3 class="bigtext3">Spot-light activation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The front and rear courtesy light spotlights are activated only by pressing the relevant button and are timed for 15 minutes if on at key off (TEG removed). They are not timed if they are activated at key on (TEG inserted). Spot-light activation/deactivation cannot be dimmed.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For the rear courtesy light, a direct on/off control (key on spotlight) takes precedence over an indirect on-off command (e.g. door opening).</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Dimmer activation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In all cases described, the lights are turned on and off gradually (dimmer control) over 2 seconds (the 2 second dimmer time is always added to the times described above during activation and deactivation).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The gradual switching on/off (dimmer control) should not be interrupted under any circumstances (not even after another door is opened, key on, etc.).</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003548&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:45:37 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

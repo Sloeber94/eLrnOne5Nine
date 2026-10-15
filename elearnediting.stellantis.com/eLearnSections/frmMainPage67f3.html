@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010181&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=BLACK+EXHAUST+FUMES&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:53:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010181&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=BLACK+EXHAUST+FUMES&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="E/JMBbj+k5It4U6SG2F253aY77fAqkIL8wwVw/ujlSsuknNQioOSE3I83cEv9I60QyKGJEKEjluRhvakwF4VJh9jYhRButminEmBBNhM8gxAI9gFoD8USRrfXDx3ujnk+uT1rnLWZ5c5kD9ociJsGDvD9kFxFK2nRmDG+nDpuT0/dB9LoCBEy0JwL4pV40k4Nj/ttjlnEet/UMC4Jm9dTxIvoU2hlDIoX+P61wLzfC2YOJBspqFQGBfcXt5VJTLo4GOwgwu6LSVBMpT1x0TNt4mt6WerrYmR7z7rqDAs9YJTATdOd1Z4l7KsY9bTb+i7HJCPSe3WkF0znHAMFTFRmEgBMMGN848GDj5I/nyw0BY0lot7k/d3/PuTI8fecUEqI8M7WwAdea+Y8cu84DATsUyHBtjAdiTBFGmKBe8zcKZNvGYA07veNrL8GHhhS+qLpZgL1HP8ddjlgGElwUTlKOvxaZRCckxpSkHZnWeIHYnl89t6rKBFKPaiFOQZZqXiH/9EmnR5rR/8E5kpIPxFA6Pd1Owd+gHTY4byJ8bsMR9BEUtIyzBbYDnoAP15zPWoyT0GcydiCWe8kQkWtuEbcXrPa56DDWnjdYQU6y2z9vPMDPtZi+gPJIQ+ytReLURk3EfqQgQTshxyEaBuDM77l5i8bsCWrvH30E8UVaa9xW2LivtmgjkftJA2FGH98lRCckQ1teOQlWe6X9xxCcvsWY6cwr6JWW8s6NxxwNUIXvTC98Vj0h7e4/ikD+0PW9BnnIS7ifPlMcu/tGnCV3Mu67EpKmeQNecmg2asvexSyLaYw+IuUmqrXtfKGt8gsEruZVWUlUhM+23UPEzV/xz5GiNc1ThZynPLlQ2TT2EXjceeoGJBji0HVUbwzs9XUr8kJgYv9GRXo6ciVeQ6FiiPh1fWUVlC9Fh4+nB8/UzkKJLWUzzNRbOH4+dPX401+X7H" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspAIR INTAKE/VACUUM CIRCUIT CHECK&nbsp&nbsp&nbsp1048OA&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  BLACK EXHAUST FUMES</a>
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK TO BE PERFORMED</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RESOLUTION IF THE CHECK IS NOT OK</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the vacuum supply system components/functions: in particular, check for leaks or blockages.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the seal of the secondary air inlet/turborcharging system hoses.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Also check for any obstructions or porosity.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check for leaks in the intercooler.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that the pipe restriction bands in the air intake/inlet system are correctly fitted.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the hoses and connected pipes to identify any obstructions, damage etc.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that the debimeter is not contaminated.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the exhaust gas turbocharger and exhaust system components/functions</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If possible, renew the pipes. Otherwise replace the faulty components</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainf378.html?nodeID=939010511&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=AIR%20INTAKE/VACUUM%20CIRCUIT%20CHECK&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 1048A VACUUM AIR CIRCUIT</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that the air filter is not contaminated</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace the filter element</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main1ea3.html?nodeID=939010514&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=AIR%20INTAKE/VACUUM%20CIRCUIT%20CHECK&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 1048A14 AIR FILTER FILTER ELEMENT - REPLACE</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that the air filter is correctly fitted</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refit correctly</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main1ea3.html?nodeID=939010514&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=AIR%20INTAKE/VACUUM%20CIRCUIT%20CHECK&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 1048A14 AIR FILTER FILTER ELEMENT - REPLACE</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Turn the ignition key to the OFF position.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Disconnect the vacuum hose from the vacuum pump</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connect a pressure gauge between the vacuum pump and the hose (see following figure).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Start the engine, adjust to idle speed and check that the reading on the pressure gauge is -0.7 and 1.0 bars</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace the vacuum unit</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main88b6.html?nodeID=939010804&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=AIR%20INTAKE/VACUUM%20CIRCUIT%20CHECK&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 3330D30 VACUUM UNIT - R.R.</a></p></td>
+            </tr>
+          </table>
+          <center>
+            <img src="images/jpg/939003056_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010181&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=BLACK+EXHAUST+FUMES&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:53:41 GMT -->
+</html><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK TO BE PERFORMED</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RESOLUTION IF THE CHECK IS NOT OK</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Turn the ignition key to the OFF position.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Reconnect the hose to the vacuum pump</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Disconnect the vacuum hose from the turbocharge actuator solenoid (see following figure).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connect the pressure gauge between the solenoid and the hose.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Start the engine and adjust to idle speed.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Select the following control unit at the diagnostic equipment: EDC16C39 Diesel electronic injection control unit.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Carry out active diagnosis: Turbo regulator, ensuring that it is successful</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace the solenoid valve</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main348d.html?nodeID=939010582&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=AIR%20INTAKE/VACUUM%20CIRCUIT%20CHECK&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 1064B42 SOLENOID CONTROLLING TURBOCHARGER VANE POSITION ACTUATOR - R.R</a></p></td>
+            </tr>
+          </table>
+          <center>
+            <img src="images/jpg/939003057_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK TO BE PERFORMED</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RESOLUTION IF THE CHECK IS NOT OK</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that the vacuum read on the pressure gauge during active diagnosis is between -0.5 and 1.0 bars.</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the turbo pressure control solenoid is operating correctly</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main2f7b-2.html?nodeID=939010216&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=AIR%20INTAKE/VACUUM%20CIRCUIT%20CHECK&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> See Test 1064BB CHECK ON OPERATION OF SUPERCHARGING PRESSURE SOLENOID VALVE (PIERBURG)</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Turn the ignition key to the OFF position.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Reconnect the vacuum hose to the turbocharger actuator solenoid.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Start the engine and adjust to idle speed.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Select the following parameters in the parameter screen: EGR valve opening and measured Air Mass.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Set conditions where the EGR valve is open and check that the intake air mass is between 20 and 40 kg/h</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the exhaust gas recovery solenoid is operating correctly</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="maina253-2.html?nodeID=939010230&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=AIR%20INTAKE/VACUUM%20CIRCUIT%20CHECK&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> See Test 1080CB E.G.R. SOLENOID FUNCTIONAL TEST</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Then return to idle speed.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Set conditions where the EGR valve is closed and in these conditions check that the intake air mass is between 40 and 60 kg/h</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace the debimeter</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainb6f6.html?nodeID=939010563&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=AIR%20INTAKE/VACUUM%20CIRCUIT%20CHECK&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 1060G10 AIR FLOW METER - R.R.</a></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

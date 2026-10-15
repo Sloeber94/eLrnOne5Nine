@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010512&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:09:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010512&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Jkh/1KJhnQTGqc8Nnoc1g0iaZYY8c8hxhBj6ffy+H88u66ePD3wM3FbHQwgYC0L9CMgZoXPzR2Ot/wRZkxOZEuEMcOmlHSmYpUWCRhUvIQUsgCwifNM9r9GSse/J+PjIyL+D1MKZC62QE9t6PIRQjDjDvRRzhw1DEhZlc+4S1I8UzJX9yvSra6CEXkkUwvbpag5yGlWtsjBGQdFxGxhpPpA8MNdjTILJEUmsucBtwP7urSXs+RzgIGOm693x88d8PQRCh8tdcbq4V2AFIiFrOwhyYo1nsizrof67bkHG5C9S48LTcdyZaqNw7Xe3AjJsV4O+uzuvqNu2uqjW8tIdrlgJ7ltKqgomq0ByAXo2ZQRRn8403xva7Iadqcwoy6HaHje4WEW71+0BZXLybfvPjS+x/sV3P10ssHrc/zZv9JApTdPWpmqp1Zdee/lK07cp8hkC62vY67spNern951wXRC3g3gAFmJOxNwlWk8uWVPfq4FP5axMw+Ok2LpflpiXKD7N9YJt66WhTnQMAPG7ex+2mtsexjj4MLlwbCCTPrwS0D99oyYKtQCYxETdirwGrn7P0aFIzlXAWMOoX0dbGgo6zrnU90s8sSoafXZCSg1gxjB2/IJYWrS0JR99dNkJpDZXkHNgxVsW/ig7Yma2CLPwa7rEIRZPs008VPdQSnqOrGSTqGlQ5ZQW/2neymgLu8tmRoAeBIHz6jtAHAWZuE+a/KXcETVhlznSZ+DRHKwVT2cQY4uk3k1QEhraRB0xmSBn2BHaEIMBeo2CHWfzQvUPyptNdkkTKY4To1b28lwV0+V8E1dKgdvniXgiFFlCYKx99jn3xv6EfVhXVgxWvVChP5nQzZZ3Lj+Yq2iGVv2kRjoZdCd87iDa/81XvsnKlBcqQhMHEqGhsBFKWpxxUzYZ5bPFzZFk0F2SFttUFxM=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="BlbnJF4ioiB6kOJ5iRKK4NIWyGRPfH+SZn0N2juDvJQbBwPf4+dg9qAfjgfvW2HyPwMtOqVrL1fjjIQH9CYxzlPtDMwlZNw21IdQsw5Qt5i0VB+DG6nsJusn2SACzSqx" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspAIR FILTER ASSEMBLY - R.R.&nbsp&nbsp&nbsp1048A10&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939005940_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/20_2.jpg" border="0">Removing<a class="title" name="0"></a>
+		(
+		<a href="#1" class="title_link">Refitting<img src="images/jpg/21_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">- Position the vehicle on a lift.</p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011369" onclick="
+        ViewiFrame(btn_0_939011369)
+      "><span class="testo_link"> </span><a class="contents_link" href="main74d2-2.html?nodeID=939011369&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20FILTER%20ASSEMBLY%20-%20R.R.&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7055B54 PROTECTION/GUARD UNDER ENGINE -R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011369"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010516" onclick="
+        ViewiFrame(btn_0_939010516)
+      "><span class="testo_link"> </span><a class="contents_link" href="main55c1.html?nodeID=939010516&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20FILTER%20ASSEMBLY%20-%20R.R.&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 1048A28 VACUUM AIR CIRCUIT RESONATOR PIPE - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010516"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale ">1. Loosen the band securing the air flow meter to the corrugated hose.</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010512&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:09:41 GMT -->
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000360_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010514" onclick="
+        ViewiFrame(btn_0_939010514)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainad1e.html?nodeID=939010514&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20FILTER%20ASSEMBLY%20-%20R.R.&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 1048A14 AIR FILTER FILTER ELEMENT - REPLACE</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010514"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">1. Release the fastening tabs and disconnect the cold air intake from the air filter casing.</p>
+          <p class="contents_testonormale ">2. Release the pins for the air filter casing from the mounting bracket.</p>
+          <p class="contents_testonormale ">3. Move the front bumper away as necessary and extract the air filter (3a) complete with corrugated hose (3b).</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000361_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. If necessary, loosen the band and disconnect the corrugated hose from the air filter casing.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <img src="images/jpg/21_2.jpg" border="0">Refitting<a class="title" name="1"></a>
+		(
+		<a href="#0" class="title_link">Removing<img src="images/jpg/20_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">- Connect the corrugated hose to the air filter casing and secure it using the band.</p><p class="contents_testonormale ">- Place the air filter complete with corrugated hose in its housing and position the pins in the seats in the mounting bracket.</p><p class="contents_testonormale ">- Connect the cold air intake to the air filter casing checking that the fastening tabs are attached.</p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010514" onclick="
+        ViewiFrame(btn_1_939010514)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainad1e.html?nodeID=939010514&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20FILTER%20ASSEMBLY%20-%20R.R.&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 1048A14 AIR FILTER FILTER ELEMENT - REPLACE</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010514"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale ">- Tighten the band securing the air flow meter to the corrugated hose.</p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010516" onclick="
+        ViewiFrame(btn_1_939010516)
+      "><span class="testo_link"> </span><a class="contents_link" href="main55c1.html?nodeID=939010516&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20FILTER%20ASSEMBLY%20-%20R.R.&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 1048A28 VACUUM AIR CIRCUIT RESONATOR PIPE - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010516"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011369" onclick="
+        ViewiFrame(btn_1_939011369)
+      "><span class="testo_link"> </span><a class="contents_link" href="main74d2-2.html?nodeID=939011369&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20FILTER%20ASSEMBLY%20-%20R.R.&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7055B54 PROTECTION/GUARD UNDER ENGINE -R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011369"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale ">- Remove the vehicle from the lift.</p></td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

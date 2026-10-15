@@ -1,0 +1,842 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926305&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:57:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926305&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="MRr4KfWT82ZuA2BARUo+lJz/6hy/ho/a00PSp3OZiBYPCDWuPiGrJ1LJvAFLWeHfCOngVEYGhxoCalq/ROn6BAfpq80MOYexikzVR2j0OFiuTJQjF9WBEUMnhORt0sj9sFP866pnjo+h/hLAG3lZkBRKjuoDJjX9p5op55eMOtGBu0omW5JYxYDvzQjTmMzlztw7uKzDSQsu7g0mAWhK3vTUzuqXIbWVUQQ+K2q5mG770J8q1TQHt+6bnnWbdcIN+ajp85qUEmA6EJonRWH2cv82qENraLUUUSZAHKJTWko5X/6+SOVE/1ZZB/tJL9UoACjxgmMsCSZYK7TOtqNcR7NQMd+9Td3s1vb+8OZuOf0duV7ScV85kzWuNxWjqOx8QiIRiJrR/E6XTLYJSToqIrZWoJI31/F66bMzMoDvHLd6/1iW/46pYQR0xbaJKhwhm1uBNtCFQ+RZNS7TPpTG2g8LkDpJf1qR7MbGKwyrEinURryIQ/WGAjamL4FIPwzsNr+XzVhga1e/vdelK0DRvTDQMYOzXU8owxobbVCKKiSjQ/Diun4ImYYS/QUyNPmr" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 14/05/2019</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Various models</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>Version: T.T. with navigator</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">55</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">012.19</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>5580 0 000 AA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>NAVIGATOR - MAP UPDATING</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Network Information</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cancels and supersedes the following Service News issues due to updating of the reference table</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• 55.006.17 dated 30/06/2017</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• 55.008.18 dated 07/03/2018</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">GENERAL INFORMATION</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following information is provided below to allow verification of the availability of updated maps for the navigators of current and recent models:</p>
+          <h2 class="bigtext2">A - Reference table</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Table which summarises all the map updates currently available at the time of publication.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reference table is updated regularly, but given the frequency with which suppliers issue map updates, it is possible that updates more recent than those listed in the table may be available.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">B - VP4 device activation code request</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Procedure for requesting the activation code for VP4 device map updating on the HERE portal</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <b>Before any operation on the navigator (reprogramming, map updates, etc.) always check whether the operation to be performed corresponds to the type of navigator installed on the vehicle.</b>
+                    </p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Some models (such as Fiat 500X, Fiat Tipo, Alfa Giulia and Stelvio, etc.) are covered by the Mopar MapCare service, allowing downloading of new maps directly from the link.e.entry portal, and installation of the updates on the navigation devices of the vehicles included in the programme. (For further information about the Mopar MapCare service, see Service News 55.015.18).</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">A - REFERENCE TABLE</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reference table (attached pdf file for download, updated to April 2019) contains the following information:</p>
+          <table class="nota">
+            <tr>
+              <td valign="middle">
+                <a href="__%20%20%20%20%20%20%20%20%20%20%20%20%20%20ContentPdfe83d.html?Pdfid=312002206" target="_blank">
+                  <img border="0" src="images/download_pdf.gif">Reference Table (February 2018).pdf</a>
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <a href="__%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20ContentPdfe83d.html?Pdfid=312002206" target="_blank"></a>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Brand / Model</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The brand and model of the vehicle, respectively.</p>
+          <h2 class="bigtext2">Nav Supplier</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Supplier of the navigator installed on the vehicle. NOT the supplier of the maps.</p>
+          <h2 class="bigtext2">Type</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Type of navigator installed on the vehicle.</p>
+          <h2 class="bigtext2">Maps version available</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This column indicates whether or not a map update is available for the device / model considered.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following table shows some examples.</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Example</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Description</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Yes - Q4/15 - 01/07/2016</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A map update with cartography as of the fourth quarter of 2015 is available and can be purchased with effect from July 2016.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>MOPAR MAPCARE</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The car is included in the MOPAR MAPCARE program, allowing downloading of new maps directly from the link.e.entry portal.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Available Soon</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The service will be available soon; the procedures will be detailed in an update to this SN.</p></td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Update mode</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The update can be installed by means of the following devices:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>• SD</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Update by means of SD card with maps preloaded onto the card.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>• DVD</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Update by means of DVD with maps preloaded onto the disk.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>• USB</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Update by means of USB memory stick with maps preloaded onto the stick.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>• Download</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Update by downloading the maps from the Internet site to a standard USB stick.</p>
+          <h2 class="bigtext2">Who can update</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This column indicates who is able to purchase and update maps</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>• Customer</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Customers can purchase and update maps themselves.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>• Dealer</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Customers must visit Dealerships to have their maps updated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>• Customer / Dealer</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Maps can be updated by either the Customer or the Dealership network.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For VP4 devices it may necessary to update the device's software version as well as the maps, so Customers are unable to perform the procedure themselves. For further info, see section B below and refer to the instructions supplied with the maps at the time of purchase.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Map Supplier</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Supplier of the maps, who must be contacted for purchases.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Depending on the supplier, visit the Internet site listed below and place the order on the basis of the information provided.</p>
+          <ul>
+            <li>
+              <span style="color:black">Here - www.navigation.com/doc-emea</span>
+            </li>
+            <li>
+              <span style="color:black">TomTom - http://it.support.tomtom.com/app/answers/detail/a_id/18874/locale/it_IT</span>
+            </li>
+            <li>
+              <span style="color:black">Daichii - https://daiichi.eu/product-category/avn/fiat/</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To update all portable navigation devices (PND) visit the following TOMTOM link</p>
+          <ul>
+            <li>
+              <span style="color:black">http://it.support.tomtom.com/app/answers/detail/a_id/13849/locale/it_IT</span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">
+          </h2>
+          <h2 class="bigtext2">B – MAP UPDATES FOR VP4 DEVICES</h2>
+          <h2 class="bigtext2">General information</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The maps of VP4 devices can be updated by means of a specific online purchasing platform called the DOC (Dealer Ordering Center) accessible from the HERE portal, where, after registration, it is possible to order:</p>
+          <ul>
+            <li>
+              <span style="color:black">Master Kit</span>
+            </li>
+            <li>
+              <span style="color:black">Activation code</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>The Master Kit consists of 2 USB memory sticks:</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">The first stick contains the update software release for the navigation device, which must be updated (if necessary) before the maps themselves. If the SW version on the device is equal to or higher than the one supplied with the Master Kit, no SW update is required.</span>
+            </li>
+            <li>
+              <span style="color:black">A second memory stick contains the map update.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">An activation code is need to render the map update operational.</p>
+          <h2 class="bigtext2">Notes</h2>
+          <ul>
+            <li>
+              <span style="color:black">Dealers will receive just one Master Kit</span>
+            </li>
+            <li>
+              <span style="color:black">The Master Kit can be used for multiple updates on an unlimited number of devices</span>
+            </li>
+            <li>
+              <span style="color:black">Every single update requires a specific activation code</span>
+            </li>
+            <li>
+              <span style="color:black">Activation codes are only available from the HERE DOC portal</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The DOC platform is active for the FIAT / LANCIA / ALFA / CHRYSLER / JEEP Brands</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Platform support and maintenance are provided by HERE</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main features of the HERE DOC system are:</p>
+          <ul>
+            <li>
+              <span style="color:black">Multilingual consultation</span>
+            </li>
+            <li>
+              <span style="color:black">Easy, secure way of purchasing map updates</span>
+            </li>
+            <li>
+              <span style="color:black">Available 24 hours a day, 7 days a week</span>
+            </li>
+            <li>
+              <span style="color:black">Different, unique username and password for every Dealer</span>
+            </li>
+            <li>
+              <span style="color:black">No paper order</span>
+            </li>
+            <li>
+              <span style="color:black">New map updates immediately available for order</span>
+            </li>
+            <li>
+              <span style="color:black">Online traceability of deliveries</span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Registration and access</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To connect to the HERE portal you need to have an Internet connection; entering the address www.navigation.com/doc-emea, will display the Home page (Fig. 1).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">You will need to register with HERE on your first access only, proceeding as follows:</p>
+          <ul>
+            <li>
+              <span style="color:black">On the Home Page, select your language (a – Fig. 1) and then ask to register (b); the screen shown in Fig. 2 will appear.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 1 - HERE portal - Home page</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019670_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom41a2.html?Par=312019671.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Enter the data requested then ask to Register Now (a – Fig. 2).</span>
+            </li>
+            <li>
+              <span style="color:black">If the application is approved, within 3-5 working days the Dealer will receive a confirmation email containing the Username and Password to be entered in the respective fields (c – Fig. 1) to access the HERE portal (Login).</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fields marked with an asterisk and the VAT Number field must always be filled in.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 2 - HERE portal - registering for the 1st time</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019673_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom5ef3.html?Par=312019672.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Map updating</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After registration, to perform a map update proceed as follows, in this order:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Order the Master Kit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Obtain the vehicle's Request Code and VIN (chassis number).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Order the Activation Code.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Update the maps of the VP4 device</p>
+          <h2 class="bigtext2">1. Order the Master Kit.</h2>
+          <ul>
+            <li>
+              <span style="color:black">Access the DOC from the HERE portal; the list of Products available will appear</span>
+            </li>
+            <li>
+              <span style="color:black">For VP4 devices, select RG4 6.5"</span>
+            </li>
+            <li>
+              <span style="color:black">After selecting RG4 6.5", enter the quantity (recommended quantity = 1), add the product to the cart and place the order.</span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">2. Obtain the vehicle's Request Code and VIN (chassis number).</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Request Code</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">To obtain the Request Code, connect the USB stick from the Master Kit ordered previously to the USB port of the Uconnect system.</span>
+            </li>
+            <li>
+              <span style="color:black">Select Setting &gt; System Information.</span>
+            </li>
+            <li>
+              <span style="color:black">The system will display the Request Code necessary for updating the maps (a – Fig. 3). Make a note of the code.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3 - Request Code</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019675_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom71bc.html?Par=312019674.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Vehicle's VIN (chassis number)</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">Make a note of the complete VIN (chassis number).</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The VIN appears on the registration certificate and is punched into the floor of the cockpit. On some vehicles, it also appears in the top left-hand corner of the dashboard finishing, visible through the windscreen from the outside of the car.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">3. Ordering the activation code.</h2>
+          <ul>
+            <li>
+              <span style="color:black">Access the DOC from the HERE portal.</span>
+            </li>
+            <li>
+              <span style="color:black">Select the device (RG4 6.5") (A – Fig. 4).</span>
+            </li>
+            <li>
+              <span style="color:black">Enter the quantity (1) (B – Fig. 4).</span>
+            </li>
+            <li>
+              <span style="color:black">Enter the Request Code (C – Fig. 4).</span>
+            </li>
+            <li>
+              <span style="color:black">Enter the chassis number (VIN) (D – Fig. 4).</span>
+            </li>
+            <li>
+              <span style="color:black">Add the product to the cart and place the order.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 4</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019677_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom9b24.html?Par=312019676.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Additional screens follow, prompting the user to confirm the order request and the delivery and payment methods.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Read all the instructions and warning messages displayed; do not continue with the following messages without performing all the required procedures asked by the prompts.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">If all the data entered are correct, a screen containing the activation code and order number will appear. Within a short time, the activation code and order number will also be dispatched in an email reply.</span>
+            </li>
+            <li>
+              <span style="color:black">Once the Master Kit and Activation Code have been received, the map updating procedure can go ahead.</span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">4. Updating the maps of the VP4 device</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To perform a map update proceed as follows, in this order:</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Start the engine and leave it running - ( safely ) - for the duration of the updating.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Take the memory stick containing the software release from the Master Kit and connect it to the USB port of the Uconnect system.</span>
+            </li>
+            <li>
+              <span style="color:black">The device's display will show the installed software version and propose the new update software version contained in the USB stick.</span>
+            </li>
+            <li>
+              <span style="color:black">If the software version on the Master Kit USB stick is later than the one installed in the device, proceed to update the software; otherwise, remove the USB stick and continue the map update.</span>
+            </li>
+            <li>
+              <span style="color:black">Once the software has been updated, remove the software update USB stick and connect the map update stick, taken from the Master Kit.</span>
+            </li>
+            <li>
+              <span style="color:black">The display will show the sequence of instructions to be followed to update the maps correctly; during the update, you will be prompted to type the Activation Code.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Read all the instructions and warning messages displayed during reprogramming; do not continue with the following messages without performing all of the relevant procedures when prompted.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">NOTES</h2>
+          <ul>
+            <li>
+              <span style="color:black">Throughout the update procedure, the USB stick must remain connected to the port, the VP4 device must be switched on and the engine must be running.</span>
+            </li>
+            <li>
+              <span style="color:black">The update procedure can last more than 30 minutes.</span>
+            </li>
+            <li>
+              <span style="color:black">The map files currently in the system will be deleted and replaced with the new ones.</span>
+            </li>
+            <li>
+              <span style="color:black">The navigator will not be available during the update.</span>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926305&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:57:58 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

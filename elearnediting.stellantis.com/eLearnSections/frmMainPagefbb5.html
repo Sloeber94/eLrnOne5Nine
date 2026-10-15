@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010271&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=POLLUTANT+EMISSIONS+IN+VEHICLE&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:53:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010271&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=POLLUTANT+EMISSIONS+IN+VEHICLE&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="AAo8ZWqiAtb5exWw9AVkPJKeHtwKnCJ0frx4apjmyX5L+FzPE5j2kSCPMpUr8pISlexMNSoaNCwm07b8Ta9LMTbs2eHgRvNnOvL8If4kX0b7rnLdvI0Z7mygYOfhoCEd/amqtLe2wEctT5aAuV+zVMBduKcjvP9e+GICCf7zb/m/6hobv43XKW2kqzh0v94idvS1qFr8OrNJU5NIwQMtN30Vog7Cejf09BtNAoR1b7UaED04VhTnwv7J4h6s98WQeBWxrtIbGwNCTadnIEK/G4telKDtJnuAeCaSnIajfOxpmKpCS/Qajd3V/Neqmex97AY6npCoJlkhvX42FWTTxB3tiTxj9pGTqP9q+K7Ej05hDB3IOKhlqd05YQ5hF9au3cH2WPumZp8G9NsmYVbx4Pjld8ou4tIbxAAsRfVVeEhkXJJKBmBk9YgBzYNJdcmMSCvp0nndq7mdnMTQ/M68rENaT9EME8/7WppLxZmJ8ktyP2mWEK7jMMw3fBxzz5aFIBvzl427cbn5/28jD/SagEdwE+GgP3KKqVSSnluAaBNiugQ+wknHHt9plF6Pc/zPSrXkYRhL6L55FGfuTGl0Wkk2oD8/vfV0ItthCUV5wCUihUt3dQy+Y+6hj/bB6V4jqkPKQTynVUaDsk3vRq4/Tm8Kn1BZQsMmVDQcVFEF2FDbFO751FJvR2RjUftgtj2LPKdA74ssf5qkktrdFie+Am5yyJqcBoE/rE9uX0t62REG9Z2tFEdg7mnQCaxzQL/shIEouDduPIU5ASsipdl3TuMwy5S8fr/GpusIzmf4XucTJQ4vzRPbO8yf1uNsdhn0OerqamQuJdV537ZA5EZMidDr/vJ1f33wUjH2pF+b862hfqqnkfQpOO3w4u1Q8ANbZDwGMkB0ftcLoCN2UZXnci1dJHECPqgQ3LzTvm+55r+ni+3iqNkV7lZTVPHz2XTQLKQ8GMcoB2GMu9CBhJqh3uAtcbST28a/AHo31JNjbdreu/tVfeYLQaAK0x5Kb+bD" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspCheck operation of pollution sensor (AQS)&nbsp&nbsp&nbsp5040DD&nbsp&nbsp&nbsp(Automatic climate control)</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  POLLUTANT EMISSIONS IN VEHICLE</a>
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <p><b>APPLICABLE TO VERSIONS WITH:  Automatic climate control</b></p><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <table class="codep" style="margin-top:0px;" width="100%">
+            <tr>
+              <td>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the Examiner in voltmeter mode, select 20 Volts full scale deflection and 200 milliseconds base time</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connect the black probe of an Examiner to the vehicle earth and the red probe to pin 3 of the air quality sensor output signal</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                  <span class="testo_link">  </span>
+                  <a class="contents_link" href="main7b9d.html?nodeID=939004218&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=Check%20operation%20of%20pollution%20sensor%20(AQS)&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> See K064 EXHAUST GAS PRESENCE SENSOR</a>
+                </p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Turn the key to the ON position.</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Wait about 36 secs for the sensor to warm up.</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Spray the gas in the canister (part no. 71715571) in less than 60 seconds.</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press the START button.</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The signal shown should be a set of PWM impulses with a frequency of 100 Hz and a Duty Cycle that varies between 15 and 70% as indicated in the table below.</p>
+                <center>
+                  <img src="images/jpg/939004557_2.jpg" border="0">
+                </center>
+                <br>
+                <ul class="elencolegenda">
+                </ul>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PWM% Duty Cycle = T1 / T2 where:</p>
+                <p class="titolo_lista"></p>
+                <ul class="elenco">
+                  <li class="elemento_lista">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">T1= duration of impulse</p>
+                  </li>
+                  <li class="elemento_lista">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">T2 = 1/f = 1/100 Hz = Duratation of transmission</p>
+                  </li>
+                </ul>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin out:</p>
+                <p class="titolo_lista"></p>
+                <ul class="elenco">
+                  <li class="elemento_lista">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. +CH/15</p>
+                  </li>
+                  <li class="elemento_lista">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. earth</p>
+                  </li>
+                  <li class="elemento_lista">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. output signal</p>
+                  </li>
+                </ul>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PWM signal meaning</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5% short circuit to earth of signal line</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15% non polluted air circulation</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30% level 1 pollution</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">50% level 2 pollution</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">70% level 3 pollution</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">&gt;90% short circuit +12 signal line</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010271&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=POLLUTANT+EMISSIONS+IN+VEHICLE&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:53:55 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

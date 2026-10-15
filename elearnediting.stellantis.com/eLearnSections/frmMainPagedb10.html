@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011718&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:31:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011718&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="yS6gEKZQJJncx9Fwl2HlZZdxoReouFzAWTo6QyX1U+8X+d7t5BR0ShlY7+myRUfo1mv2QWnV4QP88i3LNd4GtXRF51OEkCeX3p2BV1pwARw3Vt7LWQ5Jt5ZZ4CyM8ucT92SxqJcQHSq3m6MSx6L+NFXlYbgsAgCLo9H6iGwdGG5Fe9rWMRdJGopb94Unm+Kl+zy5UWeCuv2qxev33iPWtAALnJdGwBOrPE5XSlLuQqG7PTyarFYJvrwdCGwBWjgGxSXLvCcamrjMHAJSZnsQSDRWmN4TFvSpROo39ARcU3rdAVvM/Ot1APFkmb/JTjgGmaQjL16x21CqlFy20vy1642/VKboFeZtaWhQ9qtAIGwAO5FpvuAWzlYtrEE9rTcAY1JKTnDh57MA5W62XaSaKzbWqLFDaq4sycde8XVH1FOk+j/2yiGAWiNoRB+1YmToC4wpb/AGs4CWLSISafCNXNTaQp5Z/GpT9ZuKyNYhD3ZPnCU3BGVMMzO+a8nMyso/tkvdTYilZs2kLp3BvZnWPDpMVXgzwu428ir0BLQjDtFdKVUhXz5qoPcrC0ojwJNYZHySO+i6bTg5JoCOzx32xJ6bf3yS0UFYZPoWPalP3XEEz+FxDok6NrLzsVMkTnGlEJ6/LsVjhTHDT2AQWfJiwRnBvE9gIkNdpbsMHhxfMp0MZEb7TieJ5ftcM03YTn99yDaE8V3EvrTwoSEE4yZzKM2Q74xqd4CVPp2JPtEYBG2h882cT8mM+qzSfgbIXnO5aIm937ngyYweSCtjVg8guSM9vzePp/u6DKYy2ZDLVM8=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINSTRUMENT PANEL - DESCRIPTION&nbsp&nbsp&nbspE4010&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    <HR id="SchemaTop1_hr1" width="100%" SIZE="1"></HR>
+<table id="SchemaTop1_dlsSchema" cellspacing="1" cellpadding="1" align="Center" style="width:90%;">
+	<tr>
+		<td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_0" class="Selected" href="main1e1b.html?nodeID=939011718&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" style="display:inline-block;width:108px;">INSTRUMENT PANEL - DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_1" class="notSelected" href="main42ed.html?nodeID=939011719&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" style="display:inline-block;width:108px;">INSTRUMENT PANEL - FUNCTIONAL DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_2" class="notSelected" href="main21a2.html?nodeID=939011720&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" style="display:inline-block;width:108px;">INSTRUMENT PANEL - WIRING DIAGRAM</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_3" class="notSelected" href="mainef38.html?nodeID=939011721&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" style="display:inline-block;width:108px;">INSTRUMENT PANEL - COMPONENT LOCATION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_4" class="notSelected" href="javascript: parent.openWinPrint(&#39;http://elearnediting.stellantis.com/eLearnSections/SchemaPrintAll.aspx?LanguageID=2&amp;nodeID=939011718&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&#39;);" target="_parent" style="display:inline-block;width:108px;">Print electrical function</a>
+		</td>
+	</td>
+	</tr>
+</table>
+<HR id="SchemaTop1_hr2" width="100%" SIZE="1"></HR>
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <script language="javascript" src="svgscript/mysvg.js">
+  </script>
+  <body onload="">
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">DESCRIPTION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instruments currently on board the vehicle in question are composed of the main control panel located inside the steering wheel and a central instrument console in the middle of the dashboard. The main panel contains a large reconfigurable matrix LCD (HIGH version) or a negative contrast alphanumerical LCD (LOW version only).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is also a buzzer and a brightness sensor inside the instrument panel for the automatic adjustment (daytime/nightime) of the brightness of the instrument panel lights.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="main0511-3.html?nodeID=939002993&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=INSTRUMENT%20PANEL%20-%20DESCRIPTION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> See E2535 CONTROL LIGHTS</a>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The centre instrument console consists of:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- fuel level gauge with reserve warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine coolant temperature gauge with overheating warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- turbo pressure gauge</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instrument panel is a CAN node through which information is exchanged with the Body Computer and with the other electronic units.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The centre module containing the three sets of instruments is not a B-CAN node, but is connected by means of a special serial line to the instrument panel node which sends the module all the signals necessary for the display of the required information.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Speedometer: its function allows the vehicle speed to be displayed on the instrument panel. This information is obtained from the ABS control unit via the Body Computer.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Engine rpm: this function involves the display on the instrument panel of the engine rotation speed by means of the message sent via the CAN from the engine management control unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Mileometer: this function includes the display and storage of the mileometer and trip counter. Mileage information is processed by the Body Computer. A button on the panel next the steering wheel zeros the trip counter by means of a counter.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Fuel level: the Body Computer receives the signal from the sensor built into the pump assembly inside the fuel tank and processes it to guarantee suitable filtering/damping for the instrument panel gauge; it also controls the lighting of the reserve warning light.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Engine oil level: the function signals the status of the engine oil level at starting (for about 3 seconds) in the display. The actual instrument panel operates a hot wire oil level sensor. If the oil level is below the minimum value, the message "minimum oil level" is also sent.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Brake pad wear status: this function involves the dedicated warning light coming on: the Body Computer detects the brake pad wear status when braking (signal from the brake pedal) in a prolonged manner (occasional signals are ignored).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Handbrake applied: the warning light for the handbrake status is controlled by a specific switch. A buzzer is also activated if this signal is associated with the exceeding of a set speed threshold: the signal is sent by the Body Computer through the CAN.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Insufficient brake fluid: this function involves the insufficient brake fluid level warning light in the instrument panel coming on; the signal sent by the Body Computer via the CAN.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more details</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="main24a1.html?nodeID=939003534&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=INSTRUMENT%20PANEL%20-%20DESCRIPTION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5560 INSTRUMENTS</a>
+          </p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The operation of the warning lights which do not come under any other functions is illustrated below: the other warning lights and displays are described and illustrated in the diagrams for the components to which they refer.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011718&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:31:06 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

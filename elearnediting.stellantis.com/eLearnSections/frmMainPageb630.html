@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011844&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Impianto+Elettrico&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 03:52:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011844&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Impianto+Elettrico&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="PGEj3LpEm2XJF5PPAAMOXK5aCb1vDLjAE2R7cMyYR2y8N7f+1AkVC5Md4TIMRyTCbuxrcfWDxLSSCz9PUpHNSsNocW7jeiqBq4jnQqV7mFz8s78owXapN1m48QR+S36ANyeHcZJ8/t1eJTTGZgKI61EC1kksiPDc1j3E2AnwJgEdRpiFREwh9u4lvntbca0DrK0d/3FXhfC9PRbWw4659c3VVwwvidsMi0XtPDjn/nZM/Dl4EYQnMkW4B/UIMWaa9xLpt4K6Ws0kLsJJJJR8txXQ2zZULRvQeV+CkxgmfIv+CTVSNZ3Nw/cFEBN06iTVxeUFhlltIdKIFWdeLsKw49kkUY7fhFyuECIhnJGYGqIPWp9CE+Qug6xEeLw/P/amFKEbXb2svGQv476LwIC4LTk3/d0wUIs981AwpJneaX2eYWqdgg1W76dMM8jQSHJFTRWufxWlByVQ+3dRQoaq18l68AXv8HMN/jIz5Z4lfs5B2KyKUqeY/5RXsyUT+l/vn5WH0urkgDESsHIecjXK42RVt7s5tmftqTRQ0ylDMxiMUeb+/eIaockiMbK9s9n1yOqykF5knP2jlgUg+SXt6LZ2WqX2V+0K5gsQC+khsq5WSq6b6TUnFwIXO0+xmOwuG33C+GAOOGHBTW5mZww55GpT2n6jj8XR69WdzF2q7j9y9fahWNJ3bbmvZ1fkqNln06tQMp6CeQd78/68gHRXYTNbaVAcSlGtxxSXsKj97r+3o9iU0PRZVpJ9jdMiVwLQc7HcLvSc5H848UfTJrly1HgdahUJEmHRKiTp3uH3XNQ=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspAIR BAG - COMPONENT LOCATION&nbsp&nbsp&nbspE7030&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    <HR id="SchemaTop1_hr1" width="100%" SIZE="1"></HR>
+<table id="SchemaTop1_dlsSchema" cellspacing="1" cellpadding="1" align="Center" style="width:90%;">
+	<tr>
+		<td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_0" class="notSelected" href="main6c7e-2.html?nodeID=939011841&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent" style="display:inline-block;width:108px;">AIR BAG - DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_1" class="notSelected" href="maina612.html?nodeID=939011842&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent" style="display:inline-block;width:108px;">AIR BAG - FUNCTIONAL DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_2" class="notSelected" href="main457c.html?nodeID=939011843&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent" style="display:inline-block;width:108px;">AIR BAG - WIRING DIAGRAM</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_3" class="Selected" href="main6b6d.html?nodeID=939011844&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent" style="display:inline-block;width:108px;">AIR BAG - COMPONENT LOCATION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_4" class="notSelected" href="javascript: parent.openWinPrint(&#39;http://elearnediting.stellantis.com/eLearnSections/SchemaPrintAll.aspx?LanguageID=2&amp;nodeID=939011844&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&#39;);" target="_parent" style="display:inline-block;width:108px;">Print electrical function</a>
+		</td>
+	</td>
+	</tr>
+</table>
+<HR id="SchemaTop1_hr2" width="100%" SIZE="1"></HR>
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <script language="javascript" src="svgscript/mysvg.js">
+  </script>
+  <body onload="">
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">COMPONENT LOCATION</h1>
+          <center>
+            <embed src="images/svg/939005141_2.svg" type="image/svg+xml" style="width:80%; height:450px;">
+            </embed>
+            <p>Se non riesci a vedere correttamente l'immagine puoi provare al seguente link: <a href="https://elearnediting.stellantis.com/elearnold/main.aspx?nodeID=939011844&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Impianto+Elettrico&amp;validityName=2.4+JTD+20V&amp;isExaminer=" target="_old">link</a></p>
+          </center><br><a href="__javascript_%20parent.openWinZoom(%27schemazoomprec061.html?xmlID=939019564&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V');%0d%0a">Enlarge the image</a><br><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Component code</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Description</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Reference to the operation</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main2603.html?nodeID=939003761&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">B002 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">JUNCTION UNIT UNDER DASHBOARD</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main0d26.html?nodeID=939010967&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5505A35 MAIN BODY COMPUTER/JUNCTION UNIT - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main7dc0.html?nodeID=939003783&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">B099 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MAXIFUSE BOX ON BATTERY</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainae7b.html?nodeID=939011008&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5530B40 SUPPLY BOX ON BATTERY (LINK BATTERY AND FUSE BOX) - R R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main2c8f-2.html?nodeID=939003817&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">C020 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER SIDE DASHBOARD EARTH</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main0b59-3.html?nodeID=939003835&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">C050 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AIR BAG SYSTEM EARTH</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main95fd-2.html?nodeID=939003841&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">D001 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FRONT/DASHBOARD COUPLING</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main37f2.html?nodeID=939003930&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">D047 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CLOCK SPRING COUPLING</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="maine4fa.html?nodeID=939011096&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C12 CLOCK SPRING FOR AIR BAG MODULE ON STEERING WHEEL - R.R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main7895.html?nodeID=939003943&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">D070 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DRIVER'S SEAT COUPLING</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainf1bd-3.html?nodeID=939011288&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7045A10 FRONT SEAT (ONE), LEFT OR RIGHT - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main877a-2.html?nodeID=939003948&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">D071 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER SEAT COUPLING</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainf1bd-3.html?nodeID=939011288&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7045A10 FRONT SEAT (ONE), LEFT OR RIGHT - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main4399-3.html?nodeID=939003981&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">E050 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INSTRUMENT PANEL</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main23fc.html?nodeID=939011063&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5560B10 CONTROL PANEL - R+R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main787c-2.html?nodeID=939004020&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">G010 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FRONT COURTESY LIGHT</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main7bde-2.html?nodeID=939011255&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7040E40 FRONT COURTESY LIGHT - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main9654.html?nodeID=939004099&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">H075 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER AIR BAG DISABLING SWITCH</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main0434.html?nodeID=939011094&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C26 PASSENGER AIR BAG DISABLING KEY LOCK BARREL/SWITCH - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="maind9fc.html?nodeID=939004881&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">I046 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DRIVER'S SEAT BELT SWITCH</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainacf2.html?nodeID=939011385&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7065A24 ANCHORAGE LINK WITH PRETENSIONER FOR ONE FRONT SEAT BELT LH OR RH R R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainab02.html?nodeID=939004883&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">I047 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER SEAT BELT SWITCH</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainacf2.html?nodeID=939011385&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7065A24 ANCHORAGE LINK WITH PRETENSIONER FOR ONE FRONT SEAT BELT LH OR RH R R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main0105.html?nodeID=939004189&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">K039 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FRONT AIR BAG SENSOR</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainb2bc.html?nodeID=939011087&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C10 DECELERATION SENSOR FOR AIR BAG (ONE), L/H OR R/H - R+R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main7b09-2.html?nodeID=939004220&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">K065 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER PRESENCE SENSOR</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainc81b-2.html?nodeID=939005573&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7065A34 PASSENGER PRESENCE SENSOR ON FRONT SEAT FOR INDICATING SEATBELT UNFASTENED R R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main88fb.html?nodeID=939004222&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">K066 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIDE BAG SENSOR, DRIVER'S SIDE</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainad07-4.html?nodeID=939011088&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C40 SIDE BAG SENSOR (ONE), LH OR RH - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main6de6-2.html?nodeID=939004224&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">K067 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIDE BAG SENSOR, PASSENGER SIDE</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainad07-4.html?nodeID=939011088&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C40 SIDE BAG SENSOR (ONE), LH OR RH - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main8ada-3.html?nodeID=939004296&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">M001 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BODY COMPUTER</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main0d26.html?nodeID=939010967&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5505A35 MAIN BODY COMPUTER/JUNCTION UNIT - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainfe53.html?nodeID=939004338&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">M060 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AIR BAG CONTROL UNIT</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="maine54e-2.html?nodeID=939011090&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C14 AIR BAG ECU - R+R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main87db-2.html?nodeID=939004386&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">M089 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">STEERING LOCK CONTROL UNIT (NBS)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main182d-2.html?nodeID=939011103&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580E17 STEERING LOCK - R.R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main202e-2.html?nodeID=939004894&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">Q009 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DRIVER'S AIR BAG</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main2baa.html?nodeID=939011097&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C18 AIR BAG MODULE - R+R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main954a.html?nodeID=939004623&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">Q011 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AIR BAG IN DASHBOARD (PASSENGER SIDE)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="maind6af.html?nodeID=939011089&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C22 AIR BAG MODULE - PASSENGER SIDE - R.R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainaa3f-2.html?nodeID=939004625&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">Q014 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DRIVER'S SIDE KNEE BAG</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main8bef-2.html?nodeID=939011091&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C23 DRIVE SIDE KNEE PROTECTION AIR BAG MODULE R. R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main6201-2.html?nodeID=939004627&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">Q015 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER SIDE KNEE AIR BAG</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainfbda.html?nodeID=939004629&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">Q020 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DRIVER'S FRONT SEAT BELT PRETENSIONER</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainacf2.html?nodeID=939011385&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7065A24 ANCHORAGE LINK WITH PRETENSIONER FOR ONE FRONT SEAT BELT LH OR RH R R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main82c4-3.html?nodeID=939004631&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">Q021 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER SIDE FRONT SEAT BELT PRETENSIONER</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainacf2.html?nodeID=939011385&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7065A24 ANCHORAGE LINK WITH PRETENSIONER FOR ONE FRONT SEAT BELT LH OR RH R R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main65d2.html?nodeID=939004633&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">Q030 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DRIVER'S SIDE BAG</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="maine51a.html?nodeID=939011098&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C44 FRONT SIDE BAG MODULE (ONE) LH OR RH - R.R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainb777.html?nodeID=939004636&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">Q031 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER SIDE BAG</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="maine51a.html?nodeID=939011098&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C44 FRONT SIDE BAG MODULE (ONE) LH OR RH - R.R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main2f06.html?nodeID=939004639&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">Q040 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DRIVER'S HEAD BAG</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main065b.html?nodeID=939011093&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C52 WINDOW BAG MODULE (ONE) LH OR RH - R.R WITH INTERFERING PARTS REMOVED</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main8f03-3.html?nodeID=939004641&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">Q041 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER HEAD BAG</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main065b.html?nodeID=939011093&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR%20BAG%20-%20COMPONENT%20LOCATION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580C52 WINDOW BAG MODULE (ONE) LH OR RH - R.R WITH INTERFERING PARTS REMOVED</a></p></td></tr></table></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011844&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Impianto+Elettrico&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 03:52:06 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

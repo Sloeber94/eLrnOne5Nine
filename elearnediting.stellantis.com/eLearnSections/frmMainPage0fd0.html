@@ -1,0 +1,1433 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925342&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:36:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925342&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="2D8wL1TZGxlY5rTw3w4I0HwdMNRnVvuHpq3rnmoYXrJtR0kwTpjtQdz0LrpHpJmWOTkSQbrBcx2K3jW6YbIWSZrCiZjlzK2Gp8JWZhAJsTzRVH6Et2IXasZflTkGkr3lzGsST3uBQX9f73m3i2Gp7voxeZ8/Z5cVJ/m5XjuCnR5TtrLq4DX/zwTC4m1iRUyIpWv9on4/4sPIBe7yRK87Aj5h7TknSgWskpLw0YAYoNvIvt0o1TfXh1xmbVwbHCkejIQdra1JV1WTVDA442l5Iwr/v7wZ91aWExYqVJaMYdhh3uHC24TDT2CWeXazXLNP6mhM4tc0vQPsz3JGDGHkFOeWgwAjQL5vS1YPs3WCFfmAknS3QenbN1NicsUts0ML4GSWlBmM7uzfZxASayFA7DyMGWMm8mq91FGQj+wx9URgSHu/duGc2stDU8F2rRyKUCFqyhUFnAbXWETVdjNVwI8+kSbDj+/MJ0HFk4sGJCBWiOfbLVvlSEAMS6tooHyIAotimJAA6G6jk2uTfX0igojQs62qqy8tJSQz+LydBTkkud7wkKeuGvNF0AZA4UUM" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 20/03/2008</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Alfa 159</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>all versions (Saloon-Sportwagon MY 08)</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">00</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">01.08</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>0000 0 000 AA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>NEW ALFA 159 MY 08 VERSIONS</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Main technical specifications</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The new MY 08 Alfa 159 versions (Saloon - Sportwagon) to be launched shortly feature the following engine types:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Petrol:</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.8, 1.9JTS, 2.2JTS, 2.2JTS Selespeed, 3.2V6 4x2 and 4x4, 3.2V6 4x4 Q-Tronic</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Diesel :</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 8v, 1.9JTDM 16v, 1.9JTDM 16v Q-Tronic, 2.4JTDM 4x2 e 4x4, 2.4JTDM 4x2 Q-Tronic various trim levels:</p>-Alfa 159, Progressión, Elegante, Sportiva, TI<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pages that follow contain the identification data and a brief description of the main innovative/important features:</p>-4x2 drive for the 3.2 JTS V6 version-new Electronic Q2 system-reduction in vehicle weight-new trim level components<h2 class="bigtext2">Engine codes and bodywork versions</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Petrol engines</b></p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>VERSIONS</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>ENGINE CODES</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>BODYWORK VERSIONS</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A4000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXL1A 21C</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A4000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXL1A 22C (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTS</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A6000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXA1B 00C</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTS</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A6000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXA1B 10C (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.2JTS</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A5000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXB1B 03C</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.2JTS</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A5000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXB1B 11C (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.2JTS Selespeed</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A5000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXB11 30C</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.2JTS Selespeed</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A5000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXB11 31C(+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.2JTS 4x2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXG1B 44</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.2JTS 4x2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXG1B 45 (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.2JTS 4x4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXG2B 09B</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.2JTS 4x4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXG2B 16B (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.2JTS 4x4 Q-Tronic</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXG22 32B</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.2JTS 4x4 Q-Tronic</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXG22 33B (+)</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Diesel engines</b></p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>VERSIONS</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>ENGINE CODES</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>BODYWORK VERSIONS</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 8v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A1000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXE1B 04C</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 8v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A1000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXE1B 14C (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 8v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A7000 (++)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXH1B 06C (++)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 8v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A7000 (++)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXH1B 17C (++)(+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A2000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXC1B 01C</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A8000 (++)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXC1B 01D (++)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A8000 (++)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXF1B 05C (++)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A8000 (++)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXC1B 12E (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A8000 (++)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXC1B 12C (++) (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A8000 (++)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXC1B 12D (++) (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A8000 (++)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXF1B 15 (++) (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A8000 (++)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXF1B 15C (++) (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A8000 (++)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXF1B 15E (++) (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v Q-Tronic</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A2000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXC12 23C</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v Q-Tronic</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AA000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXC12 24C (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v Q-Tronic</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A2000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXF12 41C (++)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9JTDM 16v Q-Tronic</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AA000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXF12 42C (++) (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4JTDM 4x2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A9000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXM1B 39B</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4JTDM 4x2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A9000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXM1B 40B (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4JTDM 4x4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A9000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXM2B 35B</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4JTDM 4x4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A9000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXM2B 36B (+)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4JTDM 4x2 Q-Tronic</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A3000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939AXD12 25 B</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.4JTDM 4x2 Q-Tronic</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939A3000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">939BXD12 26B (+)</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(+) Sportwagon</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(++) Specific markets</p><h2 class="bigtext2">Engines</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The MY 2008 Alfa 159 versions feature the following engines (already fitted on the previous versions).</p>-<b>1.8 (1796 cc)</b> four cylinders in line, 16 valves, running on petrol with Multipoint electronic injection with a power output of 103kW (140 bhp) at 6300 rpm.-<b>1.9JTS (1859 cc)</b> four cylinders in line, 16 valves, running on petrol with direct electronic injection with a power output of 118kW (160 bhp) at 6500 rpm.-<b>2.2JTS (2198 cc)</b> four cylinders in line, 16 valves, running on petrol with direct electronic injection with a power output of 136kW (185 bhp) at 6500 rpm.-<b>3.2JTS (3195 cc)</b> six cylinders, 24 valves, running on petrol with direct electronic injection with a power output of 191kW (260 bhp) at 6200 rpm.-<b>1.9JTDM (1910 cc)</b> four cylinders in line, 8 valves, running on diesel with common rail direct injection with a power output of 88kW (120 bhp) at 4000 rpm.-<b>1.9JTDM (1910 cc)</b> four cylinders in line, 16 valves, running on diesel with common rail direct injection with a power output of 110kW (150 bhp) at 4000 rpm.-<b>2.4JTDM (2387 cc)</b> four cylinders in line, 20 valves, running on diesel with common rail direct injection with a power output of 147kW (200 bhp) at 4000 rpm (for Q-Tronic versions)-<b>2.4JTDM (2387 cc)</b> four cylinders in line, 20 valves, running on diesel with common rail direct injection with a power output of 154kW (210 bhp) at 4000 rpm (excluding Q-Tronic versions)<h2 class="bigtext2">4x4 transmission</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As on previous versions, the Alfa 159 3.2JTS and 2.4JTDM will have permanent 4x4 drive with three differentials (the centre one being Torsen C self-locking).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Alfa Romeo Q4 four driving wheels system works with permanent and dynamic distribution of the drive to the four wheels producing maximum levels of active safety and sports performance.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Torsen C self-locking centre differential manages the drive torque in the most suitable way sharing it 57% to the rear wheels and 43% to the front wheels. The system also ensures excellent drive in all grip conditions thanks to the automatic slipping control.</p><h2 class="bigtext2">3.2jts v6 my 08 with 4x2 transmission</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In addition to the 4x4 version the 3.2JTS V6 MY 08 version also has 4x2 drive like on all other versions.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">We also wish to point out that the other mechanical specifications on this version remain unchanged compared with the 4x4 version.</p><h2 class="bigtext2">Gearbox</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All the gearboxes are 6 speed (except the 1.8 version which has a 5 speed gearbox) with ratios designed to highlight performance. The engagement guides have been reduced and special synchronizers have been used to facilitate sliding and manoeuvrability during gear changes.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 types of gearbox are currently adopted to take full advantage of the performance of the Alfa 159 engines:</p>-F17 - 5 speed for 1.8 versions-M32 - 6 speed for 1.9JTS, 2.2JTS and 1.9JTDM 8/16v versions-F40 - 6 speed for 3.2JTS and 2.4JTDM 20v versions.<h2 class="bigtext2">Braking system</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As on previous versions, the braking system for the Alfa 159 MY 08 is available (fitted as standard or on request) with the most sophisticated electronic and mechanical assistance systems, namely:</p>-ABS: anti-lock brakes-EBD: electronic brakeforce distribution between the front and rear wheels-HBA (Hydraulic Brake Assistance): automatic increase in braking pressure during emergency braking-VDC: vehicle electronic stability control.-Q2 electronic (with VDC): this allows an increase in stability when cornering reacting in real time to the loss in grip of the wheels through local intervention of the braking system-ASR (with VDC): traction control via management of the brakes and engine control unit-MSR (with VDC): Engine torque increase when changing down or braking in certain conditions, preventing the wheels from locking-Hill-holder (with VDC): assisted hill start system that keeps the vehicle braked while parked on slopes and automatically releases the brakes when the driver wishes to set off.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>System specifications (calipers and discs)</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Depending on the different engine type (weight and power) the system differs as described below:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.8-1.9JTS, 2.2JTS, 1.9JTDM 8/16v engine types</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Front</b></p>-ventilated disc diameter/thickness 305x28 mm-Brembo M4-42 fixed type aluminium brake calipers with 4 42 mm diameter pistons with radial type mountings on the steering knuckle-surface of the brake pads: 64 cm²<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Rear</b></p>-disc diameter/thickness 278x12 mm-TRW CII aluminium brake caliper with 38 mm diameter piston (the caliper includes the parking device)-pad surface: 38 cm²<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3.2JTS and 2.4JTDM 20v engines</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Front</b></p>-ventilated disc diameter/thickness 330x28 mm-Brembo M4-42 fixed type monobloc aluminium brake calipers with 4 42 mm diameter pistons with radial type mountings on the steering knuckle-surface of the brake pads: 77 cm²<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Rear</b></p>-ventilated disc diameter/thickness 292 x 22-TRW CII aluminium brake caliper with 38 mm diameter piston (the caliper includes the parking device)-pad surface: 38 cm²<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Brembo front brake calipers</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All Alfa 159 MY 08 versions have monobloc aluminium front calipers with radial mountings (they were previously only fitted on teh 3.2JTS and 2.4JTDM 20v versions) which means that the caliper (A- Fig. 1) is a single block of machined aluminium instead of being composed of two shells bolted to one another like on previous versions.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Although the design of the new calipers (A) is the same their dimensions differ (smaller on the 1.8, 1.9JTS, 2.2JTS, 1.9JTDM 8/16v).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">These technical solutions have been chosen to increase the strength of the caliper, whilst being lighter and therefore provide higher performance in sports use.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Both calipers have larger pads fitted which requires the use of four pistons (two on each side) to distribute the braking pressure at the disc evenly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fitting of new brake calipers (A) on new aluminium steering knuckles has involved a new layout of the pipe (B).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 1 - brake caliper for 1.8, 1.9JTS, 2.2JTS, 1.9JTDM 8/16v versions</b></p><center><img src="images/jpg/939006871_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><h2 class="bigtext2">Q2 electronic system</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Introduced on the Alfa 159 MY 08 versions (Saloon and Sportwagon) the new Q2 Electronic system is described briefly below.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Q2 Electronic system is a device incorporated with the VDC stability control system and allows an increase in stability when cornering reacting in real time to the loss in grip of the wheels through the local intervention of the braking system producing behaviour similar to a limited slip differential (for example a Torsen mechanical device).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In particular, the front braking system, in cornering acceleration conditions, acts appropriately on the inner wheel, increasing the drive of the outer wheel (with more load) and sharing the torque between the front drive wheels dynamically and continuously according to the driving conditions and the road surface.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On 4x2 versions the Q2 Electronic system is combined with the front suspension.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Whilst on 4x4 versions the Q2 Eletronic system is linked with the rear axle further increasing the pleasant and easy driving conditions of the Q4 giving an even greater feeling of sporty driving: the behaviour is like a 4x4 with a centre Torsen and rear electronic self-locking differential.</p><h2 class="bigtext2">Front suspension</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The front suspension on the 159 MY 08 features new lighter components, the main ones being listed below:</p>-new anti-roll bar on the front suspension-new aluminium steering knuckle with the consequent use of specific components (nuts, etc.)-new brake disc guards-new ABS bracket and cables-new pedal unit support for left hand drive in plastic.<h2 class="bigtext2">Wheel geometry/angles</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The figures refer to the angles/geometry in "standard A " conditions, i.e.: with vehicle unladen with spare wheel, tools, accessories, supplies, full petrol tank and tyres inflated to the correct pressure.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Geometry figures valid for all versions</b></p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Front wheels</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All versions (excluding TI)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TI 4x2 (*)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ti 4x4 (*)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">camber</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-35’ ± 18’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 24’)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-1°1’ ± 18’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 24’)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-38’ ± 18’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 24’)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">caster</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4° 15’ ± 18’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 18’)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4° 15’ ± 18’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 18’)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4° 15’ ± 18’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 18’)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">semi-toe in (per wheel)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 8’ ± 4’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 4’)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 7’ ± 4’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 4’)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7’ ± 4’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 4’)</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) we wish to point out that the TI versions have a 20 mm reduced geometry compared with the other versions</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Rear wheels</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All versions (excluding TI)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TI 4x2 (*)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ti 4x4 (*)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">camber</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 40’ ± 18’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 24’)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1°3’ ± 18’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 24’)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1°3’ ± 18’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Maximum difference right/left: 24’)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">semi-toe in (per wheel)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13’ ± 7’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Total toe in: 26’ ± 7’)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11’ ± 7’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Total toe in: 26’ ± 7’)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11’ ± 7’</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(Total toe in: 26’ ± 7’)</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) we wish to point out that the TI versions have a 20 mm reduced geometry compared with the other versions</p><h2 class="bigtext2">Rims - tyres - inflation pressures</h2><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Version</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fitted as standard</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rims + Tyres</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Available on request</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rims + Tyres</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>For versions/markets where specified</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rims + Tyres</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.8 - 1.9JTS</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7Jx16” (a)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">205/55R16 91V</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7Jx16” (a)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7Jx16” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">215/55R16 93V</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7.5x17” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8x18” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">225/50R17 98W</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">235/45ZR18 98W</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.2JTS</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7Jx16” (a)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">215/55R16 93V</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7Jx16” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">215/55R16 93V</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7.5x17” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8x18” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">225/50R17 98W</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">235/45ZR18 98W</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3.2JTS</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.4JTDM 210CV 4x4</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7.5Jx17” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">225/50R17 98W</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8x18” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">235/45ZR18 98W</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9JTDM 8v</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7Jx16” (a)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">215/55R16 93V</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7Jx16” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">215/55R16 93V</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7.5x17” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8x18” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">225/50R17 98W</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">235/45ZR18 98W</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9JTDM 16v</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7Jx16” (a)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">215/55R16 93V</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7Jx16” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">215/55R16 93V</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7.5x17” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8x18” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">225/50R17 98W</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">235/45ZR18 98W</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.4JTDM 20v</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7.5Jx17” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">225/50R17 98W</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8x18” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">235/45ZR18 98W</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Trim levels - TI</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8x19” (L)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">235/40ZR19 96Y (+)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) steel rims</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(L) alloy rims</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(+) Tyres which cannot be fitted with chains. Measurement certified and only permitted for PIRELLI 235/40 ZR19 96Y tyres. If winter tyres are fitted, use 225/50 R17 98 or 235/45 R18 98 tyres. 16" wheel rims cannot be fitted on TI trim level vehicles.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Spare wheel:</b> 4.00BX17” rim - T125/80R17 tyre.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Only spider type snow chains can be fitted to 225/50 R17" tyres. Snow chains (of any type) cannot be fitted to 235/45 ZR18" tyres because of interference with the wing.</p></p></span></td></tr></table><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Chains can be fitted to the front wheels on 4x4 3.2 JTS and 2.4 JTDM versions.</p></p></span></td></tr></table><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Winter tyres with a speed index of H or higher are recommended.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Tyre inflation pressures when cold (bar)</b></p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>205/55 R16” 91V</b></p></td><td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>215/55 R16” 93V</b></p></td><td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>225/50 R17” 98W</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">front</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">rear</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">front</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">rear</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">front</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">rear</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Light load (2 persons)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,5</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Heavy load</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,9</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,7</p></td></tr></table><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>235/45 ZR18” 98W</b></p></td><td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>235/45 ZR18” 98W </b></p></td><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Spare wheel</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>T125/80 R 17</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">front</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">rear</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">front</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">rear</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Light load (2 persons)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,5</p></td><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4,2</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Heavy load</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,9</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3,0</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2,8</p></td></tr></table>-When the tyres are warm, the inflation pressure should be + 0.3 bar in relation to the recommended figure. However, recheck that the value is correct with the tyre cold.-With snow tyres the pressure figure should be +0.2 bar than the recommended value for the original tyres.-For use at constant speeds above 160 km/h, inflate the tyres to the full load pressures.<h2 class="bigtext2">Fittings</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main features of the 159 MY 08 compared with the previous version are listed below according to the trim level:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Alfa 159:</b></p>-Being single colour background as well as black-Flocked fabrics-Chrome seals and vents-Manual passenger seat lifting device.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Progressión:</b></p>-Painted trims and mouldings;-Manual passenger seat lifting device.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Elegante:</b></p>-Control panel with white lighting;-Aluminium trims and mouldings;-Seats with micro peforated alfatex in the centre;-Manual passenger seat lifting device.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Sportiva:</b></p>-Black single colour background;-Seats in two colour sports fabric (red and black);-17" alloy wheels;-Steering wheel with radio controls and knob from TI, black stitching;-Control panel with white lighting and graphics and seals from TI;-Aluminium trims and mouldings from TI;-Black ceiling, sun visors, pillar covers and appendixes;-Manual passenger seat lifting device.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>TI:</b></p>-Like the sports version but with black leather seats.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Sportwagon</b></p>-The Fix&amp;Fold system is available on all trim levels of the Sportwagon version making it possible to have a flat load compartment by simply and quickly folding over the rear seats.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>All the versions also have the following variants: </b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Climate control systems</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Alfa 159 MY 08 may be fitted with the following systems (as standard or on request depending on the version):</p>-Manual climate control system-Automatic bi/tri zone climate control system<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">which differs, compared with the previous versions, through the serigraphy of the buttons A (Fig. 2) and the inclusion of the OFF button (I - Fig. 2) in place of the MONO button and, on versions equipped with automatic tri zone climate control systems, through the different serigraphy of the rear controls temperature adjustment knob.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 2 - Bi/tri zone front controls</b></p><center><img src="images/jpg/939006872_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>A</b> - air distribution selection buttons (left side and right side)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>B</b> - left side temperature adjustment knob</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>C</b> - FULL AUTO function activation button (automatic operation)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>D</b> - climate control information display</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>E</b> - right side temperature adjustment knob</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>F</b> - heated rear windscreen/exterior rear view mirrors on/off button</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>G</b> - MAX-DEF function activation button (rapid defrosting/demising of front windows, heated rear windscreen and exterior rear view mirrors)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>H</b> - fan speed increase/decrease buttons</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>I</b> - climate control deactivation OFF button</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>L</b> - interior air recirculation on/off button</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>M</b> - climate control compressor on/off button</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>N</b> - interior air temperature sensor.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Luggage compartment</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The MY 08 versions feature an electrically operated luggage compartment lock which is disabled when the vehicle is moving.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Using the Setup menu (or, on some verions, the Radionavigation system) it is possible to set the opening of the luggage compartment activating the indepedent boot function and with this function activated the luggage compartment can only be opened by pressing the boot open button on the electronic key.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">We wish to point out that when the luggage compartment is unlocked it can be opened from the outside by pressing the logo illustrated in Fig. 3 until the lock can be heard unlocking.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 3</b></p><center><img src="images/jpg/939006873_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Weight reduction</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The weight of various components has been reduced (by around 40 Kg) by making adjustments to both mechanical components (as indicated previously, e.g.: aluminium brake calipers, aluminium steering knuckle, etc.) and bodywork components. As a result of this reduction the load capacity has been increased.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Vehicle weights: Sportwagon and Saloon versions with petrol engines (Kg)</b></p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Empty weight</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(with all fluids, fuel tank 90% full and without optional equipment)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.8</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9 JTS</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.2 JTS</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3.2 JTS 4x2</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3.2 JTS 4x4</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Sportwagon</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1435</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1485</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1495</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1590</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1660</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Saloon</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1385</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1435</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1445</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1540</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1610</p></td></tr><tr><td class="body_table" colspan="6" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Max permitted weight (*)</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.8</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9 JTS</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.2 JTS</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3.2 JTS 4x2</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3.2 JTS 4x4</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Sportwagon</b></p></td><td class="body_table" colspan="5" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- front axle</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1100</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1100</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1100</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1220</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1220</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- rear axle</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- total</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1985</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2035</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2045</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2140</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2210</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Saloon</b></p></td><td class="body_table" colspan="5" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- front axle</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1100</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1100</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1100</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1220</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1220</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- rear axle</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- total</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1935</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1935</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1935</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2090</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2160</p></td></tr><tr><td class="body_table" colspan="6" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Payload including the driver (**)</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.8</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9 JTS</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.2 JTS</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3.2 JTS 4x2</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3.2 JTS 4x4</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Sportwagon / Saloon</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">550</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">550</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">550</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">550</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">550</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Vehicle weights: Sportwagon and Saloon versions with diesel engines (Kg)</b></p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Empty weight</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(with all fluids, fuel tank 90% full and without optional equipment)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9JTDM 8v</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9 JTDM 16v</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.4 JTDM 4x2</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.4 JTDM 4x4</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Sportwagon</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1530</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1540</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1635</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1695</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Saloon</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1480</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1490</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1585</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1645</p></td></tr><tr><td class="body_table" colspan="5" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Max permitted weight (*)</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9JTDM 8v</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9 JTDM 16v</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.4 JTDM 4x2</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.4 JTDM 4x4</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Sportwagon</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- front axle</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1150</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1150</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1220</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1220</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- rear axle</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- total</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2080</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2090</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2185</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2245</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>- Saloon</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- front axle</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1150</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1150</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1220</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1220</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- rear axle</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1050</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- total</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2030</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2040</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2135</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2195</p></td></tr><tr><td class="body_table" colspan="5" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Payload including the driver (**)</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9JTDM 8v</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1.9 JTDM 16v</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.4 JTDM 4x2</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2.4 JTDM 4x4</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Sportwagon / Saloon</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">550</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">550</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">550</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">550</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) Loads not to be exceeded. The customer should be reminded that it is their responsibility to arrange goods in the luggage compartment and/or on the load platform in accordance with the permitted weights.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(**) If special equipment is fitted (sun roof, towing device, etc.) the empty weight may increase, therefore the payload decreases in relation to the maximum permitted weights.</p><h1 class="bigtext1">OPERATIONS IN NETWORK</h1>-For the <b>Planned Maintenance Programme</b> refer to Service news 00.02.08 - CD 02/2008-For general information, technical data, descriptions and operation, repair procedures and wiring diagrams, refer to the <b>Service Manual.</b>-For the <b>fault diagnosis of the electronic systems</b> equipped with autodiagnosis, use the Examiner updated with <b>the new programme release 7.40</b> or higher.-For the routine P.D.I. operations, refer to Service News 00.06.05 - CD 03/2005.</td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925342&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:36:05 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

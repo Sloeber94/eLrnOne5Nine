@@ -1,0 +1,1064 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010750&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 02:16:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010750&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ZQs+0IrcwckH5lDCycsCYuEn4bmCPVrMfmbQd1Cbkzmvsu3fL9r0R71dsKs3MsXXI9ktHsfYHamXqMRI0KVCgs0e/kqFXXAJbEDniyJqSa3fUbOgxd0lT7OEMc1JBNMQAeuPtRTash1caiMjnhHtPoQP+hmfv6RyZ0AeFv5tK8/ny2LUrPQnxzWLjsE/9z13TDx6K6qEVIX3WGILvLipRsYQ4Hs0VWzLSKTPbTsmrNGM2aWRLV2KdvBgvNJt7gQVy3Ea8uS7TFq8JTUWFHHs79MlvtiJl6GZxTQs0w+JIwfazLMwLfSes9ujwH7h3LvY/K4+94Hli0zaR0DW5kwTgNYA0+bgX7ZiQPBU/idL/wZ/6KtlHDk3ZLnmdLMYmtIbuH5wNVUO2H27e8i7NC6DGs1RNDvQOYeP4CTE8gzxVgaRJldZlZHqwyms8Y3VdiMWC1IPrkMFTM3fF86R0XSRvZ8btP+6p3N00vICYz4iZ/Wj62PMQRyiCQSLBJh9g8kv+eKdjw0mkmBRBJ5HZ5AxncZXxAQZrdXZ3s/NWkQyNWhoXelOIX+zYSLoHNlYu+Ti/xT7oXFk6kdKVkT/Qi9nxk3ezOUdNAQPbSzvchYyt0+a/krBWB99/aypM1Aj653rBggkvtyi4ZhITggkCs90S4bRqsHD1+VdJs2s/pdqVqe58xAXXLfRQUY6F/0o4maoLn1pp+md98IWbb3xDAugGriFFG38m6kNRcrdw1/O5Baj8tmV2ppHKHxwAzlXW2zw/Rd5tqIInVE8hQz6/k12BU4Tm4S8KEgKlHvn3tR0h+UOuC276jGMOgVTwvFcgY+XmZGQQkPt6VP5Cwmjqg2yjd/u/M7Rha1kKevLBma5eeg3usn7+fMUpJ8c3Ysn+LryTgVzFjWRactvGCbgtS4HiBUmu34hikn8CFf7apYSK/DyvRzW//lBjRVXYnSdsePOTFc+p2SRKbajOo25aRPlvQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="tD0KVUOrSMCFX1+zGhZV2fKAuENZgQZSLmDiUD+tQMXhUolDOLFIi+D9mfnX7iNMk7/VRz7nJira2ET79/P/sQtyEnvOsozXU2/kB/O+ucAOAqAG9VWvpuGpi1chPyRU" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspRIGHT DRIVESHAFT WITH JOINTS AND INTERMEDIATE DRIVESHAFT - R+R&nbsp&nbsp&nbsp2710A14&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000533_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/20_2.jpg" border="0">Removing<a class="title" name="0"></a>
+		(
+		<a href="#1" class="title_link">Refitting<img src="images/jpg/21_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">- Place the vehicle on a lift.</p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011369" onclick="
+        ViewiFrame(btn_0_939011369)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainabe2-2.html?nodeID=939011369&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=RIGHT%20DRIVESHAFT%20WITH%20JOINTS%20AND%20INTERMEDIATE%20DRIVESHAFT%20-%20R+R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7055B54 PROTECTION/GUARD UNDER ENGINE -R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011369"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010872" onclick="
+        ViewiFrame(btn_0_939010872)
+      "><span class="testo_link"> </span><a class="contents_link" href="main0372-2.html?nodeID=939010872&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=RIGHT%20DRIVESHAFT%20WITH%20JOINTS%20AND%20INTERMEDIATE%20DRIVESHAFT%20-%20R+R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 4450B04 RIGHT FRONT WHEEL - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010872"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale ">1. Remove the two stakings and undo the nut (1a) securing the front wheel hub to the driveshaft using the tool (1b) for counter-torque.</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1870815000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Counter-torque</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Loosen/ tighten nut securing front drive shaft to wheel hub</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td></tr></table></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010750&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 02:16:34 GMT -->
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000534_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Undo the nut securing the steering link to the right front steering knuckle.</p>
+          <p class="contents_testonormale ">2. Disconnect the steering rod (2a) from the front steering knuckle using the tool (2b).</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1871000700</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extractor</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extracting steering rod from strut</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939007181_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">For M.Y. ''08 versions, proceed with the removal of the steering rod from the steering knuckle following the instructions below.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010760" onclick="
+        ViewiFrame(btn_0_939010760)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="maineacb-2.html?nodeID=939010760&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=RIGHT%20DRIVESHAFT%20WITH%20JOINTS%20AND%20INTERMEDIATE%20DRIVESHAFT%20-%20R+R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 3310A48 FRONT BRAKE DISC (ONE), LEFT OR RIGHT - R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010760"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939005320" onclick="
+        ViewiFrame(btn_0_939005320)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainc5fc.html?nodeID=939005320&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=RIGHT%20DRIVESHAFT%20WITH%20JOINTS%20AND%20INTERMEDIATE%20DRIVESHAFT%20-%20R+R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 3310A59 FRONT BRAKE DISC GUARD (ONE), LEFT OR RIGHT- R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939005320"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">- Undo the nut securing the steering link to the right front steering knuckle.</p>
+          <p class="contents_testonormale ">1. Disconnect the steering link (1a) from the steering knuckle using the tools (1b), (1c) and (1d).</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1840005001</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extracting steering rod from steering knuckle</p><p class="contents_testonormale ">Extracting lower track control arm from steering knuckle</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">99341009</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extracting steering rod from steering knuckle</p><p class="contents_testonormale ">Extracting lower track control arm from steering knuckle</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2000030600</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Kit</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extracting/fitting steering knuckle bushes</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Position the tool taking care over the rubber mounting, making sure that the hooks are positioned above the bush as illustrated.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939007182_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Even if the bush (a) does not seem to have come out of its seat, check using the special fitting tool.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">If the bush comes completely out of its seat, replace the steering knuckle.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939007183_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Fit the tool as illustrated and tighten it until the bush is repositioned in its seat.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2000030600</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Kit</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extracting/fitting steering knuckle bushes</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000535_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Undo the nut securing the front suspension lower track control arm to the strut.</p>
+          <p class="contents_testonormale ">2. Unscrew the bolt securing the lower fork connecting the front suspension shock absorber to the lower track control arm.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939007184_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">For M.Y. ''08 versions, proceed with the removal of the track control arm from the steering knuckle following the instructions below.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">- Undo the nut securing the track control arm to the steering knuckle.</p>
+          <p class="contents_testonormale ">1. Partly disconnect the track control arm (1a) from the steering knuckle using the tools (1b), (1c) and (1d).</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Position the tool taking care over the rubber mounting, making sure that the hooks are positioned above the bush as illustrated.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1840005001</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extracting steering rod from steering knuckle</p><p class="contents_testonormale ">Extracting lower track control arm from steering knuckle</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">99341009</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extracting steering rod from steering knuckle</p><p class="contents_testonormale ">Extracting lower track control arm from steering knuckle</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2000030600</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Kit</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extracting/fitting steering knuckle bushes</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939007185_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Reposition the hooks (a) as illustrated and remove the lower track control arm from the steering knuckle.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939007186_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">If the bush comes completely out of its seat, replace the steering knuckle.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">1. Reposition the bush (1a) in its seat tightening the tool (1b) as illustrated.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2000030600</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Kit</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extracting/fitting steering knuckle bushes</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000536_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Use the tool to move the driveshaft back from the wheel hub.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2000001600</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extractor</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Retract driveshaft from front wheel hub</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000537_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Loosen the bolts fixing the intermediate driveshaft to the mounting.</p>
+          <p class="contents_testonormale ">2. Disconnect the intermediate driveshaft (2a) from the differential and remove it together with the right driveshaft (2b).</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000538_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/21_2.jpg" border="0">Refitting<a class="title" name="1"></a>
+		(
+		<a href="#0" class="title_link">Removing<img src="images/jpg/20_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">- Lubricate the intermediate drive shaft and right drive shaft mating surfaces with transmission fluid.</p><p class="contents_testonormale ">- Connect the intermediate driveshaft complete with right driveshaft to the differential.</p><p class="contents_testonormale ">- Tighten the bolts fixing the intermdiate driveshaft to the mounting to the recommended torque.</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Intermediate driveshaft</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Bolt</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">(support side) 0.7 - 1.1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td></tr></table><p class="contents_testonormale ">- Refit the right drive shaft in its seat on the wheel hub and secure by screwing in a new nut without tightening.</p><p class="contents_testonormale ">1. Tighten the bolt securing the lower fork connecting the front suspension shock absorber to the lower track control arm to the recommended torque.</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Lower fork connecting front suspension shock absorber to lower track control arm</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Bolt (to be replaced)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M14</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">(lower track control arm side) 4.5 - 5.5 + 90° </p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td></tr></table><p class="contents_testonormale ">2. Tighten the nut securing the front suspension lower track control arm to the strut to the recommended torque.</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Front suspension lower track control arm</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Nut</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M14</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">(steering knuckle side) 8.1 - 9.9</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td></tr></table></td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000539_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Tighten the new nut (1a) securing the right front driveshaft to the wheel hub using the tool (1b) for counter-torque.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Front wheel hub</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Nut</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">(driveshaft side) see operation 4450C28</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1870815000</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Counter-torque</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Loosen/ tighten nut securing front drive shaft to wheel hub</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000540_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Make two stakes on the nut collar as illustrated in the diagram.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <p class="contents_testonormale ">- Connect the steering links to the front hub steering knuckle and tighten the nut to the specified torque.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Front wheel hub</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Nut</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">(driveshaft side) see operation 4450C28</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010872" onclick="
+        ViewiFrame(btn_1_939010872)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main0372-2.html?nodeID=939010872&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=RIGHT%20DRIVESHAFT%20WITH%20JOINTS%20AND%20INTERMEDIATE%20DRIVESHAFT%20-%20R+R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 4450B04 RIGHT FRONT WHEEL - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010872"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011369" onclick="
+        ViewiFrame(btn_1_939011369)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainabe2-2.html?nodeID=939011369&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=RIGHT%20DRIVESHAFT%20WITH%20JOINTS%20AND%20INTERMEDIATE%20DRIVESHAFT%20-%20R+R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7055B54 PROTECTION/GUARD UNDER ENGINE -R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011369"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">- Remove the vehicle from the lift.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

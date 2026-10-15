@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010966&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=ABS+AND+HANDBRAKE+WARNING+LIGHTS+BOTH+ON&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:16:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010966&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=ABS+AND+HANDBRAKE+WARNING+LIGHTS+BOTH+ON&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="rUSoCXasSHVSVi5CT1CzvlpPLWRzOx0owdQGRd1dee5xmWNtpD1/1dAfnNsSt8QIldl9Fa06+ne8+hWN3/PsFf1uY1r1BjEh7eW37oXQ1qCbcoi20pQ2PHNeoElz/L1Kvyj6p1BfWYOIFUcYABcOOOQJ6G9kX+HDuBEFM3hyD7XuPyTbv78QDrotPzXo5hW5We/ZGymmB69v2PRiZIhoJEq89fuR73TGQ0WUfhZph2/a4mGbQIhsiNTiCa3w5caRLQeYJd9Ny3x9nn6pn+04S0FtiSwFpgSvqA4BsS+si4SqxhLlzrQ20gqEWpLLn9O83qmxImHRT6GSqabPUCn3NarhwX0cXaE4gyjT3Ej2Fi6AFrLvvYhbzEFyLom3QiwVFeDLrp8fhpaRN6yl3KU9GKTOXU2RsT20nkn5tinBgw0Ix2xC/hlTRM2e0rIoBdytLI02f+Fy1Fty9qO11Ns1q443wdNbOxYtytBebGiH6skPh5FRZsdJ5xyfIg7wZ2LPG7hXk6atUcggWsDelhYNrILyPrG8t9g1/M4K8U1biB7lmO0/xA3/wpeqGinxAOCPbGU+Dj1hvU9hd+SUGQBLbIwOvK9cZpdXTsQJak2pfMJqEPCVBgZbTegl/VvVNZCyWMTHWTSaBBVIFKLG69CSaPoSHke3sBKwHGl0Xf7JqYg0YDAsOiMMbPJcPRg+jblzRnIM4aOzGFsVElOBYXsrzbh0FGtwbYOOqITa4gk5L6Bny9qCMfZKCROTrl89rko3ofiNTTc8iOAMSKTCWiisCDXnaPptR3WU88U7p+CKnpIr5//6k+KEBZj9MZwv2Tl0faQ5LJDoeAtLAHraqoW01vEx0WNELznc8e4UaBikORkt5x26xJ+PsPwHPwuSu88ZDDMQHsJJvDe1BB+ws4YRRA0I2xqDoH+DUGsyWEwdNOY6L+HE6N4Ekw3G1mPdZA1m9uGPTy1QiQWgNq9X8CvkfjmrxP7DZPGpVgNqnikHAso5KDIjFH9TuDdXgRXU2WF/xsOFUI+uV6t8jR/+eSkFK1ex8YKOKCweuX8XNmkCYl2iHreKyJtlR9JT21s73/+O" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="nTkQXaGr3LyDZWbe1fUjg+aI6dvqOmn/vEhqr8OuJSUx/Ol38lp38x7V5Udufl7WsLqRQ0xFKulWohMO+yAMLbCdeeVcC0+Y/pN8/eUEJmJeBHBJPQH1KO1gB+AmUi3F" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspBODY COMPUTER - R.R&nbsp&nbsp&nbsp5505A32&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  ABS AND HANDBRAKE WARNING LIGHTS BOTH ON</a>
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939000767_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/20_2.jpg" border="0">Removing<a class="title" name="0"></a>
+		(
+		<a href="#1" class="title_link">Refitting<img src="images/jpg/21_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011243" onclick="
+        ViewiFrame(btn_0_939011243)
+      "><span class="testo_link"> </span><a class="contents_link" href="main0264-2.html?nodeID=939011243&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=BODY%20COMPUTER%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A37 FUSE BOX COVER IN INSTRUMENT PANEL - R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011243"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale ">1. Release the retainers (1a) and separate the junction unit (1b) from the body computer (1c).</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010966&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=ABS+AND+HANDBRAKE+WARNING+LIGHTS+BOTH+ON&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:16:48 GMT -->
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <img src="images/jpg/21_2.jpg" border="0">Refitting<a class="title" name="1"></a>
+		(
+		<a href="#0" class="title_link">Removing<img src="images/jpg/20_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">Check that the body computer is not damaged.</p><p class="contents_testonormale ">At the bench, connect the junction unit to the body computer and attach the retainers.</p><p class="contents_testonormale ">If the body computer is being replaced, proceed as follows.</p><table class="nota"><tr><td><img border="0" src="images/jpg/769_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale "><p class="contents_testonormale ">If the Body Computer is being replaced, an "identical copy of the Body Computer" must be obtained from the Parts Dept. as a V.O.R. order quoting the vehicle chassis number: this copy will contain all the default settings entered when the vehicle was new which are stored in the Parts Dept. database for the vehicle chassis number.</p></p></span></td></tr></table><p class="contents_testonormale ">If the same body computer that was removed is being refitted on the vehicle, use the Examiner to check that the system has not picked up errors during the operation.</p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011243" onclick="
+        ViewiFrame(btn_1_939011243)
+      "><span class="testo_link"> </span><a class="contents_link" href="main0264-2.html?nodeID=939011243&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=BODY%20COMPUTER%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A37 FUSE BOX COVER IN INSTRUMENT PANEL - R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011243"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale ">Test the operation of the electrical system.</p></td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

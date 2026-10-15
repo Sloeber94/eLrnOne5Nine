@@ -1,0 +1,955 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926234&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:36:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926234&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="WTgzP6NWEPQEdou4W9mok7msbiX1C/N6MiPv0k6c1642qih6xS6S6ViOeNqbI17iMauyIt5RxgIWy9Ts78MfsGdLh6vTu173cROyzUxTP5aYbT4mak5R/LM1lPS2XuyXxOxPOOM8x5ZVp3oUheg/Zxp7281U7i4+mjrfrqVMuStRQi5Q68HQwSSbzonve/LD0SQ66vOT3IMWZ+Zfe8XU34W2BpvtdzinPpmzcmVAdjaq6z0SCfbm/jCFYyUeclbpnWKGYP+0EQXK3oaYODnr/YK1YF/GEf0i3uMug05+Wvjd7+3IUU/Y6f+fbjU3PGWCTfosTO7rTz7FrHTGIGXQpytg86IR87JE8i4+hSAL4WWtOyzC/v6E1xYO2yX3aBuOkxLO9bOtOwwm5/6LgVr7LNKeOm5gn8in8ZckqOeOrPgCjjYdGgtHDkxmCYbwqh744LP9PQKQuyxw1sejWU2w+LvFL6VrZnf+NcDmulWbw7obXkAzhIAqeOkRfPKMlPjC+Kxy4muZP8j+ETzY0NNcKH+YDfIAJEb5Jt+idDXAGXqemNCZd+9PbpzY6qFoky2A" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 16/10/2017</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Alfa various models</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>Version: MiTo and Alfa 159 with Blue&amp;Me Nav and S.O.S. service</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">55</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">13.10</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>5570 1 601 R6</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>BLUE &amp; ME™ NAV (C3) SYSTEM</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Missed update to software release 5.5, with error USB 10 on the instrument panel – Service Solution</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cancels and replaces the following Service News:</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• SN 55.13.10 of 22/12/2010 for a new software release, validity extension to Alfa 159 model and interruption of the INFO service.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• SN 55.13.10 on 27/01/2011 for new fault code (R6 and not RA)</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">CLAIMED FAULT</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Error USB 10 displayed on the instrument panel after software update attempt to release 5.5.</p>
+          <h1 class="bigtext1">OPERATIONS AT THE DEALERSHIPS</h1>
+          <h1 class="bigtext1">DEALERSHIP BEHAVIOUR STANDARDS TOWARDS THE CUSTOMER</h1>
+          <ul>
+            <li>
+              <span style="color:black">Once the customer's claimed fault is confirmed, reassure the Customer that it can be solved by updating the Blue&amp;Me™system control unit.</span>
+            </li>
+            <li>
+              <span style="color:black">After completing the operation, illustrate what has been done and ensure that the Customer is satisfied.</span>
+            </li>
+          </ul>
+          <h1 class="bigtext1">Service Solution</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the customer's claimed fault is confirmed, check the control unit software release and update it, if required, according to the Operating Cycle below.</p>
+          <h1 class="bigtext1">OPERATION CYCLE</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check whether updating is necessary</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check whether the software needs updating as follows:</p>
+          <ul>
+            <li>
+              <span style="color:black">Connect using the EXAMINER and, in the Control Unit Test environment, select the item Comfort in the Group menu (1 - Fig. 1) and then the item Marelli/Microsoft Convergence in the System menu (2 - Fig. 1).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 1</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014039_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Check the control unit software release (1 - Fig. 2).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 2</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014040_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the control unit software release is one of the following versions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>- 6314 -7152 - 8132 - 9037 - 9216 - 0137 - 8137 - 8165 - 8182 - 8291 - 9023 - 8016 - 8106 - 8127 - 8345</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">check the availability of S.O.S service and update.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the software release is not included in the versions above, DO <b>NOT</b> continue with the updating.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <b>THE INFO SERVICE WAS DISCONTINUED STARTING FROM 01/01/2011.</b>
+                    </p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <b>THE S.O.S. SERVICE WILL BE OPERATING FOR ALL THE TIME OF THE CAR CONTRACT WARRANTY.</b>
+                    </p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A - Check of S.O.S. service availability</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press the button SOS on the roof light (Fig. 3)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014041_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the S.O.S. service is available, the instrument panel displays the screen of Fig. 4, with the time left before the call.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 4</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014042_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Before the counting reaches 0 seconds, press the button SOS (Fig. 3) on the roof light again, to cancel the request.</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The service may have been interrupted (Fig. 5); in this case, perform the update in any case.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 5</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014043_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In this case, after updating the service is displayed as not available</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 6</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014044_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B - Equipment required for control unit software updating</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Before updating the software, check that the following equipment is available:</p>
+          <ul>
+            <li>
+              <span style="color:black">Personal Computer with Windows© 2000 / Windows© XP / Windows© VISTA.</span>
+            </li>
+            <li>
+              <span style="color:black">Internet connection to website.</span>
+            </li>
+            <li>
+              <span style="color:black">USB memory stick with manufacturer's certification of compatibility with Windows© 2000 / Windows© XP / Windows© VISTA operating systems.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C - Software updating procedure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Download the file:</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <a href="939000000.html" target="_blank">
+                  <img border="0" src="images/zip.png">
+                </a>
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <a href="939000000.html" target="_blank"></a>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Unzip the file into a suitable dedicated directory (e.g. c:\Blue&amp;Me).</span>
+            </li>
+            <li>
+              <span style="color:black">At the end of the operation, make sure that only the files illustrated in Fig. 7 are present.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 7</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014045_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Arrange a USB memory stick, capacity at least 128 Mb, formatting it in FAT32 to cancel all previous data.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is advisable to use USB memory sticks with capacity below 8 Gb.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Store on the USB memory stick, in the main directory (folder), all previously downloaded files, making sure they correspond. The updating is not performed is the files are only on the memory stick inside a directory.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <b>Before starting the updating, turn the mobile phone off. During software update, no buttons must be pressed on the steering wheel.</b>
+                    </p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The update time depends on the car and the USB memory model; as an average, it can vary from 5 to 15 minutes.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">With vehicle stopped and ignition key turned to STOP, place the USB memory stick in the Blue&amp;Me™ NAV port at the bottom of the central console.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Updating is not available for vehicles NOT fitted with USB mediaplayer port. Do not use the diagnosis USB port of the control unit.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Place the ignition key on MAR, without starting the car, switch the radio on, clearing all warning messages (e.g. door open) on the panel display by pressing the button "Mode" or "Menu" (depending on the car model).</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <b>Never take out</b> the memory stick from the USB port before the software update procedure is completed successfully.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <b>The memory stick remains inserted even if the information "RE-START…" or "INSTALLATION IN PROGRESS..." is displayed, followed by date and time; the radio starts to play again even for a few minutes.</b>
+                    </p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">The following message appears on the control panel display: “UPDATING” and the voice message “update started” will be heard. If this does not occur, place the key to STOP position and to MAR - ON again. During upgrade, the display shows some messages about the progress.</span>
+            </li>
+            <li>
+              <span style="color:black">At the end of the updating, the instrument panel display shows the voice command "COMPLETE" and the voice command "upgrade completed, remove the USB memory stick”.</span>
+            </li>
+            <li>
+              <span style="color:black">The Blue&amp;Me™ NAV updating process is complete, turn the ignition key to STOP and remove the USB memory stick.</span>
+            </li>
+            <li>
+              <span style="color:black">Restart the car with key in MAR position and wait for about 2 minutes.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the update is not complete the message “USB xx error” will be displayed and the following voice message will be played: "An error has occurred during updating". In this case, repeat the procedure.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>D - Check to be carried out at the end of the updating</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">Use Examiner to check if the control unit software release has been modified.</span>
+            </li>
+            <li>
+              <span style="color:black">Press twice the button TEL on the steering wheel and check the relevant message on the instrument panel (it should be like NO PHONE CONNECTED).</span>
+            </li>
+            <li>
+              <span style="color:black">Press the S.O.S. button and check whether the service is available as described in paragraph A. Check of S.O.S. service availability.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If S.O.S service is no longer available after reprogramming, reactivate it as follows.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <b>THE INFO SERVICE WAS DISCONTINUED STARTING FROM 01/01/2011.</b>
+                    </p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <b>THE S.O.S. SERVICE WILL BE OPERATING FOR ALL THE TIME OF THE CAR CONTRACT WARRANTY.</b>
+                    </p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>S.O.S. SERVICE REACTIVATION</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To reactivate S.O.S. service, proceed as follows:</p>
+          <ul>
+            <li>
+              <span style="color:black">Find out the NIP code of the Blue&amp;Me control unit, using the Examiner</span>
+            </li>
+            <li>
+              <span style="color:black">Note down the NIP code and the other data on the special form, that can be downloaded from this Service News</span>
+            </li>
+            <li>
+              <span style="color:black">Send the form by fax to the number shown (+39 06 41864814)</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>NIP code determination</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Using the Examiner, determine the NIP code for the Blue&amp;Me Nav system (C3) as follows:</p>
+          <ul>
+            <li>
+              <span style="color:black">Connect using the EXAMINER in the Control Unit Test ambient, select the item Comfort in the Group menu (1 - Fig. 8) and then the item Convergence Marelli/Microsoft C3 in the System menu (2 - Fig. 8).</span>
+            </li>
+            <li>
+              <span style="color:black">Press continue and the screen in Fig. 9 should appear</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 8</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014046_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Press select (1 - Fig. 9) and the screen in Fig. 10 should appear</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 9</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014047_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Select the Convergence Control Unit identification parameter (1 - Fig. 10).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 10</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014048_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Then press the end button (1 - Fig. 11) and the screen in Fig. 12 should appear</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 11</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014049_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Check the NIP code and note it down (1 - Fig. 12).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 12</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014050_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Filling in and sending of the form</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Download the file:</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <a href="939000001.html" target="_blank">
+                  <img border="0" src="images/zip.png">
+                </a>
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <a href="939000001.html" target="_blank"></a>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">unzip the file and print one of the PDF file pages.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Two forms are available: one in Italian, English and French and one in Italian, Spanish and German (see Fig. 13 and 14); use one version only</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">fill in the fields in the form marked with an asterisk (*) and fax the form to the number given (+39 06 41864814)</span>
+            </li>
+            <li>
+              <span style="color:black">The services will be activated approximately 7 working days from the receipt of the fax. The customer will verify the activation of the services according to the procedures described in the Owner Handbook.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 13 - Example of form in Italian, English and French</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014051_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 14 - Example of form in Italian, Spanish and German</b>
+          </p>
+          <center>
+            <img src="images/jpg/955014052_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">INFORMATION FOR THE CUSTOMER</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Inform the Customer that reprogramming the Blue&amp;Me system control unit introduces the following improvements upgrading the car to those currently produced.</p>
+          <ul>
+            <li>
+              <span style="color:black">Some menu items could change; the differences are listed here below:</span>
+            </li>
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Before reprogramming</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>After reprogramming</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">M.M. PLAYER.</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MEDIA PLAYER</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONTINUOUS PLAYING</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">REPEAT TRACK</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">UPDATE DEVICE</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(item removed)</p></td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Connection with phones already previously connected will automatically occur without intervention; for the first few connections immediately after the update the Bluetooth® connection could disconnect, as the Blue&amp;Me NAV tests different connection protocols to find the best one for the type of phone.</span>
+            </li>
+            <li>
+              <span style="color:black">On some phones that support a particular protocol (PBAP) the menu item will be displayed as the Name and Surname regardless of how it is displayed on your phone.</span>
+            </li>
+            <li>
+              <span style="color:black">The update does not improve compatibility with AAC and MP4 where not already present on the car when delivered.</span>
+            </li>
+            <li>
+              <span style="color:black">For a correct music file playing, it is advisable to use USB memory sticks with audio files only; the presence of executable files or installation files for other programmes could involve slowing down or even stopping of the playing function.</span>
+            </li>
+          </ul>
+          <h1 class="bigtext1">CLAIM REPORT DATA</h1>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Version</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Part</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fault</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Position</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Time allowance</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All concerned models</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5570160 (*)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">R6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.30 (*)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All concerned models</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5570161 (**)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">R6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.45 (**)</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) Operation Code and Time allowance for reprogramming the Blue&amp;Me control unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(**) Operation Code and Time allowance for reprogramming the Blue&amp;Me control unit plus reactivating the S.O.S. service.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926234&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:36:52 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

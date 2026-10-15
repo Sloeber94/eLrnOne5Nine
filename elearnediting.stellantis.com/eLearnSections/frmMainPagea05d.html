@@ -1,0 +1,1953 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003699&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:48:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003699&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="w5zRRnkKPuGUL+unN+pW2bszY+ZnkLii64nNi8+Id3z+A6+71uovaAudpOhMSeDXwF4nnEOfpnyNmF5roiGst7oPjQMa2RCk/KJDXDA3S404ofLsF1N6Mz7pvnD4DVKk15WnIwrqdTZ/JSWpI2ZjQRTy4uunvLqkuM0m3yDNt7Ed+0F1Ezf9lS1wXtKBCtlt1SZd+AQTntLZRy3GyliIbyORx8NsqtXhrUlE9uWwdN05WhHc6jx+lQWeQSlUzJbk8snC14E5ZnSIGj+AJWuzTNS9t84HFCOwgPxAlby0p2sjiHwbuc+hnqIueIUXvUydx5WLGhY40PG+CTGhzPCndnaF3+zcDWwfJi5KO3HVkLD9D90UkalRmngmkKFMcXbqymBs9OfuCuoWJ0AS3SGfw3vvdcIq8q3xGpWwq65WEFXT4ZhcpjJgw8Z0a754dlejN8nwZE8rVSSe/baEilCTMo4hUeMtbBH8wzhIaC3TZ0MAm1Bkr4oTBstDweUXsnczaWcuo3TTI1uXLcA174HNC7p0SMG7at1ALMmaUqw6YWD/rDnmCRPiuhiUdOuBpXOFQFtsApDdst/pZMV25llLpFhZcVwQHgi0RzyqXczHCDT1lGTAr/4M5In3pGmEHa0Ke+FdNTQrf2dj5p9HMFdkamX5KTrjnw5DcCG09Pcb6qCEJ6mI0HgoovfEFFpRK/LKZ3pTD81vEY+bZT3WmEJhB6yGMw+qq/GU46fdFRPH6EbP0iwGqMuciJ8oKS302yCmIMGTkCE6o2J4+KuRugsAJFdB8QmxatH/oqphEIMiJy5AlDN7SiyrsNSbA0y9IRE6" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspCLIMATE CONTROL NOT COOLING&nbsp&nbsp&nbspL010&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <p><b>APPLICABLE TO VERSIONS WITH:  Automatic climate control</b></p><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contents_table">
+      <tr>
+        <td>
+          <table class="codep" style="margin-top:0px;" width="100%">
+            <tr>
+              <td>
+                <table class="nota">
+                  <tr>
+                    <td>
+                      <img border="0" src="images/jpg/767_2.jpg">
+                    </td>
+                    <td>
+                      <span class="contents_testonota ">
+                        <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fan works properly and sends air to the passenger compartment according to the pre-set flows but the air remains at the outside temperature and is not cooled.</p>
+                        </p>
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003699&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:48:57 GMT -->
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Automatic climate control</b></p><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contents_table">
+      <tr>
+        <td>
+          <table class="codep" style="margin-top:0px;" width="100%">
+            <tr>
+              <td>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The enablement of the engagement of the refrigeration circuit is controlled by both the climate control node and the engine management node</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Automatic climate control</b></p><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contents_table">
+      <tr>
+        <td>
+          <table class="codep" style="margin-top:0px;" width="100%">
+            <tr>
+              <td>
+                <table class="contents_table" cellspacing="0" cellpadding="0" style="margin-top:0px;margin-bottom:0px;">
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PRELIMINARY CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connect the climate control systme to the special repressurizing equipment and check the pressure of the system</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maindcea.html?nodeID=939004801&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See Test 5040OB Air conditioning system operational check (pressure)</a></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that the engine cooling fan is working properly.</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 4</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Pressure not correct</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Move on to Step 1</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Incorrect operation of engine cooling fan.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Carry out the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainccc2.html?nodeID=939010262&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See Test 5040AB REFRIGERANT CIRCUIT CHECK</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK FOR GAS LEAKS FROM CONDENSER</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine started and the climate control system started (compressor button ON), check that the leak is by the system pipe housings or the seat for the drier filter or the pipe couplings at the condenser assembly.</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 2</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Gas leak from condenser.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Replace the condenser and refill correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main724d.html?nodeID=939010913&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5040A40 AIR CONDITIONING CONDENSER - R.R.</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.O-ring puckered.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Replace the o-rings and refill correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maincf39.html?nodeID=939010380&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 0010T84 AIR CONDITIONING SYSTEM REFRIGERANT - DEHYDRATING AND REPRESSURIZING</a></p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Mark the point where the gas is escaping on the condenser.</p></p></span></td></tr></table></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK FOR GAS LEAKS FROM EVAPORATOR</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine started and the climate control system started (compressor button ON), using the leak detector, check that the leak is near the expansion valve or the bend in the pipes.</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 3</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Gas leak from evaporator.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Replace the evaprator and refill correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main80c6.html?nodeID=939010929&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5040C64 A/C EVAPORATOR - R+R</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.O-ring puckered.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Replace the o-rings and refill correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maincf39.html?nodeID=939010380&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 0010T84 AIR CONDITIONING SYSTEM REFRIGERANT - DEHYDRATING AND REPRESSURIZING</a></p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal the point where the gas is escaping at the evaporator.</p></p></span></td></tr></table></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK FOR GAS LEAKS FROM COMPRESSOR</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine started and the climate control system at the maximum speed (compressor button ON), place the temperature adjustment button in the LO position, move the probe of the leak detector near the pipe outlet connector and check for any leaks.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a leak, repeat the test to make sure that there really is a leak.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine switched off, move the leak detector probe to the area of the compressor shaft and the compressor rear seal.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a leak, repeat the test to make sure that there really is a leak.</p></td>
+                    <td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 4</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.O-ring puckered.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Replace the o-rings and refill correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maincf39.html?nodeID=939010380&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 0010T84 AIR CONDITIONING SYSTEM REFRIGERANT - DEHYDRATING AND REPRESSURIZING</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Leak from compressor shaft.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Replace the compressor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainb88e.html?nodeID=939010911&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5040A20 AIR CONDITIONING COMPRESSOR - R.R. INCLUDES CHECKING FLUID LEVEL AND TOPPING UP IF NECESSARY</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.Leak from compressor rear gasket.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.Replace the compressor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainb88e.html?nodeID=939010911&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5040A20 AIR CONDITIONING COMPRESSOR - R.R. INCLUDES CHECKING FLUID LEVEL AND TOPPING UP IF NECESSARY</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK USING DIAGNOSTIC EQUIPMENT</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="7"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="7"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connect the Examiner diagnostic equipment and check the following at the Engine Management Control Unit:</p><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">that there are no errors at the linear sensor;</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">check the following at the Climate Control Node:</p><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">that there are no faults in the evaporator temperature sensor;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">that there are no errors at the air mixing actuators;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">that there are no faults in the outside temperature sensor;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">that there are no faults in the passenger compartment temperature sensor.</p></li></ul></td>
+                    <td class="body_table" colspan="" rowspan="7"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 5</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Error at the linear sensor.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Move on to Step 10</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Error at the evaporator temperature sensor.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Move on to Step 6</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Short circuit to earth error at the actuators.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Check that the Lin Bus cables are not caught between the metal parts (pay special attention to the gearbox bolts) and move on to Step 6.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Short circuit to +12 V error at the actuators.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Check that the Lin Bus cables are not caught between the metal parts (pay special attention to the gearbox bolts) and move on to Step 6.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Mechanical lock / interference error</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Move on to Step 14</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Error at the outside temperature sensor.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Move on to Step 6</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Error at the passenger compartment temperature sensor.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Move on to Step 6</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECKS USING DIAGNOSTIC EQUIPMENT</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Keeping the Examiner diagnostic equipment connected, check the correct operation of the air mixture actuator through active diagnosis</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 7</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Air mixture actuator not working</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 6.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ELECTRICAL CIRCUIT CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the continuity/insulation and visually inspect for any looseness or damage at the electrical connection contacts:</p><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">of the air mixture actuators;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">of the outside temperature sensor;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">of the passenger compartment temperature sensor;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">of the evaporator temperature sensor;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">of the climate control system control unit connector.</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainc7d3.html?nodeID=939003173&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6020  AIR CONDITIONING </a></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 7</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Electrical connections loose or damaged.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Renew the electrical connections.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Electrical connection broken or not insulated.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Restore the continuity/insulation of the electrical connection.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIPE AND FILTER CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that the air conditioning high and low pressure pipes are not blocked.</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 8</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Pipe from compressor to condenser obstructed.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Replace the pipe from the compressor to the condenser</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Op. 5040A50 PIPE FROM AIR CONDITIONING COMPRESSOR TO CONDENSER - R+R</b></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Pipe from condenser to expansion valve obstructed.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Replace pipe from condenser to expansion valve.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK USING DIAGNOSTIC EQUIPMENT</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="4"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="4"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Keeping the diagnostic equipment connected, check:</p><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">that there are no errors at the engine management node;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">through active diagnosis, that the compressor engagement relay is working correctly, making sure that, at the same time, the compressor electromagnet coupling is activated.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">that the solar sensor is working properly</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainaa4c.html?nodeID=939010270&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See Test 5040DC Check sunlight sensor operation</a></p></td>
+                    <td class="body_table" colspan="" rowspan="4"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 12</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Errors at Engine Management Node.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Continue as instructed by the diagnostic equipment</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.The relay comes on and the coupling is not activated.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Move on to Step 9</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.The relay comes on and the coupling is not activated.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.Move on to Step 10</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4.Solar sensor defective</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4.Replace the solar sensor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main439e.html?nodeID=939010904&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5010D56 SOLAR SENSOR - R.R FOLLOWING ELECTRICAL SYSTEM CHECK</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ELECTRICAL CIRCUIT CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the continuity/insulation of the electrical circuit for the compressor engagement relay</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8b9d.html?nodeID=939005822&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6021 COMPRESSOR ENGAGEMENT - DESCRIPTION</a></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 10</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Electrical connections broken or not insulated.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Restore the continuity/insulation of the electrical connections</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8b9d.html?nodeID=939005822&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6021 COMPRESSOR ENGAGEMENT - DESCRIPTION</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Compressor engagement relay faulty.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Replace the compressor engagement relay</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ELECTRICAL CIRCUIT CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the continuity/insulation of the electrical power circuit for the compressor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8b9d.html?nodeID=939005822&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6021 COMPRESSOR ENGAGEMENT - DESCRIPTION</a></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 11</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Electrical connections broken or not insulated.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Restore the continuity/insulation of the electrical connections</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8b9d.html?nodeID=939005822&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6021 COMPRESSOR ENGAGEMENT - DESCRIPTION</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Electromagnet coupling faulty.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Replace the compressor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainb88e.html?nodeID=939010911&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5040A20 AIR CONDITIONING COMPRESSOR - R.R. INCLUDES CHECKING FLUID LEVEL AND TOPPING UP IF NECESSARY</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">COMPRESSOR ENGAGEMENT CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that the compressor comes on correctly by carrying out the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main6ba0.html?nodeID=939010264&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See Test 5040BC Climate control compressor linear sensor on/off check</a></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 12</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Electrical connections broken.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Check and, if necessary, restore the continuity/insulation for the electrical connection</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8b9d.html?nodeID=939005822&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6021 COMPRESSOR ENGAGEMENT - DESCRIPTION</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Linear sensor does not give the go ahead.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Replace the linear sensor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Op. 5040B20 </b></p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK ON CORRECT OPERATION USING DIAGNOSTIC EQUIPMENT</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="5"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="5"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that the following errors do not persist:</p><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">at the air mixture actuators;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">at the outside temperature sensor;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">at the passenger compartment temperature sensor;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">at the evaporator temperature sensor.</p></li></ul></td>
+                    <td class="body_table" colspan="" rowspan="5"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 13</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Left air mixture actuator error.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Replace the left air mixture actuator</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Op. 5040D56 COLLECTION OF ACTUATORS FOR AIR DISTRIBUTION AND MIXTURE FLAPS - WITH DASHBOARD TRIM REMOVED - R.R.</b></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Right air mixture actuator error.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Replace the right air mixture actuator</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Op. 5040D56 COLLECTION OF ACTUATORS FOR AIR DISTRIBUTION AND MIXTURE FLAPS - WITH DASHBOARD TRIM REMOVED - R.R.</b></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Outside temperature sensor error.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Replace the outside temperature sensor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Op. 5010D12 </b></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Passenger compartment temperature sensor error.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Replace the climate control system control unit</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Op. 5040D15 </b></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Evaporator temperature sensor error.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Replace the evaporator temperature sensor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Op. 5040B64 </b></p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK ON CORRECT OPERATION OF MIXTURE ACTUATOR</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check whether the electrical wiring connections are loose.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Disconnect and visually inspect for damage at the connector contacts and reconnect the connection to the motor mounting.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If it persists, before replacing the actuator, check its operation by manually activating the function that the actuator should carry out.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine running, switch on the fan at maximum speed.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Place the flaps in the various distribution positions via the control/control unit (manually).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the air flow in the passenger compartment with your hand at the vents.</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">End of diagnosis</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Electrical connections loose or damaged.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Renew the electrical connections</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainc7d3.html?nodeID=939003173&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6020  AIR CONDITIONING </a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. There is no air flow intake into the passenger compartment through the vents.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Move on to Step 14.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK FOR IMPEDIMENTS TO THE ROTATION OF THE MIXTURE ACTUATORS</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remove the actuator and check using the control unit control that the actuator turns checking for mechanical impediments that prevent its rotation.</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">End of diagnosis</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.The mixture actuator does not turn.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Replace the air mixture actuator</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Op. 5040D56 </b></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Kinematic components of flaps broken/stuck.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Replace the component that is faulty.</p></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Manual climate control</b></p><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contents_table">
+      <tr>
+        <td>
+          <table class="codep" style="margin-top:0px;" width="100%">
+            <tr>
+              <td>
+                <table class="nota">
+                  <tr>
+                    <td>
+                      <img border="0" src="images/jpg/767_2.jpg">
+                    </td>
+                    <td>
+                      <span class="contents_testonota ">
+                        <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fan works properly and sends air to the passenger compartment according to the pre-set flows but the air remains at the outside temperature and is not cooled.</p>
+                        </p>
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Manual climate control</b></p><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contents_table">
+      <tr>
+        <td>
+          <table class="codep" style="margin-top:0px;" width="100%">
+            <tr>
+              <td>
+                <table class="contents_table" cellspacing="0" cellpadding="0" style="margin-top:0px;margin-bottom:0px;">
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PRELIMINARY CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connect the climate control systme to the special repressurizing equipment and check the pressure of the system</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maindcea.html?nodeID=939004801&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See Test 5040OB Air conditioning system operational check (pressure)</a></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the correct operation of the engine cooling fan</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 4</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Pressure not correct</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Move on to Step 1.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Incorrect operation of engine cooling fan</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Carry out the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainccc2.html?nodeID=939010262&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See Test 5040AB REFRIGERANT CIRCUIT CHECK</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK FOR GAS LEAKS FROM CONDENSER</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine started, the climate control system on (compressor ON button), using the leak detector check that the leak is by the system pipes housing or the housing for the drier filter of the pipe joins at the condenser pack.</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 2</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Gas leak from condenser.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Replace the condenser and refill correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main724d.html?nodeID=939010913&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5040A40 AIR CONDITIONING CONDENSER - R.R.</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.O-ring puckered.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Replace the o-rings and refill correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maincf39.html?nodeID=939010380&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 0010T84 AIR CONDITIONING SYSTEM REFRIGERANT - DEHYDRATING AND REPRESSURIZING</a></p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Mark the point where the gas is escaping on the condenser.</p></p></span></td></tr></table></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK FOR GAS LEAKS FROM EVAPORATOR</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine started and the climate control system started (compressor button ON), using the leak detector, check that the leak is near the expansion valve or the bend in the pipes.</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 3</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Gas leak from evaporator.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Replace the evaprator and refill correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main80c6.html?nodeID=939010929&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5040C64 A/C EVAPORATOR - R+R</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.O-ring puckered.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Replace the o-rings and refill correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maincf39.html?nodeID=939010380&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 0010T84 AIR CONDITIONING SYSTEM REFRIGERANT - DEHYDRATING AND REPRESSURIZING</a></p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal the point where the gas is escaping at the evaporator.</p></p></span></td></tr></table></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK FOR GAS LEAKS FROM COMPRESSOR</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine started and the climate control system at the maximum speed (compressor button ON), place the temperature adjustment knob/button in the maximum cold position, move the probe of the leak detector near the connector to be analyzed and check for any leaks.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a leak, repeat the test to make sure that there really is a leak.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine switched off, move the leak detector probe to the area of the compressor shaft and the compressor rear seal.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a leak, repeat the test to make sure that there really is a leak.</p></td>
+                    <td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 4</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.O-ring puckered.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Replace the o-rings and refill correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maincf39.html?nodeID=939010380&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 0010T84 AIR CONDITIONING SYSTEM REFRIGERANT - DEHYDRATING AND REPRESSURIZING</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Leak from compressor shaft.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Replace the compressor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainb88e.html?nodeID=939010911&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5040A20 AIR CONDITIONING COMPRESSOR - R.R. INCLUDES CHECKING FLUID LEVEL AND TOPPING UP IF NECESSARY</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.Leak from compressor rear gasket.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.Replace the compressor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainb88e.html?nodeID=939010911&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5040A20 AIR CONDITIONING COMPRESSOR - R.R. INCLUDES CHECKING FLUID LEVEL AND TOPPING UP IF NECESSARY</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK USING DIAGNOSTIC EQUIPMENT</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="4"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="4"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connect the Examiner diagnostic equipment and check the following at the Engine Management Control Unit:</p><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">that there are no errors at the linear sensor.</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Also check the following at the Climate Control System Control Unit:</p><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">that there are no errors at the air mixing actuator</p></li></ul></td>
+                    <td class="body_table" colspan="" rowspan="4"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 5</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Error at the linear sensor.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Move on to Step 8</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Short circuit to earth error.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Move on to Step 7</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Short circuit to +12V error.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.Move on to Step 7</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Mechanical lock / interference error.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4.Move on to Step 12</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECKS USING DIAGNOSTIC EQUIPMENT</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Keeping the Examiner diagnostic equipment connected, check the correct operation of the air mixture actuator through active diagnosis</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 6</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Air mixture actuator not working</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 7</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK USING DIAGNOSTIC EQUIPMENT</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Keeping the Examiner diagnostic equipment connected, check:</p><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">that there are no errors at the engine management node;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">through active diagnosis, that the compressor engagement relay is working correctly, making sure that, at the same time, the compressor electromagnet coupling is activated.</p></li></ul></td>
+                    <td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 10</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Error at Engine Management Node.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Continue following the instructions for the diagnostic equipment.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. The relay comes on and the coupling is not activated.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Move on to Step 8</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. The relay comes on and the coupling is not activated.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Move on to Step 9</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ELECTRICAL CIRCUIT CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the continuity/insulation and visually inspect for any looseness or damage at the electrical connection contacts:</p><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">of the air mixture actuator;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">of the climate control system control unit connector.</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainc7d3.html?nodeID=939003173&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6020  AIR CONDITIONING </a></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 8</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Electrical connections loose or damaged.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Renew the electrical connections.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Electrical connection broken or not insulated.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Restore the continuity/insulation of the electrical connection.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ELECTRICAL CIRCUIT CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the continuity/insulation of the electrical circuit for the compressor engagement relay</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8b9d.html?nodeID=939005822&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6021 COMPRESSOR ENGAGEMENT - DESCRIPTION</a></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 9</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Electrical connections broken or not insulated.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Restore the continuity/insulation of the electrical connections</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8b9d.html?nodeID=939005822&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6021 COMPRESSOR ENGAGEMENT - DESCRIPTION</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Compressor engagement relay faulty</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Replace the compressor engagement relay</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ELECTRICAL CIRCUIT CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the continuity/insulation of the electrical power circuit for the compressor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8b9d.html?nodeID=939005822&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6021 COMPRESSOR ENGAGEMENT - DESCRIPTION</a></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 10</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Electrical connections broken or not insulated.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Restore the continuity/insulation of the electrical connections</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8b9d.html?nodeID=939005822&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6021 COMPRESSOR ENGAGEMENT - DESCRIPTION</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Electromagnet coupling faulty.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Replace the compressor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainb88e.html?nodeID=939010911&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5040A20 AIR CONDITIONING COMPRESSOR - R.R. INCLUDES CHECKING FLUID LEVEL AND TOPPING UP IF NECESSARY</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">COMPRESSOR ENGAGEMENT CHECK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that the compressor comes on correctly by carrying out the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main6ba0.html?nodeID=939010264&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See Test 5040BC Climate control compressor linear sensor on/off check</a></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 11</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Electrical connections broken.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Check and, if necessary, restore the continuity/insulation for the electrical connection</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8b9d.html?nodeID=939005822&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6021 COMPRESSOR ENGAGEMENT - DESCRIPTION</a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Linear sensor does not give the go ahead.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Replace the linear sensor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Op. 5040B20 </b></p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK ON CORRECT OPERATION OF MIXTURE ACTUATOR</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check whether the electrical wiring connections are loose.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Disconnect and visually inspect for damage at the connector contacts and reconnect the connection to the motor mounting.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If it persists, before replacing the actuator, check its operation by manually activating the function that the actuator should carry out.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine running, switch on the fan at maximum speed.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Place the flaps in the various distribution positions via the control/control unit.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the air flow in the passenger compartment with your hand at the vents.</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">End of diagnosis</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Electrical connections loose or damaged.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Renew the electrical connections</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainc7d3.html?nodeID=939003173&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CLIMATE%20CONTROL%20NOT%20COOLING&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See E6020  AIR CONDITIONING </a></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. There is no air flow intake into the passenger compartment through the vents.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Move on to Step 12.</p></td>
+                  </tr>
+                  <tr>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK FOR IMPEDIMENTS TO THE ROTATION OF THE MIXTURE ACTUATORS</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+                    <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remove the actuator and check using the control unit control that the actuator turns checking for mechanical impediments that prevent its rotation.</p></td>
+                    <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">End of diagnosis</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.The mixture actuator does not turn.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.Replace the air mixture actuator</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Op. 5040D56 </b></p></td>
+                  </tr>
+                  <tr>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.Kinematic components of flaps broken/stuck.</p></td>
+                    <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.Replace the component that is faulty.</p></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011556&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Impianto+Elettrico&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 21:36:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011556&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Impianto+Elettrico&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="byyHLbtyIe58/4eoTJyapF7o+BjJNoLrZL/UzeLgZvakFZpS+Aqn+z+oLJGxiRnbfGAmequhX70RYUDUmZw+42GAMzH309bwHPvkaTB7+mMewigJ4HtjSYXjGVAe1oJ+XU7Q9IrUtQ9iZmAe4e9vYjEhV705gRj2rBciF0K0S2RIxJPWS+7vq9xtOR3wD+t4gSQx6l16TBJptsYFO+jMU1ENFsJR5R8A2NsZw9kjcnahqOgMzui6QZGbzSdEq78lZACpWsj2LK/llgZbtLgHktL85LkYDkaPNUU4kK+9TzuzfWDG7+aM2sljBud93Z6eMN0iktgkfHwF+3KkfgKRZu6OyeixpQXUCBvf5eGOiipDUnA+vZxP3Yh9oczyGGs2h4yL9uB2TTsJCnHQDPAZQKy2j1rAs/J+8WBnwlaRU3KdQP584GDnxS4CcvFJjdCi4DoWMlMkF6H9ezARAf8fjCvyl/ZrXZsU3ngRLJSZ6IKqhj5Q5DE9fOZtxjDHBgDCkVi06CZ7/czb9PTo2vGi0EvtPXKF6SA2TYcP4Fz55zxueIp3RjQNOa+0Bea85y6Fu3eRPJPIHiNF/EAKn1PwCMz1/CowTbVtUjB+joPd6WOJMziwTkllztXNe/VtWhirMRV7hGS28WAuKa+4Jj12+mhgn2VQ3yW5y3Ix09l3B2bEMuQrZSJqvVXqUi/TcG2MuYDem6bQ0HBSAckhKk2e1NibNLyjYcHArGKVj4iNslJocDPzyyGdUJ27vuhibTXlQZgd97o5VycBWY5DycX9qzxhowrrYx4Zar8SM8fvipgUANIBf4O8mgKH7RdZReg0" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspPUDDLE LIGHTS - FUNCTIONAL DESCRIPTION&nbsp&nbsp&nbspE2521&nbsp&nbsp&nbsp(Low trim level)</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    <HR id="SchemaTop1_hr1" width="100%" SIZE="1"></HR>
+<table id="SchemaTop1_dlsSchema" cellspacing="1" cellpadding="1" align="Center" style="width:90%;">
+	<tr>
+		<td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_0" class="notSelected" href="main03d2.html?nodeID=939011555&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">PUDDLE LIGHTS - DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_1" class="Selected" href="main50e5.html?nodeID=939011556&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">PUDDLE LIGHTS - FUNCTIONAL DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_2" class="notSelected" href="mainbf86.html?nodeID=939011557&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">PUDDLE LIGHTS - WIRING DIAGRAM</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_3" class="notSelected" href="maindc15-2.html?nodeID=939011558&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">PUDDLE LIGHTS - COMPONENT LOCATION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_4" class="notSelected" href="javascript: parent.openWinPrint(&#39;http://elearnediting.stellantis.com/eLearnSections/SchemaPrintAll.aspx?LanguageID=2&amp;nodeID=939011556&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&#39;);" target="_parent" style="display:inline-block;width:108px;">Print electrical function</a>
+		</td>
+	</td>
+	</tr>
+</table>
+<HR id="SchemaTop1_hr2" width="100%" SIZE="1"></HR>
+
+	    <p><b>APPLICABLE TO VERSIONS WITH:  Low trim level</b></p><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <script language="javascript" src="svgscript/mysvg.js">
+  </script>
+  <body onload="">
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <table class="codep" style="margin-top:0px;" width="100%">
+            <tr>
+              <td>
+                <h1 class="bigtext1">FUNCTIONAL DESCRIPTION</h1>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Body Computer M1 receives door open input signals at pin 8 of connector D (driver''s front door) and 25 of connector E (passenger side door).</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The puddle lights G51 and G52 are operated by the driver''s door control lunit M66.</p>
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit M66 receives a power supply - at pin 11 of connector D - from the line protected by fuse F36 of the junction unit under the dashboard B2; on the basis of the logic described previously, the control unit M66 supplies the relevant puddle light G51, from pins 17 and 18 of connector B and the passenger puddle light G52 from pin 21 of connector B.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011556&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Impianto+Elettrico&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 21:36:12 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

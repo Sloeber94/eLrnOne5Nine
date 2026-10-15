@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003542&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:45:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003542&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="xNkufCxaA9/ewMHxLWg95yYXNmzd8VtK+zQCMqQQI4hRuM5aLJVa7Hqk12CFdE2JcgJTYnaD4VNTAX2NXJvivufyRZslHF6WNoQU26NUchQydCGVqJ3/LyPAaQh8mRnVds2VWyNDGoKef/D3R0sMQTC+GOIle34a3HXQWA1kyuSS1+X/ToJaxdKlcGRKGfsAqfsWnov+olwvr+VeeWN1bdwbmONwBLHv7NBJHUe6y8EKZEu9JuVLgIRulON0gO8nT5NVekRL2DIIlqt3NVUnis5VisLbzMZGwjfExQX0ivbpDGpnlnz467j6HWjmbTQ0vBh5t2EGjYCSrzWdqCt2ctGgc+NWWtatG2TyAANgJpCm4yiE1SXKueyoXZVFslhK3FXRJEnnqV1WRzeQaxqfH5VaoE7OP0JSP7wu0pCKKNtzQe9u0Hb1YQ0sgQ+p1JvI0e96GcTKRpWyQMTru3R4H7Ab5Bgzpi7Doaeh/C13Pihe60bfZlqZIoCNw3/bvO2Q15ax6739X17lz0gXJb+TAnoUolWs3eJu487Y6BosGKMv4zSp7K1PwY678fo+o6EOwkXwDgVt0Hn/WAaCtwoxznkakt+lVD/UGMFzG3dm4StNJBtFovtR+dE/WhYsixITPiFqoYh0ccEon51k+MPwIdsTc+MJ0hAF5BDGLFWCFU3Qk6ZXh6dAzVYHQ4u4L3K1pWJ/mZjvh4ntB6dsRLUaUsHbrQ+9XQ1fzefdtO9z9IPvoe3RZjzWdAxo2Ym+NxbJ0DKXXpb4nMHcjnQClIoL1vJAteYEhxdvNIq4qV5IwSs=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspEXTERIOR LIGHTING&nbsp&nbsp&nbsp5540&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">COMPOSITION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The vehicle exterior lighting system has been designed and produced with two objectives in mind:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- guaranteeing maximum efficiency with regard to the international regulations that define the lighting technology specifications for the various components;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- being integrated with the design of the vehicle so that the various components enhance the image.</p>
+          <h2 class="bigtext2">Location of components on vehicle</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The vehicle components and their location are illustrated below.</p>
+          <center>
+            <img src="images/jpg/939004550_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Right front light cluster</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Left front light cluster</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Left front direction indicator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Right front direction indicator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Right rear light cluster (fixed part)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Right rear light cluster (moving part on boot)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Left rear light cluster (fixed part)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Left rear light cluster (moving part on boot)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Third brake light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Number plate lights</p>
+          <h2 class="bigtext2">Front light cluster (halogen version)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The unit consists of:</p>
+          <center>
+            <img src="images/jpg/939002053_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The front light cluster is a lamp made using a special lens reflection technology.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are three separate functions in the form of chrome covers incorporated in a single casing.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The casing is made from polypropylene and has three points fitted with metal inserts for ensuring the torque tightening on the metal crossmember.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It includes a cover securing the lens, the housings for the electrical corrector, the adjustment screws and the bulb access covers.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is an automatic type electrical corrector (electric motor) in the unit for controlling the headlight alignment with an activation control in the instrument panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reflector is made from a thermal hardening material and includes the seats for the elliptical module (dipped headlamps) whilst the side light, direction indicator and main beam headlamp functions are produced through calculated surface areas.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lens is made from polycarbonate and incorporates the housings for fastening the chrome frames and the (black) outer surround treated with scratch-resistant paint.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Bulbs present:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- H7LL halogen bulb for dipped headlights function -12V-55W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- All glass W5W bulb for side lights function -12V-5W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- All glass PY21W bulb for direction indicators function - 12V-21W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- H7 halogen bulb for main beam headlights function -12V-55W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear view.</p>
+          <center>
+            <img src="images/jpg/939002054_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Cover for main beam headlamp</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Cover for direction indicators and side lights</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Cover secured by catch and seal for dipped headlamp</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - 14-way connector for lamp power supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Bevel pinion / adjustment screw for lamp horizontal axis</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Bevel pinion / adjustment screw for lamp vertical axis</p>
+          <h3 class="bigtext3">Wiring diagram and connector</h3>
+          <center>
+            <img src="images/jpg/939002055_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN OUT:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2- Dipped headlamps control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Main beam headlamps control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Side lights control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Direction indicators control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Power supply for headlamp alignment corrector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Headlamp alignment correction signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Earth connection for headlamp alignment corrector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14 - Bulb earth connection</p>
+          <h2 class="bigtext2">Electrically controlled headlamp alignment corrector</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The headlamp alignment device is designed to adjust dipped light beam correctly in a vertical direction irrespective of the load on the axles.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the dipped headlamps on, using the wheel in the contol panel on the left side of the driver, it is possible to alter the angle/direction of the light cluster in 4 standard positions: the following loads correspond to the four positions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0 - 1 person (driver), 2 persons (in the front seats)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - 5 persons, 2 persons (in the front seats), 3 persons (in the rear seats)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - 5 persons plus maximum load</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - 1 person (driver) plus maximum permitted load in luggage compartment without rear seat folded down</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The maximum load refers to: the maximum permitted load on the rear axle or: the total permitted load for the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The weight of a person is taken as 75 kg.</p>
+          <h2 class="bigtext2">Front light culster (gas discharge - xenon version)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The need to improve the performance of current systems based on halogen bulbs in terms of the light energy emitted and the spectral distibution and life of the bulb has led to the development of gas discharge headlamps technology and the devices that allows its operation on the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are basically three types of advantage from the development of this technology:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the increased light efficiency allows a reduction in the absorption of electrical energy;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the high light flow emission makes it possible to reduce the dimensions of the light cluster (in particular the height) with greater freedom in the design of the front section;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the bulb lasts, on average, twice as long as a halogen bulb.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The technology of gas discharge headlamps has led to the development of a series of devices that include:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- xenon bulbs;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- optics (reflective surface of the headlamp);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- electronic control (ballast);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- automatic light beam alignment correction.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Traditional lamp light beam (isolux curve).</p>
+          <center>
+            <img src="images/jpg/939002056_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Discharge lamp light beam (isolux curve).</p>
+          <center>
+            <img src="images/jpg/939002057_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Every light cluster includes the components necessary for the operation of the discharge bulb (bulb, igniter, control unit, control motor): the traditional components are also present (side lights, direction indicators, main beam).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The unit consists of:</p>
+          <center>
+            <img src="images/jpg/939002058_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The spot main beam only comes on through the flasher control with the main beams switched off, whilst it is turned on together with the xenon bulb with the lights are switched from dipped to main beam.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The front light cluster is a lamp made using a special lens reflection technology.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are three separate functions in the form of chrome covers incorporated in a single casing.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The casing is made from polypropylene and has three points fitted with metal inserts for ensuring the torque tightening on the metal crossmember.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It includes a cover securing the lens, the housings for the electrical corrector, the adjustment screws and the bulb access covers.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reflector is made from a thermal hardening material and includes the seats for the elliptical module (dipped/main beam headlamps) whilst the side light, direction indicator and main beam headlamp functions are produced through calculated surface areas. It is painted, metalized and protected.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lens is made from polycarbonate and incorporates the housings for fastening the chrome frames and the (black) outer surround treated with scratch-resistant paint.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The switching between the dipped and main beam functions for xenon bulbs takes place by means of a suitably shaped metal screen that is lowered for dipped operation and raised for main beam operation.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Bulbs present:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- D1S xenon bulb for dipped headlamps function</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- All glass W5W bulb for side lights function -12V-5W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- All glass PY21W bulb for direction indicators function - 12V-21W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- H1 halogen bulb for main beam headlights spot function 12V-55W.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">One of the two lamps carries out the MASTER function (left): the sensors, that detect the vehicle geometry are connected to it whilst the other (right) lamp has a SLAVE function and is connected to the MASTER lamp by a special serial line:</p>
+          <h3 class="bigtext3">Xenon bulb</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Xenon bulbs consist of a bulb containing two electrodes spaced a few millimetres apart and filled with low pressure xenon gas.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The emission of light is produced by an arc between the two electrodes which is maintained during the operation of the bulb; this process is similar to what takes place in neon lights.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Unlike the latter however, in automotive applications, it is unthinkable to have to wait for a few minutes before the process stabilizes, therefore the light cluster has an electronic control device (control unit) that allows operation, as far as the warming up times are concerned, comparable to traditional headlamps.</p>
+          <center>
+            <img src="images/jpg/939002059_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Operation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The operation of a xenon bulb is divided into four stages.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Ignition: During this stage the ballast produces a voltage capable of causing the engagement of a suitable device located in the igniter. A step-up transformer circuit transfers the suitably amplified excess voltage to the bulb thereby causing a discharge between the electrodes.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Take-over (arc maintenance) during this stage (lasting several seconds) the bulb receives the excess power supply necessary for producing the rapid evaporation of the metallic halides contained in the bulb in order to guarantee that the operating brightness is reached quickly. In these conditions the bulb produces a light flash that is twice the intensity of normal for a period of about 100 microseconds.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Warm up for a period of about two minutes, the ballast regulates the light intensity determining the physical state of the bulb from its impedance properties (closed loop control).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Steady state: the light beam is controlled continuously in closed loop in the steady state.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The igniter is located in the base of the actual bulb, whilst the ballast is located in the control unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Lamp rear view</p>
+          <center>
+            <img src="images/jpg/939002060_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Cover for main beam headlamp</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Cover for direction indicators and side lights</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Cover secured by catch and seal for dipped headlamp</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - 14-way connector for lamp power supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Headlamp horizontal axis adjustment screw</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Headlamp vertical axis adjustment screw</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Electronic control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - (6-way) connector for automatic sensor correction (only on MASTER)</p>
+          <h3 class="bigtext3">Wiring diagram and connector</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(14-way) connector for lamp power supply</p>
+          <center>
+            <img src="images/jpg/939002061_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN OUT:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1- Dipped headlamps control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Main beam headlamps control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Side lights control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Direction indicators control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Ignition-operated control power supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Speedometer signal (only on MASTER)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Diagnostic K line</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12 - Serial line</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13 - Control unit earth connection</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14 - Bulb earth connection</p>
+          <h2 class="bigtext2">Automatic headlamp alignment correcter</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As a result of the brightness of the bulb light beam, the vehicle must be equipped with an automatic headlamp alignment correcter to prevent the drivers of oncoming vehicles being dazzled. The device intervenes in certain conditions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- static type, due to the distribution of the load;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- dynamic type, due to acceleration and deceleration.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The automatic correcter also guarantees improved driving comfort because the area lit is kept stable and your eyes do not have to constantly adapt to the variations in the lighting.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The device consists of:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a stepping actuator for each headlamp.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- two load sensors, connected to the front and rear suspension, right side.</p>
+          <h3 class="bigtext3">Correction</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is carried out through the load sensor signal which, connected to the suspension, provide a reading on the vehicle load status.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit is activated at every Key on and resets the headlamps to the exact distance (calculated depending on the vehicle load) which consists of completely lowering and then positioning the reflector.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The load sensor signals are periodically acquired and a suitable average taken in order to readjust the position of the headlamp if necessary (e.g. fuel consumption whilst driving). This adjustment is not immediate, but is filtered over time to avoid undesired corrections (e.g. if there are potholes, uneven road surface, etc.).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This correction is also made with the lights off, so that the moment the beam is switched on it is already correctly positioned.</p>
+          <h3 class="bigtext3">Load sensors</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensors are fastened to the vehicle bodyshell, whilst a suitable shaped lever follows the movement of the suspension.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor receives a power supply from the headlamp control unit and provides a linear output signal proportional to the position of the suspension in relation to the bodyshell.</p>
+          <center>
+            <img src="images/jpg/939002062_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Part fastened to the bodyshell</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - Part fastened to the suspension linkage</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">a - Lever angle</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">V - Sensor output signal voltage</p>
+          <h3 class="bigtext3">Adjustment actuator</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A stepping actuator inside the light cluster carries out this adjustment. It consists of an electric stepping motor and a worm screw reduction unit which transforms the rotary motion of a hinged push rod into linear motion by means of a ball joint on the reflective surface.</p>
+          <h3 class="bigtext3">Self-diagnosis</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronics that manage the system have an autodiagnostic function that continuously checks operation.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit carries out continuous self-diagnosis of system operation. In particular it detects and stores any faults.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The faults memorized in the control unit can be analyzed using the Examiner or other diagnostic equipment.</p>
+          <h3 class="bigtext3">Recovery</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The autodiagnostic management logic also has a recovery function: if errors are detected, the system no longer works properly and therefore the incorrect adjustment of the light beam could be dangerous and dazzle other vehicles.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The light beam is therefore positioned downwards in order not to dazzle anyone, but allows sufficient light to drive safely to a service centre.</p>
+          <h3 class="bigtext3">Resetting</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the master control unit (in the left headlamp) is replaced, a self-learning procedure must be carried out, connecting to the diagnostic equipment, which makes it possible to automatically reset the system which should recognize the the position of the headlamp correctly aligned in position 0 from where the various adjustments can be set.</p>
+          <h2 class="bigtext2">Rear light cluster</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rear light cluster is divided into two parts, one fixed one and one moving one on the boot.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The exterior aesthetic appearance is a single polychromatic structure in line with the shape of the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following signals are contained in the light cluster on the fixed part:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Red brake lights and side lights (double filament).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- White direction indicator and orange reflector.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following are present in the units on the boot:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Red coloured side lights</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Red rear fog lamp (driver''s side only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- White reversing light (passenger side only)</p>
+          <center>
+            <img src="images/jpg/939002063_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- on the fixed section</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Direction indicator: 12V - 21W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Brake light bilux 12V - 21W (P21W-5W)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- on the boot</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3a - Rear fog lamp: bulb 12V- 21W (driver''s side only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3b - Reversing light: bulb 12V- 21W (passenger side only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Side light 12V - 5W</p>
+          <h2 class="bigtext2">Number plate light</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The number plate light function is achieved by means of two lights fitted using a metal clip and a catch projection fastened to the trim.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Each light is fitted with an all glass 12V - 5W bulb and it should be replaced by removing the light from the trim and the bulb holder from the number plate light, incorporated in the wiring in the rear bumper.</p>
+          <center>
+            <img src="images/jpg/939002064_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Casing</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Lens cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Clip</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Bulb holder</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Seal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - All glass bulb 12V - 5W</p>
+          <h2 class="bigtext2">Direction indicators side repeater</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To replace the small bulb, push the lens cover manually in the direction of travel in order to compress the fastening clip (5). Release the front section and extract the assembly. Rotate the bulb holder in an anti-clockwise direction and extract it from the lens cover.</p>
+          <center>
+            <img src="images/jpg/939002065_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Grey casing</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Lens cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Bulb 12V - 5W (orange)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Bulb holder</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Fastening clip</p>
+          <h2 class="bigtext2">Additional brake light</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The function of the additional brake light is produced through the multibulb lamp and light beam coming from the rearscreen serigraphy.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The casing is made from black coloured bayblend and contains the bulb holder which is in one piece and is fastened to the actual casing. The internal current tracks are made from coppper-covered brass and, with the circuit activated, supply 10 small all glass type 12V - 2.3W bulbs.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The light has two housings for the fastening. The red coloured metacrylate lens cover is fitted on the light casing and its shape and contours are such that when the light is switched off it produces a masking effect if looked at from the outside of the vehicle.</p>
+          <center>
+            <img src="images/jpg/939002066_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - All glass bulb 12V - 2.3W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - (Red) lens cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Parabola casing</p>
+          <h2 class="bigtext2">Fog lights</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fog lights are located in the lower part of the front bumper. The unit has a screw for adjusting the direction of the light beam.</p>
+          <center>
+            <img src="images/jpg/939004551_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Lamp casing</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Adjustment screw</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The bulb used for the fog lights function is a halogen H1 type bulb, 12V - 55W.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003542&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:45:22 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

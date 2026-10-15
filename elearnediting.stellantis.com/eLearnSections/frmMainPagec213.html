@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010422&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=SINGLE+CYLINDER+HEAD+-+DETACHED+-+OVERHAUL&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:45:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010422&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=SINGLE+CYLINDER+HEAD+-+DETACHED+-+OVERHAUL&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="CX1BBGx+hjEsSsfHrqwmy7NrmJeHhuAx9vY4qGO3ziFskCAqRyaZPPA7zU87cO0UzsV/yKC1d9M2F9+6gu9jc04VxeXsxpClnWe5hTiy8jhn/muAzmXtwpPfN1lJ3vLA5YvwOzwsXWzOrl/+4stXManoEshMWns1crfws/er+4c6qVEvs5NcWimlMfzVFoD1/8GDLy+XmMpF8M19F/61+PTx2kNgDRJllCzZVS9efM1bRfeI0vS7R7CRt6plnUN0E2I6wmFd2USad4M1EpxBMcYQwkOseb8ycpYijZ9wO6f7fjQZ53FnxH7AhuIohwugvoRwnQ1hkHAFocpBzasL/cM4t6yeU055y/K3x1aGo72YjYXFvsOot5tvXKe7Ya5Mk44iLcSotpd9pz6winCSd1pPPNvHrTDClvxpzh8ybldtvcaz/kIOisBXwAAxhhNBAcoLJjzn7kVh+C5hR4X0oxwlFlsmZsBetG2pZTV3LSyltlcwMp/vzPM08fdS5c3aJPkJs7qwUmmyEn1IRt0rIpHjvW2jlgxlKlG82beO6clL47Z2GDwEN9uCK0NsX3fNPGjB2WH0k2HrFsGki3zzwN33TAQ6IlpYwwe2QcKkXYLi7MESN7B/92fIqsBCgG40z/0vYRg/K18bKIQhtQH1+Zkek/n/CaiP+KaA98agqTki9HvtNpTrVcWZyNut1Ffr2EV7/7X7zq7AEz1xb6hw+P4BLXySQnYnhSgU0Wh9yGgvVANLkt/czXiBBbwKO0XIq03JL/zVpNxdImaJpj/Q8x4hqEL32jlXQhfuxJiU46SWZVSfH5i9/HM+LzG+IuaBS0nG4XBxPhUUJ4ydiab9leRfvqLSP97OXVSLkbIwtyfBu8ivOTQLmCBsbNTtdffUOYBX/CAse/DQn77nMtvmYJO5Mz6TriUz/kenOe+gTNpPB205qqc2NVSXd4/BSHHIJ6EfWRBK9j0PpH/g7f7hJ12RTgfFMSIsT3CwtqDzuCLho7qMRQYJtBlgB1xbtwcxQmp/eFrah5tc2Vbcw6H+t/e/Nmm6HBPhzFnB6wTuBipJVPZ1NVMAz/7CPNkWS2tYItVl67K2mNaPFGuL0/ydiEnPkF6HV51NkRs5wsvoM17he+farIs3Dmrw+AronBUo" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="NZqXPrI0VSd9swVXi/93zRySqtaLBwOsdDGtBvRkQe/sAsXMk/DwFgOMJTyVtseOVHggTCuFS9qd7a4XufKqgvgZh2zcNV4MiS9B7CtsVLGI86E51ZYMAkRRbKPdjjkU" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspVALVE GUIDES FOR SINGLE CYLINDER HEAD - REPLACE DURING OP.1016E10&nbsp&nbsp&nbsp1016E14&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  SINGLE CYLINDER HEAD - DETACHED - OVERHAUL</a>
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939002282_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/20_2.jpg" border="0">Removing<a class="title" name="0"></a>
+		(
+		<a href="#1" class="title_link">Refitting<img src="images/jpg/21_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">1. Remove the valve guides (1a) using the tool (1b).</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Code</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1b</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extractor/Fitting tool</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1.870.880.000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Valve guide extraction</p></td></tr></table></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010422&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=SINGLE+CYLINDER+HEAD+-+DETACHED+-+OVERHAUL&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:45:11 GMT -->
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939002283_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/21_2.jpg" border="0">Refitting<a class="title" name="1"></a>
+		(
+		<a href="#0" class="title_link">Removing<img src="images/jpg/20_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">Check that the outer diameter of the valve guides to be fitted corresponds to the recommended figures.</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Subject</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">.</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Cylinder head valve guides (all)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">mm</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Outer diameter</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">11,010 - 11,030</p></td></tr></table><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Subject</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">.</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Cylinder head valve guides (all)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">mm</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Valve guide oversizing</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">0,05 - 0,1 - 0,2 - 0,25</p></td></tr></table><p class="contents_testonormale ">1. Fit the new valve guides (1a) using the tools (1b) and (1c).</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Code</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1b</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extractor/Fitting tool</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1.871.000.600</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Valve guide fitting</p></td></tr></table><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Code</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1c</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Extractor/Fitting tool</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1.870.880.000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Valve guide extraction</p></td></tr></table></td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <p class="contents_testonormale ">Ream the valve guide bore to the recommended figure.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Subject</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">.</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Cylinder head valve guides (all)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">mm</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Inner diameter</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">5,40 ÷ 5,60</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

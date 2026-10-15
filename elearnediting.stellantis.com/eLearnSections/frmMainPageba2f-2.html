@@ -1,0 +1,722 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003530&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=ELECTRIC+STEERING+LOCK+-+DESCRIPTION&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:11:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003530&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=ELECTRIC+STEERING+LOCK+-+DESCRIPTION&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Odj1ovP6MONto3fYJK3KxbH1VaDF5B7+ueNqi2UGJjwCynuqBpDXLoOVPefEbSkeTQmPUmtdOUVOVYY70AeK+tbPNzyD04GNVe2vDj7Q5aDDzOuJeydQm4/TNYPePOZKlgy89+W6Uive5OxMUf/SOmAHhYE4HTUfon5EWB7VFXouYtlntxkJlcXz6ccLI6qqMdWPspI1uBfHiLumM0zv6jZm9HkQGmw43CO1W6VPGSO+3YvUM4Dbb3SS6qqPa/WNbzG0fJzhaVGq3apCSz84Eae1lT8nfqGfplzJmqupQ+aLs4mWvUmJLNA66j8SxTAuWghI4rEs6QkDGEw/FoyKsTrd07HzS2w3oIyNL1SZ3pBsIRM34gWui18IK1GNv1+SG1PJgIsHyZAreMsdDJDwHWoGsPbIsODtHFIIRpsZSIxuA4PYhrOhoe186wyZFQMuH9qkTMSUWKVajpdhooLPDzB6LXe1EJ/AsyjHlPBoLCFXwWac+9i6T8pm/ZQdeFm8dnepKKQNyBfKfPAd9103jOATRVbAXgcp2J+0sTs6v00S+XeZQlK+o1kUWGHu2+QDYM3LlGkSpPyC/645JJl7Hey8A6UPHyWbW1zsTo8pZPlYA8UYcZaAd0wgGViLdhyEbhRXPGjIrkFSIC+AFBlvfzhWhp1jXhnwTKLAXhVqkJF9kRFG7TlFtYpQyXtMfck0CstemmRsVea+sXkFE/X9UCiR71aivbOpZLDz0RevZwOht6vR98752c0YMttN1nEMJRwX4NgfRZBVWvwi3iABJVeiE9ka190gBZPLngSCDqRiW2VQAT1PVk2CM0ige2L0IEKYCei/mhUAMkxbYs+jpBU9qUIc44oGJJXxWgkpH7QPHBPriy7YKXuI3s+Su6GWgg2KHltRqw/jnFWM6oO1y1pyl/y6MIdgj1SoGU81fKMQTHPWqyxiJdYvJ+MU9z/a" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspENGINE STARTING&nbsp&nbsp&nbsp5520&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  ELECTRIC STEERING LOCK - DESCRIPTION</a>
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">T.E.G. MODULE “TRANSMITTER FOR ENTRY AND GO”</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The TEG is part of the Smart-Key system which comprises the following components:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- T.E.G. (Transmitter for Entry and Go) electronic key;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TEG-Reader for radiofrequency receiver and electronic key;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Steering Lock Node NBS;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Start/Stop button.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Smart-Key system carries out the following functions on the vehicle:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- vehicle access through remote control radiofrequency recognition;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- vehicle ignition/starting through immobilizer system;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- power supply distribution (+15, INT/A, +50) through Steering Lock Node (NBS);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- mechanical steering lock/release;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- mechanical back-up key.</p>
+          <center>
+            <img src="images/jpg/939002050_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Smart-Key system is far more secure that all previous protection systems with immobilizers, etc. because the control and security codes are memorized is 4 separate areas of the CAN: the Body Computer, engine management control unit, steering lock node and TEG-Reader.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Vehicle access</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressing the TEG buttons emits a radiofrequency signal that is received by the TEG-Reader Node which acts as an interpreting and sorting "centre" for the vehicle access system commands.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The commands received are sent to the various functions connected with vehicle access (central locking system, alarm, blinker, courtesy lights) in order to produce the access or abandonment manoeuvre desired by the customer.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are 3 different ways of pressing one or more of the TEG buttons:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- single press: the button is pressed once only;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- double press: the button is pressed twice within 1 second;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- long press: the button is pressed constantly for more than 2 seconds.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Different functions are activated depending on the type of operation:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The remote control function is performed by 3 buttons each with a specific function in accordance with the following table:</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Button/Function</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Single press</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Double press</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Long press</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Lock button</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Vehicle lock. Switching on of alarm (if present)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Switching on of dead-lock function</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Superclosing (closing of windows + closing of sun roof if present)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Unlocking button</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Vehicle unlocking according to set-up. Switching off of alarm (if present)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Vehicle unlocking</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Superopening (opening of windows + opening of sun roof if present)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Boot button</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Boot unlocking and opening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.A.</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rearscreen unlocking (on Station Wagon only)</p></td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For the dead-lock management the command to switch the dead-lock on is only sent if all the doors and the boot are properly closed. If this is not the case, the user is advised by the signal that the doors are open activated when the doors are locked: a further dead-lock command is therefore simply "not considered".</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Automatic locking following door unlocking:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">if, within 150 seconds of the lock unlocking command being carried out, by the TEG, the user shows no intention of taking possession of the vehicle (opening the doors/boot or key in ON position) the locking of the locks must be commanded automatically. This automatic locking command of the locks does not produce signals.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Multiple command and/or overlapping commands inhibition:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the moment the +30 supply from the battery is connected, the NBC inhibits the implementation of any other door unlocking/locking command for 2 seconds.</p>
+          <h2 class="bigtext2">Components</h2>
+          <center>
+            <img src="images/jpg/939000001_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - T.E.G.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - T.E.G. Reader</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Start button</p>
+          <h3 class="bigtext3">Remote control</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The remote control system comprises the following components:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TRANSMITTER: incorporated in the TEG, radiofrequency and sends the rolling code to the receiver.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The frequency varies according to the country it is sold in: (e.g. Europe 433.92 MHz).</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The user can carry out the following functions using the TEG:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- central locking - unlocking of the doors.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- opening-closing of the windows and sun roof.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- switching of of the courtesy light.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- switching on-off of the alarm (if present).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The transmitter has a range of about 20 m.</p>
+          <h3 class="bigtext3">Receiver</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The radiofrequency receiver is built into the TEG-Reader module.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The frequency varies according to the country it is sold in.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It memorizes up to eight transmitters and allows the remote control operations mentioned above.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The receiver has the following functions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- receiving and decoding the signals coming from the transmitter.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- managing the transmitter programming.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- managing the command for opening and closing of the doors.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to carry out self-diagnosis.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The receiver can memorize up to eight remote control codes.</p>
+          <h3 class="bigtext3">Teg with 3 buttons</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The TEG homologation is in accordance with Dir. 95/56 CE and conforms with the requirements of European insurance companies and their associated technical centres.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The TEG is an electronic device which, used in place of a traditional key, produces:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- access to the vehicle by carrying out all the normal operations by remote control;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- starting of the vehicle: if introduced into the special reader, it deactivates the electric steering lock and provides the go ahead for starting by means of the special START button.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The remote control section has a 433.92 MHz transmitter with 3 control buttons for the vehicle access functions and a special retractable plastic insert that can be extracted manually.</p>
+          <h3 class="bigtext3">Mechanical back-up key</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In emergencies, the TEG is used like a normal mechanical key in order to carry out manoeuvres on the mechanical back-up pawls (door opening-closing, air bag activation-deactivation, etc.).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The mechanical key is a special insert that can be extracted manually from the TEG.</p>
+          <center>
+            <img src="images/jpg/939000002_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Extraction in an emergency</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The TEG can be released in any circumstances, even with the vehicle moving, through the mechanical emergency insert:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. extract the mechanical insert from the TEG</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. introduce the insert in opening A and press</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. the TEG is mechanically released and ejected</p>
+          <center>
+            <img src="images/jpg/939000003_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NBS will detect that this operation has been carried out and will send a signal to the instrument panel to indicate that the steering is not locked.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replacing the transmitter batteries</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the switching off command is received the receiver will send the alarm system a batteries run down signal.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The transmitter signals that the batteries are run down by giving a single flash lasting 200 ms when the button is pressed: the transmitter returns to normal flashing mode if the battery charge returns to above the preset level.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">From the moment the transmitter signals the batteries run down condition, a further 100 activations (switching on and off) are guaranteed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The restoring of the correct battery status reading takes place the 2nd time the transmitter is activated after the batteries have been replaced.</p>
+          <h3 class="bigtext3">Start/stop button (pav)</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For safety reasons the PAV consists of a dual circuit button with a dual output signal.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Both outputs are acquired by the NBS and the user''s wish is recognized through the presence of only one of the two signals.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the Start/Stop is faulty, the system behaves as described below.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- If the two pieces of information are contradictory, the NBS simply acquires the signal that the button has been pressed, through one of the 2 PAV signals, to allow the vehicle to be started/switched off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the PAV signal is defective, the recognition may only take place with the CAN activated. To wake the system up, simply open one of the vehicle doors.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- If one or both of the NBS inputs detects that the PAV has been pressed for 30 seconds consecutively, the information will be ignored until the transition is detected to prevent undesired starting from taking place.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In both cases the locking of the steering is inhibited when the TEG is extracted and a warning message is sent to the instrument panel.</p>
+          <h2 class="bigtext2">Operation</h2>
+          <h3 class="bigtext3">Key on</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The insertion of a TEG in the TEG reader produces the release of the steering by the NBS and the consequent activation of the +15.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To move from a Key OFF status to a Key ON status it is necessary to insert a TEG in the TEG Reader or to press the start/stop button if the TEG is already insertedin the reader (either inserting the TEG or pressing the Start/Stop button causes the CAN to wake up).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At this point the NBS asks the NBC for permission to give the +15 and, after checking the Immo code via the NTR, it releases the steering and sends the go ahead to the Power ON.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the go ahead for the NBC is received by the NBS the +15/54, INT and INT/A loads are activated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the Immo is not recognized, the NBS does not receive the go ahead from the NBC and the steering is not released.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the TEG is inserted in the reader the NBS detects the transition of the TEG_IN signal and requests the instrument panel (NQS) to display the message illustrating the starting procedure.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This message will be present for 10 seconds from the insertion of the TEG or until there is an attempt at starting or the TEG is extracted.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a problem preventing the NBS from activating the +15 or from releasing the steering, a message is sent from the alarm to the instrument panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On versions with automatic transmission if, in the +15 status, the NBS detects, via the CAN signal, that the gear lever is in a position other than Park, the NBS will send a signal to lock the TEG inside the reader.</p>
+          <h3 class="bigtext3">Lighting</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lighting of the Start/Stop button is managed by the NBS and follows the status of the B-CAN, in particular:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- at the key on: the button is always lit up.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- at the key off: the button is lit up as long as the B-CAN is activated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once it returns to sleep mode, the LED in the button is also switched off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lighting of the TEG Reader (inserted in the TEG) takes place as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Key Off: the lighting of the slot follows the B-CAN status: as long as the B-CAN is activated, the slot is lit up, when it returns to sleep mode, the slot light goes out.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Key On: once the TEG is locked in the reader, the slot lighting is switched off.</p>
+          <h3 class="bigtext3">Deactivation of +15 on or switching off of engine</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the vehicle Key On status, if the Start/Stop button is pressed for at least 2 seconds, with the brake and clutch released, the NBS deactivates the +15/54, INT and INT/A loads and activates the release of the TEG in the TEG Reader.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If, at the time of the deactivation, the speed of the vehicle is more than 4 km/h, then the NBS does not command the locking of the steering when the TEG is extracted.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In this case the user is advised through the following signal at the NQS: "The steering will not be locked".</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Timed Key-off</p>After the activation of the Key-on (+15), the NBS will automatically disable the +15, INT, INT/A loads if none of the following operations is carried out for a period of 20 minutes:<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- starting manoeuvre</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- vehicle speed &gt; 10 km/h</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine running</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- change of status to Key-off.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This strategy allows the vehicle to be towed at the Key-on, the towing of the vehicle raised, a test on the roller bench with the engine on or off.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the case of vehicles equipped with automatic transmission, the TEG will not be released if the gear lever is not in the park position.</p><h3 class="bigtext3">Activation of starting (from ignition on)</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine is started by pressing the Start/Stop button after pressing the clutch pedal or the brake pedal for versions with a manual gearbox or the brake pedal only for versions with a robotized gearbox.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressing the Start/Stop button without pressing the clutch pedal or the brake pedal causes the vehicle to switch off (Key Off).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the starting command is recognized, before activating the starter motor the NBS checks the following conditions:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- clutch/brake pedal pressed within 200 ms (timeout) of the activation of the +15</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- validation of +15 signal present at the B-CAN as well</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- starting enablement by the NBC (IMMO check)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The starter motor is driven (+50) until the clutch/brake pedal or the Start/Stop button is released or for a maximum of 10 seconds.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If starting takes place correctly, the NBS, evaluating the engine rpm signal, commands the mechanical locking of the TEG in the TEG Reader.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the locking command for the TEG is not successful, the starting can continue however, but if there is a later attempt to extract the TEG from the reader, the NBS will not command the switching off (key-off) which can only take place via the Start/Stop button.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On versions with automatic transmission, if the latter is not in the park/neutral position nothing will happen. If the cranking condition persists (+50) without the go ahead from the NCA, it will be necessary to wait for the above conditions to cease (the Key ON will be maintained). Then, if the customer moves the lever to park/neutral and the cranking conditions persist, it will not be started during the starting stage (motor turning over). Starting can only take place after the gear lever has been moved to park/neutral and the start/stop button is released. After this, following a new check on the conditions described in the "engine starting" paragraph, enablement for starting can be provided.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On versions with automatic transmission, if the driver releases the rotation of the TEG whilst driving through the recovery procedure it will be locked again at the first shift from Park to any other position.</p></p></span></td></tr></table><h3 class="bigtext3">Activation of starting (from key-off)</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If, after the TEG is inserted in the reader with the consequent activation of the Key-on (+15) for a period of 20 minutes, no operations are carried out, then the NBS will automatically disable the +15, INT, INT/A loads (key-OFF).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Under these circumstances, when the Start/Stop button is pressed with the clutch pedal or the brake pedal pressed and a valid TEG inserted in the reader, the NBS will reactivate the loads (Key-ON) and if the button is still pressed it will also activate the engine starting procedure already described again.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the NBS is pristine (without Immobilizer programming), at the Key On it is necessary to release the START button and press it again to start up the engine.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Failed STARTING: if starting fails it is no longer possible to "push start" the engine by activating the starter motor with a gear engaged (the clutch/brake should be pressed to enable the START button and disconnect the transmission).</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On versions with automatic transmission, if the latter is not in the park/neutral position nothing will happen. If the cranking condition (+50) persists without the enablement from the NCA it is necessary to wait until the above conditions cease (the Key ON is maintained). Then, if the customer moves the lever to park/neutral with the cranking conditions persisting, there should be no starting during the starting stage (motor turning over). Starting can only take place after the gear lever has been moved to park/neutral and the start/stop button is released. After which, following a new check on the conditions described in the "engine starting" paragraph, the go ahead for starting can be provided. On versions with automatic transmission, if the driver releases the rotation of the TEG whilst driving through the recovery procedure it will be locked again at the first shift from Park to any other position.</p><h3 class="bigtext3">Switching off the vehicle and extracting the key</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It should be noted that if the engine is started, pressing the Start/Stop button again, irrespective of the status of the brake or clutch pedal, will be interpreted as the desire by the user to switch off the engine.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NBS deactivates the +15/54, INT and INT/A loads and activates the unlocking of the TEG in the TEG Reader. If, at the time of the deactivation of the loads, the speed of the vehicle is more than 4 km/h, then the NBS does not command the locking of the steering when the TEG is extracted.</p><h3 class="bigtext3">System signals</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Smart Key system controls several warning lights and/or sends message signals to the instrument panel for the following functions:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- vehicle access and/or alarm</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- steering lock/release</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- vehicle starting and switching off</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- electric steering lock failure</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- failed TEG recognition</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Start/Stop button failure signal</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- steering not locked signal</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TEG reader failure signal</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TEG in reader signal when driver''s door is opened at Key-Off</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TEG insertion signal</p><h3 class="bigtext3">Alfa romeo code system</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The TEG also manages the operation of the Immobilizer system known as the ALFA ROMEO CODE:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is based on the transmission and reception of a radiofrequency signal with a rolling code.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Each transmission produces a rolling code managed by a mathematic algorithm.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The tramsmission message is memorized in the receiver in a non volatile memory (EEPROM) in such a way that information is not lost even if the batteries are replaced.</p><h3 class="bigtext3">Programming the remote control</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On delivery, the receiver contains the universal code 00H AAH AAH A2H that allows activation in the factory with a universal transmitter, this code should then be deactivated at the first programming.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Proceed as instructed by the Examiner.</p><h1 class="bigtext1">ELECTRIC STEERING LOCK</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Since no mechanical key is present, the steering lock function is performed electrically via the steering lock node.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The steering lock node releases the steering when the ignition-operated services are activated. INT, i.e. when a known TEG is identified in the TEG Reader.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The locking of the steering by the steering lock node takes place when the TEG is extracted from the TEG Reader.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the event of emergency TEG removal, the steering is NOT locked. Similarly, if the TEG is removed when the vehicle speed is greater than 4 km, the steering is NOT locked. In these cases, a message is displayed on the instrument panel display.</p></p></span></td></tr></table><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Since no recovery strategies are available for the steering lock, it is not possible to release it or start the vehicle if the steering lock node is not operational. Test using a diagnostic instrument (Examiner).</p></p></span></td></tr></table><table class="nota"><tr><td><img src="images/jpg/769_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the battery is disconnected, the Steering Lock Node remains in the condition (unlocked or locked) that it is in: during workshop operations and repairs, whenever it is necessary to turn the steering wheel with the battery disconnected, leave the TEG inserted when the battery is disconnected. The steering will therefore remain released and free to turn.</p></p></span></td></tr></table><h2 class="bigtext2">Communication between the steering lock node, ignition button and teg reader</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The START/STOP button is supplied at pins 3 and 5 of the steering lock node, which forwards the direct power supply from pin C1.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the button is pressed, START signals are sent from pins 4 and 6 to the steering lock node, pins B6 and B7. this sends an ignition command - "AVV" - from pin B8 - to the starter motor electromagnet winding.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The supply and control signals for button H2 are "redundant" (two identical duplicate signals) for safety reasons, the wish of the user is recognized by means of the presence of only one of the two signals.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The steering lock node supplies this power supply after a set of tests and checked. In particular, the TEG inserted status is sent from the TEG Reader via the CAN network - pins 3 and 8.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The same signal is sent in a redundant manner to the steering lock node - pin A6 - from pin 2 of the TEG Reader, and the latter, in turn, forwards it via the CAN.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Starting is only enabled if the clutch or the brake pedal is pressed: the steering lock node receives a signal from the clutch switch at pin A5, and both brake pedal signals: the NO contact (pedal pressed) at pin C4 and the NC contact (pedal released) at pin C7.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On versions with automatic transmission, the NBS asks the NCA for a starting enablement without which no power supply is sent to the button.</p><center><img src="images/jpg/939005554_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><h3 class="bigtext3">Teg reader receiver pin out</h3><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIGNAL</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TEG inserted signal to steering lock node</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - CAN B</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ignition-operated power supply</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - CAN A</p></td></tr></table><h3 class="bigtext3">Steering lock node pinout</h3><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIGNAL</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INT 2 output</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN A</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN B</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Clutch pedal input</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TEG present input</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">START STOP button power supply</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INT 1 output</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">START STOP button power supply</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INT/A output (T21 relay)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Automatic transmission or robotized gearbox starting enablement input</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AVV input from START STOP button</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AVV input from START STOP button</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Output "50" for starter motor</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Direct power supply</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">START STOP button led check</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Robotized starting output</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Positive signal from brake pedal NO contact</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Positive signal from brake pedal NC contact</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INT/A output</p></td></tr></table><h3 class="bigtext3">Start stop button pin-out</h3><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIGNAL</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Power supply for key lighting</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth for lighting</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Power supply for vehicle ignition/start-up control</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Positive signal (AVV) from vehicle ignition/start-up control to steering lock node</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Power supply for vehicle ignition/start-up control</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Positive signal (AVV) from vehicle ignition/start-up control to steering lock node</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Negative signal controlling vehicle ignition/start-up command lighting led</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr></table><h1 class="bigtext1">STARTER MOTOR AND COMPONENTS</h1><h2 class="bigtext2">Composition</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The starting system is composed of the Smart Key system described above and the starter motor which is connected directly to the battery.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For some time now, in addition to motors with series or series/parallel windings, motors have been developed with ceramic manget ferrite type permanent magnet energizing.</p><h2 class="bigtext2">Circular sector magnet with magnetically predirected crystals</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rough components are directed into the desired shape by pressing and extrusion. Lastly, after a thorough baking procedure, the material turns into the magnets that have a black ceramic structure. The magnetizing treatment takes place during the manufacturing process.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The magnets have a circular sector and thereby replace the polar part and the winding.</p><center><img src="images/jpg/939000004_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Radial orientation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Parallel orientation</p><h2 class="bigtext2">Stator-inductor</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The positioning of the magnets cannot be done through strong compression or by means of riveting because the magnets are reasonably fragile: they are secured by flexible means, clipw which, in some cases, are stuck to the casing. The casing assembly can be compared with a simple mechanical component without wires to be fitted using two special bolts; it has 6 magnetic poles.</p><center><img src="images/jpg/939000005_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Permanent N-S magnets</p><h2 class="bigtext2">Rotor-armature (with epicyclic reduction unit)</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rotor-armature is illustrated in the diagram below.</p><center><img src="images/jpg/939000006_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Shaft</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Ring gear/crown wheel</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Satellite/planet gears</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Pinion/sun gear</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Armature</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Commutator/switch</p><h2 class="bigtext2">Rotor-armature (with epicyclic reduction unit)</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Given that the magnetic field is produced by permanent magnets, the energizing is the same in all motor operating conditions; in addition, as there are no energizing windings, there is no energizing current or ohmic resistance: the total resistance only depends on the armature circuit. The rotation speed is only influenced by the current that passes through the blades and reaches the rotor depending on the voltage. Since the motor is equipped with permanent magnets, i.e. with fixed polarity, the direction of rotation depends on how the current is sent to the blades.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When rotating the rotor transmits motion to the three satellite gears fitted on special supports that transmit their drive torque to the ring gear or crown wheel in one piece with the output shaft where the pinion is located and the engine flywheel is rotated. The optimum reduction radio 1:4.26 is 4.26 revs of the rotor for every revolution of the ring gear and the presence of permanent magnets makes it possible to produce small simply designed motors with a comparable power output in relation to motors with windings.</p><center><img src="images/jpg/939000007_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Pinion with free wheel</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Epicyclic reduction unit</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Inductor permanent magnets</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Polar casing assembly</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Armature or rotor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Blades</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Commutator</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Commutator side support</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Engagement relay</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Lever</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Control side support</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003530&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=ELECTRIC+STEERING+LOCK+-+DESCRIPTION&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:11:31 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

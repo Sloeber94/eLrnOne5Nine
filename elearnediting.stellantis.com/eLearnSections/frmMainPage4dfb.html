@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006522&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:58:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006522&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="p/c2SAvxCI1/DZRqPUhyYCXiO36wcgMnJhjgCtEpBDgWAqgBa0ci3UdMDiAGq2mP3B5TasNXV4WzeoOKlAqf/ZXnnIqGKL67QLL0XRSBhzdO/TjQSBGRODiXfZL2a1tkjYK1si/ZMzPqv29is5Wrpef8dr4VyL8/qEZV9NuMyRaUu8kQRbnxFiKiBs9/g7yx2OCBdGTWDc/VeezXGAK6PvH5uYm8nLanRgh5B7R2ytdU9MTHlQRvudq9PICVg06mBgZknDILgGIJ2ZPGJ4hYF1f6+Fbq/ncwjw4liBxQmL0UkBwX7Tz20udAt1r5g2FaTtbBWKFcY2K1uzAAPlUBq4AxXeYc3pDvPqkNV5HrtqhGuMo4hPF8cTxWQvooJ1gHFZGckXJYZzCVInqDbE4n8W6QuclGFHj7L61dn4nXP1gWoZku3jiHYRgcZJEb73mBEHdZ844OTujV15awF/O5HVF5zgpPpwAa8NpABBn77eiCXBo9Xa7LD56uguRAaNKBl4fnS38YVOoAQd7N1ZfBXsM7YxVGmQer2KMDcKqIE3w+boMqCH5OX2/qbafSKF9R" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 03/11/2006</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Various models (159 – Brera/Spider)</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b> all versions with Blue &amp; Me (opt 4J3)</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">55</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">25.06</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>5570 T 530 AA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>SMS READER IN BLUE&amp;ME™ SYSTEM</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>SMS reader installation - Network Information and Service Manual Update</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/188000002_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">OPERATIONS IN PRODUCTION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It should be pointed out that on all vehicles equipped with Blue&amp;Me™ (opt. 4J3) it is possible to integrate this system with an SMS message reader; this application allows the Customer to listen to the incoming message automatically on their mobile phone via the vehicle audio system equipped with Bluetooth®.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>INTRODUCTION</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The SMS message reader integrated with <b>Blue&amp;Me™</b> through <b>voice synthesis technology, allows incoming messages to be automatically read via the vehicle audio system</b> on mobile phones with <b>Bluetooth®,</b> also interpreting any abbreviations (*) within the text message.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The SMS message reader functions are managed using the controls on the steering wheel or <b>Blue&amp;Me™</b> voice commands.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Blue&amp;Me™ SMS message reader allows the Customer to:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Be informed, via a warning message in the instrument panel multifunction display, of a new incoming SMS message on their mobile phone with <b>Bluetooth ®</b> indicating the number/name of the sender and the <b>Blue&amp;Me™</b> system will also suggest reading the message out for them.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Manage the SMS messages received list on a mobile phone connected to the <b>Blue&amp;Me™</b> system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Reread SMS messages already received and memorized.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Make a voice call, using the controls on the steering wheel or voice commands, to the sender of the SMS message received.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Delete individual SMS messages or the entire list of SMS messages received using the controls on the steering wheel or voice commands.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) The <b>Blue&amp;Me™</b> system is also capable of recognizing and reading any abbreviations (for example, "TVB" will be read as "Ti voglio bene" - I love you) and interpreting the most frequently used symbols (e.g. :-) will be read as "Smile") in text messages.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Controls on the steering wheel</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For the description of the controls on the steering wheel and for the SMS message reader functions, refer to Fig. 1 and Table 1 below.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 1</b>
+          </p>
+          <center>
+            <img src="images/jpg/939006340_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Table 1</b>
+          </p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Key</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Short press</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>(less than 1 second)</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Long press</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>(more than 1 second)</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Activation of Blue&amp;Me™ Main Menu</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Confirmation of menu option selected</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Selection of message displayed</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Deactivation of voice recognition</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Interruption of voice message</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Interruption of SMS message reading</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Exit from Blue&amp;Me™ Main Menu</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Exit from a sub menu and return to the previous menu option</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Exit from the current selection with memorizing</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Activation of the voice recognition</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Interruption of the voice message in order to give a new voice command</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Repetition of the last voice message given by the system</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>4</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Adjustment of the audio volume during the reading of an SMS message</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>5</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Scrolling through Blue&amp;Me™ menu items</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Scrolling through SMS messages in the list</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>6</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Confirmation of menu option selected during manual interaction</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Selection of message displayed</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Telephones that support the Blue&amp;Me™ SMS Message Reading function</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Blue&amp;Me™</b> is compatible with most mobile phones that support <b>Bluetooth® 1.1</b> and a 1.0 hands-free profile (refer to the <b>Bluetooth®</b> connection specifications in the mobile phone user manual).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ALFA ROMEO official website (www.alfaromeo.it) contains a list of mobile phones that are compatible with the <b> Blue&amp;Me™</b> system. We wish to point out that because of the different possible software versions available on the market for the different models of mobile phones, some functions may not correspond exactly to the description in this Service News.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">some mobile phones in the list may not support the transmission of interlinked SMS messages (with more than 160 characters). Therefore, refer to the user manual for the mobile phone.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">OPERATIONS IN NETWORK</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The SMS Rider application can be installed as described in the operating cycle below.</p>
+          <h1 class="bigtext1">OPERATION CYCLE</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Necessary equipment</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Before installing the SMS reader application, the following equipment must be available:</p>-Personal Computer connected to the Internet-USBPen (minimum size 256 Mb) with manufacturer''s certification of compatibility with Windows© 2000 and Windows© XP Operating Systems (see specific paragraph).<table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALFA ROMEO periodically releases updates for the SMS reader application on its website www.alfaromeo.it.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Procedure for installing SMS Reader application</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Access the <b>Blue&amp;Me™</b> portal on the ALFA ROMEO official website (www.alfaromeo.it - Technical section) and download the zip file containing the SMS Reader application to be installed on the <b>Blue&amp;Me™</b> system.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Extract the contents of the zip file downloaded from the <b>Blue&amp;Me™</b> portal, it is advisable to extract the contents into a dedicated directory (e.g. c:\Blue&amp;Me).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Copy the following files into the memory of a USBPen from the files extracted:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- <b>install.inf</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- <b>SMS_Reader.ARM920.CAB</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. There will be two files in the USB memory:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- <b>install.inf</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- <b>SMS_Reader.ARM920.CAB</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Insert the USBPen memory into the vehicle <b>Blue&amp;Me™</b> USB port (oddments compartment, see Fig. 2).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 2</b></p><center><img src="images/jpg/939006341_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Turn the ignition key to the ON position.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Blue&amp;Me™ will show the following on the control panel display "UPDATE IN PROGRESS" and will say "update launched" (if this does not happen turn the key OFF and then ON again).</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>It is important not to press any buttons on the steering wheel during the updating.</b></p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. When the update is complete, <b>Blue&amp;Me™</b> will show the following on the control panel display "UPDATE COMPLETED" and will say "update completed, remove the USB".9 memory. Press the "Handset" button (1 - Fig. 1) and using the Up/Down buttons (2 - Fig. 1) check for the menu item "MESSAGE READER" in the main <b>Blue&amp;Me™</b> menu.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>If the result is negative (the SMS READER item is not present in the Blue&amp;Me™ menu) repeat the procedure from the beginning.</b></p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>USBPen DESCRIPTION</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It should be remembered that the USBPen (Fig. 3) is a device on which it is possible to load data.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To update the software and the language, the hands-free system with voice recognition and Bluetooth® requires a USBPen with standard USB version 1.0, 1.1 or 2.0 and a 256MB memory (USBPens with a memory of up to 1 GB are supported).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following USBPens have been officially tested on the hands-free system with voice recognition and Bluetooth®:</p>-Memorex® Travel Driver 256 MB USB 2.0-Memorex® Travel Driver 1 GB USB 2.0-SanDisk® Cruzer™ Micro 256 MB USB 2.0-SanDisk® Cruzer™ Micro 256 MB USB 2.0-Lexar™ JumpDrive® 2.0 512 MB-PNY® Attaché 256 MB USB 2.0-Sony® Micro Vault®<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 3</b></p><center><img src="images/jpg/939006342_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>	OPERATION CODE - TIME ALLOWANCE</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The operation should be allocated code number <b>5570T530 AC</b> for which the time allowance for labour is <b>0.15</b> hundreths of an hour.</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006522&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:58:50 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

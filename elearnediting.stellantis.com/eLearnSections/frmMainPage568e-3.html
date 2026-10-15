@@ -1,0 +1,1258 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010869&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 03:13:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010869&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="pJ2kegQZSX6PiBQoPGVqBYEUZwf/hAAoVOaKNeUm2t9qL4jgx14H9AQZLKr4CZ9WpCvH1trpGuFlxKQU1Rh5HxE6o88EMslbY2BUEjBAChaFnLFX11kZcRUi2vpqQrpaC9YSksxGgZ9iQX5RPXoA5XEdYqNA7YQkK5/nZKqz5T1cqWyZOPlJ2dvTJUbu5Uf9seR7u6iJ85RTtKTQ+5Dz4/cLcrEOtURvo2CAF39QyMwYnK1nDjAUc63DVmyVd/cxcZAzYGOcT/kf45sbWirDgvTEOF0WBRn1ThMUJiGB8hB6SS6tmXsOQWUFYxPpl8H67ochBNixHEHz2d14KUkGXXI43Weybh0rWPIV5XB+aWGQPWQojX98SnMZqRS7hY46IHZUNwLuIRBjmT5bOEQv3IA9ljwmX24pW8OY1ged9lN7kI3gUCT4qAJlZzYyK/vr5+7XTw2Z8aD6qLv8dGVqWPfnzHuriKF6tJ2dfs3WIqvwhKsHoxRYZ8G+0PP/KUd+2wiUM9BoKbkhV9hzF14GZt06SE1lB9dXhnYc/w2J3ftJcY2Bqoh5CBLIiCDnUyDkKtzNw/LKhB7CVY20i53/Dmc6gHvBCO+ZXUct/ud0oG2QK+pNKHflFEmeDHoj9KLJu34ifgBeMttdvVKMe0JyHLfjwCxM+E6JKQoSc5PFOWXC/KRLRlVz2hGgybpw13tWKW1KABlDwHhrz2gGn9DTA3f9Pv1IyarkpyvSMdTasmq7zVgfOiBVrhpmw1pVZhPkKX83QGYn5/EH0OAAwMa02vudXtUWrJ0H354YAwl+AtNxrV77UMomBpmkQOVkhTu/+jJjFJnuFgujMeSF3E/jhlJYCTMXjN4crn1s4OoKiQwrIRl8KM2KFgRHO8LnIbInYjH0EnSAiGUnpg2I/51KndDsY0MW04cYgQ4foe0dL+Br/P4pDY5QmkRuV53FIv160kW1oVzc2/VUA+aiWwsEFazD1wzr8EPN45kB9K3QBgfWe7z3eO0EY7kBCwRgi23P" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="vpegN587TxIYSDyLjZQFSTey7CwL127+pg8lRPL8/hWG0YPQDNl2fgMy/ws+5eNpjTklh178erdZeTyFCw6viN2yI3Aiknr4jwWyjuItiipeNR+spnmEgPKhOHKT8oco" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspREAR WHEEL GEOMETRY - CHECK USING OPTICAL EQUIPMENT, INCLUDES ADJUSTMENT IF NECESSARY&nbsp&nbsp&nbsp4450A40&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Check the geometries (ground clearance) only when the springs or shock absorbers are replaced but check the rear suspension angles every time a moving part of the suspension is adjusted.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">- Check the rear wheel geometry after carrying out the following checks on the parts that affect the wheel geometry:</p>
+          <p class="contents_testonormale ">- vehicle in “STANDARD 0” load conditions (all engine fluids and approximately 8 litres of fuel in the tank) or “STANDARD A” conditions (vehicle unladen including spare wheel, tools, accessories and tanks/reservoirs topped up, full tank of fuel);</p>
+          <p class="contents_testonormale ">- tyre inflation pressure.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010869&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 03:13:14 GMT -->
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Check the geometries (ground clearance) only when the springs or shock absorbers are replaced but check the rear suspension angles every time a moving part of the suspension is adjusted.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">- Check the rear wheel geometry after carrying out the following checks on the parts that affect the wheel geometry:</p>
+          <p class="contents_testonormale ">- vehicle in STANDARD 0 load conditions (all engine fluids and approximately 8 litres of fuel in the tank) or STANDARD A conditions (vehicle unladen including spare wheel, tools, accessories and supplies, full of fuel);</p>
+          <p class="contents_testonormale ">- tyre inflation pressure.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001737_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">GEOMETRY CHECK</p>
+          <p class="contents_testonormale ">- Check the rear wheel geometry, ensuring that ground clearance D - C is within the following values.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="3" rowspan=""> 
+ 
+						<p class="contents_testonormale ">REAR WHEEL GEOMETRY</p><p class="contents_testonormale "></p><p class="contents_testonormale "></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Distance D - C (Standard 0)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">23 ± 5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">mm</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="3" rowspan=""> 
+ 
+						<p class="contents_testonormale ">REAR WHEEL GEOMETRY</p><p class="contents_testonormale "></p><p class="contents_testonormale "></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Distance D - C (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">12 ± 5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">mm</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="3" rowspan=""> 
+ 
+						<p class="contents_testonormale ">REAR WHEEL GEOMETRY - TI trim level</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Distance D - C (Standard 0)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">3 ± 5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">mm</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001737_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">GEOMETRY CHECK</p>
+          <p class="contents_testonormale ">- Check the rear wheel geometry, ensuring that ground clearance D - C is within the following values.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Front wheel geometry - Distance D - C (Standard 0)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">23 +/- 5 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Front wheel geometry - Distance D - C (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">12 +/- 5 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Front wheel geometry version TI - Distance D - C (Standard 0)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Front wheel geometry version TI - Distance D - C (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <p class="contents_testonormale ">TOE-IN CHECK</p>
+          <p class="contents_testonormale ">- Check that the rear wheel half toe-in is within required limits.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="3" rowspan=""> 
+ 
+						<p class="contents_testonormale ">REAR WHEEL SEMI TOE IN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Standard 0</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">11’ ± 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="3" rowspan=""> 
+ 
+						<p class="contents_testonormale ">REAR WHEEL SEMI TOE IN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Standard A</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">13’ ± 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="3" rowspan=""> 
+ 
+						<p class="contents_testonormale ">REAR WHEEL SEMI TOE IN - TI trim level</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Standard 0</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">11’ ± 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">- If the rear wheel half toe-in is not within the recommended figures, adjust it following the instructions given below.</p>
+          <p class="contents_testonormale ">CAMBER CHECK</p>
+          <p class="contents_testonormale ">1. Check that the rear wheel camber is within required limits.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="3" rowspan=""> 
+ 
+						<p class="contents_testonormale ">REAR WHEEL CAMBER</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Standard 0</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-25’ ± 18’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="3" rowspan=""> 
+ 
+						<p class="contents_testonormale ">REAR WHEEL CAMBER</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Standard A</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-40’ ± 18’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="3" rowspan=""> 
+ 
+						<p class="contents_testonormale ">REAR WHEEL CAMBER - TI trim level</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Standard 0</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">- 1° 3’ ± 18’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">- If the rear wheel camber is not within</p> specified limits, adjust as follows.</td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001739_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">ADJUSTING THE CAMBER AND TOE-IN</p>
+          <p class="contents_testonormale ">1. Undo the bolts securing the rear suspension longitudinal arms to the struts and adjust the screws to alter the rear wheel toe-in.</p>
+          <p class="contents_testonormale ">- Screw in the bolts securing the rear suspension longitudinal arms to the struts, without tightening them.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001740_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Adjust the screws for the bolts securing the wishbones (camber rod) in order to adjust the camber of the rear wheels to the recommended value.</p>
+          <p class="contents_testonormale ">- Tighten the wishbone bolts (camber rod) to the specified torque.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Steering knuckle side camber rod</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Bolt</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">7.8 ÷ 9.3 + 30°</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001741_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Adjust the screws for the bolts securing the rear suspension longitudinal arms to the struts in order to adjust the toe-in to the recommended value.</p>
+          <p class="contents_testonormale ">- Tighten the bolts securing the rear suspension longitudinal arms to the struts to the specified torque.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Steering knuckle side longitudinal arm (toe in)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Bolt</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">9.5 ÷ 10.5 + 45°</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <p class="contents_testonormale ">TOE-IN CHECK</p>
+          <p class="contents_testonormale ">- Check that the rear wheel half toe-in is within required limits.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in (16" rims) (Standard 0)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-0° 11’ +/- 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in (16" rims) (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-0° 13’ +/- 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in (16" rims) (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-1,54 +/- 0,9 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in (17" rims) (Standard 0)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-0° 11’ +/- 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in (17" rims) (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-0° 13’ +/- 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in (17" rims) (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-1,63 +/- 0,9 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in (18" rims) (Standard 0)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-0° 11’ +/- 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in (18" rims) (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-0° 13’ +/- 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in (18" rims) (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-1,73 +/- 0,9 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in, version TI (Standard 0)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-0° 11’ +/- 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in, version TI (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-0° 13’ +/- 7’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel half toe in, version TI (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-1,82 +/- 0,9 mm</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">- If the rear wheel half toe-in is not within the recommended figures, adjust it following the instructions given below.</p>
+          <p class="contents_testonormale ">CAMBER CHECK</p>
+          <p class="contents_testonormale ">1. Check that the rear wheel camber is within required limits.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel camber (Standard 0)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-0° 25’ +/- 18’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel camber (Standard A)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-0° 40’ +/- 18’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel camber, version TI (Standard 0 for 4x2 versions)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-1° 3’ +/- 18’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel camber, version TI (Standard A for 4x2 versions)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-1° +/- 18’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel camber, version TI (Standard 0 for 4x4 versions)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-1° 3’ +/- 18’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Size</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Rear wheel camber, version TI (Standard A for 4x4 versions)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-1° 14’ +/- 18’</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">- If the rear wheel camber is not within</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001739_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">ADJUSTING THE CAMBER AND TOE-IN</p>
+          <p class="contents_testonormale ">1. Undo the bolts securing the rear suspension longitudinal arms to the struts and adjust the screws to alter the rear wheel toe-in.</p>
+          <p class="contents_testonormale ">- Screw in the bolts securing the rear suspension longitudinal arms to the struts, without tightening them.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001740_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Adjust the screws for the bolts securing the wishbones (camber rod) in order to adjust the camber of the rear wheels to the recommended value.</p>
+          <p class="contents_testonormale ">- Tighten the wishbone bolts (camber rod) to the specified torque.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Steering knuckle side camber rod</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Bolt</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">7.8 ÷ 9.3 + 30°</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001741_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Adjust the screws for the bolts securing the rear suspension longitudinal arms to the struts in order to adjust the toe-in to the recommended value.</p>
+          <p class="contents_testonormale ">- Tighten the bolts securing the rear suspension longitudinal arms to the struts to the specified torque.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Steering knuckle side longitudinal arm (toe in)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Bolt</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">9.5 ÷ 10.5 + 45°</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

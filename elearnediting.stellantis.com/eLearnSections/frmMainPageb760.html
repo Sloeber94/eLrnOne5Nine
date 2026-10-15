@@ -1,0 +1,1081 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010792&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=CLUTCH+NOISY+WITH+ENGINE+RUNNING&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:20:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010792&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=CLUTCH+NOISY+WITH+ENGINE+RUNNING&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="3t7h/VTBSxpFR18VnT3LdmyaspP7bU403539pg1VHkQJTZT6l5ESWEBjOnI9vgrmHbwMnaX9fdubUSWl2GgEwe+kHa0E76LwXnlI+xvQ5VR0lkvjTi11KKwmxhx6Je5ANnpFJJ7Uoi8XpHse0jZ+1LWd7hRI31wz82hw+WSxAJ9FMIjyI9MT7insZk14lI07chzV3gdVG0kTkGbRm1aEugHXCCFjrBCaqgd2A0/V2DmHZX95sUbQ9nl2aCadv5IAMPYRjYXmLihDp62mHDX9Tkic/ZYWVOCf/5acMXOD54+BYMqazHOVgFWlIocfvR7rGotup+HWijXfbqFjfcIBqQ+PnHiayrqacVtl9JS6ZX7PoU6JhNyO0TRaILRFIoJhwtnWkL5Xkpo3ZdRO3TWtSoSNzMvGwikHPiUfVTL7xD6VnbBug7y0i5zDe5OByJRXqT+LG+gcDFN0yTgIFsrQQyNtx1Dav3oaM9VxH8Tx4vBMvQU28CkW0z70OSvdU3WEqhpVXsiroKe8ReJRAIVmrhTNVzru8DahvoAhTUBuqp5tyVnAx45hiA4fA3Q0o57GKCYMImCj5PT4TUFfjy5ze/50yX1GpdF8SWGYdvhrvZq6KHeNt0Q28ujX3m8qk+yU9oO+tnLzAbTZ4pfhyWgctaQuake9NYEnJ6fWhueaprGRe0rwaSe3D/1ckqV25owS77m7aZQECeqgU9mNLLriEAO37o4C0wGYDdrI0JqFITlr7O3I4gdTO5eoa9+jopoXnnj9hHacQUWONnDZVm3cxR4MFYAhUwtgAhY9V91WV6duKh6ZW1QMmH/zZxRqwu2nA6hj/zpbXKFJkHlkFDs64nSO9GvMpIyAmd4onrC1kzlDtK1z7uHkcVlYmsvOCXdHGpVSmiwksK+OYUYeWbAHhJD8w86iPZF2dWjDQtJ2XxPA9ES1gPJ12cey3AUllHqPvKbFxS9iipHTukY+YG33kD17whtcDKAHqbkADj8G29tm1SwQi7nCt0zonHdQcUxhkGe2PL7cJnf1/FPGMi8SCUvULcqqWEOp6JIZSORwmFw1mpp4jwfhFwqHigw9Hdmq" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="0RdmYaiYgdSe5QaBWjKU4F9j9EhqMiUs7n3Rvqw4x6oL8a/0MkTEfdMMbZu3Dgxv5FtyvmJNUhxFH6kSy3iqThNArDWkcVFf/Johy7RCqgkazv62mxijCYDwT08ArUHh" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspPEDAL ASSEMBLY - R.R&nbsp&nbsp&nbsp3330B02&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  CLUTCH NOISY WITH ENGINE RUNNING</a>
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001628_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/20_2.jpg" border="0">Removing<a class="title" name="0"></a>
+		(
+		<a href="#1" class="title_link">Refitting<img src="images/jpg/21_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">- Make sure that the ignition key is in the OFF position, then disconnect the battery terminal (-).</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Connector</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Battery</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "><span class="testo_link"> </span><a class="contents_link" href="main6a6e.html?nodeID=939004879&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  See A001 BATTERY</a></p></td></tr></table><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010380" onclick="
+        ViewiFrame(btn_0_939010380)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainb67c.html?nodeID=939010380&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 0010T84 AIR CONDITIONING SYSTEM REFRIGERANT - DEHYDRATING AND REPRESSURIZING</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010380"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011402" onclick="
+        ViewiFrame(btn_0_939011402)
+      "><span class="testo_link"> </span><a class="contents_link" href="main101c.html?nodeID=939011402&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7210E36 R.R. FRONT SIDE DOOR</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011402"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010901" onclick="
+        ViewiFrame(btn_0_939010901)
+      "><span class="testo_link"> </span><a class="contents_link" href="main87d2.html?nodeID=939010901&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010C30 CENTRAL AIR VENT IN DASHBOARD - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010901"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010900" onclick="
+        ViewiFrame(btn_0_939010900)
+      "><span class="testo_link"> </span><a class="contents_link" href="main3b25.html?nodeID=939010900&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010C12 WINDSCREEN DEMISTER DIFFUSER - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010900"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010904" onclick="
+        ViewiFrame(btn_0_939010904)
+      "><span class="testo_link"> </span><a class="contents_link" href="main28f6.html?nodeID=939010904&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010D56 SOLAR SENSOR - R.R FOLLOWING ELECTRICAL SYSTEM CHECK</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010904"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011232" onclick="
+        ViewiFrame(btn_0_939011232)
+      "><span class="testo_link"> </span><a class="contents_link" href="main8b23.html?nodeID=939011232&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A44 LEFT DASHBOARD SIDE TRIM - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011232"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011097" onclick="
+        ViewiFrame(btn_0_939011097)
+      "><span class="testo_link"> </span><a class="contents_link" href="main1092.html?nodeID=939011097&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5580C18 AIR BAG MODULE - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011097"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010817" onclick="
+        ViewiFrame(btn_0_939010817)
+      "><span class="testo_link"> </span><a class="contents_link" href="main344d.html?nodeID=939010817&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 4110A10 STEERING WHEEL - R+R FOR REPLACEMENT OR CHECKS</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010817"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011231" onclick="
+        ViewiFrame(btn_0_939011231)
+      "><span class="testo_link"> </span><a class="contents_link" href="main416d.html?nodeID=939011231&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A26 STEERING COLUMN TRIM - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011231"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011063" onclick="
+        ViewiFrame(btn_0_939011063)
+      "><span class="testo_link"> </span><a class="contents_link" href="maind50a.html?nodeID=939011063&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5560B10 CONTROL PANEL - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011063"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011233" onclick="
+        ViewiFrame(btn_0_939011233)
+      "><span class="testo_link"> </span><a class="contents_link" href="main7c56-2.html?nodeID=939011233&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A45 RIGHT DASHBOARD SIDE TRIM - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011233"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011237" onclick="
+        ViewiFrame(btn_0_939011237)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainc408.html?nodeID=939011237&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A31 DASHBOARD COMPARTMENT ASSEMBLY - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011237"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011089" onclick="
+        ViewiFrame(btn_0_939011089)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainb780-2.html?nodeID=939011089&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5580C22 AIR BAG MODULE - PASSENGER SIDE - R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011089"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011244" onclick="
+        ViewiFrame(btn_0_939011244)
+      "><span class="testo_link"> </span><a class="contents_link" href="main1007.html?nodeID=939011244&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A58 INSTRUMENT PANEL MOULDING - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011244"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011094" onclick="
+        ViewiFrame(btn_0_939011094)
+      "><span class="testo_link"> </span><a class="contents_link" href="main72c2-2.html?nodeID=939011094&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5580C26 PASSENGER AIR BAG DISABLING KEY LOCK BARREL/SWITCH - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011094"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010902" onclick="
+        ViewiFrame(btn_0_939010902)
+      "><span class="testo_link"> </span><a class="contents_link" href="main28e8.html?nodeID=939010902&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010C55 LOWER AIR DIFFUSER (ONE) LH OR RH - R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010902"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011230" onclick="
+        ViewiFrame(btn_0_939011230)
+      "><span class="testo_link"> </span><a class="contents_link" href="maind27c.html?nodeID=939011230&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A65 CONSOLE SIDE CLOSING (ONE) - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011230"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010899" onclick="
+        ViewiFrame(btn_0_939010899)
+      "><span class="testo_link"> </span><a class="contents_link" href="main5872.html?nodeID=939010899&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010C32 AIR VENT ON TUNNEL COVER FOR REAR SEATS - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010899"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011270" onclick="
+        ViewiFrame(btn_0_939011270)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainc351.html?nodeID=939011270&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040L20 TUNNEL COVER - R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011270"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011091" onclick="
+        ViewiFrame(btn_0_939011091)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainda32.html?nodeID=939011091&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5580C23 DRIVE SIDE KNEE PROTECTION AIR BAG MODULE R. R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011091"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011240" onclick="
+        ViewiFrame(btn_0_939011240)
+      "><span class="testo_link"> </span><a class="contents_link" href="main2d2e.html?nodeID=939011240&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A56 SWITCH UNIT IN DASHBOARD - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011240"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010931" onclick="
+        ViewiFrame(btn_0_939010931)
+      "><span class="testo_link"> </span><a class="contents_link" href="maindc2c.html?nodeID=939010931&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5040D18 AIR CONDITIONING CONTROL UNIT - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010931"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011245" onclick="
+        ViewiFrame(btn_0_939011245)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainc43e.html?nodeID=939011245&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A10 DASHBOARD TRIM - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011245"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011281" onclick="
+        ViewiFrame(btn_0_939011281)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainb09f.html?nodeID=939011281&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040L06 PASSENGER COMPARTMENT FLOOR RIGHT FRONT CARPET - R. R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011281"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010890" onclick="
+        ViewiFrame(btn_0_939010890)
+      "><span class="testo_link"> </span><a class="contents_link" href="main7628.html?nodeID=939010890&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010B70 SIDE CONNECTOR BRACKETS (ONE), LH OR RH, BETWEEN AIR CONDITIONER CASING AND DUCT FOR REAR SEATS - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010890"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale ">(left and right).</p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010888" onclick="
+        ViewiFrame(btn_0_939010888)
+      "><span class="testo_link"> </span><a class="contents_link" href="main98de.html?nodeID=939010888&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010B46 CENTRAL AIR DUCT TO REAR SEATS - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010888"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010947" onclick="
+        ViewiFrame(btn_0_939010947)
+      "><span class="testo_link"> </span><a class="contents_link" href="maina911.html?nodeID=939010947&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5050B34 FRONT WINDSCREEN WIPER ARM(S) COMPLETE WITH BLADE - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010947"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011203" onclick="
+        ViewiFrame(btn_0_939011203)
+      "><span class="testo_link"> </span><a class="contents_link" href="maina28b.html?nodeID=939011203&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7025A64 ENGINE COMPARTMENT GASKET - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011203"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011397" onclick="
+        ViewiFrame(btn_0_939011397)
+      "><span class="testo_link"> </span><a class="contents_link" href="maine20e-2.html?nodeID=939011397&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7210E22 R.R. WINDSCREEN BASE TRIM</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011397"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010948" onclick="
+        ViewiFrame(btn_0_939010948)
+      "><span class="testo_link"> </span><a class="contents_link" href="main0398-2.html?nodeID=939010948&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5050B38 FRONT WINDSCREEN WIPER ASSEMBLY - R.R. OR REPAIR</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010948"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011234" onclick="
+        ViewiFrame(btn_0_939011234)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainca65.html?nodeID=939011234&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A89 REINFORCEMENT BRACKET BETWEEN DASHBOARD SUPPORTING CROSSMEMER AND BODYSHELL - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011234"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939010816" onclick="
+        ViewiFrame(btn_0_939010816)
+      "><span class="testo_link"> </span><a class="contents_link" href="main1552-2.html?nodeID=939010816&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 4110A30 SUPPORT WITH STEERING CONTROL SHAFTS - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939010816"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale ">1. Disconnect the electrical connection from the brake fluid minimum level warning light switch.</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Connector</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Brake fluid level sensor (switch)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "><span class="testo_link"> </span><a class="contents_link" href="main49bf.html?nodeID=939004175&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  See K025 BRAKE FLUID LEVEL SENSOR (SWITCH)</a></p></td></tr></table><p class="contents_testonormale ">2. Undo the bolts fixing the brake servo to the pedal assembly.</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010792&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=CLUTCH+NOISY+WITH+ENGINE+RUNNING&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:20:51 GMT -->
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001629_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Disconnect the flexible pipe from the clutch reservoir to the master cylinder, master cylinder side.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Collect any brake-clutch fluid that comes out.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">2. Lift the retaining clip (2a) and disconnect the clutch hydraulic circuit vibration damper (2b), clutch master cylinder side.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001630_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Disconnect the electrical connection from the accelerator pedal with built in potentiometer.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Connector</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Accelerator pedal potentiometer</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "><span class="testo_link"> </span><a class="contents_link" href="main8621.html?nodeID=939004212&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  See K055 ACCELERATOR PEDAL POTENTIOMETER</a></p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">2. Disconnect the electrical connection from the brake pedal switch.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Connector</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Brake pedal switch</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "><span class="testo_link"> </span><a class="contents_link" href="main5977.html?nodeID=939004116&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  See I030 BRAKE PEDAL SWITCH</a></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001631_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Remove the retaining clip (1a) and move back pin (1b) connecting the brake pedal to the brake servo.</p>
+          <p class="contents_testonormale ">2. Turn the switch on the brake pedal clockwise through 90° and remove.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001632_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Disconnect the electrical connection from the clutch pedal switch.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Connector</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Clutch pedal switch</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "><span class="testo_link"> </span><a class="contents_link" href="main491d.html?nodeID=939004119&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  See I031 CLUTCH PEDAL SWITCH</a></p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">2. Turn the clutch pedal switch clockwise through 90° and remove.</p>
+          <p class="contents_testonormale ">3. Withdraw the pin connectng the clutch pump to the pedal.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Replace the above pin whenever it is removed.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001633_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Undo the nuts (1a) and remove the pedal assembly (1b).</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001634_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/21_2.jpg" border="0">Refitting<a class="title" name="1"></a>
+		(
+		<a href="#0" class="title_link">Removing<img src="images/jpg/20_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">1. Position the pedal assembly (1a) in its housing and secure it by tightening the nuts (1b) to the recommended torque.</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Pedaliera</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Dado</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">(lato scocca) 2.2 ÷ 2.6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td></tr></table></td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939001635_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">- Refit a new pin to connect the clutch pump to the pedal.</p>
+          <p class="contents_testonormale ">- Press the clutch pedal, then refit the cluch pedal switch and turn through 90° anticlockwise until it fits into place on the ridge.</p>
+          <p class="contents_testonormale ">- Release the clutch pedal and pull it backwards until it is at the end of its travel (rest position).</p>
+          <p class="contents_testonormale ">- Operate the clutch pedal through a full cycle to settle the switch.</p>
+          <p class="contents_testonormale ">- Connect the electrical connection to the clutch pedal switch.</p>
+          <p class="contents_testonormale ">- Refit the pin connecting the brake pedal to the brake servo and secure with the clip.</p>
+          <p class="contents_testonormale ">- Press the brake pedal, then refit the switch in its seat on the brake pedal and turn through 90° anticlockwise until it is fully home.</p>
+          <p class="contents_testonormale ">- Release the brake pedal.</p>
+          <p class="contents_testonormale ">- Connect the electrical connection to the brake pedal switch.</p>
+          <p class="contents_testonormale ">- Connect the electrical connection to the accelerator pedal with built in potentiometer.</p>
+          <p class="contents_testonormale ">- Fit the retaining clip fully, then fit the clutch hydraulic circuit vibration damper on the clutch master cylinder until the clip fastens.</p>
+          <p class="contents_testonormale ">- Connect the flexible pipe from the clutch reservoir to the master cylinder, master cylinder side.</p>
+          <p class="contents_testonormale ">1. Tighten the bolts fixing the brake servo to the pedal assembly to the recommended torque.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Fastening</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">dia  </p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Value (daNm)</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Servofreno</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Vite</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">M8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">(lato pedaliera) 2.2 ÷ 2.6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">2. Connect the electrical connection to the brake fluid minimum level warning light switch.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010816" onclick="
+        ViewiFrame(btn_1_939010816)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main1552-2.html?nodeID=939010816&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 4110A30 SUPPORT WITH STEERING CONTROL SHAFTS - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010816"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011234" onclick="
+        ViewiFrame(btn_1_939011234)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainca65.html?nodeID=939011234&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A89 REINFORCEMENT BRACKET BETWEEN DASHBOARD SUPPORTING CROSSMEMER AND BODYSHELL - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011234"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010948" onclick="
+        ViewiFrame(btn_1_939010948)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main0398-2.html?nodeID=939010948&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5050B38 FRONT WINDSCREEN WIPER ASSEMBLY - R.R. OR REPAIR</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010948"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011397" onclick="
+        ViewiFrame(btn_1_939011397)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="maine20e-2.html?nodeID=939011397&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7210E22 R.R. WINDSCREEN BASE TRIM</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011397"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011203" onclick="
+        ViewiFrame(btn_1_939011203)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="maina28b.html?nodeID=939011203&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7025A64 ENGINE COMPARTMENT GASKET - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011203"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010947" onclick="
+        ViewiFrame(btn_1_939010947)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="maina911.html?nodeID=939010947&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5050B34 FRONT WINDSCREEN WIPER ARM(S) COMPLETE WITH BLADE - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010947"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010888" onclick="
+        ViewiFrame(btn_1_939010888)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main98de.html?nodeID=939010888&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010B46 CENTRAL AIR DUCT TO REAR SEATS - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010888"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010890" onclick="
+        ViewiFrame(btn_1_939010890)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main7628.html?nodeID=939010890&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010B70 SIDE CONNECTOR BRACKETS (ONE), LH OR RH, BETWEEN AIR CONDITIONER CASING AND DUCT FOR REAR SEATS - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010890"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">(left and right).</p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011281" onclick="
+        ViewiFrame(btn_1_939011281)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainb09f.html?nodeID=939011281&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040L06 PASSENGER COMPARTMENT FLOOR RIGHT FRONT CARPET - R. R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011281"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011245" onclick="
+        ViewiFrame(btn_1_939011245)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainc43e.html?nodeID=939011245&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A10 DASHBOARD TRIM - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011245"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010931" onclick="
+        ViewiFrame(btn_1_939010931)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="maindc2c.html?nodeID=939010931&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5040D18 AIR CONDITIONING CONTROL UNIT - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010931"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011240" onclick="
+        ViewiFrame(btn_1_939011240)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main2d2e.html?nodeID=939011240&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A56 SWITCH UNIT IN DASHBOARD - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011240"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011091" onclick="
+        ViewiFrame(btn_1_939011091)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainda32.html?nodeID=939011091&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5580C23 DRIVE SIDE KNEE PROTECTION AIR BAG MODULE R. R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011091"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011270" onclick="
+        ViewiFrame(btn_1_939011270)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainc351.html?nodeID=939011270&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040L20 TUNNEL COVER - R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011270"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011089" onclick="
+        ViewiFrame(btn_1_939011089)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainb780-2.html?nodeID=939011089&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5580C22 AIR BAG MODULE - PASSENGER SIDE - R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011089"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010899" onclick="
+        ViewiFrame(btn_1_939010899)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main5872.html?nodeID=939010899&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010C32 AIR VENT ON TUNNEL COVER FOR REAR SEATS - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010899"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011230" onclick="
+        ViewiFrame(btn_1_939011230)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="maind27c.html?nodeID=939011230&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A65 CONSOLE SIDE CLOSING (ONE) - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011230"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010902" onclick="
+        ViewiFrame(btn_1_939010902)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main28e8.html?nodeID=939010902&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010C55 LOWER AIR DIFFUSER (ONE) LH OR RH - R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010902"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011094" onclick="
+        ViewiFrame(btn_1_939011094)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main72c2-2.html?nodeID=939011094&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5580C26 PASSENGER AIR BAG DISABLING KEY LOCK BARREL/SWITCH - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011094"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011244" onclick="
+        ViewiFrame(btn_1_939011244)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main1007.html?nodeID=939011244&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A58 INSTRUMENT PANEL MOULDING - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011244"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011089" onclick="
+        ViewiFrame(btn_1_939011089)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainb780-2.html?nodeID=939011089&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5580C22 AIR BAG MODULE - PASSENGER SIDE - R.R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011089"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011237" onclick="
+        ViewiFrame(btn_1_939011237)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainc408.html?nodeID=939011237&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A31 DASHBOARD COMPARTMENT ASSEMBLY - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011237"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011233" onclick="
+        ViewiFrame(btn_1_939011233)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main7c56-2.html?nodeID=939011233&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A45 RIGHT DASHBOARD SIDE TRIM - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011233"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011063" onclick="
+        ViewiFrame(btn_1_939011063)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="maind50a.html?nodeID=939011063&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5560B10 CONTROL PANEL - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011063"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011231" onclick="
+        ViewiFrame(btn_1_939011231)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main416d.html?nodeID=939011231&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A26 STEERING COLUMN TRIM - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011231"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010817" onclick="
+        ViewiFrame(btn_1_939010817)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main344d.html?nodeID=939010817&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 4110A10 STEERING WHEEL - R+R FOR REPLACEMENT OR CHECKS</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010817"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011097" onclick="
+        ViewiFrame(btn_1_939011097)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main1092.html?nodeID=939011097&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5580C18 AIR BAG MODULE - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011097"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011232" onclick="
+        ViewiFrame(btn_1_939011232)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main8b23.html?nodeID=939011232&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040A44 LEFT DASHBOARD SIDE TRIM - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011232"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010904" onclick="
+        ViewiFrame(btn_1_939010904)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main28f6.html?nodeID=939010904&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010D56 SOLAR SENSOR - R.R FOLLOWING ELECTRICAL SYSTEM CHECK</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010904"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010900" onclick="
+        ViewiFrame(btn_1_939010900)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main3b25.html?nodeID=939010900&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010C12 WINDSCREEN DEMISTER DIFFUSER - R+R</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010900"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010901" onclick="
+        ViewiFrame(btn_1_939010901)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main87d2.html?nodeID=939010901&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 5010C30 CENTRAL AIR VENT IN DASHBOARD - R.R.</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010901"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011402" onclick="
+        ViewiFrame(btn_1_939011402)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main101c.html?nodeID=939011402&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7210E36 R.R. FRONT SIDE DOOR</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011402"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010380" onclick="
+        ViewiFrame(btn_1_939010380)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainb67c.html?nodeID=939010380&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 0010T84 AIR CONDITIONING SYSTEM REFRIGERANT - DEHYDRATING AND REPRESSURIZING</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010380"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010373" onclick="
+        ViewiFrame(btn_1_939010373)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main6fb4.html?nodeID=939010373&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 0010T64 BRAKE AND/OR CLUTCH FLUID CHECK LEVEL AND TOP UP AS NECESSARY</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010373"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939010375" onclick="
+        ViewiFrame(btn_1_939010375)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="main811b.html?nodeID=939010375&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=PEDAL%20ASSEMBLY%20-%20R.R&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 0010T67 HYDRAULIC CLUTCH SYSTEM - BLEED AIR</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939010375"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+          <p class="contents_testonormale ">- Connect the negative battery terminal.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

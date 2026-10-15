@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011760&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Impianto+Elettrico&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 21:40:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011760&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Impianto+Elettrico&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="RuBdfcSA3+QMX2IVP2/a+GWhTADygESJL2ZRYjsw8mAR8i1/WN9TGZntr+N1fZEsAHK2SHmXkFffBVdGJv5OvcWEwlJs67meaMN/B1b+JsiHrcOkAWBOnKL2ZCSeF+o9sA+A1JbtrMy6XXUmDo4Ci3AdILydtg742h7aRXBtqlOYOzL71//O505LU/dg0TsQgGnQVyE7CT/lKQEhGlkSWD69MrxdD4ICoUlrJFKfs992J6WIDdBKhAkFPz+xGLl7BJlKbfg5Kny3kuXR8YFmJ10LlFh775CH8L5bhBn1uZ+9s9QBNoarpQxNJWo783gbNEbyIasqzcLcvOqRgUHLPbkHL0hbgRrAFXHU8qbRn/yq909LqMKwV+Mg86cJWgRwIEttpJKTElCTLuC0Ju9LUDHLXqoA4z2W/Wc6Mupiw0/wKFPKKMcs7eOTb68kcjHIHUwokBOGIU/dWM6aS4BaiFZlANeCnAzArwfoNvpmefAQ0009RUkzCFUx+5aolUdsTytHfih4wuZ4ZAkQ5gPRsPByiBjFLkwHB3uN3/bKz71JELKc+CMa4RFJDmoPxx/ue4pDdWhW2avtv6LK5s1tJPxIdPmXFZ6gzgM7NObctbu0/VPO8dudZSLyYr7BtrIpOCpPqIQVPQPfvsvN/2HahN3FSFLcBT/ZNZARNMFg9QWiLS4viBYf7JWEuiZDHE8Y22/Ir6nLrOOL2lz8AK4Af2QnVTTdvzNSKo/nwxd2SJCEoDmk3q6KPSe7ZgETzM53O8N1Dvnyx3gxJJ910oTxJL0j+PDNjl7YhPoKp3PDa14R8nY+KvrHNNEctNlTCh600OOVoVYe0xlO0cAcDheAXA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspDIESEL ENGINE ELECTRONIC MANAGEMENT - FUNCTIONAL DESCRIPTION&nbsp&nbsp&nbspE5050&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    <HR id="SchemaTop1_hr1" width="100%" SIZE="1"></HR>
+<table id="SchemaTop1_dlsSchema" cellspacing="1" cellpadding="1" align="Center" style="width:90%;">
+	<tr>
+		<td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_0" class="notSelected" href="mainfa6d.html?nodeID=939011759&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">DIESEL ENGINE ELECTRONIC MANAGEMENT - DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_1" class="Selected" href="main0639.html?nodeID=939011760&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">DIESEL ENGINE ELECTRONIC MANAGEMENT - FUNCTIONAL DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_2" class="notSelected" href="main0726.html?nodeID=939011761&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">DIESEL ENGINE ELECTRONIC MANAGEMENT - WIRING DIAGRAM</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_3" class="notSelected" href="main32b4.html?nodeID=939011762&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">DIESEL ENGINE ELECTRONIC MANAGEMENT - COMPONENT LOCATION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_4" class="notSelected" href="javascript: parent.openWinPrint(&#39;http://elearnediting.stellantis.com/eLearnSections/SchemaPrintAll.aspx?LanguageID=2&amp;nodeID=939011760&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&#39;);" target="_parent" style="display:inline-block;width:108px;">Print electrical function</a>
+		</td>
+	</td>
+	</tr>
+</table>
+<HR id="SchemaTop1_hr2" width="100%" SIZE="1"></HR>
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <script language="javascript" src="svgscript/mysvg.js">
+  </script>
+  <body onload="">
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">FUNCTIONAL DESCRIPTION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The M10 engine management control unit controls and regulates the entire ignition and electronic injection system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ignition-operated power supply (15/54) arrives via a line protected by fuse F16 of the engine compartment junction unit B1 at pin 28 of connector A of M10 .</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pins 2, 4 and 6 of connector A of M10 are earthed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Main injection relay T9 of B1 controls the entire system: it is energized by an earth signal from pin 72 of connector A of control unit M10 and then forwards a power supply:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to pin 1 of connector A of the control unit, via the line for fuse F17 of B1;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to pin 5 of connector A of the control unit, via the line for fuse F22 of B1;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to the solenoid valves L30, L36, L64, to the throttle N75, to the control unit M15, via the line from fuse F11 of B1.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fuel pump relay T10 of B1 is supplied by the line for fuse F21 of B1. This is energized by a command signal (earth) from pin 91 of connector A of control unit M10 and supplies power to fuel pump N40 , which is earthed via inertia switch I50 , that cuts off the circuit in the case of impact and thus prevents dangerous flows of fuel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Control unit M15 that manages the preheating of the heater plugs A40 is supplied directly - connector A - from the battery via a line protected by the CPR MAXI FUSE of B99.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is supplied at connector C - from the line of fuse F11 of B1 , and exchanges command and control signals with pins 52 and 93 of connector A of M10, which controls the timing. Connector B is connected to the heater plugs A40 .</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Engine control unit M10 receives signals from the various different sensors, in this way it keeps all the engine operating parameters under control.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rpm sensor K46 supplies information on engine speed, via a frequency signal exchanged with pins 12 and 27 of connector B of control unit M10.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Timing sensor K47 is supplied from pin 11 of connector B of M10. It receives a reference earth from pin 20 of connector B of control unit M10 and this in turn generates a frequency signal corresponding to the phase at pin 50 of connector B.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Engine temperature sensor K36 receives a reference earth from pin 41 of connector B of control unit M10, and sends a signal proportional to the engine coolant temperature to pin 58 of connector B.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The air flow meter K41 - receiving an ignition-controlled supply (INT) from fuse F35 of junction unit B2 - receives a reference earth from pin 44 of connector B of M10 and sends pin 42 of connector A a signal proportional to the air flow rate.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">An air temperature sensor inside K41 also sends an air temperature signal to pin 37 of connector B of M10.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Accelerator pedal K55 has two built-in potentiometers (a main one and a safety one).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The former receives power and earth signals from pins 30 and 45 of connector A of M10 and sends a corresponding signal to pin 9.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The latter receives power and earth signals respectively from pins 46 and 8 of connector A of M10 and sends a signal to pin 31.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fuel temperature sensor, incorporated in the diesel filter K101, detects the temperature of the incoming diesel fuel. It receives a reference earth from pin 10 of connector A of M10 and sends a fuel temperature signal to pin 11.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Turbocharging sensor K82 measures the pressure and temperature in the intake chamber downstream of the turbocharger. It is supplied by pin 13 of connector B of M10 and receives a reference earth from pin 23 of connector B.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The signal corresponding to the pressure value is sent to pin 40 of control unit connector B. An air temperature sensor, housed in K82, sends a signal to pin 53 of connector B of M10.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fuel pressure sensor K83 supplies the injection control unit with a feedback signal to modulate injection pressure and duration.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It receives power and a reference earth respectively from pins 28 and 8 of connector B of M10; it then sends a pressure signal to pin 43.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fuel pressure regulator on the pump N77 controls the high pressure produced by the actual pump; the two control signals come from pins 19 and 49 of connector B of control unit M10.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The EGR solenoid L30 controls exhaust gas recirculation. It is supplied by a line from fuse F11 of B1 , and is controlled by a signal from pin 60 of connector B of M10 .</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The turbine variable geometry solenoid L36 regulates the operation of the turbine according to the engine load: it is supplied by the line for fuse F11 of B1 and is controlled by a signal from pin 7 of connector A of M10.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The swirl solenoid valve L64 ensures the optimum air fuel mixture; it is supplied by the line for fuse F11 of B1 and is operated by a signal for pin 45 of connector B of M10; the solenoid valve control signals leave from pins 6 and 35 of connector B of M10.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The throttle body actuator N75 controls the opening of the throttle by means of a stepping motor; the motor receives a power supply from the line for fuse F11 of B1 and is controlled by a signal for pin 59 of connector B of M10; the control signals leave from pins 39 and 52 of connector B of M10.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine management control unit sends the command to the injectors N70 from pins 16-47, 2-31, 1-46, 17-33 and 18-48 of connector B of M10 for cylinders 1, 2, 3, 4 and 5 respectively.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin 17 of connector A of M10 receives the N.A. signal coming from the brake lights switch I30 with an ignition-controlled supply (INT) from fuse F37 of junction unit B2.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin 80 of connector A of M10 receives the N.C. signal coming from the brake lights switch I30 with an ignition-controlled supply (INT) from fuse F35 of junction unit B2.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin 79 of connector A of M10 receives the signal coming from the clutch switch I31.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit M10 receives - at pin 56 of connector B - a signal from the minimum engine oil pressure sensor K30</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The water in the diesel filter sensor - integrated in filter K101 - receives an ignition-operated supply (INT) from fuse F35 of junction unit B2 and sends the corresponding signal to pin 74 of connector A of M10.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Control unit M10 is then connected via the CAN - pins 83-84 and 61-64 of connector A of M10 - to the Body Computer M1 and to the other network nodes: information on the following is sent through this connection:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine coolant temperature, which is sent to instrument panel E50 and from there to the centre instrument console E20, that controls the gauge and warning light;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine rpm, which is sent to the instrument panel E50 rev counter;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- minimum engine oil pressure, which is sent to the instrument panel E50 which manages the warning light;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- heater plugs pre-heating, sent to instrument panel E50, which controls the warning light;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- water in the diesel filter, sent to instrument panel E50, which controls the display;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It receives a speedometer signal via the CAN network, generated by the ABS control unit M50.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The signal for the turbocharger pressure is sent separately from pin 26 of connector A of M10 to the instrument panel E50 and from there to the centre instrument console E20.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The autodiagnostic system for the control unit M10 also produces a signal - which leaves pin 71 of connector A - which is connected directly to the EOBD warning light in the instrument panel E50.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The self-diagnostic data may be read by connecting to pin 7 of connector C of Body Computer M1, which receives signals from pin 25 of connector A of control unit M10 through the appropriate diagnosis line.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011760&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Impianto+Elettrico&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 21:40:38 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

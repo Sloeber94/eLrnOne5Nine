@@ -1,0 +1,1967 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006592&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:21:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006592&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="L5MC1k3if7HrNexy9AHzuF2SAkt2JyhlTnGTkwb5F8x/WIxJ2CnXqOqXiBYTD+aUkIHb6CiuhbX3mkKizucif3PXGxX3TX+Q6LKa6nWOCzzTZz7JTI2mprt/UUXs7KyzNEm1vnj4figqJUf0u4+Ln28+EbOoRQAlpjHadIo4VdXu92MKfK8VUcsY250qTO1FeDDYgDl9ngFm9n+MrkFjigsCtm2lTCxapGOAGgWhvkCm2SXZwiJBS28sHfr+yytQO5IXFj94aQ5vFBCXywX4X2KT3YjHQj6JBq+exekqwbkOgfg45B6VbFr08ZFN9BZq0rrhPKDO5b9wOhNsNMGI9v10WjnZDb3VDcTFJLWzJh4ilHssSTic0dH+xuMORxqBC2bsXmQUjteGsff7rZEuLSPsiOu1/onO4i3/PJFr5qHFj9igc/3pUhz+9ZzX1SmUZPOnWuHzI2Fmqa7La/rcY7Czsqo5jlwhwBw+HoiTRO1DyVT9Ovs3cG6ZR3qJOhX4sf9i3+5pF+/mfY9An7G28IK3dgcfCiifCPgXe/uP4sjs+R+DfBfQVo5Ezg4EosRKoRPwbzlnuHRXsVax0GNo8mD8SlTfUIuwBaHx5WFWw/VrtVd6ldCeC//lcpzkieAZUbKo/dZZOywycoDQT1dWd1yCNTrHcw77vA4xx57WxBScU+Kphrquv04trGgiuzDMcBNI/C/w1Ywx/qAK5Jb/TMLkC1xZ/VR4iGuZH0xqKyZsOX8T43CeU5ZayesZfmqYnvDZlsGdEiNwR8plfRTg3xuIrNEkCidupWebv2RcrcU=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspAUDIO SYSTEM&nbsp&nbsp&nbsp5570&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">RADIO</h1>
+          <h2 class="bigtext2">Specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dimensions: 1 DIN box with 2 DIN front panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Modules included:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Radio</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Audio CD player + CD ROM with MP3</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- LCD graphic display</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- External CD Changer system (if present).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Connection with Bluetooth control unit for reproduction of musical files (MP3).</p>
+          <center>
+            <img src="images/jpg/939005318_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The diagram below shows examples of the display for various CD with MP3 radio functions:</p>
+          <center>
+            <img src="images/jpg/939000118_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Technical specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The technical specifications are listed below:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">GENERAL SPECIFICATIONS:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- music audio power: 4x35W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 5 band graphic equalizer</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- easy to manage menu for the adjustment of the radio settings and any external interfaces (CD-Changer)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- remote control from the steering wheel</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- possibility of interface with outside CD Changer</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- volume control according to the speed (via CAN)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- possibility of activating certain commands via voice recognition module.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RADIO SPECIFICATIONS:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- RDS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- RDS - TMC (Traffic Message Channel)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- EON (Enhanced Other Network)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TA (Traffic Announcements)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- band tuning: USW (FM); MW; LW</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- possibility of programming:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 24 FM stations (6 of which can be memorized through autostore on the AMST band);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 6 MW stations;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 6 LW stations;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 6 stations that can be memorized through autostore on the AMST band</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2 scan modes (short lislten to a station and automatic transfer to the next):</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- scanning the frequency band used;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- scanning programmed stations.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- possibility of selecting programmes via PTY (on FM bands only).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- local/distant setting.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUDIO SPECIFICATIONS:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- bass</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- balance</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- fader</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- loudness</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- treble</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- hi-fi system active control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 5 equalizing curves:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- best (manufacturer''s equalizing data);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- rock;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- jazz;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- classical;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- manual (can be set via 5 band graphic equalizer)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- soft mute.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD SPECIFICATIONS:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- motorized loading and ejection</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TPM function (Track Program Memory)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- shuffle function</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- repeat</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- skip</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- pause / stop</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- compression: activates the dynamic compression circuit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- CD naming: CD identification (20 max)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD MP3 SPECIFICATIONS:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- play list function (such as TPM for audio CD)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- functions associated with the play list:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- scan;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- repeat (one track or all);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- pause;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- skip</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- maximum number of MP3 tracks considered for each CD: 999 (if the number of MP3 files contained in the CD ROM is higher than this limit, only the first 999 will be considered).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- compression: activates the CD noise dynamic reduction circuit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Blaupunkt 10 disc CD changer specifications (in the luggage compartment):</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- scan function</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- repeat function</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- shuffle function</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- CD naming</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- compression: activates the dynamic reduction circuit.</p>
+          <h2 class="bigtext2">Operation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The table below contains all the functions that can be activated; (a) = short press (less than 2 secs.), (b) = long press (more than 2 secs.).</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Key</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Symbol</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RADIO mode</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD/MP3 mode</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD Changer mode</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SRC-SCAN</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) CD, CD Changer (if connected) or Radio selection</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Scan of FM/AM radio stations</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) CD, CD Changer (if connected) selection</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Scan of tracks on CD</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) CD, CD Changer selection</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(if connected) or Radio</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Scan of CDs in</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD Changer</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Display</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(compartment CD)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"up"</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Automatic station search</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TP: search +</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PTY: search +</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AF: search +</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Selection of next CD</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Selection of next CD continuously</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">“eject”</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Eject CD</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Eject CD</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Eject CD</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"ffw"</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Manual station search</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TP: search +</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PTY: search +</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AF: search +</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Selection of next track</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Track fast forward</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"down"</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Automatic station search</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TP: search -</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PTY: search -</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AF: search -</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Selection of previous CD</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Selection of next CD</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"rw"</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Manual station search</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TP: search -</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PTY: search -</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AF: search -</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Return to beginning of track/selection of previous track</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Track fast rewind</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Return to beginning of track/</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">select previous track</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Track fast rewind</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MENU-PRS</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Menu activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Preset station scan</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Menu activation/deactivation</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Menu</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6-MP3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FM/AM: station recall</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Display data</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">selected</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PTY</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) PTY ON/OFF</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) PTY: display programme type</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">selected</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) PTY ON/OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) PTY ON/OFF</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5-MIX</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) FM/AM: station recall</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 5</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) FM/AM: programme station</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MIX function</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MIX function</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4-RPT</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) FM/AM: station recall</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 4</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) FM/AM: programme station</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">REPEAT function</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">REPEAT function</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BAND-AST</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) FM1, FM2, FMT, MW, LW</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Automatic programming in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FMT station group</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Automatic programming</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">in the FMT station group</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Automatic programming</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">in the FMT station group</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3-II</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) FM/AM: station recall</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 3</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) FM/AM: programme station</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Activation/deactivation of pause</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD reproduction</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD reproduction pause</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TA-AF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) TA ON/OFF</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) AF ON/OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) TA ON/OFF</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) AF ON/OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) TA ON/OFF</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) AF ON/OFF</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2-CLR</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) FM/AM: station recall</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 2</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) FM/AM: programme station</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Cancel programming</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">tracks on CD selected</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1-TPM</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) FM/AM: station recall</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 1</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) FM/AM: programme station</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">preselection 1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TPM function</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Track programming</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">desired</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUDIO-LOUD</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Bass (B)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Treble (T)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fader (F)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Balance (B)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Loudness</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Bass (B)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Treble (T)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fader (F)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Balance (B)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Loudness</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) Bass (B)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Treble (T)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fader (F)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Balance (B)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) Activation/deactivation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Loudness</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">on/off “MUTE”</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(a) With radio on: activation/deactivation Audio Mute With radio off: radio on Volume adjustment: turn to the left: decrease turn to the right: increase</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(b) With radio on: switch off With radio on: switch on</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Anti-theft code</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The radio is installed in production and is connected to the CAN in order to establish communication with the Body Computer memorizing an anti-theft code known as an Exchanger Code.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At each subsequent Key On (and even if the battery is disconnected), an automatic authentication procedure is repeated: the words "CAN CHECK" appear in the radio display: if the Exchange Code check is positive, the system begins to operate. If the codes compared are not the same, a message appears on the display asking the user to enter a manual code (Master Code - 4-figure code from 1111 to 6666) that is shown on the radio code card.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Master Code is pre-programmed in production and is different for each radio and is also not the same as the Exchanger Code.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The manual procedure for entering the Master Code is only necessary if: replacing the Body Computer for a radio already used on another vehicle with a CAN.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A "new" radio (never previously fitted on other vehicles) can be fitted following an automatic authentication procedure without manually entering the Master Code.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Operation at key off</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the radio is on at the time of the Key off (start/stop button pressed, but TEG still inserted) it is switched off automatically after 20 minutes; it is however possible to keep it on for another 20 minutes by pressing the ON button again.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/768_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This timeout can be deleted using the radio set up menu and the radio will switch off immediately; it can, however, be switched on for 20 minutes by pressing the ON button again.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the setup menu under the item "- - - I G N I T I O N - T I M E R - - -".</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the following can be selected</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"- - O F F - A F T E R - 0 0 - M I N - -"</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"- - O F F - A F T E R - 20 - M I N - -"</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If, on the other hand, the TEG is extracted after the Key off, the radio will be switched off immediately.</p>
+          <h2 class="bigtext2">Connectors</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear view:</p>
+          <center>
+            <img src="images/jpg/939000861_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Supply connector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - Speaker output connector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C - Auxiliary functions connector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D - Aerial connection</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E - 10 A fuse</p>
+          <h3 class="bigtext3">Connector pin out</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector A:</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Function</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B CAN B</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BOSE amplifier presence positive signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B CAN A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Direct power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Aerial supply (N.C.)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Side lights on lighting (N.C.)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector B:</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Function</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right rear speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right rear speaker -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right front speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right front speaker -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left front speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left front speaker -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left rear speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left rear speaker -</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector C/D/E:</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Function</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left AUX signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right AUX signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUX earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Positive signal for amplifier enablement</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Telephone audio in + (version without Media Player)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Telephone audio in - (version without Media Player)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Telephone mute (version without Media Player)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Mute (N.C.)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E13</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CDC data IN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CDC data OUT</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Permanent power supply for CDC</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Positive signal for CDC power supply enablement</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E17</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CDC data GND</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E18</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CDC audio GND</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E19</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">L input for CDC</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E20</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">R input for CDC</p></td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">SPEAKERS</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Location</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The location of the components is illustrated below.</p>
+          <center>
+            <img src="images/jpg/939004548_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Radio</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Front door midwoofer speakers</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Tweeter front speakers</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Midwoofer rear speakers</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Tweeter rear speakers</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Aerial</p>
+          <h2 class="bigtext2">Front tweeter speakers</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The tweeter speaker has the function of emphasizing the high tones that are produced through a polycarbonate diaphragm, the copper moving coil support and insulator and the ferrous magnetic assembly.</p>
+          <center>
+            <img src="images/jpg/939000863_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Its electrical specifications are:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 19 mm diameter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 12500/20000 Hz band</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- resonance frequency 1500 Hz +/- 15%</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- nominal impedance 4 OHM</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- power RMS 20 W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- max power 30 W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The front tweeters are located in the dashboard.</p>
+          <h2 class="bigtext2">Rear tweeter speakers</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The tweeter speaker has the function of emphasizing the high tones that are produced through a polycarbonate diaphragm, the copper moving coil support and insulator and the ferrous magnetic assembly.</p>
+          <center>
+            <img src="images/jpg/939000864_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Its electrical specifications are:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 11 mm diameter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 12500/20000 Hz band</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- resonance frequency 2500 Hz +/- 15%</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- nominal impedance 4 OHM</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- power RMS 20 W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- max power 30 W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rear tweeters are located in the top part of the door.</p>
+          <h2 class="bigtext2">Front mid-woofer speaker</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The mid-woofer speaker has the function of emphasizing the low tones produced by a treated paper diaphragm, treated cloth element, treated paper dust cover and aluminium/paper moving coil support.</p>
+          <center>
+            <img src="images/jpg/939000865_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Its electrical specifications are:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 160 mm diameter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 50/8000 Hz band</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- resonance frequency 65 Hz +/- 15%</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- nominal impedance 4 OHM</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- RSM power 20W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- MAX power 40W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The front mid-woofers are fitted in the lower part of the door.</p>
+          <h2 class="bigtext2">Rear mid-woofer speaker</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The mid-woofer speaker has the function of emphasizing the low tones produced by a treated paper diaphragm, treated cloth element, treated paper dust cover and aluminium/paper moving coil support.</p>
+          <center>
+            <img src="images/jpg/939000866_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Its electrical specifications are:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 160 mm diameter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 50/6300 Hz band</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- resonance frequency 70 Hz +/- 15%</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- nominal impedance 4 OHM</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- RSM power 20W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- MAX power 30W</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rear mid-woofers are fitted in the lower part of the door.</p>
+          <h2 class="bigtext2">Recommendations for fitting the speakers</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In order not to damage the speakers, certain precautions must be taken when fitting and moving them.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following operations are not advisable:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Stacking the speakers on top of one another when unpacking.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Placing the speakers near ferrous metal parts. In the case of very small parts they could get in through the gap and produce noise.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Twist the terminals once the electrical connection is fitted.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Rest on the speaker diaphragm during the fitting stages.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Puncture the speaker diaphragm with a screwdriver whilst fitting.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Twist the cone (take care, it is one of the most delicate parts).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Never place the speaker in contact with solvents or derivatives.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following operations are advisable:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Always handle the speaker using the plastic structure without twisting the diaphragm and other moving parts.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Discard speakers that have been subject to impacts and appear to be distorted.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Remove any protective shields before fitting on the vehicle.</p>
+          <h1 class="bigtext1">CD Changer</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A special Blaupunkt CD Changer cartridge allows up to 10 CDs to be loaded which are then selected through the radio controls. The cartridge only works if it contains at least one CD, the CDs must be correctly inserted and the flap properly shut.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The CD Changer is located in the luggage compartment in the area of the right wheel arch.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is connected to the radio by means of a specific lead, divided into two sections: one under the dashboard and one under the passenger compartment trim.</p>
+          <h2 class="bigtext2">Cd changer lead</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector E (of the radio)</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIGNAL</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CDC data IN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CDC data OUT</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Permanent power supply for CDC</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Positive signal for CDC power supply enablement</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CDC data GND</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CDC audio GND</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">L input for CDC</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">R input for CDC</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"CDC" rapid attachment connector, CD Changer side</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIGNAL</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Permanent power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Switched power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Audio earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left audio IN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ASCI bus CDC - radio</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right audio IN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ASCI bus radio - CDC</p></td>
+            </tr>
+          </table>
+          <center>
+            <img src="images/jpg/939000119_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h1 class="bigtext1">BOSE HIFI AUDIO SYSTEM</h1>
+          <h2 class="bigtext2">Specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A sophisticated Bose HIFI system with special HIFI speakers and an outside amplifier is available on request.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system has been developed ad hoc for the vehicle: the acoustic properties of the passenger compartment have been carefully studied so that the amplifier and the speakers are ideally suited to the vehicle: optimum listening is available in any part of the passenger compartment.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is also in perfect harmony with the aesthetics of the vehicle without taking up additional space.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is installed directly in the vehicle during production with no subsequent operations: the cables are integrated in the vehicle wiring.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is therefore not advisable to make any changes to the original system (e.g. graphic equalizers, additional woofers, extra amplifiers). In addition, the system components (amplifier and speakers) should not be repaired individually, but should be replaced with new components.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Performance</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Bose system guarantees the highest quality sound with pure treble and rich bass tones with the following specifications:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Adjusting the volume, through equalization "activates" the Bose system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Treble/bass control from + 6 dB to -12 dB.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Fader control, through the Bose "spatial" fader.</p>
+          <h2 class="bigtext2">Composition</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Unlike the system fitted as standard, the Bose system offers:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- special tweeter and low-mid-range front and rear speakers</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- centre rear woofer speaker ( SALOON version) or side bass box (SW)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- mid-range centerfill speaker in the dashboard</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- high power amplifier.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Bose system is completed - only until DEC 05 - by a microphone, located in the front courtesy light, which detects background noise in the passenger compartment: the signal is sent for amplification allowing the optimum adjustment and equalizing of the output levels.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The other components (radio, aerial, etc.) are the same as the standard system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The location of the components is illustrated below.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Saloon Version</p>
+          <center>
+            <img src="images/jpg/939004549_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Station Wagon Version</p>
+          <center>
+            <img src="images/jpg/939005319_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Radio</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Front door mid-woofer speakers</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Front tweeter speakers</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Ambient microphone (until DEC 05)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Centerfill speaker in the dashboard</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Rear mid-woofer speakers</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Rear tweeter speakers</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Rear woofer speaker</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Amplifier</p>
+          <h2 class="bigtext2">Speakers</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BOSE hi fidelity speakers are made up of a neodyme magnetic core, with a treated paper diaphragm and a textile mounting. The moving coil support is made of aluminium.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In addition to the four speakers in the standard system (low-mid-range in the front and rear doors with specific tweeters) the Bose Sound System also includes:</p>
+          <h3 class="bigtext3">Centerfill speaker in the dashboard</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is a high-mide range speaker (80 mm diameter) located in the dashboard, exactly in the centre line of the vehicle, which considerably improves the stereo effect of the sound.</p>
+          <center>
+            <img src="images/jpg/939000868_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Rear woofer speaker:</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is a high fidelity woofer speaker fitted in the middle of the rear parcel shelf (saloon version) or incorporated in the bass box (SW). It is a 100 W large woofer speaker (1254 mm diameter) supplied by a specific two channel amplifier.</p>
+          <center>
+            <img src="images/jpg/939000869_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Ambient microphone (until dec 05)</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Bose system is completed by an AMBIENT microphone, located in the front courtesy light, which detects background noise in the passenger compartment; it is a microphone with a low frequency range that detects all typical noises coming from the road and the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The signal is sent for amplification allowing the optimum adjustment and equalizing of the output levels.</p>
+          <center>
+            <img src="images/jpg/939000870_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Amplifier</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is a SERIES 5000 high fidelity amplifer with 6 channels with a total power output of 6x37 W. It is located in the luggage compartment as illustrated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Saloon Version</p>
+          <center>
+            <img src="images/jpg/939005157_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Station Wagon Version</p>
+          <center>
+            <img src="images/jpg/939005320_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AMPLIFIER CONNECTION PIN OUT</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIGNAL</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+30</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ centerfill</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">left rear speaker -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">right rear speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">enablement (positive signal) from car radio</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">left front speaker -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">right front speaker -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">left rear speaker -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">right rear speaker -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">rear woofer +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">rear woofer -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- centerfill</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">left rear speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">right rear speaker -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">left front speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">right front speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">left rear speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">right rear speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">rear woofer power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">right front speaker -</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">27</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">right front speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">29</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ microphone</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- microphone</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">31</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">left front speaker +</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">32</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">left front speaker -</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006592&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:21:27 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

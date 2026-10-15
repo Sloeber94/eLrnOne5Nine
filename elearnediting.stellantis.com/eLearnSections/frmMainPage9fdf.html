@@ -1,0 +1,1266 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925865&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:36:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925865&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="5SyRYPxOInAWXmvlKSfIDjE3lqwjRzcnWyYkjAF0NOvrUW7hTt6avd8CDgMX1V/8Ec+5pAqka1OnJvpL4OnaBCtnxPje0oYKdpvgvkf7rOYZ11SpEA2zp31yJvhLl97SAxL6sMViNaVI0a3628pBa25RitW9D431Dt5ojMvGExp2GHNGVPA3welNYTfQV06GeodazhmC8Y6NBHqF6NB5LtfuweJrqeG6727AJyFJ4PEm5T7iZ6CDBuvyd3Ked4XVNXPnLMzsf3N6pIFUacJTIGWkA8/zo2lTWeUJhT4Wf85nXAgzBIbjbl1zTj5B2g8TvpWOlIjCYXlKqouphF1QUX4kMykLA2ko/iYrTEJh98LFp9rk+RMu65gzxbEQUgGt51CHY7lL8cGjjld33XZhYfMwRRNhEbFqxj7YxswM1G/akvSqcbB+NgFHksdia0nvRu1Bq6E+9QFtljYDeNG63aCIt6hTJUjh5AjBXWaF36e26iKGYpqYZ9I/QVPgDBCYGzmM6sY14CET2mjdHhQTTfJ2d2s5ZGbjYA8Mc8E8qhZQ4mVOohhzB1y7pc6tx52/" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 07/07/2016</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Alfa various models</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>Version: Giulia, MiTo, 159, 4C, Brera/Spider, 8C with Opt. Tyre pressure monitoring system (TPMS)</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">44</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">002.16</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>4450 0 000 AA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>TYRE PRESSURE MONITORING CONTROL UNIT</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Software update of the TPMS2 Reader MY13 equipment - Network information</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cancels and replaces Service News 44.02.15 of 17/06/2015 for validity extension to the Giulia model</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">DESCRIPTION</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The software update for the new TPMS2 Reader MY13 equipment, which has replaced the previous TPMS Reader (no longer supplied), is available on the eTools website.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The previous TPMS Reader equipment will no longer be supplied and software updates will also no longer be available.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To update the equipment it is necessary to:</p>
+          <ul>
+            <li>
+              <span style="color:black">Acquire the software (download)</span>
+            </li>
+            <li>
+              <span style="color:black">Ask for password (if not available)</span>
+            </li>
+            <li>
+              <span style="color:black">Update software</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After the update, the TPMS2 Reader MY13 equipment can be used for the following vehicles:</p>
+          <ul>
+            <li>
+              <span style="color:black">Giulia</span>
+            </li>
+            <li>
+              <span style="color:black">Mito</span>
+            </li>
+            <li>
+              <span style="color:black">159</span>
+            </li>
+            <li>
+              <span style="color:black">4C</span>
+            </li>
+            <li>
+              <span style="color:black">Brera/Spider</span>
+            </li>
+            <li>
+              <span style="color:black">8C</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To be able to use the TPMS2 Reader equipment on the Giulia model, the software must be updated to version 3.43 or later.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">UPDATING SOFTWARE ACQUISITION</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Before starting, check that the following equipment is available:</p>
+          <ul>
+            <li>
+              <span style="color:black">Personal Computer with Windows© XP / Windows© VISTA / Windows© Seven</span>
+            </li>
+            <li>
+              <span style="color:black">Internet connection to the website</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The size of the file to be downloaded is about 22 MB.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Proceed as follows to download the update and install the TMPS Manager programme on the PC.</p>
+          <ul>
+            <li>
+              <span style="color:black">Connect to the eTools website.</span>
+            </li>
+            <li>
+              <span style="color:black">Select DOWNLOAD (1 - Fig. 1), then select "UPDATE TPMS" (2 - Fig. 1) and confirm.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 1</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017908_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom9de4.html?Par=199017909.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Download the software and save it on the PC.</span>
+            </li>
+            <li>
+              <span style="color:black">Execute the file "Setup.exe" (1 - Fig. 2).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 2</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017911_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoome31d.html?Par=199017910.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Select the reference language (1 - Fig. 3) and confirm (2 - Fig. 3).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017912_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom0c4a.html?Par=199017913.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Confirm the installation (1 - Fig. 4).</span>
+            </li>
+            <li>
+              <span style="color:black">Accept the terms of the license agreement (2 - Fig. 4) and continue (3 - Fig. 4).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 4</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017915_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom90e9.html?Par=199017914.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Enter the required data (1 and 2 - Fig. 5) and press “Next” to continue (3 - Fig. 5).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 5</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017916_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom3d15.html?Par=199017917.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the compulsory fields 1 (User Name) and 2 (Organization) enter an alphanumeric code and the Department, respectively, as required.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Confirm the installation (1, 2 and 3 - Fig. 6).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 6</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017918_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomb4d7.html?Par=199017919.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Wait for the installation to be completed: a progress bar (1 - Fig. 7) will indicate the advancement state.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 7</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017920_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomb0dc.html?Par=199017921.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Confirm installation of the Drivers with “Next” (2 - Fig. 8).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 8</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017922_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom2032.html?Par=199017923.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Complete installation of the Drivers with “End” (3 - Fig. 9).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 9</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017924_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomaeb5.html?Par=199017925.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Select “End” (4 - Fig. 10) (some operating system will require to restart the PC; restart the PC in this case).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 10</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017907_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomcd03.html?Par=199017906.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">At the end of the installation and after restarting the PC, the icon (1 - Fig. 11) for connecting to the TPMS Manager program is displayed.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 11</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017927_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomca8e.html?Par=199017926.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A password is required to use the program; proceed as follows.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">TPMS MANAGER PROGRAM UPDATE ON PC AND AUTOMATIC EQUIPMENT FIRMWARE UPDATE</h2>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For the update, the equipment must be on all the process long. The instrument will automatically switch to stand-by if it remains inactive for longer than 5 minutes and the update operation will be interrupted. Repeat the procedure from the beginning in this case.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Connect the TPMS2 Reader MY13 equipment to the PC with the supplied USB cable. The equipment will be supplied by the USB port of the PC. In this stage, the equipment recognition stage starts; it can take some minutes, wait until the system has completed the whole process.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the PC does not recognise the presence of the equipment, check the installed firmware version: it must be 2.80 or higher. Proceed as follows if the version is not correct: MANUAL FIRMWARE UPDATE.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Start the TPMS Manager programme (1 - Fig. 12) selecting the connection on the desktop.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 12</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017928_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomcf65.html?Par=199017929.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">In the window select F3 (A - Fig. 13) to activate the update from the Internet. The “Port Setting” page shown in Figure 15 will appear if the PC recognises the equipment connected to the USB port and the PC is connected to the Internet website.</span>
+            </li>
+            <li>
+              <span style="color:black">Select button F5 (B - Fig. 13) to enter the data which will be shown on reports and printouts. See Fig. 14.</span>
+            </li>
+            <li>
+              <span style="color:black">Select button F6 (C - Fig. 13) to change the language.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 13</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017931_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom4052.html?Par=199017930.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Enter data and press F1 (A - Fig. 14) to confirm.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 14</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017933_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom292a.html?Par=199017932.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">The COM port associated to the equipment is shown on the “Port Setting” page (Fig. 15).</span>
+            </li>
+            <li>
+              <span style="color:black">If the PC correctly recognises the USB port to which the equipment is connected, select button F2 (A - Fig. 15) to activate update from the Internet. A page prompting to enter the equipment password will appear (Fig. 17).</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The USB peripheral device recognition time is variable according to the performance of your PC and may last for several minutes in some cases.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Select button F3 (B - Fig. 15) to search for the COM port automatically. Follow the instructions displayed.</span>
+            </li>
+            <li>
+              <span style="color:black">You may need to configure your network proxy if the PC cannot connect to the Internet website. Select F8 (C - Fig. 15); the page shown in Fig. 16 will appear.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 15</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017935_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom345f.html?Par=199017934.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Tick (B - Fig. 16) the “Use Proxy” checkbox and then enter the required data (IP address and Proxy server and your UserID/Network Password).</span>
+            </li>
+            <li>
+              <span style="color:black">Select button F1 (A - Fig. 16) to save the entered data and go back to the update page (Fig. 15).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 16</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017937_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom3fdd.html?Par=199017936.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">In the window (C - Fig. 17) enter the password of the instrument and select button F1 (A - Fig. 17) to activate Internet update. The page shown in Fig. 19 will appear.</span>
+            </li>
+            <li>
+              <span style="color:black">If you do not have a password yet, select button F3 (B - Fig. 17); if the PC is provided with an email program, the email page shown in Fig. 18 will appear. Complete by providing the required data and send the email to the indicated address.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A password which lasts for one solar year is managed with the TPMS2 Reader MY13 equipment. You can receive passwords for the future years based on the data provided during the first request.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 17</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017938_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom15fa.html?Par=199017939.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">After having typed in the required data, press F1 (A - Fig. 18) to confirm or F2 (B - Fig. 18) to cancel.</span>
+            </li>
+            <li>
+              <span style="color:black">If all data have been entered properly, within a short time you will receive a reply email with the password required to use the program.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 18</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017941_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom645a.html?Par=199017940.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">A specific process bar will appear during the update (A - Fig. 19) to indicate the advancement state of the update and the data transfer speed.</span>
+            </li>
+            <li>
+              <span style="color:black">The animated arrow (B - Fig. 19) indicates that the communication is active.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 19</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017942_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom1571.html?Par=199017943.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The page shown in Fig. 20 will appear before the end of the update. Disconnect the instrument from the PC, switch off the instrument and select button F1 (A - Fig. 20).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 20</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017944_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom137b.html?Par=199017945.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The page shown in Fig. 21 will appear before the end of the update. Select button F1 (A - Fig. 21).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 21</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017947_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom5b84.html?Par=199017946.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the TPMS2 Reader MY13 equipment is already updated to the latest version, after having select the Update button F3 (A - Fig. 13), enter the password and select button F1 (A - Fig. 17) the page shown in Fig. 22 will appear: confirm by pressing button F1 (A - Fig. 22).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 22</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017949_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoombbb3.html?Par=199017948.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Repeat the update procedure periodically to make sure that the last available version is always available.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">MANUAL UPDATE OF INSTRUMENT FIRMWARE</h2>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the instrument has been updated to an old version prior to release 2.80, the manual update procedure must be run before being able to access Internet updates.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Switch off the equipment.</span>
+            </li>
+            <li>
+              <span style="color:black">Connect the USB cable to the PC.</span>
+            </li>
+            <li>
+              <span style="color:black">Press and hold pressed the “ESC” button on the equipment.</span>
+            </li>
+            <li>
+              <span style="color:black">Connect the USB cable to the equipment.</span>
+            </li>
+            <li>
+              <span style="color:black">In this stage, the equipment recognition stage starts; it can take some minutes, wait until the system has completed the whole process. The TPM-02 peripheral device (A - Fig. 23) will appear in My Computer.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 23</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017951_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomfc8b.html?Par=199017950.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Select the update button (A - Fig. 24).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 24</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017952_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom2031.html?Par=199017953.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Confirm by selecting F1 (A - Fig. 25).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 25</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017955_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom4c91.html?Par=199017954.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Wait for the update to be completed: a progress bar (A - Fig. 26) will indicate the advancement state.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 26</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017957_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoome354.html?Par=199017956.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">The page shown in Fig. 27 will appear before the end of the update. Select button F1 (A - Fig. 27) to confirm.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 27</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017959_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom3cd0.html?Par=199017958.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Disconnect the USB cable from the equipment.</span>
+            </li>
+            <li>
+              <span style="color:black">Switch off the equipment.</span>
+            </li>
+            <li>
+              <span style="color:black">Shut down the TPM Manager program.</span>
+            </li>
+            <li>
+              <span style="color:black">Select the icon on the desktop (1 - Fig. 12) and repeat the TPMS program update.</span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">MEMORY EXPANSION HARDWARE UPDATE</h2>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The equipment memory needs to be expanded started from 2015 updates. This operation is not needed for equipment made after June 2015 because the equipment is already provided with programmed SD Card.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">The instrument for which memory expansion is required are identified during the password request step. It is important to enter the request shown in Fig. 18 correctly and completely.</span>
+            </li>
+            <li>
+              <span style="color:black">The SD Card (*) is sent free of charge to the person responsible for the equipment shown in the request in Fig. 18.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) specific SD Card for the equipment containing the software updated to the latest release.</p>
+          <ul>
+            <li>
+              <span style="color:black">The SD Card is shipped ex works (charged to the Dealer c/o Tecnomotor di Correggio - Italy). Dealers must specify the details of their shipping agent in the request.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To install the equipment memory:</p>
+          <ul>
+            <li>
+              <span style="color:black">open the memory compartment by loosening the screw (A - Fig. 28).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 28</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017960_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom4370.html?Par=199017961.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Carefully insert the SD Card in its housing (B - Fig. 29).</span>
+            </li>
+            <li>
+              <span style="color:black">Close the memory compartment and fasten the screw.</span>
+            </li>
+            <li>
+              <span style="color:black">To end, select the icon on the desktop (1 - Fig. 12) and repeat the TPMS program update.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 29</b>
+          </p>
+          <center>
+            <img src="images/jpg/199017962_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom2b8f.html?Par=199017963.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925865&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:36:48 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

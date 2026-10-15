@@ -1,0 +1,474 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003687&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:48:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003687&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="4mZ0xwGqV1FqJfc9Eua2Y7faX+iFKZGE7P993zJdrsVjpQkqva+pqAZFKOJVbWkwVyUHc7y8v5kycKnf2sbK7hwfyae9/m8BFgMJCIjXSJ4e8EgewBQry67D9iqKhFXrZtbXSlxexuhBgsRm5VXzgOeVKpSBdTMLasckZktHNbmn4Sjiu9Xs8mMcSxUd+pJmpRpfKYyghMbf/oeA/S7hHo++CIwN3oMT3t3BBTWe/eTb0Jbl1dRZw4BrlMxqS/oLe36rQrAwvN/xBUflvs646viZ0rqRwLIZkteI2mMir4W9WAVkj2PsP6+afYFPeu75xOPQcHAtz3ZCtefFzcSbLaby+e9wjGN0KPcOWnpTkgDptBpA0MwI8S1Z9jeCYhH9rhJ+sez1/AUp2EmP5XyJ0GQ+nm5T/INvM2/AfhSgPRTijRh+A19AU8YT7bF7xb+19B9qvJ9is409WFaJvXWUnTQngdw9cRhsNvY1BGoj9GL42jGGp82++okg62qzeR3LhM4uRPRLNIbqqFuh5ZhehVulMBqvwwaIKzO19iw1ZZ62VeFhnG4naxx4blS1ZHwaWT4bVNJjTeAaSTA9rRfbBOQuVNGGkcPw9aFeutppi0jjt8nmwhNd+wDk61H1CwryCBV+yMyvCvyB00dDkNmIzxXkezJ3o8pQsGeku6cobfPArgbuHg3dwAg1u/SLe615Hl0TtPf8+xtMzWcB52uiE0gLiioGotUyxC0ZXtNjd5liOIHkFxQ1gg4c+jy56ESj/G+iS2ljSl61WoY1MMMQRKAQp8K+86Q71vG1H4ZcYS1HO2pftQ95zwRPBoPaMS7QXpDt3xUSQj8REWUefCw33w==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspGENERAL FAILURE WARNING LIGHT ON CONSTANTLY&nbsp&nbsp&nbspK159&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contents_table">
+      <tr>
+        <td>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Even if none of the functions signalled by the general failure warning light is faulty, the warning light in the instrument panel remains on</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003687&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:48:41 GMT -->
+</html><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contents_table">
+      <tr>
+        <td>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.B: The following functions cause the activation of the general failure warning light:</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contents_table">
+      <tr>
+        <td>
+          <p class="titolo_lista"></p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Inertia switch (FIS) operation</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Speed limit exceeded</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Diesel filter sensor failure (JTD only)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Engine oil pressure sensor failure</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rain sensor failure (if fitted)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Parking sensor failure (if fitted)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dusk sensor failure (if fitted)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Window anti-crush safety system failure (HIGH version only)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Speedometer signal failure</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Tyre inflation pressure sensor failure</p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="contents_table">
+      <tr>
+        <td>
+          <table class="contents_table" cellspacing="0" cellpadding="0" style="margin-top:0px;margin-bottom:0px;">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PRELIMINARY CHECKS</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan="13"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan="13"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Carry out the following preliminary checks, in order:</p><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Try and start the engine</p></li></ul><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">set the speed limit at 30 km/h and road test the vehicle at a higher speed to make the warning light come on and the buzzer sound. Check that the buzzer has not been disabled</p></li></ul><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the ignition ON, check that the engine oil pressure warning light, water in diesel filter warning light (in the case of a JTD engine) and the MIL warning light carry out the initial test and then switch off on starting.</p></li></ul><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the vehicle is equipped with a rain sensor, with the ignition ON, place the ring nut on the right steering column switch unit lever in the intermediate position and check that the windscreen wiper system carries out the operating check.</p></li></ul><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the vehicle is equipped with a dusk sensor, place the ring nut for the left steering column switch unit lever in the AUTO position, cover the sensor and check that the dipped headlamps come on.</p></li></ul><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the vehicle is equipped with parking sensors, engage reverse gear and check that the buzzer sounds.</p></li></ul><p class="titolo_lista"></p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the vehicle is equipped with anti-crush window sensors, lower the front windows, place an obstacle in the path of the window and close the window. Check that the window stops and goes back down</p></li></ul></td>
+              <td class="body_table" colspan="" rowspan="13"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step 1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. The engine does not start in any circumstances</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main4ecc.html?nodeID=939003563&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=GENERAL%20FAILURE%20WARNING%20LIGHT%20ON%20CONSTANTLY&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See table B010 ENGINE DOES NOT START (UNDER ANY CIRCUMSTANCES)</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. The buzzer does not sound when the speed limit is exceeded</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maind3f1.html?nodeID=939003626&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=GENERAL%20FAILURE%20WARNING%20LIGHT%20ON%20CONSTANTLY&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See table K003 SPEEDOMETER NOT WORKING</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. The minimum oil pressure warning light does not carry out the initial test</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maind62e.html?nodeID=939003640&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=GENERAL%20FAILURE%20WARNING%20LIGHT%20ON%20CONSTANTLY&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See table K030 MINIMUM ENGINE OIL PRESSURE WARNING LIGHT NOT WORKING</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. The minimum engine oil pressure warning light remains on</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main281e.html?nodeID=939003647&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=GENERAL%20FAILURE%20WARNING%20LIGHT%20ON%20CONSTANTLY&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See table K047 MINIMUM ENGINE OIL PRESSURE WARNING LIGHT ON CONSTANTLY</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. The water in the diesel filter warning light does not carry out the initial test</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maincecd.html?nodeID=939003670&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=GENERAL%20FAILURE%20WARNING%20LIGHT%20ON%20CONSTANTLY&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See table K122 WATER IN DIESEL FILTER WARNING LIGHT OFF (INITIAL TEST NOT CARRIED OUT)</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. The water in the diesel filter warning light remains on</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="maina4d9.html?nodeID=939003671&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=GENERAL%20FAILURE%20WARNING%20LIGHT%20ON%20CONSTANTLY&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See table K123 WATER IN DIESEL FILTER WARNING LIGHT ON CONSTANTLY</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. The MIL warning light does not carry out the intial test</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainc1bf.html?nodeID=939003666&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=GENERAL%20FAILURE%20WARNING%20LIGHT%20ON%20CONSTANTLY&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See table K100 MIL WARNING LIGHT NOT WORKING (REMAINS OFF BEFORE STARTING)</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. The MIL warning light stays on</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="mainf7f9.html?nodeID=939003667&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=GENERAL%20FAILURE%20WARNING%20LIGHT%20ON%20CONSTANTLY&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See table K101 MIL WARNING LIGHT STAYS ON (ENGINE STARTS)</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. The windscreen wiper is not activated</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8403.html?nodeID=939003620&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=GENERAL%20FAILURE%20WARNING%20LIGHT%20ON%20CONSTANTLY&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  See table J030 WHEN IT RAINS, THE WINDSCREEN IS NOT CLEANED AUTOMATICALLY</a></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. The buzzer does not sound with reverse gear engaged</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>See table N046 PARKING DEVICE BUZZER NOT WORKING</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. The dipped headlamps are not automatically activated</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>See table I004 SIDE LIGHTS / NUMBER PLATE LIGHT AND DIPPED BEAMS DO NOT WORK IN AUTO MODE</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. The windows do not detect the obstacle</p></td>
+              <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. Continue as instructed in the</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>See table M005 MANUAL FRONT WINDOWS NOT WORKING</b></p></td>
+            </tr>
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHECK USING DIAGNOSTIC EQUIPMENT</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL OK</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PROBLEMS ENCOUNTERED</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ACTION</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connect the diagnostic equipment and check the operation of the general failure warning light in active diagnosis at the INSTRUMENT PANEL NODE</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">End of diagnosis</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning light does not flash</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace instrument panel</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link"></span><a class="contents_link" href="main8120-2.html?nodeID=939011063&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=GENERAL%20FAILURE%20WARNING%20LIGHT%20ON%20CONSTANTLY&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent">  Op. 5560B10 CONTROL PANEL - R+R</a></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

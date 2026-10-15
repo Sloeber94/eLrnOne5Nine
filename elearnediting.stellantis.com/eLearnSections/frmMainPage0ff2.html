@@ -1,0 +1,1168 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939005762&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939005762&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="2ODzS5Jhj4AJrXR0mwofef2NOvM7q5BFtMuHicwvW4tK62+QCjjb1/zxyRtYH+f1/DHtZjRZDbNk5jLS4U+1TvL1tDGFfrxsJ6/JSuywPa2dbnEP9u2Za1e8dLuUz1lU8WtkTIdJUswhWnr1kCo2f1+E6pGB/A/gQHu6Oin859ZaxlMlq79LWL3ttaMZBl12dnY1e4RncTImq0dcP/wuCqjsVYsQxAfOEwTcTwEp21KBxDHY5OJ2xOmfOqh4aG8XyA6SWrLDzzhlFYQ0wlWWky8Ie1kmtXcrdxHXpigzjt2RrTW5YUNcEllHNsgtvdbbBM1MRE5omhj58695aTTbS+UdMAvnO1fDAmlk4vuHQRiVodStiBhYRWjHrF9+ErqGKB16OkcARHy3pEVQpW7z9yfTz6FjnfoQpM/c+1ki30+FBbe3ZgsQ8t5Z9testDlD3/4r3OrsMX+phpEy7BXCw+/lMP0Y/Dl3DPG6j8T+J403Ewby8jsqICAsT9om4fidUxebhB65wUUx8fdOEZK+LzPYdQeXjI5JbrT6Z7ReeBsU39Z6VeQ2SmjLOn1fYfqkSAkvM/fZTpWIDOacib2yvFycG8Xyz41Ul6Mqex6sW3A7aLYRGeBsLWN7fRHQQuDeVEzsQe4nKJ4xLnf7g1F9bPuztbeV6hfILGkwvoKRF6sO9XKSzOpEwxE+vg7INuuRaqv0GWke+osiMobKuxy4hsKuT3kZqimx8UCXAbdrbZy/rEqpqiZvJYf/Ssu4sH0HEWEH4r+1yoEOd6N8mNqOOZ9mfwqu26hYESkGuysqAxH2/pPI1v1dfx7JppMKez7O" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - AUTOMATIC TRANSMISSION&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">GENERAL SPECIFICATIONS</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Type 6 speed automatic transmission</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Structure: 3 clutches, 2 brakes, 1 free wheel, 2 epicyclic trains</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Hydraulic: 4 linear solenoids, 2 on/off solenoids</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Electronic: Neutral Start Switch and control unit built-in, internal wiring and speed sensors</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="3" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NAME</p></td>
+              <td class="header_table" colspan="2" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AISIN AF40-6</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan="9"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRANSMISSION RATIO</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4.148</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.370</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.556</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.155</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.859</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.686</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">R</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.394</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Idler shaft</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.836</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Differential</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.188</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan="6"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BRAKES AND CLUTCHES</p></td>
+              <td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CLUTCHES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 flange, 6 discs, 6 plates</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 flange, 7 discs, 7 plates</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 flange, 3 discs, 3 plates</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 flange, 4 discs, 4 plates</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C3</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 flange, 4 discs, 4 plates</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BRAKES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B1</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Band</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 flanges, 6 discs, 5 plates</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 flanges, 6 discs, 5 plates</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">One-Way</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">F1</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Roller type</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SOLENOIDS</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Shift solenoid</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">no. 2</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Linear</p></td>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">no. 6</p></td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">OPERATION</h1>
+          <h2 class="bigtext2">Neutral control</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the vehicle stops with the lever in position "D", the clutches are automatically released and the transmission changes to neutral. In this way, the torque converter is not put under stress, there are fewer vibrations and fuel consumption is minimal.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On rough roads or on hills, the function is not activated. On hills, the transmission remains engaged to ensure a hill holder effect.</p>
+          <h2 class="bigtext2">Reversing control</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the gear lever is shifted from "N" to "R", reverse is not engaged if vehicle speed exceeds 11 km/h.</p>
+          <h2 class="bigtext2">Adaptivity</h2>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MODE</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DESCRIPTION</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ADAPTIVITY</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Used during normal driving. The sports or economy modes are selected automatically depending on driving conditions</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SPORT</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In this mode, the gear shift points and lock-up operation are higher because the engine rpm is higher</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WINTER/LOW GRIP</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the event of ice, snow or low grip in general, the car sets off in third gear to prevent the front wheels slipping</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TIP</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the lever is moved from “D” to “+/-”, the driver can select the gear shift point sequentially. In any case, the control unit changes the ratio automatically to prevent over-revving or conversely to prevent juddering because the engine speed is too low.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HIGH TEMPERATURE</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the transmission fluid temperature is too high, the control unit advances lock-up intervention to prevent the torque converter slipping excessively, thus lowering the temperature.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HEATING</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Conversely, in this case the converter slip is preferred to heat the fluid.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">GRADIENT</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A gradient is automatically detected by a control unit algorithm based on rpm increase. The speed passage points are increased.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DESCENT</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Conversely, on a descent, the system uses certain features to prevent excessive use of the brakes (lock-up etc.)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FAST ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This control computes the driver''s desire for performance expressed by pressure on the accelerator pedal, and adjusts the gear shift points accordingly.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BRAKE ASSISTANCE</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Conversely, in this case the engine brake is used to help the driver during acceleration (detected via the accelerator pedal)</p></td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">COMPONENTS</h1>
+          <h2 class="bigtext2">Control unit</h2>
+          <center>
+            <img src="images/jpg/194002856_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit is fitted on the speed engagement selector and assists the gearbox and gear control lever management functions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN OUT</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Key switch signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">K line</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Steering lock signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN L</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN H</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN H</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fuel system</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Reversing light relay</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN L</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Input/output managed by the control unit</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The interface with the automatic transmission system manages information by means of the following serial networks:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C-CAN (information, data)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">K line (diagnosis)</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIGNAL</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">I/O</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRANSMISSION TYPE</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Key status</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">I</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">System warning light</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">O</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Transmission fluid max temperature warning light</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">O</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Speed engaged display</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">O</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Gear selection</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">I</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">System diagnosis</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">I/O</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">K</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Vehicle speed</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">I</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Brake pedal pressed for recovery (brake lights contact)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">I</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Driver''s front door status</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">I</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Horn activation</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">O</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Start-up enablement to NBS</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">O</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">on/off @GND</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Reversing light control</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">O</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">on/off @+15</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Engine coolant temperature</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">I</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Engine torque change request</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">O</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MIL warning light activation request</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">O</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CAN</p></td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Wiring</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The wiring is located inside the gearbox, it is connected to the inside of the valve body:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to the speed sensors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to the fluid temperature sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to the solenoids</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The wiring is connected to the transmission control unit with an Aisin pin-to-pin connector.</p>
+          <center>
+            <img src="images/jpg/194002857_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Solenoid unit</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The solenoid unit, via solenoids activated by signals from the control unit, supplies hydraulic pressure produced by the oil pump to the brakes, clutches and lock-up. Part of the fluid is also sent to lubricate the mechanical components.</p>
+          <center>
+            <img src="images/jpg/194001773_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Torque converter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Solenoid unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Brakes/clutches</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Oil radiator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Oil pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Epicyclic gear set</p>
+          <h2 class="bigtext2">Solenoids</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The linear solenoids shown in the figure control the hydraulic pressure of almost all the brakes/clutches</p>
+          <center>
+            <img src="images/jpg/194002858_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON/OFF solenoids: these 2 solenoids control brake "B2" for the engine brake in first gear</p>
+          <center>
+            <img src="images/jpg/194002859_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Linear solenoid SLT: controls line pressure in a linear way on the basis of a throttle signal and engine torque</p>
+          <center>
+            <img src="images/jpg/194002860_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Linear solenoid SLU: controls lock-up pressure in a linear way in relation to:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">throttle signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">engine rpm</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">gearbox input speed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">gearbox output speed</p>
+          <center>
+            <img src="images/jpg/194002861_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Sensors</h2>
+          <h3 class="bigtext3">Lever position sensor (nsw)</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The position sensor is Hall effect and is built into the control unit. It sends the gear lever position.</p>
+          <center>
+            <img src="images/jpg/194002862_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Lever position sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Control unit</p>
+          <h3 class="bigtext3">Fluid temperature sensor</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fluid temperature sensor is an NTC and is incorporated in the wiring.</p>
+          <center>
+            <img src="images/jpg/194002863_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Oil temperature sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Specifications:</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Temperature (°C)</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Resistance (kΩ)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5.62-7.31</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3.5</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">110</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.22-0.27</p></td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Speed sensors</h3>
+          <center>
+            <img src="images/jpg/194002864_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Output speed sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Input speed sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The input speed sensor detects the input rotation speed to the gears, i.e. the converter turbine speed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The output speed sensor detects the rotation speed of the gear that carries drive to the differential.</p>
+          <h1 class="bigtext1">GEAR CONTROLS</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The request to change gear may take place in the following ways:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- sequential (manual) or automatic via the selector lever</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- sequential (manual) via the steering wheel controls (where present).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Selector lever</b>
+          </p>
+          <center>
+            <img src="images/jpg/939005560_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">P = Park</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">R = Reverse</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N = Neutral</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D= Drive, automatic forward gear</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ = Shift to higher transmission ratio in sequential mode</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- = Shift to lower transmission ratio in sequential mode</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In an emergency, proceed as described below to release the position of the selector lever:</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">move the driver''s seat backwards, open the sliding flap (a) and adjust the unlocking lever (b).</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <center>
+            <img src="images/jpg/939006967_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Manual sequential command from selector lever</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The 6 gear changes can be managed sequentially by moving the lever to the right and lifting it towards the + to engage a higher ratio or lowering it towards the - to engage a lower gear.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Each gear engaged is shown by a number on the instrument panel display.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Automatic control from selector lever</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The automatic D control can be selected from sequential operation in any driving conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The optimum ratio is selected by the gearbox electronic control unit depending on the engine speed and load conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Manual sequential command from steering wheel (where present)</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The change can be managed sequentially via the controls on the steering wheel.</p>
+          <center>
+            <img src="images/jpg/939005561_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To use the controls on the steering wheel, the gear lever must be in a (manual) sequential position:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- operating the lever on the steering wheel in the + direction engages a higher ratio</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- operating the lever on the steering wheel in the - direction engages a lower ratio.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Automatic driving mode selection (where present)</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Different driving modes can be selected using the SPORT/WINTER button in the gear control panel.</p>
+          <center>
+            <img src="images/jpg/939005562_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following driving modes are available:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- NORMAL: gear changes at low engine speeds, favouring comfort and reduced consumption</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- SPORT: gear changes at higher engine speeds, enhancing sporty driving</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- WINTER: programme for setting off on roads in poor grip conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The selection mode remains in force until the button is pressed again or the engine is switched off.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939005762&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:41 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

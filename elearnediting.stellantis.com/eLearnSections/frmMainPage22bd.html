@@ -1,0 +1,1661 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003527&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=AIR+CONDITIONER+-+DESCRIPTION&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:15:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003527&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=AIR+CONDITIONER+-+DESCRIPTION&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="rNR5cJS9UNruJTA0CXjpwsRYtUFuyYA3RGBxo3e7SVWvWYxteRVWgcY94o1hKn0MIb8WMxJJK/1ncrmwE9cvgaYcaDnYnC97ZvIgY6DjkJhU9/2Koc+LpDmDhCwagaiqC+rwyIWvlMffWFli3r+b+7Qft/3504v+OckjcialAVBsWSkwIHfaLb84ardnqbGsoZg/V9yjmW04vfA/dbfwlhjILK4FMnQYuXTN24T6BuYjR1yMcBYf/AU1GucbNBjtCraD0vZFfMzbVcmBNYc/7yEYn3ER9NZwMcE6yZHrZIbIq4Dpl3Uv2Pk8iP8YGURbiMIkkfjfuClwQFNySzz4BlHFzVqXhrJ3PX6c6o52lNdz61YgAKsGfuuMh1YgyxJo6gDD7SvxEhtokBtYE35eIpyLD65iO5+lgb/sayRDmCZbrRua18U/bNOaSpxrgSOSmYFBwleO0VvF/H9mD53TVXiz8sQR69RRhW3dHqKDSefNBW7Y6cX4xJS+1Ap2Q/+ekZTXBw5KCNHXIL29LFyMuZdZofsTbNZX9WdshFuPnwelE7BDr2s+ny7tDN6XtmOWXJQnWWQmZRryqoCnPzVl2Lr9Ger+uou68XOds4tClKtDtrL9rLYxroeaJih7BBIOTvo8RHSVCME7kY1yIXpsNmxyMvCPyYoWuvzKHxiMbZCVBp6nkZN0TvAVA04JIwBvBgvT+ClxN41cQEhrqryJzdkZJglJsaPOWg0p7jAORCSeOCwrENzV2Pn4dqx5a9u/cCpPT7nfbd587QfIybgi7n87ME8TYq0oOzQD+dAMVo/+r/ciAneaBFDaHWA4xycZ3jqp2l6c84KSuM1RNFf22/0OMU3Mj2Clir3wtgx0K6K9A7yU1FNQsrG83ODATekTanY4cfkPIIniexHTKgYEoBdcDwiAePcS9KxGU+M3P8rb3D9VvhC6q+vn8NMY+rHevl7OzENqciB6bjg2tWsMDw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspAIR CONDITIONING CASING AND COMPONENTS&nbsp&nbsp&nbsp5040&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  AIR CONDITIONER - DESCRIPTION</a>
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">INTRODUCTION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The climate control system makes it possible to alter the features of the air introduced into the passenger compartment (temperature, humidity) designed to create and maintain a high level of comfort whilst driving.</p>
+          <h2 class="bigtext2">Climate control system components</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The climate control system components are illustrated in the figure.</p>
+          <center>
+            <img src="images/jpg/939003833_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Linear pressure switch</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Condenser</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Drier filter built into the condenser</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Low pressure gas pipe</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Expansion valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Evaporator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Duct/distributor assembly</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Control panel with electronic control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Rear control panel (triple zone version)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. Compressor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. High pressure gas pipe</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. High pressure fluid pipe</p>
+          <h2 class="bigtext2">Operating principle</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The aim of refrigeration equipment is to absorb heat from an environment. In order to do this an air conditioner has recourse to certain fluids (known as refrigerants) capable of cooling down (lowering their temperature) and changing state (from liquid to gas) when they are subject to a large drop in pressure, thus expanding. They are therefore capable of absorbing heat from their environment. When the temperature increases, thereby also increasing the pressure, they change state again, from gas to liquid, and condense.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The first problem is therefore to liquefy this gas, which can be achieved simply by bringing it to a temperature below that of evaporation (or boiling) which, as has already been stated, is -26°C at atmospheric pressure for R134a.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In order for this to be achieved at ambient temperature which, in our case, may be rather high (in the engine compartment), it is necessary to increase the evaporation point of the gas so that it remains liquid until the moment it is made to expand, in order to produce the desired refrigerant effect.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To raise the boiling point of the gas its pressure must be increased, at the same time, decreasing the temperature.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In order for this to take place the system requires a certain amount of power. This power, supplied by the compressor, is subtracted from the power produced by the engine.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The operating principle of the refrigerant cycle phases in the air conditioning system for a motor vehicle can be summed up as follows.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The gaseous R134a refrigerant is drawn in by the compressor at a pressure of between 0.5 and 2 bar and is compressed at a value of between 10 and 17 bar. Boiling point becomes around 60 °C at these pressures.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This fluid, heated by the compression stage at 80 - 100°C, always in a gaseous state, in the compressor where, through the effect of the cooling air flow (produced by the vehicle moving forward or through the action of the fan) that passes through it, reaches condensation point, changing at high pressure to a liquid state.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Later on the refrigerant passes through a filter which has three functions: to trap the impurities, to absorb the dampness contained in the circuit and to work as a reserve reservoir for the actual refrigerant.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The refrigerant therefore reaches the expansion valve which introduces it into the evaporator where the pressure is around 1.5 atm. (1.52 bar). At this pressure the liquid/vapour system saturated with the refrigerant fluid is in equilibrium at a temperature of about -7 °C. At the same time, the air that passes through the evaporator (through the action of a fan), being at a considerably higher temperature than the refrigerant fluid it contains, causes it to boil and evaporate completely by imparting heat. When it cools down, the air deposits some of the humidity it contains on the evaporator fins in the form of droplets which are collected in a chamber and drained outside the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The air, cooled and dehumidified in this way, is sent inside the vehicle. The refrigerant at the evaporator outlet is drawn in again by the compressor giving rise to a new cycle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The route of the refrigerant fluid can be summarized as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- In the compressor, the fluid coming from the evaporator is gaseous (temperature -5, -7°C, pressure 0.5 - 2 bar). Compression phase: the gaseous fluid is heated (temperature 80 - 100 °C, pressure 10 - 17 bar).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Condenser - Compression phase: the fluid transmits heat to the outside, cools and returns to a liquid state (temperature 40 - 60°C, pressure 10 - 17 bar).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Thermostatic expansion valve - Expansion phase - the fluid loses pressure (0.5 - 2 bar, possibly even 3 bar) becomes a gas + liquid mixture; the temperature is low, typical of air conditioning.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Evaporator - Evaporation phase: the fluid becomes completely gaseous because the hot air driven by the fan is at a higher temperature than the refrigerant fluid and causes it to boil and evaporate completely, giving off heat. The temperature is low, that of air conditioning (pressure 0.5 - 2 bar).</p>
+          <h2 class="bigtext2">Types of system</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This vehicle is available with different climate control systems for the passenger compartment:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- manual climate control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- dual zone automatic climate control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- triple zone automatic climate control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Manual climate control: the user sets the air temperature, distribution and flow rate and they remain like that until they are altered by the user later on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Automatic climate control (dual/triple zone): the user can set the parameters and select automatic system management. If they so wish, the user can retain the facility to manage the system manually.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In addition, the automatic climate control system on this vehicle is the dual zone type (driver's zone and front passenger zone) or triple zone (driver's zone, front passenger zone and rear seat zone), in other words the system has dual controls for the driver and the passenger and is capable of managing the settings for the two users separately, varying the air temperature and distribution parameters (the flow rate cannot be different in the zones) with a certain degree of independence.</p>
+          <h1 class="bigtext1">MANUAL CLIMATE CONTROL</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The manual climate control system control panel is illustrated in the diagram below</p>
+          <center>
+            <img src="images/jpg/939003834_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Air temperature regulation knob</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Passenger compartment air distribution selection knob</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Fan speed selection knob</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Engagement/disengagement button for heated rear window and demisting of door mirrors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Engagement/ disengagement button for “MAX DEF” function (windscreen, front windows and door mirrors defrosting/demisting)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Engagement/disengagement button for internal air recirculation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Engagement/disengagement button for air conditioning compressor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The manually operated climate control system is managed by an electronic control unit, known as the "Climate Control System Node" (NCL) connected to the car electrical system B-CAN and incorporated in the climate control system control panel in the middle of the dashboard.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit pin out is summarised in the table below.</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">direct power supply (from F39)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">additional heater control signal PTC1</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">additional heater control signal PTC2</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">fan relay switch feed</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">compressor engagement positive (output) signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN A line</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN B line</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">recirculation actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">recirculation actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">recirculation actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">recirculation actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">distribution actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">distribution actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">distribution actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">distribution actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">mixing actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">mixing actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">mixing actuator control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">mixing actuator control</p></td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Operating logic</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The maual air conditioner allows the use to manage the temperature and intake of air into the passenger compartment using the knobs and control buttons.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following parameters/functions can be altered manually:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Temperature</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Distribution in 5 positions</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Fan speed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Compressor enablement</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Defrosting/demisting function</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Recirculation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Electric motors transmit the air mixing, distribution and recirculation commands from the relevant knobs to the climate control casing.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The compressor can only be activated if a fan speed is set.</p>
+          <h1 class="bigtext1">AUTOMATIC CLIMATE CONTROL</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Automatic climate control system is managed by a control unit with a highly sophisticated operating strategy that can control the internal temperature of the two/three passenger compartment areas by heating or cooling the air to achieve the desired comfort.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The climate control system automatically regulates the following parameters/ functions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Air temperature at the driver's/passenger side vents</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Fan speed (continuous variation)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Driver/passenger side air distribution</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Engagement of compressor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Recirculation</p>
+          <h2 class="bigtext2">Commands</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The user interface for this control unit is laid out as follows.</p>
+          <h3 class="bigtext3">Front dual-/triple-zone controls</h3>
+          <center>
+            <img src="images/jpg/939003835_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Air distribution selection buttons (driver and passenger sides)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Driver side temperature adjustment knob</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. AUTO function activation button (automatic operation)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Climate control system information display</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Passenger side temperature adjustment knob</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Heated rear window engagement/disengagement button</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Activation button for MAXDEF function (fast front windows, heated rear window and door mirrors defrosting/demisting)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Fan speed increase/decrease buttons</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Activation button for MONO function (alignment of set temperatures)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. Engagement/disengagement button for internal air recirculation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. Climate control compressor on / off button</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. Internal air temperature sensor</p>
+          <h3 class="bigtext3">Rear triple zone controls</h3>
+          <center>
+            <img src="images/jpg/939003836_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. AUTO function activation button (automatic operation) and shut off of air flow to rear seats</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Rear temperature adjustment knob</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Air distribution selection buttons</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Rear temperature display</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following parameters/functions can be set/adjusted manually:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Desired temperature</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Fan speed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Distribution in 7 positions</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Compressor enabling/disabling</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Defrosting/demisting function</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Recirculation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Single zone function</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Manual selections always take priority over automatic ones, except those related to the safety of the vehicle, and are stored until the user switches back to automatic operation.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The manual setting of a function does not jeopardise other automatic functions. In particular, the temperature control is always automatic when the system is operating, excluding situations in which manual selections affect the ability to control/maintain the required temperature. In this case, the temperatures shown on the display flash to indicate that the temperature is no longer being controlled by the automatic system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Each time the system is turned on (Key-On), it returns to the conditions saved upon deactivation, except for the MAX DEF function, which is zeroed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is a facility for switching the system off manually (OFF) using the fan button until 0 bars are selected for the flow rate, completely deactivating the air conditioning system (except for Recirculation and Heated Rear Window) and isolating the passenger compartment from the outside environment.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The MAX-DEF function allows you to group together the actions that rapidly demist the windscreen, side windows, heated rear window and door mirrors.</p>
+          <h3 class="bigtext3">Climate control system control unit</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The climate control system is managed automatically by an electronic control unit known as the Climate Control Node (NCL) which maintains the air climate control conditions set and, therefore, desired by the user (or users).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NCL is connected to the vehicle's electrical system B-CAN.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NCL is incorporated in the climate control system control panel fitted in the centre of the dashboard. The rear view of the control unit is shown in the diagram with the connection to the electrical system highlighted and the connector pin out listed below.</p>
+          <center>
+            <img src="images/jpg/939003837_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">direct power supply (from F39)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">actuator positive power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">fan adjuster positive power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">earth for evaporation sensor</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">solar sensor power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">additional heater control signal PTC1</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">actuator BUS communication line</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">additional heater control signal PTC2</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN A line</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN B line</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">signal from evaporator sensor</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">compressor engagement positive (output) signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">compressor control signal (only with externally controlled compressor)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">fan regulator PWM control signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">signal from pollution sensor</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">signal from demisting sensor</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">left solar sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">right solar sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">fan regulator feedback signal</p></td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Some of the CAN nodes, including the climate control system control unit, are programmed with default settings that the customer will find when purchasing the car. If the control unit is being replaced, the Parts Dept. will send a blank component: once fitted, the data memorised in the Body Computer must be transferred to it by carrying out the PROXY ALIGNMENT procedure using the Examiner.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The various actuators in the climate control system unit, even if similar, are specifically programmed and are not interchangeable.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Operating logic</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The principle on which is based the temperature control is linked to the 'EQUIVALENT TEMPERATURE' concept.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A control based on the equivalent temperature concept attempts to maintain the user's constant sensation of heat rather than maintaining a constant temperature in the passenger compartment.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The thermal sensation depends on all the thermal energy exchanges with the environment and is evaluated by the climate control system control unit on the basis of ambient parameters.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In particular, inside a VEHICLE, it depends on the following parameters:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Average temperature in the passenger compartment</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Temperature of the air sent to the passenger compartment interior</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Temperature of the walls and surfaces exposed to passengers (dashboard, seats, etc.)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Air flow rate in the passenger compartment</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Solar radiation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Solar radiation is measured by a sensor with a bilateral signal (LH-RH) that helps to determine the comfort conditions in terms of air temperature and distribution.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The only action that the user must take is to identify and select the equivalent temperature value that they desire. The system will work to regulate all control variables, independent of external conditions, to ensure the required sensation of heat.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system automatically regulates the following parameters/functions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- air temperature at the vents</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- air distribution</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- air flow rate in the passenger compartment</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- compressor enablement</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- recirculation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All of these functions can be manually changed. In other words, the user can intervene by selecting one or more functions as desired: in this way the user overrides the control of the functions selected manually from the automatic system (with the system unable to intervene unless it is for safety reasons) to guarantee the requested equivalent temperature.</p>
+          <h3 class="bigtext3">Air mixing control</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When Equivalent Temperature is adapted to the set value as a reference for the comfort conditions, the temperature of the air exiting the vents participates in a relevant way.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This check is carried out by activating the mixing flap.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Movement of the mixing actuator is filtered to avoid movements that are too fast. Fast movements would cause unpleasant temperature oscillations.</p>
+          <h3 class="bigtext3">Air flow rate control</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Another essential parameter for setting and keeping the Equivalent Temperature at the set value is the control of air flow exiting the vents. This control is performed by activating the fan speed control.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To achieve this, the control algorithm calculates a flow value depending on the previous flow and the difference between the target equivalent temperature and that measured.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Similarly to the calculation of Mixing, in this case too the value of the flow rate is filtered so that variations that are too rapid are not produced; a "seasonal" parameter is also taken into consideration to adapt the operation of the fan depending on whether it is summer or winter.</p>
+          <h2 class="bigtext2">System use</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As described above, the climate control system is based on the equivalent temperature and works to stabilise the sensation of heat inside the passenger compartment (compensating each variation in external climatic conditions).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The user must identify and select the equivalent desired temperature value, regardless of external conditions (regardless of winter, summer, sunny or rainy conditions). The system will work to guarantee the desired sensation of heat by adjusting all the variables that it controls.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- To ensure that the system control is completely set up in automatic mode, check that FULL AUTO is written on the display.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To produce the fully automatic conditions, press the AUTO buttons which enable the automatic adjustment functions: DISTRIBUTION, AIR FLOW RATE, COMPRESSOR ENABLEMENT, RECIRCULATION MANAGEMENT.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the distribution or air flow rate is manually selected, FULL will no longer be shown. If the compressor is manually disengaged the associated LED will switch off: depending on the environmental temperature, if the system can maintain a constant comfort level the word AUTO will remain on. Otherwise this word disappears as well.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The compressor button enables the COMPRESSOR ENGAGEMENT/DISENGAGEMENT function. When the compressor is operating, the user can cool the passenger compartment temperature (particularly in warm seasons) and also dehumidify the air (avoiding window misting problems, particularly in cold seasons).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">However, the compressor cannot operate when external temperatures are low. In this case, to avoid misting problems, the system forces dynamic air intake but leaves the button enabled (so that the user can set it as he prefers).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In each case, if there are visibility problems linked to windscreen misting it is advisable to check that the LED of the recirculation button is off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The recirculation button can be managed manually or automatically. Automatic management of recirculation is also linked (if present) to the air quality sensor (AQS) that automatically shuts off recirculation when it detects pollution in the air.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is no AQS, recirculation is automatically managed to optimise the thermoregulation transient stages.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The exchange of air inside the passenger compartment is also guaranteed (every 25 minutes consecutively with the recirculation on, the system moves automatically to outside air for a period of 60 seconds).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is an AQS sensor it is automatically disabled when the external temperature is low to prevent the windscreen from misting. The user can restore the AQS sensor function by operating the rolling button that controls recirculation.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/768_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The information transmitted by the AQS is compared by the system with the information from the (optional) DEFOG sensor (which controls the degree of humidity present on the windscreen). If the windscreen is misted up and the compressor is deactivated the system forces recirculation on for safety reasons (obviously the system prioritises the driver's visibility).</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To switch the system off press the speed rocker switch on the '-' symbol until the display no longer shows the word OFF.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the system is OFF the passenger compartment is isolated from the outside (recirculation off, LED on the button switched on). The recirculation can, however, be opened (to allow outside air to enter the passenger compartment) by pressing the recirculation button (switching off the LED).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system contains predefined functions that determine a specific operation in some conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- LO mode. Maximum cooling conditions are reached when a temperature lower than 16°C is set. In this condition the system goes into MONO and switches off the words FULL and AUTO by activating the following actions: temperature regulation in the maximum cooling position, front air distribution, maximum seasonal air flow rate, compressor activation, recirculation as requested by the user.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- HI mode. Maximum heating conditions are reached when a temperature higher than 32°C is set. In this condition the system goes into MONO and switches off the words FULL and AUTO by activating the following actions: temperature regulation in the maximum heating position, front air distribution, maximum seasonal air flow rate, compressor managed according to logic (activated if Test is higher than 2°C), recirculation as requested by the user.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- “MAX DEF” function. When the specific button (7) is pressed, the system switches to MONO, the words FULL and AUTO go out and the following actions are implemented: temperature regulator in maximum hot position, air distribution to the windscreen, increase in the air flow rate (if the temperature of the engine is sufficiently high), compressor function enabled (LED on), recirculation forced open, HEATED REAR WINDOW activated (LED on).</p>
+          <h2 class="bigtext2">Functions</h2>
+          <h3 class="bigtext3">Temperature setting control knob</h3>
+          <center>
+            <img src="images/jpg/939003838_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Knob to set the passenger compartment temperature (area by area).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rotate the relevant knob for the desired area (driver/passengers) to increase (clockwise) or decrease (anticlockwise) the desired passenger compartment temperature.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Increases/decreases are in 0.5ºC steps. One complete turn of the knob is equal to 24 variation steps.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At Key-Off the temperature values set are stored and restored at the following Key-On.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The temperature range that can be set is from 16 to 32ºC. Below 16ºC the set value becomes LO while above 32ºC the set value becomes HI.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the compressor is disabled and a user sets a temperature that is lower than the external temperature the system cannot reach or maintain that temperature. This impossibility is signalled by flashing of the set temperature.</p>
+          <h3 class="bigtext3">Hi condition</h3>
+          <center>
+            <img src="images/jpg/939003839_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The HI condition is reached by setting a temperature above 32ºC.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This request by the user switches off the words FULL and AUTO, forces the system to MONO and involves the following actions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Mixer in fully hot position.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Distribution towards the feet.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Air flow rate increase (if the temperature of the engine is sufficiently high).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Recirculation remains as requested by user.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Manual settings are allowed in HI conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Exiting MONO conditions with the button determines the use of the HI function and sets the temperature at 32°C in both areas.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the driver changes the temperature setting, the passenger setting is altered, outside of HI, to 32ºC.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the passenger changes the temperature setting the driver setting will also exit HI (at 32ºC). The passenger can then only modify his own setting, having brought the system into 2/3 areas.</p>
+          <h3 class="bigtext3">Lo condition</h3>
+          <center>
+            <img src="images/jpg/939003840_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Setting a temperature lower than 16ºC puts the system in LO.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This request by the user switches off the words FULL and AUTO, forces the system to MONO and involves the following actions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Mixer in max. cold position.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Air distribution to the dashboard</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Air flow rate increase</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Compressor enablement</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Manual settings are allowed in LO conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Exiting MONO conditions with the button determines the use of the LO function and sets the temperature at 16°C in both areas.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the driver changes the temperature setting, the passenger setting is altered, outside of LO, to 16ºC.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the passenger changes the temperature setting the driver setting will also exit LO (at 16ºC). The passenger can then only modify his own setting, having brought the system in Dual Zone mode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The flashing strategy is valid if the compressor is disabled after the LO request and the recirculation is forced into automatic, if this was not already the case.</p>
+          <h3 class="bigtext3">Auto button</h3>
+          <center>
+            <img src="images/jpg/939003841_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressing this button restores the automatic operation of the following functions</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Air distribution</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Fan speed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Compressor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Recirculation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the words FULL AUTO are displayed, this indicates that all of the above functions are automatically controlled.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The word FULL goes out in the area considered when a Distribution manoeuvre is carried out manually.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The word FULL goes out in all the zones when a manual operation is carried out on the flow rate, compressor or recirculation.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The word AUTO also disappears if the control system cannot reach or maintain the required temperature (mainly when the compressor is manually disengaged).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The button that deactivates the compressor does not switch off the word AUTO if the system can maintain the required comfort.</p>
+          <h3 class="bigtext3">Distribution buttons</h3>
+          <center>
+            <img src="images/jpg/939003842_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are 7 possible positions for the air distribution (VENT, BI-LEVEL, HEAT, FLOOR, DEF, HI-LEVEL, TRI-LEVEL).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In automatic mode the system manages distribution without displaying its selection.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">You can manually select one of the 7 positions by operating the relevant buttons according to the following combination strategy:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Main Distributions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DEF</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VENT</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FLOOR</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Combined Distributions</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BI-LEVEL</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HEAT</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HI-LEVEL</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRI-LEVEL</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When combined distribution is active, pressing one of the two buttons switches off the selected LED.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When main distribution is active (one LED on), pressing the same button confirms the distribution present.</p>
+          <h3 class="bigtext3">Recirculation</h3>
+          <center>
+            <img src="images/jpg/939003843_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The recirculation button operates with ROLLING logic.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressing the AUTO button selects automatic recirculation management</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Automatic</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A switches on in the button</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When this button is switched on the user is informed that recirculation is being managed automatically to improve thermodynamic comfort, also according to air quality if an AQS is fitted.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For safety reasons (e.g. windows misted up, long periods of closure), A is switched off to signal the deactivation of the automatic control.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When A is switched off you can select automatic functions using the rolling recirculation button, exiting the system's fully automatic setting.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Forced recirculation off</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In this type of manual operation, closure of the recirculation flap is indicated by a red LED signal.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Forced recirculation on (external air)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In this type of manual operation, forced opening of the external air flap is indicated by a red LED signal.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This mode should be selected if the windows are misted up.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Modulated air flow control</h3>
+          <center>
+            <img src="images/jpg/939003844_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The air flow rate can be adjusted manually in steps, which are displayed as one bar for every 2 steps up to a maximum of 6 bars plus switching off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there have been no manual interventions, the fan speed is controlled continuously by the system and this is shown on the display by the relevant number of bars lighting up according to the flow rate.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If you intervene manually on the fan control, FULL AUTO conditions will be exited. In particular, press the rocker switch on the relevant + and - symbols to increase or decrease the fan speed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the control unit is automatically controlling the air flow rate at Key-On this air flow rate will be at 1 bar (minimum flow) until the car engine is started.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the compressor is disengaged the fan can be manually controlled until it reaches 0 bars on the display.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the compressor is enabled when the engine is running ventilation cannot be manually set below 1 bar on the display. Thus when the compressor is enabled there must be a minimum air flow rate to prevent ice from forming in the evaporator.</p>
+          <h3 class="bigtext3">Switching off the control unit (off)</h3>
+          <center>
+            <img src="images/jpg/939003845_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Operating the air flow rate control (decrease) below 0 bars (fan off) displays only OFF on the display.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following actions are available in OFF:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- storing the current state</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- switching off the display (with the exception of the OFF symbol)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- closed recirculation and relevant LED lit up</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- compressor excluded</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- fan excluded</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- mixer in max cold position</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- distribution in Vent</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- in the OFF state the Heated Rear Window button is managed normally without activating the climate control system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In OFF mode the recirculation has dual operation (ON/OFF) by opening (red LED off) and closing (red LED on) the flap without automatic management (red LED off).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressure on the + symbol or on any button of the air flow rate control (except heated rear window and recirculation) or pressure on any of the AUTO buttons switches the system back on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When OFF mode is exited recirculation returns to automatic control.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressure on the OFF button on the rear control switches off the word OFF on the relevant display and stops air flow rate to the rear seats.</p>
+          <h3 class="bigtext3">Compressor enablement</h3>
+          <center>
+            <img src="images/jpg/939003846_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the compressor enablement LED on, pressing the button switches the LED off and disables the compressor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the button has been pressed, this selection is stored for an indefinite amount of time, even after the car has stopped, as are the other manual controls.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The button has a dual function: pressing it a second time re-enables the compressor and switches on the LED.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the compressor is disabled the system checks whether the external temperature is greater or less than/equal to that set:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if the outside temperature is less than the temperature set then the system works normally and is capable of complying with the request even without the compressor being switched on;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if the outside temperature is higher than the temperature set then the system is not capable of complying with the request and signals this by making the temperature settings flash.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control (system with compressor disabled and outside temperature higher than temperature set) is activated at each Key-On.</p>
+          <h3 class="bigtext3">Mono</h3>
+          <center>
+            <img src="images/jpg/939003847_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressure of the MONO button determines the following actions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the temperature set on the front and rear passenger displays is made the same as that set by the driver and the relevant LED comes on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">From this moment the system activates a single-zone control.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressing the MONO button again or altering the temperature set for the front and rear passengers determines the following action:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the MONO button LED goes out and there is a shift to dual/triple zone temperature control.</p>
+          <h3 class="bigtext3">Max def</h3>
+          <center>
+            <img src="images/jpg/939003848_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Max-Def function is also managed with the engine off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The operations activated are:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Max-Def LED lit up</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- storing of the function state and previous displays of Max-Def control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- words FULL and AUTO switched off and automatic recirculation (if on)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- switching on of the DEF distribution, compressor enablement, MONO and HEATED REAR WINDOW LEDs</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- display of fully hot temperature (HI)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- display of the ventilation in the front display</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- switching off of the rear panel</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- activation of the following controls</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- air flow rate increase (with coolant temperature sufficiently hot)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- air distribution in Def position (before implementing the mix)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- forced air intake open (dynamic)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- compressor function enabled</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- AQS disabled (if present)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- rear window defrosting</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When exiting from Max-Def the mix is implemented first and then the distribution.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During Max-Def operation it is possible to:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Alter the air flow rate (up/down) at will</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Deactivate the heated rear window</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is not possible to</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Alter the temperature setting (driver/passengers)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Alter the distribution setting</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible to interrupt the Max-Def function by activating any one of the climate control buttons (Recirculation, Compressor, AUTO, MONO, Max-Def) implementing the return to the condition prior to the Max-Def plus the implementation of the control for the button pressed.</p>
+          <h3 class="bigtext3">Heated rear window</h3>
+          <center>
+            <img src="images/jpg/939003849_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The defrosting of the rear window is activated both through the special button and through the Max-Def procedure. The display of the function status takes place through the switching on/off of the relevant LED.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The heated rear window request function depends solely on the Key-ON condition.</p>
+          <h1 class="bigtext1">COMPONENTS</h1>
+          <h2 class="bigtext2">Air conditioning casing</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The air conditioning casing, in other words the plastic structure fastened to the dashboard supporting crossmember, is different for the manual and automatic versions.</p>
+          <h2 class="bigtext2">Automatic air conditioning casing</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The figure below shows the automatic system components.</p>
+          <center>
+            <img src="images/jpg/939003850_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Air inlet assembly</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Recirculation actuator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Pollen filter cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Pollen filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Ventilation air distribution partition</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Left distribution actuator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Right distribution actuator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Climate control system</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Right mixing actuator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. Additional heater (PTC)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. Rear distribution actuator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. Cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13. Main climate control system control unit (NCL)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14. Rear climate control system control unit (triple zone)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15. Fan</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16. Fan speed regulator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17. Left mixing actuator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18. Rear control transmission (dual zone)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19. Rear mixing actuator (triple zone)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20. Mixed air temperature sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21. Wiring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22. Evaporator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23. Expansion valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24. Heater</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25. Heater pipes</p>
+          <h3 class="bigtext3">Flaps</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The flaps are the traditional type inside the climate control system, whilst there are new curtain partitions in the upper area of the air distribution which the actuators roll and unroll opening and closing the flow areas.</p>
+          <center>
+            <img src="images/jpg/939003851_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Traditional flaps</p>
+          <center>
+            <img src="images/jpg/939003852_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Curtain partitions</p>
+          <h3 class="bigtext3">Actuators</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are seven actuators on the unit (6 for the dual zone version) that are managed by the electronic control unit through a BUS communication line.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Even if they are formally identical, the various actuators are not interchangeable because they are personalised by dedicated programming. They are managed individually by the Spare Parts Dpt.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On the dual zone version the rear mixing actuator (19) is replaced by a transmission cable (18) which replicates the commands set for the driver's side for the rear seats.</p>
+          <center>
+            <img src="images/jpg/939003853_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Mixed air sensor</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is a single evaporator outlet air temperature sensor housed in the air conditioning unit. Depending on the signal coming from this sensor and from the other input parameters (outside air temperature, inside air temperature, air flow rate, solar sensor, etc.) the control unit applies a dedicated algorithm based on experimental operating maps and controls the various actuators on the basis of the requests made by the users.</p>
+          <center>
+            <img src="images/jpg/939003854_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Internal air sensor</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is incorporated in the climate control system control unit and has a fan designed to prevent the build up of air inside it and make the temperature reading as consistent as possible.</p>
+          <h2 class="bigtext2">Manual air conditioning casing</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The diagram below shows the manual system components.</p>
+          <center>
+            <img src="images/jpg/939003855_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Air inlet assembly</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Recirculation actuator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Pollen filter cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Pollen filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Distribution actuator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Upper distribution assembly</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Climate control system</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Additional heater (PTC)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. Climate control system control unit (NCL)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. Fan</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. Fan speed adjustment resistors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13. Mixing actuator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14. Wiring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15. Evaporator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16. Expansion valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17. Heater</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18. Heater pipes</p>
+          <h3 class="bigtext3">Flaps and actuators</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The flaps are the traditional type controlled by actuators with electric stepper motors.</p>
+          <center>
+            <img src="images/jpg/939003856_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Solar sensor</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The solar sensor (fitted for the automatic climate control) is located on the top part of the dashboard at the base of the windscreen.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It transforms the light signals (lux or kcal/m²h) into a corresponding linear electrical signal to supply a value proportional to the thermal energy introduced into the passenger compartment through the windscreen through the effect of the sun's rays.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is only fitted on the automatic climate control version.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor is a special type of diode (photodiode) which can alter its conduction depending on the quantity of light coming into contact with it.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the climate control system control unit (NCL) is managing the system in AUTO mode, it uses this signal and alters the air temperature and distribution parameters to maintain the temperature requested by the user</p>
+          <center>
+            <img src="images/jpg/939003857_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Solar sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Output lighting - current typical diagram</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Diagram showing operation of solar sensor</p>
+          <h2 class="bigtext2">Outside air temperature sensor</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is an NTC sensor (present for the automatic climate control system) fitted on the lower part of the left exterior rear view mirror.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It supplies a signal to the electronic control unit proportional to the temperature of the outside air.</p>
+          <h2 class="bigtext2">Intake air quality sensor (aqs)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The AQS sensor (available on request for the automatic climate control system) is an electronic device that is designed to supply a signal to the climate control unit when the air pollution index exceeds a preset dangerous level. The control unit manages the automatic recirculation function to prevent the introduction of polluted air into the passenger compartment. The sensitive element of the sensor is capable of detecting the presence of oxidising particles (e.g. CO) or reducing particles (e.g. NOx) in the flow or air entering the vehicle.</p>
+          <center>
+            <img src="images/jpg/939003858_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Misting sensor (fog sensor)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This sensor (available on request for the automatic climate control system) is housed in the area of the interior rear view mirror with the sensitive element facing the interior surface of the windscreen. An electronically managed optical system makes it possible to detect the degree of misting of the windscreen and provides a series of signals for the control unit depending on the pre-set intervention levels.</p>
+          <center>
+            <img src="images/jpg/939003859_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The signal is represented by a set of impulses with a Duty Cycle varying between 10% and 90%.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The misting sensor is enabled at every key-on and therefore if the windscreen is (even partly) misted up the climate control is automatically activated even if it is turned OFF.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the automatic climate control system control unit is turned on the sensor can be disabled by one of several manual methods.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Expansion valve</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The tasks of this valve are to:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Separate the high pressure circuit from the low pressure circuit;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Expand the refrigerant (change in state from liquid to gas);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Regulate the evaporation process (flow rate);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Regulate the evaporation temperature;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Protect the compressor from refrigerant fluid.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The thermostatic expansion valve is fitted on the evaporator inlet and outlet ducts with the task of regulating the flow and expansion (drop in pressure) of the R134a fluid before entry into the evaporator.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The automatic regulation of the size of the passage for the gas inside the expansion valve is produced by a sensitive bulb which measures the temperature of the refrigerant fluid and depending on this suitably adjusts the size of the opening that the gas passes through by means of a special spring that moves a shutter determining the extent of the expansion.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The increase in temperature at the evaporator outlet, detected by the bulb, ensures that the valve is opened with a consequent increase in the flow rate of the fluid in the evaporator.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Conversely, low temperatures involve a reduction in the size of the gas port, determining a decrease in the flow of gas.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The expansion valve is directly accessible from the engine compartment.</p>
+          <center>
+            <img src="images/jpg/939003860_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Linear pressure switch</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The linear pressure switch makes sure the system is working properly. By continuously analysing the pressure of the climate control system circuit, the sensor provides the engine management control unit, in real time, with the variations in pressure making the management of the activation levels more flexible.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For each variation in pressure there is a corresponding voltage signal used by the engine management control unit to activate the fan speed and turn the compressor off if the pressure goes above or below the permitted limits (safety function).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The operating range of the linear sensor goes from 3.018 bar up to 29.508 bar according to the following pressure (bar) / output voltage percentage (%Vcc) curve.</p>
+          <center>
+            <img src="images/jpg/939003861_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The enablement for the activation of the compressor and the adjustment of the fan speed, depending on the variation in pressure, takes place in this pressure range; the compressor is deactivated above and below these values for safety reasons, to prevent damage to the system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pin out for the sensor is illustrated in the diagram below.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The supply voltage can vary by ±10% and the temperature of the sensor is between -5°C and 80°C.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <center>
+            <img src="images/jpg/939003862_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1- Earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Supply voltage</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Output signal</p>
+          <h2 class="bigtext2">Externally-controlled compressor</h2>
+          <h3 class="bigtext3">(envisaged for 2.0 jtdm, 136 hp engines)</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The compressor has a special externally-adjusted component and makes it possible to alter the temperature downstream of the evaporator and, if the thermal conditions allow, to reduce the post-heating.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As a matter of fact, in conventional systems, when an intermediate air temperature is requested, the air cooled by the climate control unit must be heated, wasting a part of the energy used for cooling.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The compressor external control changes the temperature downstream of the evaporator, thereby reducing post-heating.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This allows fairly good energy saving when an intermediate temperature is required at the vents.</p>
+          <center>
+            <img src="images/jpg/939008934_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Outside air</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Cooling</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Post-heating</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Outlet to the vents</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Conventional system</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - External control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C - Energy saving</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Using the mechanical energy from the engine via the electromagnetic clutch and pulley, this machine allows the circulation of the refrigerant in the circuit varying the pressure level.</p>
+          <h3 class="bigtext3">Features of the variable displacement compressor</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The car comes with a VALEO ZEXEL DSC17EC compressor</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Maximum capacity</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">171 cc/rev</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Minimum capacity</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 cc/rev</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Number of cylinders</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Number of maximum continuous revs</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8000 rpm</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Number of maximum non continuous revs</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8500 rpm</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Direction of rotation</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Clockwise</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Oil type and quantity</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ZXL100 PG-150 cc</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The capacity of these types of compressors may increase or decrease depending on variations in load requested by the system, changing exterior conditions such as temperature and/or humidity and sharp variations in engine load conditions.</p>
+          <center>
+            <img src="images/jpg/939008935_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <center>
+            <img src="images/jpg/939008936_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Mechanical torque limiter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Main shaft</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Rotor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Pin</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Thrust bearing</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Piston</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - External control actuator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Orifice</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Connecting rod carrier plate</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Cam</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Spring</p>
+          <h2 class="bigtext2">Traditional compressor</h2>
+          <center>
+            <img src="images/jpg/939003863_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Screw</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Guide plate</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Thickness</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Circlip</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Pulley assembly</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Circlip</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Electromagnetic coupling</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Shaft sealing assembly</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Oil drain plug</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. O-ring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. Compressor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. Control valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13. Seal ring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14. O-ring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15. O-ring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16. O-ring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17. Pressure relief valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18. O-ring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The compressor is the oscillating disc type.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With this type of compressor the cylinders and pistons are arranged axially along the crankshaft. The pistons work inside the cylinders and are controlled by an oscillating disc to produce the intake, compression and exhaust strokes. In variable capacity compressors, with oscillating discs, the angle of the oscillating disc is altered to change the stroke of the piston and the capacity.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <h3 class="bigtext3">Oscillating disc</h3>
+          <center>
+            <img src="images/jpg/939003864_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The crankshaft (8), which is operated by the engine by means of an electromagnet coupling, is equipped with a thrust flange (7) and is connected by a joint (3) to the oscillating plate (6).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The crankshaft is supported by two radial bearings (1) and two thrust bearings (2). The oscillating plate is controlled with an alternating motion by the rotation of the crankshaft and operated by the alternating motion of the pistons (4).</p>
+          <h3 class="bigtext3">Movement of the pistons</h3>
+          <center>
+            <img src="images/jpg/939003865_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pd: Exhaust pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ps: Intake pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pistons in the cylinders are connected to the oscillating disc by two pads (9). The rotation of the thrust flange (7) is transformed into the alternating motion of the oscillating disc (6) and the pistons (4).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The cylinder block (5) has seven cylinders evenly arranged around the crankshaft. The pistons work inside the cylinders and produce the intake and compression strokes.</p>
+          <h3 class="bigtext3">Control of the stroke</h3>
+          <center>
+            <img src="images/jpg/939003866_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pd: Exhaust pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ps: Intake pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pc: Internal chamber pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The check valve (11) on the cylinder head controls the flow of gas in the internal chamber depending on the intake pressure (Ps) and the exhaust pressure (Pd) which represent the thermal load.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A reaction spring (10) is housed at the front of the oscillating disc.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The force of the spring, the thrust of the gas on the piston crown and the thrust of the internal chamber (Pc) on the rear surface of the piston produce a torque that controls the angle of the oscillating disc (6) and vary the stroke of the piston (4).</p>
+          <h3 class="bigtext3">Operation</h3>
+          <center>
+            <img src="images/jpg/939003867_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The thrust flange (7) on the crankshaft (8) and the variable angle oscillating disc (6) are connected by a joint (3).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The joint acts as a fulcrum and the angle of the oscillating disc is altered by the ball joint (12) on the oscillating disc that moves along the crankshaft.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rotation of the oscillating disc (6) is converted into an alternating motion by the movement of the ball joint (12). The piston (4) is fitted on the oscillating disc by means of two pads (9). The stroke of the piston is altered according to the angle of the oscillating disc to produce the variation in the cylinder capacity.</p>
+          <h2 class="bigtext2">Condenser with integrated drier filter</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The condenser is a heat exchanger located in front of the engine coolant radiator.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Its task is to condense the refrigerant fluid, in other words transform it from a gaseous state to a liquid state.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The refrigerant fluid in a gaseous state passes through the condenser pipes and liquifies, on average, at a temperature of 60°C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The air comes into contact with the condenser. When the vehicle is stationary or driving in a traffic queue, the flow of air is produced by the engine radiator fan.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the heat exchanger in the condenser is insufficient, this increases the pressure in the system and causes the incomplete condensation of the fluid, reducing the efficiency of the system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is a housing on the left side of the condenser for the drier filter. This allows the layout of the system to be improved.</p>
+          <center>
+            <img src="images/jpg/939003868_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Condenser</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Built-in drier filter</p>
+          <h2 class="bigtext2">Fan</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the manual system the fan is activated by the passenger compartment air speed selector, which sends the signal to a resistive divider which produces the different speeds. The resistive divider is fitted in the duct between the dynamic air intake and the unit to cool it.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the automatic system the fan is operated by dedicated buttons in the control panel which send the signal to the Climate Control Node which produces different voltage values for the different speeds.</p>
+          <h2 class="bigtext2">Pollen filter</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pollen filter is designed to filter the outside air entering the passenger compartment.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is located inside the air conditioning casing and can be replaced by removing the oddments compartment in the passenger's compartment.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The filter is fitted on both the manual version and the automatic version of the climate control system.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003527&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=AIR+CONDITIONER+-+DESCRIPTION&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:15:47 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011420&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 21:33:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011420&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="EX1WledK0HqbBTEpBOKKqPMdQPSmWad/DINrCXlX0NrLiA2IphBuEnXX75Bzy85yD7oDIPA3wAtsicbYzhgSEf21iCx9JUXU11MeEEQF57TteweyOZhM0Cov4TlTbwdNrIJc5QsCrsThCnV9X3cPetpblXRVKMHrklT3BxZHYuYhmMvH2S0PWHuamwBpRN2LZcUjGgMXFFZR/IHrO5I7Dgwp7QNOeJ5C24+1ru71JnMk97Sh+5wsz6x3gcRGia4q0gIBNtWVi+CrKMuE5IqcblwLGDiWSYKEdCtx+ToUW0dGEzxc8wN/y2Xn9SXQAwrCYuPVgU6DR6Y7LrYI9/xAKM130KNXkUPqXFpj85Pv4dSln5yNCN0EG7XDGrD4WHfSAJKhyY8k9W2sjiWftau1p4TBmswbYCI7QNXT9WsDkfkcCVVCbaC50c9682+GsCqtcMmHiQFL5Ch8v8yhcAp9RpoD9mJqDT77ycgAm/8hepYlvxVB/oeQqCYXLMxPm0IEZwdZmUlws04E9T8MvAlLxlb14FknqMN0q9M7N3fIWYuW7RLucSvFTGCPUbJtoGjW4/P5PsZ4P9dmaahJATz6lh0n2ruZJ7ALI+cPT6ra7JN1Bxn6PW50pl02J6sMU+geWTSgK9X0U1/mvqDPIavZsVoUoZYWeEadWPMIYZp3afzCN21N3ywaLXK7W1zCIQgxLp+SEEuuesmPBQ8OhjWhjC9fJ/yRxJ1OTTd6d6DC0iAiOgCHay8/qrkHe3UpQBorgc6/cPQ1662joedWYkDMwY1hgFbMyNtK9dXl4uEKrxhbKQ1emixObQSLAZ+jkEynY05afM8rLfLN+fXxL9D8A2DHjntQBGScEpFMtMS1PHLgCiPiTSN+BuEkbNmRpwOn4QxmQuH53vO2EN3t7ijPIzuaWJ8D1fuPg4uI36txkLM=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/N0Zw5sIDcZdHLMWgkZvkoXySh0zd0OQfnLXqobt7K1fSNCmwuTOswv+svplppeswtaYWfckMV8DMHHvSsqpI4Z7Jq+k1lUZvQvgD89eS8PkA8DtL7IlxLiN/6ttHC97" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspR.R. REAR WING LOWER FRAME&nbsp&nbsp&nbsp7210B50&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939004290_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/20_2.jpg" border="0">Removing<a class="title" name="0"></a>
+		(
+		<a href="#1" class="title_link">Refitting<img src="images/jpg/21_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale "><input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_0_939011405" onclick="
+        ViewiFrame(btn_0_939011405)
+      "><span class="testo_link"> </span><a class="contents_link" href="mainad49.html?nodeID=939011405&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=R.R.%20REAR%20WING%20LOWER%20FRAME&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7210E52 R.R. REAR WING</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_0_939011405"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p><p class="contents_testonormale ">- Check that the components connected are not distorted by checking the bodyshell alignment measurements using suitable equipment (gauges, templates or jigs).</p><p class="contents_testonormale ">- Straighten the body as necessary.</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011420&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 21:33:15 GMT -->
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939004291_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Use a hack sawing machine following the cutting line shown in the diagram.</p>
+          <p class="contents_testonormale ">- Use a rotary brush to remove the paint to gain access to the spot welds.</p>
+          <p class="contents_testonormale ">2. Use the chamfering machine to remove the spot welds shown in the diagram.</p>
+          <p class="contents_testonormale ">- Use the drill and chamfer the spot welds not accessible with the chamfering machine.</p>
+          <p class="contents_testonormale ">- Use the hammer and chisel and remove the spot welds chamfered previously.</p>
+          <p class="contents_testonormale ">- Remove the part and the offcuts from the vehicle.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939004292_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">- Straighten the edges of the vehicle using a mallet and profiled block.</p>
+          <p class="contents_testonormale ">- Remove the spot weld residues using a disc grinder.</p>
+          <p class="contents_testonormale ">- Use a rotary brush to clean the areas treated previously.</p>
+          <p class="contents_testonormale ">1. Apply electro-galvanizing paint.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939004293_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Remove the anti-corrosion treatment from the entire perimeter of the inside and outside of the replacement part using a rotary brush.</p>
+          <p class="contents_testonormale ">2. Drill the part at the points shown using a drill.</p>
+          <p class="contents_testonormale ">- Apply electro-weldable paint to the edges involved.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939004294_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/21_2.jpg" border="0">Refitting<a class="title" name="1"></a>
+		(
+		<a href="#0" class="title_link">Removing<img src="images/jpg/20_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">1. Position the replacement part correctly on the vehicle and secure it using self-locking clamps.</p><p class="contents_testonormale ">- Check the alignment and the surrounding gaps.</p><p class="contents_testonormale ">2. Use a spot welder in the areas shown in the diagram.</p><p class="contents_testonormale ">3. Use a MIG welder and weld the openings made previously in the replacement part.</p></td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939004295_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">- Correct any distortions to the panel using a hammer and dolly block.</p>
+          <p class="contents_testonormale ">1. Use a disc grinder to level the welds.</p>
+          <p class="contents_testonormale ">- Use a rotary brush to clean the areas welded previously.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939004296_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Apply anti-oxidant protection to the areas involved in the welding.</p>
+          <p class="contents_testonormale ">- Seal the join lines between the replacement part and the vehicle.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <p class="contents_testonormale ">
+            <input type="image" width="13px" height="13px" src="images/espandi.gif" id="btn_1_939011405" onclick="
+        ViewiFrame(btn_1_939011405)
+      ">
+            <span class="testo_link"> </span>
+            <a class="contents_link" href="mainad49.html?nodeID=939011405&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=R.R.%20REAR%20WING%20LOWER%20FRAME&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7210E52 R.R. REAR WING</a>
+    </td></tr></table><table style="height:0px;margin:0px 20px;padding: 0; width:90%;" border="0" cellspacing="0" cellpadding="0"><tr style="height:0px;"><td style="height:0px;">
+    <div style="width:100%; visibility:hidden; height:0px; border:solid 1px blue; margin-left:20px;" runat="server" id="iFrame_1_939011405"></div>
+    </td></tr></table><table style="width:90%;"><tr><td valign="top" align="right" width="250px" height="1px"><img src="images/none.gif" width="250px" height="1px" class="contents_jpeg"><img src="#" visible="false" height="1px" class="contents_jpeg"></td><td>
+    </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Station Wagon</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939005385_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <img src="images/jpg/20_2.jpg" border="0">Removing<a class="title" name="0"></a>
+		(
+		<a href="#1" class="title_link">Refitting<img src="images/jpg/21_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale "><span class="testo_link"> </span><a class="contents_link" href="mainad49.html?nodeID=939011405&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=R.R.%20REAR%20WING%20LOWER%20FRAME&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7210E52 R.R. REAR WING</a></p><p class="contents_testonormale ">- Check that connected components are not distorted by checking the bodyshell alignment measurements using suitable equipment (gauges, templates or jigs).</p><p class="contents_testonormale ">- Straighten the body as necessary.</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Station Wagon</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939005386_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <p class="contents_testonormale ">- Use a rotary brush to remove the paint and gain access to the spot welds.</p>
+                <p class="contents_testonormale ">1. Use the chamfering machine to remove the spot welds shown in the diagram.</p>
+                <p class="contents_testonormale ">- Use the drill to chamfer the spot welds that aren''t accessible to the chamfering machine.</p>
+                <p class="contents_testonormale ">- Use a hammer and chisel to remove the previously chamfered spot welds.</p>
+                <p class="contents_testonormale ">2. Remove the part from the vehicle.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Station Wagon</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939005387_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <p class="contents_testonormale ">- Straighten the edges of the vehicle using a hammer and dolly block.</p>
+                <p class="contents_testonormale ">- Remove the spot weld residues using a disc grinder.</p>
+                <p class="contents_testonormale ">- Use a rotary brush to clean the previously treated areas.</p>
+                <p class="contents_testonormale ">1. Apply electro-galvanizing paint.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Station Wagon</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939005388_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <img src="images/jpg/21_2.jpg" border="0">Refitting<a class="title" name="1"></a>
+		(
+		<a href="#0" class="title_link">Removing<img src="images/jpg/20_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">1. Remove the anti-corrosion treatment from the entire perimeter of the inside and outside of the replacement part using a rotary brush.</p><p class="contents_testonormale ">2. Drill out the part at the indicated points.</p><p class="contents_testonormale ">- Apply electro-weldable paint to the edges involved.</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Station Wagon</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939005389_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <p class="contents_testonormale ">1. Position the replacement part correctly on the vehicle and secure it using self-locking clamps.</p>
+                <p class="contents_testonormale ">- Check the alignment and the surrounding gaps.</p>
+                <p class="contents_testonormale ">2. Use a spot welder to weld the areas shown in the diagram.</p>
+                <p class="contents_testonormale ">3. Use a MIG welder to fill weld the openings made previously.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Station Wagon</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939005390_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <p class="contents_testonormale ">- Correct any distortions to the panel using a mallet and dolly block.</p>
+                <p class="contents_testonormale ">1. Use a disc grinder to level the welds.</p>
+                <p class="contents_testonormale ">- Use a rotary brush to clean the previously welded areas.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Station Wagon</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939005391_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <p class="contents_testonormale ">1. Apply anti-oxidant protection to the areas involved in the welding.</p>
+                <p class="contents_testonormale ">- Seal the join lines between the replacement part and the vehicle.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Station Wagon</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+              </td>
+              <td valign="top">
+                <p class="contents_testonormale ">
+                  <span class="testo_link"> </span>
+                  <a class="contents_link" href="mainad49.html?nodeID=939011405&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=R.R.%20REAR%20WING%20LOWER%20FRAME&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7210E52 R.R. REAR WING</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

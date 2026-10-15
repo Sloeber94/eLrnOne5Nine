@@ -1,0 +1,609 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926063&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Bollettini+Te.Se.O.&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:43:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926063&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Bollettini+Te.Se.O.&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="s0tkTF7a/SoWD39JUWcUuilf0nBeQJo0oGBfgI8bzPX7wgUATZsIliwIjAmoqV1pLfsQ6nNWp5heiEneoljx3zN//MPZ4FGLRe/Qf0m1psgD2gPvyKOQXWnzQY115KnbimmoJqJUao+0taJ/88MtOZ1eJz46Fl4sSIicnVagY+s5qdpzScARhaAVR/tUCvq8AxabGcd/50SkU+FoKY3eWnWa9siXH4Xy3MfX+6CNJQDQa58X5pVqm3gB/JuQflX7TACxwe2zyC/xL77G0+coPfZ7DBLO3ykClvlmtPdxo/Su7+rEeAV9EmjK3Pzom1/VfEiFsCCHMfnssW6GlHn4L2nDAYLAJeB87uhcmJme0uXJTsNXmY1q7b8lnoZmQ4CvL9Y0R9eCpaDAyunlrjCqm+UdsNTzw+F5PzhLEX5DI2UeZgv6CZQcuJsQxGreqBuPh461PkLQpNp4DdHvXN4sfgvRjLbuM6WxKuB5jHciSVQN3iDd9oxQ55QF/64Df8lTqI6sa8WshIXQWTHx2XcgFUEN20+4X8+2O1M4ADQbIhe8si2j3l6ThKWuKCC9PUAn" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/TESEO.jpg">
+                  <img class="snfiat" src="images/TESEO.jpg">
+                  <img class="snlancia" src="images/TESEO.jpg">
+                  <img class="snAbarth" src="images/TESEO.jpg">
+                  <img class="snfiatPro" src="images/TESEO.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Te.Se.O. Newletters</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+                      Copyright © by FCA Italy S.p.A. </i>
+                        </span>
+                      </td>
+                      <td align="right">
+                        <span style="font-size:9">
+                          <i></i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Alfa 159</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>All models not subject to Tutorship</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">
+                    BT </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">005.10</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>9910121 1 AE</b>
+                  <b>0.70</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>STEERING COLUMN STALK</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Rear window wiper</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <h1 class="bigtext1">CUSTOMER'S REPORTED FAULT</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear window wipers not working</p>
+          <h1 class="bigtext1">TECHNICAL CAUSE</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Customer's reported fault confirmed</p>
+          <h1 class="bigtext1">OPERATION </h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the customer's reported fault has been confirmed, perform the below mentioned inspections/controls to verify the correct functionality of the steering column stalk, following the instructions in the table.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Preliminary operations</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the rear screen wiper protection fuse and replace it if necessary. Check that the system is working correctly.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the reported fault is that the rear window wiper is not working, proceed as indicated in table 1.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the reported fault is that the rear window wiper arm does not go back to the rest position, proceed as indicated in table 2.</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="4" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>TABLE 1</b></p></td>
+            </tr>
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Step</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Verification</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>OK</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>KO</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Disconnect the female holder connector attached to the "B" male holder connector seat of the steering column stalk:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">check for any possible loose contact, incomplete connections, terminals that are poorly seemed, loose or inverted. Then proceed to the correct reconnection of the female holder connector "B" to the seat of the steering column stalk.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fig. 1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Go to <b>step 2</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Repair any faults, reconnect the connectors and check that they are working correctly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the failure persists, go to <b>step 2.</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remove the female holder connector "B" only. The rear window wiper must be turned off and the wiper at rest.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Identify the outputs 1 and 12 on the female holder connector "B" and shunt them after turning on the panel.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">By performing the operation described above, the rear window wiper must start its travel until the outputs are shunted; if the jumper is removed the wiper must immediately interrupt its travel.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fig. 2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the rear window wiper does not move, check the motor and the electric system between the steering column stalk connector and the motor.</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace the steering column stalk.</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="4" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>TABLE 2</b></p></td>
+            </tr>
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Step</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Verification</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>OK</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>KO</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan="2"> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1</b></p></td>
+              <td class="body_table" colspan="" rowspan="2"> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Shunt outputs 1 and 12 of the female holder connector again and stop the wiper halfway across the rear window by disconnecting the jumper.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the wiper stopped halfway on the rear window:</p><p class="titolo_lista"></p><ul style="color:white"><li class="elemento_lista2"><span style="color:black"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">switch the panel off</p></span></li><li class="elemento_lista2"><span style="color:black"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">make sure that the windscreen wiper control lever in the steering column stalk is in the OFF position (completely off)</p></span></li><li class="elemento_lista2"><span style="color:black"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">reconnect connector "B" to the steering column stalk.</p></span></li><li class="elemento_lista2"><span style="color:black"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">switch the panel on again.</p></span></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When these operations are carried out, the wiper should go back to the rest position and stop.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fig. 2</p></td>
+              <td class="body_table" colspan="" rowspan="2"> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the motor does not start, replace the steering column stalk</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the motor does not start, replace the steering column stalk.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the motor starts again but will not stop, go to <b>check 2</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remove the stalk from the steering column and reconnect connectors "A" and "B" to the steering column stalk.</p><p class="titolo_lista"></p><ul style="color:white"><li class="elemento_lista2"><span style="color:black"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Access the terminals at the back of the female holder connector "B" by removing the rear plastic protection of the connector</p></span></li><li class="elemento_lista2"><span style="color:black"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Turn on the panel with the rear window wiper control ring nut on OFF position. At this point, the rear window wiper should spontaneously begin to move.</p></span></li><li class="elemento_lista2"><span style="color:black"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After the first wiper stroke, shunt contact 2 of the female holder connector "B" to earth. The blade should stop immediately and only start again when the jumper is removed.</p></span></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fig. 3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the rear window wiper motor and the electric system from the motor to the steering column stalk.</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace the steering column stalk.</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 1</b>
+          </p>
+          <center>
+            <img src="939008943.html" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 2</b>
+          </p>
+          <center>
+            <img src="939008941.html" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3</b>
+          </p>
+          <center>
+            <img src="939008942.html" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the customer's reported fault persists,<b> contact Te.Se.O. Do not carry out any interventions and/or replacements.</b></p>
+          <h1 class="bigtext1">CLAIM REPORT DATA</h1>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Version</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Piece</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fault</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Position</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Time allowance</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All models in question</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9910121</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AE</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.70</p></td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">
+          </h2>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Sheet </b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Model</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Subject</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Release date</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Date of last update</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Closing date</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Notes</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">005.10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Alfa 159</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">STEERING COLUMN STALK</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">27/06/2008</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+
+
+            <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926063&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Bollettini+Te.Se.O.&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:43:14 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

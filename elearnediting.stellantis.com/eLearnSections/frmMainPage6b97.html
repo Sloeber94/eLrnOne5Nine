@@ -1,0 +1,1281 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003520&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003520&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="QUjzZU+S63fQBm+MSqEvflOGyzuy1o6ayMwi+orQMQAsSTKCvK83OHSIZXzu1uVfjSTxt31GDpehU43U8N2D2uIEo5z7xGdBnk2Xlvq6c9f3E0LeZk4NvTn/NN5aYkaN4jL3gpIDciBzSNyOXMvvEbsUvR1t5Mmi34YkCdu6NsfA327aHNWOwXVcVlOPIKtRs0AfLiRjAD6TitaFFTBzWCH2wips469awgX/lqdoEw3emaPO6RmQxMbcocI+4C5S7Ibu/fYIC7mVLbXNuXM+lZzMoIazfzE+votmjcZdGTKfckJ98/VBd6CAk7LgC8+iitHQuvJGawwuHv9jVyyatP+dhNXJW/hnnEULUR2x5yEwh85JdjaHTL668R9yXLggFXxviPwmy0c5YO9YhCh49+KGlqJrOJqkL3N8iUPd0BUkfqKRYRs4UudBD6ztkMZwOF0/0WkGja/u1G7zQnRrh0yUI2O8x6vhATAhmdGoIZMo1hoj5asg/YEY0eqwQ/rSFtQzpPmI8vXfWnTIzHxig/BHX9A3SurQ3c2rIyfbJIFWucB8vwD8fjbJanboDYgdrdtTzFM64rww7U6/BERS57wWW1+Hn8/t5X0AEiAC52X4mUbPEAXyUvv2Jp83w4wX/QX9CraBZg57+MfByPzeuWUy98wuy4SMyqxZ64iaMiTFPcgFAyMzAaIncJzJw4HRUgQzz1ia2T1DwdMgmvafOLwu6Bx/inzzzaNZdSEmG9iwQ0FfyUYJloQlQJiqF6NMMvosCxmywE89lPJfzGP/HOit5sflY61NJms1Vw2NfcM=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - BRAKES&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">SPECIFICATIONS</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The braking system is the power assisted hydraulic type, comprising two crossover, independent ciruits (each circuit acting on one front wheel and the diagonally opposite rear wheel) to ensure braking and stability even if one of the circuits fails.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is also equipped with the following assisted braking and steering systems:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ABS: anti-lock braking system;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- EBD: electronic brakeforce distribution between the front and rear wheels;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ASR: traction control via management of the brakes and engine control unit;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- MSR: engine brake control by means of engine control unit management;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- VDC: electronic vehicle stability control;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- E-Q2: this is a device integrated in the VDC to increase stability modulating the transmission of torque to the wheels (for M.Y. ''08 versions only);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- HBA: automatic increase in braking pressure during emergency braking;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Hill Holder: assisted hill start system that keeps the vehicle braked while parked on slopes and automatically releases the brakes when the driver wishes to set off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The vehicle is equipped with an ABS/EBD brake control system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ABS is fitted parallel to the hydraulic braking system so that should it not work braking would still be guaranteed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ABS incorporates the EBD function (Electronic Brake force Distribution) therefore the hydraulic system does not have a rear load proportioning valve.</p>
+          <h1 class="bigtext1">ABS/EBD SYSTEM</h1>
+          <h2 class="bigtext2">View of assembly</h2>
+          <center>
+            <img src="images/jpg/939001990_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. ABS/EBD control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Left front wheel sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Right front wheel sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Right rear wheel sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Left rear wheel sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. EBD warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. ABS warning light</p>
+          <h2 class="bigtext2">Specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ABS control unit implements the ABS and EBD functions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ABS control unit is connected to the front wiring, the system cable loom is incorporated with the engine compartment cable loom.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pin out of the ABS control unit with EBD is different from control units with ASR and VDC functions.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Composition</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ABS consists of:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- an electronic control unit integrated with the electrohydraulic control unit;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- an electrohydraulic control unit that modulates braking pressure by means of eight solenoids, two for each wheel</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- four active sensors that detect the angular rotation speed of the wheels;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- wiring with specific connector.</p>
+          <h2 class="bigtext2">Operation</h2>
+          <h3 class="bigtext3">Introduction</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic control unit processes signals from the active sensors and from the brake light control switch. It identifies the wheel or wheels with a tendency to lock (maximum slip between wheel and road surface) by means of the control unit software and modulates the brake fluid pressure selectively for the front wheels and in tandem for the rear wheels (select-low function).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ABS modulates brake pressure in accordance with three basic stages:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- pressure maintenance stage;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- pressure reduction stage;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- pressure increase stage.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If operation is requested, the ABS stays active at speeds greater than 2.7 km/h. After that, it cuts out to allow the car to stop. After each key ON and when a speed of 6 km/h is exceeded, the control unit carries out an operation check on the solenoids and pump motor. The control unit also tests the sensors when a speed of 12 km/h is exceeded.</p>
+          <h3 class="bigtext3">Operating logics</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PRESSURE INCREASE STAGE WITHOUT ABS OPERATION</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the brake pedal is pressed, the electronic control unit (1):</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- does not supply the pressurizing solenoid (N.A.) (2)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- does not supply the discharge solenoid (N.C.) (3).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pressure generated by the brake pump (4) therefore reaches the brake calipers (5) without undergoing changes.</p>
+          <center>
+            <img src="images/jpg/939001991_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EXAMPLE OF ABS OPERATION</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressure maintenance stage</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic control unit (1):</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- supplies the pressurizing solenoid (N.A.) (2);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- does not supply the discharge solenoid (N.C.) (3).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Therefore the hydaulic connection between the brake pump (4a) and the brake caliper (5) is broken.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pressure in the brake caliper (5) remains constant even when pressure on the brake pedal is increased.</p>
+          <center>
+            <img src="images/jpg/939001992_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressure reduction stage</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic control unit (1):</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- supplies the discharge solenoid (N.A.) (2);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- supplies the discharge solenoid (N.C.) (3).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The hydraulic connection between the brake pump (4) and the brake caliper (5) is broken and the discharge solenoid (3) opens and brings the brake caliper (5) into communication with the low pressure accumulator (6) and scavenger pump (7).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic control unit (1) also supplies the motor (8) controlling the scavenging pump (7) to restore the fuel taken to the brake caliper (5) to the main circuit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fluid flows through the high pressure accumulator (9) and the restriction (10) that performs a damping function.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is equipped with a check valve (11) fitted in parallel with the pressurizing solenoid (2) that allows a fast reduction of pressure in the brake caliper (5) during brake pedal release.</p>
+          <center>
+            <img src="images/jpg/939001993_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressure increase stage</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic control unit (1).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- does not supply the pressurizing solenoid (N.A.) (2);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- does not supply the discharge solenoid (N.C.) (3).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fluid taken into the main circuit is then free to return to the brake caliper (5) and increase the pressure acting on the brake caliper.</p>
+          <center>
+            <img src="images/jpg/939001994_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD FUNCTION (Electronic Brake-Force distribution)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The EBD function controls the distribution of brakeforce and therefore replaces the conventional mechanical load proportioning valve to allow:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- independent action on the rear brake calipers;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- improved brakeforce distribution;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- optimum performance in all load conditions (static or dynamic), driving conditions (in a straight line or cornering) and when the vehicle is in any state of repair (worn tyres, brakes or suspension);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- implementation of a strategy that follows the ideal distribution curve.</p>
+          <center>
+            <img src="images/jpg/939001995_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fa - Front axle brake force</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fp - Rear axle brake force</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Distribution curve implemented by the braking system</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - Ideal distribution curve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C - Distribution curve implemented by a conventional hydraulic load proportioning valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D - Distribution curve implemented by the EBD function</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD function failure is indicated by the simultaneous activation of:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ABS warning light;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- low brake fluid and/or handbrake on warning light.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Under these conditions, the car must be driven with extreme caution to the nearest authorised workshop to check the system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RECOVERY</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic control unit is equipped with a safety circuit that monitors ABS efficiency.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the ignition key inserted, the safety circuit carries out an initial auto test for 4 seconds to check:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- electronic control unit operation;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- solenoid operation.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Every time the car starts off from a standstill, the safety circuit checks for signals from the active sensors.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the car is in motion, the safety circuit works as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- continually compares angular wheel speed with the calculated reference speed;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- checks memory conditions;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- checks operation of both relays, the solenoids and the pump motor;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- constantly monitors battery voltage;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- monitors the efficiency of the brake pedal switch.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the safety circuit detects one or more faults in system components during the check stage, the safety circuit operates as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- deactivates the ABS while still guaranteeing operation of the conventional braking system;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- indicates the fault status to the driver by turning on a warning light in the control panel.</p>
+          <h1 class="bigtext1">BRAKE VACUUM SYSTEM - For the 3.2 JTS version only</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Due to its operational characteristics, the 3.2 JTS version of the engine, under the following conditions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- after cold starts;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- while warming up;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- with the climate control system in operation,</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">generates a minimal vacuum in the brake servo caused by the greater throttle opening.</p>
+          <h2 class="bigtext2">Description</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The brake servo vacuum circuit is equipped with a by-pass that incorporates two single-acting valves (5) and (7) that operate due to the pressure differences (P1) and (P2) present upstream and downstream of the throttle body.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the level of the valve (5), the pipe contains a constriction (6) to take advantage of the Venturi effect.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The brake servo (9) is fitted with a brake servo minimum vacuum sensor (8) that indicates the vacuum present in the brake servo to the engine management unit.</p>
+          <h2 class="bigtext2">Operation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine cold or with additional loads, the air flows through the by-pass and communicates with the brake servo by means of the single-acting valve (5) and the presence of the constriction increase the vacuum that removes air from the brake servo.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine hot and without additional loads, the vacuum in the intake manifold is equal to or higher than 600 mb (ideal value) as a result of which the brake servo air is extracted towards the valve (7).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the brake pedal is pressed repeatedly in close succession and especially if the throttle is open, the brake servo vacuum may decrease below the level of - 290 mb.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At this point, the brake servo minimum vacuum sensor (8) cuts in and send an electrical signal to the engine management control unit. Having received the signal (1.5 - 5 Volt), the control unit processes the signal, transforming it into a physical vacuum value and intervenes by deactivating:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the air conditioner,</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the stratified engine operating mode,</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">pressure in the brake servo therefore increases to guarantee service for at least three repeated presses of the brake pedal.</p>
+          <h2 class="bigtext2">Fault diagnosis</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once it has received the signal, the engine control unit performs an electrical diagnosis.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once it has detected a sporadic error, it cuts in to temporarily deactivate the air conditioner and and the stratified engine operation mode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When it detects a validated error (i.e. one that has occurred at least three times) caused by an open circuit or a short circuit to battery/earth, it enters STOP mode, i.e. it finally deactivates the air conditioner and the stratified engine operation mode until the fault is repaired.</p>
+          <center>
+            <img src="images/jpg/939006382_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Intake manifold</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Throttle body</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Air flow meter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Air filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Single-acting valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Restricter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Single-acting valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Brake servo minimum vacuum sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Brake servo</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. Graph showing signal conversion to a vacuum value</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. Connector</p>
+          <h1 class="bigtext1">ASR TRACTION CONTROL/ADJUSTMENT DEVICES</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In addition to the ABS EBD system, the vehicle is also equipped with a system for controlling the stability of the vehicle VDC which includes the ASR traction control system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The VDC system, in particular, thanks to slewing sensors and steering wheel angle sensors, guarantees the monitoring of the dynamics of the entire vehicle thereby improving active safety.</p>
+          <h2 class="bigtext2">View of assembly</h2>
+          <center>
+            <img src="images/jpg/939001996_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. ABS/VDC control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Steering angle sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Engine management control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Left front wheel sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Slewing/lateral acceleration sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Right front wheel sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. ASR off button with warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Right rear wheel sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Left rear wheel sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. VDC warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. EBD warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. ABS warning light</p>
+          <h2 class="bigtext2">Specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Driving a vehicle in all conditions where the physical limits of grip and, consequently, stability may be reached can be a difficult task for the average driver. Therefore, in order to further improve safe driving conditions, an electronic system capable of assisting the driver with this difficult task is available.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The systems currently employed to ensure safer driving in particular conditions are mainly the A.B.S. which controls braking and the systems which control traction during acceleration through action on the brakes (T.C.) and traction/drive torque during acceleration and release through action on the brakes and on the engine control system motorized throttle (A.S.R./M.S.R.).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The VDC system includes all the above listed functions ensuring optimum dynamic control of the vehicle with the addition of specific sensors:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- steering angle sensor on the steering wheel;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- slewing/lateral acceleration sensor at the centre of gravity under the centre console.</p>
+          <center>
+            <img src="images/jpg/939001997_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">μ - Wheel grip</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">S - Slip</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - EBD intervention area</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - ABS intervention area</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C - VDC intervention area</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Lateral force curve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Longitudinal force curve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As can be seen from the grip/slipping diagram, the area covered by the VDC system is larger than that covered by a conventional ABS/EBD system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The VDC system cannot be switched off as it is a safety system; the A.S.R./M.S.R. function, on the other hand, can be switched off via the button in the centre console.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To ensure the drive of the vehicle (drive wheels) with snow chains fitted or in particular road surface conditions (snow, ice, deep mud, sand or gravel) it is advisable to switch the A.S.R. off.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The intervention of the VDC system is signalled by a special warning light in the instrument panel node.</p>
+          <h2 class="bigtext2">Composition</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The VDC system consists of:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- an electro-hydraulic/electronic A.B.S. control unit (with an VD logic);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- interface with the C-CAN line, resident in the ABS control unit for communication with the engine control unit, steering angle sensor and lateral acceleration sensor;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Magnetic-resistive type wheel speed sensors;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- steering angle sensor with CAN interface (steering angle sensor);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- slewing/lateral acceleration sensor in one piece integral with the CAN interface;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- brake fluid pressure sensor incorporated in the ABS control unit;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ABS-EBD-VDC warning light in the instrument panel controlled via the dedicated serial line;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ASR off switch with a warning light in the button.</p>
+          <h2 class="bigtext2">Operation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The VDC continuously recognizes a loss in grip for the wheels, both longitudinal and transverse, in all driving conditions from braking to acceleration in order to ensure the direction and the stability of the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The management of the VDC system is entrusted to the ABS electronic control unit, integrated with a special electrohydraulic control unit, that allows action on the braking system independently of the action of the user.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit processes the following signals:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- steering wheel rotation angle;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- lateral acceleration and slewing;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine operating conditions;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- wheel rpm;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- hydraulic braking system pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">and uses special algorithms in the electronic control unit software to obtain the figures for the dynamic control of the vehicle:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- longitudinal and transverse sliding between the wheels and the road surface;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- axle drift.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Using these figures the system interprets the effective dynamics of the vehicle; having identified all the critical conditions due to environmental factors (e.g. surface with poor grip) or any errors made by the user (e.g. panic situations) and with subsequent intervention on the brakes and the drive torque, the vehicle is restored to good driving conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system interfaces with:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- NCM for drive torque adjustment via the C-CAN line;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- control panel via a serial line for warning light control.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is combined with a power unit with a specific brake pump; in addition, the pipes between the brake pump and the ABS control unit have a Titaflex insert because the diameter of the pipe (6mm) is larger than regular pipes (4 mm); this is designed to prevent adverse effects on the operation of the VDC at low brake fluid temperatures.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is a dedicated line (line K) for the diagnosis of the system:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The VDC system switches on automatically when the vehicle is started up and cannot be switched off by the user; the button in the centre console only switches off the ASR function and only when advisable.</p>
+          <center>
+            <img src="images/jpg/939001998_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INPUT SIGNALS:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- wheel speed sensors (from direct line) (3);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- three stage normally open brake pedal switch (from direct line) (4);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ASR off button (from direct line) (5);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine control unit (2) (from C-CAN line);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- throttle angle position (7) (from C-CAN line) (only for JTS);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- control panel (12);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- warning light status signal (from dedicated serial line) (10);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- slewing sensor (rotation of vehicle on vertical axis) (from C-CAN line) (9);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- lateral acceleration sensor (from C-CAN line) (9);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- steering angle/steering wheel rotation sensor (from C-CAN line) (11);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- hydraulic system pressure sensor (from direct line) (1).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OUTPUT SIGNALS:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- brake pressure modulation control (13);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ignition advance reduction control (from C-CAN line) (8) (only for JTS);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine power management control (from C-CAN line) (7) (only for JTS);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- injection time management control (from C-CAN line) (15) (only for JTS);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine power management control (from C-CAN line) (14) (only for JTD);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- VSO signal (vehicle speed) (12);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- VDC/ASR-ABS-EBD warning light control in panel (from dedicated serial line) (10);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ASR off LED (6).</p>
+          <h3 class="bigtext3">Operating logics</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In addition to controlling the slipping of the vehicle in a lengthwise direction, the VDC system also controls slipping in a sideways direction and, as a result, controls the lateral stability of the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lateral stability of a vehicle is the result of the reaction of the tyres to lateral forces due to increased centrifugal force.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The action of the lateral forces produce a variation in the drift angle of the wheels and, consequently, a variation in the axle drift (drift angle = difference between the desired route and the effective route).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lateral forces do not, however, act equally on all four wheels because they are not all subject to the same load conditions; in effect the load on the wheel differs depending on the situation the wheel is in, namely:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- acceleration (lightening of the front axle and loading of the rear axle);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- braking (loading of the front axle and lightening of the rear axle);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- cornering to the right/left (loading or the outer wheels and lightening of the inner wheels);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- accelerating/decelerating round a bend (combination of the cases mentioned above).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is obvious that if the lateral forces acting on the individual wheels vary, there will also be a variation in the forces acting on the vehicle axles; consequently the lateral forces acting on the front axle overcome those on the rear axle and viceversa determining a rotation (moment) on the vehicle axis of the vehicle (slewing axis).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The yaw moment affects the behaviour of the vehicle, producing either understeer or oversteer.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Understeer for a vehicle is when, with increasing lateral acceleration, the drift angle for the front axle increases greatly compared with that of the rear axle. When this happens, the vehicle tends to go straight ahead (taking the bend wide) when cornering.</p>
+          <center>
+            <img src="images/jpg/939001999_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Oversteer for a vehicle is when, with increasing transverse acceleration, the drift angle for the rear axle increases greatly compared with that of the front axle. In this case the vehicle tends to turn around on itself (the rear axle tends to go straight, therefore the vehicle "hugs" the bend).</p>
+          <center>
+            <img src="images/jpg/939002000_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In order to keep the effect of lateral forces under control and limit the slewing moment, the ABS control unit must firstly calculate the behaviour of vehicle set by the driver using:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- steering wheel angle sensor;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- accelerator pedal position;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- brake circuit pressure;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">after which the control unit should check the actual behaviour of the vehicle through:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the wheel sensors (vehicle speed/wheel speed);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- lateral acceleration sensor;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- slewing sensor.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit is capable of:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- detecting actions carried out by the user, in effect, through the position of the steering wheel it checks the number of degrees (wide radius or narrow radius bends) and the speed for rotating the steering wheel (sharp or gentle rotations) and, using the position of the throttle and the brake pressure when accelerating or braking, how the user is taking the bend or deviating from the straight path.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- detecting the actual behaviour of the vehicle given the environmental variables, e.g. slippery surface, reaction of the vehicle to incorrect manoeuvres by the user, etc., in order to identify the moment of slewing and the lateral sliding of the axles via the sensors on the four wheels and the slewing/lateral acceleration sensor.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">These two operations are necessary to superimpose the mathematical model mapped in the control unit on the effective behaviour of the vehicle in order to identify the state in which the vehicle is in (understeer or oversteer) and decide the action for the brakes and the engine.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">UNDERSTEER ON CORNERS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit verifies the presence of understeer (mainly from the drift of the front axle), corrects the behaviour of the vehicle, braking the inner wheels round the bend in order to create an opposing moment which will lead the vehicle towards the centre of the bend and, possibly, reducing the drive torque.</p>
+          <center>
+            <img src="images/jpg/939002001_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OVERSTEER ON CORNERS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the presence of understeer (mainly from the drift of the rear axle) the control unit corrects the behaviour of the vehicle, braking the outer front wheel round the bend in order to create an opposite slewing moment, if necessary increasing the drive torque.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system intervenes before the oversteer and understeer values are too high in order to limit the corrective measures that have to be taken, which could make handling difficult.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <center>
+            <img src="images/jpg/939002002_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ABRUPT VARIATIONS FROM A STRAIGHT PATH (SLALOM/OVERTAKING)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the event of sharp variations from the path (e.g. overtaking, slalom), the control unit identifies possible oversteer and understeer conditions and corrects the path of the vehicle, acting as described in the cases mentioned previously.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ABRUPT VARIATION FROM A STRAIGHT PATH (DRIVING OVER DIFFERENT SURFACES)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit is capable of detecting deviations in the path and the prevalence of axle drift, correcting the path through suitable action on the brakes and the engine.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ABRUPT ACCELERATION/DECELERATION</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit uses the ASR/MSR strategy also controlling the lateral acceleration of the vehicle and, as a result, regulating the action on the front and rear brakes and on the engine torque in a more complete way than on vehicles with ASR only.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INTERVENTION - INTERVENTION TIMES IN CONDITIONS WHERE ROAD SURFACE GRIP IS GOOD (ASPHALT)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For JTS versions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Engine torque reduction by the engine management control unit through the alteration of the ignition advances, 6/100 of a second after the slipping limit is exceeded.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A further reduction in torque through a decrease in the throttle opening (by the engine management control unit through the motorized throttle body) after 15/100 of a second.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Intervention of the hydraulic system (braking force on the drive wheels) after 2/10 of a second.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For JTD versions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Torque reduction via the engine control unit by reducing the fuel flow rate, after 6/100 second.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Intervention of the hydraulic system (braking force on the drive wheels) after 2/10 of a second.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OPERATION IN POOR GRIP CONDITIONS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is capable of recognizing these conditions by comparing the acceleration of the drive wheels with the torque transmitted by the engine (engine load from the engine management control unit).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system behaves in the same way as for both drive wheels slipping in good road grip conditions (asphalt) and the intervention levels are at the lower limit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ONLY ONE DRIVE WHEEL SLIPPING</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Intervention - intervention times</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For JTS versions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Torque reduction by the engine management control unit through the alteration of the ignition advances, 6/100 of a second after the limit is exceeded.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A further reduction in torque through a decrease in the throttle opening (by the engine management control unit through the motorized throttle body) after 15/100 of a second.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Intervention of the hydraulic system, a braking action exerted on the wheel that it slipping to guarantee a resistive force on the side with poor grip (TC). This resistive force allows the differential to transmit an equal torque with good grip.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For JTD versions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Torque reduction via the engine control unit by reducing the fuel flow rate, after 6/100 second.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Intervention of the hydraulic system, a braking action exerted on the wheel that it slipping to guarantee a resistive force on the side with poor grip (TC). This resistive force allows the differential to transmit an equal torque with good grip.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">REGULATION OF ENGINE BRAKING TORQUE DURING OVER-RUN (MSR)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Vehicle instability during deceleration in poor grip conditions</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system recognizes this condition from the engine load, from the speed of the front and rear wheels and from the brake pedal sensor. In this case there is an increase in drive torque through the intervention of the engine management control unit opening the motorized throttle (petrol versions) or fuel flow (JTD versions) to overcome the natural instability of the vehicle due to the engine braking torque in poor grip conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ASR CUT-OUT</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the ASR/MSR is cut out, the following functions remain activated:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ABS/EBD;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TC up to a speed of 40 km/h;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- VDC.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CUT-IN THRESHOLDS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The different intervention levels between 2 and 6 km/h depend on environmental factors; some of the conditions have been described in the operating logics, others are:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- high acceleration level, high level thresholds;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- vehicle speed;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- tyre type (normal or winter). With winter tyres and good grip, high level thresholds; with winter tyres and low grip, thresholds are low. The system is capable of recognizing these conditions by comparing the acceleration of the drive wheels with the torque transmitted by the engine (engine load from the engine management control unit).</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ASR function is activated in all vehicle speed conditions, however, the intervention of the brakes is excluded above 40 km/h.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <center>
+            <img src="images/jpg/939002003_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VDC intervention display</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The intervention of the VDC system is displayed by the dedicated warning light in the instrument panel flashing (5 Hz d.c. 50%).</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The VDC system improves driving safety, but there are limited situations which cannot be controlled by the VDC system, therefore it is not seen as a device which improves the performance of the vehicle but as a device that improves the safety of the vehicle.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DIAGNOSTIC FUNCTIONS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ABS control unit is capable of carrying out the autodiagnosis of the system and, in the case of a fault, can:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- deactivate the entire system;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- partly deactivate the system.</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">System status</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ASR warning light on button</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD warning light in NSQ</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ABS warning light in NQS</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VDC warning light in NQS</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HH warning light in NQS</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check (4s)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD/ABS/ASR</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VDC/HH OFF for the first 500 ms</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Whilst driving</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD/ABS/ASR</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VDC/HH ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ASR turned off from key</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD/ABS/HH</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ESP ON ASR</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD faulty</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD/ABS/ASR</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">/VDC/HH OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ABS faulty</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD ON</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ABS/ASR/VDC OFF</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HH ON/OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ASR faulty</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD/ABS ON</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ASR/VDC OFF HH</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON/OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON/OFF</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HH faulty</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD/ABS/</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ASR/VDC ON HH</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VDC faulty</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD/ABS/ASR ON</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VDC OFF HH</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON/OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON/OFF</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Insufficient brake fluid level or parking brake on</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD/ABS/ASR/</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VDC/HH ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ASR/VDC activated</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD/ABS/ASR/VDC</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">/HH ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Intermittent 4Hz d.c. 50%</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HH in action</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EBD/ABS/VDC/HH</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p></td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Operation of warning lights</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ABS control unit activates the warning lights according to the following logic:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- with the VDC on, the warning light in the panel is off and the warning light in the ASR button is off;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- with ASR off, the VDC warning light on the control panel is off and the warning light on the ASR button is on;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- with the VDC activated, the warning light in the panel flashes and the warning light in the button is off;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- when the VDC is faulty, the warning light in the control panel is on.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As the system is connected to the C-CAN line it has a diagnostic line known as line K. The diagnosis of the system can be carried out using the diagnostic equipment connected to the diagnostic socket.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Description of components</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HYDRAULIC SYSTEM OPERATION</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electr-hydraulic unit on the version equipped with VDC has 4 additional solenoid valves.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the (normally closed) intake solenoid valve is activated, the additional quantity of fluid required to increase the pressure and brake the wheel(s) can be received.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the (normally open) pilot solenoid valve is activated, the modulated pressure produced by the supply pump can be maintained in the circuit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the ESP system is not intervening, the electronic control unit:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- does not activate the (N.C.) intake solenoid valve (2).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- does not activate the (N.A.) pilot solenoid valve (3).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In this way the system operates during the following stages:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- pressure increase;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- pressure maintenance;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- pressure reduction;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- pressure increase and resupply.</p>
+          <center>
+            <img src="images/jpg/939002004_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the intervention of the VDC system, the electronic control unit:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- activates the hydraulic pump (1);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- activates the (N.C.) intake solenoid valve (2);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- activates the (N.A.) pilot solenoid valve (3).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Therefore the pressure produced by pump (1) reaches the brake caliper and is modulated, on the request of the electronic control unit, by the discharging solenoid (5) and the pressurizing solenoid (6).</p>
+          <center>
+            <img src="images/jpg/939002005_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h1 class="bigtext1">E-Q2 SYSTEM (for M.Y. ''08 versions only)</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Electronic Q2 system is a device incorporated in the VDC stability control system which allows the almost continuous transmission of torque to the wheels depending on the grip, speed and lateral acceleration of the vehicle by means of the local intervention of the braking system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This function makes it possible to intervene on the braking of the individual wheel that is losing grip in a gentle and proportional manner, allowing the optimum transfer of torque to the wheel for the best compromise between drive (understood as an increase in speed) and maintaining the set path.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The possibility of modulating the intervention of the E-Q2 system is managed according to the driver''s request through the position of the accelerator pedal, the gear engaged, the engine speed and the difference in slipping between the wheels.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The effect on the vehicle perceived by the driver is similar to the intervention of the Q2 front differential; the moment the inner wheel is slipping, for example whilst accelerating through a bend, the E-Q2 system brakes the inner wheel slightly to assist the transfer of torque to the outer wheel and maintain the set path and speed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The operation is perceptible as long as the available grip at the outer wheel is sufficient; when this wheel also starts to slip the operation of the ASR cuts in with the cut off of engine torque and/or action at the brakes.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The E-Q2 system operates independently of the VDC even though it is part of the same stability control system: the VDC intervenes to control excessive oversteer or understeer when slewing is detected in the absence of drive and in the presence of excessive steering wheel angles.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The E-Q2 system is also fitted on 4x4 versions thereby producing the performance of an electronically controlled rear self-locking differential.</p>
+          <h2 class="bigtext2">Operating examples</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Vehicle cornering</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When cornering in poor grip conditions or driving aggressively, the inner wheel often experiences a loss of grip. From the moment in which the ground torque is reduced for the inner wheel as a result of the lightening of the suspension due to the transfer of the lateral load, the conventional differential (which distributes the same torque to both wheels) transfers an equal torque value to the outer wheel which is insufficient for good traction.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are two possible responses in this situation depending on how the vehicle is equipped. On vehicles without ASR-VDC the perceived result is the slipping of the inner wheel, a loss in control of the vehicle (strong understeer) and a lack of acceleration when coming out of the bend. If, on the other hand, the vehicle is equipped with ASR-VDC, there is a reduction in engine power, intervening on the throttle valve and acting on the braking system thereby making it impossible to modulate the accelerator resulting in an unpleasant sensation of a loss of power.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In both cases the result is the sensation of being "stationary" when coming out of the bend.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Where the E-Q2 system is fitted, the moment the inner wheel starts to lose grip, the torque is partly transferred to the outer wheel, by slight braking of this wheel, guaranteeing less understeer, greater stability and a higher speed when cornering.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Ground with poor grip conditions</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When driving over ground with poor grip conditions the drive wheels often experience different grip conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In these particular situations, setting off or sharp acceleration could cause the wheel in critical friction conditions to slip with a serious reaction at the steering wheel, unsuitable take off and the need to make continuous corrections through the steering wheel to maintain the path.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Where the E-Q2 system is present these negative effects are opposed thanks to the gentle braking of the wheel losing grip and the gradual transfer of torque to the wheel that can exploit the increased friction coefficient. This makes hill starts simpler and driving on roads where the surface conditions change frequently safer and more comfortable.</p>
+          <h1 class="bigtext1">DESCRIPTION OF COMPONENTS</h1>
+          <h2 class="bigtext2">Electrohydraulic unit</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electrohydraulic unit consists of an electronic control unit and an electrohydraulic control unit.</p>
+          <center>
+            <img src="images/jpg/939002006_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Electronic control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Electrohydraulic control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Recovery pump assembly</p>
+          <h3 class="bigtext3">Electronic control unit</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic control unit carries out the following functions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- acquiring data coming from the wheel rpm sensors;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- memorises the control parameters defined during the vehicle P.D.I.;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- memorises the control software;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- processes the data acquired;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- controls the braking process;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- detects faults in the braking system components;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- memorises the fault codes and activates the ABS-EBD-VDC/ASR warning lights;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- transmits and receives data via the diagnostic connector;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- converses with the engine management control unit;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- controls the ASR/MSR/VDC process;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- transmits and receives data via the C-CAN line.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN OUT</p>
+          <center>
+            <img src="images/jpg/939002007_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - CAN-L line</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - CAN-H line</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - ASR switch off</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - ASR warning light off</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Not connected</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Diagnosis</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Right front sensor positive</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Right front sensor sensor negative</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Right rear sensor positive</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Right rear sensor negative</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Signal earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12 - Supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13 - CAN-L line</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14 - CAN-H line</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15 - Not connected</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16 - VSO (vehicle speed)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17 - Brake warning light switch</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18 - Serial WL (control panel warning light serial)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19 - Left front sensor positive</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20 - Left front sensor negative</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21 - Left rear sensor positive</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22 - Left rear sensor negative</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23 - VIGN (+ 5 starting)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24 - Pump earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25 - Pump supply</p>
+          <h3 class="bigtext3">Electrohydraulic control unit</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It performs the function of modulating the pressure of the fluid at the brake calipers via solenoids, with the following operating stages:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- brake fluid pressure increase;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- brake fluid pressure maintenance;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- brake fluid pressure decrease.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electrohydraulic control unit is available from the Parts Dept. filled with fluid; take care not to remove the protective caps or turn it upsidedown whilst moving it.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A sensor is fitted on the electrohydraulic control unit for monitoring the pressure of the brake; this sensor is supplied together with the hydraulic unit so it cannot be replaced individually.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electrohydraulic control unit consists of:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- twelve 2-way solenoid valves;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a dual circuit scavenging pump.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- two low pressure accumulators;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- two high pressure accumulators;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- brake fluid pressure sensor.</p>
+          <center>
+            <img src="images/jpg/939002008_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Steering sensor</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The steering angle sensor has the task of measuring the angles in degrees and the rotation speed of the steering wheel and making these figures available via the C-CAN (steering angle sensor node).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor is built into the steering wheel stalk unit and cannot be replaced individually.</p>
+          <center>
+            <img src="images/jpg/939002009_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor measures the following via internal electronics:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the angular position of the steering column;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the rotation speed of the steering column.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This information is processed directly by the sensor and is made available at the brake node via the C-CAN.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor has a range of -720° ÷ +720° and a resolution of 0.7°.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor must be zeroed in relation to the position of the steering wheel in order to work properly. This is carried out as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- turn the ignition key to the OFF position or extract it;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- re-insert the key and start the engine;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- turn the steering wheel (even with the vehicle stationary) through 1/2 turn to the left;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- turn the steering wheel (even with the vehicle stationary) through 1/2 turn to the right;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- drive a short section in a straight line (wheels straight) for at least 100 metres and at a speed over 8 km/h until the warning light goes off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor has an autodiagnostic function and can carry out a plausibility check on the information processed.</p>
+          <h3 class="bigtext3">Lateral acceleration/yaw sensor</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The two yaw and lateral acceleration sensors are designed to measure rotation of the vehicle on the vertical axis (yaw) and lateral acceleration.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connection to the ABS control unit is via the CAN line.</p>
+          <center>
+            <img src="images/jpg/939002010_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor has the following functional specifications:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Supply voltage:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- minimum value 6.0 V</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- maximum value 21.5 V</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- nominal value 12 V</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Operating temperature:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- minimum value -40°C</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- maximum value +85°C</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Current uptake at 12 V:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- nominal value 50 mA</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Lateral acceleration sensor:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- measurement range ± 1.5 g</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor consists of a plastic casing that houses the sensitive elements which detect slewing and lateral acceleration and the electronic management.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor has a connector with six pins, all of which are connected.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor is located at the centre of gravity, on the tunnel between the two front seats.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor receives a direct power supply from the battery and, simultaneously, provides the yaw and acceleration signal to the ABS control unit via the CAN line.</p>
+          <h3 class="bigtext3">Active sensors</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The adoption of active sensors offers the following advantages:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- less sensitivity to the distance between the sensor and the magnetic ring (gap);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a reduction in sensitivity to electro-magnetic interference;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a saving in weight and size;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a simplification of the transmission couplings through the elimination of the phonic wheels.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The active sensors consist of two fundamental components:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a multipolar magnetic coder (1) built into the bearing of the wheel hub bearing with controls;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a magnetic-resistance receiver (2) facing the codifier.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FRONT SENSORS</p>
+          <center>
+            <img src="images/jpg/939002011_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">REAR SENSORS</p>
+          <center>
+            <img src="images/jpg/939002012_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The active sensor operates according to the variation in the internal electrical resistance according to the intensity and direction of the lines of force of an external magnetic field (multipolar magnetic codifier) producing a variable square wave signal whose frequency varies according to the rotation speed of the wheel, but with a constant amplitude.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The active sensor is therefore a proximity sensor with a built-in electronic system, connected by means of a cable to the ABS control unit, from which it receives an electrical supply and to which it transmits the speed of the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The flywheel is a multipolar ring, an elastomer with a certain quantity of magnetic particles which, by means of a special magnetization technique, are orientated to produce different magnets with alternate North South poles in a circumference arrangement.</p>
+          <center>
+            <img src="images/jpg/939002013_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Asr on/off button</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It has the task of switching the ASR/MSR system off and has an LED.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The button 1) is integral with the central console.</p>
+          <center>
+            <img src="images/jpg/939002014_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003520&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:42 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

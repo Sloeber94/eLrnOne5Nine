@@ -1,0 +1,672 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006915&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:58:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006915&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/IqZEi41kMv4bJ6GsymZJg+N7DDnuDqqJnz0N8vBYhqH+6h0X7/IkrI0WkWPHgM3KaAPgs2gpSA7S2c2uB6lHlpDcLCsX1mcooVhjOdYepHma57A2DS9FY90i1bpM1//oVAGzROtHuSeHnhDNmbwSUnGAZVdEnjd58TVR1Yl7sYbamz1+EfXC9GogkOSz09G+3iyjPcv/+jazNCVzVCtrdRrVHXko773vKNpub53Rr2w2ZoDDIJHuU8AXeb7KZLgySNNeqdIa4xT21IrdMj77l74zyFWKQqapf05SdL5Nr6bBwwxfXO/N5oznmxDyPtr9SylrHfTlMlvxTeD0gsEZWcfjbD3rAL6xf4jiGA5Ho4/uIL16dqAJYwD9t9eaEYa285021hGCLosMkPjwLTW0QenUexfnpN52ew9kaWQfzMCeKkysO0MUsbHVp6ZNrQ3Izf/Rn9+pVDGGwlB3EylJE85mvkYYVQzpnRz+Z5FOmdDuiyzArBW/pxeNN5DkNCErTSegbjiGBrhArzQDbmOnCOcZC//MMmcbfQ13B3ZGNcwkms28grNxoLSrBKbzdNj" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 13/07/2007</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Various models</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>(145/146 - 147 - 156 - 159 - 164 - 166 - GT - GTV / Spider - Brera / Spider)</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">55</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">13.07</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>5530 B 000 AA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>BATTERY</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Battery run down after a stop - Diagnostic procedure</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/188000002_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">FAULT COMPLAINED OF</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Battery run down after a stop.</p>
+          <h1 class="bigtext1">OPERATIONS IN NETWORK</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- After this problem has occurred do not try and start the vehicle using a booster.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The checks listed below must be carried out to ascertain whether the battery is repeatedly run down because of:</p>-excessive current absorption at key off by vehicle electrical system;-incorrect operation of the alternator;-incorrect operation of the battery.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Use Midtronics XL505 diagnostic equipment and printer for the fault diganosis of the operating conditions or battery failure.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instrument terminals can be connected directly to the poles of the battery poles, disconnected from the vehicle electrical system. Conversely, for example, taking the measurement with the terminals at the battery control unit (CBA) the reading may be false on account of various contact and cable resistances and therefore the equipment may give an incorrect diagnosis.</p></p></span></td></tr></table><h1 class="bigtext1">OPERATION CYCLE</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1 - Diagnostic procedure for the analysis of the causes of the battery being repeatedly run down.</b></p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="5" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Symptom/Conditions: </b> Failed starting due to battery run down.</p></td></tr><tr><td class="body_table" colspan="5" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Diagnosis</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Step</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operations to be carried out </b></p></td><td class="body_table" colspan="3" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Test results</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CHECK ON BATTERY CONDITIONS ON VEHICLE</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>All OK</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Problems encountered</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the vehicle arrives in the workshop, measure the Loads Outside of the Key (CFC) absorption following the instructions in paragraph <b>3</b>.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the battery is completely run down, in order to measure the CFC absorption without interrupting the continuity of the electrical circuit a 12V feeder (minimum current 5A) should be placed in parallel to the battery or to another battery (without starting the vehicle).</p></p></span></td></tr></table></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step <b>2</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Loads Outside of the Key (CFC) absorption values that do not conform</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Selective analysis of loads by removing fuses and identification of critical loads for absorption.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CHECK ON CONNECTIONS AND BATTERY LEADS CONTINUITY</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>All OK</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Problems encountered </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check the state of the connections and the continuity of the leads between the battery and the alternator; starter motor; engine compartment junction unit; bodyshell earth; engine earth.</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step <b>3</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">State of connections and continuity of battery leads do not conform.</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replacement/tightening of leads.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b> CHECK ON CONDITIONS OF REMOVED BATTERY </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>All OK </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Problems encountered </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td></tr><tr><td class="body_table" colspan="" rowspan="5"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan="5"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Disconnect the battery from the vehicle and carry out the fault diagnosis of the state and conditions following the instructions in SN 55.10.07.</p></td><td class="body_table" colspan="" rowspan="5"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Battery efficient</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">No operation, refit the batteryin the vehicle and move on to Step <b>4</b>.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Battery efficient, needs recharging</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Recharge the battery and carry out the final check (as described in SN 55.10.07 - paragraph 3 - Recharging methods) refit the battery in the vehicle and move on to Step <b>4</b>.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Charge / Retest</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Recharge the battery and carry out a new fault diagnosis (as described in SN 55.10.07 - paragraph 1 - Fault diagnosis of operating conditions or battery faulty) and move on to Step <b>4</b>.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace the battery</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace the battery with another one with the same specifications and move on to Step <b>4</b>.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cell short</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace the battery with another one with the same specifications and move on to Step <b>4</b>.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>4</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CFC ABSORPTION MEASUREMENT</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>All OK</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Problems encountered </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Measure the CFC absorption (following the instructions in paragraph <b>3</b>) after each of the 5 - 10 repetitions of the following sequence: Key On - Key Off, door opening and closing</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step <b>5</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CFC absorption values do not conform</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Selective analysis of loads by removing fuses and identification of critical loads for absorption.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>5</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>ALTERNATOR OPERATION CHECK </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>All OK </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Problems encountered</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alternator supply check (according to instructions in paragraph <b>2</b>)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step <b>6</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alternator supply does not conform.</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Replace alternator</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>6</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>ENGINE WARMING UP</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>All OK </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Problems encountered</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Keep the engine idling, at operating temperature, for 20 minutes</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step <b>7</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>7</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CFC ABSORPTION MEASUREMENT</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>All OK </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Problems encountered</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td></tr><tr><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Measure the CFC absorption (following the instructions in paragraph 3) after each of the 5 - 10 repetitions of the following sequence: Key On - Key Off, carried out with the following loads activated:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- radio;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- interior lighting;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- doors open;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- air conditioning manually activated (with fans at maximum speed).</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Vehicles not equipped with CAN:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">End of diagnosis</p></td><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CFC absorption values do not conform.</p></td><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Selective analysis of loads by removing fuses and identification of critical loads for absorption.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Vehicles equipped with CAN:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move on to Step <b>8</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>8</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CHECK ON SLEEP MODE STATUS - (ONLY FOR VEHICLES EQUIPPED WITH CAN)</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>All OK </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Problems encountered</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check using CAN ANALYZER on EXAMINER starting from release 7.0 of CAN Sleep Mode status.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Do not carry out any operations on the vehicle after the launch.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">No nodes should be activated about 5 minutes after the last Key Off.</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">End of diagnosis</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Values do not conform.</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Make a note of the figures and contact Te.Se.O.</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2 - Check on alternator operation</b></p>-CHECK ALTERNATOR TERMINAL "D+"<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Before taking the measurements, leave the vehicle with the engine off and key off for at least 10 seconds, then:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- connect the Examiner in Voltmeter mode with the positive terminal to terminal D+ of the alternator and the negative earthed.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- with the ignition on (key on), ensure that the measured voltage is less than 5.5 Volt and that the alternator warning light on the panel is on.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if the voltage is more than 5.5 V then the alternator should be replaced (voltage regulator faulty).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- start the engine, keep it above 2000 rpm for more than 3 seconds (activation of fault diagnosis) and return to the idle speed: check that the voltage at D+ is more than 10 Volt and that the recharging warning light in the instrument panel goes out.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if the voltage at D+ is less than 10V and the warning light is on, the alternator should be replaced.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if the voltage at D+ is more than 10V and the warning light is on, check the continuity of the lead from the alternator D+ to the control unit acquiring the D+ signal (body computer or engine management).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if the voltage at D+ is less than 10V and the warning light is off, check the continuity of the recharging lead and the connections between the alternator and the battery.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3 - Procedure for measuring the (CFC) Loads Outside of the Key current absorption.</b></p>-THE MEASUREMENT OF THE LOADS OUTSIDE OF THE KEY ABSORPTION SHOULD BE CARRIED OUT USING AMMETER PLIERS WITHOUT INTERRUPTING THE CONTINUITY OF THE VEHICLE ELECTRICAL/ELECTRONIC CIRCUIT.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following preliminary operations should be carried out:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Key on (without starting the engine).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Key off.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Open a door (preferably the front driver''s door).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Close the door.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Look and check that no consumers are switched on.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the vehicle is equipped with an anti-theft device, keep the bonnet anti-break in button pressed and then place it in the surveillance position.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In order to take the measurement it is necessary to wait until all the vehicle electronic control units are in the sleep mode conditions starting with completing the key on/key off manoeuvre and subsequent door transition. The table below contains the waiting times for the various models.</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Vehicle</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Time [s]</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alfa Romeo 147</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">180</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alfa Romeo 159</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">120</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alfa Romeo GT</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">180</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alfa Romeo 166</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">60</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To take the measurement, proceed as follows:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Set the ammeter pliers at 0 current</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Place the ammeter pliers end of scale at a suitable value for the measurement (depending on the instrument specifications).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Place the ammeter pliers on the negative battery lead so that:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the actual pincers close perfectly (incomplete closure will make the measurement inaccurate);</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- all the leads connected to the negative battery pole are included within the pincers (compatible with the dimensions of the pliers).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Take the current reading.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The absorption value of the key off current reading should be below the limits listed in the table below:</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Vehicle</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Current uptake</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>at key-off [mA]</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alfa Romeo 147</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">less than/equal to 50 mA</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alfa Romeo 159</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">less than/equal to 50 mA</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alfa Romeo GT</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">less than/equal to 100 mA</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alfa Romeo 166</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">less than/equal to 100 mA</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the current absorption measured at key off is equal to 0A (impossible condition), check that the ammeter pliers setting is correct in terms of:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- current 0 setting;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- end of scale.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If, after checking the two previous points, the value measured continues to be 0A, the equipment is damaged and must be replaced.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>4 - Recommended equipment</b></p>-CFC MEASUREMENT<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The use of Tecnomotor EX16 ammeter pliers is recommended together with the EXAMINER electrical kit part no. 1806337000.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pliers are suitable for measuring direct currents from 1mA to 10A with a resolution of 100µA.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ammeter pliers with the same or better technical specifications than Tecnomotor EX16 pliers can be used as an alternative.</p>-Alternator current supply measurement<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are no specific references in the catalogue.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The use of ammeter pliers with a minimum current end of scale of 150A is recommended.</p>-Feeder for CFC measurement with battery completely run down.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are no specific references in the catalogue. The use of 12V feeder with a minimum current end of scale of 5A is recommended.</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006915&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:58:41 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

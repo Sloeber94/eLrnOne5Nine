@@ -1,0 +1,849 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925768&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:58:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925768&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="JQQe+mJ9e0o/WxVPR2Ox8ByL8pfUWbhZKRngVJ83q4/oaLiCZxEPmRCbiozO/Uz5puxQFiMHQNjsM+9zOyBlWbY6QU/13SGQAoJ+iNZWHq1yP3yCL+4uNvF13F30RmIynGChdOGTtwHhhcGdnaWRGb9o66Ac2tHlH5XCNAjEaUtyIw/FCQlRph8e0f82x6Mkb8MSa9WmaCd6nhc5FKnhB4ySPYNsGSmFt4BXE5FQ4EeTVT0UzXGOU2FDgBEqpFMTzksJoZ1EaqPivwb0Aa5F/ClVrXDr+SjqNkkyf84cwQWFSyE5Ufc3YSQtnv1FToVzj4Hx/nEfsQ3VdgVDyZmpZLsQMGO79v+57AmdWdZDhkSRncS/lbQi/yToM5z5ZEkvKAhfbK/XBrQIRF1J7NfusoZC2OSjQ4VbUh99YOrnbe7Q5vXXbPtT93y7j+i7MFCPceziXZsP6oPzI1n87/ciOXqz3Kt5vY/PytCExj3JTsYDUUi/+NessBDo1ijXtM+tFK9wptXW8KinhyPMV13svgVZnY1Gz0RPKRaeq/ty1XH+QLxwSAXUJ+YkGL4/Aaw9" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 23/06/2010</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Various Alfa Models</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>All models - Alfa 159 - Brera/Spider</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">55</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">11.10</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>5580 1 971 RA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>INSTANT NAV / RADIO NAV NAVIGATION SYSTEM</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Various faults - Service Solution</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <h1 class="bigtext1">FAULT COMPLAINED OF</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Customer complains of one or both of the following faults:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Occasional system locking with white screen, or stripes, and/or occasional spontaneous restarting</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Occasional missed acknowledgment of the SD card</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Truncated telephone number</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Display too much bright while in Stand-by.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Lock of the screen with audio still working.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Lock of the system with screen formed by coloured polygons and system restarting.</p>
+          <h1 class="bigtext1">TECHNICAL CAUSE</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Navigator module software.</p>
+          <h1 class="bigtext1">OPERATIONS IN NETWORK</h1>
+          <h1 class="bigtext1">Network behaviour standards towards the Customer</h1>
+          <ul>
+            <li>
+              <span style="color:black">Once the claimed fault is confirmed, reassure the Customer that it can be solved by upgrading the navigator module software.</span>
+            </li>
+            <li>
+              <span style="color:black">After the operation, show the Customer what has been done and make sure he is satisfied.</span>
+            </li>
+          </ul>
+          <h1 class="bigtext1">Service Solution</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If this fault is reported and confirmed, proceed with the upgrading of the navigator module software, as described in the Operating Cycle below.</p>
+          <h1 class="bigtext1">OPERATION CYCLE</h1>
+          <h2 class="bigtext2">UPGRADING SOFTWARE ACQUISITION</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To upgrade the software, the following is required before proceeding:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Check the availability of the following instruments:</p>
+          <ul>
+            <li>
+              <span style="color:black">Personal Computer with Windows© 2000 / Windows© XP / Windows© VISTA.</span>
+            </li>
+            <li>
+              <span style="color:black">Active Internet Connection.</span>
+            </li>
+            <li>
+              <span style="color:black">A new CD-ROM with manufacturer's certification of compatibility with Windows© 2000 / Windows© XP / Windows© VISTA operating systems.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Download the file:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>CD_UPG_1.19.1_RMN939_NoSD_ChkPrj.zip</b>
+          </p>
+          <table class="nota">
+            <tr>
+              <td>
+                <a href="946000000.html" target="_blank">
+                  <img border="0" src="images/zip.png">
+                </a>
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <a href="946000000.html" target="_blank"></a>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Unzip the downloaded <b></b>file and, at the end of the operation, make sure only the file <b>CD_UPG_1.19.1_RMN939_NoSD_ChkPrj.iso</b> is installed</span>
+            </li>
+            <li>
+              <span style="color:black">Burn the CD-ROM with the .iso file as below described:</span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">CD-ROM BURNING</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To burn the software on CD-ROM, use the programme NERO (or similar), whose main screen shots are shown here below by way of example.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The use of rewritable CDs is not recommended.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For this type of application, the recommended options to burn CD-ROMS are the following (Fig. 1):</p>
+          <ul>
+            <li>
+              <span style="color:black">No multisession</span>
+            </li>
+            <li>
+              <span style="color:black">Mode 1</span>
+            </li>
+            <li>
+              <span style="color:black">File System: ISO 9660 + Joliet</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 1</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008880_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Continue and set (Fig. 2):</p>
+          <ul>
+            <li>
+              <span style="color:black">Slower write speed allowed by burning programme (example 8x)</span>
+            </li>
+            <li>
+              <span style="color:black">Write method: Disc-at-once</span>
+            </li>
+            <li>
+              <span style="color:black">Closed disc</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 2</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008881_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">IDENTIFICATION AND CHECK OF THE SOFTWARE UPGRADE CD-ROM</h2>
+          <ul>
+            <li>
+              <span style="color:black">Place the key on MAR-ON and start the engine.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">during the software upgrade procedure the engine must be always on.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">The navigator switches on automatically after about 10 seconds from the car starting; if it is off, switch it on pressing the knob on the right bottom part (1 - Fig. 3).</span>
+            </li>
+            <li>
+              <span style="color:black">Press Eject (2 – Fig. 3) and make sure there is no CD-ROM inside.</span>
+            </li>
+            <li>
+              <span style="color:black">Insert the CD-ROM with the software in the suitable reader (A - Fig. 3).</span>
+            </li>
+            <li>
+              <span style="color:black">Wait about 60 seconds until the screen displays a pop-up message, shown in Fig. 3, stating: "<b>CD reading in progress…</b>".</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008882_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">After about 20 seconds a second pop-up message is displayed, as shown in Fig. 4, stating: <b>"SOFTWARE UPGRADE - The system will restart. Continue? CD 00xx" </b>(00xx is the number of the CD).</span>
+            </li>
+            <li>
+              <span style="color:black">Rotating the right knob (2 - Fig. 4), select <b>YES</b>; press the knob to confirm.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 4</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008883_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">After selecting <b>YES</b>, the pop-up message, shown in Fig. 5, is displayed, stating: <b>"CD-ROM data check in progress..."</b></span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 5</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008884_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">After about 80 seconds the pop-up message, shown in Fig. 6, is displayed, stating: <b>"SOFTWARE UPGRADE - Reading in process - UPGRADE SETUP".</b></span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This pop-up message is displayed for about 10 seconds, then the display switches off automatically and restarts after about 50 seconds.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 6</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008885_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For these 50 seconds, the display is off, as shown Fig. 7, but the system is working; do not select any option. Once this time interval has elapsed, the software upgrade starts automatically, as below described.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 7</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008886_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">SOFTWARE UPGRADE</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The software upgrade starts with the message <b>"Disk check…"</b> displayed on the top left angle; the background displays Alfa Logo, as shown in Fig. 8. The background is the same all the upgrade process long, while the "Disk check" stage lasts about 80 seconds.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 8</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008887_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After the <b>"Disk check"</b> stage, the following four stages are made:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1) <b>"Prepare SW Application UPG x/8"</b></p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2) <b>"Start Prepare Sw Sd UPG x/5"</b></p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3) <b>"Loading UPGRADE APPLICATION: x percent"</b></p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4) <b>"Loading UPGRADE FRONT PANEL: x percent"</b></p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The stage in progress is always displayed on the display top part.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1) <b>"Prepare SW Application UPG x/8"</b></p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This stage, shown in Fig. 9, lasts about 130 seconds.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 9</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008888_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2) <b>"Start Prepare Sw Sd UPG x/5"</b></p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This stage, shown in Fig. 10, lasts about 100 seconds.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 10</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008889_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3) <b>"Loading UPGRADE APPLICATION: x percent"</b></p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This stage, shown in Fig. 11, lasts about 140 seconds.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 11</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008890_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4) <b>"Loading UPGRADE FRONT PANEL: x percent"</b></p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This stage, shown in Fig. 12, lasts about 50 seconds.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 12</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008891_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the end of the 4 above stages, the upgrade ends up with two other messages, shown in Fig. 13, confirming the performed positive procedure.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The two messages are displayed one after the other and there is no waiting time between them. In particular, when the message <b>"System upgrade completed"</b> is displayed, the CD-ROM is automatically ejected and the system switches off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 13</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008892_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After the switching off, the system restarts automatically and ready to work; place the key on STOP and switch the engine off. The software upgrade procedure is completed.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It should be required to enter again the map activation code when the system is restarted (for the activation code entering procedure, see SN 55.11.09).</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the car comes with BOSE audio system, turn the key to STOP and wait until the system switches off completely (you should not even hear the light sound of the fan). Putting the key to MAR-ON again, all the system functions are working.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">FAILED SOFTWARE UPGRADE</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Should the upgrade operation fail for whatever reason, the procedure must be repeated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the upgrade fails during <b>CD-ROM identification and check,</b> that is from the CD-ROM insertion until right before the displaying of the pop-up message stating: <b>"SOFTWARE UPGRADE - Reading in process - UPGRADE SETUP ”</b> (shown in Fig. 4) the CD-ROM is automatically ejected. Retry by inserting the CD-ROM again and, if it fails again, proceed as follows:</p>
+          <ul>
+            <li>
+              <span style="color:black">insert an AUDIO CD-ROM or MP3 to make sure the reader works correctly:</span>
+            </li>
+            <li>
+              <span style="color:black">visually make sure that the CD-ROM surface is intact (no scratches, stripes, marks, dusts, etc...)</span>
+            </li>
+            <li>
+              <span style="color:black">check if the application software to be installed is correct for the target product</span>
+            </li>
+            <li>
+              <span style="color:black">use a PC to check if the CD-ROM was burnt correctly (there should be the same folders shown in Fig. 14, that should be selectable by the PC without any error); otherwise, burn a new CD-ROM strictly complying with the above instructions.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 14</b>
+          </p>
+          <center>
+            <img src="images/jpg/939008893_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the process fails in any other stage of <b>Software upgrade</b>, usually the system ejects the CD-ROM automatically. Both if the CD-ROM is ejected or not, proceed as follows:</p>
+          <ul>
+            <li>
+              <span style="color:black">Put the key on STOP, switch the engine off and wait until the system switches off completely (you should not even hear the light sound of the fan).</span>
+            </li>
+            <li>
+              <span style="color:black">Restart the engine (key on MAR-ON), insert the CD-ROM if it was ejected and proceed as above described, starting from the "Disk check" stage (shown in Fig. 8).</span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">INFORMATION FOR THE CUSTOMER</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Inform the Customer that reprogramming the navigator module not only eliminates possible faults but also introduces the following improvements upgrading the car to those actually produced.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Print the page with the following table and give it to be Customer to be enclosed to the Owner Handbook.</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>NEW LOGIC OF THE PRESET BUTTON</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Before reprogramming</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>After reprogramming</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressing the button PRESET shortly, the display shows the list of the 6 stored radio stations. Select the desired station using the OK button/knob.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After having selected the desired frequency, the display will show the list of 6 positions available with information on the stations currently stored and will allow the user to store the station.</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressing the button PRESET shortly, the display shows the list of the 6 stored radio stations. Select the desired station using the OK button/knob.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After having selected the desired frequency, pressing the PRESET button the display will show the list of 6 positions available for the storage; select "Store" and then select the desired position using the OK button/knob.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>NEW OPTION FOR ENTERING THE DESTINATION ADDRESS</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Before reprogramming</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>After reprogramming</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Entering the address of destination: </b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">consists of entering the following details: Country, Town, Road, House number or Intersection.</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Destination address entering: consists of entering the following details: Country, Town (ZIP), Road, House number or Intersection.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After having selected the "City" item, the display will show a keypad with numbers and letters for entering the name of the city or the corresponding ZIP.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="2" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>NEW OPTION FOR REPEATING THE NAVIGATION MESSAGE</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Before reprogramming</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>After reprogramming</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressing the NAV button the Navigation map is displayed.</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pressing the NAV button the Navigation map is displayed or, in Navigation map mode, the last voice message is repeated.</p></td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">CLAIM REPORT DATA</h1>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Version</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Piece</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fault</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Position</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Time allowance</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All models in question</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5580197</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RA</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.30</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925768&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:58:28 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

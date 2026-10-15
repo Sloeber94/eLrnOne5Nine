@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003533&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003533&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="83cjwibgZaKi54HVOPN7dQqUMAMYPly2/QrXDOPUAX37MTW+f/CcHYXMjnka9ERRPiSy7XOTjXhjzQXQiNIGldA8EBahbpbYodlVkYfMAEadfMme/2LklI7+p/Gcawc59qUTfGS1H9TBEcFwG3xnfr8bIfZ7BWVVnAQnNQqR6fGXf2C3J81JN2CxHXCx0y7GkusCSyaFSotFunpm89n1X1Y9a3UFy21vpjrt5MJkUQEHQWcXocRt9Pjybeod6WRS+WFf+jDteIArwqbYZdIdvmAYuBmv9pzplI9x8KYCW07i+2OYLua9AdRoeGBtJYy+TUiv6BgBDfS9F0xO4/aWwGJgBMFqYiLIw/6WKy0d0iuMwbSodNZRAawH1dl1+ag34mDoK7WoU5BiOiH6hzPGW3MZgSDYU8xdbtJugEGTPj4qVS8aHCl0s1zwbtXnFhwUamOGd0baiOXP69G4RpZHcTUQ8DdsRECEmbWyWA+9B/a3JxLJoy0qieFD7A26d7zbZqyeU+0fOObiImyqNGoQ9J7SQOY6wNRkPjnKjdt3Y8K5UYn9wPiG0E/Pf951ncc6L3XPvf9YZXIMTnpLDsbFommaIhxJDKPFDHqUwvXRxEGfD08Kxq6rSlV+bj32kBePBl73Jo33QmFEsUyKazz2dEizR5uJaJQxya30zKjuocRkYhHwWk1/wP+tbmU3Kr84Y8MbkMyd0OMyWgdu6EpU8nyxHHa7f9oTFhaP0+VRlrd9qS0sLR+jJME74Y8DAo2uDVNw331uGp6zvC3Vwwdpo9IOvUzkGyNHw9O8RA21ryBeblR4ZuKafrZ+vJM0o+Tt" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspWARNING AND MANOEUVRING INDICATORS&nbsp&nbsp&nbsp5550&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">STEERING COLUMN SWITCH UNIT MODULE</h1>
+          <h2 class="bigtext2">Introduction</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The steering column switch unit basically groups the following functions together:</p>
+          <center>
+            <img src="images/jpg/939000021_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Lever for exterior lights and direction indicators</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. MODE buttons</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Lever for windscreen washing and wiping functions</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. TRIP function buttons</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Steering angle sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Clock spring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The steering column switch unit module is composed of a maximum of three levers (lights, wiper and Cruise Control), an electronic module (that manages the motor for the windscreen wipers and the windscreen washer pump; a steering angle sensor a clock spring that produce the connection with the steering wheel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In addition - if a rain/dusk sensor is fitted - the module is equipped with an A-BUS interface.</p>
+          <h2 class="bigtext2">Operation</h2>
+          <h3 class="bigtext3">Left lever</h3>
+          <center>
+            <img src="images/jpg/939000022_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Lights selector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - Lights flasher - main beam headlamps switch</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C - Direction indicators</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D - MODE button</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LIGHTS SELECTOR</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The selector is a ring nut with 3 or 4 (with a dusk sensor) stable positions located at the end of the lever and it is activated by turning it along the axis of the lever (3 positions without a dusk sensor, 4 positions with a dusk sensor).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Pos. 1 = No circuit operated</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Pos. 2 = Side lights</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Pos. 3 = Dipped headlamps</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Pos. 4 = Auto function for side lights and dipped headlamps</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Side lights and dipped headlamps signals</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Two signals (earth) are sent "Light 1 "Light 2" from the steering wheel stalk unit to the Body Computer that manages both side lights and dipped headlamps in manual or AUTO mode (automatic dusk sensor activation).</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The side lights are activated in manual mode when the Light 1 signal is not present and the Light 2 signal is present.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The dipped headlamps are activated in manual mode when the Light 1 signal is not present and the Light 2 signal is not present either.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lights are activated in AUTO mode when the Light 1 signal is present and the Light 2 signal is not present.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If both signals are present, the lights are permanently off.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LIGHT FLASHER - MAIN BEAM HEADLAMPS SWITCH</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The "light flasher" control is operated by puling the stalk from rest position towards the steering wheel; the operation is unstable i.e. the stalk returns to the rest position when released.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The "fixed main beam headlamps" command is produced by pulling the lever in the same way as for the flasher but making it complete a greater travel, as far as the second position ("main beam headlamps" contact).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To switch the main beam headlamps off, the lever must be pulled to the main beam position in the same way as for switching them on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TURN SIGNAL CONTROL</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The command is produced by moving the lever on the steering wheel plane in both directions, upwards for the right direction indicators and downwards for the left ones.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lever has two distinct activating modes: one unstable one known as "changing lane" and one stable one known as "changing direction".</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The unstable activation on the release of the lever reopens the electrical contact that has closed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The unstable activation has an automatic release device that returns the lever to the rest position when the manoeuvre is completed (rotation of the steering wheel in the same direction as the lever).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MODE KEYS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">By pressing the MODE button on the left lever the relevant commands are sent to the instrument panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In addition, there is a rocker switch at the end of the lever with one stable position and 2 unstable positions: UP- OFF - DOWN.</p>
+          <h3 class="bigtext3">Right lever</h3>
+          <center>
+            <img src="images/jpg/939000023_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Windscreen wiper;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - Windscreen wiper intermittent operation / rain sensor setting (if present) selector;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C - Windscreen washer;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D - Rearscreen wiper; (station wagon only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E - Rearscreen washer (station wagon only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">F - TRIP buttons</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WINDSCREEN WIPER CONTROL</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The windscreen wiper is operated by moving the lever along the plane of the steering wheel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are 5 different activation positions, from the bottom, in order:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Antipanic (unstable)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- OFF</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Intermittent / Automatic</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Continuous 1st speed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Continuous 2nd speed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WINDSCREEN WIPER INTERMITTENT SELECTOR (RAIN SENSOR SETTING)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The adjustment takes place by turning the ring nut into 4 stable positions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 different pause times for the intermittent operation of the windscreen wiper correspond to these positions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If a rain sensor is fitted, the positions correspond to the 4 rain sensor settings.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Pos. 1: MAX pause (MIN setting)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Pos. 2: Medium - high pause (setting 2)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Pos. 3: Medium - low pause (setting 3)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Pos. 4: MIN pause (MAX setting)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WINDSCREEN WASHER CONTROL</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control for activating the two-way pump for washing the front windscreen is produced by pulling the lever towards the steering wheel crown; the activation is unstable.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">REARSCREEN WIPER CONTROL (IF FITTED)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rearscreen wiper is controlled by rotating a ring nut in 2 stable positions halfway along the lever.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">REARSCREEN WASHER CONTROL (IF FITTED)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control for activating the two-way pump for washing the rearscreen is produced by pulling the lever towards the dashboard; the activation is unstable.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRIP BUTTONS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">By pressing the unstable TRIP button on the lever, the relevant commands are sent to the instrument panel. In addition, there is a rocker switch at the end of the lever with one stable position and 2 unstable positions: UP- OFF - DOWN.</p>
+          <h3 class="bigtext3">Cruise control lever</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">See</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="main85ec.html?nodeID=939003536&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=WARNING%20AND%20MANOEUVRING%20INDICATORS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5580A CRUISE CONTROL SYSTEM</a>
+          </p>
+          <h2 class="bigtext2">Components</h2>
+          <h3 class="bigtext3">Wiper motor electronics</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronics for controlling the windscreen and rearscreen wiper and washer functions are housed inside the steering column switch unit and are capable of controlling the (two speed) windscreen and rearscreen wiper motors and the two-way pump.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">By means of the A-BUS interface it is capable of conversing with the rain sensor and, as a result, of controlling the windscreen wiper in automatic mode (refer to the A-BUS serial network and the rain sensor).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more details on the wiping logic,</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="mainda78.html?nodeID=939003526&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=WARNING%20AND%20MANOEUVRING%20INDICATORS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5050 SCREEN WASHER AND HEADLAMP WASH/WIPE</a>
+          </p>
+          <h2 class="bigtext2">Electrical connections</h2>
+          <center>
+            <img src="images/jpg/939000024_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Steering column switch unit pin out</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector A (front wiring)</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A-bus serial line (signal from rain sensor)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Positive signal from reverse gear</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Negative signal from switch signalling rearscreen open (station wagon only)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Headlamp washer / wish-wash signal enablement</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Negative signal from windscreen wiper motor cam</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Power earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Second winscreen wiper speed</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">First windscreen wiper speed</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Two-way pump (positive for rear washer)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Windscreen wiper/pump power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Two-way pump (positive for windscreen washer)</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector B - C (dashboard wiring)</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rearscreen wiper motor power supply (station wagon only)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rearscreen wiper cam signal (station wagon only)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">High beam negative control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Light flasher negative control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Negative signal controlling right turn signals/parking lights</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Negative signal controlling left turn signals/parking lights</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Light 1 control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Light 2 control</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Analogue signal from "Mode, -, +" controls</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Analogue signal from "Trip, up, down" controls</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rearscreen wiper power supply (station wagon only)</p></td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Steering column switch unit wiring diagram</h3>
+          <center>
+            <img src="images/jpg/939004540_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CLOCK SPRING</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The clock spring transfers the electrical signal to controls on the steering wheel (horn and other optional controls) and connects the airbag module without risk of breakage.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more details,</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="maine183.html?nodeID=939003537&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=WARNING%20AND%20MANOEUVRING%20INDICATORS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5580C AIR BAG SYSTEM</a>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Steering Angle Sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The steering angle sensor is fitted in the clock spring, see</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>See descriptions 3350 </b>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003533&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:45 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

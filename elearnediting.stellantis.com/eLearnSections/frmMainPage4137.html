@@ -1,0 +1,722 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939002879&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Prove&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 02:25:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939002879&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="7moZTTHuJTWWd4wv0kcU4BZiZT8q4/FiJAZ4fw2aR30v0nt6T1vrBzXyvEQSSlguji526ORwmypolC1+7N7UtBJGtbzTlcRHVHo/UIErevGbyxC9kf0dNUlkz+1JHaUPA9l7o+5EAUsDtwV2OAJhWibGmE1blFQyrsjNUVjyHJ+XDE4JxKJB+xTgIZqnccEB6JLxBEiFwagIyheJo4Ta08dXQYovG4NygP6zR/09o1cziHyarv576Bx//zPaFSnq4h/gYUocfrAPFG6TwxdsiOa9VpzBuligA6H7MJ0go3bJoi/r9eNYQzKA3lgvUfdNMCTzb4ESFeQepG3ESUScjKv5oq4AbNhH76jtAv+Vq9DIR9BlWsX5eueGRNoEJFMQHiqvWW/OEttaMEASwKpJ3flEKLAsOWUKiDM0V/XyXgEPEW8juPEuoka6oEHjS/9QUqhIQTl9wpzDzDA00XN23LJiyk/oicgDCDLHcvMZ+modkqzyz9M3+517rnRPmZI+me6+ACxF7tVDXuqL7b6wOwYYl0nBYg1VQ3jSqYMY8vGaRMQBvEIqxmGZxOLAGszzMbbu11I8f55iJCIRdN26k+r4htIFhdAIaIHiU4RLcYW5Dy9gwbzbZUOeCWiq0b9GCEGRsJx50oAReg4guNGhmOQrgoRsSXLs35IwHcIEM9fzwF9n2ttJdasAebat93VTZI6aO6/TfiAZ6I92P8JLjw+5M0Ce+3JCb2e1egTJFtLmWcs7bgxAzmuQUMEVwqZJ" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspWIRING&nbsp&nbsp&nbsp2&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+	    
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+	<tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_0" class="nav" href="main608c.html?nodeID=939009634&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">11</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_0" class="nav" href="main608c.html?nodeID=939009634&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">RADIATOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_1" class="nav" href="main35e8-2.html?nodeID=939009644&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_1" class="nav" href="main35e8-2.html?nodeID=939009644&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT	(Manual gearbox)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_2" class="nav" href="main2080.html?nodeID=939004948&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_2" class="nav" href="main2080.html?nodeID=939004948&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT	(Right hand drive, Manual gearbox)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_3" class="nav" href="main3abe-4.html?nodeID=939007230&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_3" class="nav" href="main3abe-4.html?nodeID=939007230&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT	(C.A.E.)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_4" class="nav" href="main0393.html?nodeID=939007240&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_4" class="nav" href="main0393.html?nodeID=939007240&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT	(Right hand drive, C.A.E.)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_5" class="nav" href="mainbe7c-2.html?nodeID=939007825&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_5" class="nav" href="mainbe7c-2.html?nodeID=939007825&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT	(Right hand drive, Manual gearbox, from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_6" class="nav" href="main814d-2.html?nodeID=939007835&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_6" class="nav" href="main814d-2.html?nodeID=939007835&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT	(Manual gearbox, from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_7" class="nav" href="maine0c3.html?nodeID=939007865&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_7" class="nav" href="maine0c3.html?nodeID=939007865&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT	(Right hand drive, C.A.E., from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_8" class="nav" href="main32ff.html?nodeID=939007878&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_8" class="nav" href="main32ff.html?nodeID=939007878&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT	(C.A.E., from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_9" class="nav" href="main557e-4.html?nodeID=939002884&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">14</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_9" class="nav" href="main557e-4.html?nodeID=939002884&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT BUMPER</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_10" class="nav" href="mainad11-3.html?nodeID=939002885&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">20</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_10" class="nav" href="mainad11-3.html?nodeID=939002885&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">DASHBOARD</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_11" class="nav" href="main6f0b.html?nodeID=939004988&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">20</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_11" class="nav" href="main6f0b.html?nodeID=939004988&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">DASHBOARD	(Right hand drive)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_12" class="nav" href="mainf88c-2.html?nodeID=939004998&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">20</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_12" class="nav" href="mainf88c-2.html?nodeID=939004998&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">DASHBOARD	(Right hand drive, Connect Nav+)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_13" class="nav" href="main6ccc-3.html?nodeID=939009655&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">20</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_13" class="nav" href="main6ccc-3.html?nodeID=939009655&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">DASHBOARD	(Connect Nav+)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_14" class="nav" href="mainc4be.html?nodeID=939008704&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">20</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_14" class="nav" href="mainc4be.html?nodeID=939008704&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">DASHBOARD	(RadioNav)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_15" class="nav" href="main56af-2.html?nodeID=939005656&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_15" class="nav" href="main56af-2.html?nodeID=939005656&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(Station Wagon)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_16" class="nav" href="mainb214-2.html?nodeID=939005666&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_16" class="nav" href="mainb214-2.html?nodeID=939005666&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(Station Wagon, Electric sun roof)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_17" class="nav" href="main7ea7-2.html?nodeID=939009665&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_17" class="nav" href="main7ea7-2.html?nodeID=939009665&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(Electric sun roof)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_18" class="nav" href="mainfe1c.html?nodeID=939005008&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_18" class="nav" href="mainfe1c.html?nodeID=939005008&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(Right hand drive)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_19" class="nav" href="main8c17-2.html?nodeID=939005018&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_19" class="nav" href="main8c17-2.html?nodeID=939005018&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(Right hand drive, Electric sun roof)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_20" class="nav" href="main9402-2.html?nodeID=939007935&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_20" class="nav" href="main9402-2.html?nodeID=939007935&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_21" class="nav" href="mainebe8-3.html?nodeID=939007945&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_21" class="nav" href="mainebe8-3.html?nodeID=939007945&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(Right hand drive, from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_22" class="nav" href="main7451.html?nodeID=939007954&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_22" class="nav" href="main7451.html?nodeID=939007954&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(Electric sun roof, from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_23" class="nav" href="mainaa10-2.html?nodeID=939007963&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_23" class="nav" href="mainaa10-2.html?nodeID=939007963&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(Right hand drive, Electric sun roof, from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_24" class="nav" href="main500f.html?nodeID=939007972&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_24" class="nav" href="main500f.html?nodeID=939007972&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(Station Wagon, Electric sun roof, from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_25" class="nav" href="maind697.html?nodeID=939007981&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_25" class="nav" href="maind697.html?nodeID=939007981&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR	(Station Wagon, from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_26" class="nav" href="main1fae.html?nodeID=939002887&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">25</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_26" class="nav" href="main1fae.html?nodeID=939002887&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_27" class="nav" href="main9949.html?nodeID=939007990&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">27</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_27" class="nav" href="main9949.html?nodeID=939007990&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">TAILGATE	(Station Wagon, from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_28" class="nav" href="mainc3bd-3.html?nodeID=939005469&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">27</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_28" class="nav" href="mainc3bd-3.html?nodeID=939005469&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">TAILGATE	(Station Wagon)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_29" class="nav" href="main93e8.html?nodeID=939007999&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">28</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_29" class="nav" href="main93e8.html?nodeID=939007999&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">BOOT	(from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_30" class="nav" href="main4d8d.html?nodeID=939002889&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">28</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_30" class="nav" href="main4d8d.html?nodeID=939002889&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">BOOT</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_31" class="nav" href="mainbc3e-2.html?nodeID=939002890&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">29</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_31" class="nav" href="mainbc3e-2.html?nodeID=939002890&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR BUMPER</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_32" class="nav" href="mainfc3d-2.html?nodeID=939005676&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">29</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_32" class="nav" href="mainfc3d-2.html?nodeID=939005676&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">REAR BUMPER	(Station Wagon)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_33" class="nav" href="mainc717.html?nodeID=939009675&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">30</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_33" class="nav" href="mainc717.html?nodeID=939009675&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">DRIVER'S FRONT DOOR	(Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_34" class="nav" href="mainab92.html?nodeID=939002891&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">30</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_34" class="nav" href="mainab92.html?nodeID=939002891&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">DRIVER'S FRONT DOOR	(High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_35" class="nav" href="mainec89.html?nodeID=939005028&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">30</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_35" class="nav" href="mainec89.html?nodeID=939005028&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">DRIVER'S FRONT DOOR	(Right hand drive, High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_36" class="nav" href="main22d4.html?nodeID=939005038&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">30</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_36" class="nav" href="main22d4.html?nodeID=939005038&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">DRIVER'S FRONT DOOR	(Right hand drive, Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_37" class="nav" href="main084b.html?nodeID=939005048&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">31</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_37" class="nav" href="main084b.html?nodeID=939005048&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT PASSENGER DOOR	(Right hand drive, High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_38" class="nav" href="mainab7d.html?nodeID=939005058&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">31</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_38" class="nav" href="mainab7d.html?nodeID=939005058&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT PASSENGER DOOR	(Right hand drive, Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_39" class="nav" href="main879c.html?nodeID=939002893&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">31</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_39" class="nav" href="main879c.html?nodeID=939002893&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT PASSENGER DOOR	(High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_40" class="nav" href="maindb58-3.html?nodeID=939009685&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">31</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_40" class="nav" href="maindb58-3.html?nodeID=939009685&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT PASSENGER DOOR	(Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_41" class="nav" href="mainc649-3.html?nodeID=939002895&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">34</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_41" class="nav" href="mainc649-3.html?nodeID=939002895&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">LEFT REAR DOOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_42" class="nav" href="main341b.html?nodeID=939002896&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">35</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_42" class="nav" href="main341b.html?nodeID=939002896&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">RIGHT REAR DOOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_43" class="nav" href="maindc2b-2.html?nodeID=939002897&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">36</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_43" class="nav" href="maindc2b-2.html?nodeID=939002897&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">LEFT SEAT</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_44" class="nav" href="mainb3a4-3.html?nodeID=939002898&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">37</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_44" class="nav" href="mainb3a4-3.html?nodeID=939002898&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">RIGHT SEAT</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_45" class="nav" href="main1ff2.html?nodeID=939002899&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">40</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_45" class="nav" href="main1ff2.html?nodeID=939002899&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">BATTERY NEGATIVE</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_46" class="nav" href="main61bd.html?nodeID=939002900&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">41</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_46" class="nav" href="main61bd.html?nodeID=939002900&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">BATTERY POSITIVE</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_47" class="nav" href="maine7c9-2.html?nodeID=939002901&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">45</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_47" class="nav" href="maine7c9-2.html?nodeID=939002901&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">RECHARGING</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_48" class="nav" href="main15da.html?nodeID=939009715&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">50</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_48" class="nav" href="main15da.html?nodeID=939009715&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">ENGINE</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_49" class="nav" href="main2b8f.html?nodeID=939005837&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">52</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_49" class="nav" href="main2b8f.html?nodeID=939005837&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">GEARBOX BRIDGE	(C.A.E.)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_50" class="nav" href="mainda6d.html?nodeID=939005686&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">59</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_50" class="nav" href="mainda6d.html?nodeID=939005686&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">HI FI SYSTEM BRIDGE	(Station Wagon, BOSE System)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_51" class="nav" href="main0957.html?nodeID=939002906&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">59</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_51" class="nav" href="main0957.html?nodeID=939002906&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">HI FI SYSTEM BRIDGE	(BOSE System)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_52" class="nav" href="main453b.html?nodeID=939002907&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">65</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_52" class="nav" href="main453b.html?nodeID=939002907&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">AIR CONDITIONING	(Manual climate control)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_53" class="nav" href="main2394.html?nodeID=939009725&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">65</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_53" class="nav" href="main2394.html?nodeID=939009725&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">AIR CONDITIONING	(Automatic climate control)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_54" class="nav" href="main9205.html?nodeID=939002909&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">71</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_54" class="nav" href="main9205.html?nodeID=939002909&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">SUN ROOF BRIDGE	(Electric sun roof)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_55" class="nav" href="main32ff-2.html?nodeID=939002910&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">78</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_55" class="nav" href="main32ff-2.html?nodeID=939002910&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">CENTRE CONSOLE BRIDGE</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_56" class="nav" href="maincd69.html?nodeID=939002911&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">79</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_56" class="nav" href="maincd69.html?nodeID=939002911&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">CHANGE CD</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_57" class="nav" href="mainecea.html?nodeID=939005696&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">79</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_57" class="nav" href="mainecea.html?nodeID=939005696&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Prove&amp;validityName=2.4%20JTD%2020V" target="_parent">CHANGE CD	(Station Wagon)</a></TD>
+				</td>
+	</tr>
+</table></P>
+
+	</body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939002879&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Prove&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 02:25:53 GMT -->
+</HTML>

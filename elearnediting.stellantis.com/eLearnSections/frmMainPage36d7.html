@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010751&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=FRONT+SUSPENSION+NOISE+(KNOCKING)&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:19:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010751&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=FRONT+SUSPENSION+NOISE+(KNOCKING)&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Y0N0fFpBgelJ36E+sDqHQdG4ZBykFaU2kuyHuB0ecI2oYmqGf3XkrAjEZtjJdWENpef4mArXU/gFGiS6dycaP92NsxVU/DZ+CHcNGTU8yU6ocEtrBblgdMXW9LJWYvLjUkl/HruPZZWoDIh0kiLxQeaB2GReXN4O5lWBoLbqsAr06GAEVdGyQVm2HfWfu+8oJu36AjLoeR6CPqMlrZKWNgDtXsP35f+NAqxvs46AfkHmdtP/K+pc7ZmAaI+c3y5rzhUxWJRYkDZIYdm2qDGUUCQRxzzpwAMVG0yiQ4/QsYhduSL5uDw/c0BHN4dccwiNllIbSq2lD3tchMTEMhL016i0rOxiBrTdX/q17yjgYHDsjWpSMot7arENI5UdSPsL1GoVotDAQGSQlBkgmFa6p0/U7l3kp4++DkYOdBq7pTX3whU94YY8hFOWlkSwLS1koo0wtyja5+L9eR6K5ADIZKrmv83B90iKDasue3+GWiV86pyyad84nwK6soSmAZPdKQIEvO4ddMznoRo2wjsuM1lGre++5TwqwhyfWiYy5cOFqo6p8mov6PQajnx/2c0PytCsfJcKsqwtRfdswnWTyXshOTzpjEoAOYGwmPZvAOrKfW0PAvoW3Tu3X+YrHfJ7actwqgL73efdhK+hxiTIQUNBVp2Ag88uhHVX/f7Phah7sWcDTbvm/3KQaWwrFspm9shSJ7TG10DWcbEmcaBTn7OWxzLOa+NP5klOJdMK+41dntgzgI4dbQlhrhp7xtR8WSwvWlMvyrnXKncXPPOx0jZ55GxPNTp35rMJG6DGUxSPvpq4CMUkq1Ou0x2GdsVw2U0Tw1YkPHrP2/5zrlkQxnVzyHb2yV2sRILGzfL3KbNspHytwXzHwyY36W3A0KGRjZc9Gd3tORLdDhdEGi7llIINGtEnOWlGwJFhkB+V2hl1SPKArfLo1yrlIsrZhTp8dsvIBha9aoe4W0aGkAUudjKPFTFkd4ZbhfhouA8gMN/0zcH4EWT5WgUnv2Kg3VZqziO17OObnJi35pq2zI2EH3X6/uG+7Lg3salTDs+jD1W8KES8QNR2erY7KN+VD/Qi/siEkxRsvzBekSmd7R1fJDzNbYxjWW4g26cZ2F74Hmy+wPaTHukjClR7Gp7gVDfaQBD/Ho65aD0LohhfSbzENBIOW8c5zTLdwuVR18sYQtXUXu96wZ2vO6gAyUUJ4Lwi" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="4xd+rsrh2LYlzE9eONpfy6HDxZ4a25PvhWcYAai3RHOSxuy02KwwZRIJhqmN86h6BDpVlPVxCFRtfqy8lD0FlOzu7bykWu0VfV9YC9BVOrylYDCzU5l3C/r4B0hxO5NO" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspWHEEL SIDE CONSTANT VELOCITY JOINT (ONE), L/H OR R/H - R + R WITH DRIVESHAFT REMOVED - INCLUDES BOOT REPLACEMENT&nbsp&nbsp&nbsp2710A20&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  FRONT SUSPENSION NOISE (KNOCKING)</a>
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939002710_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/20_2.jpg" border="0">Removing<a class="title" name="0"></a>
+		(
+		<a href="#1" class="title_link">Refitting<img src="images/jpg/21_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">- Position the driveshaft in a vice fitted with protective jaws.</p><p class="contents_testonormale ">1. Remove the bands securing the protective boot using a suitable tool.</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2000006300</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Pliers</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Removing-refitting driveshaft boot bands</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td></tr></table></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939010751&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=FRONT+SUSPENSION+NOISE+(KNOCKING)&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:19:38 GMT -->
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939002711_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Retract the protective gaiter on the driveshaft.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">If the boot cannot be moved back, cut it using an appropriate tool and remove it.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939002712_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Clean the drive shaft constant velocity joint until the safety ring is accessible.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939002713_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Open the safety ring using suitable pliers.</p>
+          <p class="contents_testonormale ">2. Extract the wheel side constant velocity joint from the driveshaft.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">NOTE: on joints without safety ring, pull to remove the constant velocity joint from the drive shaft.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939002714_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Remove the wheel side constant velocity joint safety ring.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">On joints without a safety ring, the ring is positioned on the driveshaft and must therefore be removed from this position.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939002715_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">1. Remove the protective boot.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939002716_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <img src="images/jpg/21_2.jpg" border="0">Refitting<a class="title" name="1"></a>
+		(
+		<a href="#0" class="title_link">Removing<img src="images/jpg/20_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">- Wash the constant velocity joint components thoroughly using fuel oil or petrol and visually inspect that there are no signs of seizing or grooves on the balls or seats.</p><p class="contents_testonormale ">- Position the new protective boot on the driveshaft.</p><p class="contents_testonormale ">1. Place a new safety ring in the housing on the constant velocity joint.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale "><p class="contents_testonormale ">Check that the safety ring is correctly fitted.</p></p></span></td></tr></table><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale "><p class="contents_testonormale ">For joints without a safety ring, fit a new safety ring on the driveshaft.</p></p></span></td></tr></table></td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+          <img src="images/jpg/939002717_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+        <td valign="top">
+          <p class="contents_testonormale ">- Place the wheel side constant velocity joint in its housing on the driveshaft.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Push the constant velocity joint until the safety ring clicks into position.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">- Fill the joint and the boot with the specified grease.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Type</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Classification</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Qty.</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Giunto omocinetico lato ruota</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Grasso [g]</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tutela ALL STAR</p><p class="contents_testonormale ">Contractual Technical</p><p class="contents_testonormale ">Reference</p><p class="contents_testonormale ">N. F702.G07</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">NLGI 1-2 - FIAT 955580</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1750 TBi</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Type</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Classification</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Qty.</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Giunto omocinetico lato ruota</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Grasso [g]</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tutela ALL STAR</p><p class="contents_testonormale ">Contractual Technical</p><p class="contents_testonormale ">Reference</p><p class="contents_testonormale ">N. F702.G07</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">NLGI 1-2 - FIAT 955580</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">151</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1.8</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Type</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Classification</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Qty.</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Giunto omocinetico lato ruota</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Grasso [g]</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tutela ALL STAR</p><p class="contents_testonormale ">Contractual Technical</p><p class="contents_testonormale ">Reference</p><p class="contents_testonormale ">N. F702.G07</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">NLGI 1-2 - FIAT 955580</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">151</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1.9 JTS</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Type</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Classification</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Qty.</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Giunto omocinetico lato ruota</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Grasso [g]</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tutela ALL STAR</p><p class="contents_testonormale ">Contractual Technical</p><p class="contents_testonormale ">Reference</p><p class="contents_testonormale ">N. F702.G07</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">NLGI 1-2 - FIAT 955580</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">203</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2.2 JTS</p><p class="contents_testonormale ">3.2 JTS</p><p class="contents_testonormale ">1.9 JTD 8V</p><p class="contents_testonormale ">1.9 JTD 16V</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Type</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Classification</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Qty.</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Giunto omocinetico lato ruota</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Grasso [g]</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tutela ALL STAR</p><p class="contents_testonormale ">Contractual Technical</p><p class="contents_testonormale ">Reference</p><p class="contents_testonormale ">N. F702.G07</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">NLGI 1-2 - FIAT 955580</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">282</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2.4 JTD 20V</p></td>
+            </tr>
+          </table>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Component</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Type</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Classification</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Qty.</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Giunto omocinetico lato ruota</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Grasso [g]</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tutela ALL STAR</p><p class="contents_testonormale ">Contractual Technical</p><p class="contents_testonormale ">Reference</p><p class="contents_testonormale ">N. F702.G07</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">NLGI 1-2 - FIAT 955580</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2.0 JTDm</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">- Place the gaiter in position on the constant velocity joint and on the driveshaft.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Check that the gaiter is correctly positioned on the driveshaft and on the constant velocity joint.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">1. Fit two new bands securing the boot using the tool.</p>
+          <table class="contents_table" cellspacing="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">2000006300</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Pliers</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Removing-refitting driveshaft boot bands</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <p class="contents_testonormale ">- Remove the driveshaft from the vice.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

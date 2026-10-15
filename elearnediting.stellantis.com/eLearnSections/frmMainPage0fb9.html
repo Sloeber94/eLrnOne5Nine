@@ -1,0 +1,465 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011588&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Impianto+Elettrico&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 21:36:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011588&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Impianto+Elettrico&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="BLmKCMaoGSs1V9FVJbQgGqFsZP/bk0O88TjsNHeOXZ/ydhRHk113lBckw9CA4rBfe1H5grb43V7t/fhvs8I1Cdsmvfn+p3z5Y/vR4ZeT1x9Xc+DlYWoLanHltCwl/nHgj9Sl0wHtvqPwK47f9itfpdTfQzBc13Mk1G0qk/tK/EES1ilcP1oLhE4c7iDSH2ltzKFNCqqMQ/KY99yw/aZUWXvfKG5QaMwTjcXDBoYWkyh8f9ybbF5GBMy4DP1tjIavYQ0eYyIqzJ1A43VdbkbFSfDiUdvjqku70RxUP7oTcXfNu6Aa/EkYh7liLhnVt2d6xhwpgZLRQIcbx54QMF1Ew2m4GyoIHknyEeLuQqO6gRta3X+4lgcfOiF5q41EZeQG6Lw8mfzd7jmg524j+fKIMBfM7P8BFoJ7Gx42NPtqlgUSu+2Y7XHfXI6StjNkYaOIpvah0Pg6xAKRhfdLY1W9bSUnPeWur8ntewQ0ID/I6KtgToA9I1D2qygZDbnVguY8T702mLmmBDLMPqBt+6AjbEsl0T7i87IDDJBfQM82+qZ028OYHtiptepH7Lvj9JpbIGkjja3OdQ6+spOxuh4X8g53B/+l7T3cxCvNFZgeBDYJ4rEly+6r3wZA8twcmWmdZlSif2Z9Mzp2+2CsRArg4bGtNt0Ggchj33honkjuF45VdiBehBHOwzeGGqLEVzn0oXZ+dEdseJTPoqwNf8ckbPqce7BfFBw99vzZ++KCvIrH22nwbMQDF0pnJ5b0lEwjUAPb4d+DTGJesCHx0ofnngBz11+Vp4rCu2iZwq2K4UtksvDVK4H+80EcSyuaczlHaDpEoJgGfuGlRsqSbK1QQ0iDp5Ypreauwd6CvKgWY0k=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspDEMISTING REARSCREEN AND REAR VIEW MIRRORS - WIRING DIAGRAM&nbsp&nbsp&nbspE3030&nbsp&nbsp&nbsp(High trim level)</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    <HR id="SchemaTop1_hr1" width="100%" SIZE="1"></HR>
+<table id="SchemaTop1_dlsSchema" cellspacing="1" cellpadding="1" align="Center" style="width:90%;">
+	<tr>
+		<td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_0" class="notSelected" href="maina6da.html?nodeID=939011586&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">DEMISTING REARSCREEN AND REAR VIEW MIRRORS - DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_1" class="notSelected" href="maind5c3-2.html?nodeID=939011587&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">DEMISTING REARSCREEN AND REAR VIEW MIRRORS - FUNCTIONAL DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_2" class="Selected" href="mainafd4.html?nodeID=939011588&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">DEMISTING REARSCREEN AND REAR VIEW MIRRORS - WIRING DIAGRAM</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_3" class="notSelected" href="main4c85-2.html?nodeID=939011589&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">DEMISTING REARSCREEN AND REAR VIEW MIRRORS - COMPONENT LOCATION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_4" class="notSelected" href="javascript: parent.openWinPrint(&#39;http://elearnediting.stellantis.com/eLearnSections/SchemaPrintAll.aspx?LanguageID=2&amp;nodeID=939011588&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&#39;);" target="_parent" style="display:inline-block;width:108px;">Print electrical function</a>
+		</td>
+	</td>
+	</tr>
+</table>
+<HR id="SchemaTop1_hr2" width="100%" SIZE="1"></HR>
+
+	    <p><b>APPLICABLE TO VERSIONS WITH:  High trim level</b></p><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <script language="javascript" src="svgscript/mysvg.js">
+  </script>
+  <body onload="">
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <table class="codep" style="margin-top:0px;" width="100%">
+            <tr>
+              <td>
+                <h1 class="bigtext1">WIRING DIAGRAM</h1>
+                <center>
+                  <embed src="images/svg/939005025_2.svg" type="image/svg+xml" style="width:80%; height:450px;">
+                  </embed>
+                  <p>Se non riesci a vedere correttamente l'immagine puoi provare al seguente link: <a href="https://elearnediting.stellantis.com/elearnold/main.aspx?nodeID=939011588&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Impianto+Elettrico&amp;validityName=2.4+JTD+20V" target="_old">link</a></p>
+                </center><br><a href="__javascript_%20parent.openWinZoom(%27schemazoomprebc5e.html?xmlID=939024173&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V');%0d%0a">Enlarge the image</a><br><h1 class="bigtext1">COMPONENTS</h1><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Component code</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Description</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Reference to the operation</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main850e.html?nodeID=939003748&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">B001 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">JUNCTION UNIT</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainf358.html?nodeID=939010962&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5505A13 ADDITIONAL JUNCTION UNIT IN ENGINE COMPARTMENT - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main9ad0.html?nodeID=939003761&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">B002 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">JUNCTION UNIT UNDER DASHBOARD</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="maind73d-3.html?nodeID=939010967&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5505A35 MAIN BODY COMPUTER/JUNCTION UNIT - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main3bd8-2.html?nodeID=939003776&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">B045 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LUGGAGE COMPARTMENT JUNCTION UNIT (CVB)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main8eae.html?nodeID=939010970&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5505A14 SUPPLEMENTARY JUNCTION BOX IN LUGGAGE COMPARTMENT - R.R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main56a3.html?nodeID=939003783&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">B099 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MAXIFUSE BOX ON BATTERY</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main4510-2.html?nodeID=939011008&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5530B40 SUPPLY BOX ON BATTERY (LINK BATTERY AND FUSE BOX) - R R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main515c.html?nodeID=939003801&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">C010 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LEFT FRONT EARTH</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainc113.html?nodeID=939003808&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">C015 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DASHBOARD EARTH, DRIVER'S SIDE</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainc8b9-2.html?nodeID=939003817&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">C020 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER SIDE DASHBOARD EARTH</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="maina5f0-2.html?nodeID=939003821&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">C030 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LEFT REAR EARTH</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainc7cb.html?nodeID=939003823&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">C031 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RIGHT REAR EARTH</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainf77a.html?nodeID=939003825&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">C032 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">REARSCREEN EARTH</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main0e1d-3.html?nodeID=939003852&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">D006 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FRONT/REAR COUPLING</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainea75.html?nodeID=939003886&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">D021 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DASHBOARD/AIR CONDITIONING-HEATER COUPLING</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main58c0-2.html?nodeID=939003890&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">D030 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LEFT FRONT DOOR COUPLING</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main371b-3.html?nodeID=939003900&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">D031 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RIGHT FRONT DOOR COUPLING</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main65e4-2.html?nodeID=939004296&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">M001 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BODY COMPUTER</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="maind73d-3.html?nodeID=939010967&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5505A35 MAIN BODY COMPUTER/JUNCTION UNIT - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainb365-2.html?nodeID=939004346&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">M066 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DRIVER'S DOOR CONTROL UNIT (NPG)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainbecc-2.html?nodeID=939010960&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5505A43 CONTROL UNIT (DIGITAL NETWORK NODE) IN DRIVER'S DOOR - R.R. WITH PANEL REMOVED</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainf175.html?nodeID=939004363&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">M067 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER DOOR CONTROL UNIT (NPP)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainf304.html?nodeID=939010969&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5505A47 PASSENGER SIDE DOOR CONTROL UNIT DIGITAL NETWORK MODE R R WITH PANEL REMOVED</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainaf3a.html?nodeID=939004373&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">M070 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CLIMATE CONTROL SYSTEM CONTROL UNIT</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main401c-2.html?nodeID=939010931&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5040D18 AIR CONDITIONING CONTROL UNIT - R.R.</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main42cf.html?nodeID=939004386&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">M089 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">STEERING LOCK CONTROL UNIT (NBS)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main9742.html?nodeID=939011103&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580E17 STEERING LOCK - R.R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main26c0-2.html?nodeID=939004602&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">P055 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HEATED REARSCREEN</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main20d9.html?nodeID=939011349&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7035B14 REAR WINDOW GLASS - R.R INCLUDES CLEANING HOUSING</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main0f1d-2.html?nodeID=939004605&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">P056 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HEATED WINDSCREEN</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainc0b8-2.html?nodeID=939004608&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">P060 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DRIVER'S DOOR MIRROR</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main75d7.html?nodeID=939011150&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7005R30 ELECTRICALLY CONTROLLED DOOR MIRROR (ONE) - R+R</a></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="mainb381.html?nodeID=939004610&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent">P061 </a></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSENGER DOOR MIRROR</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><span class="testo_link">  </span><a class="contents_link" href="main75d7.html?nodeID=939011150&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=DEMISTING%20REARSCREEN%20AND%20REAR%20VIEW%20MIRRORS%20-%20WIRING%20DIAGRAM&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 7005R30 ELECTRICALLY CONTROLLED DOOR MIRROR (ONE) - R+R</a></p></td></tr></table></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011588&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Impianto+Elettrico&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 21:36:43 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

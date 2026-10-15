@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939004146&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Impianto+Elettrico&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:56:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939004146&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Impianto+Elettrico&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="u2gOc932UHqQUvD1Vf1u9HN88DxaZlptmUpMbsqOdo/Iao5rthi9uK0V8I6l4fuZ82wG1qN0QsdM3QDc9W7amnq+hZhijpoSvvZ/8KWVeghaPgXEL52mi77GimdvS0yTLYmlcVGf5uIr14bWCbixXZeMB4Gc2ECJza6Ywr2d4rEPT4EM318IQTKMjgJlM4ZWFZ48GdxKFWgYNjFJClogDco0VLqybWmtKItQe6btSLO7RxWkJOQhIXx2JJo3o8Ydr++mNwgd4jbMxarDsP31K9aaIW/ljjba7ZPoIxtsyvUOFnl20oOEYXK3lzOcjmjkpZL5H4rFtTVd3DcDH7wZHyT3ioRsKSeSDjNKgEPrZ5lROJZsW849QSbRzgSfJAeYL0EiXWLIgBC8th77Kg2nzT9UHv7+kqehHpeeuZVi8KHTrkJs0C95UM/xv902ww69MwSFsZAOCrFKmqIau4gU+Sdsslaj+XqDIO0LyH3TTenzVz/Tm0CP1QcedgOX3FbZoMsCyCQ7ujVKNyIAitSmQpQhEJFxGQtoaFGwuc1VxICEfGbjDhPb7w2sBcOMsxhSDeXqKg6GJb7rFdg9cO6+vZkMh80VezTCmTBV7e99PrfrE1fnUFK6O7/zqEPk8qmUC+QE79jnWVJ6OHmhKgvJZYjqCXlzPfSFnDLiKQQKWWMMAK94UuHO4k6dCTztW19BjU2IfkXvOrbvjXjsNibQP6J9ZFJpaQe7KZ4s/BBtFHSQ3lzunKPODYCrWDfup4U1n2rGBFJlaHKFcWwPE8n6sQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspSENSORS AND SENDER UNITS&nbsp&nbsp&nbspK&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+	    
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+	<tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_0" class="nav" href="main3207.html?nodeID=939004147&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K001</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_0" class="nav" href="main3207.html?nodeID=939004147&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">HEADLAMP ALIGNMENT CORRECTOR FRONT POTENTIOMETER (CAF)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_1" class="nav" href="maina112.html?nodeID=939004149&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K002</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_1" class="nav" href="maina112.html?nodeID=939004149&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">HEADLAMP ALIGNMENT CORRECTOR REAR POTENTIOMETER (CAF)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_2" class="nav" href="main9f88.html?nodeID=939004163&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K019</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_2" class="nav" href="main9f88.html?nodeID=939004163&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ANTI-CRUSH SAFETY SENSOR IN LEFT REAR DOOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_3" class="nav" href="mainf204.html?nodeID=939004165&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K020</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_3" class="nav" href="mainf204.html?nodeID=939004165&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">LEFT BRAKE PAD WEAR SENSOR (SWITCH)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_4" class="nav" href="mainaca4.html?nodeID=939004167&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K021</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_4" class="nav" href="mainaca4.html?nodeID=939004167&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">RIGHT BRAKE PAD WEAR SENSOR (SWITCH)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_5" class="nav" href="mainf00b.html?nodeID=939004169&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K022</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_5" class="nav" href="mainf00b.html?nodeID=939004169&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ANTI-CRUSH SAFETY SENSOR IN DRIVER'S FRONT DOOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_6" class="nav" href="maina788.html?nodeID=939004171&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K023</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_6" class="nav" href="maina788.html?nodeID=939004171&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ANTI-CRUSH SAFETY SENSOR IN PASSENGER FRONT DOOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_7" class="nav" href="main82e0.html?nodeID=939004173&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K024</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_7" class="nav" href="main82e0.html?nodeID=939004173&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ANTI-CRUSH SAFETY SENSOR IN RIGHT REAR DOOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_8" class="nav" href="mainb0f8.html?nodeID=939004175&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K025</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_8" class="nav" href="mainb0f8.html?nodeID=939004175&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">BRAKE FLUID LEVEL SENSOR (SWITCH)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_9" class="nav" href="main4420.html?nodeID=939004177&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K027</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_9" class="nav" href="main4420.html?nodeID=939004177&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">WINDSCREEN WASHER FLUID LEVEL SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_10" class="nav" href="main781d.html?nodeID=939004179&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K030</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_10" class="nav" href="main781d.html?nodeID=939004179&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ENGINE OIL PRESSURE SENSOR (SWITCH)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_11" class="nav" href="main2dbd.html?nodeID=939004183&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K032</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_11" class="nav" href="main2dbd.html?nodeID=939004183&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ENGINE OIL LEVEL SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_12" class="nav" href="maina6e1.html?nodeID=939004185&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K036</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_12" class="nav" href="maina6e1.html?nodeID=939004185&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ENGINE COOLANT TEMPERATURE SENSOR/SENDER UNIT</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_13" class="nav" href="mainfb31.html?nodeID=939004189&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K039</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_13" class="nav" href="mainfb31.html?nodeID=939004189&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">FRONT AIR BAG SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_14" class="nav" href="main0760.html?nodeID=939004191&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K041</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_14" class="nav" href="main0760.html?nodeID=939004191&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">AIR FLOW METER</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_15" class="nav" href="main6d06.html?nodeID=939004195&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K046</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_15" class="nav" href="main6d06.html?nodeID=939004195&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">RPM SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_16" class="nav" href="main1cd0.html?nodeID=939004199&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K047</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_16" class="nav" href="main1cd0.html?nodeID=939004199&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">TIMING SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_17" class="nav" href="main24f4.html?nodeID=939004212&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K055</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_17" class="nav" href="main24f4.html?nodeID=939004212&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">ACCELERATOR PEDAL POTENTIOMETER</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_18" class="nav" href="mainf49b.html?nodeID=939004215&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K058</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_18" class="nav" href="mainf49b.html?nodeID=939004215&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">STEERING SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_19" class="nav" href="main4a7c.html?nodeID=939004218&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K064</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_19" class="nav" href="main4a7c.html?nodeID=939004218&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">EXHAUST GAS PRESENCE SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_20" class="nav" href="maincb61.html?nodeID=939004220&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K065</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_20" class="nav" href="maincb61.html?nodeID=939004220&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">PASSENGER PRESENCE SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_21" class="nav" href="main5cfb.html?nodeID=939004222&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K066</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_21" class="nav" href="main5cfb.html?nodeID=939004222&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">SIDE BAG SENSOR, DRIVER'S SIDE</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_22" class="nav" href="mainc31d.html?nodeID=939004224&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K067</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_22" class="nav" href="mainc31d.html?nodeID=939004224&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">SIDE BAG SENSOR, PASSENGER SIDE</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_23" class="nav" href="main3fa4.html?nodeID=939004226&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K070</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_23" class="nav" href="main3fa4.html?nodeID=939004226&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">LEFT FRONT WHEEL SENSOR FOR ABS</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_24" class="nav" href="mainb744.html?nodeID=939004228&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K071</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_24" class="nav" href="mainb744.html?nodeID=939004228&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">RIGHT FRONT WHEEL SENSOR FOR ABS</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_25" class="nav" href="maine48b.html?nodeID=939004230&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K074</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_25" class="nav" href="maine48b.html?nodeID=939004230&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">SLEWING SENSOR (VDC)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_26" class="nav" href="main6fd8.html?nodeID=939004232&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K075</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_26" class="nav" href="main6fd8.html?nodeID=939004232&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">LEFT REAR WHEEL SENSOR FOR ABS</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_27" class="nav" href="mainb431.html?nodeID=939004234&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K076</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_27" class="nav" href="mainb431.html?nodeID=939004234&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">RIGHT REAR WHEEL SENSOR FOR ABS</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_28" class="nav" href="main6d58.html?nodeID=939004236&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K082</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_28" class="nav" href="main6d58.html?nodeID=939004236&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">SUPERCHARGING SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_29" class="nav" href="mainb6ca.html?nodeID=939004238&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K083</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_29" class="nav" href="mainb6ca.html?nodeID=939004238&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">FUEL PRESSURE SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_30" class="nav" href="mainb57f.html?nodeID=939004242&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K088</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_30" class="nav" href="mainb57f.html?nodeID=939004242&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">UPPER MIXED AIR TEMPERATURE SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_31" class="nav" href="main24c3.html?nodeID=939004244&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K090</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_31" class="nav" href="main24c3.html?nodeID=939004244&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">SOLAR SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_32" class="nav" href="main734d.html?nodeID=939004246&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K097</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_32" class="nav" href="main734d.html?nodeID=939004246&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">PARKING SENSORS</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_33" class="nav" href="main8f6a.html?nodeID=939004255&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K101</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_33" class="nav" href="main8f6a.html?nodeID=939004255&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">FUEL TEMPERATURE AND WATER IN FUEL FILTER SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_34" class="nav" href="mainae67.html?nodeID=939004261&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K120</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_34" class="nav" href="mainae67.html?nodeID=939004261&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">LINEAR SENSOR FOR FANS</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_35" class="nav" href="main30b8.html?nodeID=939004264&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K187</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_35" class="nav" href="main30b8.html?nodeID=939004264&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">FAP DIFFERENTIAL PRESSURE SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_36" class="nav" href="main35c0.html?nodeID=939004266&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K188</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_36" class="nav" href="main35c0.html?nodeID=939004266&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">CAT. DOWNSTREAM TEMPERATURE SENSOR</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_37" class="nav" href="main7bd8.html?nodeID=939004268&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">K189</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_37" class="nav" href="main7bd8.html?nodeID=939004268&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Impianto%20Elettrico&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent">UPSTREAM PARTICULATE FILTER TEMPERATURE SENSOR (DPF)</a></TD>
+				</td>
+	</tr>
+</table></P>
+
+	</body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939004146&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Impianto+Elettrico&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:56:05 GMT -->
+</HTML>

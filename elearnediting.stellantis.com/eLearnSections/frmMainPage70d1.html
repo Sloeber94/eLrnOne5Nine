@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939007080&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=ENGINE+CUTS+OUT+WHEN+IDLING+(THEN+RESTARS)&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 18:31:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939007080&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=ENGINE+CUTS+OUT+WHEN+IDLING+(THEN+RESTARS)&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="7dh/7aE/dig5TRvTVPx4o8JHWUJV/z631grBACpR5ejc395IXfaO+hOE3WLCH6591OsYaRwWaG+PyETX9IVVcV/Tqv4/arCF9eogo/JW5GE/U1fa3IewMihFOB40YXCq032CHdLT0TWCAxr4lFLEBBp4RdYE/MxuD2gFrZ+8/zXrU8RrCGXmdf/E5886e4x94SdAseJZk80+hMY7pzRfH0iTJHZ8qR2mIKA7K9Cu8OcJl/7Nt5h1TnTyK9q4mTYAMQ/gim0GIylmgTtl9T/fH4s69tU27wtO3l8PIvMrme31Tv/yZjY4D3fcFPnDlwLgJHlF8t5KKIx2/OUee7cU8DDAD+te4oTQgM67FFqyjMc4v0JFkKMvbX8QK3WSOL8TZVQIZhnXaOjW13dhti0rkP05pjS39PNaDcf5QZJ9D2ZMcAz+vBi1dNOWFMBZDliEeqKck3Xal1udrf0KOHfj8TlUlKXxhgPW4+dasPwateBFO9LycuTU3OdOLHUuzaZ6Qc+ZZ4AGd2FRX8zoBAohJvEo0r4FF2mn8soWSZ+5e5a8ecWNLVFDtzfWVjJmrcyCpGkzdjDdsTrkfepBah3PjlUisqxKtzXpPKvqmqq5PyVRYz68EwRUwME8Zrvc1ifFhHWcUgSjbXcDnxFD/OvRt2SGItZ8t90xE8Nfx5G7hPbcTXvoSKhEtTw525w5iFT/MbTTA9Pdl3xxjY6izvQ9ef3rTsy7RYTldu/otgbFGnLqAUt6CLqzA93RxO5xDum9LTpV56LOl7hC4i2aHf78fd53u6xmI0tQkuU+bs2IViDckEA46eT1pUSm7jRgp0GFgkcJvzA70a05scgI4TjY0ABiMIqLymnftoj6drz51rpfioQwrFJ+nrhCcFi+XJpivrNK0XtLkYaUs40x+9L/0iP8qwy0afLUm/KVrLenpGdDW6MW+IAFyGiFwYxX6QlfLAdW4gN7T/C/+9Ku2Qd7wlomaaf4gyYoihNmo66IHYk=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspPOWER SUPPLY SYSTEM - DESCRIPTION&nbsp&nbsp&nbspE1010&nbsp&nbsp&nbsp(from  03/2008)</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  ENGINE CUTS OUT WHEN IDLING (THEN RESTARS)</a>
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    <HR id="SchemaTop1_hr1" width="100%" SIZE="1"></HR>
+<table id="SchemaTop1_dlsSchema" cellspacing="1" cellpadding="1" align="Center" style="width:90%;">
+	<tr>
+		<td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_0" class="Selected" href="main966d.html?nodeID=939007080&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">POWER SUPPLY SYSTEM - DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_1" class="notSelected" href="main7fbc.html?nodeID=939007343&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">POWER SUPPLY SYSTEM - FUNCTIONAL DESCRIPTION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_2" class="notSelected" href="maind414.html?nodeID=939007344&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">POWER SUPPLY SYSTEM - WIRING DIAGRAM</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_3" class="notSelected" href="main5f66-2.html?nodeID=939007345&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V&amp;isExaminer=" target="_parent" style="display:inline-block;width:108px;">POWER SUPPLY SYSTEM - COMPONENT LOCATION</a>
+		</td>
+	</td><td>
+		<td align="center">
+			<a id="SchemaTop1_dlsSchema_ItemLink_4" class="notSelected" href="javascript: parent.openWinPrint(&#39;http://elearnediting.stellantis.com/eLearnSections/SchemaPrintAll.aspx?LanguageID=2&amp;nodeID=939007080&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&#39;);" target="_parent" style="display:inline-block;width:108px;">Print electrical function</a>
+		</td>
+	</td>
+	</tr>
+</table>
+<HR id="SchemaTop1_hr2" width="100%" SIZE="1"></HR>
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <script language="javascript" src="svgscript/mysvg.js">
+  </script>
+  <body onload="">
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">DESCRIPTION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electrical system is designed to increase the car''s safety level and prevent the possibility of fires and other consequences of electrical malfunctions. State-of-the-art connectors have been introduced to rule out the possibility of many connection defects.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Power is distributed via the junction units and/or fuse boxes. These are connected to control elements (relays and static actuators) to ensure maximum electrical protection and minimum complexity.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All cable looms have been made modular (sub-assembly composition) by changing the way functions are distributed inside the connectors and replacing welds with short-circuiting joints.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main safety solutions adopted are as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- power supplies protected by maxi fuses to cut off the electrical system in the event of a short circuit (see detail below);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the only cables not fitted with maxi fuses (starter motor and alternator) are armoured and located in protected areas. In the event of an emergency - operation of the inertia switch - these cables are disconnected by an automatic device located in the battery fuse box</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="mainfd56-2.html?nodeID=939006388&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=POWER%20SUPPLY%20SYSTEM%20-%20DESCRIPTION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> See E5010 IGNITION AND RECHARGING - DESCRIPTION</a>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the layout of the whole system is optimised to reduce the risk of damage in the event of failures or accidents;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- wiring installation has been optimised to reduce incorrect positioning and noise due to vibrations</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- all wires offer high resistance to abrasion;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the wires in the engine are specially designed to be resistant to high temperatures and are protected by sheaths or piping;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the wires in the passenger compartment are protected by corrugated pipes and brushed tape to reduce noise levels;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the main connections come with secondary lock terminals and lever locks or CPA to prevent terminal deformation.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All systems and electrical equipment are supplied by the battery at a voltage of 12V.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The battery is recharged by the alternator during engine operation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="mainfd56-2.html?nodeID=939006388&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=POWER%20SUPPLY%20SYSTEM%20-%20DESCRIPTION&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent"> See E5010 IGNITION AND RECHARGING - DESCRIPTION</a>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main power supply lines are protected by MAXI FUSES housed in the engine compartment junction unit; other shunt fuses are located outside it.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/768_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This vehicle is equipped with a starting system known as Smart-Key, whereby the traditional ignition key has been replaced with an electronic key "T.E.G.", (Transmitter for Entry and Go), combined with an electronic key reader and TEG-Reader radio frequency receiver.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Some circuits are continuously supplied, even with the car at a standstill and the TEG extracted, because they are connected directly to the battery.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Other circuits are supplied with the TEG inserted in the TEG Reader: the distribution of the power supply to the vehicle (INT and 15/54, INT/A, "AVV", etc.) is managed by the "steering lock node", but takes place in exactly the same way as on models with a traditional key.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lines that distribute power to the various appliances are represented by wiring diagrams for the various functions and systems.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This general diagram shows all the lines as they leave the battery and maxi fuse boxes. Refer to specific diagrams for more details.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939007080&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=ENGINE+CUTS+OUT+WHEN+IDLING+(THEN+RESTARS)&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 18:31:27 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

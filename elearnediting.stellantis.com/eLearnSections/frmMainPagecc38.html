@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939005118&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939005118&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Q/aV9peYmE9Qmq6i+o2e/bzzt9J1drDtxsdv7cPGmRKHMox58PRyKh7Um7Znzvg097WsT4PI3PCZzrPrOKndX+1JT3hjDs5s38Kn7vKvxGelXdTVO7zzzZXK95srp7s2JRj1PF/Pg9hBtovicmvA+6nsQ8T57B+dUJf7z9BY4YzyZ/0B+kKJ17OpWyXEY5KQ+qN+H8SDIskhM+VTFl/avjyQk7Zyjc3Rzh6FhVL+k3Kac8yMvhkhJOeJ8XgpO4/Vvey05PxOIvGRIps08JwgLlVGxP4Y3ek7Med+ZvztEMyM0QHUV7zWrJ+frli1Xiv50ll4sVHcr6FVT0FlmPsXgMcFDSvQofjr9HJIK+86OJUkjjsKodQ9zfHloxGYVsTH8eWR1ks7mJc0WGJg12vwEW0/KpGXTo6jqd/xrqwU4Rs9C8ce7zf/x/DxkZLFFHeI4ZqsU9BmP9tdfnCC6oHMlCjEyCfgQl/rlVT1m7VdPn43VBl06OT5WUA2Z+bRJB6NGe0i13WmC46L8U+1v5fdHxlMcLmjXiSBBvqsds6by+nJ7wtKyfsFnAnumBZ56ifDTG6irZzof67yOMArTOr6yFBMnVz7fvg6zBrtLqJH/b8XQ6TUjXD/WMjA2iNZAjFKC11CjHPJmLxr59wdfdDoZ9o7zJj7DFoMx8Zt4MWqWkR2Fr4Fqn628YUV6vv8/kG/bujgbtqjrRmJAQT9qPpCg62mmL4eoA7/PNNqMCvTLohI47kTVHGLCYRG1b92rmvtXm0zIesg8P6rzG8JRSTRU5oD75LtChbtCaWgvCKmeOM=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - STEERING&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">SPECIFICATIONS</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The steering control has been designed to guarantee the best performance for the driver during sporty driving together with excellent handling and limited effort during parking manoeuvres.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The development of these objectives, in conjunction with the search for excellent driving comfort, has led to the production of a steering system with the following technical specifications:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- steering wheel turns: 2.33 in total on all versions</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- steering ratio: 13.0 steering wheel turns/wheel rotation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- effort on the steering wheel: ~ 4 Nm when steering from stationary</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- turning circle: 11.1 m</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Driving comfort has been improved by taking care of the sound insulation of the power steering system and using a new design steering wheel and steering column featuring good structural rigidity. In addition, a new type vibrational damper with excellent uncoupling has been fitted on the intermediate steering column shaft.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Lastly, great attention has been paid to passive safety both in terms of the layout, with the movement of the electric steering lock to the front area of the steering column, away from the area of the knees, and with the adoption of a controlled energy absorption collapsing device on the steering column. This, in conjunction with the steering wheel and knee air bags and the retaining belts, makes it possible to produce a five star performance in EUNCAP impact tests.</p>
+          <h1 class="bigtext1">HYDRAULIC SYSTEM For 4 x 2 version</h1>
+          <center>
+            <img src="images/jpg/939002015_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Power steering pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Power steering fluid reservoir</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Steering box</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Cooling coil</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The hydraulic circuit has a hydraulic pump rotated by the service belt; the pump takes in oil from the reservoir near the pump; the pump supply reaches the steering box; the oil leaving the steering box is sent to the reservoir, passing first through the cooling coil at the side of the radiator.</p>
+          <h1 class="bigtext1">HYDRAULIC SYSTEM For 4 x 4 version</h1>
+          <center>
+            <img src="images/jpg/946001133_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Power steering pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Power steering fluid reservoir</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Steering box</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Heat exchanger</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The hydraulic circuit has a hydraulic pump rotated by service belts; the pump draws in oil from the reservoir near the actual pump; the pump supply reaches the steering box; the fluid leaving the steering box is sent to the reservoir passing through a heat exchanger first.</p>
+          <h1 class="bigtext1">STEERING BOX</h1>
+          <center>
+            <img src="images/jpg/939002016_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Designed according to the constant ratio rack and pinion model, the size guarantees a max force of 10.85 KN power assistance.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The mounting supports for the box on the lower frame are designed to break in the event of the crash to maximize the energy absorbed by the body.</p>
+          <h1 class="bigtext1">STEERING COLUMN</h1>
+          <center>
+            <img src="images/jpg/939002017_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Locking lever</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Electric steering lock</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Lower cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Mounting bracket on dashboard crossmember</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Designed in accordance with a telescopic sleeve layout, it guarantees:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- vertical adjustment with ± 2 degrees of travel,</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- axial adjustment with 45 mm of total travel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The locking lever is located above the upper sleeve, by the lower cover in accordance with the most up to date EUNCAP safety directives.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electric steering lock, fitted as standard, is housed on the lower steering column cover, by the mounting bracket on the dashboard crossmember.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This means that it is out of the way of the driver''s knees in line with current EUNCAP recommendations. In line with current European legislation, the steering lock guarantees the locking of the steering wheel by means of a special Rencol clutch bush which allows rotation for torques between 100-240 Nm to prevent damaing the mechanical steering components if there is a theft attempt.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The steering column has a controlled energy absorption collapsing device which allows axial travel of 45 mm in addition to the adjustment travel.</p>
+          <h1 class="bigtext1">HYDRAULIC PUMP</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The hydraulic pump with "fixed capacity" in M.Y. 08 versions is replaced with a pump with "variable capacity" (varioserv).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This variable capacity pump has increased performance and reduced the power absorbed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following are the features of the two pump types.</p>
+          <h2 class="bigtext2">Fixed capacity pump</h2>
+          <center>
+            <img src="images/jpg/939007807_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Intake</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Valve unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Rotary unit</p>
+          <h2 class="bigtext2">Variable capacity pump</h2>
+          <center>
+            <img src="images/jpg/939007808_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Intake</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Valve unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Rotary unit</p>
+          <h2 class="bigtext2">Comparison between power absorption values (w) of the two pumps</h2>
+          <center>
+            <img src="images/jpg/939007809_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Fixed capacity pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Variable capacity pump</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939005118&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:42 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

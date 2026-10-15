@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006610&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006610&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="7nM1/bEItq8kITa+cRsbvsC3goRSnrYJSLCggsbbVpWOXlEZ+1WxPpi9D1u7rlmfHhy8LAbEuH2Z8aan3TtnDDOIQrxfZlMtvqVocxdSWxZ0j3Ql+IYGSWCSaj/d2qEiN3yXmwWeOjVySyVunsiPzPZthwTVkgICy+eGIlMsQmWjwZAKTUTm5eALCnHpLeJ66hUZt9N/hCB+HlswcfUfkgZa2PpoVSMQY00kFCZ6oPYexZmhKxG48f2pxqeVQCpBl74/SCzjZ6wcAGThrSAxx76dNBtvct/7J5st0VxfSQKByNh+9UFP45SLEAyDk2puxwb+KA5/HzQ+XqSB8HN7Owue4KBrqKZGUpgYB6ZTv8tJtUZ+v34XHium8hqetXalrH+AdxQg15P9XvvVe58FzJ1fEq17mQA1xqxid5I3v0oIaXXfq1GPUgCtjVQMfaN42IZmWjYUM9PBfSOMeDVjRR95YhL2Lez1/ipmDqan0cWpjbobwPxixnic6orKre8qcYwsKsObu2xLviyTsTF5WVaNihmzlyTIvZ47ez6fJCe8Ks6atIMnlVmV2XBk2fXOUqa7bWxEIMN9RmP5rfFvKtkJO5mE67gHdBaVZ76kM7CJEmjj1dLWHVuLdmBe3pMWN5oC0xWb60carB+msG21Kn0WRrNYuFKMwdSq9bW3+sdD9BD2QW0DUqwIJN4rgUgMf/0VdIXpa07ChA/WA26PmwtWhMX4z98p/w7yhz0AihVM4PH1/vYPUNkKsar7Z9/9Dku+yswwRG6srSNuIkEo6YgE117Y9JQKt5/SA5ITObo=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - TRANSMISSION&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">Introduction</h1>
+          <center>
+            <img src="images/jpg/946001111_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The transmission is the permanent integral type with a central ''Torsen Twin C'' differential and front differential built into the casing made by the Torsen group.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The torque supplied by the engine enters the F40 gearbox, with specific ratios to ensure optimum use of the power and torque to maximize the efficiency of the four wheel drive.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the gearbox output, the torque reaches the central Torsen differential, by means of a reduction cylinder pair with helical teeth; the drive torque is distributed between the front and rear axles according to a base ratio of 56/44.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The torque distributed to the front axle enters the open type front differential incorporated in the Torsen casing and is shared between the two wheels on the front axle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On leaving the Torsen, the torque to be distributed to the rear enters the idler unit transferring torque to the rear axle (PTU: Power Transmission Unit).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The PTU comprises a cylindrical gear pair with helical teeth and a bevel drive that transfers the engine torque to the propeller shaft.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The propeller shaft, in turn, directs the engine torque to the rear differential (RDA: Rear Differential Axle) where the distribution to the two wheels on the rear axle takes place.</p>
+          <center>
+            <img src="images/jpg/939006510_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The PTU (1) is fixed to the transmission gearbox (2) near the central differential by four bolts and centred by two bushes that work on the gear casing spacers (3); between the PTU flange coupling and the gearbox spacer an o-ring (4) is placed - this is replaced each time it is taken apart.</p>
+          <center>
+            <img src="images/jpg/939006511_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The tightening of the PTU is then completed by two further bolts that join it directly to the engine oil sump.</p>
+          <h1 class="bigtext1">Gearbox</h1>
+          <center>
+            <img src="images/jpg/946001113_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The gearbox used for this system is the six gear ratio F40, updated to optimise engine torque delivery and at the same time adjust the series of integrated gearbox ratios.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Gear engagement</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1st speed engagement</p>
+          <center>
+            <img src="images/jpg/946001114_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2nd speed engagement</p>
+          <center>
+            <img src="images/jpg/946001115_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3rd speed engagement</p>
+          <center>
+            <img src="images/jpg/946001116_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4th speed engagement</p>
+          <center>
+            <img src="images/jpg/946001117_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5th speed engagement</p>
+          <center>
+            <img src="images/jpg/946001118_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6th speed engagement</p>
+          <center>
+            <img src="images/jpg/946001119_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Reverse engagement</p>
+          <center>
+            <img src="images/jpg/946001120_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Synchronisers</b>
+          </p>
+          <center>
+            <img src="images/jpg/946001121_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Hub for sliding sleeve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Sleeve locking block</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Sliding sleeve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Synchronizer outer race</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Twin cone seal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Synchronizer inner race</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Flange</p>
+          <h1 class="bigtext1">Centre differential</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The centre differential is the Torsen Twin C type and also contains the transmission front differential in the casing. It comprises two half shells on the outside of which the ring gear that meshes with the gearbox final gear is tightened; the casing also houses the eight planet gears with helical teeth that rotate with the casing and transmit the drive for the rear axle to an outer ring gear and the drive for the front axle to an inner ring gear connected directly to the front differential by means of ribbing.</p>
+          <center>
+            <img src="images/jpg/946001122_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A. Meshing line between planet gear and rear axle drive ring gear</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B. Meshing line between planet gear and front axle drive ring gear</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C. Drive entry into centre differential (coming from the gearbox)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D. Drive output to rear axle</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E. Drive output to front axle</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sharing of the torque between the two axles takes place by means of a series of metal rings that control the drive for the two axles.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When one of the axles tends to rotate more than necessary following variations in the grip conditions or critical connections connected to the vehicle dynamics (understeer, oversteer, etc.), the planet gears that turn with the casing without rotating around their own axis under normal circumstances now tend instantly to rotate around their own axis producing axial thrusts typical of toothed wheels with helical teeth. These thrusts are discharged to the Torsen differential inner races which instantly oppose the relative movement between the outer ring gear (rear axle) and inner ring gear (front axle), thereby transferring the torque from the axle that is attempting to turn faster to the slower axle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Obviously, depending on whether it is the outer ring gear that wants to rotate faster or, alternatively, the inner ring gear that wants to rotate faster, the direction of the axial thrusts changes, involving different rings to discharge the forces involved, transferring the torque from one axle to the other depending on requirements.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The possibility of locking the Torsen, which allows these transfers of torque to be controlled, is not infinite; in effect, when the maximum torque transfer percentage from one axle to the other is reached the Torsen opens and allows it to slip between the two ring gears. In these Torsen opening conditions the planet gears rotate around their own axle and the locking control, once the maximum value is reached, no longer increases. This is, for example, the condition produced for a fairly tight bend where the kinematic trajectories imposed by the steering manoeuvre lead the Torsen to become unlocked.</p>
+          <h1 class="bigtext1">Transmission of drive to rear axle (PTU)</h1>
+          <center>
+            <img src="images/jpg/946001123_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The casing is made from aluminium and the assembly weighs 22.2 Kg. The function of the idler unit, PTU, is to direct the engine torque idler to the rear axle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The PTU is lubricated internally by its own fluid and not by the same fluid that lubricates the gearbox and differential.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A cylindrical gear pair inside the PTU transfers drive from the Torsen output shaft to a second shaft with a helical wheel on one end that meshes with the wheel on the Torsen output shaft and a bevel gear on the other end that meshes with the pinion, carrying drive to the propeller shaft.</p>
+          <center>
+            <img src="images/jpg/946001124_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Reduction cylinder pair section</b>
+          </p>
+          <center>
+            <img src="images/jpg/946001125_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Idler bevel drive section</b>
+          </p>
+          <center>
+            <img src="images/jpg/946001126_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h1 class="bigtext1">Propeller shaft</h1>
+          <center>
+            <img src="images/jpg/946000100_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The propeller shaft comes in three parts and is connected to the body by means of two mounts. The shaft has the function of transferring the PTU output drive to the rear differential RDA.</p>
+          <h1 class="bigtext1">Rear differential (RDA)</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The casing is made from aluminium and the assembly weighs 17 Kg. The rear differential (RDA: Rear Differential Axle) is the open type and has the function of directing the input drive, coming from the propeller shaft, to the rear axle wheels.</p>
+          <center>
+            <img src="images/jpg/939006512_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On the coupling flange, a suitable flexible mounting block (1) is fitted with the propeller shaft that absorbs axial vibrations.</p>
+          <center>
+            <img src="images/jpg/946001128_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h1 class="bigtext1">Vehicle dynamics</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Driving in a straight line</p>
+          <center>
+            <img src="images/jpg/946001129_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When driving in a straight line, if grip conditions are even, the torque distribution between the axles settles to the specified levels. Small variations in this specified distribution are due to variations in the rolling circumference between the tyres on both axles and the weight distribution between the axles. When the grip conditions between the two axles are no longer the same, as can be seen in the diagram, the torque is moved from the axle with less grip to the one with more grip to counterbalance the slipping of the axle which, from time to time, finds itself in poor grip conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Driving round bends</p>
+          <center>
+            <img src="images/jpg/946001130_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Round bends, when the radius is fairly consistent, the front wheels cover kinematic trajectories that make the actual wheels rotate faster than the rear wheels; in these conditions the Torsen removes torque from the front wheels and sends it to the rear wheels. When the maximum internal locking limit is reached the Torsen opens, allowing the vehicle to follow the trajectory imposed by the steering manoeuvre without the wheels slipping.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Understeer</p>
+          <center>
+            <img src="images/jpg/946001131_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the event of understeer the front wheels tend to rotate faster following the slipping typical of this manoeuvre, normally due to the grip limit being exceeded and allowing the engine torque to be drained to the ground; this usually happens either through excess torque discharged to the ground or through a decrease in road surface grip conditions. In this situation, as the tyre side road hold margin no longer remains (all the grip is used for the longitudinal part of the tyre) the vehicle tends to extend the trajectory and not follow the bend. In this situation the Torsen removes torque from the front axle and distributes it to the rear axle, returning the lateral grip margin to the front wheels and thereby restoring the stability of the vehicle, obviously within the physical limits of the vehicle dynamics.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Oversteer</p>
+          <center>
+            <img src="images/jpg/946001132_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the event of oversteering the rear wheels tend to rotate faster following the slipping typical for this manoeuvre, normally due to the grip limit that allows the engine torque to be drained to the ground having been exceeded. This usually happens either through excess torque drained to the ground or through a decrease in the road surface grip; in this situation as the tyre lateral road hold margin no longer remains (all the grip is used for the longitudinal part of the tyre) the vehicle tends to pitch at the rear, making the vehicle unstable. In this situation the Torsen removes torque from the rear axle and distributes it to the front axle, returning the lateral grip margin to the rear wheels and thereby restoring the stability of the vehicle, obviously within the physical limits of the vehicle dynamics.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006610&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:41 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

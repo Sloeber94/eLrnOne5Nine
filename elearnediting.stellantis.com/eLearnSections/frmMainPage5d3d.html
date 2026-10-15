@@ -1,0 +1,1262 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003534&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=BLUE&ME+NAV&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:04:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003534&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=BLUE&amp;ME+NAV&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="fm3XixC18RWlvUVlsmeV0PhISfqIniCYbf6X9DDlSm5dw9y6Dm06SAVFJuD/nWDl2LCcynA8ZnsSfbGYCCPI6Fr/1VcPAyKlBGsyNUwx1M+f8Lv+yKcNdLUFHFAz1v2/zDi/eYxgwWbsx9oLUtnY+tj9+OTZXHndb8pWalX5ccfKomLkD/TPtbqI72P8itTUNu49CjM1glKDP1ry8GwsytHqXtqSZ5p923vaDFtA8CfgJlSjgU0XV0BrAT9F44xm/rdpydRnFUhf+JAF5XBbavucOWa6WjR+EbCgpC5fcvCJwjPC2i+l01NdT+hGuUjRT39EtJeEcEF21en/fF/A9KbSaCybG4auV3EJfZQ/bVoL/oaasltMR8SQqm5NyXsLZmseypG8g5FOLMECokGtNjbUkOEKuO+n/7SOLFs+pfqv9Hnen9xFQdKp1oUXDwBq0hgX4wJ6/lVe7DQi8u0T0hBppkNwqE2CCpA3AfgTkkKzqRcZQ1YwPxMeRJ9p8sIKxHMGSJjqwUsyh6oOB79WHg3NeVPkI54TjZ3yrDeYFfiEjRFCjP6VO+o9MrFRg7kuqbD4t8HxnggR84UunazBOjPYIHmHoKYyrsZqGOw3QBZjSsCS+0TAeflyyKwZOzO6/pcJ2JmfLDdDN3Y+ubfPmOE2PXvJJeDKXC4+Uhh0E8N4v0Wn+Aelo94vlruAs0GHcpvMDyAvDf0E/+dinBplCZmNo4FDCE5LD+nXlpIRmrypvP3GJMeT/9Q1l4ZSsd7dkbBIpbyfNzMCztxMbv1PjfdVCHEIM461u8M5v4v8jgwZSpqVZknEfxiPxH/1cDklEV0WmUE87C7W3WbZppwonzIdlXbu0ySlTMLLU03/2UHNvXHG3ornvc7trpWXSFIV8wbJfXLptFrCCcH7bKyhtA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINSTRUMENTS&nbsp&nbsp&nbsp5560&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  BLUE</a>
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">GENERAL INFORMATION</h1>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003534&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=BLUE&ME+NAV&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:04:32 GMT -->
+</html><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instruments on board the vehicle in question are positioned ergonomically within the arc of the steering wheel with the auxiliary instruments in the centre of the dashboard and a large high resolution display that is very bright.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lighting can be adjusted and there is a dusk sensor to differentiate between daytime and nightime conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following innovative features have been introduced on this vehicle: instruments aimed at the driver with 3-D graphics, lit graphic symbols, white graphics, reconfigurable auxiliary instruments.</p>
+          <center>
+            <img src="images/jpg/939000026_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. main instrument panel</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. display</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. centre instrument cluster</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instrument panel comes in two versions: HIGH and LOW panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HIGH panel</p>
+          <center>
+            <img src="images/jpg/939005154_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LOW panel</p>
+          <center>
+            <img src="images/jpg/939005155_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Speedometer</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Warning lights</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Rev counter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Reconfigurable matrix LCD (HIGH only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Warning lights (LOW only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Negative contrast alphanumerical LCD (LOW only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instruments also contain:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- buzzer;</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- light sensor for automatic adjustment (day/night) of the instrument brightness.</p>
+          <h2 class="bigtext2">Warning and fault warning lights</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning and fault warning lights are shown by means of the special LED or in the centre display. The diagram summarizes the symbols used:</p>
+          <center>
+            <img src="images/jpg/939007475_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 Insufficient oil pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 Engine coolant overheating</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 Heater plugs (Diesel only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 Handbrake applied - insufficient brake fluid - EBD failure (with ABS warning light activated)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 Brake pad wear</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 Alternator failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 Fuel reserve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 Exterior lighting failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 ABS failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 Air Bag failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 Passenger Air Bag deactivated</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12 EOBD (engine management system failure)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13 Right direction indicator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14 Left direction indicator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15 Side lights</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16 Main beam headlamp</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17 Door/s open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18 Immobilizer failure (CODE)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19 Seat belts not fastened</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20 TEG Reader failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21 VDC</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22 Inertia switch operation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23 Cruise Control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24 Danger - Ice signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25 Automatic/robotized transmission failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26 Rain sensor failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">27 Speed limit warning</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28 Parking sensor failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">29 DPF filter blocked (Diesel only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30 Water in diesel filter sensor (Diesel only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">31 Hill Holder operation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">32 Windscreen washer fluid level</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">33 Engine oil overheating</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">34 Engine oil level</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">35 Dusk sensor failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">36 Brake lights failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">37 Insufficient tyre inflation pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">38 Fog lights</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">39 Rear fog lamps</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">40 Windows anti-crush safety device failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">41 General failure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">42 Bonnet open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43 Boot open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">44 Dipped headlamps</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">45 Incoming SMS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">46 Incoming telephone call</p>
+          <h1 class="bigtext1">HIGH INSTRUMENT PANEL</h1>
+          <h2 class="bigtext2">Speedometer</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system calculates the value of the actual vehicle speed starting with the values supplied by the sensors on the two drive wheels and the value of the actual circumference of the wheels, supplied by the on board computer. The electronic control and operating structure is achieved by means of a microprocessor.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The speedometer reading is produced by means of a stepping motor.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instrument panel increases the value of the effective speed slightly, for safety reasons, but never exceeds the maximum tolerance laid down by the directives for the countries where the vehicle is sold.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The actual speed of the vehicle is provided even if one or two of the drive wheel sensors is broken.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a fault in the vehicle speed sensor the instrument panel returns the indicator to the rest position.</p>
+          <h2 class="bigtext2">Rev counter</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control and operating electronics use a microprocessor with the reading produced using a stepping motor guaranteeing precision and continuity throughout the entire scale and a reading in extreme operating conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rev counter on diesel and petrol versions differs through the maximum end of scale value (6000 rpm for diesel versions and 8000 rpm for petrol versions) and through the start of the red danger zone (4500 rpm for diesel versions and 6800 rpm for petrol versions).</p>
+          <h2 class="bigtext2">Buzzer</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A buzzer offers the possibility of managing signals of different intensity for the following functions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Signalling doors open with the vehicle moving</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Signalling handbrake applied with the vehicle moving</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Signalling parking sensors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Warning speed limit exceeded</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Acoustic feedback on activation of functions using buttons</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Acoustic feedback on memorizing of seat and exterior mirrors position</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Signalling of reverse gear and automatic/robotized transmission safety position</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Signalling of driver''s door open with TEG inserted</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Feedback on warnings/alarms shown in the display</p>
+          <h2 class="bigtext2">Brightness sensor</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This sensor, located in the speedometer panel, has the task of measuring the environmental light conditions and of sending this information (day or night) to the Body Computer which, on comparing this information with the status of the side lights, will select the suitable configuration for the vehicle interior lighting (daytime or nightime mode).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With this information available, the behaviour of the instrument is as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- In "daytime" mode the display can be adjusted to 8 settings, the graphics are switched off, the index lighting is 100% and cannot be adjusted.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- In "nightime" mode the display, the graphics and the indexes can be adjusted to 8 settings and the level set will be transmitted to the components that regulate the brightness (climate control display, radio display).</p>
+          <h2 class="bigtext2">Keys</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following buttons are fitted on the left steering column switch unit lever:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- “MENU”</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- “MENU +”</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- “MENU -“</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">and carry out the following functions: management of the setup menu; dimming and activation/deactivation of the night panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following buttons are fitted on the right steering column switch unit lever:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- “TRIP”</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- “TRIP UP”</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- “TRIP DOWN”</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">and are used for the management of the Trip Computer and the TPMS wheel check screen.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The button dedicated to the operation of the "km" trip meter is located in the left panel and has the function of zeroing it through a long press.</p>
+          <h2 class="bigtext2">Reconfigurable matrix display</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The visible area of the display is 50 mm wide and 70 mm high with a resolution of 124x174 pixel and is divided into zones as illustrated in the diagram below:</p>
+          <center>
+            <img src="images/jpg/939000030_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Time</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - Outside temperature</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C - Function displayed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D - Failure symbols/ideograms (two tone red/amber area)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E - Trip meter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">F - Total milometer</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">G - Automatic/Selespeed transmission information (if present)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">H - Messages, Trip Computer, bar graph, Set-up menu, Service, Date, vehicle image in 3D, Radio info, Navigation info, etc.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">I - Function displayed identification symbol</p>
+          <h2 class="bigtext2">Main functions (high)</h2>
+          <h3 class="bigtext3">Trip computer and tpms check</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are two TRIP modes:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TRIP A (with manual reset only);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TRIP B (with manual or automatic reset from key-on that can be set using the setup menu) divided and with the sequence described below, activated using the special button.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRIP A:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Range</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Distance travelled - A</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Average consumption - A</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Instant fuel consumption</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Average speed - A</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Journey time - A</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRIP B</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Range</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Distance travelled - B</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Average consumption - B</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Instant fuel consumption</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Average speed - B</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Journey time - B</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Every TRIP screen simultaneously displays two TRIP items activated at that time (TRIP A or B); these items are displayed one in the top part of the screen and the other in the bottom part.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Entry into the Trip Computer ambient takes place by pressing the TRIP button on the steering column switch unit windscreen wiper lever.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The first time the TRIP is pressed the figures for Trip A are displayed and the second time it is pressed those for Trip B are shown.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the TPMS option is present, the third time it is pressed the tyre inflation pressure check screen is displayed, otherwise the Trip ambient is exited.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To move from one Trip Computer figure to the next, the rocker switch on the windscreen wiper lever must be operated.</p>
+          <center>
+            <img src="images/jpg/939005156_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. TRIP button activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. TRIP function buttons</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Trip is reset by pressing the TRIP button for a while whilst Trip A or Trip B is displayed.</p>
+          <h3 class="bigtext3">Setup menu</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For safety reasons, the complete menu cannot be accessed when the vehicle is moving.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the NIT is present on the version, the menu will be shown on the NIT display.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All the possible setup menu options, the choices available and the factory (default) setting for each selection are listed below (some options may or may not be present depending on the vehicle trim level).</p>
+          <p class="titolo_lista">Speed limit:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">XXX: numerical value of the speed set.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YYY: unit of measurement set.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: OFF</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default if ON: 130 km/h or equivalent in mph</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Dusk sensor setting adjustment:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Bargraph in display - adjustment to 3 levels</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">TRIP B reset mode</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: manual</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Setting the clock</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: 00:00</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the hour flashes.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">when the time is &lt;10 the initial "0" should not be displayed</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: 00:00</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the minutes flash</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Time mode</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">“24h” or “12h”</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: 24h</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Date adjustment</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The year flashes</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The default value is the release year of the instrument panel software, e.g.: 2005</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The months flash</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: 01</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The days flash</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: 01</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Audio repetition</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: OFF</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Door lock/unlock:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Boot unlocking together with unlocking of all the doors</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: OFF</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Unlocking of the driver''s front door only</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: OFF</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Automatic locking of doors and boot above 20 km/h</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: OFF</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Unit of measurement setting</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Unit of measurement for distances: default: km</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Unit of measurement for consumption: default: l/100km</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Unit of measurement for temperatures: default: °C</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Various settings</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Language setting</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Three items are displayed at a time</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Volume of buzzer for alarms/failures/warnings</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Display with bar graph - 8 setting adjustment</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Button pressing buzzer volume (roger beep)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Display with bar graph - 8 setting adjustment</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Service interval (km/miles/days)</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">XXX: value</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YY: unit of measurement set for distances, ("km" or "mi")</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Sealt Belt Reminder</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Default: OFF</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This item is only present if the system has been deactivated</p>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <span class="testo_link">  </span>
+                      <a class="contents_link" href="main880b.html?nodeID=939003537&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5580C AIR BAG SYSTEM</a>
+                    </p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Lighting that can be dimmed with brightness sensor and night panel</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The HIGH version allows the user to adjustment the brightness of the graphics, indexes, instrument panel display, instruments, radio and climate control by pressing the "Menu +" and "Menu -" buttons located at the side on the lights lever.</p>
+          <center>
+            <img src="images/jpg/939000032_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 Menu +</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 Menu –</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The indexes are always lit up at the key-on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Two different brightness settings can be adjusted by the user and memorized by the instrument, one for the daytime mode and one for the nightime mode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Night Panel function can be activated in the "Nightime Mode " status by pressing the "Menu -" button for about 2 seconds.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The activation of the Night Panel switches off the backlighting of the rev counter panel and the instrument panel graphics, whilst the backlighting of the speedometer panel and the display remains activated and can be dimmed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once activated, the Night Panel function can be deactivated in the following ways:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- By pressing the "Menu + " button for about 2 seconds</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- automatically at each key-OFF</p>
+          <h3 class="bigtext3">Display of information relating to planned maintenance</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the programmed maintenance (service) is close, the message is automatically displayed at the key on (after the initial check procedure) followed by the number of kilometres, miles or the days until the next service is due.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The display of the programmed maintenance information can also be shown if the user requests by selecting a special item in the setup menu. In this case the display is possible, irrespective of the intervals.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The starting date for the mileage is 20,000 km (or 12,000 miles).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Display logic for instrument panel in automatic service conditions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The first message is displayed once at the key on, if one of the following conditions occurs:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the kilometres or miles (depending on the unit of measurement set) until the next service are equal to or less than the limit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- there are 30 or less days until the next service</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Later on the message is displayed only once at the key-on, each time the value is equal to or less than the following partial level values:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1800, 1600, 1400, 1200, 1000, 800, 600, 400, 200, 100, 50 km (or partial corresponding levels in miles) and 27, 24, 21, 18, 15, 12, 9, 6, 3 days; no longer displayed at subsequent keys-on</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the service interval is reached, a service message is displayed at each key-on: e.g.:</p>
+          <center>
+            <img src="images/jpg/939000033_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Display logic as requested by the driver:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The information relating to the programmed maintenance can be displayed at any time by selecting the relevant item using the SET-UP MENU.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once all 9 services have been exhausted, no message is displayed automatically and it is no longer possible to select the item from the set-up menu.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Display of engine oil level</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Two seconds after the key-ON the display shows information concerning the engine oil level, for about 3 seconds, by switching the six "bars" on/off (bargraph). The maximum oil level is represented by all the bars lit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The MIN and MAX values shown on the display correspond to the MIN and MAX levels on the oil dipstick, e.g.:</p>
+          <center>
+            <img src="images/jpg/939000034_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The gradual switching off of the "bars" indicates a decreasing oil level.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the oil level is below the minimum recommended level, the screen described above is not displayed and a "minimum oil level" message appears in its place.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the oil level is beyond the maximum level, then an "oil level too high" message will appear.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the first key-on after the battery has been disconnected, if no information relating to the engine oil level is available, the specific screen will be omitted.</p>
+          <h3 class="bigtext3">Warning lights for particle filter system</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system that manages the operation of the particle filter has three warning lights in the instrument panel for signalling the accumulation status of the actual filter.</p>
+          <center>
+            <img src="images/jpg/939006379_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The "filter blocked" warning light (A) is activated after a certain number of "unsuccessful" regenerations, i.e. if the driving behaviour at that moment does not allow the automatic activation of the regeneration procedure or this operation has not been successfully concluded on account of another problem.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is advisable to keep the vehicle running for a while to try and carry out the regeneration, otherwise, if the warning light remains on, it is vital to carry out the forced regeneration using the diagnostic equipment (Examiner):</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="maina442.html?nodeID=939010384&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 0520G12 PARTICULATE FILTER (D.P.F.) - REGENERATION EXAMINER</a>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With warning light (A) on, the EOBD warning light (B) also comes on if the condition of the filter deteriorates (the accumulation level of 250% is exceeded) so that the smooth operation and condition of the exhaust system is put at risk. In this case it is vital to carry out the forced regeneration using the diagnostic equipment (Examiner):</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="maina442.html?nodeID=939010384&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 0520G12 PARTICULATE FILTER (D.P.F.) - REGENERATION EXAMINER</a>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Warning light (B) comes on even with warning light (A) off, if errors have been detected, e.g. relating to the DPF system sensors: in this case, use the diagnostic equipment for all cases of the EOBD warning light coming on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible, during the filter regeneration stage, that the particulate being "washed" may pollute the engine oil.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For this reason, the "minimum engine oil pressure" warning light (C) is also used on engines with a DPF filter that flashes together with the message "Change the engine oil" in the display when the system detects that the engine oil has deteriorated to a certain extent, requesting an oil change in advance of the programmed one (managed by the control panel - Service function).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The extent of the oil deterioration is not measured by a dedicated sensor, but calculated by an algorithm in the engine management control unit depending on: the number of DPF regenerations, kilometres travelled (mileage), number of engine starting cycles, number of cold starts, average value of the oil temperature, etc.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning light turns on and flashes along with the message on the display when the system detects that the engine oil is exhausted. After the initial signalling, each time the engine is started up, the warning light continues to flash for 60 seconds and then every 2 hours until the oil is changed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the oil is changed the Service function must be reset as described.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="main1422.html?nodeID=939010357&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 0010K PROGRAMMED MAINTENANCE, EMISSION CONTROL VERSIONS UP TO 90,000KM</a>
+          </p>
+          <h3 class="bigtext3">Failure or warning signals</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instrument panel display can show numerous messages and symbols in 8 languages that can be selected from the setup menu.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Sometimes, the displays are accompanied by graphic representations of the vehicle.</p>
+          <h3 class="bigtext3">Display of clock, date and outside temperature</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The hh:mm reading remains present at the key-ON.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The clock can be adjusted using the set-up menu, moreover the hh:mm information in "24h" or "12h" mode can be selected from the menu: in the latter case, either "AM" or "PM" appears.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The date, which can be set using the setup menu, is displayed when no information with a greater priority is requested (e.g. failure/warning messages; Trip Computer, Setup menu, audio repetition, etc.).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The outside temperature is always shown at the key-on except when the parking sensor screen is displayed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The unit of measurement (degrees centigrade or Fahrenheit) can be selected using the setup menu.</p>
+          <h3 class="bigtext3">Automatic/selespeed transmission information display</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instructions for applying the automatic transmission/SELESPEED are shown in the bottom right of the display: for more details</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="main1b07.html?nodeID=939006205&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 2127 ELECTRO-HYDRAULIC SELECTION GEARBOX EXTERNAL CONTROLS</a>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>See descriptions 2135 AUTOMATIC TRANSMISSION EXTERNAL CONTROLS</b>
+          </p>
+          <h3 class="bigtext3">Milometer and trip meter display</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The area dedicated to the display of the milometer is the lower one, to the right of the symbol area.</p>
+          <center>
+            <img src="images/jpg/939000035_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Trip Meter reading is shown in order to simulate the progress of a mechanical drum milometer (rotation of the various figures upwards). This display is also shown when the information is zeroed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The trip meter can be zeroed by pressing the "km" button in the control panel.</p>
+          <h3 class="bigtext3">Tyre pressure display</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In versions equipped with the T.P.M.S. system (tyre inflation pressure control system), a screen with tyre pressure conditions is displayed after the Trip A and Trip B information.</p>
+          <center>
+            <img src="images/jpg/939007476_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At key ON and for a short period, dashes are displayed instead of "OK/NO" if the plan view is recalled by pressing the TRIP key.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This behaviour is normal as the system is checking the tyre pressure values.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Seat belt reminder</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"FIRST REMINDER CYCLE"; WARNING LIGHT SIGNAL</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The "seat belts" warning light signals that the (driver''s or passenger or rear seat) seat belts are not fastened in accordance with the following strategy:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the warning light comes on in fixed mode, at key-on, if the seat belt has not already been fastened;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the warning light comes on in fixed mode if, with key on, the belt is unfastened (unless the following conditions apply, when the warning light should flash);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if the belt is already fastened, the warning light remains off at key on;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the warning light goes out if, the seat belt is fastened at key on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the warning light should remain off at key off.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The constant warning light indication cannot be excluded.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"WARNING CYCLE": INDICATION VIA WARNING LIGHT AND BUZZER</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning cycle is activated for approximately 90 seconds whenever at least one of the following conditions is present under key-on conditions with the seat belt unfastened:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- time elapsed equal to 30 secs and vehicle speed above 4 km/h</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- vehicle speed above 25 km/h</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- distance travelled more than 500 m</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning cycle comprises of the warning light flashing (at a frequency of 2 Hz D.C. 50 %), combined with a buzzer sounding.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Operation during the 90 second cycle:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if the seat belts are fastened, the warning cycle is interrupted immediately (the warning light goes out and the buzzer stops) and the system is ready for a new signal cycle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if one of the three events that caused the activation of the warning cycle ceases, it continues for 90 secs.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if a further warning is required, the warning light indicates the new event by interrupting the current warning cycle (the acoustic signal stops and the seat belt reminder warning light changes from a flashing to a fixed light) and activating the new signal. The system then resumes the warning cycle prior to the new, most recent event. Of course, if the seat belt is fastened during the indication of the new event, the warning cycle is terminated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if the key is turned off, the warning cycle stops immediately.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Operation after 90 seconds:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">if the seat belt unfastened status persists:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the acoustic signalling is deactivated</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the warning light flashing cycle stops and the warning light remains on in fixed mode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning cycle is carried out only once in the event of the above conditions arising: therefore, when the cycle is completed (after 90s), the warning cycle is not repeated if the seat belt remains unfastened.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">New warning signal:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning cycle is only repeated when the seat belt unfastened condition is detected once again (transition from seat belt fastened to seat belt unfastened), and one of the three conditions mentioned above is present.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Warning cycle exclusion mode (warning light flashing /buzzer)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The user can temporarily deactivate the warning cycle using the following procedure:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Within one minute of key-on, proceed as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- fasten the driver and passenger side seat belts. To make the procedure easier, the seat belts can be fastened before the key on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- unfasten at least one of the seat belts.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning cycle automatically becomes active again at each new key-on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The user can permanently deactivate the warning cycle only via the intervention of Technical Service.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The deactivation procedure must be carried out using a diagnostic instrument (Examiner) in communication with the instrument panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">No one can deactivate the signal produced by the warning light in the dashboard.This is always present (fixed light) if the seat belt is unfastened.</p>
+          <h3 class="bigtext3">Display of parking assistance system</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ultrasound parking system used in the display comprises 8 sensors: 4 sensors are fitted in the front bumper, 4 sensors are fitted in the rear bumper.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more details</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="mainbe16.html?nodeID=939003539&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5580H PARKING OBSTACLE DETECTION DEVICE</a>
+          </p>
+          <h3 class="bigtext3">Navigator information repetition</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the function activated, the word "NAVIGATION" is shown in the dedicated area of the display (top section) and the specific symbol is on the left, navigation pictograms and the distance from the next manouevre can be displayed in the centre of the screen.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more details</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="main4c56-2.html?nodeID=939003540&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5580P CONNECT PANEL</a>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="main61ba.html?nodeID=939003089&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5580M ON-BOARD NAVIGATOR</a>
+          </p>
+          <h3 class="bigtext3">Telephone information repetition</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the function activated, the word "Telephone" is shown in the dedicated area of the display (top section) and the specific symbol is on the left; the following information can be displayed in the centre of the screen:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Name (if present in the NIT list) or</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Telephone number (if the name is not in the NIT list);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Short message (SMS) reception warning</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more details</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="main4c56-2.html?nodeID=939003540&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5580P CONNECT PANEL</a>
+          </p>
+          <h3 class="bigtext3">Display of voice box</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more details</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="main4c56-2.html?nodeID=939003540&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5580P CONNECT PANEL</a>
+          </p>
+          <h3 class="bigtext3">Display of sms message receipt</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following are displayed when an SMS message is received:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The SMS message symbol and the letters "SMS" in the special area of the display (at the top);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Name (if present in the NIT list) or telephone number (if the name is not in the NIT list);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The "Incoming message" information for 10 secs in the centre of the display.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more details</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="main4c56-2.html?nodeID=939003540&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5580P CONNECT PANEL</a>
+          </p>
+          <h3 class="bigtext3">Display of audio information</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the function activated, the word "AUDIO" and the symbol to the left are shown in the dedicated area of the display (top part) if one of the following functions is activated: TAPE / CD / CD MP3 / CDC.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="mainea1b.html?nodeID=939003541&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5570 ACCESSORIES</a>
+          </p>
+          <h3 class="bigtext3">Display of alfa romeo logo at the key-off</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Alfa Romeo logo is displayed for 3 seconds at the key-off if there is no further information to display The image is fixed for the first second, whilst for the remaining 2 secs it gradually fades away until it disappears completely.</p>
+          <center>
+            <img src="images/jpg/939000036_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h1 class="bigtext1">LOW INSTRUMENT PANEL</h1>
+          <h2 class="bigtext2">Speedometer</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system calculates the value of the actual vehicle speed starting with the values supplied by the sensors on the two drive wheels and the value of the actual circumference of the wheels, supplied by the on board computer. The electronic control and operating structure is achieved by means of a microprocessor.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The speedometer reading is produced by means of a stepping motor.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instrument panel increases the value of the effective speed slightly, for safety reasons, but never exceeds the maximum tolerance laid down by the directives for the countries where the vehicle is sold.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The actual speed of the vehicle is provided even if one or two of the drive wheel sensors is broken.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a fault in the vehicle speed sensor the instrument panel returns the indicator to the rest position.</p>
+          <h2 class="bigtext2">Rev counter</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control and operating electronics use a microprocessor with the reading produced using a stepping motor guaranteeing precision and continuity throughout the entire scale and a reading in extreme operating conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rev counter on diesel and petrol versions differs through the maximum end of scale value (6000 rpm for diesel versions and 8000 rpm for petrol versions) and through the start of the red danger zone (4500 rpm for diesel versions and 6800 rpm for petrol versions).</p>
+          <h2 class="bigtext2">Buzzer</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A buzzer offers the possibility of managing signals of different intensity for the following functions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Signalling doors open with the vehicle moving</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Signalling handbrake applied with the vehicle moving</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Warning speed limit exceeded</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Acoustic feedback on activation of functions using buttons</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Acoustic feedback on memorizing of seat and exterior mirrors position</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Feedback on warnings/alarms shown in the display</p>
+          <h2 class="bigtext2">Brightness sensor</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This sensor, located in the speedometer panel, has the task of measuring the environmental light conditions and of sending this information (day or night) to the Body Computer which, on comparing this information with the status of the side lights, will select the suitable configuration for the vehicle interior lighting (daytime or nightime mode).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With this information available, the behaviour of the instrument is as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- In "daytime" mode the display and the indexes are 100% lit up and the graphics are off. In "nightime" mode the display, the graphics and the indexes can be adjusted to 8 settings and the level set will be transmitted to the components that regulate the brightness (climate control display, radio display).</p>
+          <h2 class="bigtext2">Keys</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following buttons are fitted on the left steering column switch unit lever:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- “MENU”</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- “MENU +”</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- “MENU -“</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">and carry out the following functions: management of the setup menu; dimming and activation/deactivation of the night panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The button dedicated to the operation of the "km" trip meter is located in the left panel and has the function of activating/deactivating the display of the trip meter and zeroing it if it is pressed for a long time whilst the display is shown.</p>
+          <h2 class="bigtext2">Alphanumerical lcd</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The visible area of the display, 61 mm wide and 28 mm high, is the two line, negative transreflective type.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The (top) line comprises 9 characters made up of 14 segements for the display of:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Clock</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Outside temperature with first decimal figure in degrees centigrade</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Setup menu</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The second line (at the bottom) is composed of:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Service spanner symbol</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 6 characters with 7 segments with a decimal point for the milometer and trip meter display and a "TOT" symbol for identifying the type of milometer displayed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Snow symbol for ice danger display</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Distance unit of measurement for milometer</p>
+          <center>
+            <img src="images/jpg/939000037_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Main functions (low)</h2>
+          <h3 class="bigtext3">Setup menu</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following functions can be displayed whilst the vehicle is being driven by pressing the "MODE" button briefly:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Selecting activation/deactivation of speed limit and selecting speed limit level.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following functions can be displayed wtih the vehicle stationary by pressing the "MODE" button briefly:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Selecting activation/deactivation of speed limit and selecting speed limit level</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Clock adjustment</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Buzzer volume for pressing buttons (roger beep) / alarms / failures / warnings</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Setting unit of measurement for distances</p>
+          <h3 class="bigtext3">Lighting that can be dimmed with brightness sensor and night panel</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In "nightime mode" the LOW version allows the user to adjustment the brightness of the graphics, indexes, instrument panel display, instruments, radio and climate control by pressing the "Menu +" and "Menu -" buttons located at the side on the lights lever.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dimming is not possible in daytime mode. The indexes and the display are 100% lit and the graphics are switched off.</p>
+          <center>
+            <img src="images/jpg/939000038_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 Menu +</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 Menu –</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Night Panel function can be activated in the "Nightime Mode " status by pressing the "Menu -" button for about 2 seconds.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The activation of the Night Panel switches off the backlighting of the rev counter panel and the instrument panel graphics, whilst the backlighting of the speedometer panel and the display remains activated and can be dimmed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once activated, the Night Panel function can be deactivated in the following ways:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- By pressing the "Menu + " button for about 2 seconds;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- automatically at each key-OFF.</p>
+          <h3 class="bigtext3">Display of information relating to planned maintenance</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the service interval is reached, a service message is displayed at each key-on: e.g.:</p>
+          <center>
+            <img src="images/jpg/939000039_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Information relating to the programmed maintenance interval cannot be displayed on request.</p>
+          <h3 class="bigtext3">Display of engine oil level</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Two seconds after the key-ON the display shows information concerning the engine oil level, for about 3 seconds, by switching the six "bars" on/off (bargraph). When the oil level is at maximum all the bars are lit: e.g.:</p>
+          <center>
+            <img src="images/jpg/939000040_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The gradual switching off of the "bars" indicates a decreasing oil level.</p>
+          <h3 class="bigtext3">Display of the speed limit function</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible to set a speed limit (with a range of between 30 and 250 km/h, in steps of 5 km/h; with a range of between 20 and 155 mph in steps of 5 mph) which, if exceeded, activates a warning procedure for the driver for a period of 10 seconds:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The word "SPEED" in place of the time</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- "km/h" (or "mph") lit up in place of the outside temperature</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- writing flashing indicating that the speed limit (e.g. "140") has been exceeded in place of the milometer</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- acoustic warning</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the warning cycle is over, the standard screen will be displayed.</p>
+          <h3 class="bigtext3">Display of the vps function (insertion of teg)</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the instrument panel receives the special signal, it shows the following sequence of messages: "PRESS" - "PEDAL" - "AND" - "START". Each individual message is displayed for a period of 1 second and once activated the succession of messages will be interrupted as soon as the special signal no longer requires it (the succession of messages described above is displayed at least twice).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="mainc815.html?nodeID=939003530&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5520 ENGINE STARTING</a>
+          </p>
+          <h3 class="bigtext3">Display of "follow me" function</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The writing "F XXX" will be shown on the instrument panel display in place of the milometer where:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- "F" is the "follow me home" function activated message</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- "XXX" are the seconds of lighting set using the steering column switch unit (after7 impulses of the steering column switch unit the maximum display time - 210 seconds - cannot be increased further).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This display persists for 20 seconds starting from the last time the steering column switch unit is pressed unless the function is deactivated during the display.</p>
+          <h3 class="bigtext3">Display of the "ice danger" function</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After warning the driver of the possible presence of ice on the road, if the outside temperature remains below 3 degrees C, the temperature reading flashes and the "snow" symbol and the "ICE" message are displayed in place of the clock.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the end of the warning cycle or if the "MODE" button is pressed briefly:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the message disappears and the screen prior to the event reappears;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the temperature reading stops flashing;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the "snow symbol" remains in the special area of the display (as long as T is below 6 °C).</p>
+          <h3 class="bigtext3">Display of activation of inertia switch</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the inertia switch is activated the message "FPS on" is displayed in place of the milometer and it remains on constantly as long as this condition persists.</p>
+          <h3 class="bigtext3">Display of clock, date and outside temperature</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The hh:mm reading remains present at the key-ON.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The clock can be adjusted using the set-up menu, the hh:mm information in "24h" or "12h" mode can be selected from the information menu.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The clock can be adjusted via the setup menu.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The outside temperature is always shown at the key-on except when the parking sensor screen is displayed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The unit of measurement is degrees centigrade.</p>
+          <h3 class="bigtext3">Milometer and trip meter display</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The "Total Milometer" information is displayed at the key-ON.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The "Trip Meter" information is displayed by 1 brief press:</p>
+          <center>
+            <img src="images/jpg/939000041_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The "Trip Meter" can only be zeroed by 1 long press during the display of the "Trip Meter" information.</p>
+          <h1 class="bigtext1">INSTRUMENT PANEL WIRING DIAGRAM</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instrument panel is inside the B-CAN and is called the NQS (instrument panel node).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The signals for the systems on the C-CAN can be made available by the Body Computer Node gateway.</p>Its task is to display the vehicle operating parameters and to notify the driver of any possible faults in the on-board electronic systems.<h2 class="bigtext2">Instrument panel pin out:</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to the illustration.</p><center><img src="images/jpg/939000042_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">connector A (pins 1-9):</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ignition-operated power supply</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">direct power supply</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN A</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN B</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Analogue signal from "Mode, -, +" controls</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Analogue signal from "Trip, up, down" controls</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">connector B (pins 10-18):</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">I.E./EOBD failure warning light negative signal</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dimmed positive command for switch panel lighting LED (n.c.)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Seat belt not fastened warning light</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Safety acoustic signal activation negative command from NCR (n.c.)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Engine oil level sensor power supply</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal from engine oil level sensor</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">connector C (pins 1-9):</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Serial line with auxiliary instruments</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth for auxiliary instruments module</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Power supply for auxiliary instruments</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dimmed positive command for auxiliary instruments lighting LED</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Negative signal from milometer reset button</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">connector D (pins 10-18):</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal for turbo pressure reading</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Negative signal from insufficient screen washer fluid level sensor</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Analogue signal from engine oil pressure sender unit (n.c.)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth reference for engine oil temperature/pressure sensors</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Analogue signal from engine oil temperature sender unit</p></td></tr></table><h2 class="bigtext2">Fault diagnosis</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The diagnosis of the instrument panel can be carried out using the diagnosis equipment available in the network (Examiner or Examiner plus).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The diagnosis socket is located in the EOBD, the line used is the B-CAN line.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following operations are included in the diagnosis:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Display of possible errors present in the instrument panel.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Align the PROXI with the B-CAN (memorizing of specific vehicle parameters), if the instrument panel is being replaced.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Memorizing milometer mileage.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Set the mileage for the SERVICE function.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Carrying out active diagnosis in order to check the operation of the instrument panel.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the panel is replaced the alignment of the PROXI should always be carried out; if it is not, then the milometer will flash and the panel will not be operational.</p></p></span></td></tr></table><h1 class="bigtext1">CENTRE INSTRUMENT CLUSTER</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The module located in the centre of the dashboard, directed towards the driver at an angle of 20 degrees.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It comprises three panels including:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- fuel level gauge with reserve warning light;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine coolant temperature gauge with overheating warning light;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine coolant temperature gauge with overheating warning light;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- engine oil temperature gauge (petrol versions);</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- turbo pressure gauge (JTD versions).</p><center><img src="images/jpg/939000043_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - fuel level gauge</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - reserve warning light</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - engine coolant temperature gauge</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - coolant temperature overheating warning light</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">petrol versions</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - engine oil temperature gauge</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - oil overheating warning light</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">JTD versions</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - turbo pressure gauge</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The centre module is not a B-CAN node, but is connected by means of a special serial line to the instrument panel node which sends the module all the signals necessary for the display of the required information.</p></p></span></td></tr></table><h2 class="bigtext2">Fuel level indication</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fuel level sensor signal is the analogue type. It measures the resistive value of the sensor located in the tank. The sensor resistance is about 300 ohm.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the help of a microprocessor, the interface reads a number corresponding to a resistance value.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reading is produced by means of a stepping motor.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The display of the fuel level is achieved by an electronic circuit inside the actual module which operates the indicator and also the reserve warning light (about 7 litres).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The internal logic also "dampens" the signal preventing fluctuations.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning light comes on for around 4 seconds at the Key ON to check that it is working properly and then goes out. If it remains on flashing, this means that a fault was detected in the connection or in the level gauge.</p><table class="nota"><tr><td><img src="images/jpg/768_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refuelling should not take place in the following two conditions:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TEG inserted (during refuelling).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Engine running (during refuelling).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This, in addition to being in contradiction to aspects linked to SAFETY, does not allow the instrument to recognize the refuelling stage.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In these circumstances the gauge cannot indicate the actual level of fuel in the tank for periods of time of 20 - 30 minutes after refuelling.</p></p></span></td></tr></table><h2 class="bigtext2">Engine coolant temperature signal</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine coolant temperature reading is produced by means of the stepping motor. The reading corresponding to the "danger zone" is red.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The gauge is operated continuously, without deviations between the position of the pointer and the command sent and without sticking, fluctuations or jerking.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At every Key ON the engine coolant overheating warning light comes on and then goes out.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If warning light on conditions are present over the next 4 seconds (engine coolant overheating or warning light on already at the previous Key OFF), the warning light remains on.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a fault with the engine coolant temperature sensor, the gauge returns to the rest position at the Key OFF (exactly corresponding to the 50 °C reference) and, after the check stage, the general failure warning light in the main panel comes on and, on the HIGH version, the failure message for the engine coolant temperature sensor is displayed.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine coolant temperature gauge is operated, via the instrument panel, through the special sensor in the engine. The maximum temperature warning light is always controlled by the sensor located on the engine with another signal, irrespective of the one from the gauge.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The maximum temperature warning light comes on for around 4 seconds at the Key ON to check that it is working properly and then goes out.</p><h2 class="bigtext2">Oil temperature signal (petrol engines, high version)</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine oil temperature reading is produced by means of the stepping motor. The reading corresponding to the "danger zone" is red.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The gauge is operated continuously, without deviations between the position of the pointer and the command sent and without sticking, fluctuations or jerking.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine oil temperature gauge is operated - via the instrument panel - by the special sensor located on the engine.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The maximum temperature warning light is controlled by a microprocessor when the value measured exceeds a certain limit.</p><h2 class="bigtext2">Turbo pressure signal (jtd engines)</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The turbo pressure reading is produced by means of a stepping motor.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The gauge is operated by a microprocessor which processes a PWM signal coming, via the instrument panel, from the engine management control unit which provides information concerning the pressure that the turbocharger guarantees in the intake chamber.</p><h2 class="bigtext2">Centre module pin out</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to the illustration.</p><center><img src="images/jpg/939000044_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9-way connector</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Serial line with instrument panel</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth (connection to instrument panel)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Protected power supply from instrument panel</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dimmed positive lighting command from instrument panel</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr></table></td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

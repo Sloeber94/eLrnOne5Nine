@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011100&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 21:27:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011100&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="zLccSRne1IjEeq1ZOW2Z2WBCYX1wYtrx52wVicfA9ysEZo5JNdGIqjDKtXvLup4Jd5vLA3ye0cALU3KhfLq8t1/IbghuqG12/1RweNfjDtWSA/vaBk4tAzfWvHy1GIECa92CbrFLKqsMkbdP2uPG5Rm7ivkQ6y+s83Z+SzlFzbAWhGZLosdChYj8U6OGGrUZap4Si1FpAcLJK5meKDGpAKHC9zDsl2zjzSMkZrJ+rzPkMDleiCMRat0setuqNTZkPzGCcggCn6l208Eyg7jEhOs0Km0q6zjFxg1+RxjTcyd1CYXAHlPhQ9917Ebtv6LD7QSdOlEPHanqaIZqHTXi4c+3JtPYUdcRSzKKFVkCmZK4mzWOedG93lQHv347+rJHix8o/rYxdJsnKSqZXyTGRpEVk19nbWnD6l900ZB0E3g357nGBcxtZPNZSbdjohpEneFl4+9U0zukJd0d/SaAgNaQiIvjppC7eRVW4xsVOABCUbMYgbWD4FOLnOnYtmOfKGSJnZFVOiNUsZPQAJFgMi5bv7n8Z/h6ek5kbiwnwNOmcPfpvV1huqaUDGYvMGG1kyW/wjsgZzc13cf5EX0Ts8YgC0BtRVrWNQ0k84C4XqHfBoGU8ZF8nFGNl7z28ARvV/f4hJCQMbX4S7jNE/YSNE1usqBcItqRlAnXyOtfadpELxovlQnFnAK6ZfpGDXXpjyZZKYoVr/X13iRhcplbHJpLIWWOA1hOyCto1sHA+hIc1f1H/hEQwbxQPtpVMGCSPfammHsV+hcwvjgUQkJAZ6inQA95SdKhSImHpTpMMZzLr3npeiAYlB5c4E2t+cscDk1CZVhGtw7tS6sNaqwUMQTzl0M0C00DoisZNDdPdfzddC8gpIXKTXYx+KQjg7rh/I6jxv/rkz/fImLx/E7EpcJZJSxjNvP5tkMNcYG3A3k=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="kn0g0DvL1RPtMCOnH4cEMm9HKNNky7gjiAkgCLIozyxdNypxXcCsoUGwMRK2cFUG6peYgXGWkH3sjDsice3PYIANsD3U5qTcmE/XoQLW2p4iNy9gEnwImoExNP9oLA7O" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - AIR BAG SYSTEM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <h1 class="bigtext1">SAFETY INSTRUCTIONS TO BE FOLLOWED FOR OPERATIONS ON VEHICLES FITTED WITH AIR BAG SYSTEMS</h1>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/768_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">The following instructions MUST BE FOLLOWED during any operation involving vehicles equipped with Air Bags and pretensioners.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Preliminary instructions</h2>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/768_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">It should be remembered that Air Bag modules should be handled with care. Their use, transportation and storage are regulated by the procedures for handling such components, which are given below.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="titolo_lista">Before carrying out any repair operations to the bodywork, welding or operations that involve removing the Air Bag modules or the control unit:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Always disconnect the battery, i.e.: disconnect the two leads from the pole and insulate them taping them carefully.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Disconnect the electrical connection for the control unit waiting at least 10 minutes after disconnecting the battery.</p>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/768_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">If the battery is disconnected the Steering Lock Node remains in the condition (unlocked or locked) that it is in: during workshop operations and repairs, whenever it is necessary to turn the steering wheel with the battery disconnected, leave the TEG inserted when the battery is disconnected. The steering will therefore remain released and free to turn.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">Position the devices with the cover upwards in the lockable metal cupboard. This cupboard, especially designed for this purpose, should not, under any circumstances, be used to store any other types of material, particularly if they are flammable. The cupboard should be designed to store pyrotechnic charges (metal, impact resistant cupboard with grates to allow natural ventilation) and should have the markings required by law (DANGER EXPLOSIVES - NO NAKED FLAMES - NOT TO BE OPENED BY UNAUTHORIZED PERSONNEL).</p>
+          <p class="contents_testonormale ">All the connectors used and wired to the Air Bag modules and/or pretensioners contain a short circuit clip. Until the Air Bag modules and/or pretensioners are connected to an appropriate energy source there is no possibility of them being accidentally activated.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/768_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">The continuity of the system components can only be measured after the modules have been replaced with specific dummy resistances.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">A system component that has not been activated during an accident is considered to still be "active". Therefore unexploded components that have to be removed from the vehicle (on account of defects or the warranty has expired, etc.) should be returned to the special centre following the procedure described below.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/768_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">The safety system components should ONLY be fitted and dismantled by skilled, authorized personnel. Failure to follow the procedures described below could result in the accidental activation of the system, personal injury or repairs to the system that are not necessary. AIR BAG MODULES AND/OR PRETENSIONERS MUST NOT, UNDER ANY CIRCUMSTANCES, BE DISMANTLED..</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale ">All the system components have been specifically designed to work on a specific marque and type of vehicle, therefore Air Bags should not be adapted, reused or installed on other vehicles, only the ones for which they have been designed and produced.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/768_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">Any attempt to resue, adapt or install one on a different type of vehicle could result in serious injury or even be fatal for the occupants of the vehicle in the case of an accident.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Interventions on system components</h2>
+          <p class="contents_testonormale ">After every repair to the system it should be checked using the EXAMINER or other diagnostic equipment.</p>Module duration<p class="contents_testonormale ">The system pyrotechnic components have different life spans.</p><p class="titolo_lista">Therefore they must be replaced at the following intervals:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale ">Air bag modules or pretensioners: 14 years</p></li><li class="elemento_lista"><p class="contents_testonormale ">Clock spring: 10 years</p></li></ul>Air bag module replacement (due to defects or expiry of warranty)<p class="titolo_lista">If an Air Bag module is being replaced because it is defective or the warranty has expired:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale ">Remove the detachable part of the adhesive label from the new module and place it in the special folder containing the vehicle details (model, registration date, chassis number) and the serial number of the old module. The file should be kept for future checks.</p></li><li class="elemento_lista"><p class="contents_testonormale ">A new adhesive plate is supplied together with the module and it should be stuck on top of the one located either near the driver (door or centre pillar) or in the passenger glove compartment. However, it must be perforated first at the month 14 years after the year in which the module is fitted (e.g. 2019 for 2005).</p></li></ul><p class="contents_testonormale ">Similarly, if the clock spring or a pretensioner is being replaced, remember that the recommended life of these components is 10 years.</p>Control unit replacement<p class="contents_testonormale ">The electronic control unit should ALWAYS be replaced after an impact that results in the entire system being activated (Air Bag and pretensioners).</p><p class="contents_testonormale ">If the control unit is being replaced, the detachable part of the adhesive label must also be removed and placed the special file mentioned above.</p>Replacing the clock spring<p class="contents_testonormale ">The clock spring for connecting the driver''s Air Bag module is equipped with a device that automatically stops it rotating when the steering wheel is removed. This is designed to prevent the upper plate, now no longer secured to the steering wheel, from turning freely and unwinding or winding the coil inside the device and possibly causing it to break. The device is automatically released when refitting the steering wheel.</p><p class="contents_testonormale ">In the case of replacement, the replacement clock spring is supplied separately from the steering column switch unit and it should be fitted with the wheels straight because this is the corresponding position for the new device. The new device is equipped with a safety tab that keeps it locked.</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011100&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 21:27:37 GMT -->
+</html><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <h2 class="bigtext2">Painting operations</h2>
+          <p class="contents_testonormale ">There are no special safety regulations to follow for painting and subsequent drying operations in an oven because the modules in particular have been designed in such a way that the outside surfaces of the vehicle are not damaged when they get hot from normal paint drying systems.</p>
+          <p class="contents_testonormale ">It is forbidden to use naked flames near the modules.</p>
+          <p class="contents_testonormale ">All the electronic control units (including the Air Bag system) are always removed if the ambient temperature could reach or exceed 85°C.</p>
+          <h2 class="bigtext2">Interventions after an accident</h2>
+          <p class="contents_testonormale ">If any of the safety system components is damaged following an accident it MUST be replaced.</p>
+          <p class="contents_testonormale ">Do not attempt to repair the control unit, clock spring or Air Bag modules and/or pretensioners.</p>Accidents with or without system activation<p class="titolo_lista">Several of the system components should be inspected after an accident whether the system has been activated or whether it has NOT been activated. These components are: </p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale ">Steering column;</p></li><li class="elemento_lista"><p class="contents_testonormale ">Steering column supports;</p></li><li class="elemento_lista"><p class="contents_testonormale ">Electronic control unit and modules mounting area;</p></li><li class="elemento_lista"><p class="contents_testonormale ">Clock spring;</p></li><li class="elemento_lista"><p class="contents_testonormale ">Dashboard (the area of the passenger Air Bag module and knee bag).</p></li></ul><p class="contents_testonormale ">If the component shows signs of distortion, breaks or bends it should be replaced.</p>Accidents with system activation<p class="contents_testonormale ">Several of the system components should be replaced if the vehicle is subject to a frontal impact that has fully or partly activated the system.</p><p class="titolo_lista">In the case of partial activation (pretensioners, Side Bags or Head Bags), these components are:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale ">Pretensioners, Side Bags or Head Bags</p></li><li class="elemento_lista"><p class="contents_testonormale ">Electronic control unit (only after the third activation of the pretensioners, Side Bags or Head Bags)</p></li></ul><p class="titolo_lista">In the case of total activation (Air Bags, Side Bags, Head Bags and pretensioners), these components are:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale ">Front Air Bag modules</p></li><li class="elemento_lista"><p class="contents_testonormale ">Knee Bag modules</p></li><li class="elemento_lista"><p class="contents_testonormale ">Pretensioners, Side Bags or Head Bags</p></li><li class="elemento_lista"><p class="contents_testonormale ">Electronic control unit</p></li></ul><p class="contents_testonormale ">As far as the wiring and connectors are concerned, they should be inspected for any signs of burning, melting of the outside insulation or damage from excessive heat.</p><p class="contents_testonormale ">Any signs of damage to the clock spring or in the area where the electronic control unit and Air Bag modules are mounted means that the damaged components should be replaced.</p><h2 class="bigtext2">Dangers to health</h2><p class="contents_testonormale ">The following precautions should be observed when handling activated Air Bag modules and/or pretensioners:</p><p class="contents_testonormale ">- wear polythene protective gloves and safety goggles;</p><p class="contents_testonormale ">- wash your hands and other parts of the body exposed with soap and water after touching exploded Air Bag units.</p>Effects of overexposure<p class="contents_testonormale ">There is no potential danger of exposure to the propellants as the system is completely sealed.</p><p class="contents_testonormale ">The propellant mixture is in a solid state therefore it is impossible to inhale it even if the gas generator cartridge is broken.</p><p class="contents_testonormale ">There is no danger to human health if the gas escapes.</p><p class="contents_testonormale ">Contact with the skin should be avoided and the propellant should not be swallowed.</p><p class="contents_testonormale ">In the case of:</p><p class="contents_testonormale ">- Contact with skin: wash immediately with soap and water.</p><p class="contents_testonormale ">- Contact with eyes: wash eyes immediately with running water for at least 15 minutes.</p><p class="contents_testonormale ">- Inhalation: take the affected person into the open air immediately.</p><p class="contents_testonormale ">- Swallowing: induce vomiting if the person is conscious.</p><p class="contents_testonormale ">A doctor should always be called in these situations.</p><h1 class="bigtext1">SAFETY REGULATIONS WHEN HANDLING MODULES</h1><p class="contents_testonormale ">In normal conditions the driver''s and passenger Air Bags and/or pretensioners are activated by the electronic command during the impact. The gases that develop in these conditions are not toxic.</p><table class="nota"><tr><td><img border="0" src="images/jpg/769_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale "><p class="contents_testonormale ">It is important that the personnel who carry out repairs to devices fitted on the vehicle follow the safety regulations listed below.</p></p></span></td></tr></table><p class="contents_testonormale ">The personnel working on the devices should be trained and should observe the following precautions:</p><p class="contents_testonormale ">- When removing and replacing open (exploded) Air Bags, only move the modules one at a time and wear protective gloves and goggles for the removal.</p><p class="contents_testonormale ">Always rest the Air Bag module with the opening flap and the pre-breaking splining facing upwards. Never place anything on top of this flap.</p><p class="contents_testonormale ">- Do not hold pretensioners by the rod when handling.</p><p class="contents_testonormale ">- At the end of the operations wash your hands thoroughly with soap and, if there is any contact with the residual powder and your eyes, rinse immediately with plenty of running water.</p><p class="contents_testonormale ">- On all versions with Air Bags it is forbidden to work from the front seats before having rendered the system inoperative by disconnecting the two battery leads and waiting at least 10 minutes.</p><p class="contents_testonormale ">- The metal Air Bag components are very hot just after it has exploded. Avoid touching these components for 20 minutes after the Air Bag has been activated.</p><p class="contents_testonormale ">- Never carry out repair operations on Air Bag modules or pretensioners. Send all defective modules to the supplier.</p><p class="contents_testonormale ">- Never heat the Air Bag module (e.g. through welding, striking, drilling, mechanical machining, etc.);</p><p class="contents_testonormale ">- Never fit Air Bag units and/or pretensioners that have been dropped or show signs of any type of damage.</p><table class="nota"><tr><td><img border="0" src="images/jpg/768_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale "><p class="contents_testonormale ">The storage of Air Bag modules together with flammable or combustible materials is prohibited.</p></p></span></td></tr></table><table class="nota"><tr><td><img border="0" src="images/jpg/768_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale "><p class="contents_testonormale ">Gas generators should not come into contact with acid, grease or heavy metal: contact with these substances could cause the formation of gases that are poisonous or harmful or explosive compounds.</p></p></span></td></tr></table><p class="contents_testonormale ">Replacement parts should be stored in their original packaging and the same procedures as for Air Bag modules that have not been activated and have been removed from the vehicle should be followed for their temporary storage, i.e. in a specially designed, locked, metal cupboard (impact resistant metal cupboard with grates for natural ventilation)</p><p class="contents_testonormale ">The cupboard should have special warning signs (DANGER: EXPLOSIVES - NO NAKED FLAMES - NOT TO BE OPENDED BY UNAUTHORIZED PERSONNEL).</p><h1 class="bigtext1">SCRAPPING AIR BAG MODULES OR PRETENSIONERS</h1><p class="contents_testonormale ">The Air Bag modules and/or pretensioners fitted on the vehicle should not be scrapped with the actual vehicle, but removed first.</p><p class="contents_testonormale ">The Air Bag units and/or pretensioners cannot be scrapped unless they have been activated first.</p><p class="contents_testonormale ">If the Air Bag module and/or pretensioners has not been activated during an accident it should be considered as still charged.</p><p class="contents_testonormale ">All unexploded material SHOULD NOT BE ACTIVATED, but should be sent to a specialist centre with the following written on the accompanying docket: "AIR BAG CONTAINING PYROTECHNIC CHARGE TO BE DEACTIVATED".</p><p class="contents_testonormale ">The local laws in force must be observed.</p><p class="contents_testonormale ">The devices must be sent in the packaging that replacement components are received in and, if it is not available, the packaging only can be ordered from the PARTS DEPT.</p><p class="contents_testonormale ">Obviously, if Air Bags and/or pretensioners are being replaced, the original packaging should be kept intact for dispatching devices not activated.</p><table class="nota"><tr><td><img border="0" src="images/jpg/769_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale "><p class="contents_testonormale ">Not following the procedures described here can cause the accidental activation of Air Bag units and/or pretensioners and result in personal injury.</p></p></span></td></tr></table><table class="nota"><tr><td><img border="0" src="images/jpg/768_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale "><p class="contents_testonormale ">Air Bag units that have NOT been activated should be disposed of through normal methods.</p><p class="contents_testonormale ">Air Bag units and/or pretensioners that have not bee activated contain substances that are dangerous to health and can cause personal injury if the sealed container is damaged during disposal.</p><p class="contents_testonormale ">The disposal of Air Bag units and/or pretensioners not carried out in accordance with this procedure may be in violation of regulations in force on this subject.</p></p></span></td></tr></table><h1 class="bigtext1">ORDERING METHODS</h1><p class="contents_testonormale ">If necessary, the devices can be ordered, as and when required, from the Aftersales Parts Department - Volvera through the V.O.R. procedure since the Network should not keep these parts in stock.</p><p class="contents_testonormale ">In any case, a record should be kept of internal movements by recording the module identification numbers and vehicle details (chassis number, registration date, model, etc.).</p></td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

@@ -1,0 +1,1449 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003538&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:38:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003538&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="TA1CN1GowAhFwLFY7vaNjNuocFSecLBvxT6GTPKFMa8WTUNaxUN/jskLpJ9C3GWJ0TOLTtKkygdsS5gXM6sYJKmfmm/zHkFA5f1EdDFcs7w2HahBp0zTqx6VQ8BseS4yKs9mN6qYq4HrJhU3cZKpDqV33+XYmIbCi8SHU+sano9oGfIfzsnktHxL7wWACTpuTNtrI9G6gofSBAM6sUk6VzkEgFa+JnIRj79Ld8k1+pF0+UAGl4UJ3HYYNx+A+clsmfwNh2nnvg/4ishMQiBDDrqilKd/ISa4SYzs73HhHfKCmV5lN4Kce4R3Wrg/M1RhQGMcdCWEbXvgTM4Aw9iJb4zwjyQWRePL/NHo2vINpJGL/Dl37IFO5/fpTIxvOdlXhZXtdl5LwsK0zfPcYSWB4x3fggwjUzfycrBL5tyxH2HUNp8CMk1/8C8auG/mCsb7m2+cHYWphGvhHHciEJyw1TDZ31FNUa1qnix3jn9WlJF6iG+M6MJ9CiOHrW/n7RFqzpMDJ0har9Dcgx8leZzlpdoQJy1fJ6DRBYav6qDb5MFe9xxWilJNYfJ12SIdxF5AyVvpDQkMdyqW0hfAcyuRawRhBIHqQ/svDYUvOwkfBXMiv/fQH8bFVLoBeGtbYpu2eWb5t+vFrqOMWgVAk9q55Zcp+qNqP6ctgWCAh1bAogQcX3jfgwcQGhCschpynb3tLpN6/mypHGyz5PGHpsCxdkgf2lWUDZsG8TI6sdfxhW4jtiHKLYV3GaRnB0TlRDc59DnDtae+kENRFrURjuxlafoQILO51hOEVeKSDXQVdLk=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspANTI-THEFT DEVICE&nbsp&nbsp&nbsp5580E&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">ALFA ROMEO CODE SYSTEM</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The vehicles are equipped with an electronic system known as the ALFA CODE to produce the engine immobilizer function.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ALFA CODE system only allows the engine to be started by means of the NCM after a secret code, memorized previously in the NCM, is received.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The second generation Code system is incorporated in the Body Computer Node (NBC).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ALFA CODE system comprises 5 basic components (in addition to the Body Computer which acts as a control unit):</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- CAN line for dialogue between the NBC and the NCM</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- two-way serial line for recovery (W line);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- two TEG devices (electronic key) containing a transponder with a secret code;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- an aerial that reads the code contained in the TEGs;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the NCM.</p>
+          <center>
+            <img src="images/jpg/939000061_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - NBC</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - NCM</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Aerial in the TEG Reader</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - TEG (electronic key)</p>
+          <h2 class="bigtext2">Operation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ALFA CODE allows the start of the engine management by the NCM by means of a coded dialogue between the NBC and NCM during the stage that precedes start up.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After key on - i.e. TEG correctly inserted in the TEG Reader - the NCM sends a code reques to the NBC, which responds only after it has identified (via its aerial) the presence of a known TEG in the TEG Reader.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the secret code in the answer is valid, the NCM continues with the regular engine management activities, allowing the engine to be started up.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NCM can only memorize the secret code through a special procedure.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Operation of the ALFA CODE is guaranteed if any of the other NBC functions are not working properly.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After recognizing an enabled transponder, the ALFA CODE switches off any alarm system.</p>
+          <h3 class="bigtext3">Interaction between the alfa roce and the electronic key (teg)</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Every TEG contains a transponder with an IDENTIFICATION CODE and a SECRET CODE.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As soon as the TEG is inserted, the transponder sends the identification code to the ALFA CODE which, having recognized it as one of the enabled ones, continues with the cryptographic transponder recognition strategy.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the identification code is not recognized, the procedure is aborted and the engine cannot be started.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The cryptographic transponder is recognized by means of a challenge-response algorithm with an encrypted code exchange.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The code recognition time is less than 160 ms per attempt.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ALFA CODE attempts transponder acquisition for up to 1 second.</p>
+          <h3 class="bigtext3">Communication between the engine control node and the alfa code</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Communication between the ALFA CODE (NBC) and NCM takes place via the C-CAN in normal service conditions. Every exchange of information between the ALFA CODE and the NCM is guided by the NCM (ALFA CODE never interrogates the NCM but only responds after receiving a request).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After KEY-ON, the flow of code exchange operations between the ALFA CODE and the NCM depends on the status (blank or memorised) of the engine control unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the NCM is blank, the procedure involves sending a fix-code request to the NBC: in this way the NCM learns the secret code and stores it in its memory. This procedure is known as CODE RECORDING.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the NCM has already been stored, the procedure involves checking that the fix-code stored in the engine management control unit memory and the one memorized in the NBC correspond: the NCM asks the NBC for the secret code and compares it with its own. This procedure is known as CODE VERIFY.</p>
+          <center>
+            <img src="images/jpg/939000062_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Key-on</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - NCM initialisation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - NCM status memorised/blank</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Memorisation successfully completed?</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - ENABLE ENGINE MANAGEMENT = the software flow continues with engine management</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - PROHIBIT ENGINE MANAGEMENT = activates a timer that imposes a delay to enable a new procedure only after 0 - 600 s. The +15 supply must be turned off and then on again. If no timer is available (con +30), it will be necessary to wait with key-on for 0 - 600 s. After this, a new procedure can be run, i.e. KEY- OFF and KEY-ON</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Is the secret code valid?</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - SEE POINT 6</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - SEE POINT 5</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - CODE VERIFY</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - CODE RECORDING</p>
+          <h3 class="bigtext3">Code recording</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The CODE RECORDING procedure is the memorizing of the fix code in the engine control unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Only after the ALFA CODE has memorized the identification codes, the secret code and the fix code, is it ready to satisfy the request to transmit a code from a blank NCM.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After power on, the engine control unit initialises its software and requests a fix code if it is blank.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the ALFA CODE is not blank, it responds by sending the fix code, but only after having recognized an authorized TEG. If the TEG is not authorized (unrecognized) or there is no TEG inserted, the ALFA CODE does not respond.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the ALFA CODE is blank, the aerial contains no transponder and a PER (fix code request) is sent from the NCM to the ALFA CODE, the ALFA CODE does not respond.</p>
+          <h3 class="bigtext3">Code verify</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This standard procedure is repeated throughout the vehicle lifetime whenever the user inserts the TEG in the Reader (KEY ON): this procedure enables the starting of the engine if the TEG is inserted and enabled.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The code verify procedure continues even when the user presses the START/STOP key (CRANKING).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After KEY ON (+15), the ALFA CODE detects whether the TEG transponder has been enabled.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the same time as KEY ON, the NCM initializes its software until it verifies whether a fix code has been memorized. If the answer is yes, it sends a fix code request to the ALFA CODE.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In response to this request, the ALFA CODE only sends the fix code, encrypted by the Minikrypt, to the engine control unit if the transponder is recognized as enabled.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the ALFA CODE receives further fix code requested, it only needs to re-read the transponder in the aerial before responding to the NCM if visible signs of tampering are present (see later).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the transponder is not recognized (incorrect transponder, no transponder in the aerial, etc.), the ALFA CODE will send the code (incorrect transponder or missing transponder) to the engine control unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the ALFA CODE is blank and the NCM sends a fix code request, after having recognized the transponder, the ALFA CODE responds by sending a blank NBC transponder recognized code message encrypted by the Minikrypt.</p>
+          <h3 class="bigtext3">Method of using c-can or recovery line w</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Communication between the NBC and NCM takes place along the C-CAN line by default: if the C-CAN line is faulty, the recovery strategy is as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- C-CAN faulty</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the NCM changes to recovery status on the W serial line and requests the code from the NBC: if the outcome is positive, start-up is permitted.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- in the event of problems on the W line, the NCM transfers to recovery status by means of the Diagnostic instrument at the end of the retransmission attempts.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The recovery strategy is mainly managed by the NCM, which acts as a master unit during communication: the NBC, acting as the slave unit, must always be ready to respond to code requests from the C-CAN network and also from the W serial line.</p>
+          <h3 class="bigtext3">Communication via the c-can network</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Communication via the Body Computer and the NCM takes place via the following two CAN messages:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- IMMO CODE REQUEST (immo code request)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- IMMO CODE RESPONSE (immo code response).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The MMO CODE REQUEST is sent by the NCM and received by the NBC.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The MMO CODE RESPONSE is sent by the NBC and received by the NCM.</p>
+          <h3 class="bigtext3">Communication via the w line</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the system changes to recovery mode due to a malfunction in the CAN network, information must be exchanged between the NCM and NBC via the W serial line.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This code exchange is only carried out for the CODE VERIFY procedure: it is not therefore possible to run a CODE RECORDING procedure via the W line.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Information must be exchanged via the serial line in exactly the same way as via the C-CAN network: The NCM control unit is the communication master unit while the NBC control unit responds to requests received by the NCM.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Both messages - IMMO CODE REQUEST and IMMO CODE RESPONSE - are carried on the serial line.</p>
+          <h3 class="bigtext3">Checking the w line electrical connection</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Because communication only takes place on the W line in recovery mode, an ERROR status would not not be recognised until the system was used i.e. because the customer would not be able to move the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A strategy for checking the W serial line has therefore been added so that the line can be diagnosed.</p>
+          <h3 class="bigtext3">Protection codes</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ALFA CODE function is performed via the exchange of secret codes between system subunits (TEG, NBC, engine control unit).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- UNIVERSAL CODE this is the code that an unprogrammed ALFA CODE sends to the NCM when it detects the presence of a transponder in the TEG. The ALFA CODE warning light turns on at a frequency of 1.6 Hz and duty cycle of 50%. The warning light flashes to indicate that the system is properly connected but the vehicle is not protected by a code.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- IMMO CODE: This is the basic code that provides the secret code and the fix code. An automatically generated immo code is allocated to each vehicle. The IMMO CODE is used to generate all the other secret codes used by the ALFA CODE function.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- SECRET CODE: This code is resident in the transponder. It is stored in the transponders contained in the TEG when the transponders are programmed and in the ALFA CODE when the keys are programmed at the end of line.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- FIX CODE: This is stored in the ALFA CODE during end of line programming.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ELECTRONIC CODE (PIN): This is obtained from the fix code and printed on the CODE CARD, which is given to the vehicle owner. It takes the form of a 5-figure decimal code (0 is not permitted).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is used to access the NBC memory in protected mode in order to reprogram or program new remote control units (TEGs) and/or perform specific diagnostic functions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is also used in the accelerator pedal recovery procedure described in the specific section on the engine control unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- IDENTIFIER: This is resident in the transponder and different for each transponder. It is stored in the ALFA CODE during the programming procedure. The ALFA CODE manages a table of enabled identifiers and another table of disabled identifiers.</p>
+          <h2 class="bigtext2">Alfa code function in the nbc</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ALFA CODE is a function of the NBC.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main ALFA CODE functions are:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to detect insertion of the TEG in the TEG Reader (+15);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to place the alarm in a deactivated state after recognizing an enabled TEG;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to emit an electromagnetic field to read the TEG transponder;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to send the random code to the transponder;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to receive the encrypted code transmitted by the TEG;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to store up to 8 identification codes;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to store the secret code;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to manage a list of up to a maximum of 8 enabled identification codes;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to manage a list of 16 permanently disabled identifiers.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to manage the C-CAN line towards the engine control unit;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to control activation of the warning light on the panel via communication with the NQS;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to carry out self-diagnosis.</p>
+          <h2 class="bigtext2">Aerial</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The aerial in the TEG Reader is powered by the NBC to energise the TEG transponder.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Since the aerial needs to be as close as possible to the transponder (on account of electro-magnetic immunity, the limited range of the transponder and small dimensions) it is fastened to the front part of the TEG-Reader.</p>
+          <h2 class="bigtext2">Transponder (in the teg)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A cryptographic transponder is located inside the TEG.</p>
+          <h3 class="bigtext3">Operation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the time of Key On (+15), the transponder is energised by the aerial and responds by emitting a rolling, encrypted secret code.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The emission into the atmosphere is sufficiently powerful to produce a high immunity to electromagnetic interference and the range is such that it can be received by the aerial in the TEG READER..</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the code is recognized as valid, the ALFA CODE sends the engine control unit, on request, a coded signal allowing the engine to be started.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Up to 8 electronic keys (TEGs) can be stored in the ALFA CODE.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The TEGs are supplied already memorised by the production plant. All the codes are also stored in a database managed by Parts. When the new vehicle is delivered to the customer, the service network does not need to carry out any memorisation procedure. If the TEGs are lost or extra TEGs are required, order from Parts in accordance with the procedures described below and in the REPAIR PROCEDURES section.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <span class="testo_link">  </span>
+                      <a class="contents_link" href="main5e0f.html?nodeID=939011101&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=ANTI-THEFT%20DEVICE&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> Op. 5580E ANTI-THEFT DEVICE</a>
+                    </p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Specifications</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The transponder in the TEG has the following coded in its memory:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- SECRET CODE which is the same for each transponder in the same kit;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- IDENTIFICATION CODE which is different for each transponder produced;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- PROGRAMMING DATE for the secret code</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The identification code differs from transponder to transponder to guarantee that no two transponders have the same identification code even if there is a request for a duplicate in the Network.</p>
+          <h3 class="bigtext3">Programming the teg</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The memorisation procedure is divided into two stages in sequence:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the transponder in the TEG is stored in the ALFA CODE;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The ALFA CODE manages memorisation of the fix code in the engine control unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This second stage is implemented automatically when the first is completed successfully after key on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The transponders are sent to the TEG manufacturer programmed with the identifier (different for each transponder).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The manufacturer generates an immo code, computes the relevant codes (secret code, fix code) and programmes the secret code and the programming date in the transponders.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once programmed, it prints a bar code on a disposable label that contains the immo code, the TEG identifiers, the programming date, the emergency key mechanical code (door opening) and, if present, the remote control/alarm codes.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The secret code in the TEGs is stored in the ALFA CODE during the end of line programming procedure and is used for TEG identification in the cryptographic algorithm.</p>
+          <h3 class="bigtext3">Programming a new body computer</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the Body Computer is replaced, the ALFA CODE must be programmed with the secret code and fix code of the vehicle to which it will be installed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The database is accessed using the chassis number to obtain the vehicle immo code. This is used to supply the secret code and fix code, which are programmed in the NBC.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For a new NBC, the tables of enabled and disabled identifiers are new.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the NBC has been installed in the vehicle, the TEG identifiers are stored (see reprogramming).</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">An ALFA CODE programming operation can only be performed with a blank NBC by the ALFA ROMEO parts dept.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">Reprogramming the teg</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TEG reprogramming involves storing the TEGs enabled upon vehicle start-up in the NBC.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">New TEGs to be programmed and TEGs already programmed will be entered in the ignition so that they can be recognised by the ALFA CODE, which stores those presented during the procedure in the enabled identifier table and transfers those not presented from the table to the disabled identifier table.</p>
+          <h3 class="bigtext3">Disabled teg table</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If an enabled TEG is no longer available (lost, stolen or no longer operational), its operation must be disabled during the subsequent programming procedure (necessary to memorise a new replacement TEG for example).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ALFA CODE manages a table in the EEPROM that can contain data on 16 disabled TEGs: the identifiers of enabled TEGs not presented during the reprogramming procedure are transferred to this table.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the disabled TEG table is full, any new TEG will replace the first entered in the table.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This table also allows the traceability of TEGs used on the vehicle.</p>
+          <h3 class="bigtext3">Reprogramming procedure</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The minimum time required for KEY-ON during the memorisation procedure is 1 second.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The TEG reprogramming procedure is performed/guided by the Diagnostic/Inspection Instrument: this procedure is activated by means of access protected by the vehicle PIN.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the procedure is activated, the flow is as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the Diagnostic instrument commands the NBC to initialise the TEG learning procedure;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the opeator inserts the first TEG and asks the NBC to learn it: the NBC reads the transponder following key-on, checks whether the secret code is correct and, if so, leans the TEG identifier;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the operator repeats operation 2 for all the TEGs.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once all the TEGs have been learnt, the Diagnostic instrument commands the NBC to store them permanently in its EEPROM via the following procedure:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the NBC compares the learnt identifiesr with those currently in its memory</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- data on TEGs stored in the EEPROM but not presented during learning are moved to the disabled TEG table.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- data on learnt TEGs are stored in the enabled TEG table only if they are not already present in the disabled TEG table.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- It is possible to program up to 8 enabled TEGs.</p>
+          <h3 class="bigtext3">Deleting a lost teg from the memory</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The procedure is similar to that described in the previous paragraph. All the TEGs owned must be presented. Those not presented will be deleted, i.e. transferred to the disabled identifier table. At any time it is possible to delete a lost TEG from the memory using the Diagnostic/Inspection Instrument. The identifier of this TEG is transferred to the disabled identifier table and will no longer be recognised.</p>
+          <h2 class="bigtext2">Code card</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This card shows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The emergency code (electronic code) that allows the Service Network to program electronic keys (TEGs) and remote controls using an EXAMINER.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The emergency key mechanical code identifies the mechanical profile of the key and must be specified on the order to receive the key already cut.</p>
+          <center>
+            <img src="images/jpg/939000063_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Electronic code</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Mechanical code</p>
+          <h3 class="bigtext3">Operation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic emergency code is also used for system diagnosis and for other operations using Examiner or other diagnostic instruments. Many of these operations (e.g. TEG Memorisation) can be carried out only once this code has been entered.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Before any operation, it is therefore necessary to ask the Customer for their Code Card.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Code Card must not be left in the vehicle in case it is stolen: at the same time, it must be available for the emergency start-up procedure described below.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Code warning light</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The code warning light is located on the instrument panel and is controlled by a message from the NBC on the B-CAN network.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On the LOW version panel, it is located in the centre above the display (clock/date).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On the HIGH version panel, it is displayed in the DOT matrix.</p>
+          <center>
+            <img src="images/jpg/939004546_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Operation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine running, the diagnostic warning lights (CODE and EOBD) must never be on. Special strategies are therefore implemented to prevent spurious code warning light activations if the +15 signal is cut off from the NBC for less than 5 s.</p>
+          <h3 class="bigtext3">Code warning light flashing modes and times</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NBC controls activation of the ALFA CODE warning light via the CAN network as shown in the following table. The times should be considered with a tolerance of 10%.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">According to the flashing mode (1 to 16) identified in the top table, the code warning light should flash as shown in the following table.</p>
+          <center>
+            <img src="images/jpg/939000065_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1 - NBC blank, NCM blank, C-CAN line and W line connected, transponder recognised, start-up allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-2 - NBC blank, NCM blank, C-CAN line and W line connected, transponder not recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-3 - NBC blank, NCM blank, C-CAN line not connected and W line not connected, transponder recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-4 - NBC blank, NCM blank, C-CAN line not connected and W line not connected, transponder not recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-5 - NBC blank, NCM memorised, C-CAN line connected and W line connected, transponder recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-6 - NBC blank, NCM memorised, C-CAN line connected and W line connected, transponder not recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-7 - NBC blank, NCM memorised, C-CAN line not connected and W line not connected, transponder recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-8 - NBC blank, NCM memorised, C-CAN line not connected and W line not connected, transponder not recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-9 - NBC memorised, NCM blank, C-CAN line connected and W line connected, transponder recognised, start-up allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-10 - NBC memorised, NCM blank, C-CAN line connected and W line connected, transponder not recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-11 - NBC memorised, NCM blank, C-CAN line not connected and W line not connected, transponder recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-12 - NBC memorised, NCM blank, C-CAN line not connected and W line not connected, transponder not recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-13 - NBC memorised, NCM memorised, C-CAN line connected and W line connected, transponder recognised, start-up allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-14 - NBC memorised, NCM memorised, C-CAN line connected and W line connected, transponder not recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-15 - NBC memorised, NCM memorised, C-CAN line not connected and W line not connected, transponder recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-16 - NBC memorised, NCM memorised, C-CAN line not connected and W line not connected, transponder not recognised, start-up not allowed</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 17 - reception, by the NBC in VERIFY mode, of a delayed code following a code request made 500 ms after key on that gave rise to activation of the code warning light with a fixed light must give rise to immediate deactivation to show that the system is properly connected and operational and the vehicle is protected.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 18 - No particular bulb flashing modes are required when the NBC is in Diagnostic status.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With reference to table modes 3 and 4, when communication is reset, i.e. reception of an ENQp by the NBC, the code warning light must begin to flash at a rate of 1.6 Hz dc 50% to indicate that the system is properly connected and operational. With reference to table modes 7 and 8, when communication is reset, i.e. reception of an ENQ by the NBC, the code warning light must begin to flash in accordance with mode 6 to indicate that the system is properly connected but the transponder has not been recognised by the engine control unit.</p>
+          <h3 class="bigtext3">Fault diagnosis</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ALFA CODE function allows self-diagnosis to be carried out for system components.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NBC is capable of identifying and memorizing the presence of the following malfunctions in its EEPROM:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Transponder:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">defective or missing transponder or secret code incorrect.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">deleted/disabled</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">unknown/not memorized</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Transponder aerial:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">electrical connection defective (circuit open, short circuit to earth or to battery)</p>
+          <h3 class="bigtext3">Active diagnosis</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">By means of commands sent from the Diagnostic instrument, it is possible:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- To ask whether the ALFA CODE type is:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">blank (whenever a TEG is inserted)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">programmed at end of line (whenever a TEG is inserted)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">spare part (whenever a TEG is inserted)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">blank/programmed NCM</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">link with NCM OK / KO</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Request the number of TEGs programmed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Read one TEG at once and find out for each TEG:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">valid transponder</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">whether the TEG is memorised</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">its position in the table</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">whether the secret code is valid</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the TEG ID</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Request the number and identifier of the last TEG used</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Request a reading of all enabled TEGs</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Request the number of TEGs enabled and the number of TEGs disabled</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Perform manual memorisation of TEGs by means of successive acquisitions and the condition of the transponder must be verified at each acquisition It is also possible detect the presence of a transponder in the aerial and whether it is valid or not.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Request current system status identified by:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">last TEG used and enabled and recognised</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the BC has received a code request from the engine control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the NCM is blank</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the ALFA CODE is blank</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the BC is enabled to send the Minikrypt key</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the identifier of the last TEG used is present in the enabled TEG table</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the identifier of the last TEG used is present in the disabled TEG table</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ALFA CODE has identified a tampering attempt on the +15 supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Control activation/deactivation of the CODE warning light on the NQS</p>
+          <h1 class="bigtext1">ALARM SYSTEM </h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The alarm system performs:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- perimeter surveillance,</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- volumetric surveillance,</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- anti-tilt surveillance,</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- surveillance of supply lead cutting.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">System operation is co-ordinated by the Body Computer, wihch sends/receives commands from external modules via the serial line.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is turned on/off by means of a remote control interfaced witha receiver in the NBC, the remote control unit and the receiver are radio controlled.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The alarm system can also be deactivated by inserting an enabled TEG recognised by the ALFA CODE (emergency deactivation).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The doors are locked upon insertion.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The volumetric and anti-tilt protection can be excluded by operating a button in the front courtesy light.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After one theft attempt, a flashing code emitted by the deterrent warning light indicates the detecting sensor: this warning light also indicates the sending unit battery charge status.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DIRECT INPUTS:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Negative signal from NA switch signalling front driver''s door open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Negative signal from NA switch signalling front passenger door open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Negative signal from NA switch signalling left rear door open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Negative signal from NA switch signalling right rear door open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Negative signal from NA switch signalling boot open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Negative signal from NC switch signalling bonnet open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- +15</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Serial line with volumetric/antitilt sensor control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- DIRECT OUTPUTS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Serial line with Siren Control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Serial line with volumetric/antitilt sensor control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Right front direction indicator activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Right rear direction indicator activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Right side direction indicator activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Left front direction indicator activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Left side direction indicator activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Left rear direction indicator activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Emergency warning light led activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- A-bus serial line</p>
+          <h2 class="bigtext2">Structure</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The alarm system consists of the following modules:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Body Computer: manages system operation and controls external modules.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Sensors on the doors, boot and bonnet: detect attempts to open the doors, boot and bonnet.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Remote control system (sending unit + receiver included in the NBC)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Siren: emits signal beeps and an acoustic alarm.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Ultrasound sensors: detect movemnts inside the passenger compartment.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Anti-tilt sensor: detects a change in vehicle tilt following a lift.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- A-bus serial line: connects all relevant modules to the alarm system.</p>
+          <center>
+            <img src="images/jpg/939004547_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - NBC</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Switches on doors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Siren</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Ultrasound/antitilt sensors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - TEG</p>
+          <h2 class="bigtext2">Operation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are eight different possible states for the alarm system:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- DEACTIVATED;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- REST;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ON;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- SURVEILLANCE;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ALARM;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- OFF;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- PROGRAMMING;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- FAULT DIAGNOSIS;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Each of these statuses is described in the following paragraphs.</p>
+          <h3 class="bigtext3">Deactivated</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Deactivated status is the BC''s status whenever the ALFA CODE detects an enabled TEG.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This operation effectively turns off the alarm.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the alarm system is deactivated it does not respond to the commands from the receiver (key on).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It changes from deactivated to rest status when the TEG is removed.</p>
+          <h3 class="bigtext3">Rest</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rest status is the basic alarm system status.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible to change from rest status to the following statuses:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- fault diagnosis: when a diagnostic session is activated by means of a diagnostic instrument connected to the BC.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- surveillance: when the vehicle is protected by issing an on command and passing through the on stage.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- deactivated: when the ALFA CODE detects an enabled TEG.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In rest condition, the BC continues to acquire the +15 status to stop the system changing to surveillance mode and above all to prevent alarm activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This information distinguishes two fundamental rest modes: vehicle operating (+15 present) or left (+15 absent), which is a prelude to surveillance mode.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During rest status, it is possible to cut out volumetric and antitilt protection manually within one minute of KEY OFF.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h3 class="bigtext3">On</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The on command changes the alarm from rest to surveillance model</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This operation is always inhibited in the presence of a +15 signal.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The on command is issued by pressing the sending unit key. It is indicated by the turn signals coming on for 2.5 s and the emission of a synchronous beep.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the command is received, the BC activates the alarm activation procedure as described within 100 ms:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- SIGNALLING OF SWITCHING ON IN PROGRESS.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Blinkers activated with fixed light for 2.5 s.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Deterrent warning light caused to flash at 4 Hz.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BEEP command sent to siren.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- SYSTEM DIAGNOSIS/VERIFICATION:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit diagnoses the following components:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Volumetric/tilt sensor modules;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- siren;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It verifies sensor status via appropriate commands:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- after max. 3 seconds, the siren;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- after max. 3 seconds, the siren;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- after max. 4 seconds, the volumetric sensor module;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- after max. 4 seconds the tilt module (if present).</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the responses to the verification commands are not received within the requiered times, the module is declared non-operational.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Plausibility of door (2 or 4), bonnet and boot switch statuses is also checked (perimeter protection): If one of the entrances if found not to be closed, this entrance is excluded from surveillance.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Door lock status verification: 4 seconds after turning on, door lock status is verified and cases of repulsion are detected (incorrectly performed door lock manoeuvre).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DIAGNOSTIC INFORMATION DISPLAY:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Faults present when the system is turned on are indicated by:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- emission of an alert beep on the siren 4 seconds after turning on;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- flashing of the siren anomaly blinkers;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- problem type indicated by means of the deterrent warning light.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 Hz flashing mode for 2.5 s indicates that one or more of the following anomaly causes is present:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- one or more doors open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- boot open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- bonnet open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- door not locked (repulsion)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- volumetric sensors faulty</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activation of a fixed warning light for 10 seconds indicates that one or more of the following anomaly causes is present:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- siren faulty</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- tilt sensor faulty</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- SENSOR ACTIVATION:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Command sent to the volumetric/tilt sensor module.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- SIREN ACTIVATION:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the siren operates correctly, a siren activation command is sent and the heart-beat management procedure begins on the serial line.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- END OF PROCEDURE:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The alarm system is on: the deterrent warning light is commanded to flash at 0.8 Hz.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- INTERRUPTION DUE TO OFF REQUEST</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If an off command is received from the remote control during the turning on stage, the procedure is interrupted and switches to the turning off stage.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If a warning light or acoustic signal is in progress, these are suspended to give way to the off indications.</p>
+          <h3 class="bigtext3">Automatic activation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Automatic activation allows the alarm system to switch from rest to surveillance mode in automatic, timed manner.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Two self-activatoin modes are provided.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FROM KEY-OFF:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- KEY OFF is detected;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the self-activation counter begins counting;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- If a closed/open transition is detected at any of the driver''s doors or the bonnet or the boot then the counter begins from zero;.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The counter reaches the "SELF-ACTIVATION TIME" value.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The BC checks whether an enabled TEG is inserted;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- If an enabled TEG is inserted, self-activation takes place;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- If no enabled TEG is present, self-activation does not take place;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PASSIVE mode (from last door):</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- KEY OFF is detected;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the self-activation counter begins counting;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- If a closed/open transition is detected at the driver''s doors, on any of the doors or the bonnet or the boot then the counter begins from zero;.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- if the counter reaches 2 minutes wihtout any open to closed transition being recorded, self-activation is cancelled;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The counter reaches the "SELF-ACTIVATION TIME" value.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The BC checks whether an enabled key is inserted;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- If an enabled key is inserted, self-activation takes place;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- If no enabled TEG is present, self-activation does not take place;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Self-activation modes are enabled according to the operating mode (see country map table "PASSIVE SELF-ACTIVATION ENABLEMENT" and "KEY-OFF SELF-ACTIVATION ENABLEMENT").</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Surveillance from self-activation is complete for all entrances. The operating modes allow:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- activation/deactivation of volumetric surveillance.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- activation/deactivation of the tilt module.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the self-activation stage system diagnosis takes place in the same way as during the normal activation stage.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The central locking is not activated during the self-activation stage.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Warning lights/acoustic signals are enabled by the operating mode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The definition of the driver''s side door for different specifications (RHD and LHD) is specified during the manufacturer''s end of line programming.</p>
+          <h3 class="bigtext3">Reactivation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reactivation operation allows the sytem to move automatically from the REST stage to the SURVEILLANCE stage when, after an authorized deactivation, door/boot/bonnet opening or other consistent actions are not found to have occurred.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The procedure for reactivation is as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The alarm system is switched off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the reactivation counter begins counting;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- If a closed/open transition is detected at any of the doors or the bonnet or the boot then reactivation is cancelled;.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The counter reaches the "SELF-ACTIVATION TIME" value.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The alarm is switched on taking into account any system exclusions (volumetric protection, siren,...) made at the last switching on.</p>
+          <h3 class="bigtext3">Surveillance</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During surveillance status, the BC performs the followign operations:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- +15 SIGNAL CHECK</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The BC downloads information on the presence of a +15 signal: if it detects the presence of the +15 signal for longer than 100 ms without a previous deactivation command, the BC interprets this manoeuvre as a theft attempt and controls the changeover to alarm status.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- EXCLUSION OF EXTERNAL MODULES DUE TO LOW BATTERY VOLTAGE</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the battery voltage is below 8.5 V for longer than 30 mins, the BC deactivates external modules (volumetric sensors, tilt sensor) in order to safeguard the life of the battery and to be able to start up the engine later on.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- PERIMETER SURVEILLANCE</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The BC monitors the status of the six inputs from the four doors, bonnet and boot: If one of these changes status for longer than 500 ms, the BC changes to alarm status.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- PROTECTION AGAINST FALSE ALARMS DUE TO BC RESET</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the surveillance stage, external interference or a theft attempt could cause the BC to reset and re-initialise its functions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In this case, the BC check whether the alarm was on before the reset so it can re-activate the external modules, except from those excluded at the last activation.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ALARM ACTIVATION</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the surveillance stage, the alarm may be activated by the perimeter protection and also by external modules or the siren (due to the wires being cut).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When one of the alarm activation signals is received, the BC immediately changes to alarm status and triggers the cycle specified for the type of alarm received.</p>
+          <h3 class="bigtext3">Alarm</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If one of the sensors involved in the surveillance identifies an irregular situation (attempted or actual intrusion, interference and/or theft of the vehicle), the alarm sytem moves to ALARM status.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alarm status is characterised by the activation of optical/acoustic signals consisting of activation of the siren and indicators.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIGNALS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The signalling consists of a succession of alarm cycles.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Operating mode parameters are defined in the operating mode table.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The type, numbmer and duration of alarm cycles for each mode are managed by the BC: the siren may only be turned on (sound emission starts) and off (sound emission ceases).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For example, if the operating mode requires the emission of 3 alarm cycles lasting 26s at 6s intervals, the BC will behave as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Blinker activation and control of siren activation with associated sound configuration parameters.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- After 26s of blinker deactivation, the siren is deactivated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 6s wait.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Repeat points 1, 2 and 3 until the required cycles are completed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">STORING THE ALARM CAUSE</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For diagnostic purposes, a record of the alarm causes recognised by the BC is kept.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NBC memorizes the last 10 alarm causes, associating the cause and alarm system state at the time the system wash switched on with each of the causes.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following alarm causes can be memorised:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- driver''s front door</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- front passenger door</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- left rear door</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- right rear door</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ultrasound sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- anti-tilt sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- cutting of siren cables</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- boot</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- bonnet</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- +15</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- cutting of +30 cable</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- siren intrusion with incorrect siren deactivation command</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- intrusion on external modules wiht ultrasound/antitilt deactivation command</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- incorrect heart-beat</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For each alarm cause, the system status is memorised, described by:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- left front door open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- right front door open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- left rear door open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- right rear door open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- bonnet open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- boot open</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- system activated by self-activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- system activated by remote control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ultrasound sensor defective</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- anti-tilt sensor defective</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- siren defective</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- serial line not operational</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system changes from alarm status to the following statuses:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- rest: via a deactivation command or via detection of key on by the immobiliser of an enabled key.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- surveillance: when the alarm cycles set off are ended.</p>
+          <h3 class="bigtext3">Deactivation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Deactivation may occur in surveillance mode or in alarm mode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is carried out by pressing the key on the sending unit, which commands the BC to deactivate the alarm system according to the following procedure: deactivation is indicated by two flashes of the 1 Hz blinkers and two synchronous beeps (indication is enabled/non enabled according to the operating mode).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This signal is activated within 100 ms of receiving the deactivation command:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the siren is deactivated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- external modules are deactivated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the NBC interrupts the perimeter protection and, if present, al the counter-measures activated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The command is activated even with the +15 signal present.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After deactivating and at the first key on, the control unit runs the signals for sending unit batteries flat, alarms from volumetric, tilt and perimeter sensors, +15 and +30.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The indication takes place by means of messages on the instrument panel, as shown in the following figure.</p>
+          <center>
+            <img src="images/jpg/939000067_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">End of line programming</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible to program the configuration of the alarm system installed on the vehicle at the end of line by defining the presence/absence of the following modules:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- siren;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ultrasound module;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- tilt module.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This information can be read, but not modified, by the diagnostic equipment which will adapt its diagnostic procedures depending on the configuration present.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The configuration is transferred to the Body Computer by means of the vehicle Customisation procedure (PROXI).</p>
+          <h3 class="bigtext3">Programming operating modes</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Programming status allows the BC to store active operating mode in its EEPROM.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It allows the alarm system to be configured so that it acts in accordance with legal requirements expressed in the operating mode table.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During programming, the system changes to rest status.</p>
+          <h3 class="bigtext3">Operating modes</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A list of the different operating modes is given below:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MODE 1 DEFAULT MODE (EEC)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MODE 2 (Great Britain)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MODE 3 (Belgium)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MODE 4 (Holland)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MODE 5 (World)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MODE 6 (temporary market)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Operating mode table</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FUNCTION</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">COUNTRY</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EEC</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">G.B.</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BELGIUM</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HOLLAND</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WORLD</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TEMP</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RANGE</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALARM SELF RESET FOR EACH MONITORED INPUT</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N/A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ENABLE PASSIVE SELF-ACTIVATION</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N/A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ENABLE SELF-ACTIVATION AT KEY OFF</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N/A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ENABLE REACTIVATION</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N/A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUTOMATIC ACTIVATION FROM LAST DOOR OPENING/CLOSURE</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N/A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUTOMATIC ACTIVATION FROM DRIVER DOOR OPENING/CLOSURE</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N/A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALARM SELF-ACTIVATION WITH TRANSPONDER RECOGNISED AND ENABLED</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NO</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N/A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SELF-ACTIVATION TIME (S)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">120</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TILT MODULE SURVEILLANCE DURING AUTOMATIC ACTIVATION</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N/A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VOLUMETRIC SURVEILLANCE DURING SELF-ACTIVATION</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">YES</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N/A</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cancelling the procedure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the rear fog lamp key is not pressed within 10s while entering the operating mode, the procedure is aborted: in this case, the siren emits 5 beeps to notify the operator and the BC maintains the previous operating mode valid.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The market may be changed from 1,2,3,4,5 using a diagnostic tester or manual procedure.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is not possible to enable/disable the market by entering 0.</p>
+          <h3 class="bigtext3">Diagnosing external modules</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The BC diagnoses the operation of the serial line for connection to the siren and external modules, checking for short circuits to earth, to the battery and for the presence of open circuits.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A diagnostic check is carried out on the serial line when communication is activated, typically upon activation of the alarm system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The external modules are diagnosed when the system is activated by diagnostic commands from which the following information is obtained.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">No diagnostic checks are required for the perimeter protection switches.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The diagnostic information obtained at the time of activation is stored in the EEPROM to ensure the system can be serviced.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To carry out fault diagnosis, use the diagnostic equipment provided.</p>
+          <h3 class="bigtext3">Active diagnosis</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During a diagnostic session, the BC may be required to carry out a diagnostic check on the external modules: the BC then sends the appropriate command and communicates the outcome to the diagnostic instrument.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the BC cannot communicate with the module during this operation, the response to the diagnostic instrument will be:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- serial line interference</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- module not responding.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Similarly, a diagnostic check may be requested on the serial line, with the following possible outcomes. OK, short circuit to earth, short circuit to battery.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is also possible to read the alarm cause table stored in the BC.</p>
+          <h3 class="bigtext3">Recovery</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If an external module (ultrasound, tilt) is recognized as not functioning, it is excluded for the entire surveillance cycle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The next time the system is switched on, the diagnostic check is carried out again on the modules which should be reactivated if they are recognized as working.</p>
+          <h2 class="bigtext2">Components</h2>
+          <h3 class="bigtext3">Anti-theft device siren</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following figure shows the antitheft siren.</p>
+          <center>
+            <img src="images/jpg/939000068_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main specifications of the siren are:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- sealed casing;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- green batteries for self-powering once the cables have been cut;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- battery recharging from control;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- programmable acoustic emission type;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- serial communication with the body computer and other alarm system components;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- self-diagnostics.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The siren (Stand –alone) is connected to the rest of the system with:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a dedicated serial line between the NBC and siren;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- power supply for the siren/internal battery recharging.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The siren can respond to diagnostic messages sent by the NBC (internal self-diagnosis).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The siren is located in the left front wheel arch.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIREN PINOUT</p>
+          <center>
+            <img src="images/jpg/939000069_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Siren power supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Serial line</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - N.C.</p>
+          <h3 class="bigtext3">Volumetric / tilt sensors</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The volumetric and tilt sensors are fitted in the passenger compartment on the courtesy light.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The volumetric sensors consist of a receiver and an ultrasound receiver fitted in a module connected to the antitheft control unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The tilt sensor detects angular changes compared to the vehicle''s longitudinal axis and transverse axis.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Both sensors may be deactivated (both together and not separately) by means of the appropriate button.</p>
+          <center>
+            <img src="images/jpg/939000070_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Sensor deactivation led</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Sensor deactivation button</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Ultrasound volumetric sensors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Tilt sensor (inside courtesy light)</p>
+          <h3 class="bigtext3">Receiver</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SPECIFICATIONS</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The remote control/receiver system interfaces with the NBC to activate the following functions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- activate central opening/locking of the doors and, where specified, of the windows, sun-roof and courtesy light activation.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- turn the alarm system on and off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The remote control system consists of:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- sending unit: this is fitted in the TEG, is radio controlled and sends a rolling code to the receiver. It has tow or three function control keys and a LED to verify code transmission and battery charge status.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- receiver: radio-controlled, built into the NBC with operating frequency of 433.92 Mhz.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The receiver is located in the NBC and equipped with a wire aerial that emerges from the body computer.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Receiver module with 433.92 Mhz working frequency, and the following functions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- to receive and decode signals from the sending unit;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- store up to 8 transmitters;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- generate a door opening and closure command (by exiting blinker control, if required);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- turn the alarm system on and off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- generate a timed courtesy light activation command.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The remote control and receiver system has two operating modes:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- on;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON CONTROL</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the on control, the receiver sends a signal to the NBC, which:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- implements door locking</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- controls a change in alarm system status from rest to surveillance if the BC is designed to do this.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The on command is issued by pressing a key on the sending unit: it is indicated by the turn signals coming on for 2.5 s (lthe signal is enabled/disabled via the EEPROM).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activation is permanently inhibited (except during diagnosis) with the +15 key-on signal present.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the key is pressed, the sending unit LED flashing frequency is 3 Hz.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sending unit transmits the full rolling code in response to continuous pressure on the key lasting at least 50 ms.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the key is held down continuously, the sending unit interrupts transmission after 20s. To continue transmitting, release the button on the sending unit and press again.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the receiver detects a continuous transmission (code received always the same), after the first status switch, it excludes the possibility of continuous command switching.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ON</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The receiver acquires the rolling code, compares it with codes stored during the programming stage and identifies it from among them.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the code has been recognised, the receiver locks the doors and changes the alarm from rest to surveillance mode if the BC is designed to do this.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the BC contains an alarm system, if the vehicle has been locked beforehand using a mechanical key, the BC must implement the door lock/alarm activation as indicated below when the sending unit button is activated:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- doors locked with key and alarm off (self-activation time not yet elapsed): no door lock operation and alarm activation;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- doors locked with key and alarm on (self-activation time already elapsed): operation of door lock (opening) and alarm deactivation;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- doors released and alarm off (self-activation time not yet elapsed): operation of door lock (locking) and alarm activation;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- doors released and alarm on (self-activation time already elapsed): no door lock operation and alarm deactivation;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DEACTIVATION</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the receive has received an off command from the sending unit, it sends a message to the NBC which:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- controls door release.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- controls a change in alarm system status from surveillance to rest if the BC is designed to do this.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is turned off by pressing the key on the sending unit: the signal is issued by two flashes of the blinkers at 1 Hz, d.c. 50% (function enabled/disabled via the EEPROM).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Deactivation is enabled even with the +15 signal present.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The receiver controls release according to the rules described in the activation paragraph (only if lock status is active).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alarm system deactivation is also controlled.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more details on the sending unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="mainc7b4.html?nodeID=939003530&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=ANTI-THEFT%20DEVICE&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5520 ENGINE STARTING</a>
+          </p>
+          <h1 class="bigtext1">PROGRAMMING THE ELECTRONIC KEY (TEG)</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic key is programmed at end of line together with the ALFA CODE.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the vehicle''s lifetime, it is possible to make the TEG Reader (NTR) learn new keys, e.g. if ELECTRONIC KEYS (TEGs) are added or deleted.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Upon each new programming procedure, all the Electronic Keys not presented during the above procedure (for the removal of lost keys) are cleared from the memory.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All available TEGs must be programed upon each programming. Those not presented will be deleted from the memory and it will not be possible to program them.</p>
+          <h2 class="bigtext2">Procedure for storing an electronic key teg</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The TEG storage procedure is managed by the Diagnostic instrument (Examiner) and can be activated only by entering the ELECTRONIC CODE (shown on the CODE CARD).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The procedure consists of learning the TEG codes and involves secret codes being received by the TEG Reader and then stored. During the procedure, the codes are stored permanently in the TEG Reader EEPROM memory.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the procedure is activated, the flow is as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the Diagnostic instrument commands the TEG Reader to initialise the TEG learning procedure and confirms this to the operator;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the operator enters the first TEG to be stored;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the TEG Reader receives the secret code and the ID of the ELECTRONIC KEY (TEG) and learns it;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the Diagnostic instrument confirms that learning has taken place;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the previous stages are repeated for each TEG that must be learned, up to a maximum of 8;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- once the TEGs have been learned, the operator asks the Diagnostic instrument to store them: the Diagnostic instrument commands the TEG Reader to store the TEGs learnt.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Only TEGs learned during the procedure are stored in the EEPROM. Any TEGs no longer presented will not be stored.</p>
+          <h2 class="bigtext2">Code system component managment</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is a centralized DATA BASE (for all markets) managed by the FIAT PARTS DIVISION for ordering all CODE system components.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The production plant transfers all the necessary data into this data base together at the time of vehicle production.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FIAT PARTS then uses this data base for ordering components that need replacing by the Dealer Network.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The data base contains numerous pieces of information, such as:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- vehicle chassis no.;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- secret code;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- code of each ELECTRONIC KEY (TEG);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- emergency key mechanical code;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- programming date.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If one of the CODE system components needs replacing and is being ordered, follow the procedure described below.</p>
+          <h2 class="bigtext2">Lost teg</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ask the Customer for all the remaining TEGs in their possession.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Customer must prove that he or she is the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The codes of the lost TEGs must be cleared from the memory of the TEG Reader: proceed as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Connect the Tester to the tester output on the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Set the TEG Reader to PROGRAMMING mode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Enter the TEGs still in the driver''s possession into the TEG Reader.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. End PROGRAMMING mode; the IDs of any TEGs not presented will be cleared from the TEG Reader memory.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the end of the procedure, print a table showing the identification code/s still enabled. If no printer is available, copy the codes from the screen onto the FIAT PARTS system form.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Only if the Body Computer already contains 8 ELECTRONIC KEYS (TEGs) send the codes to Fiat Parts to update the DATABASE.</p>
+          <h2 class="bigtext2">Request for a new teg</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Use the Personal Computer supplied to log onto Fiat Parts. Enter the chassis no. of the customer''s car, the model code and set up a VOR order to request a new TEG (entering the part number) and specify the quantity.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Note that the Body Computer is designed to store up to 8 TEGs. It is not therefore possible to accept orders when the sum of the number of TEGs already available to the customer plus the new TEGs ordered exceed this quantity. Keep a record of the form used to order the TEGs in order to monitor the situation.</p>
+          <h2 class="bigtext2">Programming teg codes into the teg reader memory</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the new TEGs have been received from Fiat Parts, ensure that all the old TEGs in the customer''s possession are available.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connect the Tester to the vehicle tester output and run the following procedure.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Set the TEG Reader to PROGRAMMING mode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Enter the TEGs still in the driver''s possession into the TEG Reader.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. End PROGRAMMING mode; the IDs of any TEGs not presented will be cleared from the TEG Reader memory.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Check system operation before returning the vehicle to the customer by starting it up using all the TEGs and opening/closing the doors using the remote control unit.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the case of operating faults, it is possible to order spare parts only, but it is absolutely forbidden to exchange electronic control units between different TEGs because it will not be possible to service the vehicle in the future.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Replacing lock barrels and/or emergency mechanical keys</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This becomes necessary when one or more door lock barrels (driver''s door lock or others) are forced.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Customer must prove that he or she is the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Use the Personal Computer supplied to log onto Fiat Parts. Enter the chassis no. of the customer''s car, the model code and set up a VOR order to order a single electronic key kit complete with dowels (entering the part number) for the vehicle type and specification.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is not possible to order a single barrel by giving a single mechanical code.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/768_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The mechanical code of the emergency key and the electronic code of the TEG are defined together during initial memorisation on a vehicle at end of line and must not be separated under any circumstances.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Replacing the reg reader</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ask the Customer for all the remaining TEGs in their possession.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">They should also prove that they are the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Use the Personal Computer supplied to log onto Fiat Parts. Enter the chassis no. of the customer''s car, the model code and set up a VOR order to order a single TEG Reader (entering the part number to identify the version).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the new programmed TEG Reader has been received from Fiat Parts, proceed as follows:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Check the serial number stamped on the plate applied to the order form corresponds to that shown on the TEG Reader.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Check the vehicle chassis no. printed on the plate applied to the order form corresponds to the vehice chassis no.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. If all codes correspond, install the TEG Reader on the vehicle instead of the malfunctioning unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Connect the Tester to the tester output on the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Set the TEG Reader to PROGRAMMING mode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Enter the TEGs still in the driver''s possession into the TEG Reader.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. End PROGRAMMING mode; the IDs of any TEGs not presented will be cleared from the TEG Reader memory (NTR).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Check system operation before returning the vehicle to the customer by starting it up using all the TEGs and opening/closing the doors using the remote control unit.</p>
+          <h2 class="bigtext2">Replacing the engine management control unit</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is required if the engine malfunctions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Customer must prove that he or she is the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Use the personal computer provided to log onto Fiat Parts. Enter the part number of the Engine Control Unit to be replaced.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the Engine Control Unit has been received from Fiat Parts, install it on the vehicle and insert the TEG in the TEG Reader to allow self-programming.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press the START/STOP button with the clutch or brake depressed to start the vehicle and check the engine is operating correctly.</p>
+          <h2 class="bigtext2">Replacing the electric steering lock (nbs)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is required if the electric steering lock malfunctions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Customer must prove that he or she is the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Use the personal computer provided to log onto Fiat Parts. Enter the part number of the Electric Steering Lock to be replaced.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the Electric Steering Lock has been received from Fiat Parts, install it on the vehicle and insert the TEG in the TEG Reader to allow self-programming.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After 10s, remove the TEG from the TEG Reader and wait for the steering to lock mechanically (this will take place after approx 5s). Check that the steering is locked.</p>
+          <h2 class="bigtext2">Replace the body computer (nbc)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is required if the Body Computer malfunctions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Customer must prove that he or she is the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Use the Personal Computer supplied to log onto Fiat Parts. Enter the chassis no. of the customer''s car, the model code and set up a VOR order to order a single Body Computer (entering the part number to identify the version).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the Body Computer has been received from Fiat Parts, install it on the vehicle and insert the TEG in the TEG Reader to allow alignment of the Secret Codes.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press the START/STOP button with the clutch or brake depressed to start the vehicle and check the vehicle electrics are operating correctly.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003538&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:38:26 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

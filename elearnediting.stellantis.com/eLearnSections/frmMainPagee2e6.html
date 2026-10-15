@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006614&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:27:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006614&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Zd0ea/BssyQV9sEJnKh/bQTkrMt65L+jdJmLoIEnIonfcNbj8jnVn8zX2Evwpq0yhVx8oW/3tdkTjDdGdZ3YHVa+s53R8GiTa6CoMw2+PkwgTv7wctxAlJ/XgkuuCfKgSKQa7I1bOBTaMDnKU8Xic8E3an1Mjg9s6Lnu0na11APdzAHagUDXRUGQmTmDwnHfexd2e1olOQ+ttUjDIlvlzioM8AYGKOoFcJctIwaHFzRNjK1OzqyppySV1ftAZfH9vyfCRs9clM5AuYJCwzWv2SQgoHgACxtR4VJgAsXsh9LCduvlpFezdjhbolP8ezRlVqyKz6kTWjvKLoSrkfwjtwoaQXJUF2pmrjfgBRTbTbscz4Ce1A68pwKy/f6HyxXGtv0aBp5GXSgNFSHrLj+3AmU/Qnnq1FxcHZmd4hKfDfuiEENJb3/Nc/LGyZLjMRl/ongqF7QMZKCjM0PEM7Q6pm/SUK2ke9d+iUS9xJWr5ZM1Aq6Q/levB06IbPTQMDz0p99Zs50H5R0UPQGqsainplCJRziCnvCdxK1ydgUsAqu2Qa32DX5viRtXS15/Q29QlXU22gyrp6STWgASFqBf6Bash0uxoBSrJ48x6PWXMN3RCLlteZJ2AOfjHBo4dBsrvtLNYPqz8g5N/uFjKg//7jTVv0p2Ze7L/t+FMUXGUYnCvVNboSyH045Cnic1Vinv3bseLanRiDXoF+/dd6ayG92E9VfgAQrWFnoSNWJ0SnyZefTtRQ6XSg5c2YC33YzyIV6Zt2nZnXFwD1qjT+S/uMnPlXwughDmdc7Fcpl8iBX8ToiXoF/qvObwI7j8ryRcCFEeEnWEeKANsBHtvJ0Esg==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - FUEL TANK AND COMPONENTS (4x4)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">Low pressure fuel supply system</h1>
+          <h2 class="bigtext2">Hpi 4.6 electric pump assembly with level gauge and additional suction head.</h2>
+          <center>
+            <img src="images/jpg/946000061_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The special shape of the tank with two compartments required to allow the propeller shaft connected to the rear differential to reach the centre of the tank means that a special fuel suction system is required to convey the fuel from the compartment in the tank where the fuel pump is not housed in addition to a special fuel level gauge system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A traditional electric pump submerged in the tank is used with the fuel level sensor and float connected to an additional intake assembly, located in the compartment of the tank where the pump is not submerged; the two compartments are in practice located on either side of the propeller shaft; the additional unit has a second fuel level gauge sensor and float; the main pump and the additional unit are connected by two pipes (one with a smaller section and one with a larger section) and by electrical wiring submerged in the tank with the connector on the electric pump, which is also submerged.</p>
+          <h2 class="bigtext2">Fuel suction</h2>
+          <center>
+            <img src="images/jpg/946000062_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Return line</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Supply line</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Pressure regulator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Pressure limit valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Check valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Jet pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Check valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. Electrical output signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. Fuel level sensor attachment</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. Pump filter (60 micron)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13. Additional fuel level sensor attachment</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14. Mount in tank</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15. Jet pump with filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16. Additional filter (2000 micron)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To allow the intake of fuel from the additional compartment, a quantity of fuel is taken from pump supply (A) which passes through the small section connecting pipe between the pump and the additional assembly and supplies additional assembly jet pump (15) where, thanks to a Venturi pipe, the vacuum needed to allow the flow of fuel from the additional compartment to the main compartment housing the electric pump is created; in this way firstly the top part of the (shared) tank, and later on the additional compartment, are gradually drained. Obviously, the compartment housing the electric pump will be drained last with the consumption of all the available fuel.</p>
+          <h2 class="bigtext2">Fuel level reading</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As already mentioned, two fuel level sensors with floats connected, one to the electric pump in the main compartment and one to the additional assembly (in the additional compartment) are used to give a correct fuel level reading; the two level sensors are connected in series and there is therefore a single connection that supplies the output fuel level reading; both sensors have a resistance that varies according to the position of the float and the series of the two constitutes the reading taken as a reference for the fuel level reading.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The float in the additional assembly is capable of travelling the entire height of the tank (from empty to full) whilst the float on the electric pump travels to about halfway up the tank.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Flow rate specifications</b>
+          </p>
+          <center>
+            <img src="images/jpg/946000063_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The above graph shows the pump outlet flow rate (l/h) dependent on the output pressure (bar) at a constant supply voltage of 12 V.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The flow rate for the pump working point is 125 l/h at a pressure of about 6.2 bar and a voltage of 12 volt.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Electrical connections</b>
+          </p>
+          <center>
+            <img src="images/jpg/946000064_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DESCRIPTION</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">component connector</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fuel level sensors power supply</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fuel level sensors earth</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Electric fuel pump earth</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Electric fuel pump power supply</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Free</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Free</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">INERTIA SWITCH</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The inertia switch, fitted under the driver''s seat on the right side, cuts off the fuel pump earth connection if the vehicle crashes thus cutting off the fuel flow to the injection system.</p>
+          <center>
+            <img src="images/jpg/939006513_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A steel ball (1) fitted in a tapered housing (2) is normally held in place by the attraction force of an adjacent magnet.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Under specific acceleration loads, the ball is released from the magnetic detent and gradually emerges from the tapered mount. Its upward movement is dependent on cone angle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A rapid release mechanism (3) over the ball forms a normally closed (NC) electrical circuit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When struck by the ball, the mechanism changes position from an NC circuit to a normally open (NO) circuit and breaks the fuel pump earth circuit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The switch may be reset by pressing a button protected by a flexible cover (4).</p>
+          <center>
+            <img src="images/jpg/939006514_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If a smell of fuel or fuel system leaks are noted after even an apparently slight impact, do not reset the inertia switch but find and repair the fault to prevent the risk of fire. Otherwise, if no leaks are noted and the vehicle can be driven away, press the button to reactivate the pump.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006614&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:27:25 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011569&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 03:23:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011569&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="FMlmanu2qtj+EV8UKqacCHXp9HSCuR8Mlr2g/Jtye/bsajcwF+vW42m08EBGhUKREZECtv/lZODYjJejdgOZav5VTQE7OlFcKmTKGU2jeaxlI0XXppVhK58MSVs/PwYmFlT2F+QPxGpUrN3wOhrI+nck5K+IXgY69BPyMAuKsVUwTGWbKSTvwUuDwweQASgAtSgId61tRs7Vmq/aTFc8d09YIKjm7ypB1VAQ89hL3wcNbS9fkqvMmzFLuVfuzY9ZSR1c/va68tYY0LpHwHv/DvmoHZYvoUYd5CDlfDLwVXF/b0a0bPMWJZ0Ost+8+ma/eUqs+qDrhXrG48mIE8Ar17mJYjb3d6P1HTmP+APoPUbkOVJDHkPgbS+ug5b7lodZXi9sa0BqQ1/Te3NsMrRSKmPVV7sd5tcKXhyltr5tp/dt0/nFc9MJnuZWVJdT6F0eF9ImhEsuYAJcvdTa6M4OQcAtAJVQbdUzbP4DfwLOjot85tn7FzkxIv7knKcw2OBhZieBi87mR6UNUQCQx4R63Il6qZIFlSJ8O+f9nmkvdhMwb4i6aSs9i4COmoVRkI6wt4STR3MrV1GV2XfnvsL8INen2T0aOQ/UZ01v2qUNAgZIn5ix9sNNTgmynexKOwAA7GyAhfoegEbq4VxavpovJGJxTXckRkFsbBCZtXtnE9AIgjHjZMTPUOTTFQuoK6jsfJqptjnvMYIYJfLP6Hu+24tcFfUA22e0fx2OrbNHgKserxnvQ09U3g9glaZRIP2xfmHJmEfVuGMkAVW8ZiM/zqyoAYaM18ALxizHF6w1UQg=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbsp ELECTRICALLY ACTIVATED DEVICES &nbsp&nbsp&nbspE30&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+	    
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+	<tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_0" class="nav" href="mainabb0-2.html?nodeID=939011570&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3010</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_0" class="nav" href="mainabb0-2.html?nodeID=939011570&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> HORNS </a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_1" class="nav" href="maina4cd.html?nodeID=939011575&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3020</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_1" class="nav" href="maina4cd.html?nodeID=939011575&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> WINDSCREEN WASH/WIPE </a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_2" class="nav" href="main5455-3.html?nodeID=939005488&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3021</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_2" class="nav" href="main5455-3.html?nodeID=939005488&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> REAR WINDOW WASH/WIPE 	(Station Wagon)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_3" class="nav" href="main0006.html?nodeID=939011580&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3022</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_3" class="nav" href="main0006.html?nodeID=939011580&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> HEADLAMP WASHER </a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_4" class="nav" href="main3640.html?nodeID=939011585&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3030</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_4" class="nav" href="main3640.html?nodeID=939011585&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">DEMISTING REARSCREEN AND REAR VIEW MIRRORS	(Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_5" class="nav" href="main2be4.html?nodeID=939005616&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3030</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_5" class="nav" href="main2be4.html?nodeID=939005616&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">DEMISTING REARSCREEN AND REAR VIEW MIRRORS	(High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_6" class="nav" href="main7301-2.html?nodeID=939005626&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3030</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_6" class="nav" href="main7301-2.html?nodeID=939005626&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">DEMISTING REARSCREEN AND REAR VIEW MIRRORS	(Station Wagon, Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_7" class="nav" href="main4a4a-2.html?nodeID=939005636&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3030</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_7" class="nav" href="main4a4a-2.html?nodeID=939005636&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">DEMISTING REARSCREEN AND REAR VIEW MIRRORS	(Station Wagon, High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_8" class="nav" href="maina211-2.html?nodeID=939003013&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3032</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_8" class="nav" href="maina211-2.html?nodeID=939003013&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> DOOR MIRROR ADJUSTMENT 	(Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_9" class="nav" href="main2fdc.html?nodeID=939011595&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3032</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_9" class="nav" href="main2fdc.html?nodeID=939011595&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> DOOR MIRROR ADJUSTMENT 	(High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_10" class="nav" href="main9dd1.html?nodeID=939011605&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3040</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_10" class="nav" href="main9dd1.html?nodeID=939011605&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> CENTRAL LOCKING 	(High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_11" class="nav" href="maineb77-3.html?nodeID=939003023&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3040</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_11" class="nav" href="maineb77-3.html?nodeID=939003023&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> CENTRAL LOCKING 	(Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_12" class="nav" href="main669c.html?nodeID=939004727&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3040</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_12" class="nav" href="main669c.html?nodeID=939004727&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> CENTRAL LOCKING 	(Right hand drive, High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_13" class="nav" href="main4a6a.html?nodeID=939004737&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3040</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_13" class="nav" href="main4a6a.html?nodeID=939004737&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> CENTRAL LOCKING 	(Right hand drive, Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_14" class="nav" href="mainb123-2.html?nodeID=939005646&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3045</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_14" class="nav" href="mainb123-2.html?nodeID=939005646&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">BOOT AND FUEL FLAP OPENING	(Station Wagon)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_15" class="nav" href="main61a3-4.html?nodeID=939007655&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3045</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_15" class="nav" href="main61a3-4.html?nodeID=939007655&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">BOOT AND FUEL FLAP OPENING	(from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_16" class="nav" href="main81d6-2.html?nodeID=939007665&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3045</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_16" class="nav" href="main81d6-2.html?nodeID=939007665&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">BOOT AND FUEL FLAP OPENING	(Station Wagon, from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_17" class="nav" href="mainaa79.html?nodeID=939011615&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3045</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_17" class="nav" href="mainaa79.html?nodeID=939011615&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">BOOT AND FUEL FLAP OPENING</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_18" class="nav" href="main1d75.html?nodeID=939011620&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3050</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_18" class="nav" href="main1d75.html?nodeID=939011620&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> ELECTRIC FRONT WINDOWS 	(High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_19" class="nav" href="main3315-3.html?nodeID=939004747&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3050</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_19" class="nav" href="main3315-3.html?nodeID=939004747&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> ELECTRIC FRONT WINDOWS 	(Right hand drive, High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_20" class="nav" href="mainc597-2.html?nodeID=939004757&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3050</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_20" class="nav" href="mainc597-2.html?nodeID=939004757&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> ELECTRIC FRONT WINDOWS 	(Right hand drive, Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_21" class="nav" href="main24db.html?nodeID=939003033&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3050</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_21" class="nav" href="main24db.html?nodeID=939003033&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> ELECTRIC FRONT WINDOWS 	(Low trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_22" class="nav" href="main9649-2.html?nodeID=939011630&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3051</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_22" class="nav" href="main9649-2.html?nodeID=939011630&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">ELECTRIC REAR WINDOWS	(High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_23" class="nav" href="main314d.html?nodeID=939011635&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3060</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_23" class="nav" href="main314d.html?nodeID=939011635&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> SUN ROOF 	(Electric sun roof)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_24" class="nav" href="main0613-2.html?nodeID=939007675&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3060</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_24" class="nav" href="main0613-2.html?nodeID=939007675&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> SUN ROOF 	(from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_25" class="nav" href="main43cd-2.html?nodeID=939007685&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3070</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_25" class="nav" href="main43cd-2.html?nodeID=939007685&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> CIGAR LIGHTER / CURRENT SOCKET 	(from  03/2008)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_26" class="nav" href="main70c4-2.html?nodeID=939011640&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3070</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_26" class="nav" href="main70c4-2.html?nodeID=939011640&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> CIGAR LIGHTER / CURRENT SOCKET </a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_27" class="nav" href="mainc51a-3.html?nodeID=939011645&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3075</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_27" class="nav" href="mainc51a-3.html?nodeID=939011645&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">HEATED SEATS</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_28" class="nav" href="main07d0.html?nodeID=939011650&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3076</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_28" class="nav" href="main07d0.html?nodeID=939011650&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">ELECTRICALLY-ADJUSTABLE SEATS	(High trim level)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_29" class="nav" href="main0ea5.html?nodeID=939011655&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3080</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_29" class="nav" href="main0ea5.html?nodeID=939011655&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> HEADLAMP AGLINMENT CORRECTOR </a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_30" class="nav" href="main9166.html?nodeID=939003043&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3080</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_30" class="nav" href="main9166.html?nodeID=939003043&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> HEADLAMP AGLINMENT CORRECTOR 	(Xenon Gas headlamps)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_31" class="nav" href="main82b2.html?nodeID=939007140&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3090</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_31" class="nav" href="main82b2.html?nodeID=939007140&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> PARKING SENSOR </a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_32" class="nav" href="mainda7e.html?nodeID=939011665&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent">E3090</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_32" class="nav" href="mainda7e.html?nodeID=939011665&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4%20JTD%2020V" target="_parent"> PARKING SENSOR 	(Front/rear parking sensors)</a></TD>
+				</td>
+	</tr>
+</table></P>
+
+	</body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011569&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 03:23:26 GMT -->
+</HTML>

@@ -1,0 +1,660 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003532&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:37:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003532&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="yvN5dcTxemCPHoUuAxSNj5lzzD8wkixVk2Os0vqsvhPBeDLUzM0g3YjDjIdjCquAJM0dHpFae18wdL1RVxDf7aw0bDGg0P0CwKH7rY08wACDDrgG/Wi14FtfoVXfefqSPiGFiXvI5tJTXa98Q+50F4u8h4RqxH17x9ch+9RpWXoI6z7RyZT73CASpqe5l/Kex6bd1T4UTRRwFd0KW7vpj2rCEdrL1g7v2TGo917GOcFJ6BoTVwHyOJtaL34sMAD6eDOIA3JIkECgJOaNTzcnMLXpriQWoGIbVCFJOTIY2sUoz859U6Zt3nRXGceu3uzMnOUu9WxNF1B4kkzavszaXxcvbJDd3/bF4Sp/yg1EubpsviRUTpV5A07/4N2BIuL92KWYePVtXelit0zzIi2iQFEVlVWXkowhvL/9YgxVHQsQDIkWaFsRUPDMaCOL/T/gacX8Uyi+mvPaYiKV7SeQ0/jE6j1gXktr6Qzn5vDcRspk0nAaSqs41a1ZMsYigQtX5Br33F648cdNXlfN+IBs+dqH6sL57MuOrMxKBKu5vZbn5+z+YMpZeY1JgvyTKRPfFIi/C/kxoVKN9mhpliu6Zo7BEkRf793/yWzDZ86iWB88A8ErYilsbchUxSHlip5vPwJ1EYRnXMkEsaTEHcX9m1T/ERSh27/ynHYuO0O6ai42OcEWzVZSPJT8GRR3uR8w+VgDxqvR3zqFDQA5IGrkx0UoE4SNtvs3MF3sqQPivALGTu0WxNcBsqCroKBZqbg+qBuyr38cc8GyF7b2ryRMzjpOz/JgFi/2KQhFXVOaQpAjd57E2rCtuwrCjpuiGFl7" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - CURRENT GENERATION&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">ALTERNATOR</h1>
+          <h1 class="bigtext1">COMPOSITION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The alternator is a rotary machine that transforms mechanical energy into electrical energy.</p>
+          <center>
+            <img src="images/jpg/939000008_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Rotor electromagnetic circuit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Fitting rods</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Rectifier side support</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Negative heat dissipation plate</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Positive heat dissipation plate</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Zener type power press-fit diode</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Commutator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Regulation unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Heat shield cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Rectifier side bearing</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Rectifier side inner fan</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12 - Stator electronic circuit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13 - Control side support</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14 - Control side inner fan</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15 - Control side bearing</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As with all electrical machines, it is made up of two basic parts: inductor (rotor) and stator.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rotor for an alternator with internal ventilation is illustrated in the diagram below.</p>
+          <center>
+            <img src="images/jpg/939000009_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Rotor</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rotor consists of a cylindrical magnetic core, concentric to the drive shaft, with a toroidal coil winding and two opposing magnetic impellers which are magnetized by the winding located in the actual core.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The impellers have six talon shaped poles each with reciprocal interpolation producing six alternate North poles and six South poles. There is therefore a single rotor winding which produces the e.m.f. for all the partial magnetic circuits.</p>
+          <h2 class="bigtext2">Stator</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following diagram shows the stator.</p>
+          <center>
+            <img src="images/jpg/939000010_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Star connection stator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Triangle connection stator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The stator consists of a ring shape pack joined by two or more axial seams electrically welded on the outer part. It is normally equipped with thirty six grooves which contain a three-phase winding made from copper wire insulated with vinyl acetate and connected, as necessary, in a star or triangle formation.</p>
+          <h2 class="bigtext2">Rectifier bridge</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rectifier bridge is illustrated in the diagram.</p>
+          <center>
+            <img src="images/jpg/939000011_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Zener type power diode</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Dissipation plate</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Alternator B + terminal</p>
+          <h3 class="bigtext3">Bridge specifications</h3>
+          <p class="titolo_lista">The bridge consists of:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Zener press-fit diodes.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Diodes fitted in the dissipator plates electrically welded to the connection terminals.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Sheared dissipator plates.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Large dimension dissipators.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Phase insulation until the connection with the bridge via a rubber cable duct.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Limitation of excess tension in the case of "+ battery" load disconnection guaranteed by zener diodes.</p>
+            </li>
+          </ul>
+          <center>
+            <img src="images/jpg/939000012_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Normal diode</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Zener diode</p>
+          <h3 class="bigtext3">Zener diodes</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The feature of both diodes, if polarized directly, is to pass the current from the anode to the cathode (V+ I+): then a zener diode behaves like a normal silicon diode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If inversely polarized, the current does not initially pass from the cathode to the anode up to value VZ</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Beyond value VZ the normal diode is destroyed, the zener diode, on the other hand, continues to operate normally because its resistance in these conditions decreases sharply. Zener diodes are therefore voltage stabilizer diodes. Voltages of between 4.7 and 24 Volts are used in cars. It is one of the most important components in the regulation unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is often used for protection against polarity inversion or as protection against excess voltage.</p>
+          <h1 class="bigtext1">SPECIFICATIONS OF INTERNAL VENTILATION ALTERNATORS</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main feature of this type of alternator, with a 115 mm stator diameter, is having dual internal ventilation with the vanes at an angle to guarantee the maximum flow of air and limit noise at the same time.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For the same power output alternators with internal ventilation are smaller and lighter than types with external ventilation thereby satisfying current application requirements (there is always less space in engine compartments). In addition to this, in terms of quality, reliability and durability, these alternators meet higher standards than the best competition currently on the market.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In depth studies and research have made it possible to introduce measures in production to reduce noise limits produced by various components (fluidynamics, magnetics, mechanics).</p>
+          <h2 class="bigtext2">Typical voltage curve</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The graph below illustrates a typical voltage regulator curve.</p>
+          <center>
+            <img src="images/jpg/939000013_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Wiring diagram</h2>
+          <center>
+            <img src="images/jpg/939000014_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Alternator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Interference condenser</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Regulation unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Energizing rotor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Electric field stator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Zener diode rectifier bridge</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Alternator recharging warning light in instrument panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Body Computer</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - CAN lines</p>
+          <h3 class="bigtext3">Operation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the alternator still with the ignition key in the ON position, the Body Computer lights up the warning light in the instrument panel and sends a power supply to the voltage regulator built into the alternator via terminal D+.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In these conditions the energizing circuit (rotor) is enabled to earth by the regulator electronics.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the alternator rotating through the effect of the variation of the rpm and the magnetic field, a three-phase alternating voltage is produced in the electrical circuit (stator) which rectified by the diode bridge can exit terminal B+.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the upper fixed calibration level (13.7 - 14.2 V) is reached it charges the battery and supplies the system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Body Computer checks the efficiency of the alternator recharging system by detecting two parameters: the voltage signal coming from terminal D+ of the actual alternator and the engine rpm signal received on the CAN from the engine management control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the key-on as long as the voltage is below around 5.5 V, the Body Computer signals the insufficient recharging state; when the voltage exceeds 5.5 V, the warning light goes out; if, on the other hand, with the engine moving (speed above 700 rpm), the voltage decreases below the level of 4.5 V, then the warning light comes on constantly accompanied by the display of a message.</p>
+          <h1 class="bigtext1">BATTERY</h1>
+          <h1 class="bigtext1">SPECIFICATIONS</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main specifications of the batteries used on new models are the active material support plates produced thanks to the calcium lead production technology that has replaced the older antimony lead one.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This involves a mechanical stretching process with a continuous lead band resulting in the final production of the grid spread with lead oxide for the positives and metallic lead only for the negatives, rather than the use of casting machines for producing grids through fusion.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The use of materials such as lead-calcium-tin alloy guarantees a considerable reduction of the phenomenon of electrolysis in the operation of the accumulator (dissociation of the water into is hydrogen and oxygen components) and the quality of the gases that can escape thereby causing less evaporation of the actual water with a consequent drastic reduction in the maintenance required for this type of battery.</p>
+          <center>
+            <img src="images/jpg/939000015_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Plug lip</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Positive plate</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Negative plate</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Separator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Bridges</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Electrolyte</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Water gauge</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Negative pole</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Monobloc</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Maximum electrolyte level</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12 - Minimum electrolyte level</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13 - Plug</p>
+          <h2 class="bigtext2">Battery electrical specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Reduced maintenance type lead accumulator with acid</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cover: EURODIN, fitted with closing devices on ramp type cover; pressure plugs (one plug per element) with system to prevent penetration of fluids from the outside. Gas evacuation through plugs equipped with gas/liquid separation system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cover sealing: thermowelding.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Attachment to the base: standardized on four sides.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Poles: lead bushes produced by cold pressing with seal in the pressing area on the cover.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Electrolyte level check: via the openings in the cover plugs, checking the consistency between the indicator (dipstick) and the level of the electrolyte. The dipstick indicates the maximum permitted level, therefore the electrolyte should barely come into contact with the lower end of the dipstick. The minimum level is reached when the electrolyte exceeds the top of the separators and/or the plates by 10 mm.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Water gauge for checking minimum electrolyte level and battery charge.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">No. of plates: 6 positive + 5 negative.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Grid alloy: lead-calcium-tin.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Separator thickness: 1.15 mm.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Plate thickness: positive 1.80 mm; negative 1.60.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Electrolyte density: 1280 ± 10 g/dm3 at 25°C with battery 100% charged.</p>
+          <p class="titolo_lista">Electrolyte density at 25° Celsius:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1280 g/litre 100 % charged</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1240 g/litre 75 % charged</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1200 g/litre 50 % charged</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1160 g/litre 25 % charged</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1120 g/litro run down</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1110 g/litre completely run down.</p>
+            </li>
+          </ul>
+          <h1 class="bigtext1">CONTROL SYSTEM</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The battery is fitted with an indicator for checking the charge which a water gauge that makes it possible to monitor the quality of the electrolyte level and the state of charge of the battery; this also allows the customer to make an initial check on the efficiency of the battery.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This device comprises a transparent plexiglas cylinder: one end contains a gauge fastened to the cover of the battery; at the other end there is a drip tray, made from an acid-resistant material, drilled to allow contact between the battery electrolyte and a green coloured ball, housed in the drip tray, that can slide along a plane tilted towards the centre of the cylinder.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The colour of the gauge provides information on the state of the battery charge as summarized in the table below:</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONDITION 3</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONDITION 2</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONDITION 1</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Information visible</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Light, bright colour</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dark colour without green area in the middle</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dark colour with green area in the middle</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Electrolyte level</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Below minimum</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Correct</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Correct</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Charge status</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Indefinite</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Battery run down</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">between 55% and 100%</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Action to be taken</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Top up electrolyte with distilled water</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Recharge battery</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">No action</p></td>
+            </tr>
+          </table>
+          <p class="titolo_lista">This device:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">does not provide information concerning any possible internal short circuits;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the density of the electrolyte varies with the temperature;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">if the vehicle is stationary for a prolonged period this could have halted the mixing process of the reagents and therefore the measurement might only refer to the surface layers;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">if the electrolyte level is low, the readings are not reliable.</p>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In conclusion, the measurement is accurate to within 15% (charge status gauge reading = 70% ± 15%).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On account of this degree of error in the reading, the battery charge should be checked more accurately at the Service Centre.</p>
+          <h2 class="bigtext2">Plug</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In reduced maintenance type batteries with lead-calcium-tin elements the seal is guaranteed by pressure plugs with an anti-penetration system and a device that evacuates gases through the actual plugs.</p>
+          <p class="titolo_lista">The plug allows the escape of gases produced in the battery, preventing however the loss of liquid. The plugsconsists of:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The plug body: it acts primarily as an obstacle to the liquids, but allows the escape of gases via special openings.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The labyrinth: prevents the particles that are released during the operation of the battery from blocking the special diaphragm.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The semi-permeable diaphragm: thanks to a special PTFE layer (polytetrafluoroethylene) it prevents the escape of the liquid allowing, however, the gases that are produced during the normal operation of the battery to pass through.</p>
+            </li>
+          </ul>
+          <center>
+            <img src="images/jpg/939000016_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Plug body</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Labyrinth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Membrane</p>
+          <h1 class="bigtext1">BATTERY DISCHARGE AT REST</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the design stage, the correct dimensions of the battery for every model/trim level also take into account the absorption from loads when the ignition is switched off.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">These absorptions should not exceed 0.6 mA for every Ah of battery capacity; this condition is adopted to guarantee that, after the vehicle has been stationary for a month with all the loads that are not ignition-dependent on, the residual capacity of the battery is half of the rated capacity, corresponding to a charge status that can guarantee starting in normal ambient temperature conditions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The table below contains several examples.</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Battery</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Max. absorption</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">40 Ah</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24 mA</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">50 Ah</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30 mA</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">60 Ah</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">36 mA</p></td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Battery fluid level check/top up</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Undo the plugs on the battery cover, or remove the plug cover (2) and release the plugs which are a press fit in each individual cell.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the max level condition (11) the electrolyte should barely come into contact with the lower end of the dipstick (3) located inside the battery and visible via the openings in the cover for each cell producing the so-called "meniscus effect".</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the min level condition (12) the electrolyte should exceed the top end of the separators and/or the plates by about 10 mm.</p>
+          <center>
+            <img src="images/jpg/939000017_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Plug lip</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Maximum electrolyte level</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12 - Minimum electrolyte level</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13 - Dipstick</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14 - Plug</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To check this condition the clean stick made from a non metallice material (e.g. wood, glass, plastic) should be immersed in the electrolyte until it touches the top of the separators and/or the plates measuring the height of the electrolyte reserve.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is understood that in order to measure the level of the electrolyte, the battery should be on a flat surface and all the cells should be visible from above; if this is not the case because it is not possible, the battery should be removed from the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The operations of checking the electrolyte level and, if necessary, topping it up through the individual openings for the battery cells, should not be carried out by the Customer, but by suitably trained dealer personnel during the services every 20,000 km.</p>
+          <h2 class="bigtext2">Water gauge</h2>
+          <p class="titolo_lista">There are two types of information supplied:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">electrolyte fluid level;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">battery charge status.</p>
+            </li>
+          </ul>
+          <center>
+            <img src="images/jpg/939000018_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Cylinder</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Gauge</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Drip tray</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Ball</p>
+          <h3 class="bigtext3">Operation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The operating principle for this equipment is based on the contact of the drip tray with the battery fluid.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ball is designed so that for a given electrolyte density value it rises along a tilted plane and reaches the transparent surface of the gauge, giving the middle of this area the characteristic green colour: CONDITION 1.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the density of the electrolyte decreases (battery charge no longer sufficient), the ball moves from the middle and the light undergoes refraction so that the middle area of the gauge appears darker: CONDITION 2.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the cylinder body is no longer bathing in the liquid, the ball descends completely and the middle area appears lighter in colour: CONDITION 3.</p>
+          <center>
+            <img src="images/jpg/939000019_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Condition 1</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Condition 2</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Condition 3</p>
+          <h1 class="bigtext1">NEGATIVE BATTERY LEAD TERMINAL</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To facilitate the removing-refitting of the negative lead from the battery, a new lead with the terminal secured to the negative pole having a rapid release-attachment device controlled by a lever replacing the traditional nut and bolt has been adopted.</p>
+          <h2 class="bigtext2">Detaching the terminal</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Open the lever and detach the terminal.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Take care whilst opening the lever on account of the release device.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Refitting the terminal</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Make sure that the release/attachment lever is in the opening position (A).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fit the terminal on the battery pole and press it down fully (end of travel) (B).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Tighten the lever (C).</p>
+          <center>
+            <img src="images/jpg/939000020_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003532&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:37:58 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

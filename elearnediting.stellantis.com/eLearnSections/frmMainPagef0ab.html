@@ -1,0 +1,564 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003469&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:11:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003469&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="rNBcFoJPfKeAOOzqrci0VCjo2OkIrxPLqvl/ANWXLYKMk1MHEyXfZfM2BwrHt6ink8fyy3+XrvLW/EazWmXUDJfmK+/oMEg8GKyZ/k/2S/EoFE/b+kzklS+uGKXQUEln720PnJpk5nXpw4jW7Euz3X/wUzkv8Dbet6yZCimBtKZCPTFU4WbKU3Dy4FrBC/sB/i0vjgtaf/atmqFL2KibrDUC8l1rlqBXgVhIZIvyHH6UigYXGUPMR8ybulsW7I4pNfOK0eNBnXjg2MCSAAmeB1JSCyQwPcTHji3MbzZ135WsP9xhDQqPSefWj+GEFNR+iKtjQxo7NCOz/cu8mF6MFD/pnV/S+hGtgUV4BcZWaspfhkO3PF1iROM8qMXTYQBug+3GS9sItnYBgnZI69pk2x2v4l3U85RygFcGQAFgncgcghec05lVBmxbsEuFWoeiGZmDgkCCEK3OEtfKoo85FV4WN+bdKtliVEkNAA2UlcQXhOtUucgkVv6JxtuxNKOJyXB9tjgmsH50I5agWPsFibz/JWkzy4sGjYiuq3QO/jLAelmFbTbjkU+s5flPiINhAI1nbVMSoERCw4ZsdN4a3mlTFQEnyzl9VCDuc9/hEKuW8hcnDFIKmeiGGTj0qM44rwQ01hvQShCspEhy+ct/nkhfAZxcigfpEI6ahXz0JZxjSM6IQq851viFZSpMwcUMmQ9XZe8YTTW0n7xL4/u/hvQ7gbTWE8q4ZRaa4omT5uNJreJB5pyyj1tjZYOfyRqtr92zz+dwkef3IamBhjLuwOef8wKsTwtjmapN4Oh8EfK1HUojLMLEGjYHeyfrag53w+T4bhwOMefLKikrhZn7mA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspDIESEL INJECTION PRESSURE PUMP ELECTRONIC CONTROL&nbsp&nbsp&nbsp1060G&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">DESCRIPTION OF COMPONENTS</h1>
+          <h1 class="bigtext1">Injection control unit (EDC 16C39 common rail)</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is fitted in the engine compartnent on the right side panel. The control unit the flash EPROM type, i.e. it can be reprogrammed from the outside without affecting the hardware.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The injection control unit integrates the absolute pressure sensor.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN OUT</p>
+          <center>
+            <img src="images/jpg/194004102_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector A (vehicle wiring)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Main services power supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Main services power supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Turbine variable geometry solenoid valve signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Potentiometer 2 on accelerator pedal (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Potentiometer signal 1 on accelerator pedal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Diesel temperature sensor (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Diesel temperature sensor signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12 - Air conditioning linear pressure sensor (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13 - Air conditioning linear pressure sensor signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17 - Signal + contact on brake pedal (NA)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22 - Air conditioning linear pressure sensor (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25 - K line</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">27 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28 - Supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">29 - Compressor engagement relay feed negative signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30 - Potentiometer 1 on accelerator pedal (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">31 - Potentiometer signal 2 on accelerator pedal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">32 - Downstream particle filter (DPF) temperature sensor signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">33 - Downstream particle filter (DPF) temperature sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">34 - Upstream particle filter (DPF) temperature sensor signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">35 - Upstream particle filter (DPF) temperature sensor (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">36 - Differential pressure sensor signal (DPF)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">37 - Differential pressure sensor (DPF) (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">38 - Cruise Control Resume</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">39 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">40 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">41 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">42 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">44 - Differential pressure sensor (DPF) (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">45 - Potentiometer 1 on accelerator pedal (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">46 - Potentiometer 2 on accelerator pedal (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">47 - W line (immobilizer)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">48 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">49 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">50 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">51 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">52 - Heater plugs control unit fault diagnosis</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">53 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">54 - Compressor engagement request (A/C Request) from climate control/air conditioning node</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">55 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">56 - SET + Cruise Control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">57 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">58 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">59 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">60 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">61 - C-CAN L</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">62 - C-CAN H</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">63 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">64 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">65 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">66 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">67 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">68 - Diesel filter heater relay feed negative signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">69 - Engine cooling fan 2nd stage</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">70 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">71 - EOBD failure warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">72 - Main relay feed negative signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">73 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">74 - Water in diesel filter sensor signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">75 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">76 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">77 - Cruise Control ON</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">78 - SET - Cruise Control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">79 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">80 - Signal + contact on brake pedal (NC)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">81 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">82 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">83 - C-CAN L</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">84 - C-CAN H</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">85 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">86 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">87 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">88 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">89 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">90 - Engine cooling fan 1st stage</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">91 - Fuel pump relay feed negative signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">92 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">93 - Heater plugs activation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">94 - Engine cooling fan 3rd stage</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector B (engine wiring)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Cylinder no. 3 injector (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Cylinder no. 2 injector (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Fuel pressure regulator on rail (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Swirl solenoid valve earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Fuel pressure sensor (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Timing sensor (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12 - Engine rpm sensor (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13 - Air pressure/temperature sensor (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16 - Cylinder no. 1 injector (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17 - Cylinder no. 4 injector (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18 - Cylinder no. 5 injector (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19 - Fuel pressure regulator (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20 - Timing sensor (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21 - Engine oil level</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23 - Air pressure/temperature sensor (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">27 - Engine rpm sensor (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28 - Fuel pressure sensor (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">29 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">31 - Cylinder no. 2 injector (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">32 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">33 - Cylinder no. 4 injector (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">34 - Fuel pressure regulator on rail (+)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">35 - Diagnostic feedback (SWIRL)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">36 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">37 - Air temperature sensor (flow meter)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">38 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">39 - Motorized throttle earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">40 - Pressure signal from air temperature/pressure sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">41 - Engine coolant temperature sensor (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">42 - Output signal + (flow meter)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43 - Fuel pressure sensor signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">44 - Earth (flow meter)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">45 - Swirl solenoid valve control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">46 - Cylinder no. 4 injector (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">47 - Cylinder no. 1 injector (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">48 - Cylinder no. 5 injector (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">49 - Fuel pressure regulator (-)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">50 - Timing sensor signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">51 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">52 - Throttle body feedback</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">53 - Temperature signal from air temperature/pressure sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">54 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">55 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">56 - Insufficient engine oil pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">57 - N.C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">58 - Engine coolant temperature sensor signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">59 - Throttle solenoid valve control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">60 - EGR solenoid valve</p>
+          <h1 class="bigtext1">RPM SENSOR</h1>
+          <h2 class="bigtext2">Specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is fitted on the cylinder block/crankcase facing the flywheel on the crankshaft.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is inductive type, i.e. its operation is determined by magnetic field changes generated by the teeth passing in front of the phonic wheel (60-2 teeth).</p>
+          <p class="titolo_lista">The injection control unit uses the rpm signal for:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">determining the engine speed of rotation</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">determining the angular crankshaft position.</p>
+            </li>
+          </ul>
+          <center>
+            <img src="images/jpg/939003198_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Operation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The changeover from full to empty determined by the presence or absence of a gap brings about a magnetic flux change sufficient to generate an induced alternating voltage proportional to the number of teeth on the ring (or phonic wheel).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The frequency and amplitude of the voltage send to the electronic control unit provides the latter with an indication of the engine angular speed.</p>
+          <center>
+            <img src="images/jpg/939003199_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Brass bush</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Permanent magnet</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Plastic sensor casing</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Coil winding</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Core</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Ring gear or flywheel</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Coaxial paired cable or electrical connection</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The recommended distance (gap) between the end of the sensor and the flywheel for obtaining correct signals should be 0.8 - 1.5 mm.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This distance is not adjustable. If the gap is found to be outside the tolerance limits, check the condition of the sensor and phonic wheel.</p>
+          <center>
+            <img src="images/jpg/939003200_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Maximum magnetic flux</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Minimum magnetic flux</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Induced alternating voltage</p>
+          <h1 class="bigtext1">CAM ANGLE SENSOR</h1>
+          <h2 class="bigtext2">Specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This Hall effect sensor is fitted on the cylinder head facing the camshaft drive pulley.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A tooth on the pulley allows the timing sensor to indicate engine timing position.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The injection control unit uses the timing sensor signal to identify T.D.C. at the end of compression.</p>
+          <center>
+            <img src="images/jpg/939003201_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Operation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A current-carrying semiconductor layer immersed in a normal magnetic field (force lines at right angles to current direction) generates a potential difference known as a Hall voltage at its terminals.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If current intensity remains constant, the generated voltage depends on magnetic field intensity alone. Periodic changes in magnetic field intensity are sufficient to generate a modulated electrical signal with frequency proportional to the speed of magnetic field change. To produce this change, a tooth on the inner part of the pulley periodically moves close to the sensor.</p>
+          <center>
+            <img src="images/jpg/939003202_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Supply</p>
+          <h1 class="bigtext1">INTAKE AIR TEMPERATURE AND EXCESS PRESSURE SENSOR</h1>
+          <h2 class="bigtext2">Specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The excess pressure and intake air temperature sensor is an integral component which is designed to measure the pressure and the temperature of the air inside the intake manifold.</p>
+          <p class="titolo_lista">It is fitted on the intake manifold and has the task of informing the injection control unit in order to:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">regulate the pressure of the variable geometry turbine in order to ensure optimum engine performance in all operating conditions.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">regulate fuel injection duration.</p>
+            </li>
+          </ul>
+          <center>
+            <img src="images/jpg/939003203_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Air temperature signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - 5 Volt (from ECU)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Supercharging pressure output signal</p>
+          <h1 class="bigtext1">ENGINE COOLANT TEMPERATURE SENSOR</h1>
+          <h2 class="bigtext2">Specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is fitted to the thermostat cup and detects coolant temperature by means of a dual NTC thermistor with negative resistance coefficient.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">One NTC thermistor sends the signal to the injection control unit whilst the other sends the signal to the temperature gauge and the warning light in the instrument panel.</p>
+          <center>
+            <img src="images/jpg/939003204_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor is designed using semiconductor technology. In other words, the resistance level drops if sensor element temperature increases with increasing coolant temperature.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Because the resistance does not change in linear fashion as temperature increases, it is relatively higher at low temperatures than at high temperatures.</p>
+          <h1 class="bigtext1">AIR FLOW METER WITH BUILT IN AIR TEMPERATURE SENSOR</h1>
+          <h2 class="bigtext2">Specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The debimeter is located on the air intake sleeve and is hot film type.</p>
+          <center>
+            <img src="images/jpg/939003205_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Air temperature sensor output signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Maintenance current</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Negative</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - 5V power supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Flow meter output signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The intake air temperature sensor is built into the debimeter.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/768_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The air flow meter cannot be disassembled.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Operation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The principle of operation is based on a heated membrane positioned within a measurement channel that carries air into the engine.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The hot film membrane is maintained at constant temperature (about 120°C higher than the incoming air temperature) by the heating coil.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The air mass that flows through the measurement channel tends to remove heat from the membrane. Current must therefore flow through the coil to maintain the membrane at a constant temperature.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This current is measured by a special Wheatstone bridge.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The current is therefore proportional to the flowing air mass.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The flowmeter measures the air mass directly (not the volume) to eliminate problems of temperature, altitude, pressure etc.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">FUEL PRESSURE SENSOR</h1>
+          <h2 class="bigtext2">Specifications</h2>
+          <p class="titolo_lista">It is fitted at the end of the of the single fuel manifold rail and its function is to provide the injection control unit with a feedback signal to enable it to:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">modulate injection pressure;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">regulate fuel injection duration.</p>
+            </li>
+          </ul>
+          <center>
+            <img src="images/jpg/939003207_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Earth</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Output signal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Supply</p>
+          <h1 class="bigtext1">ACCELERATOR PEDAL POTENTIOMETER</h1>
+          <h2 class="bigtext2">Construction specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor consists of a case secured to the accelerator pedal; the case contains an axially-located shaft connected to two potetiometers: a main potentiometer and a stand-by potentiometer.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A coil spring on the shaft ensures the correct amount of resistance to pressure while a second spring ensures return following release.</p>
+          <center>
+            <img src="images/jpg/939003208_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Operation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The accelerator pedal position is converted into an electrical voltage signal and sent to the injection control unit by the potentiometer connected to the pedal.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The accelerator pedal position signal is processed together with the information relating to the engine rpm to obtain the injection times and the pressure.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003469&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:11:38 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

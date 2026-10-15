@@ -1,0 +1,818 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925299&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:57:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925299&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="7VRdeNzpcCtHOj9Fx23X7KvGFOuync2rFdq+iO0xCaIiMCflmcIcUAICYRs6eJAAu/hJw1sWDBRW1c/+yrA8VptTVs0orOYJjygblOuuKxRU0FPWlS4AQn5pD8Shho7nFx+7NzKq/FB+66IGsb2Wve1BjRE3mWKh3FvG9eTBOaV68rZiCRLiZI8EOkTX8DjxoDWIJZew1EgkvmpnLX/AeVjKDwByWOk65zBwrjuA3abYjseILqoupG+KK6PXOr6BhSaFc4Z+EPAH7UnnrgFUOCfNgBN5T0aSrVv2H0rxsz68sRGSUBLOV+eVoGqLDeZABV5WyPHH6gv/zo24amZSvjcLascmxnZFovwl3g2bwgjwgSCnFjmiLgTQLocSIlBw97Z5McZR9cmAtCPjddVJCTkKOaMZTmGgFE5YHqVrEcvwSNei0bSEOEX3T7KLpUsqxNxOeN0kPw9PN4BDVXyka8mljYc9yoMQEhtJwQAVxNV9nFD1Waqd/OI16DYxh56LmS3cWl0pM404nCp1LP8KIQ3Cyb7C9YjakwfKEoQH0SDoE6XnHVQJ0LyBseMe9UdT" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 22/03/2019</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Various models</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>Versions: All models (*)</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">50</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">001.19</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>5050 1 211 EQ</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>WINDSCREEN WASHER PIPES</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Pipe repair kit - Service Solution</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cancels and replaces the following Service News due to extension of validity to current production models.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• 50.02.11 dated 09/09/2011 Abarth models</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• 50.06.11 dated 09/09/2011 Fiat and Professional models</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• 50.01.13 dated 07/11/2013 Alfa models</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• 50.01.14 dated 05/03/2014 Lancia models</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) The Service News applies to the following models: 500 (150), Panda (169/271) (319/519), Grande Punto/Punto Evo (199/299), Idea (135/235), Palio/Palio WE (178), 500L (330/530), 500X (334), Bravo (198/298), Tipo (356/357/557), Fiorino/Qubo (225/300), Doblò (152/263), Ypsilon (101/402), Musa (184), Delta (181) MiTo (145), Giulietta (191), 159 (140), Giulia (620), Stelvio (630), 4C (643), Strada (278), Ducato (290/295).</p>
+          <h1 class="bigtext1">CLAIMED FAULT</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Poor / missing flow of window washer fluid and possible presence of moisture next to the pipe route</p>
+          <h1 class="bigtext1">TECHNICAL CAUSE</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Leak of fluid from the rear window and/or windscreen washer delivery pipe.</p>
+          <h1 class="bigtext1">OPERATIONS AT THE DEALERSHIPS</h1>
+          <h1 class="bigtext1">DEALERSHIP BEHAVIOUR STANDARDS TOWARDS THE CUSTOMER</h1>
+          <ul>
+            <li>
+              <span style="color:black">Once the customer's claimed fault is confirmed, reassure the Customer that the fault will be solved by repairing the damaged pipe.</span>
+            </li>
+            <li>
+              <span style="color:black">After completing the operation, illustrate what has been done and ensure that the Customer is satisfied.</span>
+            </li>
+          </ul>
+          <h1 class="bigtext1">Service Solution</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Kits to repair the rear window and/or windscreen washer delivery pipe are now available at the Spare Parts Dpt.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The kits can be applied only on the corrugated pipes (part no. 19054786).</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the customer's claimed fault is confirmed, repair the supply pipe to the rear window washer using the repair kit, according to the Operating Cycle below.</p>
+          <h1 class="bigtext1">OPERATION CYCLE</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Find the point where the leak of fluid takes place in the sections of the rear window and/or windscreen washer jet delivery pipes, with reference to the operations described in subgroup 5050 of the Service Manual.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remove the taping from the wiring, if necessary.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Identify the type of rear window and/or windscreen washer delivery pipe installed on the car, using the engagement terminals shown in Fig. 1 as reference; take from the Spare Parts Dpt. the corresponding repair kit:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b>- AEC type pipe: use the repair kit no. 51922346;</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The kit no. 51922346 for repairing the AEC type pipe must be used for the rear window and/or windscreen washer delivery pipes.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B</b>- FRÄNKISCHE type pipe: use the repair kit no. 50527045.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The kit no. 50527045 for repairing the FRÄNKISCHE type pipe must be used for the rear window washer delivery pipe only.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 1</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013768_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom8c34.html?Par=940013767.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - AEC type pipe terminal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - FRÄNKISCHE type pipe terminal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <h2 class="bigtext2">A - REPAIRING AN AEC TYPE PIPE</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In case of an AEC type pipe, repair proceeding as follows.</p>
+          <ul>
+            <li>
+              <span style="color:black">Take the repair kit part no. 51922436, shown in Fig. 2, from the Spare Parts Dpt.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 2</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013769_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom9512.html?Par=940013770.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Content of the AEC repair kit</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Instruction sheet</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Corrugated pipe (one) - length = 400 mm - with one rubber terminal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Connection collar (two)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Connection, with rubber seals (two)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the leak is in the connection point of the delivery pipe: disconnect the pipe terminal from the connector and replace it with the section of pipe available in the repair kit with the rubber terminal especially developed for the connection to the connector, joining it to the pipe and proceeding as below described.</p>
+          <ul>
+            <li>
+              <span style="color:black">Cut the pipe to be repaired about four or five centimetres upstream of the damaged pipe section; the cut must be performed in the middle of the groove, as shown in Fig. 3.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013771_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom0f63.html?Par=940013772.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Take the corrugated pipe from the kit and cut a section having the same length as the one removed from the pipe to be repaired:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">Connect the section of the new pipe (A - Fig. 4) to the pipe to be repaired (B), fitting the connection (4) with rubber seals (C) in the points shown.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 4</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013774_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomd648.html?Par=940013773.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Pipe to be joined</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - Pipe to be joined</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C- Rubber seal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Connector</p>
+          <ul>
+            <li>
+              <span style="color:black">Fully press the two sections of the pipes (A) and (B) against the connector (4).</span>
+            </li>
+            <li>
+              <span style="color:black">Then, position the coupling on the collar (3), as shown in Fig. 5.</span>
+            </li>
+            <li>
+              <span style="color:black">Make sure it fits in the available alignment notches and snap on until the securing clips are properly fastened.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 5</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013776_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomdbaa.html?Par=940013775.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Pipe to be joined</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - Pipe to be joined</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Coupling collar</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Connector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the leak is localised long the delivery pipe: cut the pipe four or five centimetres upstream and the same quantity downstream of the damaged section, paying attention to make the cut in the middle of the groove, as shown in Fig. 6; join the pipe sections as described in the previous steps (re. Fig. 4 and Fig. 5), using both connectors available in the kit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 6</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013777_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom2cd4.html?Par=940013778.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If necessary, restore the insulating tape protection and refit the removed components, with reference to the Service Manual.</p>
+          <h2 class="bigtext2">B - REPAIRING A FRÄNKISCHE TYPE PIPE</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In case of a FRÄNKISCHE type pipe, repair proceeding as follows.</p>
+          <ul>
+            <li>
+              <span style="color:black">Take the repair kit part no. 50527045, shown in Fig. 7, from the Spare Parts Dpt.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 7</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013780_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomcf5a.html?Par=940013779.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Content of the FRÄNKISCHE repair kit</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Instruction sheet</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Corrugated pipe (one) with rubber terminal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Coupling connector (one)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Sealing clips (two)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Silicone tube (one)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - O-rings (two) in the black envelope</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the leak is in the connection point of the delivery pipe: disconnect the pipe terminal from the connector and replace it with the section of pipe available in the repair kit with the rubber terminal especially developed for the connection to the connector, joining it to the pipe and proceeding as below described.</p>
+          <ul>
+            <li>
+              <span style="color:black">Cut the pipe to be repaired about four or five centimetres upstream of the damaged pipe section; the cut must be performed in the middle of the groove, as shown in Fig. 8.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 8</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013782_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom812a.html?Par=940013781.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Take the corrugated pipe from the kit and cut a section having the same length as the one removed from the pipe to be repaired:</p>
+          <ul>
+            <li>
+              <span style="color:black">Fit the seal (6 - Fig. 9) on both ends of the pipes (A) to be coupled, as shown.</span>
+            </li>
+            <li>
+              <span style="color:black">Lay a small quantity of silicone on the seals, taking it from the kit (Fig. 9).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 9</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013783_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomcce4.html?Par=940013784.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Pipe to be joined</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Rubber O-Ring</p>
+          <ul>
+            <li>
+              <span style="color:black">Fit the ends of the two pipes (A - Fig. 10) in the housing of the connector (3), as shown.</span>
+            </li>
+            <li>
+              <span style="color:black">Fit the sealing clips (4)</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 10</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013785_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom9cc6.html?Par=940013786.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Pipe to be joined</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Connector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Sealing clip</p>
+          <ul>
+            <li>
+              <span style="color:black">Fasten the sealing clips until the anchorage clips are properly secured, as shown in Fig. 11.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 11</b>
+          </p>
+          <center>
+            <img src="images/jpg/940013787_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom1d94.html?Par=940013788.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check that there are no other leaks of window washer liquid and refit all removed components, with reference to the Service Manual.</p>
+          <h1 class="bigtext1">PARTS AVALABILITY</h1>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Version</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Description</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Order no.</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Q.ty</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All models in question</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AEC type pipe repair kit</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">51922436</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All models in question</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FRÄNKISCHE type pipe repair kit</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">50527045</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">CLAIM REPORT DATA</h1>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Version</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Part</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fault</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Position</b></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Time allowance</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All models in question</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5050121</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EQ</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.10 (*)</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) Operation Code and Time allowance for pipe repair only.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Removal and Refitting of possibly interfering parts should be counted separately.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925299&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:57:53 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

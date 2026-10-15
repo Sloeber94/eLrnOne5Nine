@@ -1,0 +1,854 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003539&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=INSTRUMENTS&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:38:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003539&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=INSTRUMENTS&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="6oV1bfVhQkZLErhQQRVQl3HSxL+MzuiQ88G30gBJzxOWzuB2egGjAhXx8ZwvBq3Pcad+o81KTb/NYOxa5RZ6ijxw7XhP/dBJafJX6Ppv4fXWTRRVFS7VV/73oEojQ1uJRtd4CiYCKAbxkWwdTljU4hT6QUMzPab/4SbMdhBEjf1vcwGPX8/FapvpZsF6u+F4YXBnbhmwIGKaiLrnW3LWJuXcW6hGMX9XKCL9oL2Vx1k3Ng1dg0WsaXjKZbs/vYfoNujY0zwPPst5IW3zrSVrATmQNlpjsLnFWC9625JBb+rMvT//QHYJYpr/gV+AVgUBjBNZmoPi0nOOP8FpPEOgTbkvzVY9Q4ST+ytlRfqB2TQBIXzciASneqpSYrGaXMmzeI8olwfODFwPVSHnMy7WHu8akL7FoQb+9serZQfb5rgUA03DwLLxNbvlLHTzvGaeK6rOykdqCjLGdFgtwX2aga2ZjfTHDTkUUj7EKMSSnFN3MBwpd86UMaNOYckkbccTQkhvBSRmo3kEQlTWtSUgmlvEvoeORsZ6eT8+bcSgA1T9TZpTnG7gl9SFgi4fcziLaZXDaN+USQeSzAl+kAp+0LXI2p9KZWyl6BR2E9QjTt86Pn0iK6cDEeaHB7We+tZdMP7KWyf2M0U9zt967rJK/ahN6pABbKTzog9w6xm2bzarGRlsRLC93HFavzTHjMlqZFp6MgNM34vXPhjKSjt4v1Hsq2nw9HOQfS9LGFgRn7Dc740ZQirRJkeOpScb9Jj1nXv2FZ34w3joQcoZkiy878Ngyp899X6Lbo+qjYRotaB2IlOMCXCI1whEhoCatKQiObwVeqIEWNXPme0jmk8B55LAGep1fM1zdHOgOrTa4HDSQkb9+rQ1ImlJZ/XCm5SwKXrcNagucV1fC4in17nafTf8iT7cGw7P2uS0fVRk3MtZZjjO0RtdZwiGHNqGqGdG" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspPARKING OBSTACLE DETECTION DEVICE&nbsp&nbsp&nbsp5580H&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  INSTRUMENTS</a>
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">INTRODUCTION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The "Parking Assistance" system supplies the driver with information on distance when approaching obstacles (both behind and in front of the vehicle) thereby providing help with parking manoeuvres and identifying obstacles that are outside the field of vision.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The information concerning the presence or distance of the obstacle is transmitted to the driver by means of acoustic and visual signals.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the frequency of the acoustic impulse warnings depends on the distance of the obstacle from the bumper.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the display in the instrument panel shows the areas around the vehicle which start flashing if the system detects that the vehicle is getting close to an obstacle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The distance measurement only takes place when the system is activated, whilst only the control unit is operational in the inactive state.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is available in two different versions:</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- de-luxe version which checks for obstacles at both the front and the rear;</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- standard version which only checks for obstacles are the rear.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The parking assistance system comprises the following components:</p>
+          <center>
+            <img src="images/jpg/939000071_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - electronic control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - ultrasound sensors located in the front bumper (de-luxe version only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - front speaker (buzzer) (de-luxe version only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - ultrasound sensors located in the rear bumper</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - rear speaker (buzzer)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - instrument panel display</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - system activation/deactivation button (de-luxe version only)</p>
+          <h1 class="bigtext1">OPERATION</h1>
+          <h2 class="bigtext2">Activation and deactivation of the system</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- DE-LUXE VERSION:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is activated if the following conditions are present simultaneously:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Key ON</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Reverse gear engaged</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">or</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Activation button pressed (with the speed below 15 km/h).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the system is activated the buzzer warns of this condition and the LED is lit up.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is deactivated:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- by pressing the button again</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- by disengaging reverse gear and when the vehicle speed is above 18 km/h.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The LED goes out when the system is deactivated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- STANDARD VERSION (rear sensors only):</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is activated if the following conditions are present simultaneously:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Key ON</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Reverse gear engaged</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the system is activated the buzzer sounds as a warning.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is deactivated by disengaging reverse gear and when the vehicle speed is above 18 km/h.</p>
+          <h3 class="bigtext3">Activation button (de-luxe version only)</h3>
+          <center>
+            <img src="images/jpg/939000072_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - system activation/deactivation button</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - system activated LED</p>
+          <h2 class="bigtext2">Obstacle distance acoustic signals</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit processes the information supplied by the sensors, operating the buzzer to signal the presence of any obstacles.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sound from the buzzer warns the driver that the vehicle is approaching an obstacle. The sound lasts for 75 ms, whilst the pause between the sounds is directly proportional to the distance of the obstacle: impulses in quick succession indicate the presence of an obstacle that is very close. A continuous sound indicates that the obstacle is less than 30 cm away.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The acoustic signal stops immediately if the distance of the obstacle increases. The sound cycle remains constant if the distance measured by the centre sensors remains unchanged, whilst if this situation occurs for the side sensors, the signal is interrupted after 3 seconds (for example, to prevent signals in the case of manoeuvres alongside walls).</p>
+          <h2 class="bigtext2">Obstacle distance visual signals</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit processes information supplied by sensors, sending the information to the instrument panel for signalling the presence of any obstacles.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instrument panel display with the system activated shows the various areas around the vehicle, 7 front and 8 rear.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The various areas in the different cases are either off, flashing or on constantly in accordance with the following logic (SEE DIAGRAM):</p>
+          <center>
+            <img src="images/jpg/939000073_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">example:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- obstacle in the right rear area (sectors H and I)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- obstacle still far away: sectors H and I both off</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the obstacle is getting closer: sector I is flashing, sector H remains switched off</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the obstacle is getting even closer: sector H is on constantly, sector I goes out; the situation is similar for the other sectors.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the case of large obstacles (e.g. walls) one and only one sector is lit up at a time.</p>
+          <h2 class="bigtext2">Autodiagnosis and recovery</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit carries out an autodiagnostic test when it is switched on. The sensors are diagnosed every time they are activated. A fault even in only one sensor inhibits the operation of the entire system which is deactivated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The errors detected by the control unit can be read via the CAN using suitable diagnostic equipment (Examiner).</p>
+          <h2 class="bigtext2">Error signalling</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Any faults/errors are signalled in the instrument panel by the relevant warning light coming on and the message "PARKING ASSISTANCE NOT AVAILABLE" in the display.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning signals that the system is not available without any reference to the faulty sensor or the type of fault.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <center>
+            <img src="images/jpg/939000074_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h1 class="bigtext1">COMPONENT SPECIFICATIONS</h1>
+          <h2 class="bigtext2">Parking sensor control unit (cpa)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit is an electronic component connected to the rear wiring that manages the assistance function by carrying out the following functions:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- receiving the button activation/deactivation signals via the CAN and directly on the de-luxe version only</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- activating the operating LED (de-luxe version only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- activating the sensors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- processing the signals received by the sensors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- checking the operation of the sensors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- operating the buzzers</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- managing the fault diagnosis and test functions</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic control unit has a device that protects against voltage fluctuations and short circuits.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is located in the luggage compartment, on the right rear side panel; it is connected with three connectors:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- CONNECTOR A (rear wiring) control unit power supply and signals from other nodes or vehicle components;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- CONNECTOR B - only present on the de-luxe version - (front wiring) front bumper sensors power supply</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- CONNECTOR C (rear wiring) rear bumper sensors power supply.</p>
+          <center>
+            <img src="images/jpg/939000075_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Control unit pin out</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONNECTOR A</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ignition-operated power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear buzzer signal (-)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">System activation/deactivation button (de-luxe version only)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Trailer control unit signal (N.C.)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear buzzer (+)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">System activation/deactivation LED (de-luxe version only)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN B</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONNECTOR B - only present on de-luxe version</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front sensor earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front sensor power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front buzzer signal (-)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front buzzer signal (+)</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left outer front sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left inner front sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right inner front sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right outer front sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONNECTOR C</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear sensor earth</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right inner rear sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left inner rear sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right outer rear sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left outer rear sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear sensor power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">n.c.</p></td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Ultrasound sensors</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor is an ultrasound transducer which acts as an intelligent transmitter and receiver of ultrasound impulse packages. Both the frequency and the voltage of the impulses are produced in the transducer.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The impulses emitted are reflected by any obstacles; the transducer therefore receives an echo which is amplified and converted into a digital signal, sent to the electronic control unit via the same line used for the transmission request.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Each sensor can also be operated as a receiver only, in order to be able to take a triangular measurement between two sensors.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This technique allows better detection of small obstacles and in situations featuring critical reflection.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensors all have the same electrical and mechanical properties; the maximum detection distance for each sensor can be adjusted using software according to the location of the actual sensor.</p>
+          <center>
+            <img src="images/jpg/939000076_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Sensor pin out</h3>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Sensor power supply</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Sensor signal</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Sensor earth</p></td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Acoustic signals</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Two buzzers, one at the front and one at the rear, notify the driver of the following information:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- activation of the system;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- distance of the obstacle;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a possible fault in the system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The frequency and the volume of the signalling can be controlled by the control unit.</p>
+          <center>
+            <img src="images/jpg/939000077_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Location</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The front buzzer - only present on the de-luxe version - is located on the cover under the dashboard on the driver''s side.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rear buzzer is located in the luggage compartment at the base of the right rear pillar.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003539&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=INSTRUMENTS&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:38:13 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

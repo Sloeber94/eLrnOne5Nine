@@ -1,0 +1,1078 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003540&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=RADIO+-+DESCRIPTION&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:20:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003540&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=RADIO+-+DESCRIPTION&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="SV2Hn+6PVbLoW84qZTmiG2974z0z1VwX6upFuofdAECaB22hXmdfpTiHnokviEssZ1sqp3db/Nq6VIWwcx1ptc4c3x6kHvX4HlvlgcYl7qlWRTl33vsvALcFRSfDtcnXuQf0mQ+1kjtGAxBabGmv1jpyTzpaaQfhLhr89qNtb1/l12dsXXeRkBJIm16AbgLO4Ch2RGioj0e/P+FCq7H6BhZZweked7W8JQis4Y22IETuTLaLaxsJU+/oXiuaKUZPzMfEHBiz32fwNW9lNtt5ejOGd/FfM3QVuhazzKWEVvFTQdmpjx7EYTcarZz2TCSzLCQM5UKrUdZejNY1zttX+02YAZyDCUyE223pLiIabbEIIm6Kbwgnjd0/MYpreIHOIkcZTqNNYoZ91LjT7bJi40HDhiBvnF/RAmaInbAuCVC3ofJIY4L0v7bgAn/42oa0fE829bnuItZrMKQAw8zlHjcJmXRE6249wKSlsB8ddZcZ3oWHKuqSt4lfOlH+YVrmlsoJXRQ1d7L/tZdT6mwIhNViyZht+ypBhZnJE97uqROdWEkcRpKmuLs7RjINMCof4l2c6wMiN3XX5I0KiUVXJyqA2Zp4GJ3/uKqdTCTBjCnaPHAD7b79sKmLl7y84565Gxc2GRydFqYFfusZl++6L6wpogihnYirIspK//W0V0v4e4WgDnga6jxsQ5f3k2pueAgTWD3M0N1TAMIS0g1FaYnHyR3EdPde21YOWYyMXpmc9124qZWSvigNaMeSJpOM3V+u5A6hfRaVy9TpKtvlvssEHNN1j/7l4hdwYeVUNN1cMzHddxxvxHzSU7BI+4gf6mpR/NXDt8eb9dOO1vHwHxkE1xu0scRMv7CAieyFd8jrmrPfRXVPs+OC7LuPu/9GQdL73E2mu0YUtiGT5adMttH1ef3r3q2LJnSc7EuBOl8=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspCONNECT PANEL&nbsp&nbsp&nbsp5580P&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  RADIO - DESCRIPTION</a>
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">CONNECT NAV + DESCRIPTION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dimensions: 2DIN box with front panel</p>
+          <p class="titolo_lista">Modules included:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Radio</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD player - Audio + CD - MP3 ROM</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">GPS navigation system module</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">GSM phone module</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Independent navigation with maps</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Independent navigation with maps</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Assistance services</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">256 colour 6.5" TFT display</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">External CD CHANGER system (if present)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Built-in voice recognition module</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WAP protocol</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Internal modules</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system modules or the modules to which the system can be connected for obtaining information or requesting services are different.</p>
+          <h3 class="bigtext3">Cd rom player</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONNECT is equipped with a CD ROM player that is able to read and manage CD ROMs and audio CDs. The Audio media may be normal commercial audio CDs or CD ROMs containing files in MP3 format (all levels). Other acceptable ROM media include official Marelli media that contain an updated copy of the CONNECT management software and also the map database required for navigation.</p>
+          <h3 class="bigtext3">Cd changer</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONNECT is also designed to be connected to an external CD Changer and to accept analogue audio output.</p>
+          <h3 class="bigtext3">Gsm module</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The CONNECT system is equipped with a GSM Dual Band module and micro format SIM Card reader (that allows the user the insert a SIM Card). There is also an external microphone (for hands free use and voice recognition) and preparation for the connection of a hand set.</p>
+          <h3 class="bigtext3">Radio - cd module</h3>
+          <p class="titolo_lista">General specifications:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Music audio power: 4x35W</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 band graphic equalizer</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Easy to manage menu for the adjustment of the radio settings and any external interfaces (CD-Changer)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remote control from the steering wheel</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Possibility of interface with external CD-Changer via ASCI-BUS line.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Volume control according to the speed (via CAN)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If a voice recognition module is fitted, several of the commands can be voice-activated.</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Radio specifications:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RDS</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RDS - TMC (Traffic Message Channel).</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EON (Enhanced Other Network)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TA (Traffic Announcements).</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Tuning on the following bands: USW (87,5- 108 MHz) (FM), MW (153- 279 kHz) (AM), LW (531- 1602 kHz) (AM)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Possibility of programming: 24 FM stations (including 6 stored by autostore), 6 MW stations, 6 LW stations, 6 stations that can stored by autostore on the MWST band.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 scan modes (short lislten to a station and automatic transfer to the next): Scan on the frequency band used; Scan of stored stations.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Possibility of selecting programmes via PTY (on FM bands only).</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Local/Distant setting.</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Audio specifications:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Bass</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Balance</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Fader</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Loudness</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Treble</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">HI-FI system active control</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 equalizing curves: BEST (manufacturer''s equalizing data) Rock, Jazz, Classical, MANUAL (can be set using 5 band graphic equalizer)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Soft mute</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">CD specifications:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Motorized loading and ejection</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TPM function (Track Program Memory)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Shuffle function</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Repeat</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Skip</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pause</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Compression: activates the CD noise dynamic reduction circuit.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD Naming: CD identification (max 30, including CDC).</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">MP3 CD specifications:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Play List function (such as TPM for Audio CD)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Functions associated with the Play List. Scan, Repeat (one or all tracks), Pause, Skip</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Maximum number of MP3 tracks considered for each CD: 999 (if the number of MP3 files contained in the CD ROM is higher than this limit, only the first 999 will be considered).</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Compression: activates the CD noise dynamic reduction circuit.</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">CD Changer specifications </p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Scan function</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Repeat track or entire cartridge function</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Shuffle CD or shuffle all function (one CD or all CDs)</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD Naming:</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Compression: activates the CD noise dynamic reduction circuit.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Engine management by steering wheel</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The audio module can be managed by the buttons on the steering wheel.</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Engine management by steering wheel</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The audio module can be managed by the buttons on the steering wheel.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">System activation</h2>
+          <p class="titolo_lista">The CONNECT system may be activated in two different modes:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Automatic activation with the ignition key ON</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Manual activation by means of ON button</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Emergency manual activation by means of SOS button</p>
+            </li>
+          </ul>
+          <h3 class="bigtext3">Automatic activation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the ignition key is turned to MAR position, the CONNECT system turns on automatically to make all the functions described in this chapter active or enabled.</p>
+          <h3 class="bigtext3">Manual activation</h3>
+          <p class="titolo_lista">With the ignition key in STOP position, the CONNECT system comes on when the ON button is pressed to make the following modes available:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MAIN</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUDIO</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NAV</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TEL</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SOS and SERVICE (Targasys)</p>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In this mode, the SETUP and TRIP modules can be activated but it is not possible to validate any parameter change, language change or measurement unit change or any other type of adjustment envisaged by the CONNECT system. These limitations are normal when the system is activated by means of the ON button. When the vehicle is not running (key OFF), the data transmission devices inside the vehicle are not operational. When ignition key is turned ON, the system begins to work.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">System deactivation</h2>
+          <p class="titolo_lista">The CONNECT system may be activated in two different modes:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">deactivation independent of the ignition key</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">deactivation dependent on the ignition key</p>
+            </li>
+          </ul>To choose the deactivation mode, see the Power OFF submenu in the SEPUP menu.<h3 class="bigtext3">Deactivation independent of the ignition key</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When this mode is active, the CONNECT system may be turned off by pressing the ON button.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The display shows the message DEACTIVATION PROCEDURE IN PROGRESS, WAIT A FEW MOMENTS.</p><table class="nota"><tr><td><img src="images/jpg/769_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the ignition key OFF, the system deactivates with a delay of 20 minutes if a system destination has been set or if a phone conversation is in progress.</p></p></span></td></tr></table><h3 class="bigtext3">Deactivation dependent on the ignition key</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When this mode is active, the CONNECT system may be turned off by turning the ignition key to STOP.</p><h2 class="bigtext2">Languages available</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following languages are available for both strings of displayed text (menus) and navigation voice messages: Italian, English, French, German, Spanish and Portuguese.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The voice recognition unit language may be set independently of the menu and navigation message language. The same languages are available.</p><h1 class="bigtext1">FRONT OF THE CONNECT NAV+</h1><h2 class="bigtext2">Front view</h2><center><img src="images/jpg/939000078_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><h2 class="bigtext2">Key to pushbuttons</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are 28 buttons and two rotary selectors (a wheel and a pushbutton) on the front panel of the CONNECT.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Some keys perform multiple functions that depend on the system operating conditions active at that time.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activation of the selected function is controlled, in some cases, by the length of time for which the button is pressed (short or long push) as described in the following table.</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Key</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Short press on key (less than 2 second)</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Prolonged press on key (longer than 2 seconds)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activation or interruption of the Voice Recognition function</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activation or interruption of the Voice Recognition function. Activation of the Voice Memo function, this can be interrupted by a further short or long press on the button</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Choice of audio source:FM1/2/3/AST –MW/LW/AMAST – CD – CDC</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Send the selected phone call</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Reselect the last number dialled and then press the key with 5 seconds to send a call to the number</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Accept incoming phone call</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Refuse incoming phone call</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Stop dialling a new phone number</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Interrupt a phone call already in progress</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activate TRIP on-board computer mode</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Radio mode: search for the first radio station at a lower frequency</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD mode: select the previous track.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MP3 mode: select the previous track.</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Radio mode: activate scanning function for lower frequencies, station scanning will stop at the first station with an audible signal.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD mode: select the previous track.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MP3 mode: move to the previous 10 tracks or the previous folder.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Radio mode: search for the first radio station at a higher frequency</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD mode: select the next track.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MP3 mode: select the next track.</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Radio mode: activate scanning function for higher frequencies, station scanning will stop at the first station with an audible signal.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD mode: select the next track.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MP3 mode: move to the next 10 tracks or the next folder.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD housing</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Eject navigation CD-ROM or audio CD</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Play/stop for CD/CDC</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pause for CD/CDC</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIM CARD housing eject key</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SIM CARD housing</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activate SOS mode (assistance functions and services)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Targasys mode activation</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Exit from a selection menu or leave a submenu of a higher menu</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Knob for selecting the required function. Press to confirm</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Multifunction key. Function depends on active mode.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The function is always identified by graphic buttons that appear on the display. In some cases, the graphic button area may cover one or more adjacent multifunction keys: the function of the keys under this area is the same</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Knob for adjusting volume level. Press to turn the system on/off</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activate navigation mode</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activate/deactivate the MUTE function for navigation information</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activate phone mode</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Phone on/off</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activate Audio mode</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activate/deactivate the MUTE function for audio sources</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activate Main mode</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dark mode: The display is darkened completely.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The display is lit again by pressing the MAIN, TEL, SOS buttons or by receiving a phone call</p></td></tr></table><center><img src="images/jpg/939000079_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><h1 class="bigtext1">CONTROLS ON THE STEERING WHEEL</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The controls for the main functions of the CONNECT are duplicated on the steering wheel for greater ease.</p><center><img src="images/jpg/939000080_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activation of the selected function is controlled, in some cases, by the length of time for which the button is pressed (short or long push) as described in the following table.</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Key</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Short press on key (less than 2 second)</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Prolonged press on key (longer than 2 seconds)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VOL +/-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Raises or lowers volume level</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Raises or lowers volume level</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VOICE</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activation or interruption of the Voice Recognition function</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activation of the Voice Memo function, this can be interrupted by a further short or long press on the button</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SOURCE</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Select operating mode: FM1/2/3/AST MW/LW/AMAST - CD - CDC</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SCAN +/-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The “SCAN +/-” buttons allow:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- In Radio mode: to search for the next or previous radio station</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- In CD/MP3/CDC mode: to move to the previous or next track</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TEL</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Send the selected phone call</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Redial the last number called and then press the key within 5 seconds to send a call to the number.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Accept incoming phone call</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Refuse incoming phone call</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Stop dialling a new phone number</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Interrupt a phone call already in progress</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MENU</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The MENU button is used to select the various CONNECT modes: MAIN, AUDIO, TRIP, TEL, NAV, MAIN etc starting from the current active mode</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The function of the wheel behind the right keys is the same as the right selector on the front panel: it is used to set the required function and then confirm it by pressing the wheel</p><h1 class="bigtext1">MAIN FUNCTION</h1><p class="titolo_lista">The following modules become available when the system is turned on:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUDIO</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NAV</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TEL</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRIP</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The upper status bar displays the current time, GPS and GSM signal intensity, date (day, month, year), outdoor temperature and current operating mode (e.g. MAIN).</p><p class="titolo_lista">The dedicated phone module window includes:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">network provider</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">an envelope icon that indicates an unread text message;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">an arrow icon to indicate that call transfer is active</p></li></ul><p class="titolo_lista">The audio source window includes:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">in Radio mode: the current station band, frequency and RDS message.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In CD/MP3/CDC mode: display of the active source CD or CD1-10 or MP3, track or MP3 file number playing and playing time.</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Trip window supplies various information items: e.g. average speed and range or (by turning the appropriate knob) journey time and average fuel consumption.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The screen shows a map at the same scale used on the navigation system display</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Graphic buttons that appear on the lower part of the display are activated by multifunction keys located below them.</p><center><img src="images/jpg/939000850_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><h2 class="bigtext2">Code activation and recognition procedure</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Connect (NIT) includes an ANTITHEFT function that prevents it operating in the case of theft.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NIT is installed during producition and connnected to the CAN network in order to establish communication with the Body Computer and store an antitheft code known as the Exchange Code.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At each subsequent Key On (and even if the battery is disconnected), an automatic authentication procedure is repeated: if the Exchange Code check is positive, the system begins to operate. If the codes compared are not the same, a message appears on the display asking the user to enter a manual code (Master Code - 4-figure code from 1111 to 6666) that is shown on the radio code card.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Master Code is pre-programmed in production and different for each NIT. It is also different from the Exchange Code.</p></p></span></td></tr></table><center><img src="images/jpg/939000082_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><table class="nota"><tr><td><img src="images/jpg/768_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The manual Master Code input procedure is necessary only if:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the Body Computer is replaced</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- an NIT is installed that has already been used on another vehicle with a CAN network</p></p></span></td></tr></table><table class="nota"><tr><td><img src="images/jpg/768_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">a new NIT (never installed on other vehicles) may be fitted using an automatic authentication procedure without manual input of the Master Code.</p></p></span></td></tr></table><h1 class="bigtext1">AUDIO MODULE</h1><h2 class="bigtext2">Audio sources</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Possible audio sources include standard sources (Radio Tuner, Audio CD/MP3 and CD Changer) whose specifications are detailed in the rest of the chapter. PTY31 Alarms (Program TYpe) and Traffic Announcements, Sources linked to other modules such as the telephone, telephone ringing, voice recognition and voice synthesis for navigation are treated as separate functions.</p><h3 class="bigtext3">Standard source</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">One of the standard sources is activated (possibly interrupted by a Traffic Announcement). The navigation messages are available.</p><h3 class="bigtext3">Phone call in progress</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A telephone call is activated. If it is an incoming call, the source activated before the phonecall will be restored at the end of the conversation. The navigation messages are available.</p><h3 class="bigtext3">Ringing</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Sound to indicate incoming call. The navigation messages are not available.</p><h3 class="bigtext3">Voice recognition</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The dialogue between the recognizer and the user is activated. The navigation messages are not available.</p><h3 class="bigtext3">Pty31 alarm</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Due to the receipt of a PTY31 message from the tuner. The navigation messages are available.</p><h3 class="bigtext3">Tuner function</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FM, MW and LW tuner with RDS, EON, PTY and TP management. If a voice recognition module is fitted, several of the commands can be voice-activated.</p><h3 class="bigtext3">Cd audio function</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Audio CD/MP3 source and hence the function can be selected from amongst the various audio sources on the CONNECT unit.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Various commands are available to the user through the direct buttons (front panel/steering wheel controls) and those selected from the menu on the screen If a voice recognition module is fitted, several of the commands can be voice-activated.</p><h3 class="bigtext3">External cd changer management</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The CD Changer source (Audio) and hence the function can be selected from amongst the various audio sources on the Connect unit. This function is only available if the CONNECT is connected to an external CD Changer of the type described previously.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Various commands are available to the user through the direct buttons (front panel/steering wheel controls) and those selected from the menu on the screen If a voice recognition module is fitted, several of the commands can be voice-activated.</p><h2 class="bigtext2">Operation</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press the AUDIO button to access the Connect Audio module screens.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Three sections appear at the left of the screen. The larger section at the top displays: the Frequency Band, the frequency and name of the radio station playing at the time and other information connected with the radio station.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The two smaller sections display the 6 radio stations stored in the 6 memory positions for each frequency band.</p><p class="titolo_lista">A menu appears at the right part of the screen where the user can make radio settings, namely:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TA- Traff.Ann.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AF- Alt.Freq.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RDS</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PTY- Prog.Type</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUTOSTORE</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">BAND SCAN.</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The user can access the NEXT MENU from the menu, where the 6 preset stations may be scanned: PRESET SCAN</p><center><img src="images/jpg/939007305_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Previous menu</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Preset scan</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Radio setup</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Audio setup</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible to carry out radio SET UP (RADIO SET UP) (LOC/DX, MONO/STEREO, REGIONAL, ECC…) and AUDIO SET UP (BASS, TREBLE, LOUDNESS, EQUALIZER, ETC…)</p><center><img src="images/jpg/135000551_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Audio setup</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Other menus</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Bass</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Treble</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Loudness</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Equalizer</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Manual equalizer</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Confirm key</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Preset equalization</p><p class="titolo_lista">For the equalization, the following preset settings may be used:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ROCK</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">JAZZ</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CLASSIC</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Or use the manual equalizer, where the user can adjust the 5 frequencies manually as shown in the figure.</p><center><img src="images/jpg/939000085_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Manual search key for radio station frequencies</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Manual search key for radio station frequencies</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Volume adjustment knob</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - SRC button</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Multifunction keys</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press buttons 1 and 2 to conduct a manual radio station search</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Sound volume is adjusted using wheel 3</p><p class="titolo_lista">Press key 4 (SRC) to change the audio sources in this sequence:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FM1</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FM2</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FM3</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FMAST</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LW</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MW</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AM</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AMAST</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CDC</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Keys 5 activate the function identified by the symbol shown in the window in the display above the key.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In CD or CDC mode, the menu to the right of the display will be as shown in the following figure.</p><center><img src="images/jpg/939000086_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><h3 class="bigtext3">Cd - mp3 mode</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Connect systemis able to recognise the type of compact disc inserted.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the recognition stage, the display shows the message "Reading CD... " and then the system detects whether the CD inserted contains musical tracks recorded in MP3 mode (e.g. music files with the extension .mp3).</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The MP3 track names must not include the characters Open and Close Brackets “(“ “)“, otherwise the Connect system will be unable to play the tracks.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Connect system automatically organises the tracks present on the CD in mp3 format into folders and creates sequential ists of all folders that contain MP3 tracks.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A CD could contain thousands of mp3 files. In this case, a maximum limit is set for the number of files managed. The system will consider only the first 999 music tracks and the display shows the following message for about 7 seconds: "Attention, only the first 999 MP3 CD tracks will be managed by the system</p><p class="titolo_lista">Once the MP3 CD is inserted and recognised by the system, the main screen shows the following functions:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Set Up</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Define Playlist</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Playlist</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Compression:</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TA- Traff.Ann.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Scan</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Shuffle</p></li></ul><center><img src="images/jpg/135000554_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to the Owner''s Handbook for more detailed user instructions.</p></p></span></td></tr></table><h1 class="bigtext1">PHONE MODULE</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Connect system is equipped with a Dual Band GSM mobile phone with handsfree operation.</p><center><img src="images/jpg/939000088_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - SIM card housing</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - SIM CARD housing eject key</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Send the selected phone call Accept incoming phone call</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Activate phone mode</p><h2 class="bigtext2">Functions available to the user</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The phone module allows normal phone activity, text messages, support for Service Calls to the Provider (described in the relevant chapter) and Internet access by means of WAP (Wireless Access Protocol).</p><h3 class="bigtext3">Phone functions</h3><p class="titolo_lista">The phone module is used to:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">accept an incoming phone call.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">refuse an incoming call</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">send a phone call</p></li></ul><h3 class="bigtext3">Sim data base access functions</h3><p class="titolo_lista">The SIM Card database allows the following options:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Read the list of phone numbers saved on the SIM card.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Enter a phone number on the SIM</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Delete a phone number from the SIM.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Copy the contents of a SIM phoneboook to the CONNECT phonebook and viceversa.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Copy the contents of a SIM phonebook on another SIM.</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Information is also provided on the status of the SIM (SIM Card corrected or incorrectly inserted) and the space available in the SIM memory.</p><h3 class="bigtext3">Last number functions</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The module is able to store the last 10 numbers called to help the user with repeat calls.</p><h3 class="bigtext3">Sms message functions</h3><p class="titolo_lista">The module manages text messages for the user and also from the Service Provider. It is therefore possibile:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">to display received messages that have not yet been read (full list or selected message).</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">to display received messages that have been read or saved (full list or selected message).</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">save a received message.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">delete a message (recently received or already saved).</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">send a message to a particular number entered by the user.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">set up the Service Provider number for text messages.</p></li></ul><h3 class="bigtext3">Gsm status display functions</h3><p class="titolo_lista">It is possible to obtain information on:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">aerial signal quality</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">network operator''s name</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">presence of text messages received but not yet read.</p></li></ul><h3 class="bigtext3">Configuration functions</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"Call divert": incoming calls can be diverted to another phone number, specifying the type (Voice, Data..)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Network operater management: the module manages network operator selection (manual or automatic search) and also the user of a list of preferred operators (display, delete, input and overwrite functions).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Security: use of PIN code, PUK, display number of PIN input attempts remaining before PUK code requested, change PIN code.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Access to a WAP site requires data to be loaded into the memory (in technical terms: loading of the deck) and the first page (card) is not displayed until the end of the operation. The central part of the screen shows the text, links and selection/input options. The right side of the display shows the software keys (Vertical softkey) that are used to activate the possible card actions (max 6, usually in English).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For example, the following functions may be shown:</p><p class="titolo_lista">For example, the following functions may be shown:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Next, Help, Back: key presence, number and functions depends on card content.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The softkey "Card list" allows direct access to a card in the deck that has been loaded.</p></li></ul><p class="titolo_lista">The lower bar shows browser functions that can be activated by means of the reconfigurable keys, described below:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">“Home”: access to the page set up as Home.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"Previous": shows the previous card.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">“GO”: access to the specified page (insert address or bookmark).</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">"In phonebook": saves the current address in the user bookmark file.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">cursor up, cursor down: up/down to scroll within a text window. If the card cannot be displayed in a single screen (the position in the page is displayed by the scroll bar on the left).</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">An hourglass is shown when data is loading.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ELEMENT SELECTION</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To highlight/select active elements (link, selections, input, softkeys) in the card, use the selection knob to the left (rotate). Only the items shown on the screen can be highlighted. If a card takes up more than one screen, the scroll up/down options will be active in the lower bar.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CARD SELECTION</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">One of the cards in the loaded deck may be selected directly.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A WAP site may be accessed by specifying the address or selecting it from the list of bookmarks (if this operation is allowed by the Provider).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Phonebook.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The address of the WAP site may be stored in the phonebook (bookmarks) and associated with a name if required. The address is stored when the OK key is pressed.</p><h2 class="bigtext2">Procedure for general use</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Before the phone module can be used, the user must enter a PIN security code whenever the CONNECT system is turned on after being turned off (unless "exclude PIN request" has been set under Settings). Unless the PIN code is entered, the system can be used only for emergency calls (112 in Italy) and not normal user calls or for the Service Call function.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If an incorrect PIN is entered three times, the module is bound to request the PUK code to release the block.</p><h3 class="bigtext3">Engine management by steering wheel</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The phone module can be partly controlled by the buttons on the steering wheel.</p><h3 class="bigtext3">Audio status repetition on the control panel display</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The CONNECT module sends various information to the control panel via the CAN network on phone section operating status.</p><h2 class="bigtext2">Voice recognition</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Voice recognition module with speaker dependent functions (Phonebook, Navigation address book, Radio Station memory) and speaker independent functions for Radio, CD, CDC, Phone and Services, Navigation System. The speaker dependent function allows a voice command (prerecorded by the user) to be associated with a phone number in the phonebook, a stored radio station or a destination present in the destination list (personal).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The speaker independent functions allow the activation of general controls (e.g.: "Radio Autostore", "CD play", "Navigatore Zoom", ...).</p><h3 class="bigtext3">Voice command</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After pressing the VR key, the user can speak a voice command. The module compares the sample with those present in its memory and, if recognised, allows the relevant command to be activated (call one fo the phone numbers in the phonebook, select one of the preset stations as an audio source, start the autostore procedure for the radio stations in the current band, change to CD source, etc...) The system guides the user using voice information (Example - After pressing the VR key, the user says: "Call number" and the Connect responds: "Number please").</p><h3 class="bigtext3">Speaker dependent functions</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RECORDING RADIO VOICE COMMAND: When storing a radio station in one of the positions available in the radio bands (FM1, FM2, FM3….), the user can associate it with a voice command. Upon the user''s request, this gives rise to an initialisation stage when the module asks for a voice command to be entered and repeated and then confirms recording.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RECORDING PHONE (NAVIGATION SYSTEM) VOICE COMMAND: When entering a number and associated name in the phone book the user can associate a voice command with this item in the same way as with the radio stations.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RECORDING NAVIGATION SYSTEM VOICE COMMAND: When entering a destination in the navigation system address book the user can associate a voice command with this item in the same way as with the radio stations.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DELETING A VOICE COMMAND: The voice commands described above may be deleted or modified.</p><h3 class="bigtext3">Speaker independent functions</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system does not require an initialisation stage to use this function (i.e. recording of voice samples by the user). Although the terminology has been designed to include commonly used phrases, it is nevertheless advisable to read the keyword table in the Connect User Handbook. As an example, the keywords for the CD player are given below.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LANGUAGES AVAILABLE: The following languages are availalbe for requests and communication with the user: Italian, English, French, German, Spanish and European Portuguese.</p><h3 class="bigtext3">Record voice messages</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This module, known as the Voice Memo, allows the user to record and re-enter voice messages up to 3 minutes long. The messages are recorded sequentially in the frame and a warning message is displayed if the memory contains messages.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Recording: the recording activated by the user can last up to 3 minutes and terminates automatically when the available time is up. The user can interrupt the recording manually in any case.</p><h3 class="bigtext3">Voice memo</h3><p class="titolo_lista">The following functions are available: </p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Play: plays the message</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Stop : interrupts playback or recording</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SKIP : skips to the next message</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SKIP : skips to the previous message</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Record: Starts recording</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Delete: clears the message memory (individual frames cannot be deleted).</p></li></ul><h2 class="bigtext2">Operation</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once the phone module is activated, it is always possible to make emergency calls to 112 regardless of whether a SIM card is present or a PIN has been entered.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the Telephone module has been activated and no valid SIM card has been inserted, a warning message appears on the screen.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Insertion of a valid SIM card makes the phone operational and gives access to its functions.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The card must be inserted in its seat with the chip at the front and to the right in relation to the car''s direction of motion.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Correct SIM card insertion activates a request to enter the PIN code, as shown in the following figure.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Extraction of the SIM card with the phone active may give rise to temporary malfunction. In this case, turn off the phone by means of a long press on the TEL key or turn off Connect using the ON button before removing the SIM card.</p></p></span></td></tr></table><center><img src="images/jpg/135000556_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After entering a valid PIN code, the following screen appears. The user can display the phone number to be called on the left part of the display.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The lower part shows icons with numbers from 0 to 9 and the “ */+ “ and “ # “ symbols found on a normal phone keypad.</p><p class="titolo_lista">A menu with these items appears on the right side of the display:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OTHER MENUS</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FREQUENT NUMBERS</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LAST NOS RECEIVED</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LAST NOS CALLED</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ADDRESS BOOK</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WAP</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VOICE MEMO</p></li></ul><center><img src="images/jpg/135000557_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Other menus</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Frequent numbers</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Last numbers received</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Last numbers called</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Address book</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Wap</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Voice memo</p><p class="titolo_lista">The Telephone Module functions are the same as for a mobile phone, i.e. in addition to PIN code input/update and emergency calls without a SIM card, the following are also available:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">call-up of phone numbers saved on the SIM card</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">input of a new phone number on the SIM card</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">deletion of a phone number from the SIM card</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">information on SIM card status (correct or incorrect input)</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">list of the last 10 numbers dialled</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">list of the last 10 calls received</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">text messages</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DTMF settings</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">select network access provider</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">set incoming call volume</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">display remaining credit in the case of prepaid SIM cards</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">display signal field intensity and other status reports by means of icons and messages</p></li></ul><h3 class="bigtext3">Incoming calls</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Whichever Connect system mode is active, when a phone call is received, a dialogue box appears over the current display window as shown in the following figure.</p><center><img src="images/jpg/135000558_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To accept the call, give the key with the handset symbol a short press</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To end the call, give the key with the handset symbol a short press</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To refuse the call, give the key with the handset symbol a long press</p><h3 class="bigtext3">Outgoing calls</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To make a call, go into Telephone mode (TEL key), dial the required user number using the 12 letter/number keys at the bottom. To use an international prefix ("+" character), give the "0" key a long press.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After dialling the required phone number, give the key with the "handset" symbol a short press.</p><h3 class="bigtext3">Wap mode</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The term WAP stands for: WIRELESS APPLICATION PROTOCOL.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WAP technology makes it possible to access the Internet using a mobile phone when no computer is available.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WAP browsing is relatively similar to conventional browsing on the PC but the same performance cannot be expected as with PC Internet access and an ADSL (“Asymmetric Digital Subscriber Line”: a technique that allows data to be transferred at high speed over normal phone lines using special Modems) because the graphics are very poor with WAP and the information is reduced to the essentials.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Because WAP technology is specific, mobile phones cannot be used to access ordinary WEB sites as with a PC.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Internet supports WEB pages produced with language such as HTML (“Hyper Text Markup Language”: the international language of electronic texts - hypertexts) that are displayed on a PC by means of BROWSERS (Navigators, such as: NETSCAPE NAVIGATOR, INTERNET EXPLORER, etc…).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WAP is based on a different language: WML (Wireless Markup Language) with its own Script (another word for Program. usually indicates a program written in a particular language to perform tasks connected with the operating system) with its own image formats and also requiring its own , BROWSER or MICRO- BROWSER to display WEB pages.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">These BROWSERS are built into the latest WAP mobile phones: if you enter the required settings (indicated below), you are able to access the required WAP sites.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For WAP phones, addresses are also in “ HTTP:// ”; the format used for the WEB.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WAP pages are located on an HTTP Server and their technical operation is as follows: when a WAP address is entered on the display of a mobile phone, the phone forwards an HTTP request for a WML page resident on a WEB Server.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The request is received over the GSM network by the WAP GATEWAY that forwards it to the WEB Server by means of a coding/decoding procedure.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At this point, the requested page returns to the WAP GATEWAY that codes/decodes it to route it to the mobile phone that originated the request.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is what happens when the requested content is already in WML format (for mobile phones).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The requested pages are often in HTML format (for PC). In this case, the WAP GATEWAY acts as a HTML - WML translator in real time.</p><table class="nota"><tr><td><img src="images/jpg/769_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the case of complex sites with lots of graphics, the result on the mobile display could be illegible.</p></p></span></td></tr></table><h3 class="bigtext3">Text messages</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In TEL mode, the user can access the OTHER MENUS screen from the main menu and then select the text message service (Short Message Service - SMS) that allows the reading and sending of short messages up to 160 characters via the GSM phone.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to the Owner''s Handbook for user instructions.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remember that to user the text message service, you need to enter the Phone Number of the Service Centre of the Service Provider that the user intends to use.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To set the service centre phone number, select the following from the text message (SMS) menu: "Centre number".</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dial the Service Centre telephone number using the multifunction keys (the service centre phone number is supplied by the user''s SIM card network provider).</p><p class="titolo_lista">When in OTHER MENUS, select OPTIONS to display the following menu:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Network operator: to select a Network Provider.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PIN: to manage the PIN code.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Information: to display information on the GSM module (Provider name, IMEI code (International Mobile Equipement Identity), etc…).</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Anonymous: used to conceal your phone number from the person called.</p></li></ul><center><img src="images/jpg/135000559_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Options</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Network operator</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - PIN</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Information</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Anonymity</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Yes</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - PIN reminder - PIN request</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Preferential</p><p class="titolo_lista">Select SETTINGS to display the following menu:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ringing volume: used to adjust the phone ringing volume</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Repeat Dial: if the line is engaged, this automatically redials the call (the number of attempts is set by the system)</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Call Transfer: activates or deactivates call transfer</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Call transfer number: enter the phone number to which the call is to be transferred</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Enable incoming call announcement: enables or disables incoming call announcement</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OK: to confirm the choices</p></li></ul><center><img src="images/jpg/939007306_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Settings</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Ring volume</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Ring tone</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Ring repetition</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Call transfer</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Call transfer number</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Enable incoming call announcement</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Confirm key</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to the Owner''s Handbook for more detailed user instructions.</p></p></span></td></tr></table><h1 class="bigtext1">NAVIGATION SYSTEM MODULE</h1><h2 class="bigtext2">Operation</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The navigation system allows you to reach a destination set by the user by giving visual and acoustic instructions.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The navigation module built into the NIT receives data on progress (forward motion and reverse) and direction changes from information made available on the CAN network by the NBC. It cross-checks this with information received from GPS satellites by means of the GPS aerial on the car roof to calculate the Estimated Car Point (car location).</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The navigation module does not contain a gyroscope because if no signals are received from the satelllites, the Navigation system recognises the car''s motion using vehicle motion information received from the CAN network.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Upon initial activation and each time the battery is disconnected, the GPS takes about 15 minutes to activate.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The navigation system takes about 100km to self-regulate accurately from the first system start-up and when the tyres are changed.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the engine is turned off and the vehicle is moved with the system off (e.g. on a pick-up truck), at the next key-on, the GPS system will take a few minutes to determine the car''s new position.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The navigation CD-ROM drive is located on the front of the Connect system and is the same as used for audio CDs.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is not therefore possible to use the audio player and the navigation drive simultaneously: The navigation system can, however, work partly even without the navigation CD-ROM inserted.</p><h3 class="bigtext3">Route guidance</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main function of the Navigation module is called Route Guidance. This is responsible for extracting, managing and processing the information required to guide the user to the set destination.</p><p class="titolo_lista">These activities are, basically:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ROUTE CALCULATION: Calculation of the route between the current position and the destination. Route calculation with multiple destinations. Route recalculation in the case of deviation from the current route. Calculation of an alternative route.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRUE ROUTE GUIDANCE: Identification of the position of the vehicle on the route (and calculation of the distance to the destination); Identification of junctions along the route; Identification of manoeuvres at the junctions along the route (and graphic and voice instructions for the user): Calculation of the distance to the next junction where the user has to make a turn; junction zoom function in built-up areas.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DIGITAL MAPS: The official M. MARELLI CD ROM contains a Map Database that is made available to all other system functions. Access to any map data (segments, areas, locations etc.) required by other modules takes place through one of the functions available on this CD ROM.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">COMPLETE DATA BASE MANAGEMENT: If a map CD-ROM is present, the navigation function uses the entire data base available (map list, points of interest, etc.).</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">USE OF REDUCED DATABASE WHEN CD-ROM NOT PRESENT (LISTENING TO A MUSIC CD): It is possible to listen to an audio CD in the CD player during the navigation process. Simply following the procedure described. The map CD should be inserted in the CD player for the entire duration of the entering the destination and route calculation activities. At the end of this processing, the CD ROM can be removed using the eject button. At this point the system will: 1) automatically load the route calculated into the memory; 2) eject the map CD. The audio CD can now be inserted to start listening. Under these circumstances one part of the map information is available (names of towns and names of roads) relating only to the segments of the route. In any case, the reduced data base in the CONNECT memory allows deviations to the route with automatic recalculations without the need to reinsert the CD-ROM. However, the efficiency of these recalculations depends very much on the length of the original route. When the route data in the memory is not sufficient to continue the navigation process, there is a request to reinsert the map CD. If the system is switched off during navigation without a CD ROM, the next time it is switched back on, the map CD must be inserted to access the navigation functions.</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the key ON, the Connect and Navigation system mobile are activated. A message appears reminding the customer that the navigation system is a tool that can help guide through traffic but the reponsibility always lies with the driver and the highway code must be respected at all times. When the control knob is pressed, the vehicle is the vehicle is located by the satellites and then the vehicle position co-ordinates are displayed as shown in the figure below.</p><center><img src="images/jpg/939000852_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Co-ordinates</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Longitude</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Latitude</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Altitude</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Number of satellites</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Map not available, please insert the navigation CD</p><p class="titolo_lista">After location, the following screen appears showing a map with the car''s position and the main menu on the left.</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OTHER MENUS</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ADDRESS SELECTION</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RG ACTIVE</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VOLUME</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SET ROUTE</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SCALE</p></li></ul><center><img src="images/jpg/939000853_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Other menus</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Select address</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - RG active</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Volume</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Set route</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Scale</p><p class="titolo_lista">The user can access the following submenus from this menu:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">from OTHER MENUS:</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PREVIOUS MENU</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CHANGE SCREEN</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DELETE DESTINATION</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MAP PREFERENCES</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VOICE MEMO</p></li></ul><center><img src="images/jpg/939007307_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Previous menu</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Change screen</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Delete destination</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Map preference</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Voice memo</p><p class="titolo_lista">from SELECT ADDRESS:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OTHER MENUS that give access to: PREVIOUS MENU, HOME1, HOME2</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ADDRESS</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">POINTS OF INTEREST</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LAST DESTINATIONS</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ADDRESS BOOK</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RDS- TMC (not available in Italy)</p></li></ul><center><img src="images/jpg/939000854_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Select address</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Other menus</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Address</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Points of interest</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Latest destinations</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Address book</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - RDS - TMC</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The item RDS - TMC allows the system to identify events near the vehicle or near to an address by receiving information transmitted by certain radio stations that offer this type of service.</p><p class="titolo_lista">The events are divided into 3 categories:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRAFFIC: information on traffic and road conditions</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">WEATHER: information on atmospheric conditions</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INFO: general information</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ALL: all types of information</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This information helps the driver drive to the destination but cannot be used to set a destination.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A list of icons used for RDS - TMC transmissions is shown below</p><center><img src="images/jpg/135000565_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Queue</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Accident</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - General hazard</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Roadworks</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Road closed</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Lane closed</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Road not accessible</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Slippery road</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Ice/snow</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Fog</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Wind</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12 - Cortege, procession, demonstration</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13 - Explosion risk</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14 - Delays</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15 - Traffic lights out of service</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16 - Parking</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17 - Forecasts</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">From RG ACTIVE: This voice activates or deactivates navigation system voice messages. It does not have submenus</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">From VOLUME: this option is used to adjust the volume of navigation system voice messages. It does not have submenus</p><p class="titolo_lista">From SET ROUTE: </p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ROUTE TYPE</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MOTORWAY</p></li></ul><center><img src="images/jpg/939007308_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Route preferences</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Route type</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Motorway</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Confirm key</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Yes</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Less time</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The first function allows you to choose ROUTE TYPE: SHORTEST TIME or SHORTEST DISTANCE. In the latter case, the user can choose to calculate the route PREFERABLY MOTORWAYS or AVOIDING MOTORWAYS.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">From SCALE: this option brings up a window where the user can select the scale of the map displayed on the screen.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to the Owner''s Handbook for user instructions.</p></p></span></td></tr></table><h2 class="bigtext2">Address book</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The CONNECT contains two different address books: one for the phone and the other for the navigation system. The purpose of both is to make it easier to enter data (a phone number or destination) required by the user without going through a long procedure each time.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This operation may be carried out once only and the result is saved in CONNECT and associated with a memorable name. Then all you have to do is identify a saved option by selecting from a list or entering the memorable name.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Both address books are also stored in a back up memory (flash memory). This means that information stored persists even after the system has been turned on and off or after the battery has been disconnected.</p><h3 class="bigtext3">Phonebook</h3><p class="titolo_lista">The following fields are present in the phone book:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">name: memorable label for fast access to the list.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Phone number: number used by CONNECT for calls.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Position: origin of the item in the list.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Voice recognition: voice sample for activation via voice recognition.</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Name and number may be entered by the user during creation of a new address book item. In this case, the origin field indicates that the item is stored permanently in the CONNECT internal address book. Or Name and Number may be present on the SIM Card that the user has entered in the CONNECT SIM Reader. The System also displays this information as phone book items. After the Card has been inserted, the address book management module reads all the items on the Card and makes a copy by creating new temporary items if the name/number pair is not already present in the CONNECT address book. In this case, the position field indicates that the item comes from the SIM CARD.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This item type is deleted from the address book when it is downloaded or the system is turned off.</p><p class="titolo_lista">The following phone book functions are available to the user:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">enter new item</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">delete all items in the phonebook</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">listen to/delete all voice samples recorded by the user</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">select item (open detailed window).</p></li></ul><p class="titolo_lista">Detailed window:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">sent call to the selected number</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">modify an individual item (name, number, listen/modify)</p></li></ul><p class="titolo_lista">delete an individual voice sample:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">delete an individual item</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">save an individual item in the Frequent Number list.</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is also possible to copy all the items from the CONNECT phonebook to the SIM Card and viceversa.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is also possible to copy the contents of the phonebook on the SIM Card inserted to another SIM Card.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In any case, the content of the target phonebook will be completely overwritten.</p></p></span></td></tr></table><h3 class="bigtext3">Navigation system address book</h3><p class="titolo_lista">The following fields are present in the navigation address book:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">name: memorable label for fast access to the list.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Description of geographical location defined by user: string consisting of town name/street name or name of associated POI...</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Voice sample</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Co-ordinates: place co-ordinates (not visible to user and used internally for localisation or route calculation).</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The item may be entered in the address book when the destination is entered. It is also possible to associate a voice sample to be used to call up the address by means of the voice recognition function.</p></li></ul><p class="titolo_lista">The functions available to the user for the address book are similar to those available for the phone book:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">delete existing item</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">select item</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">modify.</p></li></ul><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to the Owner''s Handbook for more detailed user instructions.</p></p></span></td></tr></table><h1 class="bigtext1">TRIP COMPUTER MODULE</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Trip Computer module integral with the Connect manages and calculates a lot of information that can then be displayed on screen to supply a set of useful data on the route followed by the user.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Some information comes directly from the Navigation module, others comes from the various vehicle Nodes. For this reason, the Trip computer is fully operational only when the the ignition is ON and the network wakes up and can carry information required by the Trip Computer.</p><p class="titolo_lista">When the TRIP key is pressed, the TRIP COMPUTER module is activated and a screen appears with the following information:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ARRIVAL TIME</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DISTANCE TO DESTINATION</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SPEED LIMIT</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RANGE</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INSTANTANEOUS FUEL CONSUMPTION</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRAVELLING TIME</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DISTANCE TRAVELLED</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AVERAGE SPEED</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AVERAGE FUEL CONSUMPTION</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Trip module is able to calculate this data using information made available by other nodes on the CAN network.</p><center><img src="images/jpg/939007309_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - General trip</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Trip time</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Distance travelled</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Average speed</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Average fuel consumption</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Instantaneous fuel consumption</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Range</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Speed limit</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Distance to destination</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Arrival time</p><p class="titolo_lista">As the figure shows, the lower part of the screen shows 6 items for the following items:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRIP</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRIP B</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SPEED</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MY CAR</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INFO</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RESET</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To select this item, press the keys under the screen.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press Trip (icon on the screen) to display information on the Main Trip. Press the Trip B key to display the same information but relating to Trip B.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Main Trip and Trip B can be reset separately by pressing the RESET key.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All the save and reset operations can be carried out only with the key ON.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the SPEED key is pressed, a screen appears for the user to enter a speed limit and decide whether to enable alarm buzzer when the limit is exceeded.</p><center><img src="images/jpg/135000568_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Speed limit</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Limit (km/h)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Alarm</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Modify</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Disabled</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The user can press MY CAR to change the settings for a set of vehicle and Connect system parameters and operating modes, as described below.</p><p class="titolo_lista">Press INFO to display:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RECOMMENDED VALUES</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PERSONAL INFO</p></li></ul><center><img src="images/jpg/939000855_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Vehicle info</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Recommended values</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Personal info</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Select RECOMMENDED VALUES to display information on service due dates.</p><center><img src="images/jpg/135000570_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Recommended values</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Service due in...</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Select PERSONAL INFO to access a diary where it is possible to save events that require a reminder on a certain date and/or at a certain mileage.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To save the events, press ENTER.</p><center><img src="images/jpg/939007310_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Personal info</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Select</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Enter</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Birthday</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Brake fluid</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A screen appears where the user can enter the data.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the due date, a window will open on the Connect showing the ITEM entered by the customer.</p><center><img src="images/jpg/939000857_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Attention</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Change spark plugs</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Delete</p><h1 class="bigtext1">EMERGENCY (SOS) AND ASSISTANCE (Targasys) SERVICES</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The emergency, information and assistance services are managed by TARGASYS</p><p class="titolo_lista">The Connect makes two keys available for activating different Services.</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SOS KEY allows the activation of functions strictly connected with Rescue Services (doctor, roadside rescue) managed on subscription by TARGASYS (a paid service available as an option), a personal number and the EMERGENCY number 112 (always available, even without a SIM card inserted).</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONNECT KEY: allows the activation of operations linked to information Services managed under subscription by TARGASYS.</p></li></ul><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The provision of services is based on a phone connection between the vehicle and the Service exchange. If the SIM Card enabled for Service provision is not inserted, the services will not be active. If no PIN code is entered when services are requested, the user will be notified of the need to enter the PIN code but it will not be requested. Assistance calls can be activated if the mobile phone offers this function and is properly powered. In the case of accidents of vehicle damage, such calls may not be available.</p></p></span></td></tr></table><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to the Owner''s Handbook for user instructions.</p></p></span></td></tr></table><h2 class="bigtext2">Operation</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press the CONNECT key to display the following screen.</p><center><img src="images/jpg/939000106_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Connect</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Select</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Services available</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press the selection key to activate the information service.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The services are paid services and provided by Targasys in all cases. They can be used to request a set of useful information and services.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press the SOS key to display the following screen.</p><center><img src="images/jpg/135000574_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Medical advice</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Roadside assistance</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Personal number</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Emergency 112</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Settings</p><p class="titolo_lista">In detail:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MEDICAL ADVICE: this function is present only if TARGASYS services are enabled.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ROADSIDE ASSISTANCE: this function is present only if TARGASYS services are enabled.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PERSONAL NUMBER: this function is present only if the phone is on and if the SIM card is entered with the PIN keyed in and if the number has been set previously.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EMERGENCY 112: this function allows a phone call to be made to the number 112 without the need to call up the phone menu and key in the number. 112 is the emergency number for all Countries where this public service is available. An Emergency 112 call can always be made, even if no SIM card is present in the slot.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SETTINGS: this function allows certain operating modes to be entered and adjusted.</p></li></ul><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to the Owner''s Handbook for more detailed user instructions.</p></p></span></td></tr></table><h1 class="bigtext1">MY CAR FUNCTION</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The MY CAR set up function can be used to set a series of vehicle and Connect system parameters and operating modes.</p><p class="titolo_lista">When the TRIP key is pressed followed by MY CAR, the screen shows the settings and selected language. The lower part of the display shows the following icons:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LANGUAGE</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DATA</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MEASUREMENTS</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONNECT</p></li></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To select this item, press the keys under the screen.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press LANGUAGE to display a list of available languages for texts and voice messages.</p><center><img src="images/jpg/939007311_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press DATA to display a screen that allows the user to change the data and time.</p><center><img src="images/jpg/939000858_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press VEHICLE to access a special SET UP menu for the vehicle that is diviced into 2 different submenus.</p><p class="titolo_lista">The module comprises:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">NEXT MENU</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INSTRUMENT PANEL BUZZER VOLUME: this adjusts the volume of fault/warning messages managed by the Instrument Panel</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INSTRUMENT PANEL KEY VOLUME: adjusts and cuts out (if necessary) the volume of the beep issued when the keys on the dashboard left panel are pressed</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DOOR LOCK FOR VEHICLE IN MOTION: activation or deactivation of the automatic door lock over a certain speed.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RELEASE ONLY DRIVER''S DOOR: activation or deactivation of independent driver''s door release.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INDEPENDENT BOOT RELEASE: activation or deactivation of independent boot release.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">OK: confirm settings.</p></li></ul><center><img src="images/jpg/135000577_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Vehicle</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Next menu</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Instrument panel buzzer volume</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Instrument panel key volume</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Door lock for vehicle in motion</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Release only driver''s door</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Release only boot</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NEXT MENU is active only if the vehicle is equipped with a RAIN/DUSK SENSOR: when active, a screen appears that allows sensor sensitivity to be adjusted.</p><center><img src="images/jpg/939000111_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Press CONNECT to access the relevant menu:</p><center><img src="images/jpg/939000112_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="titolo_lista">In detail:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INSTRUMENT PANEL: activates repetition of RADIO, TEL, NAV and TRIP B information on the instrument panel.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SCREEN: allows adjustment of screen brightness and colour.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">POWER OFF: allows the user to choose a method for turning off the Connect: DEACTIVATION DEPENDENT ON THE IGNITION KEY or DEACTIVATION INDEPENDENT OF THE IGNITION KEY.</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">UNITS OF MEASURE: used to select units of measure for some Trip data:</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MEASUREMENT UNIT DISTANCE (km / mi)</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MEASUREMENT UNIT FUEL CONSUMPTION (l/100km - km/l - mpg)</p></li></ul><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to the Owner''s Handbook for more detailed user instructions.</p></p></span></td></tr></table><h1 class="bigtext1">SELF-DIAGNOSIS</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A Self-Diagnostic function known as ASSISTANCE can be run on the Connect.</p><p class="titolo_lista">Proceed as follows to activate this function:</p><ul class="elenco"><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Wtih the Connect on (key on), press the TRIP key and then MY CAR;</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Then press the keys relating to the CONNECT icon at the bottom right of the screen</p></li><li class="elemento_lista"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">While on this screen, press the keys for the CONNECT icon three more times: the ASSISTANCE icon will appear under the INSTRUMENT PANEL, SCREEN AND AUDIO and POWER OFF icons.</p></li></ul><center><img src="images/jpg/939000113_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Select ASSISTANCE and then from the next screen SPEAKER TEST: a sound test will be carried out on all speakers to check their operation.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Move to: NEXT MENU and press the knob to display a screen that shows the outcome of tests performed on the Connect.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Connect constantly carries out internal diagnostics, diagnosis of the FM/AM and GPS aerials and a diagnosis of the speakers. The GSM aerial is not tested.</p><table class="nota"><tr><td><img src="images/jpg/767_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The internal diagnosis does not check the modules inside the Connect but only the connection between them.</p></p></span></td></tr></table><center><img src="images/jpg/135000579_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Speakers (4)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - ASK HI-FI amplifier</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - GMS module</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Radio module</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Voice Recognition module</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - GPS module</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - CD module</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Main module</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Information is also supplied on the Connect SW and HW version and its component modules in addition to module production dates.</p><center><img src="images/jpg/135000580_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><h1 class="bigtext1">REAR VIEW OF THE CONNECT</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following figure shows the rear view and the connectors.</p><center><img src="images/jpg/135000581_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector C/D/E</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Function</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">IGNITION-OPERATED POWER SUPPLY FOR BOSE AMPLIFIER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rx CD CHANGER BUS</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Tx CD CHANGER BUS</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DIRECT POWER SUPPLY FOR CD CHANGER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">IGNTION-OPERATED POWER SUPPLY FOR CD CHANGER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CD CHANGER BUS EARTH</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUDIO REFERENCE FROM CD CHANGER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">LEFT AUDIO SIGNAL FROM CD CHANGER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RIGHT AUDIO SIGNAL FROM CD CHANGER</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector B</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Function</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ RIGHT REAR SPEAKER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- RIGHT REAR SPEAKER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ RIGHT FRONT SPEAKER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- RIGHT FRONT SPEAKER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ LEFT FRONT SPEAKER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- LEFT FRONT SPEAKER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ LEFT REAR SPEAKER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- LEFT REAR SPEAKER</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector A</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Function</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - CAN B</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">POWER SUPPLY FOR BOSE AMPLIFIER</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - CAN A</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">IGNITION-OPERATED POWER SUPPLY</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">DIRECT POWER SUPPLY</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">EARTH</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Connector F</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin</p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Function</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INPUT FROM INTIMITY HANDSET (N.C.)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUDIO SIGNAL TO INTIMITY HANDSET (N.C.)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MICROPHONE INPUT FROM INTIMITY HANDSET (N.C.)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INPUT FROM MICROPHONE FOR HANDSFREE OPERATION (MIC. IN)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ELECTRONIC EARTH</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CRASH OUTPUT NEGATIVE SIGANL FROM AIRBAG CONTROL UNIT</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">N.C.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MICROPHONE INPUT FROM INTIMITY HANDSET (N.C.)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUDIO OUTPUT TO INTIMITY HANDSET (N.C.)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">INPUT FROM MICROPHONE FOR HANDSFREE OPERATION (MIC. IN REF)</p></td></tr></table><h2 class="bigtext2">Excess temperature</h2><table class="nota"><tr><td><img src="images/jpg/769_2.jpg" border="0"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the temperature inside a Connect module exceeds a certain threshold, the module indicates that the temperature is too high.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Module xxxxxx has been disabled appears on the display. The maximum volume level has been limited".</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The affected module is automatically limited or disabled.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In extreme cases, the entire system is turned off (notifying the user) until normal service temperature is restored.</p></p></span></td></tr></table></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003540&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&isExaminer=&dhb=RADIO+-+DESCRIPTION&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:20:30 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

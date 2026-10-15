@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925853&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Bollettini+Te.Se.O.&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:12:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925853&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Bollettini+Te.Se.O.&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="wFMn3EV18SMvGNBdtbsJy+dRuBUmqKC3UfszOZOTeIrW+gRzGCQZfjD0V2dqlOZV5QfjHDCVeYs7W2hjXB2qD1tpG209GzFuif+SePm2A6hjkiF5QhAx+oqi0r9eH2F70GPSvjOB51C9Xrf85NxKatlROi9eaCdUuPJF6fl3gRRhX0JitFuAFS5cyeP5Vd1jkCwxRt3HCzJ1gBDBNckftJ1iNI/jMICHIKe4OIWs8z1H7TTnlluZIwFiiOq9Qeu3CRuBIDr4eMZcV1RDoA05v6tiB6IBWJsEmbAgt1sQbDS+KAnOSM2EsJO8DZDXnDOOZcNMz+a/kk9c/IEvc30xTEuFhkzhfbAfptJmMTYimOcKjP0V91CiFLnz3sSQNowXIEMmtFS3DqEdK3YmKPx2AbLjNxBV4LFu7tSWkGEkGfz++npT87SPLST3aPC7LZTrSPxlheklw+QcaJPtWBYVehhSI07/RuRgj32oWvxbZx8O21dUo+bclWhKNUurSCUnIGY4U4E07fN9s4jP1gZ8yccI5p1VWqOn2rzue5MdGmu5e9jz2m312GlRZMIiGD64" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/TESEO.jpg">
+                  <img class="snfiat" src="images/TESEO.jpg">
+                  <img class="snlancia" src="images/TESEO.jpg">
+                  <img class="snAbarth" src="images/TESEO.jpg">
+                  <img class="snfiatPro" src="images/TESEO.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Te.Se.O. Bulletins</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+                      Copyright © by FCA Italy S.p.A. </i>
+                        </span>
+                      </td>
+                      <td align="right">
+                        <span style="font-size:9">
+                          <i></i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Alfa Various Models</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>Te.Se.O. NEWLETTERS</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">
+                    BT </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">000.15</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b></b>
+                  <b></b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>Te.Se.O. Newletters</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b></b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <h2 class="bigtext2">What is te.se.o.?</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Te.Se.O. (Technical Service Operation) is the technical body for MOPAR Service, Parts &amp; Customer Care - Technical Service Operations. The function of Te.Se.O. is to provide technical/diagnosis support to both authorised and independent Dealerships when product faults are identified after market in the cases listed below.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Starting from 1st January 2008, the services offered by Te.Se.O. are given free of charge in the following cases:</p>
+          <p class="titolo_lista"></p>
+          <ul style="color:white">
+            <li class="elemento_lista2">
+              <span style="color:black">
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Cases regarding FCA cars under contractual or extended warranty</p>
+              </span>
+            </li>
+            <li class="elemento_lista2">
+              <span style="color:black">
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- When a subscription to the technical documentation is effective at the time of contacting Te.Se.O.</p>
+              </span>
+            </li>
+            <li class="elemento_lista2">
+              <span style="color:black">
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- following a report by a DET (Dealer Expert Technician, level 1), either certified or being certified by FCA according to a Training Academy programme</p>
+              </span>
+            </li>
+            <li class="elemento_lista2">
+              <span style="color:black">
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Applicable in European Union Countries only.</p>
+              </span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To the benefit of the Authorised and Independent Dealerships, and on a test basis, the free-of-charge support provided by Te.Se.O. is also temporarily extended to all those vehicles under 10 years old whose contractual or extended warranty (see item "i") has expired.</p>
+          <h2 class="bigtext2">What is the newsletter?</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is a preliminary technical investigation relating to specific reported product faults irrespective of contractual warranty expiry. The structural elements of the Newsletter are:</p>
+          <p class="titolo_lista"></p>
+          <ul style="color:white">
+            <li class="elemento_lista2">
+              <span style="color:black">
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Vehicle data (MVS, engine version, chassis group - if any)</p>
+              </span>
+            </li>
+            <li class="elemento_lista2">
+              <span style="color:black">
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Customer's reported fault</p>
+              </span>
+            </li>
+            <li class="elemento_lista2">
+              <span style="color:black">
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Result of workshop analysis</p>
+              </span>
+            </li>
+            <li class="elemento_lista2">
+              <span style="color:black">
+                <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Action</p>
+              </span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">What is it used for?</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b></b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Newsletter is used to certify a specific Customer's claimed fault and provide standard technical and conduct guidelines to Dealerships and Customers.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Homogeneity of the technical problem, based on a clear diagnosis track, reduces repeated service interventions that do not find a permanent solution to the fault.</p>
+          <h2 class="bigtext2">How is it used?</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The document provides a technical cycle providing diagnostic supports and giving service recommendations for each reported fault until other official service solutions are issued.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It therefore it is addressed to field operators and can be used by technical workshop personnel for correct technical management of the serviced chassis. Updates are determined by advancements and improvements to the product.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If you need to contact Te.Se.O. follow the instructions provided in the section</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">“<b>What is Te.Se.O.?</b>" and check the method of contact (electronic ticket) for the country as well as the type of workshop making the request.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="767.html">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                      <b>Remember that in cases in which explicit reference to Tutorship is made, the reports must be sent through Link.e.Entry, whereas in Zones where this is not present, draft a ticket to Te.Se.O. according to the standard procedure.</b>
+                    </p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925853&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Bollettini+Te.Se.O.&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:12:51 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

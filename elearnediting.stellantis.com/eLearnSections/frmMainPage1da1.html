@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003526&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:45:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003526&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="rofnZJ32GYXFWocWInpD4vjupJ26Md2bLkU3d2qaxnoGn0IITF+GEGd6IrUIfhLbEEuSS1zzSLKzQHquhc4siBZvbl6sTn/cQyHQhmQkchMlOkXIQIhf3iqFrvuquJgLeeeBqmiBATpvAl0K60xfPjIJ29eWoRTQL0+LbrpmLyT1yVooTK33Za2olucifZOReG0Sonn8goB9AlBdWqhS9vBeIOlercY8cyOMUei69DgUUP69HNJxXdpiQNVOsoGkI5A3x3G0mczw4x4SiD4/vYO4FTR3MxCZhOyRyEPE9KYXyF4C38n+KkfWIOSwgj1zlu+urT6bIhm1Klj+Vdq+1wCc7HAjGwpy7hsusgCHfP2EUtucwGkGVYFz+P9yNTA1+JwStjdheZ22CqVQN0ExYZULdC44uwDlTvpYLq7kfAwd1DpghfBH7bU1jdsLxdo7qHEwC2sbl/4IMMdLqN9Vd20/Jh86n2SVlGpE2Wx9nGmkmzKc4kkgA2TmSEoxGWExSb+sAmL/PxUTKWod9QJxAeaELph1pZu5nt3dIiwZqwypNIcZMUyEGvyhEADd+traMlOHzjUigfYrEjNzc8N972XVvPKvX5+fjWobj866aoZOg7EX5zJtio4MNfkEMfYc/r3Pwy8zgaHwPuvciEWz0OdL6EnQ4HQ/qo4h2wa+GRTO1e/6ALU9l7Ww93evNFFHcmsnjg3N3DAZOeRpgEwN/GkBF+n9kOEUjD4dN1v2aQVHeNPH1aQFCOtFkO9s//DFhw/Vv08rnbRs/c9dJPDhWvMr2ttrzRWXW2nZYfh36KWr6pVTTWQ3wD3L4eyioOah" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspSCREEN WASHER AND HEADLAMP WASH/WIPE&nbsp&nbsp&nbsp5050&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">SPECIFICATIONS</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The vehicle is equipped with a system that cleans and washes the front windscreen. The vehicle may be fitted as an option with a pressurised liquid washing system for the front headlamps.</p>
+          <h2 class="bigtext2">Reservoir</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reservoir is located in the left side of the wheel arch compartment and it allows the screen washer system pump to supply the water-antifreeze mixture required to clean the front window. If the vehicle is equipped with the relevant option, it also supplies the headlamp washer system via a special pump.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reservoir capacity ensures a minimum of 25 washing cycles and it ranges in size from a minimum of 5 litres for the version without a headlamp washer to up to 6 litres if equipped with a headlamp washer.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reservoir is made out of plastic and contains external housings for the pump that supplies the windscreen washer and headlamp washers (if fitted).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reservoir also has a sensor that signals a decrease in the level by means of a special warning light in the instrument panel.</p>
+          <center>
+            <img src="images/jpg/939002022_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Windscreen washer fluid reservoir</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Pump supplying fluid to the nozzles</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Headlamp washer system pump (if present)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Screen washer fluid level sensor</p>
+          <h2 class="bigtext2">Controls</h2>
+          <center>
+            <img src="images/jpg/939002023_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Windscreen wiper</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - Windscreen wiper intermittent operation / rain sensor setting (if present) selector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C - Windscreen washer</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D - Rearscreen wiper (station wagon only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">E - Rearscreen washer (station wagon only)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">F - TRIP buttons</p>
+          <h2 class="bigtext2">Windscreen wiper</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The traditional windscreen wiper system features the use of flat blades.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">These blades, made from rubber with a metal edge and an upper spoiler, allow a considerable reduction in wind noise whilst driving.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Because of the even distribution of the load on the windscreen, made possible by their shape, flat blades allow a high degree of wiping for all positions of the blade on the windscreen and the phenomenon of "jumping" which may occur in certain usage conditions is restricted.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In addition, the use of a reasonable size electric windscreen wiper motor allows high performance in terms of wiping speed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system has 2 continuous speeds and 4 adjustable, intermittent speeds.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Operating strategy</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The windscreen wiper motor can be activated in the following modes using the windscreen wiper control on the steering column switch unit:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- anti-panic;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- intermittent;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1st continuous speed (45 +/- 5 strokes/minute);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2nd continuous speed. (65 +/- 5 strokes/minute);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a rain sensor the intermittent mode is replaced by an automatic mode.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Anti-panic operation:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">with the unstable type anti-panic windscreen wiper command, the steering column switch unit implements the 2nd windscreen wiper speed for the entire duration of the request.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the blade does not return to the "park" position at the end of the command, the steering column switch unit activates the 1st motor speed until it has returned.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Intermittent operation:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">on the intermittent windscreen wiper command, the steering column switch unit implements the 1st windscreen wiper motor speed intermittently with a pause between one stroke and the next that depends on the position of the windscreen wiper intermittent selector.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The steering column switch unit manages 4 intermittent modes to which the following times correspond:</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">position</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">pause time [s]</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">strokes per minute</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4.7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2.7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1st speed continuous operation:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">on the windscreen wiper command for the 1st speed, the steering column switch unit activates the 1st windscreen wiper motor speed for the entire duration of the request until the blade returns to the park position.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2nd speed continuous operation:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">on the windscreen wiper command for the 2nd speed, the steering column switch unit activates the 2nd windscreen wiper motor speed for the entire duration of the request until the blade returns to the park position.</p>
+          <h2 class="bigtext2">Rain sensor</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rain sensor is a sensor with an infrared LED installed in the windscreen capable of detecting the presence of rain and, consequently, of managing the wiping of the windscreen depending on the water present on the glass.</p>
+          <h3 class="bigtext3">Composition</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The device consists of a sensitive element (1) containing infra red transmission elements and a reception element.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A containment structure (2) and a cover (3) that protects the sensitive element.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A contact disc (4) spready with silicone material (SilGel612) to bond it to the glass.</p>
+          <center>
+            <img src="images/jpg/939004537_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Sensitive element</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Retaining structure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Cover</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Contact disc</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The layer of silicone material is protected by a film that is removed when the component is installed. Avoid touching with your hands to prevent damage to the silicone. Because it is not possile to disconnect and reconnect the part without damaging the silicone layer, the sensor should be replaced if the windscreen is replaced.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If a new part is installed during service, check that no air bubbles remain between the glass and sensor, apply a load of at least 50N to ensure any bubbles emerge.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor should not be subjected to vibrations. Ensure there is no abnormal interference between the sensor and support elements except for the retaining clip.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remove any silicone residues from the glass with acetone before fitting a new component.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor is supplied at battery voltage 12V and the voltage of the signals sent by the sensor to the wiper control unit is 5 V.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The internal sensor resistance is 10 ohms.</p>
+          <h3 class="bigtext3">Operation</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rain sensor is activated by placing the ring nut for the right steering column switch unit lever in the intermittent-automatic position (Auto command). the frequency of the windscreen wiper strokes is automatically adjusted depending on the amount of water on the windscreen. This frequency can vary from no stroke (no rain - windscreen dry) up to the second continuous speed (heavy rain - windscreen wet).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensitivity of the rain sensor can be altered using the windscreen wiper intermittent selector: from pos. 1: (MIN sensitivity) to pos. 4 (MAX sensitivity).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the sensitivity is changed whilst the rain sensor is working, a windscreen wiper stroke is carried out to confirm the change.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the vehicle is switched off with the lever left in the automatic intermittent position, the next time it is turned back on, no wiping cycle is carried out even if there is rain; this makes it possible to avoid accidental activation when the vehicle is switched on that could create dangerous situations (e.g. a passenger washing the windscreen by hand, the blades frozen to the glass).</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Recovery</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a malfunction with the rain sensor activated, the windscreen wiper operates intermittently with the adjustment equal to the setting made by the user for the rain sensor, irrespective of whether or not there is rain on the glass, whilst the instrument panel signals the sensor failure.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This allows the user to be aware of the incorrect operation of the sensor, however providing the performance required and allowing the possibility of activating the windscreen wiper in continuous mode (1st or 2nd speed).</p>
+          <h2 class="bigtext2">Windscreen washer</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pump for washing the windscreen is two-way and is also used as the rearscreen washer pump (where fitted - station wagon version).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The activation of the windscreen washer control activates the pump for washing the screen for the entire time the control is activated, but.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Smart washing</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Even if there is no screen wiping command (wiper lever in OFF position), the activation of the windscreen washer command (for at last 0.5 secs. permanently - thereby excluding accidental operation) activates the windscreen wiper in continuous mode at the 1st speed. For the entire time the washing command persists, the pump and the windscreen wiper remain activated; when the windscreen washer control is released, the pump stops working whilst the wiping continues until a further 3 strokes have been completed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activation of windscreen washer with rain sensor activated</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the windscreen washer control is activated, with the windscreen wiper controlled by the rain sensor, there are two possible behaviour modes:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- with the control activated for less than 0.5 secs.: only the pump is activated, whilst the windscreen wiper continues to be controlled by the sensor;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- with the control activated for more than 0.5 secs.: in addition to activating the pump, the steering column switch unit operates the windscreen wiper, independently of the rain sensor.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003526&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:45:12 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

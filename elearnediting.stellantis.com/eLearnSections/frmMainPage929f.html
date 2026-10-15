@@ -1,0 +1,2587 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003552&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003552&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="gfn+30ONBXYh0K4S53xrvzeeIKnHRbpTcAkwGHtyrJFcUBEZF6ps71HCe3Ryydp+qiTFSO1i8RocYOtZloVvuoslMm1YWpCZSwfVUlxMiN0dZGDvMmvb0ajNBCeg6Gkc2ldbWww832wr/FvP6eWfkrGABPII+P4VgJErthwmoK3Ko+TcGcMKCLxOqj77O3oq93sdbNXY8nh+zO2VnDuQdQ50epZsPak9hbRPsYK1v+dL64oD3cpCHODyGGxuoyjhTGD6CCG9FN8iljmLKAB/i/X31cmsA+NwRnCQVJrYG/XePSR6StMz2NBHXlV8+ii2OW2FO6zyYNGDDSHdEA5g1UNKt6IZOvyzqD1q738JDHYSgh6z7wmsZL2FAX5emwmC3CI97bnttPDgjU3Vx9xyV1SIElZyvg/Tj+rtWNajOzfkjNFn0XNxd2o7y2VttmMZjJ8SUmRZ45jAj7LLQrJ/vio1+oTqkUmBzvhNUzWDDpsjOcya317a6iM5HCB61aryyrvWRO/v3HywhMN1AZPnvvc04s4AHKiCdoPYBa9D1UO14oAx8JWhdgkS3JA/igShCk9RFjsDezE3YwYoqvkr0gJuz28t5gCvSH9tWPWQsd+2BQjNV7IUoyazDDSjxvGdXKUwVNal4noH4Bi975PkoKlVvnhCScTxIWr7UI22HlcAHs3sAAhovQAURWPCVG9B2Hct/qmdzQQjfX5Co4paJO6LM9HIcTnOTtYASz7lB1CAGTOJ1ODYLzIqgg03pz0zfia6DCc1eVtPX6m7qfb4NWbtZJ7E65N2T6+jBXrFIxaie17gFNv7bXRlkodLOOjh" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - PANELS AND FRAME&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">Introduction</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The topics are covered with particular attention to the new technical features required for passing the various tests introduced by new legislation. The descriptions and operating information provided are limited to a discussion of principles, rules and minimum precautions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For information on repair methods and vehicle specifications, see the specific sections on repair procedures.</p>
+          <h1 class="bigtext1">Aerodynamics</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The styling of the new car is designed to reflect great personality and originality and improves on the attributes of roominess, practicality and sturdiness achieved by previous models.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The front, sides, rear and underbody were developed with particular attention to aerodynamics and allow outstanding drag coefficient values. The following values are an example:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Version with basic specification:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- drag coefficient CX = 0.32</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- drag coefficient for area CX x S = 0.7574</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">These values are the result of road testing and measurements carried out in a wind tunnel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">These results contribute to the noiselessness of the vehicle and significantly reduce wind noise. They also allow fuel saving.</p>
+          <h1 class="bigtext1">Safety</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main aim of car manufacturers is definitely the total safety of the driver and passengers.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To adapt the vehicle to highly demanding European and international market regulations, the new vehicle was designed with great attention to detail in order to achieve an optimum response in all situations.</p>
+          <h2 class="bigtext2">Passive safety</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A vehicle''s passive safety is the collection of technical and product solutions designed to protect the occupants of the vehicle in the case of an accident.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The search for excellent performance has led to the introduction of design and construction solutions on the new vehicle that represent the state of the art in the field of passive safety.</p>
+          <h3 class="bigtext3">The occupant protection system</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The occupant protection system is composed of the following features fitted as standard on all trim levels:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the front protection system includes the electronic control unit, dual activation stage twin (driver and passenger) front air bags, driver and passenger knee bag, front seat belts with pretensioned buckle and load limiter in the reel, a control unit and safety sensor on the front tunnel, a additional decentralised impact detection sensor in the headlamp carrier crossmember, seat belt unfastened sensors for the front seats, occupant presence sensor on the passenger seat and passenger air bag manual disabling switch.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the chest/pelvic side protection system comprises two side bags in the front seats and two head/window bags along the roof side members</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3 point rear seat belts for all 3 rear seats.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more information on the Air Bag system</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <span class="testo_link">  </span>
+            <a class="contents_link" href="mainb6e0.html?nodeID=939003537&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;isExaminer=&amp;dhb=INTRODUCTION%20-%20PANELS%20AND%20FRAME&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4%20JTD%2020V" target="_parent"> See descriptions 5580C AIR BAG SYSTEM</a>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The solutions adopted in the design and manufacture of the seats, the dashboard and the interior panels and fittings increase the degree of passive safety of the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For more information on these topics, refer to the specific chapters.</p>
+          <h3 class="bigtext3">Resistance to impacts</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All the features relating to Passive Safety have been developed in order to offer the maximum protection for the occupant in all possible impact situations at high speed:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- frontal impact</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- rear impact</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- side impact</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- roll over</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The behaviour of the bodyshell in crash tests has more than adequately satisfied the international safety standards.</p>
+          <h3 class="bigtext3">Pedestrian protection</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The style of the front part of the vehicle has been developed taking into account the protection of pedestrians as required by the most recent international legislation. The shapes are smooth and rounded and there are no unsafe projections for the safety of pedestrians. The ample surface area of the bonnet minimizes the risk of contact between pedestrian''s heads and the rigid front pillars.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The most rigid components are located inside the engine compartment a suitable distance away from the bonnet in order to allow the bonnet skin to absorb the energy forces of the impact with the pedestrian''s head.</p>
+          <h3 class="bigtext3">Protection against fire</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the end of the 90''s with the introduction of new European regulations regarding crash tests and with the introduction of fuel injection systems, the need to seriously redefine the design of the bodyshell and the layout of the various systems on the vehicle. The entire vehicle, from the bodyshell to the various components is therefore subject to the rigorous observance of the most recent and most stringent internal regulations regarding protection against fire.</p>
+          <h3 class="bigtext3">Fuel system and evaporation control system and fps</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Special care has been taken over the layout to locate potentially critical devices outside of the impact area, also the routing of the various systems, which has been carefully considered from the earliest stages, is very well protected in order to reduce potentially critical situations.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The underbody fuel and evaporation control pipes are arranged parallel to the extremely strong underfloor side member. There is also a specific plastic duct to protect against accidental contact (stone chipping, etc.). In the engine compartment on the right hand side, metal sections of pipe have been used to prevent any fuel leaks in the case of contact during an impact.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The petrol versions have a returnless fuel system which allows the fuel return pipe to the tank to be dispensed with reducing the risk of leaks.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The evaporation control system active charcoal filter is located in the left rear wheel arch, in other words in an area that is not vulnerable and is near the tank.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- There is an inertia switch on the petrol and diesel versions (FPS - Fire Prevention System) that immediately switches off the engine a few milliseconds after the start of the impact.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The plastic tank exceeds not only national but also foreign legal requirements. It is located in an area protected in the case of a collision and has the capacity to withstand any deformation without the risk of fuel leaks. Also, being plastic, there is no risk of explosion if the vehicle is on fire.</p>
+          <h3 class="bigtext3">Engine compartment electrical equipment</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The positive battery terminal is not facing the direction of travel and the risk of short circuiting in the case of a frontal impact is thereby greatly reduced.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The main section of the high power positive leads is directly on the positive battery pole in a maxi fuse box. This solution prevents the presence of sections of cable not protected by fuses and therefore exposed to accidental short circuiting. There is also a series of automatic sectioning devices operated by the inertia switch (FPS) which, in the initial milliseconds following a serious impact, detach the battery connection to the high power leads averting the risk of a short circuit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- All the main cables are electrically insulated and fitted inside corrugated covers for mechanical protection against the possible risk of abrasion.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The electrical insulation of the starter motor/battery power lead is made from a material with good resistance to abrasion and cutting with the routing using special fastenings and protected by metal brackets.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Passenger compartment interior electrical equipment</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- All the cables are protected by fuses located in the body computer control unit on the left side of the dashboard.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- The routing of all the cables has been designed to prevent pinching during fitting or interference during operation and to reduce the potential risk of short circuiting to a minimum.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Exhaust pipe</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- All the components that could suffer from radiated heat (reduced by the presence of a special shield) from the exhaust system have been located a suitable distance away.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Large metal shields on the underbody make it possible to protect the surrounding parts from the heat produced by the exhaust pipe (tank, handbrake cables, flexible supports).</p>
+          <h1 class="bigtext1">The structure of the vehicle</h1>
+          <h2 class="bigtext2">The chassis</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The chassis represents a radial structural change compared with the previous chassis of the 156.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The chassis contains several ets of longitudinal box section structural elements, connected to one another by transverse elements and finished off by dashboard and floor panels.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The floor panel box sections are integrated with the bodyshell elements, finishing off a perfectly integrated and solid structure.</p>
+          <center>
+            <img src="images/jpg/939003584_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The absorption of energy from a frontal or rear impact is mainly carried out along the two load lines consisting of the front struts, engine mounting frame, rear struts, underfloor side members and side members. The continuity, for the entire length of the vehicle, of these three parts guarantees gradual defornation in accordance with the severity of the impact. In addition, the connection between the struts and the engine suspension frame contributes in distributing the load towards the deformed obstacle in the optimum way.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The high resistance material and differentiated thicknesses of the front and rear side members are designed to support the forces developed by the front and rear crossmembers in the case of impacts at low speed without damage and, at the same time, to allow the absorption of all the impact energy in impacts at high speed without the passenger compartment being deformed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is a box section crossmember at the front with controlled deformation collapsible struts (crash box), whilst there is a very thick crossmember at the rear with a collapsible open section.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Both crossmembers are made from high resistance steel and are bolted onto the floor panel in order to facilitate servicing operations.</p>
+          <center>
+            <img src="images/jpg/939003585_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Above the engine and in front of the H nodes there are a further two struts that intercept the stresses arriving from the top part of the vehicle through their deformation, especially when the vehicle crashes into the back of a lorry.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is a special box structure at the rear, immediately behind the rear seat backrest, constituting an extremely important structural element for the torsional strength of the bodyshell.</p>
+          <center>
+            <img src="images/jpg/939003586_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The galvanizing treatment on both sides of all the chassis and bodywork structural elements and the use in some areas of increased galvanizing thickness panels, prevents the risk of rust, both structural and aesthetic and therefore guarantees the maintenance of structural performance for the entire life of the vehicle.</p>
+          <h2 class="bigtext2">The bodywork</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The bodyshell basically features three very important technical-technological factors: the use of high performance materials, the use of multi-thickness panels and the use of laser welding.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The outer bodyshell, also to a great extent made from high resistance material (58% of the weight of the entire bodyshell is made from high resistance steel, whilst a further 7% of the weight of the entire bodyshell involves the use of dual-phase steel), represents a structure featuring numerous longitudinal, lateral and transverse box sections strengthened by internal reinforcement and featuring highly resistant sections.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Dual-phase steel belongs to a family of high resistance steel which, on account of its metallurgical properties and chemical composition, features very good mechanical resistance properties (ferrite phase - very high yield and breaking loads) and excellent moulding properties (martensite phase - drawing depth) and are therefore particularly suitable for use on complex geometry panels which the bodyshell elements often are.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Like for the chassis previously, the bodyshell has also made use of tailored-blank technology, in other words sheets of multi-thickness laser welded panels for the constructions of the most important structural elements, such as the side frame and the roof rib. Multi-thickness panels, compared with more traditional configurations where the elements are one single thickness with added local reinforcements, allows important improvements in terms of weight and technological sheel-metal working process (reduction in the number of weld spots).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Laser seam welding, used both for indefinite panels (in the tailored-blanks mentioned above) and for finished elements (join between the roof outer cover and the side panels), which are then connected to one another without a continuity solution (in place of traditional spot welding) makes it possible to produce high quality, good performance structural joins.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All these elements give the structure an extremely good torsional-bending strength and contribute to supporting the forces created by the centre side members in longitudinal impacts, whilst they play an important role in side impacts.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">An important contribution made by the good torsional strength is the elimination of creaking due to the torsion of the bodyshell and the interior and exterior fittings in operating conditions.</p>
+          <center>
+            <img src="images/jpg/939003587_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Torsional rigidity</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Diagram showing deformation due to torsion</p>
+          <center>
+            <img src="images/jpg/939003588_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Torsional rigidity values</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Bodyshell with windows and bulkhead: 175400 daNm/rad</p>
+          <h3 class="bigtext3">Bending strength</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Diagram showing deformation due to bending.</p>
+          <center>
+            <img src="images/jpg/939003589_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Bending strength values</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Bodyshell with windows and bulkhead: 1200 daN/mm.</p>
+          <h2 class="bigtext2">The doors</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The front and rear side doors are secured to the bodyshell by hinges and locks well above the minimum legislative standards and make an important contribution in both frontal and side impacts. A double high resistance steel lengthwise reinforcement along the waistline stabilizes the entire structure of the door and contributes to the non-deformability of the passenger compartment in a frontal impact.</p>
+          <center>
+            <img src="images/jpg/939003590_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Experiments have confirmed that the doors do not open accidentally in various types of impacts, at the same time guaranteeing easy opening after an impact.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Behaviour in terms of side impacts has improved with suitably sized ultra high resistant dual-phase steel crossmembers on all 4 doors.</p>
+          <h2 class="bigtext2">The bonnet</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Various safety measures have been introduced. There are preset collapse lines which, together with specific retaining hooks on the hinges, prevent it penetrating the windscreen in the case of an impact.</p>
+          <h2 class="bigtext2">Windscreen and rearscreen</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fixed windows are a further safety feature.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To increase the vehicle safety level, the windscreen is in laminated glass. This solution prevents the glass from shattering if struck by stones or gravel to assure visibility at all times and above all to offer a high level of protection if struck with the head.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The windscreen and the rearscreen are bonded to the bodyshell, thereby contributing to increasing the structural strength of the vehicle: the seals flush with the bodywork contribute to reducing the noise due to oncoming air (wind noise).</p>
+          <h2 class="bigtext2">The bumpers</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">They have been designed to provide excellent protection in the case of minor impacts.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rear crossmembers right behind the outer shell of both bumpers and the absorbers (for the rear with collapsible cell inserts) positioned between the bumper shell and the crossmember, limit damage in impacts at up to 4 km/h.</p>
+          <h2 class="bigtext2">The underdashboard crossmember</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The crossmember made from mangnesium to make it light and integrate with the other sub-systems, is located between the two front pillars underneath the dashboard with the shape reproducing the entire upper dashboard. It guarantees a sturdy connection not only between the pillars but also with the floor to which it is connected by means of two struts. This configuration contributes significantly to ensuring the non-deformability of the entire front area of the passenger compartment during head-on and side impacts. Because it also acts as a support structure for the steering column, it prevents the steering wheel moving back and upwards during all types of frontal impact. The crossmember under the dashboard also has the function of contributing to the release of the pedals; in effect, an appropriate size bracket is securely fastened to the crossmember by the releasable pedal assembly triggers that is positioned in such a way as to release the brake and clutch pedals if they are retracted; this cancels out the thrust of the pedals on the occupants tibia and protects the survival space.</p>
+          <h1 class="bigtext1">New technology</h1>
+          <h2 class="bigtext2">Laser</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For the first time on a Group vehicle the roof has been secured to the bodyshell by laser sources for a total of 2.8 m of the vehicle. This means perfect matching along the entire length of the roof and, above all, the possibility of using increased resistance sections (lasers work on one side of the panel only) allowing improved performance.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Laser sealing diagram</p>
+          <center>
+            <img src="images/jpg/939003591_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Roof</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Outer side</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Panel assembly join</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Laser technology (Comau-Agliaser patent) is also used in the preparation of the doors which benefit from the same advantages with more extended and more homogenous panels.</p>
+          <h2 class="bigtext2">Medium frequency welding</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Medium frequency welding has been used extensively for the assembly of the bodyshell allowing the use of more preformed materials and very thick panels. In this case too this is the first application on a Group model.</p>
+          <h2 class="bigtext2">Automation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The body panel assembly line is highly automated with 127 robots which allow 81% of the welding to be carried out completely automatically thereby guaranteeing constantly high quality.</p>
+          <h2 class="bigtext2">Geometry</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Along the bodyshell assembly line, in order to guarantee constant quality over a period of time, there are 2 opto-electronic measuring stations that allow 100% measurement of production at 84 "critical" points (with constant checks guaranteed) and a new measuring station checking 490 "key" points sampled daily.</p>
+          <h1 class="bigtext1">Possibility of damage and repair of impacts at low speed</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Special attention has been paid to impacts at low speed to limit damage to the front section of the vehicle, thereby preventing costly repairs to the chassis and cooling module.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The chassis structural elements (struts) have been designed in such a way that they are not deformed in this type of impact in spite of the forces exchanged with the parts in front subjected to the impact against the obstacle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is a strong crossmember behind the front bumper made from a high resistance material that is capable of absorbing all the typical impact energy in a low speed accident thereby preventing damage to the most expensive components inside the engine compartment.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The crossmember is bolted to the front side members to facilitate the operations of removing and refitting. During the first stages of the impact the front crossmember starts to deform absorbing a considerable amount of energy and moving backwards parallel to itself without collapse instability that could damage the radiant pack behind; as the situation progresses, the deformation is transmitted to the absorption elements (crash box), in other words the longitudinal box sections that produce controlled high absorption efficiency controlled folding.</p>
+          <center>
+            <img src="images/jpg/939003592_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The cooling module has been located a safe distance from the actual crossmember and from the engine layout so that in the case of low speed impacts there is space for it to move backwards without being involved in the damage. The new feature is that the cooling module is supported by the headlamp carrier crossmember from above and the engine frame crossmember from below by means of releasable fastenings that allow it to move backwards without deforming the attachment feet in the case of an impact, in effect the pressure transmitted by the duct to the strong side parts of the reservoirs in the initial moments is sufficient to release the fastenings. The release can be restored without special operations and does NOT require repair activities. In this way the labour time and therefore cost is considerably lower than conventional solutions.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The vehicle is also fitted with a collapsible system for the fastenings securing the front headlamps to the headlamp carrier crossmember. Following an impact the fastenings yield and the entire headlamp casing retracts without any damage to it. To restore the vehicle simply tighten the new fastening tabs to the headlamp casing.</p>
+          <center>
+            <img src="images/jpg/939003593_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The rear part of the vehicle is similar to the front: in this case too there is an extremely strong crossmember made from a ultra resistant material which contains highly efficient impact absorbers near the rear side members. In thise case the absorption elements are the only components to replace in the case of low speed shunts.</p>
+          <h1 class="bigtext1">Sound insulation</h1>
+          <h2 class="bigtext2">General specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To meet EEC standards, the vehicle''s exterior noise levels must be lower than 74 decibels.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Driving comfort and living conditions inside the passenger compartment have been improved by:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- optimising the body through a thorough examination of all parts subject to noise, which have been made stiffer and fastened more securely;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- choosing contact materials with great care;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- by improving the insulation against noise transmitted from the road surface, from mechanical parts and from the suspension;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- by taking great care over parts assembly, aerodynamics and all parts with shapes that affect acoustic comfort, such as door handles, door mirrors, bumpers and other outlines;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- by fitting new generation engines with high-tech features designed to improve acoustic/vibrational factors;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- by fitting a new barycentric engine mounting.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Another area of improvement has been the passenger compartment insulation. The following action has been taken:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- highly efficient sound-absorbent materials with optmum thickness and layout on the vehicle;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- fitting of a sound-absorbent undershield in the lower part of the engine compartment for acoustic insulation;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- elimination of acoustic holes (areas where sound can pass between the engine compartment and passenger compartment) by fitting double-lipped seals, thicker rubber plugs;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- by fitting the various sound-insulation parts together more tightly to avoid uncovered areas;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- extensive use of sound-absorbent seals;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- sound-proofed coating of panels with heat-bonded materials applied before painting;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- lining of the bulkhead and front steps to remove the sensation of the engine''s presence;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- application of heat-expanding materials inside the box sections prior to painting to reduce noise transmission. During body cataphoresis process, the volume of these materials expands ten times to fill the box section effectively.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- lining the boot compartment appropriately to reduce rolling noise;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- carefully examining the fitting and size of parts liable to squeak such as the facia, heater and seats: the anchorage and fastening points have been reinforced.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To maintain the high level of acoustic comfort achieved, the specifications adopted during manufacture must be restored exactly in the event of repair.</p>
+          <h1 class="bigtext1">PROTECTION OF THE BODYSHELL</h1>
+          <h2 class="bigtext2">Introduction</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The vehicle body is designed to withstand for many years any environmental attack to the interior, not visible but potential subject to corrosion, and exterior, particularly subject to damage that may affect the exerior appearance of the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In order to achieve these objectives specific activities have been carried out during all the development stages of the model including both the design and the production process using the most up to date and innovative methods (FMEA, Robust Design).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">These instruments have been used to apply the guidelines for special anti-corrosion standards that ensure completely accessibility of the bodyshell to the protection and painting processes (in particular the rust prevention cataphoretic painting process) and the correct shape of each element designed to prevent any possible build up of dampness in the box sections and allow the perfect sealing of all the panel joins.</p>
+          <h2 class="bigtext2">Galvanising</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The bodyshell basic protection level has been defined in parallel to the design and process criteria: 85% of the bodyshell is made up of panels galvanized on both sides.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In particular, all the structural elements of the chassis are 100% galvanized.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Out of these, the structures defined as safety structures (suspension mountings, seat belt reinforcements, ect.) are made from high thickness zinc galvanized panels (20 microns compared with 8 for standard galvanized panels).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The bodywork is made totally from panels galvanized on both sides for the moving parts (covers and frames) and for all the elements of the fixed outer panels, including those that make up the door stops, visible with the doors open.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All the anti-corrosion provision has been subjected to laboratory tests and checked on the vehicle with FOR-LIFE tests which were carried out in special test areas that reproduce the most stringent conditions of the northern European market.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The total galvanizing of the outer bodyshell makes it possible, together with the protection package provided by the painting process, to produce the 3 year goal without cosmetic corrosion points.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The protection package provided by galvanized panels and cataphoresis for all the structures makes it possible to exceed the 8 year vehicle life without panel perforation in the most harsh climates of northern Europe and to comply with the European legislation regarding safety points (10 years with structural weaknesses).</p>
+          <h2 class="bigtext2">Painting</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A new painting system has been launched for the production of the vehicle designed and produced using the most recent technological innovations available on the market both as far as the adoption of application systems is concerned and in terms of the choice of products.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This innovation involves the introduction, for the entire colour range, of water-based enamels and the use of PUR 2K transparent resin in place of traditional products. This last solution, in addition to resulting in a reduction in the emission of organic compounds into the atmosphere, improves the final aesthetic appearance, allowing the original shiny finish to last better and endowing it with improved resistance to chemical and mechanical attack such as, for example, better resistance to the tiny scratches caused by the action of the brushes in automatic car washes.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The vehicle colour type and specifications are shown on the identification plate that shows the following information.</p>
+          <center>
+            <img src="images/jpg/939003594_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - paint product supplier</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B - enamel colour and type</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C - code</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D - type of product to be used for touching up and painting in the event of service operations</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Re-apply the wax oil treatment if box section parts are replaced during service.</p>
+          <h2 class="bigtext2">Recycling of materials</h2>
+          <h3 class="bigtext3">Main specifications</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">According to EEC ELV (End of Life Vehicles) directives, all metallic and non-metallic parts must be recovered from the vehicle and reused, 80% to produce new material and 5% for recovered energy. Nowadays, some 75% of a vehicle''s weight is made up of metal that can easily be recovered by melting when different metals can be separated by heating to their different melting points. All the remaining part of the vehicle, amounting to 25% by weight, must be recovered before this stage. The solution to the problem of recycling plastics is resolved at the design stage: the possibility of re-using the material on future components must be assessed at this time:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The aims to be considered at the design stage include:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- ease of component disassembly;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- choice of noble materials in the recyclable polymer chain (giving priority to parts made up of a single family, e.g. PP).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Recycling does not allow the production of a part that is the same as the original part because the material may not be able to guarantee the necessary levels of reliability or it may not be financially viable.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Plastics may be recycled in a cascade pattern. For example:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- insulating material for the building industry is obtained from seat padding;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- the material used to line the wheel arches is obtained from the bumpers and then goes on to produce sound-proofing elements. In the end, it becomes a fuel for energy production.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This model has been designed to ensure that all its plastic and elastomer parts (rubbers) weighing over 50 grams are marked with coded symbols to identify the material during recycling and also to ensure that all its components are recyclable.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In particular, the impacts that could be exerted on the environment both during the life cycle of the product and during the scrapping stage are already analyzed during the design stage. In some cases the choice of materials has been made using an innovative evaluation system known as L.C.A. (Life Cycle Assessment) which makes it possible to assess the effects on the environment globally, taking into account not only the engineering and industrial specifications of the materials, but also the environmental critical areas during the production of the raw materials during usage and at the end of life.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Great emphasis has been placed for this model on improving its recyclability: technological solutions in single materials have been favoured and the polymer families present have been further reduced.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The recycling therefore involves three successive generations of vehicles contributing to savings in raw materials. Other materal reuse processes are also being examined outside the motor industry, following the lead taken by the F.A.Re (Fiat Auto Recycling) partnership in the Eighties and Nineties.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Another important point to note concerns the use of heavy metals in the motor industry. The metals in question are hexavalent chrome (Cr6), Mercury (Hg), Cadmium (Cd) and lead (Pb). These are banned (Cr6) or permitted only in tiny amounts when their use must be indicated by labelling or by including information in the documents supplied with the vehicle.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The tables in the chapter "GENERAL INFORMATION AND TECHNICAL DATA - OPERATING DATA" show symbols for and descriptions of recyclable materials present on the vehicle. This is to ensure that the best available products are used to wash the interior, paint plastic parts and carry out repairs, bonding etc. The aim is to avoid the possibility of damage by using incompatible products. Labelling also allows organic materials to be selected on the basis of their chemical composition. During service, it is also advisable to separate materials on the basis of their composition to ensure that they can be recycled more easily.</p>
+          <h3 class="bigtext3">Diagram showing the reuse of recycled materials</h3>
+          <center>
+            <img src="images/jpg/939003595_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h3 class="bigtext3">Labelling of part of the recyclable material</h3>
+          <center>
+            <img src="images/jpg/939003596_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h1 class="bigtext1">TYPICAL BODYSHELL MEASUREMENTS</h1>
+          <h2 class="bigtext2">Adjustment of moving parts</h2>
+          <h3 class="bigtext3">Measurements for the adjustment of the moving parts</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To facilitate and verify mobile part disassembly operations, the existing gaps are shown (in millimetres) to allow appropriate adjustment.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The adjustment procedure is described in the sections describing mobile part removal and refitting procedures.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VIEW OF THE VEHICLE (THREE QUARTERS FRONT) WITH THE POSITION OF THE MEASURING POINTS FOR THE GAPS BETWEEN THE MOVING PARTS</p>
+          <center>
+            <img src="images/jpg/939003597_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MEASURING POINTS FOR THE GAPS BETWEEN PARTS FROM 1 TO 6</p>
+          <center>
+            <img src="images/jpg/939004552_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MEASURING POINTS FOR THE GAPS BETWEEN PARTS FROM 7 TO 12</p>
+          <center>
+            <img src="images/jpg/939004553_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VIEW OF THE VEHICLE (THREE QUARTERS REAR) WITH THE POSITION OF THE MEASURING POINTS FOR THE GAPS BETWEEN THE MOVING PARTS</p>
+          <center>
+            <img src="images/jpg/939003600_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MEASURING POINTS FOR THE GAPS BETWEEN PARTS FROM 13 TO 18</p>
+          <center>
+            <img src="images/jpg/939004554_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MEASURING POINTS FOR THE GAPS BETWEEN PARTS FROM 19 TO 22</p>
+          <center>
+            <img src="images/jpg/939004555_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Sealant application</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">VIEW OF THE VHEICLE WITH SEALANT APPLICATION AREAS ILLUSTRATED</p>
+          <center>
+            <img src="images/jpg/939003603_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Detail showing sealant application in areas 1 to 6.</p>
+          <center>
+            <img src="images/jpg/939003604_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Detail showing sealant application in areas 7 to 8 and doors</p>
+          <center>
+            <img src="images/jpg/939003605_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Typical measurements</h2>
+          <h3 class="bigtext3">Diagram for checking underbody</h3>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This chapter shows the specified vehicle dimensions to ensure the best results are achieved when carrying out repair operations.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The comparative dimensions, expressed in millimtres, may be subject to differences (about 2 mm). Repairers must use their experience to decide whether this is due to impact damage or manufacturing tolerances.</p>
+          <center>
+            <img src="images/jpg/939003606_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <center>
+            <img src="images/jpg/939003607_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="header_table" colspan="3" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Value referring to main point 02 (mm)</p></td>
+              <td class="header_table" colspan="3" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Value referring to main point 03 (mm)</p></td>
+            </tr>
+            <tr>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ref.</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Description</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X axis</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Y axis</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Z axis</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X axis</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Y axis</p></td>
+              <td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Z axis</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">01</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Main point</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0,000</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 624</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0,000</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2847,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 188</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 190</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">02</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Main point</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2847,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 812</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 190</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">03</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Main point</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 2847</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 812</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 190</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">04</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Auxiliary point</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 2847,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 188</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 190</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0,000</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1000</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0,000</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">05</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front shock absorber upper fastening RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 386</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 184,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 596</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3233,31</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 996,51</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 406,1</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">06</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front shock absorber fastening RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 438,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 197,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 603,6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3285,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1009,33</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 413,63</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">07</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front shock absorber fastening RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 341,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 215,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 600,3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3188,7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1027,52</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 410,33</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">08</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front shock absorber fastening RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 363,3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 137</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 582</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3210,53</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 949</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 392,13</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">09</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front strut fastening RH and frame</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 902</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 204</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 76</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3749,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1016</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 114</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front strut fastening RH and frame</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 832</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 204</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+76</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3679,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1016</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 114</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front strut fastening RH and frame</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 97</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 23</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 33,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2750,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 835</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 223,15</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front strut fastening RH and frame</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 43</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 39,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2890,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 851,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 184</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front strut fastening RH and frame</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 43</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 38,8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2890,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 773,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 184</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front strut fastening LH and frame</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 43</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 585,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2890,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 226,8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 184</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front strut fastening LH and frame</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 43</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 663,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2890,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 148,8</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 184</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front strut fastening LH and frame</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 97</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 647</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 33,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2750,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 165</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 223,15</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front strut fastening LH and frame</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 902</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 828</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 76</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3749,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 114</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front strut fastening LH and frame</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 832</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 828</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 76</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3679,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 16</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 114</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front shock absorber upper fastening LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 386,1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 808,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 596,1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3233,31</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 3,49</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 406,1</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front shock absorber fastening LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 341,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 779,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 585</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3188,7</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 32,76</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 394,98</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front shock absorber fastening LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 363,3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 857</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 606,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3210,53</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 44,9</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 416,53</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Front shock absorber fastening LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 438,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 793,6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 596,6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3285,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 18,37</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 406,58</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right side engine support</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 737</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 202</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 342,6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3584,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1014</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 152,56</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right side engine support</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 737</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 166</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 342,6</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3584,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 978</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 152,56</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right side engine support</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 642</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 253,75</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 435,87</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3489,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1065,75</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 245,88</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right side engine support</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 574</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 180,75</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 342,56</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3421,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 992,75</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 152,56</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">27</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left side gearbox support</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 661</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 763,85</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 366</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3508,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 48,15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 176</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left side gearbox support</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 519</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 763,85</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 372</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3366,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 48,15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 182</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">29</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left side gearbox support</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 656,3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 763,85</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 295</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3503,54</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 48,15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 105</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left side gearbox support</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 519</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 763,85</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 293</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3366,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 48,15</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 103</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">31</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right side front crash box crossmember fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1014,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 131</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 314</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3861,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 943</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 124</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">32</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right side front crash box crossmember fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1014,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 247</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 294</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3861,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1059</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 104</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">33</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right side front crash box crossmember fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1014,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 236</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 154</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3861,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1048</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 36</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">34</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right side front crash box crossmember fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1014,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 138</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 154</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3861,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 950</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 36</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">35</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left side front crash box crossmember fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1014,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 755</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 314</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3861,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 57</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 124</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">36</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left side front crash box crossmember fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1014,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 871</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 294</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3861,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 59</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 104</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">37</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left side front crash box crossmember fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1014,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 860</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 154</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3861,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 48</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 36</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">38</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left side front crash box crossmember fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1014,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 762</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 154</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3861,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 50</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 36</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">39</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right side fuel tank fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1427</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 107</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 100</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1420,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 705</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 90</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">40</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Right side fuel tank fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 2097</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 52</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 212</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 750,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 760</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 22</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">41</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left side fuel tank fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1427</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 517</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 100</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1420,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 295</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 90</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">42</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Left side fuel tank fastening</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 2097</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 572</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 212</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 750,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 240</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 22</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">43</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1634,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 325</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 39</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1212,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1137</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 151</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">44</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1705</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 191</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 39</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1142,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1003</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 151</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">45</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1835</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 337</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 39</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1012,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1149</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 151</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">46</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 2113,66</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 239,77</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 382,55</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 733,58</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1051,77</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 192,55</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">47</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 2152</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 150,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 165,45</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 695,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 962,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 24,55</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">48</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 2483</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 182,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 188,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 364,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 994,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1,8</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">49</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1634,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 949</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 39</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1212,74</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 137</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 151</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">50</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1705</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 815</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 39</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1142,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 151</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">51</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1835</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 961</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 39</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1012,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 149</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 151</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">52</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 2113,66</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 863,77</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 382,55</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 733,58</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 51,77</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 192,55</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">53</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 2152</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 774,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 165,45</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 695,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 37,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 24,55</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">54</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear suspension attachment LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 2483</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 806,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 188,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 364,24</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 5,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1,8</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">55</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear crash box crossmember fastening RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 3002,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 207,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 226,4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 154,92</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 1019,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 36,44</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">56</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear crash box crossmember fastening RH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 3002,2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 157,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 205,4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 154,92</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 969,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 15,44</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">57</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear crash box crossmember fastening LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 3002,96</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 781,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 205,4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 155,72</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 30,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 15,44</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">58</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Rear crash box crossmember fastening LH</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 3002,96</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 831,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 226,4</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 155,72</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 19,5</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">+ 15,44</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003552&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:52 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

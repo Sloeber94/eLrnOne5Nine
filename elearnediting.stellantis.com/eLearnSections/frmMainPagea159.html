@@ -1,0 +1,988 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006111&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:36:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006111&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="5Uoqt+fuQdUf3RQLPTFBzxwiOuvbc4ESrUP6ChGZsOwooKaO0O/4C3w+UxVZM3IwH9FxTYGhKyy/r7xpO5sbkBhgo3jEo8N+/mcPeZNrVk0LuFXU3U0bnhJNRwm3enAHg0uA3simwRW7UdPoD1ulqshtsSA+FqClWLUl51K0Su2Iuueq1c3O8GFdzqn7TjFglgdYzs2B9xXSIxHKlW2kQ4w62IVuUZLugXzL/uUxCyMMNtMQb+BoYxpjqaN++y8BJXscQWNOZZaZmoE1wJUNTvbL4swtgsgxxW2DYfy6ojwHwDpVV62AI25WkF299Zf07rAVqC7UP3VQcn1dwQGm8i8vtY3Fz6j5M/yck5vjrkSpqVCCWEDSMjG403MuQqsLHD91j1fDzyg2b8lokk55fSiYM2eNb5niZU6fpLELfehjIN81jhV8awBLRlDjugbi2AJCF7pTq49AG2ktq9XKavwOkL+jm0LE7mLHxMLJHVu4WOpDFaxkuNhOJkR3uGLXsg+dpY/w3QWDB40nxWIa8oiDb41KyMrVg/YFipGfXq/qgpbXLUYgWw3uvgLf9Oy+" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 05/05/2006</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Alfa 159</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>all versions with Opt 4J3</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">55</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">12.06</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>5570 T 000 AA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>BLUE&amp;ME™ SYSTEM</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>New hands-free version with multimedia player (opt. 4J3) - Network Information</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/188000002_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">We wish to notify you that, from May 2006, starting with the Alfa 159 and, later on, on other Alfa Marque models, the vehicle can be equipped, for certain versions/markets, with a new hands-free system complete with multimedia player known as <b>Blue&amp;Me™.</b></p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">We also wish to notify you that the new SB05 car radio will be fitted on vehicles equipped with the new Blue&amp;Me™ system.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The new Blue&amp;Me™ system (e-Convergence C1V2 – Opt 4J3) is a development of the Bluetooth® hands-free system (e-Convergence C1 - Opt 55G) described in Service News 55.19.06 - CD 06/2005.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">General information</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It should be pointed out that:</p>-<b>Blue&amp;Me™</b> based on Windows Mobile™ is a personal telematic system which allows the use of applications for communication and entertainment, specially designed for use in vehicles.-The <b>Blue&amp;Me™</b> system has hands-free and multimedia player functions and is prepared for additional services that will become available in due course.-Thanks to its complete integration with the voice commands, the controls on the steering wheel and the information in the on board multifunction display information, the <b>Blue&amp;Me™</b> system allows Customers who have a mobile phone with <b>Bluetooth®</b> to use it even if it is in their jacket pocket or handbag without ever having to take their hands off the steering wheel.-In order to use the voice commands the voice recognition system does not require any preparation process. The system is capable of recognizing the voice commands given, irrespective of gender, by the tone of voice and intonation of the person giving the instructions.-It is possible to listen to music stored on a USB device, selecting the tracks and play modes using either the controls on the steering wheel or voice commands.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is a brief description of the main components of the new <b>Blue&amp;Me™</b> system and its location below:</p>-main component location (Fig. 1)-functions of the controls on the steering wheel (Fig. 2)-hands-free-multimedia player-technology compatible with <b>Blue&amp;Me™</b>-wiring diagram, component location, functional description of wiring diagram-control unit (connections, pin out, fault diagnosis, replacement)-servicing operations on the system<h2 class="bigtext2">Main component location</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 1</b></p><center><img src="images/jpg/939005843_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Key for Fig. 1</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - electronic control unit</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - display</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - controls on the steering wheel</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Media Player USB socket.</p><h2 class="bigtext2">Fig. 2 - functions of the controls on the steering wheel</h2><center><img src="images/jpg/939005844_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Key</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Short press</b><b>(less than 1 second)</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Long press</b><b>(more than 1 second)</b></p></td></tr><tr><td class="body_table" colspan="" rowspan="4"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Activation of Blue&amp;Me™ Main Menu</p></td><td class="body_table" colspan="" rowspan="4"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Refusal of incoming phonecall</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Ending of phonecall in progress</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Confirmation of menu option selected</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Accept incoming phone call</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Change from one telephone conversation to another in second call mode (call notification)</p></td></tr><tr><td class="body_table" colspan="" rowspan="8"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Deactivation of voice recognition</p></td><td class="body_table" colspan="" rowspan="8"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Interruption of voice message</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Exit from Blue&amp;Me™ Main Menu</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Exit from a sub menu and return to the previous menu option</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Exit from the current selection with memorizing</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Deactivation/reactivation of the microphone during a phone conversation</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Resetting the volume of the call tone for the incoming phonecall</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Activation/Deactivation of multimedia player pause function</p></td></tr><tr><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Activation of the voice recognition</p></td><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Repetition of the last voice message given by the system</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Interruption of the voice message in order to give a new voice command</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>4</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Adjustment of audio volume for Blue&amp;Me™ functions: hands-free, multimedia player, voice announcements</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>5</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Scrolling through Blue&amp;Me™ menu items</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Direct access to multimedia player menu during display of information relating to audio track being played</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>6</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Selection of multimedia player tracks</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>7</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Confirmation of menu option selected during manual interaction</p></td><td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Transfer of the telephone conversation in progress from the hands-free system to the mobile phone and vice versa</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Audio source selection (Radio, CD, CD Changer, Multimedia Player)</p></td></tr></table><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For many functions, the controls on the steering wheel <b>7</b> and <b>1</b> are interchangeable and the preferred button can be selected.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For both operating modes for the controls on the steering wheel (short or prolonged press), the function is activated when the button is released.</p></p></span></td></tr></table><h2 class="bigtext2">Hands-free</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A basic feature of this function (like on the previous C1 version) is hands-free telephone communication with voice recognition and <b>Bluetooth®</b>.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With this system it is possible to make and receive phonecalls using either voice commands or the controls on the steering wheel in complete safety, freedom and comfort whilst driving and obeying the law.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Bluetooth® </b> technology makes it possible to use a mobile phone through the hands-free system on the vehicle without the need for connections.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A mobile phone with <b>Bluetooth®</b> is required to use the hands-free system.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For further information on mobile phones that are compatible with the <b>Blue&amp;Me™</b> system, refer to the chapter on TECHNOLOGY COMPATIBLE WITH <b>Blue&amp;Me™</b> below.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>When necessary, remind the Customer that:</b></p>-to start using the hands-free system with Blue&amp;Me™ voice recognition, simply register your mobile phone with Bluetooth® in the system.-registering your mobile phone in the system only has to be done once.<table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Whilst registering a new mobile phone, the <b>Blue&amp;Me™</b> system searches for a mobile phone with Bluetooth® in its operating range (with the <b>Bluetooth®</b> search procedure already activated). When it finds it, it establishes a connection using a Personal Identification Number (PIN).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">One the mobile phone has been registered, it is possible to transfer the names in the directory to the system, make a phonecall using the directory or by saying a phone number, accept a call and answer a second incoming call.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Either the controls on the steering wheel or the voice recognition system can be used to interact with the <b>Blue&amp;Me™</b> system.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Voice recognition makes it possible to activate all the system functions by pronouncing specific voice commands that are recognized by the system.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the system recognizes a voice command, it will respond with the appropriate action. Voice recognition is an easy and practical way to use <b>Blue&amp;Me™</b></p></p></span></td></tr></table>-All the system functions are accessible using the Blue&amp;Me™ Main Menu. With the vehicle stationary, it is possible to navigate the menu using either the controls on the steering wheel or voice commands.-With the vehicle moving, it is only possible to interact with the Blue&amp;Me™ system using either the controls on the steering wheel or voice commands for the functions relating to the telephone (LAST CALLS and DIRECTORY) and the multimedia player.-To activate the setting functions whilst driving, on the other hand, only voice commands are available.-The following operations can be carried out using the hands-free function:<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Call someone in the directory using a voice command </b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible to phone someone in the directory in your mobile phone using your voice. You can also phone someone in your phone directory by selecting them from the names that appear in the instrument panel multifunctiondisplay. (This function requires your phone directory to have been copied onto the vehicle hands-free system).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Dial a phone number using a voice command</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A phone number can be dialled by pronouncing the digits.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Accept a call</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">An incoming call can be accepted simply by pressing a button on the steering wheel.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Telephone Conference</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible to hold a telephone conference with a third person whilst a phone conversation is already in progrees (with <b>Bluetooth ®</b> telephones that support this function connected)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Call notification</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Whilst you are engaged in a phone conversation, it is possible to be notified of another incoming call, to answer the incoming call and to switch from one call to another.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After having registered a mobile phone on the <b>Blue&amp;Me™</b> system, it is possible, with the phone in the vehicle, to make calls using voice commands or the controls on the steering wheel. When the hands-free system is in use, the phone conversation is transmitted via the vehicle speakers.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">call notification is only supported by certain compatible mobile phones.</p></p></span></td></tr></table><h2 class="bigtext2">Multimedia player</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The <b> Blue&amp;Me™</b> multimedia player makes it possible to play digital audio stored on a USB device via your vehicle sound system simply by connecting it to the USB port on the vehicle.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the multimedia player you can listen to your personal collection of music tracks whilst driving. The following operations can be carried out using the multimedia player:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Reproduction of digital audio</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible to reproduce all digital audio files (.mp3 - .wma - .wav) or a personalized playlist (in .m3u or.wpl format).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Selection of audio depending on the category</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible to reproduce all digital audio that belongs to a certain category, for example an album, an artist or a musical genre.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Use the reproduction functions</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It is possible, whilst playing tracks, to use certain functions such as Play, Stop, Next track, Previous track, Random and Continuous play.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The multimedia player does not support audio files compressed with other formats (e.g. .aac files downloaded from itunes for ipods) and DRM protected audio files (Digital Right Management). If there are audio files on the USB device that are not supported, they will be ignored.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To use the multimedia player, simply connect your USB device (directly or with an extension) to the USB port in the vehicle.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the ignition key is turned <b>ON, Blue&amp;Me™</b> starts to produce an index of your multimedia library. At the end of the operation you can navigate within the entire library and scroll through the categories using voice commands or the controls on the steering wheel.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After having selected what you wish to listen to, <b>Blue&amp;Me™</b> will play it via the vehicle audio system.</p><h2 class="bigtext2">Technology compatible with blue&amp;me™</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Mobile phones with bluetooth®</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Blue&amp;Me™</b> is compatible with most mobile phones that support Bluetooth® 1.1 and a 1.0 hands-free profile (refer to the Bluetooth® connection specifications in the mobile phone user manual).</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remind the Customer that as a result of the different possible software versions available on the market for different models of mobile phone, some additional functions (e.g.: second call management, call transfer from hands-free system to mobile phone and vice versa, etc.) may not correspond exactly to the description in the mobile phone user manual. In any case, the possibility of carrying out a hands-free conversation will not be compromised.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Mobile phones with directory management</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If your mobile phone has a function for the automatic transmission of the directory using <b>Bluetooth®</b> technology then the entire directory will be automatically copied onto <b>Blue&amp;Me™</b> during the registration procedure.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Mobile phones with management of individual contacts</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If your mobile phone has a function for transmitting individual contacts in the directory using <b>Bluetooth®</b> technology then there will be a request to transfer the names in the directory using your mobile phone during the registration procedure.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>List of phones supported by Blue&amp;Me™</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The table below contains the mobile phones that, at the time this manual is published, have undergone a thorough check on operation with <b>Blue&amp;Me™</b>.</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Make</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Model</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Directory management</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Management of individual contacts</b></p></td></tr><tr><td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Audiovox®</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MT 5600(OrangeTM C500)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">V525</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">V600</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Motorola®</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">V635</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Mpx220</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">V3 Razr</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan="9"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Nokia®</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6230</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6230i</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6600 (*)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6620</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6820</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6822a</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7610</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3230</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9500 Communicator</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan="8"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Sony-Ericsson®</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">K700i</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">K750i</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">T610 (*)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">T630 (*)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">T637 (*)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Z600 (*)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">S710a</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">P910a</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">X</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) This mobile phone does not manage the call waiting function through the vehicle hands-free system controls.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>USB compatible devices</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The multimedia player is compatible with the majority of USB 1.0, 1.1 or 2.0 devices. The following USB devices are recommended for use with the <b>Blue&amp;Me™</b> system:</p>-Memorex® Travel Driver 256 MB USB 2.0-Memorex® Travel Driver 1 GB USB 2.0-SanDisk® Cruzer™ Micro 256 MB USB 2.0-SanDisk® Cruzer™ Micro 256 MB USB 2.0-Lexar™ JumpDrive® 2.0 512 MB-PNY® Attaché 256 MB USB 2.0-Sony® Micro Vault®<table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">remind the Customer that the multimedia player keeps a single multimedia library and when a new USB device is inserted, the <b>Blue&amp;Me™</b> system produces a new library replacing the existing one.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Compatible digital audio files</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The multimedia player supports the reproduction of audio files in the following formats:</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Extension</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Audio extension</b></p></td></tr><tr><td class="body_table" colspan="" rowspan="2"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>.wma</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It supports WMA standards version 1 and WMA version 2.(WMA2 = 353, WMA1 = 352).</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It supports WMA Voice audio formats</p></td></tr><tr><td class="body_table" colspan="" rowspan="3"> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>.mp3</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MPEG–1 Layer 3 files (sampling frequencies 32 kHz, 44.1 kHz and 48 kHz) and MPEG–2 layer 3 (16 kHz, 22.05 kHz and 24 kHz).</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following bit rates are supported: 16 kbps, 32 kbps, 64 kbps, 96 kbps, 128 kbps, and 192 kbps.</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It also supports the Frunhofer MP2.5 extension (sampling frequencies 8 kHz, 11.025 kHz e 12 kHz).</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>.wav</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Audio in digital format, without data compression.</p></td></tr></table><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The multimedia player does not support audio files compressed with other formats (e.g. .aac files downloaded from itunes for ipods) and DRM protected audio files (Digital Right Management). If there are audio files on the USB device that are not supported, they will be ignored.</p></p></span></td></tr></table><h2 class="bigtext2">Wiring diagram</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 3</b></p><center><img src="images/jpg/939005845_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Key for Fig. 3</b></p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B002</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">junction unit under dashboard</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B099</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">maxifuse box on battery</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C020</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">passenger dashboard earth</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D020</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">dashboard/rear coupling</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D047</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">clock spring coupling</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">G010</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">front courtesy light</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">M001</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">body computer</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">M089</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">steering lock control unit (NBS)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">M162</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Bluetooth control unit</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">P020</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">radio</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">P143</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">USB port</p></td></tr></table><h2 class="bigtext2">Electric component location</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 4</b></p><center><img src="images/jpg/939005846_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Key for Fig. 4</b></p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B002</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">junction unit under dashboard</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B099</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">maxifuse box on battery</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C020</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">passenger dashboard earth</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D020</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">dashboard/rear coupling</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D047</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">clock spring coupling</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">G010</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">front courtesy light</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">M001</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">body computer</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">M089</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">steering lock control unit (NBS)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">M162</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Bluetooth control unit</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">P020</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">radio</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">P143</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">USB port</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operational description</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Bluetooth control unit M162 is supplied directly (pin 16 of connector A) from the battery via the line for fuse F39 of the junction unit under the dashboard B2.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Bluetooth control unit M162 receives an ignition-operated supply (INT) (pin 32 of connector A) via the line for fuse F49 of the junction unit under the dashboard B2.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pin 15 of connector A of M162 is earthed.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The CAN line through which the Bluetooth control unit M162 is connected to the radio P20, the controls on the steering wheel - via the clock spring D47 - the Body Computer M1 and the other system nodes, reaches pins 14 and 30 of connector A.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Bluetooth control unit M162 is connected directly to radio P20 - connector D - from pins 7, 23 and 25 of connector A, sending audio+. audio - and MUTE signals respectively, thus using the radio speakers for voice messages and hands-free communication.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the version with Media Player USB interface, the Bluetooth control unit M162 is connected to radio P20 - connector C - from pins 5, 22 and 21 of connector A with AUX left, AUX right and AUX earth signals.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Media Player USB socket P143 is connected to the Bluetooth control unit M162, to pins 3, 4, 19, 20 and 31 respectively, with signals: signal D+, reference earth, signal D-, 5V power supply and shielding.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The hands-free microphone located in the courtesy light G10 is connected to pins 8 and 24 of connector A of M162.</p><h2 class="bigtext2">Control unit</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Control unit connections (Fig. 5)</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit is connected via the B-CAN to the radio node and the Body Computer which, in turn, is connected to the controls on the steering wheel.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Each piece of equipment responds to its own commands depending on the button activated and the operating mode activated at the time (in this case the Bluetooth control unit prevents the radio from carrying out commands from the CAN when the hands-free function is activated).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 5 - Electronic control unit</b></p><center><img src="images/jpg/939005847_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Key for Fig. 5</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">USB - USB port used for updating the system.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - connector</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Bluetooth control unit pin out</b></p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>PIN</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>SIGNAL</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>PIN</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>SIGNAL</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D+ signal for USB</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5V power supply for USB</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">reference earth for USB</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AUX earth</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">left AUX signal</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">right AUX signal</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- telephone audio (differential) (N.C.)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">telephone audio -</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">telephone audio +</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- microphone</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-+ microphone</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Phone mute</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN A</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B-CAN B</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">earth</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">31</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- USB shielding</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">direct power supply</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">32</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ignition-operated power supply</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">D- signal for USB</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr></table><h2 class="bigtext2">Service operations for the system</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Diagnosis</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit is connected via the B-CAN to the radio node and the Body Computer; therefore the diagnostic activities are carried out, in the same way as for all the other CAN "nodes", via the special diagnostic socket and the Examiner equipment.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>For other types of repair operations to the system, a special operating system must be temporarily installed on the Examiner, following the instructions given below and a USB "pen" must be inserted in the special control unit socket. Alternatively, these operations can be carried out using a personal computer, using "windows xp" or "windows 2000".</b></p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p>Do not use the external USB port (1 - Fig. 6) used for the Media Player function, but the specific one built into the control unit (2 - Fig. 6).</p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 6</b></p><center><img src="images/jpg/939005848_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following operations can be carried out using this method:</p>-language change for voice messages;-software update.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Languages</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following languages are available, both for the text strings displayed (menu) and for voice recognition and text to speech messages:</p>-French-English-German-Italian-European Spanish-Dutch-Polish-European Portuguese-Brazilian Portuguese<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As far as the messages shown on the display are concerned, the languge selected is the one set for the control panel</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As far as the voice recognition and text to speech messages are concerned, the language should be set separately using the Examiner diagnostic equipment, inserting a USB "pen" in the special control unit socket.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Software update</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Similarly, any control unit software updates should be entered using the Examiner diagnostic equipment with a USB "pen" to be inserted in the special control unit socket.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Never disconnect the battery terminals during the software updating or language updating procedure.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Control unit replacement</b></p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The battery terminals must be disconnected before removing the old control unit.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The telephone list downloaded onto the Bluetooth control unit is only saved to the RAM (Random Access Memory) which means that if the battery is disconnected all phone lists downloaded up to that time will be immediately lost. Later on, the Bluetooth control unit will download the actual directory (consequently the Customer will not lose the directory recorded on Blue&amp;Me).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Order a new control unit from the Parts Dept. who will send a pristine component. once fitted; the initial default data must be transferred to it by carrying out the "PROXI ALIGNMENT" procedure using the Examiner.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once a new control unit is installed it is necessary to:</p>-update the software;-Check and, if necessary, set the voice message language correctly;-carry out the pairing operation for the telephones to be connected.<h2 class="bigtext2">Operations using the examiner</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To carry out the language change operations for voice messages and software updating, a special operating system must be temporarily installed on the Examiner, using the special "WINDOWS MOBILE FOR AUTOMATIVE EXAMINER CD" CD-ROM supplied together with the traditional Examiner software updates.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>For the Blue&amp;Me™ system (Opt. 4J3) do not, for any reason, use update CDs for the Bluetooth® hands-free system (Opt. 55G).</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In addition, as already pointed out, a USB "pen" is required for transferring the data to the system control unit.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pen should have the following specifications: USB standard version 1.0, 1.1 or 2.0 with minimum memory of 256 MB, compatible with "WINDOWS XP" or "WINDOWS 2000".</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Whilst this "pen" is being used for the above mentioned operations, it will be "formatted" and therefore all data stored in it previously will be lost !</p></p></span></td></tr></table><table class="nota"><tr><td><img border="0" src="images/jpg/768_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Always follow the sequence described below (for all of the operations):</p>-switch on the Examiner following the traditional operating methods-insert the "WINDOWS MOBILE FOR AUTOMOTIVE EXAMINER CD"-switch off the Examiner-insert the USB "pen" in the special port at the back of the Examiner<table class="nota"><tr><td><img border="0" src="images/jpg/768_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The "pen" is NOT "recognized" if it is inserted with the Examiner on.</p>-restart the Examiner.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At this point the Examiner will work temporarily with the special operating system and it is capable of transferring the data necessary for the following operations to the USB pen:</p>-individual language setting-multi language setting-software update<table class="nota"><tr><td><img border="0" src="images/jpg/768_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Only one of these three operations can be carried out at a time; in order to carry out two operations on the same system (e.g. language change and software update) the instructions illustrated previously must be repeated twice separately.</p>-follow the instructions until the pen preparation operations are completed (the Examiner will advise you)-remove the USB "pen"-extract the WINDOWS CD-switch off the Examiner<table class="nota"><tr><td><img border="0" src="images/jpg/768_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Alternatively, these operations can be carried out using a personal computer, using "Windows XP".</b></p>-take the USB "pen" to the vehicle-with the ignition OFF, insert the USB "pen" in the special Bluetooth control unit port-turn the ignition key ON<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At this point the control unit will carry out the operation requested (language change or software update):</p>-at the end a display message in the control panel will advise that the operation is over-check that the operation has been successful (e.g. check the voice message language by giving an instruction).<h2 class="bigtext2">Warnings for the customer</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remind the Customer:</p>-that this system contains software under licence from Fiat Auto S.p.A. in accordance with a licensing contract.-any removal, reproduction, reverse engineering or other unauthorized use of the software for this system in violation of the licensing contract is strictly prohibited.-that tampering inside the <b>Blue&amp;Me™</b> device or installing unauthorized software can lead to the cancelling of the warranty and adversely affect the security of the information stored.-<b>to read all the warnings relating to the "LICENCE CONTRACT" on the pages at the end of the "BLUE&amp;ME" appendix to the handbook very carefully.</b></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939006111&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:36:57 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

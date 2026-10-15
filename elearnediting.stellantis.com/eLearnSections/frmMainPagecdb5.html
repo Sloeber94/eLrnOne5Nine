@@ -1,0 +1,2173 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925220&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:36:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925220&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="pIS6JuhofQO6j60H53+e27aW0yv+IKkuvNzigLw+k2cuTsJZ9NuPWKFDatLbofdL07gAxhrcR4/jNCBgeDsJrehntlFVJuXKWh/ino5jsCsHu4M3YhcEvWiWMnh/JxenoWxhtQDmHSuTGR4pbWcdQqLvEPguLrwx6UMQwEOjDUlU1bqc+i0/SKtmCadATVE4nONAc45ZZ8Dt5K4+KUtsSwDxTup8Oa64jVr37+cHY8YM5F6fEcfsgBywIXa7xsVBTmmGIxq/sZGkSwpAzVhw570aEtLmG2NIacTPh+JGoFbAH1+Y4tPMiIJK0r1ffWa9r+DBmzDguhsryunWknJO+jBhD5sXwhP2mAxFUdxUW4BNKxnzwVH2TlsGZ6qp2Whir0KhFp/bNBA2zR+LGZN/sWI99p6HHdwF86xlEi6C2bNpC4k+aM83qcPXleqADV9/IJ74Wj5f9Hb9lq86dgPISLWMvD0+q1/TvYOl3iBh2JqzEbCPT/OZE7IPbRIY8Ma6MAuVZGTyNh/pZgy6zZusHiu5rHQu21owzqHKqnYt6vf/zG5xjJk84LNUC93XZfIC" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 24/04/2009</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Various models</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>All types Diesel with DPF (MiTo - 147 - 147 Ducati Corse - 159 - GT - Brera/Spider)</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">10</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">05.09</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>1080 B 810 AA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>PARTICULATE FILTER DPF</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Information for the network </b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Supersedes the following SN:</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 10.08.07 dated 16-11-2007 CD 06/2007;</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">TYPES OF PARTICULATE FILTERS</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The particulate filter inserted in the exhaust system and integrated with the catalytic converter consists of a monolithic porous silicone carbide based support. It allows to reduce the amount of emitted particulate to less than one thousandth including the smallest sized particles (&lt;20nm). It is a mechanical filter provided with a series of channels in which the particulate is trapped while the exhaust gases cross the porous walls (Fig. 1).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 1</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007276_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b> Input exhaust gases</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B</b> Output filtered exhaust gases</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Because these filters are mechanical traps, they need to be regularly cleaned out. The cleaning procedure is called "regeneration". During the regeneration process, the particulate contained inside the filter is burnt thus clear the pores in which the powder is collected.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This process is run in average every 800/1000 km, but may be needed more frequently (less than 400 km) if the vehicle is used in particularly demanding conditions: the distance travelled between one regeneration and the next depends on the operating conditions and the use of the vehicle/engine.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are essentially two types of particular filter systems used by engineers:</p>
+          <h2 class="bigtext2">FAP or DPF</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">These two types of filtering system have different names and different features and operation. The greatest difference essentially concerns the regeneration strategy of the ceramic filters.</p>
+          <h2 class="bigtext2">FAP</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FAP is the brand name of the particulate filters fitting in cars made by Peugeot-Citroen-PSA.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This type of filter was the first to be installed on standard production cars (the 2.2 HDI Peugeot 607 engine). Use was later extended to 2.0 HDI and gradually installed on an increasing number of cars, including those of the FIAT-PSA joint venture (Ulysse-Phedra).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">From a technical point of view, FAP belongs to the type of filters which require the use of additives (cerium oxides, iron oxide, etc.). Eolys is the brand name of an additive.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">These were the first filters to be installed on cars and therefore are also the one which are best known, in terms of problems, servicing methods and repair procedures.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FAP is the brand name of the particulate filters fitting in cars made by Peugeot-Citroen-PSA.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This type of filter was the first to be installed on standard production cars (the 2.2 HDI Peugeot 607 engine). Use was later extended to 2.0 HDI and gradually installed on an increasing number of cars, including those of the FIAT-PSA joint venture (Ulysse-Phedra).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">From a technical point of view, FAP belongs to the type of filters which require the use of additives (cerium oxides, iron oxide, etc.). Eolys is the brand name of an additive.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The FAP filters were the first filters to be installed on cars and therefore are also the one which are best known, in terms of problems, servicing methods and repair procedures.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FAP filters thus require an additive for active regeneration.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As previously mentioned, the filter regeneration process consists of burning the particulate collected by the trap.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The particulate is burnt at a temperature of approximately 600-650°C. In order to reach such temperatures, modern diesel engines carry out post-injections after TDC which burn on the oxidising catalyser arranged in front of the filter. The purpose is to increase the temperature of the exhaust gases.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Additive is appropriately added to the fuel to lower the regeneration threshold by reducing the particulate combustion temperature to approximately 450°C. The gas temperature reaches 450°C with the post-injections to that the particulate inside the filter is burnt and the filter is regenerated.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 2 – System diagram with FAP filter</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007277_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b>. Engine</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B</b>. Common rail</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>C</b>. High pressure pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>D</b>. Engine ECU</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>E</b>. Fuel pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>F</b>. Level indicator</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>G</b>. Injector and adjuster</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>H</b>. Fuel tank</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>L</b>. Additive</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>M</b>. Muffler</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>N</b>. Sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>P</b>. Particulate filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>R</b>. Pre-catalyst</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>DPF</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This particulate filter does not use additives because the exhaust gas temperature is increased to 600-650°C. The temperature is increased by means of a series of post-injections and post-combustions (partially in the exhaust manifold and in the oxidising catalysers). The resulting temperatures are widely sufficient to fully burn the particulate collected in the filter. Noble metals which act as catalysers are inserted in the walls of the filter to facilitate the collected particulate combustion process.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system without additive has the advantage of not requiring additive top-ups. The additive is rather expensive, in addition to being dangerous for human health. On the other hand, the filter without additive requires higher regeneration triggering temperatures. Furthermore, the filter without additive causes a certain contamination (dilution) of the engine oil due to the increased post-injection. The engine oil may therefore be degraded more rapidly than normal because it is diluted by fuel according to the number of regenerations and thus the adopted driving style. The DPF generation method is based on the common rail multiple injection system (MultiJet).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3A - Cold combustion check flexibility </b>
+          </p>
+          <center>
+            <img src="images/jpg/199007278_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cold combustion check flexibility</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Less noise</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Lower compression ratio</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Better performance.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Nox/PM reduction</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3B - Very rapid pilot injection </b>
+          </p>
+          <center>
+            <img src="images/jpg/199007279_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Very rapid pilot injection flexibility</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Less particulate</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">More recirculation gas (EGR)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nox/PM reduction</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3C - AFTER injection</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007280_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AFTER injection</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Oxidation of particulate</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">More recirculation gas</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Nox/PM reduction</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3D - AFTER injection + POST for post-treatment</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007281_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">AFTER injection + POST for post-treatment</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Lower exhaust gas temperature and hydrocarbon injection (HC)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Higher post-treatment system inlet temperature</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Filter regeneration</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>P</b> = Pilot injection</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>M</b> = Main injection</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>R</b> = Pre-injection</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b> = Next injection</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>PS</b> = Post-injection</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 4 - Particulate filter inlet temperature (°C)</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007282_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b>. Base</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B</b>. With regeneration strategies</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>C</b>. Vehicle operating curve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>MAIN DIFFERENCES BETWEEN FAP AND DPF APPLICATIONS</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The main difference between FAP and DPF depends on the use of additive or not which as mentioned is used to lower the regeneration temperature to approximately 450°C. The difference regeneration strategy causes a partial diversification of the filter itself:</p>
+          <ul>
+            <li>
+              <span style="color:black">the FAP has a mechanical filtering structure for burning the particulate by means of the additive;</span>
+            </li>
+            <li>
+              <span style="color:black">in the DPF, the filtering structure is coated by noble metals (as classical catalysers) which increase the temperature and promote the regeneration process.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For these reasons, these two filter types have advantages and disadvantages:</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>FAP</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>DPF</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Advantages</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Low regeneration temperature</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Low back pressure</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Simple system</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">No additives</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Disadvantages</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Complex system</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Short life</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">High regeneration temperature</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Oil dilution</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The two types of filter described above are both used on FGA vehicles.</p>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>FAP</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">PSA vehicles</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ulysse and Phedra</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>DPF</b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">FIAT vehicles</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The other FIAT, LANCIA and ALFA ROMEO vehicles</p></td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">DPF SYSTEM CONSTRUCTION</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The DPF (Diesel Particulate Filter) consists of the following parts:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>DPF Euro 4</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">Double oxidising catalyser + DPF</span>
+            </li>
+            <li>
+              <span style="color:black">2 exhaust gas temperature sensors</span>
+            </li>
+            <li>
+              <span style="color:black">1 differential pressure sensor</span>
+            </li>
+            <li>
+              <span style="color:black">Engine ECU with specific strategies</span>
+            </li>
+            <li>
+              <span style="color:black">DPF warning light + message on instrument panel .</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 5 - DPF Euro 4 system diagram</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007283_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Key</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>1</b>. Engine ECU</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>2</b>. Air flow meter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>3</b>. Motorized throttle</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>4</b>. EGR</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>5</b>. Injections</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>6</b>. Turbine</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>7</b>. Pre-catalyser</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>8</b>. Exhaust gas temperature sensor (pre-cat)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>9</b>. Engine</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>10</b>. Exhaust gas differential pressure sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>11</b>. Central catalyser</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>12</b>. Exhaust gas temperature sensor (DPF)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>13</b>. DPF filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>14</b>. Intercooler</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>15</b>. EGR heat exchanger</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>16</b>. Exhaust gas temperature sensor (DPF)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>DPF Euro 5</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">One oxidising catalyser + DPF</span>
+            </li>
+            <li>
+              <span style="color:black">1 exhaust gas temperature sensor</span>
+            </li>
+            <li>
+              <span style="color:black">1 differential pressure sensor (with two measuring points)</span>
+            </li>
+            <li>
+              <span style="color:black">1 Lambda sensor</span>
+            </li>
+            <li>
+              <span style="color:black">Engine ECU with specific strategies</span>
+            </li>
+            <li>
+              <span style="color:black">DPF warning light + message on instrument panel.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 6 - DPF Euro 5 system diagram</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007284_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>1</b>. Engine ECU</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>2</b>. Exhaust gas differential pressure sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>3</b>. Lambda sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>4</b>. VGT turbine</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>5</b>. Air flow meter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>6</b>. Front catalyser</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>7</b>. Exhaust gas temperature sensor (DPF)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>8</b>. DPF filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>9</b>. Injectors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>10. </b>EGR heat exchanger</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>11</b>. EGR</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>12</b>. Motorized throttle</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>13</b>. Intercooler</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>DPF (Diesel Particulate Filter)</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Introduction</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system consists of two main components:</p>
+          <ul>
+            <li>
+              <span style="color:black">Oxidising catalyser</span>
+            </li>
+            <li>
+              <span style="color:black">Particulate filter</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The filter is generally located under the body (Euro 4 versions), but in the future (Euro 5) the units will be fitted in the engine compartment instead of the pre-cat which will be eliminated.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">It will not always be possible to move the unit into the engine compartment: it will depend on engine version and the available space in the engine compartment.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 7 – DPF filter</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007285_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>1</b>. Pressure vent upstream of the DPF</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>2</b>. Oxidising catalyser</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>3</b>. DPF temperature sensor housing</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>4</b>. Particulate filter (DPF)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Materials used and geometric configurations</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The materials with which the filter is made and its geometric configuration are key elements in the DPF system. Various factors must be carefully evaluated: exhaust back pressure, particulate withholding property, regeneration ease, duration of performance in time, and finally costs.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Silica carbide is the material normally used for making DPF filters. This material ensures:</p>
+          <ul>
+            <li>
+              <span style="color:black">high filtering efficiency;</span>
+            </li>
+            <li>
+              <span style="color:black">low load loss;</span>
+            </li>
+            <li>
+              <span style="color:black">good resistance to heat, mechanical and chemical stress;</span>
+            </li>
+            <li>
+              <span style="color:black">good storage capacity of the particulate to limit regeneration frequency.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Silica carbide features:</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">Melting point: 1723° C</span>
+            </li>
+            <li>
+              <span style="color:black">Working temperature: 900° C</span>
+            </li>
+            <li>
+              <span style="color:black">Thermal expansion coefficient: 5·10-6/°C</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The average temperature of the DPF during regeneration is 700-800°C.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The DPF could be damaged by thermal shock at temperatures higher than 1000°C.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Breakage by vibrations may be caused in incorrect assembly of the filter in the container.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The structure of the DPF (Fig. 8) consists of alternatively blocked channels for obtaining a filtering surface of several square metres. The object of the filter is to force the motion of exhaust gases through the porous holes of the filtering element thus allowing the mechanical removal of the particles of particulate matter (PM).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 8</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007286_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b>. Filtering wall</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B</b>. Particulate matter (PM)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The particulate which is collected in the DPF (Fig. 9) and when a predetermined threshold stored in the system during design and calibration is reached, the engine ECU starts a regeneration procedure to burn the PM.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 9</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007287_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 10 – DPF filter example</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007288_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>1</b>. Exhaust gas inlet</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>2</b>. DPF filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>3</b>. Filtered exhaust gas outlet</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>4</b>. Differential pressure sensor measuring point (downstream of the filter)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>5</b>. Exhaust gas temperature sensor</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remember that the particulate filter must never be washed using water jets or other devices. In case of excessive obstruction which cannot be solved by means of a forced regeneration procedure, the filter must be replaced.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">After reach regeneration process an amount of unburnt solid residues (ashes) will remain. This determines the lifespan of a DPF filter. The normal lifespan of a DPF is 250,000 km, but this distance may be reduced according to driving style, engine oil consumption and number of regeneration.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Central catalyser and DPF location</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Figure 11 shows the location of the central catalyser and the particulate filter. The unit is normally fitted under the middle part under the body in Euro 4 systems.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 11</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007289_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>DPF setup</b>
+          </p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Figure 12 shows the arrangement with single tube differential pressure sensor.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 12</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007290_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b>. Pressure measuring tube upstream of DPF.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B</b>. Exhaust gas temperature upstream of DPF.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>EXHAUST GAS TEMPERATURE SENSOR</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The temperature sensor (Fig. 13) of the PTC type is used to send the exhaust gas temperature value to the engine ECU (CCM) to manage the following operating strategies:</p>
+          <ul>
+            <li>
+              <span style="color:black">Exhaust gas temperature &gt; 600 °C at DPF inlet</span>
+            </li>
+            <li>
+              <span style="color:black">Ensure complete PM combustion</span>
+            </li>
+            <li>
+              <span style="color:black">Safety limits.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 13</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007291_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>1</b>. End protection</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>2</b>. Protective pipe</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>3</b>. Flange</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>4</b>. Thermocouple</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>5</b>. Rigid cable</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>6</b>. Securing ring nut</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>7</b>. Flexible cable</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>8</b>. Teflon pipe</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Exhaust gas temperature sensor pinout</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 14 – K188 (DPF temperature sensor)</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007292_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Sensor </b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CCM</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Mass</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">35 – A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">34 - A</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 15 – K189 (Pre-cat temperature sensor)</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007293_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Sensor </b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CCM</b></p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Mass</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">33 – A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">32 - A</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Location of exhaust gas temperature sensor electric connectors </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are two exhaust gas temperature sensors (Fig. 16) arranged as follows:</p>
+          <ul>
+            <li>
+              <span style="color:black">one at pre-cat outlet (A - Euro 4 only)</span>
+            </li>
+            <li>
+              <span style="color:black">one straddling the central filter and the DPF filter (B - for Euro 4 and Euro 5 systems)</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The temperature sensor electric connectors are arranged in the position shown in Fig. 16.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 16</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007294_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b>. K189 Pre-cat temperature sensor connector (engine compartment)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B</b>. K188 DPF temperature sensor connector (underbody)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>DIFFERENTIAL PRESSURE SENSOR</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Figure 17 shows a single tube pressure sensor.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 17</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007295_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b>. Additional hole for atmospheric pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B</b>. Atmospheric pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>C</b>. Exhaust gas pressure inlet</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>D</b>. Atmospheric pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>E</b>. Exhaust gas pressure measured upstream of DPF.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor, appropriately calibrated, provides a voltage proportional to the differential pressure measured by the sensor:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Differential pressure = pressure upstream of DPF - atmospheric pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This signal is used by the engine ECU (CCM) to check the DPF obstruction level and to actuate regeneration strategies.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Differential pressure sensor location</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The differential pressure sensor (Fig. 18) is generally arranged on the engine compartment wall in the central area next to the coolant expansion vessel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 18</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007296_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Differential pressure sensor pinout</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 19 – K187 (differential pressure sensor)</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007297_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <table class="contents_table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Sensor </b></p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CCM</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Power (+5 Volt)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">44 - A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ground (GND)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">37 - A</p></td>
+            </tr>
+            <tr>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Signal (0 - 4.65 Volt)</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3</p></td>
+              <td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">36 - A</p></td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Differential pressure sensor electric signal.</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following chart (Fig. 20) shows the pattern of the electric signal generated by the pressure sensor; the table in Fig. 21 shows the transcoding of the pressure value and the electric signal (mbar/volt).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 20</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007298_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A possible back pressure value is shown in the following chart (Fig. 21) according to the amount of particulate matter collected in the DPF:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 21</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007299_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b>. Flow</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B</b>. Back pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>C</b>. PM weight, g</p>
+          <h2 class="bigtext2">ENGINE ECU (CCM)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In versions with DPF, the engine ECU implemented specific functions for controlling the accumulation of particulate and for DPF filter regeneration strategies.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 22 – Engine ECU</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007300_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">ENGINE ECU STRATEGIES </h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>DPF filter regeneration</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The particulate accumulate in the DPF is burnt by means of the regeneration process.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the regeneration process is started, the engine ECU will implement the following strategies:</p>
+          <ul>
+            <li>
+              <span style="color:black">PILOT, PRE, MAIN injection times;</span>
+            </li>
+            <li>
+              <span style="color:black">Injection pressure;</span>
+            </li>
+            <li>
+              <span style="color:black">EGR closes;</span>
+            </li>
+            <li>
+              <span style="color:black">Throttle opens;</span>
+            </li>
+            <li>
+              <span style="color:black">Turbo pressure;</span>
+            </li>
+            <li>
+              <span style="color:black">AFTER injection activation increases the exhaust gas temperature to T1 (450°C) with combustion in the combustion chamber.</span>
+            </li>
+            <li>
+              <span style="color:black">POST injection activation increase the exhaust gas temperature to T2 (600°C) with combustion inside the exhaust pipe (pre-cat and catalyser).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Conditions:</p>
+          <ul>
+            <li>
+              <span style="color:black">Regeneration time approximately 12 min.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 23 - Injection process</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007301_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Engine oil dilution </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pilot, Pre, Main, After are activate with piston in top position (A Fig. 27), while post injection occurs when the position is in bottom position (B Fig. 27): this causes atomisation of fuel on the cylinder walls causing increase of fuel leakage into the oil sump.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 24</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007302_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In order to prevent risks for the engine, the engine ECU calculates engine oil degrading and lights up the engine oil warning light when the safety threshold is reached (Fig. 28).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 25 – Engine oil warning light</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007303_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The oil replacement frequency therefore differs from that show on the service schedule and becomes flexible (15000 km - 50000 km).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The driver is informed of the need to change the oil and given a 1000 km notice.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The parameters must be reset with Examiner after changing the engine oil.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">DRIVING PROFILES</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The zones related to the driving profiles stored in the engine ECU are shown in the following chart (Fig. 29). The engine ECU to determine the driving profile is based on:</p>
+          <ul>
+            <li>
+              <span style="color:black">Vehicle speed,</span>
+            </li>
+            <li>
+              <span style="color:black">Engine rpm,</span>
+            </li>
+            <li>
+              <span style="color:black">Accelerator pedal,</span>
+            </li>
+            <li>
+              <span style="color:black">Coolant temperature,</span>
+            </li>
+            <li>
+              <span style="color:black">Air temperature,</span>
+            </li>
+            <li>
+              <span style="color:black">Fuel amount</span>
+            </li>
+            <li>
+              <span style="color:black">Exhaust gas temperature</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 26 – Driving profiles</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007304_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A</b>. Torque</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B</b>. Engine rpm</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Possible driving profiles defined in Euro 4 applications (Fig. 26):</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Fast Highway</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Slow Highway</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Fast Acceleration / Uphill</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Extra Urban Driving</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Urban Driving</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Downhill</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Slow Urban Driving</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Other profiles are stored in the ECU and not shown, namely:</p>
+          <ul>
+            <li>
+              <span style="color:black">Warm up</span>
+            </li>
+            <li>
+              <span style="color:black">Cold start</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Determining the filter blockage level</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The filter regeneration levels (burnt PM amount) depend on the engine operating condition (driving profile).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine ECU (CCM) to determine the PM accumulation level in the filter is based on the following parameters:</p>
+          <ul>
+            <li>
+              <span style="color:black">Odometer</span>
+            </li>
+            <li>
+              <span style="color:black">Driving profiles (a sportier driving style generates more frequent regeneration frequency).</span>
+            </li>
+            <li>
+              <span style="color:black">Differential pressure sensor (see note).</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine ECU uses the signal from the differential pressure sensor for the following strategies:</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>A - Euro 4 models</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">This is used to check the coherence of the particulate filter obstruction parameter calculation. The engine ECU warning light (MIL) will light up if a discrepancy of the calculation made by the ECU and that made by the differential pressure.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>B - Euro 5 models</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">This is used to check the coherence of the particulate filter obstruction parameter calculation. The engine ECU warning light (MIL) will light up if a discrepancy of the calculation made by the ECU and that made by the differential pressure.</span>
+            </li>
+            <li>
+              <span style="color:black">Regeneration is operated if the differential pressure exceeds certain values.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A maximum of 6 regenerations are attempted. After this, if the result is negative, the engine ECU lights up the MIL warning light(s) (the system advises to go to the nearest service centre to have a service regeneration procedure run due to excessive DPF obstruction).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following chart (Fig. 27) shows the size DPF filter operating areas.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 27</b>
+          </p>
+          <center>
+            <img src="images/jpg/199007305_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>DP</b>. Differential pressure</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>l/h</b>. Exhaust gas flow rate</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>a</b>. Perforated filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>b</b>. Regenerated filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>c</b>. Intermediate zone</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>d</b>. Partially obstructed filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>e</b>. Obstructed filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>f</b>. Fully obstructed filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Normal operating zone: "b, c, d"</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the passage from the intermediate zone (c) to zone (d) occurs more or less rapidly according to the driving profile and the engine ECU runs a controlled regeneration procedure to bring the the differential pressure values back into zone (b) or zone (c), according to the driving profile.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Critical operating zone: "e"</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Excessive filter obstruction may occur in case of lack of coherence between estimated particulate collection model in CCM and the actual particulate production and the pressure difference at the filter ends may vary more rapidly. The engine ECU will detect the overload conditions and the engine warning light (MIL) will light up on the instrument panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In these conditions, the engine ECU requires Service regeneration for bringing the differential pressure values back to zone (b) or zone (c).</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A limited fuel flow strategy is activated to protect the engine. The vehicle performance will be reduced as a consequence.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Abnormal operating zones: "a" and "f"</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Zones "a" and "f" represent the conditions in which the differential pressure is anomalous. Fully obstructed filter zone "f": the differential pressure is constantly higher than a threshold which varies according to the exhaust gas flow rate. In this condition, the engine ECU indicates filter overload by lighting up the instrument panel warning light (MIL).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In these conditions, the engine ECU requests Service regeneration attempt to bring the differential pressure values back to zone "b" or zone "c". The DPF must be replaced if the regeneration attempt fails.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A major fuel flow limitation strategy is activated to protect the engine. The vehicle performance will be reduced as a consequence.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Perforated filter zone (a): the differential pressure is lower than a given threshold which depends on flow rate. In this condition, the engine ECU indicates perforated filter state by lighting up the diagnostic warning light (E5 applications only).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>DPF FILTER REGENERATION TYPES</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The DPF is a mechanical filter in which particulate is trapped. Periodical cleaning - called regeneration (RGN) - is required. The regeneration process consists in burning the particulate matter collected inside the filter and clear the pore.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This process is carried out in average every 800/1000 km (the distance travelled between one regeneration and the next depends on the vehicle use and the driving profile (example: sporty, urban, highway, etc.).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are three types of DPF regeneration:</p>
+          <ul>
+            <li>
+              <span style="color:black">spontaneous</span>
+            </li>
+            <li>
+              <span style="color:black">controlled</span>
+            </li>
+            <li>
+              <span style="color:black">Service.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Spontaneous regeneration</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The particulate matter collected in the filter burns spontaneously. No intervention by the engine ECU is required in this case.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Driving conditions directly effect exhaust gas temperature and consequently the temperature inside the filter.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The intervention thresholds are:</p>
+          <ul>
+            <li>
+              <span style="color:black">exhaust gas temperature: 280°C &lt; T &gt; 500°C;</span>
+            </li>
+            <li>
+              <span style="color:black">NO2/PM ratio: much higher than 10.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The thresholds for spontaneously activating are difficult to reach during normal driving profiles.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Controlled regeneration</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Controlled regeneration is automatically managed by the engine ECU when travelling on the road by means of controls for increasing the exhaust gas temperature to reach the particulate matter combustion threshold.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the regeneration process, the engine ECU:</p>
+          <ul>
+            <li>
+              <span style="color:black">interrupts exhaust gas recirculation (EGR);</span>
+            </li>
+            <li>
+              <span style="color:black">operates the turbine in order to maintain the engine torque constant;</span>
+            </li>
+            <li>
+              <span style="color:black">activates post injections (which heat up the exhaust gases directly);</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>The effects of controlled regeneration</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During regeneration, the engine ECU corrects some operating strategies:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>- Engine torque</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At constant engine rpm and load, post injection increases an engine torque increase. In order to maintain the same driving conditions and avoid engine torque variations, the engine ECU:</p>
+          <ul>
+            <li>
+              <span style="color:black">reduces fuel flow during main injection,</span>
+            </li>
+            <li>
+              <span style="color:black">adjusts supercharging pressure.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>- Supercharger pressure adjustment</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To maintain the engine torque unchanged during regeneration, the engine ECU reduces supercharger pressure to improve handling.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This is because the exhaust gases during regeneration are hotter and tend to increase turbine rotation.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>- Exhaust gas recirculation adjustment (EGR)</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At each regeneration, the engine ECU may actuate two EGR solenoid valve strategies:</p>
+          <ul>
+            <li>
+              <span style="color:black">EGR closed: in the case, several post-injections are maintained in order to keep the exhaust gas temperature high.</span>
+            </li>
+            <li>
+              <span style="color:black">EGR slightly open: in this case, the recycled gases make the air/fuel mixture richer; as a consequence, the exhaust gases are hotter than there are fewer post injections.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>- Motorized throttle</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During particulate filter regeneration, in case of cut-off, the post injection only is maintained to keep the exhaust gases at approximately 600°C in the oxidising catalyser. In these conditions, the engine ECU reduces the motorised throttle opening to decrease the fresh air flow taken in by the engine. This strategy prevents excessive exhaust gas cooling to prevent compromising the DPF regeneration process.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Service regeneration </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Service regeneration is managed by the ECU and only activated by a diagnostic operator using the diagnostic tool (EXAMINER).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Regeneration must be carried out after the engine ECU lights up (MIL) and in presence of error code P1206.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine must be warm to activate Service regeneration.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the claimed fault is present, check the parameters in Table 1 Examiner parameters shown in the Diagnostic section before running a Service regeneration.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Take note if the data determined by Examiner before the Service because the data must be submitted to TE.SE.O or other departments if the fault is not solved.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Drive a complete cycle to regenerate the filter completely after the regeneration procedure.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For DPF system diagnostics</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">DIAGNOSTICS (EDC16 C39 - F4)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Parameters </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following items (specific for DPF versions) are listed in the parameter environment:</p>
+          <ul>
+            <li>
+              <span style="color:black">Differential sensor pressure</span>
+            </li>
+            <li>
+              <span style="color:black">Particulate filter obstruction</span>
+            </li>
+            <li>
+              <span style="color:black">Pre-cat temperature</span>
+            </li>
+            <li>
+              <span style="color:black">Particulate filter temperature</span>
+            </li>
+            <li>
+              <span style="color:black">Particulate filter state</span>
+            </li>
+            <li>
+              <span style="color:black">Average distance of last five regenerations</span>
+            </li>
+            <li>
+              <span style="color:black">Average time of last five regenerations</span>
+            </li>
+            <li>
+              <span style="color:black">Average temperature of last five regenerations</span>
+            </li>
+            <li>
+              <span style="color:black">Odometer last regeneration (km)</span>
+            </li>
+            <li>
+              <span style="color:black">Odometer last DPF replacement (km)</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Differential sensor pressure </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This indicates the back pressure value upstream of the particulate filter.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Particulate filter obstruction </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This indicates the value expressed in percentage (%) of the estimated particulate matter by the CCM</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Particulate filter obstruction parameter is calculated by the CCM on statistic basis and only meaningful when error P1206 is not present.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Pre-cat temperature </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This indicates the exhaust gas temperature measured by the sensor located at the pre-cat outlet.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Particulate filter temperature </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">this indicates the exhaust gas temperature measured by the sensor located at the particulate filter inlet.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Particulate filter state </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This indicates the level of obstruction of the particulate filter in all conditions by the CCM.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Average distance of last five regenerations </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This indicates the distance travelled between one DPF regeneration and the other.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine ECU calculates the weighed average of the sum of the last five distances (km) travelled between one regeneration and the next (the weight of the last RGN is 70%).</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Average time of last five regenerations </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This indicates the average time required for the last five particulate filter regenerations.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Average temperature of last five regenerations </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This indicates the average temperature of the last five particulate filter regenerations.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Odometer last regeneration (km) </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This parameter indicates the distance travelled since the last regeneration (force and/or spontaneous). The value is set to 0 at the end of the successful regeneration (spontaneous and/or automatic using instrument) or when the particulate filter is replaced. If the engine ECU is replaced, the parameter must be updated with the same odometer reading in the CCM.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Odometer last DPF replacement (km) </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This indicates the kilometres driven since the last particulate filter replacement. This parameter is set to 0 km by the particulate filter replacement procedure. If the engine ECU is replaced, the parameter must be updated with the same odometer reading in the CCM.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Configurations / Procedures:</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following items (specific for DPF versions) are listed in the configuration environment:</p>
+          <ul>
+            <li>
+              <span style="color:black">Engine oil change</span>
+            </li>
+            <li>
+              <span style="color:black">Particulate filter replacement</span>
+            </li>
+            <li>
+              <span style="color:black">Particulate filter regeneration</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Engine oil change (DPF versions only)</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The engine oil change frequency is no longer determined by the service schedule of the car but is not based on the number of DPF regeneration cycles. Regeneration causes a higher increase of dilution of fuel in the oil sump. The engine ECU calculates engine oil degrading and informs the driver when the oil needs to be changed.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Particulate filter (DPF) replacement</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Reset the DPF parameters with the Examiner procedure.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Particulate filter (DPF) regeneration</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The particulate filter regeneration must must run in the following cases:</p>
+          <ul>
+            <li>
+              <span style="color:black">Engine warning light (MIL) on and present of <b>P1206 - Level 1</b> in the engine ECU memory. This informs the driver that the system is requiring Service generation, carried out a diagnostic operator at a service centre, because the DPF is obstructed. In these conditions, the engine ECU actuates a recovery procedure and slightly limits the engine performance.</span>
+            </li>
+            <li>
+              <span style="color:black">Engine warning light (MIL) on and present of <b>P2002 - Level 2</b> in the engine ECU memory. This informs the driver that the system is requiring Service generation, carried out a diagnostic operator at a service centre, because the DPF is excessively obstructed and probably needs to be replaced. In these conditions, the engine ECU actuates a recovery procedure and slightly limits the engine performance.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Error P1206 may be caused by failure or incorrect operation of some engineering parameters. Read the following chapter carefully: <b>CAUSES &amp; TROUBLESHOOTING</b> below</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">MAIN FAULTS</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As previously mentioned, the engine produces particulate matter which is trapped in the filter during normal use. The collection of particulate matter increases the pressure at turbocharger outlet and decreases vehicle performance.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This fault is indicated by the ECU by means of an error code, which indicates non-coherence between pressure read by the differential pressure sensor and the particulate % calculated by the CCM</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Most typical faults:</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">Engine warning light fault P1206</span>
+            </li>
+            <li>
+              <span style="color:black">Poor engine efficiency</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During Service regeneration, it is advisable to apply a series of loads (lights, windscreen wiper, A/C system, etc.) to increase the possibility of success.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There could be two causes if the Service regeneration is not successful:</p>
+          <ul>
+            <li>
+              <span style="color:black">excessively obstructed filter (in this case, the DPF must be replaced)</span>
+            </li>
+            <li>
+              <span style="color:black">injection system problems (see injector paragraph below).</span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">CAUSES &amp; TROUBLESHOOTING </h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The particulate filter obstruction parameter is a statistic calculation run by the engine ECU. If the engine ECU finds an errors in this calculation, DPF system faults are caused: the MIL is lit up and error P1206 is generated.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The differential pressure sensor and its signal helps the engine ECU to verify calculated value plausibility.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In case of normal use, there may be various causes of incorrect system operation:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Incorrect thermostat operation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Incorrect flow meter reading</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Incorrect injection operation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Presence of oil in intake circuit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Turbo compressor problems</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - EGR value problems</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Condensation</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Oil leakage from valve guides</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Thermostat </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Incorrect operation of the thermostat (including excessive opening and closing tolerances) causes a high production of smokiness (causes a different calibration of the reference threshold in the engine ECU: approximately 88° C): this causes incorrect calculation (rounded down of the amount of PM collected in the DPF.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This amount of particulate in excess not calculated by the ECU causes incoherence between the percentage calculated by CCM and the back pressure in exhaust. This causes the engine warning light (MIL) to light up.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Solution:</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">this problem is diagnosed by running a test drive (with engine warm) at a speed from 70 to 90 km/h in 4/5 gear. With EXAMINER on-board, check that the engine coolant temperature is always: <b>&gt; 85℃</b></p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the temperature is lower than 85° C, replace the thermostat and check that with the new component, the engine coolant temperature is higher than the reference value.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The tolerance of the mechanical thermostat generate lower engine operation temperature, causing an incorrect EGR management, causing more generation of PM than that estimated by the engine ECU.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For EURO 5, the threshold is 70° C.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Air flow meter </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Incorrect operation of the air flow meter (including excessive reading tolerances) causes high smoke production.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In this case, the high production of smoke is caused by a greater opening of the EGR with consequent exhaust gas recirculation inside the engine.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Solution:</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Diagnosing this fault is not simple. This is because flow meter problems may occur also with incorrect air flow readings when engine is idling.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The solution in this case is to replace the air flow meter.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The air mass measured with the engine idling for at least 2 minutes (to close the EGR) and ensure intake air temperature measured by air flow meter lower than 35 °C:</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- for 1.9 and 2.4 JTD engines, 480 mg/iniet.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- for 1.3 JTD engines, from 280 to 310 mg/iniet.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Injectors </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The incorrect FBC value (Fuel Borne Catalyst or injection time correction factor) is analysed by means of EXAMINER checking that the FBC of the single injector is comprised between -2 and +2 mm3/injet with the engine idling and warm.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The incorrect FBC value generates the following problems:</p>
+          <ul>
+            <li>
+              <span style="color:black">high particulate production</span>
+            </li>
+            <li>
+              <span style="color:black">regeneration cannot be run.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Solution:</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This problems may be solved in principle as follows:</p>
+          <ul>
+            <li>
+              <span style="color:black">check correspondence between IMA injector codes and injector codes written in ECU.</span>
+            </li>
+            <li>
+              <span style="color:black">try to reset self-learnt injection amount.</span>
+            </li>
+            <li>
+              <span style="color:black">replace the injectors.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check number of washers present in injector seat and thickness. Only one washer must be present. The thickness must be:</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 2mm for 1.6 JTD, 1.9 JTD and 2.4 JTDM</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1.5mm for 1.3 JTDM.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Presence of oil in intake circuit </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check for presence of oil in intake circuit, check all pipes from compressor inlet to intake manifold inlet.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As known, the presence of a small coat of oil in diesel pipes is normal. Check for "puddles" in the air intake which are not normal.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The presence of oil in intake may depend on several causes:</p>
+          <ul>
+            <li>
+              <span style="color:black">excessive oil level</span>
+            </li>
+            <li>
+              <span style="color:black">high engine blow-by</span>
+            </li>
+            <li>
+              <span style="color:black">turbocharger problem</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Solution:</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Regardless of the cause of the presence of oil, the first operation consists in washing out the intake circuit (air path).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Analysing the single causes:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>- excessive oil level</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">The oil level must always be between the min. and the max. level. When topping up engine oil, never excess the maximum level, preferably 2 mm under the max. line (restore correct level if required).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>- high engine blow-by </b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">Run a diagnostic test on the engine (compression test).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Turbocharger problem</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In many cases, the presence of a turbocharger fault is indicated by the presence of CCM errors. In this case, follow the procedures indicated for the specific procedure (see applicable Service News).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Diagnosing this component with regards to DPF problems is more difficult.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Possible faults include:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>- presence of oil at compressor outlet </b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">turbocharger replacement and intake circuit washing (pipes and intercooler)</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>- max. supercharging pressure not reached</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">Check conditions of pipes and intercooler checking for leakage of oil. Replace the turbocharger if leakage of air is found. The difference between target pressure and measured pressure is 100 - 200 mbar.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Run the turbo pressure test when the DPF is not obstructed.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>- excessive acceleration response delay</b>
+          </p>
+          <ul>
+            <li>
+              <span style="color:black">Replace turbocharger.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>EGR valve</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The EGR value problems are the most difficult to diagnose.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Faults of this component will cause high smokiness and as in the other cases, incoherent CCM data and consequent lighting of the engine warning light (MIL) and the generation of fault code P1206.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the most severe cases, the ECU has an internal diagnostic procedure with the generation of a specific error code.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The faults of this component are not easy to diagnose in the least severe cases. Replacement is therefore recommended.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Solution:</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">As previously mentioned, the component should be replaced if faults caused by this component are found.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In many cases, cleaning this component may be useful.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This solution may apply in cases of vehicles with high odometer reading. It is advisable to replace the component on new vehicles.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Condensation </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Water may be accumulated in the DPF (condensation). This occurs on new cars with low odometer reading on which no regeneration has yet been carried out. This causes a fault reading by the differential pressure sensor (high pressure - obstructed filter - error P1206). The engine ECU light up the MIL warning light.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Solution:</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Disconnect the central unit under the body (catalyser + DPF) and eliminate the water contained in the DPF.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Oil leakage from valve guides </b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Oil leakage from one or more valves generates a percentage of PM which is not included in calculation.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Solution:</b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Check for oil scaling in the combustion chamber (piston top and injectors) and not intake.</p>
+          <h2 class="bigtext2">RELATED TOPICS</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">See SN 00.05.09 more information on instrument panel indications related to degraded engine oil and the obstructed particulate filter.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">See the following for diagnosing engine operation faults caused by particulate filter obstruction:</p>
+          <ul>
+            <li>
+              <span style="color:black">SN - 10.04.09 for 1.3 Multijet;</span>
+            </li>
+            <li>
+              <span style="color:black">SN - 10.03.09 for 1.9 JTD 8/16v and 2.4 JTD 20v;</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Refer to specific SN (where provided) for each model for upgrading the CCM software.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925220&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:36:37 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

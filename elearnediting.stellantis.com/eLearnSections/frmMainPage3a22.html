@@ -1,0 +1,218 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939008009&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:37:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939008009&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="tTVPaUr+4zclKzEbjTtD4SF7pJ+bqH2bvxPXa/Ya7FZnQzyK8yuLnPzFY2CQwn1G3tfBlXIyeXsGyAvRNGuHA6Sc3FdtUGSB6m9/9pPy+iF2mMKtshoMRhY87GMajekUk5FuAeKcxboceefJstQivelb38bGHNKzZq+jn/ciypEJypFcDq+21UPEgFdgPhhzjD8uJR2OOJh0mkVXZie2eFrWnDI0O2j9Tm2vtPoz1Bq7KonKtdh+hn63eLNv8rAEsark8OCA9MIzAouAT1im1rQVk6fCX6h22DIeUDycVv4lu59u54MnBPE0gz+4YUkh4sy4gGkFMEYGgNNETEV2r88GW0N3ovW2IYYYTb4C75dP80+Br8uRdt8p1Nu4RKFtgaxECuyEomZFPkV/En3NTAjmopy/hcDhb62wdZUEt/Gzj73PqkjRjfmJ6y9lE9EwrrhFuE6GiQ1h2zyV2beaOzJwccldjSlR3Dkz6SzYEtrNQAw6s+l4UvJPesYGnCWt4gl9GR8me5fwwWZProo6S4kNrteHvWEfnd8RHhKyE6qf1L4wgROkPj7mb7KWwQSDLZu1IqLDLcoqC/wyl4gUGzqHwQNXUK3+VBOeNba1M9zVGg92d8JOjUvrMWjr9+TrwTGF1zcvyqJ/Zy9/lZJJc7XN6mnnCROqjVdgf8XEUhBR96j6IFTVNvZPOE9XVLCeUv+MdbreGcsMjQcyoBHJZ7VLDIhZzSWyCyjO149kq8psdNlw5bPYY+RMIP9XQYBsT/TB9WAIE1U84XZdIRlpZ6jk9EopUF5E4KAHAv1YR+rwyDn4jiy9E8Rgn+0IlrCc" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - HUBS AND WHEELS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">TPMS SYSTEM</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+          </p>
+          <h2 class="bigtext2">General specifications</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The TPMS Tyre Pressure Monitoring System checks the pressure of the tyres sending the necessary information to the Body Computer via the B-Can.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In particular, if the inflation pressure is higher or lower than it should be, the system activates an insufficient pressure signal in the instrument panel or warns that one or more of the tyres is punctured.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The tyre pressure monitoring system comprises:</p>- 4 R.F. transmitter pressure sensors located inside the tyre on the wheel rim;<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 4 L.F. transmitters fitted on the bodyshell in the respective wheel housings;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1 R.F. management and reception control unit fitted inside the (right) bracket supporting the rear parcel shelf;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- 1 warning light/symbol signalling irregular pressure in one or more tyres, in conjunction with the read out on the display</p><center><img src="images/jpg/199003478_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A: - Warning light in comfort (medium) panel for all signals for the TPMS except failure</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A: - Symbol in matrix panel (high) for all signals for the TPMS except insufficient tyre inflation pressure</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B: - Symbol in matrix panel (high) signalling insufficient tyre inflation pressure</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">C: - Warning light in comfort panel (medium) signalling system failure</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pressure sensors continuously check that the tyre inflation pressure is correct.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If a failure or a loss in pressure is detected, the sensor transmits a message via R.F. modulated in AM at a frequency of 433.92 MHz to the receiver control unit.</p><center><img src="images/jpg/844007026_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Tyre pressure control unit</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Left front sensor/transmitter inside the wheel rim</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Right front sensor/transmitter inside the wheel rim</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Left rear sensor/transmitter inside the wheel rim</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Right rear sensor/transmitter inside the wheel rim</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Aerials (transmitters)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Body Computer Node (receives the signals transmitted by the sensors from the TPMS control unit via the A-bus)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Instrument Panel Node</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Serial k line for control unit and TPMS fault diagnosis</p><h3 class="bigtext3">Transmission of tyre status via a-bus/b-can</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The tyre pressure control unit (CPP) acquires information, via radiofrequency, from the sensors, relating to the state of all four tyres and transmits it via the B-Can line.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit transmits the following information:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- CPP control unit programming/characterization status;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- possible entire system fault;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- tyre position;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- tyre inflation pressure status.</p><h3 class="bigtext3">Tpms operating principle</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">At the key-on the control unit sends the Body Computer a confirmation signal indicating that it is working properly via the BUS serial line.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The aerials (transmitters) send a 125 kHz signal to the sensors on the wheels so that the initialization takes place. The sensors, in turn, measure the pressure and send an RF signal for the tyre pressure and temperature status; the receiver receives this transmission from the snsors inside the tyres immediately forwarding the information on the serial B-Can.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the value of the pressure goes below or above a the pre-set level, the control unit signals the alarm status directly to the instrument panel, via the B-Can, switching on the special warning light and visual and acoustic warning messages.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Within 2.5 seconds of the key-on, the TPMS control unit will start its periodic transmission of messages; if this does not take place within this period, the control panel will signal the TPMS failure condition. The same will take place if the transmission of of the TPMS_Status message is absent for more than 2.5 seconds at operating temperature (after the switch due to the key-on).</p><h3 class="bigtext3">Intervention levels</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There are two intervention levels which are stored in the receiver memory.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The first (known as the CHECK level) is designed to signal if the pressure of one or more of the tyres is slightly below or slightly above the optimum level in which case the driver should check it and restore the correct value:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The intevention levels for the for first CHECK level are as follows:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- drop in pressure of 0.3 bar in relation to the nominal value (with tyre hot)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- drop in pressure of 0.45 bar in relation to the nominal value (with tyre cold)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- tyre pressure higher than 3.4 bar.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The second level (known as the WARNING level), on the other hand, is established to signal a loss in pressure due to the fact that one or more of the tyres is presumed to have a puncture: WARNING = drop in pressure of 0.5 bar in relation to the nominal value.</p><h3 class="bigtext3">Display in instrument panel</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The instrument panel acquires these signals and manages the readings as described below.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the pressure value of one or more of the tyres exceeds the first CHECK level (nominal pressure - 0.3 bar when hot or - 0.45 when cold) (pressure above 3.4 bar), the TPMS warning light/symbol comes on in the instrument panel and an alphanumerical message appears in the display e.g. "Check tyre pressure", right rear or left rear. When the signalling cycle is over only the warning light remains activated in the panel until the correct pressure is restored.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The warning cycle is repeated after 10 minutes (once).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The CHECK level includes a general message without indicating the wheel in question (right front, right rear, etc.).</p><center><img src="images/jpg/844007027_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Warning light/symbol associated with the message: "Check tyre pressure"</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the panel receives a signal that the pressure is below the WARNING level (nominal pressure -0.5 bar), the TPMS warning light/symbol comes on and the message appears in the alphanumerical display "Insufficient tyre inflation pressure - right front - do not continue" accompanied by a buzzer dependent on the "priority 0" fault logic (See 5560).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the signalling cycle is over only the warning light remains activated in the panel until the correct pressure is restored.</p><center><img src="images/jpg/199003480_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A: - Warning light in comfort control panel (medium) together with the message: "Insufficient tyre inflation pressure, left front: do not continue"</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B: - Warning light in matrix control panel (high) together with the message: "Insufficient tyre inflation pressure, left front: do not continue"</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a fault in the tyre pressure control unit, the "general failure" warning light comes on and the corresponding alphanumerical display shows "Tyre monitoring system not available".</p><center><img src="images/jpg/844007029_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A: - Warning light in comfort control panel (medium) together with the message: "Tyre pressure monitoring not available"</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B: - TPMS symbol in matrix control panel (high) together with the message: "Tyre pressure monitoring not available"</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This takes place in the following cases:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- fault in the control unit wiring and circuit;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- no signal received from one or more sensors (sensor battery run down, faulty, broken)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- TPMS control unit faulty</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- one or more aerials (initiators) faulty</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- use of one or more wheels without sensors (e.g. with snow tyres).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The display takes place about 12 minutes after the fault is detected.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The display occurs when the CAN message is received if and only if the vehicle speed is above 20 km/h for longer than 30 seconds.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">System not programmed: if the tyre pressure control unit has not been programmed, the TPMS warning light/symbol will come on in accordance with the following modes.</p><center><img src="images/jpg/199003482_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A: - Warning light flashing in comforf panel (medium)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B: - Symbol on in matrix panel (high)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">System disabled: the system can be disabled on the customer''s request if the vehicle equipped with a TPMS system has tyres without pressure sensors (e.g. winter tyres). In this case the control panel will not provide a TPMS signal. When the customer fits new wheels with sensors, they should go to a Fiat Dealership who will restore the operation of the system.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To disable the system, give the appropriate command to the control unit using the Examiner (obviously, at the key-on), then, in order to ensure that the operation is successful, wait at least 10 seconds before removing the key (key-off, a manoeuvre required for the command to be received), otherwise the procedure will not be successful and the control unit will not be disabled.</p><h3 class="bigtext3">Tyre pressure control unit (cpp)</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The CPP is connected to the rear wiring by means of a bridge.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The receiver electronics is housed in a plastic casing that is not screened against RF.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fastenings allow the control unit to be fitted securely in position (preventing rotation).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The CPP is an electronic component which, connected to the B-Can serial line, manages the tyre pressure control function; the fault diagnosis is managed using the same serial line (B-Can).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The system is also capable of diagnosing the operation of each sensor and the entire system. It detects:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- faults in the control unit wiring and circuit;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- no signal received from one or more sensors;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- faults in the actual control unit;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- one or more aerials (initiators) faulty.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a break in the control unit power supply, the new sensor ID codes should not be stored in the control unit memory; the IDs and the position of the sensors, as well as the error codes (fault diagnosis) remain stored in the control unit EEPROM.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONTROL UNIT PIN OUT</p><center><img src="images/jpg/194003700_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Power supply +30</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. L.F. transmitter power supply</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Left rear L.F. transmitter signal</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Left front L.F. transmitter signal</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Right front L.F. transmitter signal</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Right rear L.F. transmitter signal</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. N.C.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Can_L_Bus</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Can_H_Bus</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. Earth</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. N.C.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. L.F. transmitter earth</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13. L.F. transmitter earth</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14. L.F. transmitter earth</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15. L.F. transmitter earth</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16. Supply controlled by ignition (+15)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17. N.C.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18. N.C.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">CONTROL UNIT REPLACEMENT</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the CPP is being replaced, the following operations must be carried out:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- programming of the nominal pressure values for the front and rear axles with medium and heavy loads (or at low and high speed), in accordance with the instructions in the Owner''s Handbook for the vehicle depending on the version;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- set the programmed control unit bit “TyrePressureSysProgrammedSts=0”;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- set the enabled control unit bit “TPMSActivitySts=0”;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- carry out a key-off/key-on manoevure;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- make a journey with the vehicle at a speed above 20 km/h for at least 4 minutes to allow the self-learning of the sensor IDs.</p><h3 class="bigtext3">Tyre inflation pressure sensors</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensors are located inside the wheel rims in place of the normal tyre inflation valve.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensors have the function of checking the value of the pressure and tempearture of each of the tyres and transmitting the information via a radiofrequency signal (433.92 MHz) to the control unit/receiver.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensors measure the pressure and the temperature inside the tyre by means of dedicated pressure and temperature sensors which are combined with electronics for acquiring and processing the signals and are equipped with a section designed for transmitting these signals at a radiofrequency of 433.92 MHz.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sensor assembly is supplied by a 3.6 V lithium battery that lasts 10 years in normal usage conditions.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the battery for one or more sensors is run down, DTC control unit errors are set in the memory detailing poor battery charge conditions.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The failure is not necessarily displayed in the control panel.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">There is a certain operating margin for the sensors from when the DTC in question is set.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The failure is only set when the transmission is definitively adversely affected (for example, as a result of the battery being EXTREMELY run down).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the sensor for a run down battery is replaced, it is advisable to check the others (through reading the DTCs) because they will probably be in a similar condition to the one run down.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">COMPOSITION</p><center><img src="images/jpg/194002948_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Nut</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Valve cover</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Valve</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Sensor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Valve opening</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Square section bolt</p><center><img src="images/jpg/194002949_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Nut</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Valve cover</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Valve</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Sensor</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Square section bolt</p><h3 class="bigtext3">Programming the sensor ids in the control unit</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the case of:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- replacing a sensor;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- changing the position of a wheel (e.g. swapping front - rear) the procedure described must be carried out in order to memorize the sensor ID code in the control unit so that the control unit can recognize them as belonging to the system and consequently managing the RF signals coming from them. This procedure should be carried out using the diagnostic equipment (Examiner) or through the self-learning procedure which consists of driving the vehicle at more than 20 km/h for at least four minutes to allow the self-learning of the sensor IDs.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Using this routine this identification code can then be written inside the control unit memory. In this way the control unit recognizes transmissions coming from the new sensor and manages them correctly.</p><h3 class="bigtext3">Aerial (transmitter)</h3><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The aerials are fitted on the body in the wheel housings. Their task is to initialize the pressure sensors fitted on the wheels. At the key on they transmit a 125 kHz signal to the sensors which receive the signals and, in turn, transmit them to the TPMS control unit modulated in AM at a frequency of 433.82 MHz.</p><center><img src="images/jpg/194002950_2.jpg" border="0"></center><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Earth</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Signal</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Power supply</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939008009&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:37:54 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

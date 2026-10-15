@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925566&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:57:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925566&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="d3rPaOvb3VZ4ga6qtGC3CcAerBDRSHLf7/x53hjbmkJcvxgtjQsHwARi3MF7XRWJs7ueurUthH5qJv4oGhBDXFSHkFX/a4UpalkxRD+RZ2gq7UouGPjTPUwY3CxcOYE6gG7a1JH7K/kHvPF3VT8agGHSrvXrgDzgbKASuH/PxZ5Kxd4sojpLzfJu2BM99qEeIlDnw+7dP1KpNfTORAIClpZQ1nnvD7mWsWGVK3SYUy1Zi7KMYQYH5EKaiFln94ctuOsCPkqs3nqAXzwIyedXJH7Oi1XW2O3EsYA5od9N7RHGlx0Kc8evodmN5dcWysWN3jH31reHKRrmM3wEpZteTWGarxnl92KjfJ0In+KFS9wkzMiVi/6IoyneoccGDY3RQ/TgmwFLTaDZlULRQdel9fVfCbFn3+DW3MXt2F8/svfgN3SC4nwCMZmMlAxlqCLOoNAARtVxEvjnCIgOPONVjZ/QPXqSiG+uoXpns60vYtfywODmB3zl70cM1vdMok+VkY4i970uFMJlmeCz3q0pYPOehyld6MgUD+WrICnZQrkLWp8/dkhGWlUjYgd+bE7L" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 09/03/2010</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Alfa 159</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>All models</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">41</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">01.10</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>4130 1 261 MA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>POWER STEERING SYSTEM </b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Power steering pump noise / steering wheel vibration / oil flowing out from the reservoir - Service Solution</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cancels and replaces SN 41.04.09 of 18/06/2009 due to the addition of chassis with modification implemented and use of a new power steering system reservoir oil.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">FAULT COMPLAINED OF</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Customer complains of one or more of the following problems:</p>-noise from power steering pump (in particular during cold starting at low outside temperatures for more than one minute).-steering wheel vibration-oil spilling out from the reservoir<h1 class="bigtext1">TECHNICAL CAUSE</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In certain conditions, the following may occur:</p>-the cavitation of the power steering pump;-extraction of the internal bushing of the oil inlet filler to the power steering oil reservoir.<h1 class="bigtext1">OPERATIONS IN PRODUCTION</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. use of new power steering oil.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. implementation of new power steering oil reservoir.</p><h1 class="bigtext1">IPLEMENTATION OF MODIFICATION</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Use of new power steering oil.</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Version</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Factory</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Line</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Chassis No.</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Organisation No.</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All models in question</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pomigliano</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7200003</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7156724</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Implementation of a new power steering oil reservoir.</p><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Version</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Factory</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Line</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Chassis No.</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Organisation No.</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All models in question</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Pomigliano</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7266240</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7222461</p></td></tr></table><h1 class="bigtext1">OPERATIONS IN NETWORK</h1><h1 class="bigtext1">Network behaviour standards towards the Customer</h1>-Once the customer''s claimed fault is confirmed, reassure the Customer that it can be solved by replacing the power steering oil (Tutela GI/E) with new Tutela GI/R type oil (recognisable as it is green) and (on the 1.9 JTDM 8v/16v, 2.0 JTDM, 3.2 V6 versions only) the power steering oil reservoir.-After the operation show the Customer what has been done and make sure he is satisfied.<h1 class="bigtext1">Service Solution</h1><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the customer''s claimed fault is confirmed, change oil in the power steering or in the oil reservoir, or the oil in both components, as described in the Operating Cycle below:</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For 2.4 JTDM version only, check the crankshaft pulley, to check for the correct conditions.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If cracks or damage are found on the rubber damper, this is a possible cause of the steering wheel vibration and the component must be replaced with a new pulley, part no. 55217328, from the Spare Part Dpt., with reference to Op. 1092A10 of the Service Manual.</p></p></span></td></tr></table><h1 class="bigtext1">OPERATION CYCLE</h1><h2 class="bigtext2">A - power steering oil replacement</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>(for all versions: up to chassis 7200002).</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With the engine running, loosen the power steering oil reservoir cover and check that the surface of the oil inside does not show ripples; with the help of a second operator, accelerate and decelerate while checking the surface conditions: during acceleration and deceleration, the surface must rise or lower gradually, depending on the rpm, without high turbulence. In this case, change only the power steering oil, as described below.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the surface shows signs of turbulence, bubbles or emulsified oil, proceed, only for 1.9 JTDM 8v/16v, 2.0 JTDM and 3.2 V6 versions, to change the power steering oil reservoir, as shown in Op. 4130B10 of the Service Manual, with the new reservoir no. 51880990 from the Spare Part Dpt.</p></p></span></td></tr></table><table class="nota"><tr><td><img border="0" src="images/jpg/769_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On all versions, change the power steering oil (Tutela GI/E, "red") with the new oil <b>Tutela GI/ R</b> type ("green"). Please note that the oil used before (Tutela GI/E) and the new oil Tutela GI/R <b>CANNOT BE</b> mixed, therefore when the new oil is added, the power steering system should be thoroughly cleaned.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Change the power steering oil proceeding as follows:</p>-Position the vehicle on a lift;-Use a syringe to empty the power steering oil reservoir;-Loosen the bands and remove the pipes (1 - Fig. 1) from the reservoir (2);<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 1</b></p><center><img src="images/jpg/939008871_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul>-Lift the car, remove the under-engine guard, with reference to Op. 7055B54;<table class="nota"><tr><td><img border="0" src="images/jpg/769_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In the event of dirty areas, clean the pipes and the surrounding areas thoroughly before removal.</p></p></span></td></tr></table>-Disconnect the high pressure lines (1 - Fig. 2) and low pressure lines (2) from the power steering box;<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 2</b></p><center><img src="images/jpg/939008872_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul>-With the front wheels raised off the ground, carry out five complete steering wheel rotation cycles (right and left) until the oil contained in the power steering box is drained.-Completely drain any remaining oil in the high and low pressure pipes by blowing through with compressed air;-Wash the pipes with the new power steering oil (GI/R);-Drain the pipes by blowing through compressed air.-Clean the high and low pressure pipe connectors and replace the relevant gaskets;-Tighten the high pressure line fastening filler (1 - Fig. 2) to the power steering box and tighten to the torque of 3.6 ÷ 4.4 daNm;-Tighten the low pressure pipe fastening filler (2 - Fig. 2) to the power steering box;-Reconnect the previously removed pipes to the reservoir and tighten the retaining bands;-Refill the system through the reservoir using the new GI/R type power steering oil;-Then, bleed the air from the circuit by carrying out 4-5 complete steering wheel rotation cycles (right and left and vice versa) with the engine off and the front end raised off the ground.-Restore the oil level in the reservoir;-Carry out a further 4-5 steering wheel rotation cycles with the engine running and the wheels resting on the ground;-Refit the under-engine guard, with reference to Op. 7055B54;-After bleeding the air check the level of the power steering oil again and, if necessary, top it up so that the level is at the MAX. mark on the dipstick.-Apply an adhesive label to the reservoir with the words Tutela GI/R on it and alter Tutela GI/E to Tutela GI/R in the Fluids and Lubricants chapter in the Owner Handbook.<h2 class="bigtext2">B - replacement of the power steering oil reservoir only</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>(for 1.9 JTDM 8v/16v, 2.0 JTDM and 3.2 V6 versions).</b></p>-Check that there is a white mark in the upper part of the reservoir, in the area shown in Fig. 3.<table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If <b>there is</b> a white mark, continue the troubleshooting on the other power system components.</p></p></span></td></tr></table>-If there is no white mark, proceed as follows.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 3</b></p><center><img src="images/jpg/939008873_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul>-Position the vehicle on a lift;-Draw off the power steering oil using a suitable syringe;-Loosen the bands (1 - Fig. 4) and disconnect the two oil delivery and return pipes from the reservoir;<table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reservoir does not need to be removed.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 4</b></p><center><img src="images/jpg/939008874_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Check the correct position of the brass reinforcement bushing (1 - Fig. 5) inside the reservoir filler:</p>-case (A) - bushing NOT visible, correct position (OK);-case (B) bushing visible, wrong position: reservoir non compliant (KO)<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 5</b></p><center><img src="images/jpg/939008875_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the brass bushing is in the correct position "OK" (A - Fig. 5), reconnect the oil delivery and return pipes and continue with the troubleshooting on other power steering system components.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the bushing position is "KO" (B - Fig. 5), replace the reservoir with a new one, as described below (in any case, check for the presence of the marking as shown in Fig. 3).</p></p></span></td></tr></table>-Complete the removal of the reservoir by loosening the fixing nuts (2 - Fig. 4) and removing the reservoir;-Position the new reservoir part no. 51880990 and fasten it with the fixing nuts (2 - Fig. 4);-Reconnect the previously removed pipes and fasten them with the bands;-Fill the reservoir and the system;<table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On cars with chassis no. up to 7200002, change the power steering oil (Tutela GI/E, "red") with the new <b>Tutela GI/ R</b> type oil ("green"), working as described in paragraph A above.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On cars with chassis number starting from no. 7200003 the system should not be drained; restore, through the reservoir, the power steering oil correct level using new "<b>Tutela GI / R</b>" oil.</p></p></span></td></tr></table>-Then, bleed the air from the circuit by carrying out 4-5 complete steering wheel rotation cycles (right and left and vice versa) with the engine switched off and the front end raised off the ground;-Restore the oil level in the reservoir;-Carry out a further 4-5 steering wheel rotation cycles with the engine running and the wheels resting on the ground;-After bleeding the air check the level of the power steering oil again and, if necessary, top it up so that the level is at the MAX. mark on the dipstick.<h1 class="bigtext1">AVALABILITY OF PARTS</h1><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Versions</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Description</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Part No.</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Q.ty</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTDM 8v/16v, 2.0 JTDM and 3.2 V6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Tank</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">51880990</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All models in question</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Gasket (12-mm opening)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10298460</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 (*)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All models in question</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Gasket (14-mm opening)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10261160</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 (**)</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) Every pack contains 10 gaskets</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(**) Every pack contains 60 gaskets</p><h1 class="bigtext1">CLAIM REPORT DATA</h1><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Version</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Operation</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Piece</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fault</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Position</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Time allowance</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">All models</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4130126 (*)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MA</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.50 (*)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTDM 8v/16v, 2.0 JTDM and 3.2 V6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4130132 (**)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MA</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.55 (**)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1.9 JTDM 8v/16v, 2.0 JTDM and 3.2 V6</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4130133 (***)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MA</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">-</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0.45 (***)</p></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) Operation Code and Time Allowance for oil change only</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(**) Operation Code and Time Allowance for oil change and reservoir replacement</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(***) Operation Code and Time Allowance for reservoir replacement only</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925566&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:57:20 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

@@ -1,0 +1,929 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939008017&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi+per+DTC&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:11:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939008017&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi+per+DTC&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="OFRbEChTAd4wx3bwsYespkVEpn3zVgmOL6RjOOYx55YrumLyPLQbwoDkUUYqgB4BO2/cFGbCXZQP09nSKFP3CE2QCIpQKobDnlY9K6njY3n7mcsWfaVDQ79TgxnKk3/5hSfpFrhEbpk5yH9qGQqOWE8v9EOJW/TBZmLZaJnvmUg1EevkJlln/tjiKz1n/BORl7FefEPFQCABZHMJLYd/ttndifOJzAcwHCWmT6YH5aCG+EbRlTJA4deCvVxIODFUxLPPECs0VUw+R+cBMHVpLGv1CLn9GGE/niDvnKQR5/OaLv9WBSnPYYjIAIhtaTnxeJEGs5hhDnFQLdzKI/Aa+gXyXVyy3SJyznu2wyHPapLqmo2z67hWwbgkbRwm6JRpl443UG1h9gjsnJkY9t8RJuMObYiTyE2jWWWRhioMkV6UavbBqH2pS3C6Go7WHGsd/y+odIh867+CM7KlQddCCHRGZm9zbafBIu5coud3s2iomHnHVB1lIn8W3mR2tSVoSnR50WHELiZBZDU4IfFgL2R2j4x6DmVXSyVTzggbWhyKoLrrQhpJ4H2ZUUBB+nXAPUTS/LG7lWWyQDcyHi1Pz5Tn2odFWSqzh49J80ssQC80BBiqkiuD/70ioMcj8ZAoWAMOKf2GF2ksNdmb/GghsoOgDCF1M3S7eHGEQeqwNcQcPkECMiEZ+fNqg5PpaT5OFJcjkXpSNyR49CBWgKLM03Wx1Z1lAO605/muSU7aaDTfxPIRPmZOGRALiGHEVs9thCWVJup3Uaa4Ne3L16BniJ/WpgKBAmJKyclxT4CULOBYDIr72ujckO4R03KgZSyF" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspBosch Diesel Injection EDC16C39 CF4/EOBD (eng. 1.9/2.4)&nbsp&nbsp&nbsp669&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+	    
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+	<tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_0" class="nav" href="main3aa8.html?nodeID=939008018&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0016</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_0" class="nav" href="main3aa8.html?nodeID=939008018&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Timing/revs synchronisation</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_1" class="nav" href="mainef42.html?nodeID=939008019&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0087</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_1" class="nav" href="mainef42.html?nodeID=939008019&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Press. on injector support</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_2" class="nav" href="main185b.html?nodeID=939008020&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0088</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_2" class="nav" href="main185b.html?nodeID=939008020&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Press. on injector support</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_3" class="nav" href="main2d08.html?nodeID=939008021&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0100</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_3" class="nav" href="main2d08.html?nodeID=939008021&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Air flow meter</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_4" class="nav" href="main3453.html?nodeID=939008022&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0101</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_4" class="nav" href="main3453.html?nodeID=939008022&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Air flow meter signal</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_5" class="nav" href="main22f7.html?nodeID=939008023&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P010F</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_5" class="nav" href="main22f7.html?nodeID=939008023&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Air mass/air flow meter incongruence</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_6" class="nav" href="main4a8d.html?nodeID=939008024&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0110</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_6" class="nav" href="main4a8d.html?nodeID=939008024&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Air flow meter air temp. signal</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_7" class="nav" href="main101a.html?nodeID=939008025&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0111</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_7" class="nav" href="main101a.html?nodeID=939008025&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Air flow meter air temp. signal</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_8" class="nav" href="maine2bb.html?nodeID=939008026&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0120</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_8" class="nav" href="maine2bb.html?nodeID=939008026&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Accelerator pedal sensor 1</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_9" class="nav" href="main8f9d.html?nodeID=939008027&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0122</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_9" class="nav" href="main8f9d.html?nodeID=939008027&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Accelerator pedal connector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_10" class="nav" href="main0413.html?nodeID=939008028&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0168</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_10" class="nav" href="main0413.html?nodeID=939008028&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Limitat. for fuel high temp.</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_11" class="nav" href="main95b4.html?nodeID=939008029&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0180</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_11" class="nav" href="main95b4.html?nodeID=939008029&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Diesel temperature sensor</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_12" class="nav" href="mainf1ae.html?nodeID=939008030&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0190</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_12" class="nav" href="mainf1ae.html?nodeID=939008030&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Fuel high pressure sensor</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_13" class="nav" href="mainf826.html?nodeID=939008031&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0191</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_13" class="nav" href="mainf826.html?nodeID=939008031&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Fuel high pressure signal</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_14" class="nav" href="mainfe7f.html?nodeID=939008032&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0201</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_14" class="nav" href="mainfe7f.html?nodeID=939008032&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Cylinder 1 injector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_15" class="nav" href="main0b3a.html?nodeID=939008033&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0202</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_15" class="nav" href="main0b3a.html?nodeID=939008033&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Cylinder 2 injector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_16" class="nav" href="main1cc6.html?nodeID=939008034&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0203</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_16" class="nav" href="main1cc6.html?nodeID=939008034&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Cylinder 3 injector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_17" class="nav" href="maina144.html?nodeID=939008035&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0204</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_17" class="nav" href="maina144.html?nodeID=939008035&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Cylinder 4 injector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_18" class="nav" href="maindc04.html?nodeID=939008036&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0205</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_18" class="nav" href="maindc04.html?nodeID=939008036&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Cylinder 5 injector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_19" class="nav" href="maina432.html?nodeID=939008037&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0219</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_19" class="nav" href="maina432.html?nodeID=939008037&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Engine speed high</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_20" class="nav" href="maina23c.html?nodeID=939008038&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0220</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_20" class="nav" href="maina23c.html?nodeID=939008038&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Accelerator pedal sensor 2</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_21" class="nav" href="main73b8.html?nodeID=939008039&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0230</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_21" class="nav" href="main73b8.html?nodeID=939008039&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Fuel pump relay command</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_22" class="nav" href="main0c7f.html?nodeID=939008040&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0234</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_22" class="nav" href="main0c7f.html?nodeID=939008040&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Supercharging pressure</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_23" class="nav" href="main0e4a.html?nodeID=939008041&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0235</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_23" class="nav" href="main0e4a.html?nodeID=939008041&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Boost pressure sensor</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_24" class="nav" href="main4f8e.html?nodeID=939008042&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0237</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_24" class="nav" href="main4f8e.html?nodeID=939008042&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Turbo pressure</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_25" class="nav" href="maineb27.html?nodeID=939008043&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0238</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_25" class="nav" href="maineb27.html?nodeID=939008043&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Turbo pressure</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_26" class="nav" href="mainf0e6.html?nodeID=939008044&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0262</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_26" class="nav" href="mainf0e6.html?nodeID=939008044&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Cylinder 1 injector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_27" class="nav" href="mainea30.html?nodeID=939008045&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0265</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_27" class="nav" href="mainea30.html?nodeID=939008045&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Cylinder 2 injector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_28" class="nav" href="main5dec-2.html?nodeID=939008046&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0268</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_28" class="nav" href="main5dec-2.html?nodeID=939008046&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Cylinder 3 injector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_29" class="nav" href="maina3d5-2.html?nodeID=939008047&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0271</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_29" class="nav" href="maina3d5-2.html?nodeID=939008047&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Cylinder 4 injector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_30" class="nav" href="mainb890.html?nodeID=939008048&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0274</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_30" class="nav" href="mainb890.html?nodeID=939008048&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Cylinder 5 injector</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_31" class="nav" href="main32bf.html?nodeID=939008049&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0335</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_31" class="nav" href="main32bf.html?nodeID=939008049&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Rpm sensor</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_32" class="nav" href="main94c1.html?nodeID=939008050&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0340</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_32" class="nav" href="main94c1.html?nodeID=939008050&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Phase sensor</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_33" class="nav" href="mainb648.html?nodeID=939008051&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0380</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_33" class="nav" href="mainb648.html?nodeID=939008051&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Preheating unit control</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_34" class="nav" href="maincca1.html?nodeID=939008052&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0401</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_34" class="nav" href="maincca1.html?nodeID=939008052&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">EGR valve</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_35" class="nav" href="mainaa11.html?nodeID=939008053&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0402</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_35" class="nav" href="mainaa11.html?nodeID=939008053&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">EGR valve</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_36" class="nav" href="main4005.html?nodeID=939008054&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0403</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_36" class="nav" href="main4005.html?nodeID=939008054&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">EGR valve</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_37" class="nav" href="maine42e.html?nodeID=939008055&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0503</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_37" class="nav" href="maine42e.html?nodeID=939008055&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Vehicle speed incoherence</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_38" class="nav" href="main7f6a.html?nodeID=939008056&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0606</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_38" class="nav" href="main7f6a.html?nodeID=939008056&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Control Unit faulty (Microprocessor)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_39" class="nav" href="maind522.html?nodeID=939008057&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0638</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_39" class="nav" href="maind522.html?nodeID=939008057&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Throttle valve control</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_40" class="nav" href="maindaa6.html?nodeID=939008058&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0641</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_40" class="nav" href="maindaa6.html?nodeID=939008058&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Sensor power supply 1</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_41" class="nav" href="maina468.html?nodeID=939008059&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0651</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_41" class="nav" href="maina468.html?nodeID=939008059&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Sensor power supply 2</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_42" class="nav" href="main9f48.html?nodeID=939008060&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0683</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_42" class="nav" href="main9f48.html?nodeID=939008060&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Preheating control unit (feedback)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_43" class="nav" href="main530e.html?nodeID=939008061&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0685</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_43" class="nav" href="main530e.html?nodeID=939008061&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Main relay</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_44" class="nav" href="main7567.html?nodeID=939008062&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0697</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_44" class="nav" href="main7567.html?nodeID=939008062&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Sensors 3 power supply</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_45" class="nav" href="main6722.html?nodeID=939008063&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P0778</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_45" class="nav" href="main6722.html?nodeID=939008063&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Fuel press. (high press. pump output or injector support)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_46" class="nav" href="main084d.html?nodeID=939008064&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P1205</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_46" class="nav" href="main084d.html?nodeID=939008064&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Particulate filter</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_47" class="nav" href="main45ee.html?nodeID=939008065&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P1206</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_47" class="nav" href="main45ee.html?nodeID=939008065&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Particulate filter</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_48" class="nav" href="maincc2c.html?nodeID=939008066&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P1612</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_48" class="nav" href="maincc2c.html?nodeID=939008066&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Fuel filter heat. relay command</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_49" class="nav" href="main8909.html?nodeID=939008067&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2002</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_49" class="nav" href="main8909.html?nodeID=939008067&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Particulate filter (2nd clogg. level exceeded)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_50" class="nav" href="mainfe87.html?nodeID=939008068&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2008</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_50" class="nav" href="mainfe87.html?nodeID=939008068&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Flow shutter valve</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_51" class="nav" href="mainf282.html?nodeID=939008069&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2009</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_51" class="nav" href="mainf282.html?nodeID=939008069&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Flow shutter valve</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_52" class="nav" href="mainc3f6.html?nodeID=939008070&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2010</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_52" class="nav" href="mainc3f6.html?nodeID=939008070&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Flow shutter valve</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_53" class="nav" href="main174b.html?nodeID=939008071&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2011</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_53" class="nav" href="main174b.html?nodeID=939008071&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Flow shutter valve</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_54" class="nav" href="main373a.html?nodeID=939008072&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2012</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_54" class="nav" href="main373a.html?nodeID=939008072&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Flow shutter valve</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_55" class="nav" href="main65b0.html?nodeID=939008073&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2013</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_55" class="nav" href="main65b0.html?nodeID=939008073&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Flow shutter valve</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_56" class="nav" href="main0c6c.html?nodeID=939008074&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2014</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_56" class="nav" href="main0c6c.html?nodeID=939008074&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Flow shutter valve (feedback)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_57" class="nav" href="maine91e.html?nodeID=939008075&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2015</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_57" class="nav" href="maine91e.html?nodeID=939008075&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Flow shutter valve (feedback)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_58" class="nav" href="main81e9.html?nodeID=939008076&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2080</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_58" class="nav" href="main81e9.html?nodeID=939008076&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Temp. sensor on precatalys. output</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_59" class="nav" href="maina86a.html?nodeID=939008077&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2081</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_59" class="nav" href="maina86a.html?nodeID=939008077&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Temp. sensor on precatalys. output</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_60" class="nav" href="mainb5b0.html?nodeID=939008078&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2084</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_60" class="nav" href="mainb5b0.html?nodeID=939008078&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Temp. sens. on partic. filter input</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_61" class="nav" href="maine9fe.html?nodeID=939008079&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2085</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_61" class="nav" href="maine9fe.html?nodeID=939008079&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Temp. sens. on partic. filter input</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_62" class="nav" href="maindcda.html?nodeID=939008080&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2100</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_62" class="nav" href="maindcda.html?nodeID=939008080&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Motorised throttle</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_63" class="nav" href="main28ab.html?nodeID=939008081&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2101</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_63" class="nav" href="main28ab.html?nodeID=939008081&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Motorised throttle</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_64" class="nav" href="main96dc.html?nodeID=939008082&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2107</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_64" class="nav" href="main96dc.html?nodeID=939008082&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Motorised throttle</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_65" class="nav" href="main3198.html?nodeID=939008083&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2108</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_65" class="nav" href="main3198.html?nodeID=939008083&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Motorised throttle</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_66" class="nav" href="maincab0.html?nodeID=939008084&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2111</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_66" class="nav" href="maincab0.html?nodeID=939008084&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Motorised throttle</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_67" class="nav" href="main93ad.html?nodeID=939008085&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2112</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_67" class="nav" href="main93ad.html?nodeID=939008085&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Motorised throttle</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_68" class="nav" href="main4067.html?nodeID=939008086&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2135</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_68" class="nav" href="main4067.html?nodeID=939008086&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Accelerat. pedal potent. (feasibility)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_69" class="nav" href="mainbbb1.html?nodeID=939008087&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2146</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_69" class="nav" href="mainbbb1.html?nodeID=939008087&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Group 1 injectors control</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_70" class="nav" href="mainf681.html?nodeID=939008088&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2148</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_70" class="nav" href="mainf681.html?nodeID=939008088&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Group 1 injectors control</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_71" class="nav" href="main6032.html?nodeID=939008089&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2149</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_71" class="nav" href="main6032.html?nodeID=939008089&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Group 2 injectors control</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_72" class="nav" href="main3e3f.html?nodeID=939008090&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2151</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_72" class="nav" href="main3e3f.html?nodeID=939008090&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Group 2 injectors control</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_73" class="nav" href="main61f6.html?nodeID=939008091&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2226</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_73" class="nav" href="main61f6.html?nodeID=939008091&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Atmospheric press. sensor</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_74" class="nav" href="main748a.html?nodeID=939008092&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2264</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_74" class="nav" href="main748a.html?nodeID=939008092&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Water in diesel filter sensor</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_75" class="nav" href="main7807.html?nodeID=939008093&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2293</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_75" class="nav" href="main7807.html?nodeID=939008093&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Fuel press. (high press. pump input regulat. and injector support)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_76" class="nav" href="main010c.html?nodeID=939008095&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2453</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_76" class="nav" href="main010c.html?nodeID=939008095&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Differential pressure sensor signal</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_77" class="nav" href="main5504.html?nodeID=939008096&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2455</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_77" class="nav" href="main5504.html?nodeID=939008096&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Differential pressure sensor</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_78" class="nav" href="main6e42.html?nodeID=939008097&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">P2620</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_78" class="nav" href="main6e42.html?nodeID=939008097&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">Motorised throttle (feedback)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_79" class="nav" href="mainab90.html?nodeID=939008098&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">U1706</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_79" class="nav" href="mainab90.html?nodeID=939008098&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">CAN network (NCM - NFR)</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_80" class="nav" href="mainf02c.html?nodeID=939008099&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">U1711</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_80" class="nav" href="mainf02c.html?nodeID=939008099&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi%20per%20DTC&amp;validityName=2.4%20JTD%2020V" target="_parent">CAN Network (NCM - NCA)</a></TD>
+				</td>
+	</tr>
+</table></P>
+
+	</body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939008017&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi+per+DTC&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:11:32 GMT -->
+</HTML>

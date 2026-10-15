@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011102&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 03:16:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011102&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Procedure&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="E0IRMbbzQ7GCN7TjuM+/Af2I8+EjZkyTxs64PORCj3ShXwtJFNt7Wrulni22hlU3SSrWqU4aWNeVqDiGI0ZFCqLCRzBuNPJK0wxrnWqeOwfUF8iRgtfXE3WYwjqZ/1u/0YUJhlltbOj0Klxym1wnOA63318mtvvEsHIMnY9WP3TgxXIpezKyqRCAs7auILxYwuhd2vBijCOzXKC6mv5ZzIxDBQI7Zoy3p7K3Ag2mUzW54WfMRGEvu5H7q9AkZVGhvmxmgfncJhc68qgau7K6BS6GtQziVdMYG4EEJqViybCQbcy98xlq6hWJ02Z6NybwMMIxVU9lwnzfkkJ5EpSVtMT44SXwL9n8CcWsAAL/oxo1fRC48d77nHEG3konhlG3UXQKeg4HgOkDjNLetepQeX484jbFOPUhtg9ubarBaEAwghJrWGiB3NYZ3arsZxR/+BjjizYdjS6Ot/wYF5TfGDn7lxGRZg/c3Frx6X0F0928bV0L6iUBx8oHIBW2f/+klNw4tHrglaZTOYvYz948sva0XjUlM4A4GO76U0nRW6WcfU4IgZIkuq54POgHiJcBkksFDgsfogkQesBK8tU3P0mM+dFwJKap/MYwpRk3cP/5dP30wZxabJ6ninxdbF5j0k3fOAN9WSJv0zvg/JiW7aPiDWPuRPibZxzPg+pbHaM8pkOx019VsP8GNirkvFZi7Oz+L4Sjtxnc69XXoJsT6KgdhsajVFFPSGR8lOgWOKb6JZtkQEvfbE7GqojxZaXTyxqGaObjU3TPujguO5nQZN/JjxkfGOGUikSC87fnvs45g9HNcMHRMOujC6ieuLk4lonboS1qW6lDtb+SX3sDJCWEsXPgulhMIPUG0cxZHOVB4UTSM3w+gaFI3IvfFJ1ghIli8vGUM41sYbrFPyas04VkZlg0hea/qdc5mVTlG0U=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="SPHbSZTZoRmM4B3bwp2bTwzdp8gjfiee9rP1U1u0yCeVxloqdsYxfqBMwrJ6kLNxpZ/+GgK7XT8P+blkfRshS8pWh/5NPsUl/69q6stsjRUQce1Jx5AdKMX3IyjZWYb9" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspANTITHEFT DEVICE - GENERAL REMARKS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="gruppofase">
+      <tr>
+        <td valign="top" align="right" width="250px">
+          <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+        </td>
+        <td valign="top">
+          <h1 class="bigtext1">PROGRAMMING THE ELECTRONIC KEY (TEG)</h1>
+          <p class="contents_testonormale ">The electronic key is programmed at end of line together with the ALFA CODE.</p>
+          <p class="contents_testonormale ">During the vehicle''s lifetime, it is possible to make the TEG Reader (NTR) learn new keys, e.g. if ELECTRONIC KEYS (TEGs) are added or deleted.</p>
+          <p class="contents_testonormale ">Upon each new programming procedure, all the Electronic Keys not presented during the above procedure (for the removal of lost keys) are cleared from the memory.</p>
+          <p class="contents_testonormale ">Upon each new programming procedure, all the Electronic Keys not presented during the above procedure (for the removal of lost keys) are cleared from the memory.</p>
+          <h2 class="bigtext2">Procedure for storing an electronic key teg</h2>
+          <p class="contents_testonormale ">The TEG storage procedure is managed by the Diagnostic instrument (Examiner) and can be activated only by entering the ELECTRONIC CODE (shown on the CODE CARD).</p>
+          <p class="contents_testonormale ">The procedure consists of learning the TEG codes and involves secret codes being received by the TEG Reader and then stored. During the procedure, the codes are stored permanently in the TEG Reader EEPROM memory.</p>
+          <p class="titolo_lista">Once the procedure is activated, the flow is as follows:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">the Diagnostic instrument commands the TEG Reader to initialise the TEG learning procedure and confirms this to the operator;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">the operator enters the first TEG to be stored;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">the TEG Reader receives the secret code and the ID of the ELECTRONIC KEY (TEG) and learns it;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">the Diagnostic instrument confirms that learning has taken place;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">the previous stages are repeated for each TEG that must be learned, up to a maximum of 8;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">once the TEGs have been learned, the operator asks the Diagnostic instrument to store them: the Diagnostic instrument commands the TEG Reader to store the TEGs learnt.</p>
+            </li>
+          </ul>
+          <p class="contents_testonormale ">Only TEGs learned during the procedure are stored in the EEPROM. Any TEGs no longer presented will not be stored.</p>
+          <h1 class="bigtext1">CODE SYSTEM COMPONENT MANAGMENT</h1>
+          <p class="contents_testonormale ">There is a centralized DATA BASE (for all markets) managed by the FIAT PARTS DIVISION for ordering all CODE system components.</p>
+          <p class="contents_testonormale ">The production plant transfers all the necessary data into this data base together at the time of vehicle production.</p>
+          <p class="contents_testonormale ">FIAT PARTS then uses this data base for ordering components that need replacing by the Dealer Network.</p>
+          <p class="titolo_lista">The data base contains numerous pieces of information, such as:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">vehicle chassis no.;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">secret code;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">code of each ELECTRONIC KEY (TEG);</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">emergency key mechanical code;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Programming data</p>
+            </li>
+          </ul>
+          <p class="contents_testonormale ">If one of the CODE system components needs replacing and is being ordered, follow the procedure described below.</p>
+          <h2 class="bigtext2">Lost teg</h2>
+          <p class="contents_testonormale ">Ask the Customer for all the remaining TEGs in their possession.</p>
+          <p class="contents_testonormale ">The Customer must prove that he or she is the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="titolo_lista">The codes of the lost TEGs must be cleared from the memory of the TEG Reader: proceed as follows:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Connect the Tester to the tester output on the vehicle.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Set the TEG Reader to PROGRAMMING mode.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">enter the TEGs still in the driver''s possession into the TEG Reader.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">End PROGRAMMING mode; the IDs of any TEGs not presented will be cleared from the TEG Reader memory.</p>
+            </li>
+          </ul>
+          <p class="contents_testonormale ">At the end of the procedure, print a table showing the identification code/s still enabled.</p>
+          <p class="contents_testonormale ">If no printer is available, transcribe the codes from the screen to the FIAT PARTS system form.</p>
+          <p class="contents_testonormale ">Only if the Body Computer already contains 8 ELECTRONIC KEYS (TEGs) send the codes to Fiat Parts to update the DATABASE.</p>
+          <h2 class="bigtext2">Request for a new teg</h2>
+          <p class="contents_testonormale ">Use the Personal Computer supplied to log onto Fiat Parts. Enter the chassis no. of the customer''s car, the model code and set up a VOR order to request a new TEG (entering the part number) and specify the quantity.</p>
+          <p class="contents_testonormale ">Note that the Body Computer is designed to store up to 8 TEGs. It is not therefore possible to accept orders when the sum of the number of TEGs already available to the customer plus the new TEGs ordered exceed this quantity. Keep a record of the form used to order the TEGs in order to monitor the situation.</p>
+          <h2 class="bigtext2">Programming teg codes into the teg reader memory</h2>
+          <p class="contents_testonormale ">Once the new TEGs have been received from Fiat Parts, ensure that all the old TEGs in the customer''s possession are available.</p>
+          <p class="titolo_lista">Connect the Tester to the vehicle tester output and run the following procedure.</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Set the TEG Reader to PROGRAMMING mode.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">enter the TEGs still in the driver''s possession into the TEG Reader.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">end PROGRAMMING mode; the IDs of any TEGs not presented will be cleared from the TEG Reader memory.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Check system operation before returning the vehicle to the customer by starting it up using all the TEGs and opening/closing the doors using the remote control unit.</p>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/769_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">In the case of operating faults, it is possible to order spare parts only, but it is absolutely forbidden to exchange electronic control units between different TEGs because it will not be possible to service the vehicle in the future.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Replacing lock barrels and/or emergency mechanical keys</h2>
+          <p class="contents_testonormale ">This becomes necessary when one or more door lock barrels (driver''s door lock or others) are forced.</p>
+          <p class="contents_testonormale ">The Customer must prove that he or she is the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale ">Use the Personal Computer supplied to log onto Fiat Parts. Enter the chassis no. of the customer''s car, the model code and set up a VOR order to order a single electronic key kit complete with dowels (entering the part number) for the vehicle type and specification.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">It is not possible to order a single barrel by giving a single mechanical code.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/768_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale ">
+                    <p class="contents_testonormale ">The mechanical code of the emergency key and the electronic code of the TEG are defined together during initial memorisation on a vehicle at end of line and must not be separated under any circumstances.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">Replacing the reg reader</h2>
+          <p class="contents_testonormale ">Ask the Customer for all the remaining TEGs in their possession.</p>
+          <p class="contents_testonormale ">They should also prove that they are the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale ">
+          </p>
+          <p class="contents_testonormale ">Use the Personal Computer supplied to log onto Fiat Parts. Enter the chassis no. of the customer''s car, the model code and set up a VOR order to order a single TEG Reader (entering the part number to identify the version).</p>
+          <p class="titolo_lista">Once the new programmed TEG Reader has been received from Fiat Parts, proceed as follows:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Check the serial number stamped on the plate applied to the order form corresponds to that shown on the TEG Reader.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Check the vehicle chassis no. printed on the plate applied to the order form corresponds to the vehice chassis no.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">If all codes correspond, install the TEG Reader on the vehicle instead of the malfunctioning unit.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Connect the Tester to the tester output on the vehicle.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Set the TEG Reader to PROGRAMMING mode.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">enter the TEGs still in the driver''s possession into the TEG Reader.</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">End PROGRAMMING mode; the IDs of any TEGs not presented will be cleared from the TEG Reader memory (NTR).</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale ">Check system operation before returning the vehicle to the customer by starting it up using all the TEGs and opening/closing the doors using the remote control unit.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Replacing the engine management control unit</h2>
+          <p class="contents_testonormale ">This is required if the engine malfunctions.</p>
+          <p class="contents_testonormale ">The Customer must prove that he or she is the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale ">Use the personal computer provided to log onto Fiat Parts. Enter the part number of the Engine Control Unit to be replaced.</p>
+          <p class="contents_testonormale ">Once the Engine Control Unit has been received from Fiat Parts, install it on the vehicle and insert the TEG in the TEG Reader to allow self-programming.</p>
+          <p class="contents_testonormale ">Press the START/STOP button with the clutch or brake depressed to start the vehicle and check the engine is operating correctly.</p>
+          <h2 class="bigtext2">Replacing the electric steering lock</h2>
+          <p class="contents_testonormale ">This is required if the electric steering lock malfunctions.</p>
+          <p class="contents_testonormale ">The Customer must prove that he or she is the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale ">Use the personal computer provided to log onto Fiat Parts. Enter the part number of the Electric Steering Lock to be replaced.</p>
+          <p class="contents_testonormale ">Once the Electric Steering Lock has been received from Fiat Parts, install it on the vehicle and insert the TEG in the TEG Reader to allow self-programming.</p>
+          <p class="contents_testonormale ">After 10s, remove the TEG from the TEG Reader and wait for the steering to lock mechanically (this will take place after approx 5s).</p>
+          <p class="contents_testonormale ">Check that the steering is locked.</p>
+          <h2 class="bigtext2">Replacing the body computer</h2>
+          <p class="contents_testonormale ">This is required if the Body Computer malfunctions.</p>
+          <p class="contents_testonormale ">The Customer must prove that he or she is the owner of the vehicle by producing the registration document and identification data.</p>
+          <p class="contents_testonormale ">Use the Personal Computer supplied to log onto Fiat Parts. Enter the chassis no. of the customer''s car, the model code and set up a VOR order to order a single Body Computer (entering the part number to identify the version).</p>
+          <p class="contents_testonormale ">Once the Body Computer has been received from Fiat Parts, install it on the vehicle and insert the TEG in the TEG Reader to allow alignment of the Secret Codes.</p>
+          <p class="contents_testonormale ">Press the START/STOP button with the clutch or brake depressed to start the vehicle and check the vehicle electrics are operating correctly.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011102&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Procedure&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 03:16:28 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

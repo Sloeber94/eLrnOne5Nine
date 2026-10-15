@@ -1,0 +1,622 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003472&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:37:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003472&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="xAYYUCvAN1OqoNB0LMB4k3EYzC1lkKujuFOu++d2yUaKbuPt+RJ1dq5DeXgKmPfcnGzpc8TnWxlxrOboAN18CsmRsjMFg5KO7wpXiVUwBpLzZmXgSl4OT34DULvf2owwEw7qHnshR+8AWI7BAekOE+GArZj+Y36iweMnGjMleC5F+s0J7q1DIa3RHGEF0v/O7iQaZ82I+1RPoCEqdUjhFyubaD/QnhmqCqHNSbwDa5jjpu/jnDdlnCCys4UjzRA+7KVcdLoBU3UTq1koTayzv2hI71f2P8JyjXpnwdfaztiMvXfUgLkm/vKSXXXusRh59U3opbOKZNPBIinmtng5WDab44szC49k1yx1M9Bg/em22YciJdNEwMTEs8r680E2MmEafRZJCFPzG0WWDVarfvHEbvgmSQ0jWZ5LS+rfkJIXOzHPBIP6gNgHT7Z5LVO48R/UKp1MuxJKpn601mLHmTZtZCwpR3FrFRvwJ96+uPYdhYZHQ9iJRM20Rt1bIAX+jqbKY274DzykUPmq2LXkKK/HmB8KIOiEhswfutuxShW7BQxHntFfVEzJFZ3Fef+iPK5tjCwdyTCRLyZawhub/zjF3f6QvD0hTLyqoAqPh8jw178HFPMgtwdFPfeDaSSiorMFAeJhcA0k7pWYtwzo4SQ2VA4fincJbBy5g+RPUPPal2lxgExhvZ4a5DHkOsPyy72+1t1jfJu1v/H3SYZmb23HS/pk8EkFEsFNDH3enf7aLMWOJ1is+cN4kau/Bjf4XcnrxHI9FjRvFvuHVu8SARf3yP8as4uPJ3A89ZoJfYxnnWqgvwHvkSz6g7seu7ar" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - DIESEL FUEL INJECTION SYSTEM&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">SPECIFICATIONS</h1>
+          <h1 class="bigtext1">FUNCTION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The EDC-16C39 Common Rail system is a high pressure electronic injection circuit for fast, direct injection diesel engines.</p>
+          <p class="titolo_lista">Its main features are:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">availability of high injection pressure (up to 1400 bar);</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">possibility of modulating pressures between 150 bar up to a maximum service pressure of 1400 bar, regardless of engine speed and load;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">ability to work at high engine rpms (up to 5000 rpm in full load conditions);</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">injection control precision (injection advance and duration);</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">reduction in fuel consumption;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">reduction in emissions.</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">Main system functions are essentially as follows:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">fuel temperature control;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">engine coolant temperature control;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">control of amount of fuel injected;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">idle speed check;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">fuel cut-off during over-run;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">cylinder balance control up to 3500 rpm;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">control of anti-judder function;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">exhaust fumes control during acceleration;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">exhaust gas recirculation control (E.G.R.);</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">maximum torque limit control;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">maximum speed limit control;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">control of glow plugs;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">control of climate control system activation (where fitted);</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">auxiliary fuel pump check;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">cylinder position check;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">main and multiple injection advance check;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">injection pressure closed cycle check;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">electrical balance check;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">supercharging pressure control;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">IMA injector calibration.</p>
+            </li>
+          </ul>
+          <center>
+            <img src="images/jpg/939003825_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Auxiliary fuel pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Fuel filter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. Fuel return manifold</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Pressure pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. Pressure regulator on pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Supercharging sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Pressure regulator on rail</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Pressure sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Rail</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. Throttle body</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. E.G.R. solenoid valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. Oil level sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13. Timing sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14. Heater plug</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15. Turbo vane actuator control solenoid valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16. Flow meter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17. Rpm sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18. Water temperature sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19. Minimum oil pressure switch</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20. Lambda sensor downstream of the catalytic converter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">21. Lambda sensor downstream of the filter (DPF)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22. Differential pressure sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23. Filter (DPF)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24. Pedal assembly</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25. Diagnostic connector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26 Injection control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">27. Vehicle wiring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28. Engine wiring</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">29. Swirl throttle control actuator</p>
+          <h1 class="bigtext1">OPERATION</h1>
+          <h1 class="bigtext1">Operating strategies</h1>
+          <h2 class="bigtext2">Introduction</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The Common Rail system makes it possible to carry out two pilot injections before T.D.C. with the advantage of distributing the pressure in the combustion chamber more evenly and reducing the combustion noise typical of direct injection engines.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit controls the quantity of fuel injected, regulating the line pressure and injection times.</p>
+          <p class="titolo_lista">The control unit processes the following information to control the quantity of fuel to inject:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">engine rpm;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">coolant temperature;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">supercharging pressure;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">air temperature;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">intake air quantity;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">battery voltage;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">diesel pressure;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">accelerator pedal position.</p>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Diagram showing information entering/leaving the control unit</p>
+          <center>
+            <img src="images/jpg/194004099_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1. Auxiliary electric fuel pump</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2. Swirl mechanism</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3. VGT solenoid valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4. Air conditioning compressor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5. E.G.R. solenoid valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6. Rev counter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7. Cooling fan</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8. Heater plugs control unit</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9. Accelerator pedal with built in potentiometer</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10. Brake - clutch pedal switch</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11. Differential pressure sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12. Temperature sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">13. Fuel pressure sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">14. Flow meter</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">15. Coolant temperature sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">16. Fuel temperature sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">17. Cruise control</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">18. Excess pressure and air temperature sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">19. Timing sensor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">20. Speedometer</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">22. Battery</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">23. FIAT CODE</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">24. Diagnostic socket</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">25. Pressure regulators</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">26. Injectors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">27. Heater plugs</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">28. Throttle solenoid valve</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">29. Heater plugs warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">30. Injection warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">31. Coolant overheating warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">32. Water in the fuel warning light</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">33. OIL warning light</p>
+          <h2 class="bigtext2">Self-diagnosis</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit self-diagnostic system checks the signals coming from the sensors comparing them with the permitted limits.</p>
+          <p class="titolo_lista">SIGNALLING OF FAULTS DURING STARTING:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">warning light on for 4 seconds indicates test stage;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">warning light off after 4 seconds indicates no fault with components that can alter values set out by pollution control regulations;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">warning light on after 4 seconds indicates fault.</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">SIGNALLING OF FAULTS DURING OPERATION:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">warning light on indicates fault;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">warning light off after 4 seconds indicates no fault with components that can alter values set out by pollution control regulations.</p>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RECOVERY</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">From time to time the control unit defines the type of recovery according to the components that are faulty.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The recovery parameters are managed by components that are not faulty.</p>
+          <h2 class="bigtext2">Fuel temperature control</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the temperature of the fuel, measured by the sensor on the recirculation manifold, is 80°C, the control unit operates the pressure regulator to reduce the line pressure (it does not alter the injection times).</p>
+          <h2 class="bigtext2">Engine coolant temperature control</h2>
+          <p class="titolo_lista">When the engine coolant temperature is above 105°C, the control unit:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">reduces injected fuel quantity (reduces engine power);</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">controls the cooling fans;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">switches on the coolant temperature warning light.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Control of amount of fuel injected</h2>
+          <p class="titolo_lista">On the basis of the signals coming from the sensors and the values stored, the control unit:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">controls the pressure regulator;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">varies the "pilot" injection time in the entire rpm range;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">alters the "main" injection time.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Idle speed check</h2>
+          <p class="titolo_lista">The control unit processes the signals coming from the various sensors and regulates the quantity of fuel injected:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">controls the pressure regulator;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">alters the injector injection times.</p>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Within certain limits the speed takes the battery voltage into account.</p>
+          <h2 class="bigtext2">Fuel cut-off during deceleration</h2>
+          <p class="titolo_lista">During the accelerator pedal release stage, the control unit implements the following logics:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">cuts off the supply to the injectors;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">partly reactivates the supply to the injectors before the idle speed is reached;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">controls the fuel pressure regulator.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Cylinder balance control up to 3500 rpm</h2>
+          <p class="titolo_lista">According to the signals received from the sensors, the control unit controls the torque up to 3500 rpm:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">alters the quantity of fuel injected by the individual injectors (injection time).</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Check on irregular operation</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit processes the signals received by the various sensors and corrects the quantity of fuel to inject in order to improve driveability reducing shuddering whilst driving by means of the injector opening time.</p>
+          <h2 class="bigtext2">Exhaust fumes control during acceleration</h2>
+          <p class="titolo_lista">In order to restrict the fumes during fast transitions, on the basis of the signals received from the accelerator pedal potentiometer, flow meter and the engine speed the control unit limits the amount of fuel to be injected by means of:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the pressure regulator</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the injection time.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Exhaust gas recirculation control (e.g.r.)</h2>
+          <p class="titolo_lista">In accordance with EURO 3 pollution control legislation, on the basis of the engine load and the signal from the accelerator pedal potentiometer, the control unit limits the quantity of intake air, implementing the partial intake of exhaust gases, through:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the adjustment of the opening of the E.G.R. valve</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Maximum torque limit control</h2>
+          <p class="titolo_lista">According to the rpm level, the control unit calculates the following in pre-defined maps:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the torque limit;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the permitted fumes (limit).</p>
+            </li>
+          </ul>
+          <p class="titolo_lista">It compares this minimum values and corrects them with other parameters:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">coolant temperature;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">engine rpm;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">vehicle speed;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">intake air temperature measured by the integrated excess pressure/air temperature sensor,</p>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">and controls the quantity of fuel to be injected (pressure regulator - injectors).</p>
+          <h2 class="bigtext2">Maximum speed limit control</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When the engine speed reaches 5000 rpm, the control unit interrupts the operation of the injectors and the supply pressure is consequently reduced.</p>
+          <h2 class="bigtext2">Heater plugs check</h2>
+          <p class="titolo_lista">The injection unit, during the following stages:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">starting;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">post-starting</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">applies a timer to the glow plug preheating control unit based on engine temperature.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Air conditioning system start of operation check</h2>
+          <p class="titolo_lista">The control unit operates the climate control compressor:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">switching it on/off when the switch is pressed;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">switching it off momentarily (about 6 secs) in the case of strong acceleration or a request for maximum power.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Auxiliary fuel pump check</h2>
+          <p class="titolo_lista">Irrespective of the rpm, the control unit:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">supplies the auxiliary fuel pump with the ignition ON;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">cuts off the auxiliary pump supply if the engine is not started within a few seconds.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Cylinder position check</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During each revolution of the engine the control unit recognizes which cylinder is in the explosion stroke and controls the injection sequence at the appropriate cylinder.</p>
+          <h2 class="bigtext2">Pilot injection and main injection advance check</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">According to the signals coming from the various sensors, including the absolute pressure sensor integrated in the control unit itself, the latter determines the optimum injection point, according to an internal map, based on driving comfort and EURO 3 emission limits.</p>
+          <h2 class="bigtext2">Injection pressure closed cycle check</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">On the basis of the engine load, determined by processing the signals from the various sensors, the control unit controls the regulator to produce optimum line pressure.</p>
+          <h2 class="bigtext2">Electrical balance check</h2>
+          <p class="titolo_lista">According to the battery voltage, the control unit alters the idle speed:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">increases the injector injection times;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">modulates the line pressure.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Vgt variable geometry turbine operation</h2>
+          <p class="titolo_lista">The control unit processes the signal from the supercharging pressure, at the various engine operating speeds and determines the quantity of fuel to inject:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">alters the injection time;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">regulates the turbine geometry to ensure optimum performance in all operating conditions.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Fan control</h2>
+          <p class="titolo_lista">Depending on the temperature of the coolant and the pressure of the refrigerant fluid in the air conditioning system, the control unit controls:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">fan activation at first or second speeds.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Check on throttle closing when switching off</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In order to prevent the engine shuddering when it is switched off, the control unit controls the immediate closure of the inlet throttle. The throttle remains open in all other operating conditions.</p>
+          <h2 class="bigtext2">Cruise control system check (where fitted)</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Depending on the position of the control lever, the control unit directly controls the quantity of fuel injected to control and maintain the vehicle speed memorized.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A warning light on the dashboard activated by the control unit indicates system operation or deactivation status.</p>
+          <p class="titolo_lista">The cruise control is temporarily disabled:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">by operating the brake,</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">by operating the clutch;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the resume button returns the stored speed.</p>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The cruise control is not disabled when the accelerator is pressed (e.g. to overtake) and automatically restores the vehicle to the set speed as soon as the accelerator is released.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The ASR function (antispin) takes precedence over cruise control for safety reasons.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003472&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:37:47 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

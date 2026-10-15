@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926336&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:57:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926336&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/B6Ye5Vezz35Tip1b9uvcVvlmhG+iO0dILXY+53Cv4nLtzE8UzN/eBeQb0QreWPdKVPFYtwwO7JpYf67INa6cCJRPkYZ2gfW8C6ylicAWRh98cFbBjc6o2ynx0iDesuHP3V8/4/ka0qvm1x06xzKFp2XS8ExA11gE4zE5VhHXUI4Jc1WFyu38lyJ1r8YiphsHz8a7naY3u6XGOj6D36vsIwb6FsnSIWTNDc8Zmm6Z/u4br7wVUfKzpMce289ODC9UhfHTdY3aWDfHh0NP2sGH3pjyC8es4iIAKCz3TDwuhqpvVVAb1G2vM3jTYw3drScJnTgvuiNRdLmPTh5HdyeZ/vV7mx4t+M5hxnatjlQHZ6wxlXVEobaz18zpFaQGtEUD41QoCgm9rtGx8n7CGqZAhcJ0ZSi8gT4uqnOPhje+IBZPs1y6WVYL2Gnfvv367qhWKoNK9b2sHgP+3E/DO/7F8qqSfc5QuWGPY//PF7nwRE2mv5SCsJdld2Uzn+Mle4vGsIIgEdujzh5WUkw+q6RwBiTbIJJ5KfVvFMAk2J3AdTYfjyosrVL0elOI/b5J8BR" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 28/01/2019</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Various models</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>Versions: all models with CODE 2</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">55</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">005.19</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>5500 0 000 AA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>CODE CARD – ELECTRONIC CODE</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>Instructions for electronic code request – Network Information</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cancels and replaces the following Service News:</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• SN-Abarth models-55.06.11 of 28/10/2011.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• SN-Alfa models-55.10.11 of 28/10/2011.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• SN-Fiat models-55.002.16 of 22/09/2016.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• SN-Lancia models-55.012.11 of 28/10/2011.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• SN-various models-55.026.17 of 01/12/2017.</p>
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">• SN-various models-55.026.17 of 18/07/2018.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">APPLICABILITY</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This SN may be applied to all cars with CODE 2 listed below.</p>
+          <h2 class="bigtext2">Fiat</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">500 (150) - 600 (187) - Panda (169/319) - Punto (188) - Grande Punto/Punto Evo (199) - Idea (135) – Palio (178) - Linea (110) - Multipla (186) - 500L (330) - Stilo (192) - Bravo (198) - Tipo (356/357) - 500X (334) - Croma (194) - Sedici (189) - Ulysse (179) - 124 Spider (348) - Strada (278) - Qubo (300) - Doblò Panorama (119 / 152) - Fullback (305)</p>
+          <h2 class="bigtext2">Alfa</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">147 / 147 Ducati Corse (190) - 156 (116) - 159 (140) - 166 (136) - Brera / Spider (177) - Mito (145) - Giulietta (191) - Giulia (620) - Stelvio (630) - 4C (643)</p>
+          <h2 class="bigtext2">Lancia</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Ypsilon (101 / 402) - Musa (184) - Lybra (109) - Thesis (115) - Delta (181) - Phedra (180)</p>
+          <h2 class="bigtext2">Abarth</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Grande Punto / Punto Evo (199) – 500 / 695 Tributo Ferrari / 695 Edizione Maserati / 695 Biposto (150) - 124 Spider (348)</p>
+          <h2 class="bigtext2">Professional</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Panda Van (271/519) - Grande Punto Van/Punto Evo Van (299) - Idea (235) – 500L Van (530) - Bravo Van (298) - Croma Van (294) - Fiorino (225) - Doblò Combi/Cargo (223 / 263) - Strada (278) - Scudo (272) - Fullback (502/503) - Talento (296) - Ducato (250) - Ducato FL (290/295)</p>
+          <h2 class="bigtext2">RAM</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">RAM 1200 (504)</p>
+          <h2 class="bigtext2">General information</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">We hereby inform you that starting from 2012, initially for the Panda (319) model, and subsequently for the new models, there is no longer a Code Card (Fig. 1) on all models equipped with the CODE 2 system.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 1 – Code Card</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019843_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom069d.html?Par=312019842.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following specifies which models are equipped with the Code Card and for which models the electronic code can be requested through the CSPS system.</p>
+          <h2 class="bigtext2">Cars initially supplied WITH Code Card</h2>
+          <ul>
+            <li>
+              <span style="color:black">On all cars listed in the "Applicability" section EXCEPT Panda / Panda Van (model 319 / 519 with chassis number after 3078500), 500L / 500L Van, 500X, Tipo (356/357), Giulia, Stelvio, 4C, Fiat / Abarth 124 Spider, Fullback, Talento, Ducato FL (290/295 starting from chassis no. 02K02219) and Ypsilon (402), the Code Card is consigned together with the vehicle documents.</span>
+            </li>
+            <li>
+              <span style="color:black">If necessary (e.g. if the Code Card is mislaid), the electronic code can be requested using the CSPS system (refer to the "Entering electronic/mechanical code request order" section below).</span>
+            </li>
+            <li>
+              <span style="color:black">If the Customer wishes to purchase a Code Card, it can be requested using the CSPS system (refer to the "Entering Code Card purchase order" section below).</span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Cars initially supplied WITHOUT Code Card</h2>
+          <ul>
+            <li>
+              <span style="color:black">The cars Panda / Panda Van (model 319/519 from chassis 3078500), 500L / 500L Van, 500X, Tipo (356/357), Giulia, Stelvio, 4C, Fiat / Abarth 124 Spider, Fullback, Talento, Ducato FL (290/295 starting from chassis no. 02K02219) and Ypsilon (402) do NOT have a Code Card.</span>
+            </li>
+            <li>
+              <span style="color:black">To increase the security level of the 500X, Tipo (356/357), Giulia, Stelvio, Fiat / Abarth 124 Spider, Fullback and Talento, the electronic code is no longer supplied through the CSPS system, but it is calculated by the diagnosis tool (wiTechPlus – wiTech 2.0). If necessary (e.g. for coding a new key, Body Computer replacement, etc.), the diagnosis tool recognizes the vehicle data and automatically calculates the electronic code, which therefore does not need to be typed in.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The diagnosis tool must be kept connected to the vehicle and to Internet until the end of the procedure.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">For Panda / Panda Van from chassis 3078500, 500L / 500L Van, 4C, Ducato from chassis no. 02K02219 and Ypsilon (402), the electronic code can be requested using the CSPS system, and Customers wishing to do so can purchase a Code Card (see points below).</span>
+            </li>
+          </ul>
+          <h2 class="bigtext2">ELECTRONIC CODE REQUEST THROUGH CSPS</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The electronic code can be requested by CSPS for all the cars listed in the "Applicability" section EXCEPT 500X, Tipo (356/357), Giulia, Stelvio, Fiat / Abarth 124 Spider, Fullback and Talento.</p>
+          <h2 class="bigtext2">Check on rightful ownership</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To protect the Customer’s safety and that of the vehicles of the Group, if the electronic code is requested Dealers must establish the customer’s identity and ownership of the car, requesting the following:</p>
+          <ul>
+            <li>
+              <span style="color:black">an identification document proving ownership of the car (registration document or ownership certificate)</span>
+            </li>
+            <li>
+              <span style="color:black">a valid identity document belonging to the customer</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A copy of such documents must be filed progressively (with yearly numbering) and be kept available for any subsequent investigations for 5 years from the date of the order.</p>
+          <h2 class="bigtext2">Entering an Electronic / Mechanical code request order</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">With effect from 04/12/2017 electronic and mechanical key code requests will use new procedures: there will be no charge for the code request procedure described in the following section and a charge will only be made if the Customer wishes to purchase a physical Code Card containing the electronic and mechanical key codes. The Code Card request procedures are described in the "Entering Code Card purchase order" section.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For the 124 Spider and Fullback models, this request will not give the electronic code, but the mechanical one (engraved code) for ordering an engraved key with a Code 1 order.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <ul>
+            <li>
+              <span style="color:black">Select Order Management, followed by Electronic/Mechanical Code Request (Fig. 2).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 2</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019845_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom2fe3.html?Par=312019844.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Enter the model (1 - Fig. 3) and chassis number (2) of the vehicle for which the code is required.</span>
+            </li>
+            <li>
+              <span style="color:black">Clicking “Activate” (3) will display the screen in figure 4.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 3</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019846_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomfd42.html?Par=312019847.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">If the data entered is correct, click the "OK" button (Fig. 4) and move on to the screen in fig. 6.</span>
+            </li>
+            <li>
+              <span style="color:black">Screen A in figure 5 will be displayed if the information is not available.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 4</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019848_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomef69.html?Par=312019849.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Screen A in Fig. 5 is displayed if the Dealer tries to enter an order on CSPS to request the electronic code (or that of another coded product, such as keys, engraved code, Body Computer, etc.), but the CSPS database does not contain the required information.</span>
+            </li>
+            <li>
+              <span style="color:black">In this case, the Dealer must open a ticket "code 2 fault" on CSPS as shown in example B in Fig. 5.</span>
+            </li>
+          </ul>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The above applies for all coded products.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b></b>
+          </p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 5</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019850_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom5166.html?Par=312019851.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The following information will be displayed (Fig. 6):</p>
+          <ul>
+            <li>
+              <span style="color:black">Market - Requesting Dealer Sincom (1).</span>
+            </li>
+            <li>
+              <span style="color:black">The order number (2) generated on-line which will have the format EC+ 7 numbers. This order number will be used for invoicing and for displaying and tracking the order line on “show orders”, entering it in the “customer order code”.</span>
+            </li>
+            <li>
+              <span style="color:black">Electronic code (3).</span>
+            </li>
+            <li>
+              <span style="color:black">Anti-theft code and Mechanical code (4 and 5) - the fields will only be managed for models produced by PSA (179/new Ulysse, 180/Phedra, 272/new Scudo).</span>
+            </li>
+            <li>
+              <span style="color:black">Layout (6) (MOPAR or PSA).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Clicking "Download PDF" (7 - Fig. 6) will display the screen in fig. 7.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 6</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019852_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom69bc.html?Par=312019853.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In this screen (Fig. 7) you can open the file directly or save it to your PC to open it later (Adobe Acrobat Reader is needed).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 7</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019855_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom954e.html?Par=312019854.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pdf file will have a MOPAR or PSA layout as shown in fig. 8.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The pdf file will only be displayed; there is no need to consign it to the Customer.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 8</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019857_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom6524.html?Par=312019856.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A. MOPAR layout</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">B. PSA vehicle layout</p>
+          <h2 class="bigtext2">Entering a Code Card purchase request order</h2>
+          <ul>
+            <li>
+              <span style="color:black">Select Order Management, followed by Enter Code 2 Order (Fig. 9).</span>
+            </li>
+            <li>
+              <span style="color:black">Enter the chassis number and car model or VIN and any order reference, then click Enter Order (A – Fig. 9); the screen in Fig. 10 will appear.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 9</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019858_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoome2a6.html?Par=312019859.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">Select the delivery address (1 – Fig. 10).</span>
+            </li>
+            <li>
+              <span style="color:black">Enter the part number (2) (*).</span>
+            </li>
+            <li>
+              <span style="color:black">Enter the quantity (3).</span>
+            </li>
+            <li>
+              <span style="color:black">Clicking Save and Remain (4) will display the screen in figure 11.</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) The relevant part numbers are:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">MOPAR - PN 6000627947 (for Fiat, Abarth, Fiat Professional and Lancia vehicles)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Alfa Romeo - PN 6000627948 (for Alfa Romeo vehicles)</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 10</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019860_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomda94.html?Par=312019861.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <ul>
+            <li>
+              <span style="color:black">The order will be entered as shown in Fig. 11 and will be dispatched as quickly as possible in accordance with the standard spare parts order procedure.</span>
+            </li>
+            <li>
+              <span style="color:black">Click End (1 – Fig. 11).</span>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 11</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019863_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoomaf02.html?Par=312019862.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <h2 class="bigtext2">Code Card billing information</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The dealer will receive a specific invoice, within the standard invoicing period, containing the drawing number and the order number.</p>
+          <h2 class="bigtext2">Order display</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To display a specific order, enter the order number displayed in the request output (EC-nnnnnnn - 7 numbers) in the "Customer order number" field as shown in fig. 12.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+            <b>Fig. 12</b>
+          </p>
+          <center>
+            <img src="images/jpg/312019864_2.jpg" border="0" style="margin-top:20px">
+          </center>
+          <br>
+          <center>
+            <A border="0" class="contents_jpeg" href="__%20%20%20%20%20%20%20%20%20%20%20%20javascript_%20parent.openWinZoomServiceNews(%27ServiceNewsZoom9104.html?Par=312019865.image')%0d%0a">
+              <img border="0" src="Images/Ingrandisci.jpg" alt="Enlarge the image">
+            </A>
+          </center>
+          <BR>
+          <BR>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939926336&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:58:07 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

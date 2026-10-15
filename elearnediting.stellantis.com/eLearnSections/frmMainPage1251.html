@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003547&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:11:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003547&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="o2Onyp4tQZ3rWTY2KTTWCp9Fwo5Bwsc36sKssak6uaMId9SbwsmVEvPmgDkaV5Sd+aJBURYr2LHpDQjBVR3pjedqGx/1H5q4drcJ3yYzKKrPWUoYUxvrnGh4bgm7/tL+qv+G254IY1f5IndDkAE7OQimFYo6XIA8kDElU0sbOSkWLbTVlKCtZUROL3vP3DLLU9rlpn9cDmvgvFQt/kV1Y7reXKQw2GEk4a8Vf8AVDTJAG9nAepmI3CbcK25qhcBV8zVfyhSc1D0vm5mE1lFtRW87+owjS2wlSrrwDAW/N5jVKdOyaQHkwSC3ToGuR8WIQ9YL4BA9JL2uyWwViKT4KRjMAKzE/7gBsuE8XGLGcyfG/Eo4vnBYZJPoGEM0j6wvaYuEaVAdlT34tQ1tjA/pISFQNvrUOvJBX6xuyQ3sIiFGIh63Hu4ETCJYkNC8YBLi+Q8ohQrl5ptyqenMgdE7LPmyOQrWNWQqmD899Obv1jNefiLPZW+sqbN3qdvaI6KuHN3bZ9zMH31U1cyx2xvS1Zq84/+JRwO01ieERvS0LHsQdBjIKgYFgYR1rTcXwt6nmTY0ZSyrDrpOTq4tTBg2dj2PlGLJY7kANBd9sGCwe78XmW/e10TEur8wDPNmd0xIUwCVWuChf8yMGyfzpId110GCYcSrmhT0iCiZOHy61PEaV9W6g6nJK7fkG2sIcXozGWOklDR/4GyNJu2xIAKpO8TJ+OZHazElsMF8KY22A+QE8GKmJg3Y9DnNu4sjXhLP2UYCVLFkaRJC/uFNqSwIgIhKG/+llQjYrLNrHZvMYu8UOuhP5/cCf+LNbvCi7AO+" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspGENERAL REMARKS - SUN ROOF AND HOOD&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">SUN ROOF</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sunroof, available as an option on this car, is a conventional system consisting of a mobile glass panel that swivels upwards or slides across to stow away out of sight.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When closed, the glass allows daylight to enter and allows car passengers to see out. When open, it opens the roof compartment to the entire width of the glass panel.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During opening, the mobile panel slides in a housing between the roof panel and ceiling.</p>
+          <h1 class="bigtext1">SPECIFICATIONS</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sun-roof specifically consists of the following:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a frame consisting of two aluminium guides in which the movement mechanisms slide and two crossmembers, plastic at the front and metal at the rear, joined to the side guides;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- A system of right and left mechanisms, fitted in the aluminium guides, for moving the front glass panel, operated by the electric motor by means of a coiled metal cable.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a sun blind with manual movement mechanism equipped with handle and air circulation slots;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a 4 mm thick toughened glass panel with low energy and light transmission value;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a direct current motor with a motor reduction unit, a magnetic wheel located on the crankshaft, one or more Hall effect sensors and a connection to the vehicle wiring.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- an electronic control unit;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- a rotating selector to obtain different opening/closure positions, with an additional inhibition position.</p>
+          <h1 class="bigtext1">COMPOSITION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The diagram illustrates the sun roof components</p>
+          <center>
+            <img src="images/jpg/939003401_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Thermal tinted glass</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Seal</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Sun blind</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">4 - Drainage pipe</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">5 - Drainage channel</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">6 - Deflector</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">7 - Guide mechanisms</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">8 - Motor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">9 - Potentiometer</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">10 - Flexible racks</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">11 - Supporting mechanism</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">12 - Mechanism shield</p>
+          <h2 class="bigtext2">Sun blind</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The light intensity inside the passenger compartment can be adjsuted by a sun blind.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The hand-operated sliding blind in cloth-trimmed UP is equipped with mobile pads with play take-up components that ensure noise is absent under all opening and driving conditions. A panel on the front edge includes a handle and ventilation slots.</p>
+          <h1 class="bigtext1">OPERATION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The sun-roof is operated by an opening/closure preselector in the front central courtesy light.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The operating strategy described below is achieved by operating an electric motor managed by an electronic control unit.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Manual control (by selector): when the control selector is positioned in one of the set positions, the roof is moved in the following cases:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- at Key-ON;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- during the first 2 minutes after Key-OFF, or until one of the doors is opened.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Remote control: opening/closure by means of remote control (active with Key-Off): the control unit receives a control signal to move the roof from the Body Computer</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">the automatic closure movement can be interrupted at any time by pressing the selector upwards (inhibition position) or by altering the position of the selector (the roof will lock in this case. It will be possible to give a new command 10 secs later using the remote control or, in the Key On position, using the manual selector).</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The antipinch function is always active during sliding/tilting movement operations (including operations commanded by a remote unit).</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/769_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Do not disconnect the battery or the sun roof power supply whilst it is moving. If this is the case, the control unit loses its memory and it must be restored by following the procedure described in the appropriate paragraph.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">ANTIPINCH FUNCTION</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During closure operations, an antipinch protection is in operation throughout the roof travel (except for the last 4 mm).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In particular, the antipinch protection is always active during operations controlled by the remote control.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During operations controlled by the manual selector, it is possible to use the Inhibit position (press the selector) to allow the roof to be closed without the antipinch protection.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The antipinch system managed by the electronic control unit protects the occupants against manoeuvres from inside the car and complies with the requirements of Directive 2000/4/EC. It is active during horizontal closure (front edge) and vertical closure (rear edge) of the panel after encountering an obstacle (e.g. finger, hand). The possibility of pinching in the side areas of the panel is prevented by adopting side guards that prevent access to high-risk areas.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Once an obstacle is detected, panel movement is immediately stopped. The stalled position cannot be maintained for longer than 20 milliseconds (to safeguard the user against discomfort) before the direction of motion is reversed to return to the previous position.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the horizontal closure movement, it is active throughout the travel (if it had been opened by more than 4 mm). If it meets an obstacle on the front side of the glass panel, it guarantees the reversal of motion for a travel of 100 mm from the movement reversal point.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During the vertical closure movement, it is active throughout the travel (if previously opened by more than 4mm from the seal). After meeting an obstacle on the rear side of the panel, it ensures the direction of motion is reversed to the end travel position.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">In both cases, the reversal load is less than 100 N, as required by Directive 2000/4/EC.</p>
+          <h1 class="bigtext1">Selector</h1>
+          <center>
+            <img src="images/jpg/939003402_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">0 - Roof closed position</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- B1 - Minimum tilt position</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- B3 - Maximum tilt position</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- S1 - Minimum sliding position</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- S6 - Maximum sliding position</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The manual movement selector can be adjusted:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- by turning the knob in an anti-clockwise direction, to three pre-defined heights with the roof tilted to form a spoiler from "B1 to B3";</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- by turning the knob in a clockwise direction, in six pre-defined sliding, concealed positions from "S1 to S6";</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- position "0" corresponding to roof closed. This position can also be recognized by the longer duration of the click;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- in the "inhibition" position (all the selector connections are earthed) by pressing the selector in a vertical direction.</p>
+          <h1 class="bigtext1">Control unit</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The movement of the sun roof is managed by an electronic controlunit, housed in the casing on the motor, which processes the signals coming from the selector or the remote command, via the Body Computer, also controlling the safety protection function.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This function is managed by the control unit which receives information from both the position and speed Hall effect sensors, on the motor. Following the detection of a force of more than a certain level, corresponding to a greater current absorption and notified as being a possible obstacle, the control unit commands the immediate stopping and reversal of movement by about 10 cm.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The control unit also receives a vehicle speed signal because, depending on the speed, through the effect of the vacuum, the force required for closing the roof changes and in certain circumstances this could be perceived as an impediment. The control unit therefore uses this signal in order to mistakenly stop the movement.</p>
+          <h1 class="bigtext1">Resetting control unit memory</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If there is a break in the power supply (e.g. battery disconnected) whilst the sun roof is moving, or even within 5 seconds after the roof has actually stopped moving, the positions will be lost from the electronic control unit memory.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To restore the memory, carry out the procedure described, working with Key ON:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- place the selector in the maximum tilt position (end of rotation in anti-clockwise direction position B3);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- press the selector vertically keeping it in this position until the sun roof has come to a halt in the maximum tilted position;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- release the selector and, within five seconds, press the selector again, keeping it pressed;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- wait until the roof completes a full travel from maximum tilt position to maximum open, concealed position and then from maximum concealed opening to closed;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- release the selector and return it to the roof closed position (rotating it through three clicks in a clockwise direction);</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">at this point the control unit roof position memory is reset.</p>
+          <table class="nota">
+            <tr>
+              <td>
+                <img src="images/jpg/767_2.jpg" border="0">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The memory reset procedure has to be carried out even if there are no impediments and there are problems with the sliding of the roof incorrectly perceived by the control unit as an obstacle.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h1 class="bigtext1">Emergency manoeuvre</h1>
+          <center>
+            <img src="images/jpg/939003403_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Front courtesy light and volumetric sensors</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Electric contol motor</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">3 - Operating key</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If the electric device for moving the roof fails, the sun roof can be moved manually proceeding as described below:</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- remove the central courtesy light and withdraw the volumetric sensor mount;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- introduce the 4mm Allen key supplied into the housing in the motor;</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- turn the key in a clockwise direction to open the roof or in an anti-clockwise direction to close it.</p>
+          <h1 class="bigtext1">Alignment</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">During repair operations on the vehicle which involve removing the sun roof and the motor at the same time, when refitting, if it is unsure whether the position of the sliding guides has been maintained, before refitting the parts, the two guides must be aligned because the alignment of the sun roof can no longer be guaranteed and this could result in malfunctions and wind noise.</p>
+          <p class="titolo_lista">To restore the alignment of the guides with the motor disconnected, follow the procedure described below:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">manually place the supporting guides in the fully forward position on both sides, checking that the sliding is complete;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">place the support levers in the (roof closed) position;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">align the openings for the drive guides with the blind opening in the support levers using two 3mm diameter pins (one on each side) as illustrated in the diagram below;</p>
+            </li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">View of guide alignment mode.</p>
+          <center>
+            <img src="images/jpg/939003404_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">1 - Supporting lever</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">2 - Drive guide</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">A - Reference pin introduction point</p>
+          <p class="titolo_lista">Proceed as follows to align the guides:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">refit the motor, keeping the pins in position</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">remove the alignment pins;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">reconnect the motor to the electrical system and the selector to the control unit;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">refit the sun roof on the supports, suitably adjusting their position to ensure that the alignment is correct and the seal perfect;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">carry out the control unit memory resetting procedure described in the relevant paragraph;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">restore the guide shield covers.</p>
+            </li>
+          </ul>
+          <h2 class="bigtext2">Alignment procedure at the bench</h2>
+          <p class="titolo_lista">With the sun roof assembly at the bench, following a procedure which has involved disconnecting the motor or the moving or sliding parts, to align the sun roof guides and position the moving parts correctly, follow the procedure described below:</p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">fit the detached parts with the exception of the motor;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">manually place the supporting guides in the fully forward position on both sides, checking that the sliding is complete;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">place the support levers in the (roof closed) position;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">align the openings for the drive guides with the blind opening in the support levers using two 3mm diameter pins (one on each side) as illustrated in the diagram above;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">refit the motor, keeping the pins in position, then remove the alignment pins;</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">refit the sun roof on the supports, suitably adjusting their position to ensure that the alignment is correct and the seal perfect,</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">refit the sun roof on the vehicle and carry out the control unit memory resetting procedure, as described in the relevant paragraph.</p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003547&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:11:54 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

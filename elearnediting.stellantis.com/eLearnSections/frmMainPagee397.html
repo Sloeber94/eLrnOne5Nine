@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=5014195&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:12:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=5014195&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="RbtH5pM00pb2WQkee30QLW2xJFI82wYwlyC4nzhBSCimEdNNdPzFz+goMpy4JJSrnqk6J5sZL6mOG/ITpgqGjbX+r2sJaEs6fmm26bWZK+5njcrWbb5Ecso7ZeYTd3yq9i02LlOuC56wa723jQJIV8s9AtFOIAkFlyHXXrmo637PpQgf79uGoxhSTaH2mYzmaTm99LEkuJioUJbqKjnhdLl6Ov0WSzK+0rl7Sne6GQ8XbS3dEtzrdqVoO53yiyAjGReqtV3UIVpkG6xM5DrIhW635sBjiIgR+pLAtDRZDKc9xNhyHKwj2D+aoeE+AwHlx0wMX7sJk5HUURL9nIOdNH5ZgqZkDl3nGrf/WM1SVd1MSOJ9X8igHc6JY9SF/fhdrej5pRndw1oAkDRYLro4AupnOHOUsyvAYJqKwJqRhAm1N4r1PtDd3dNCXZZJRczdO0/ahTUz3Mquc/FUGkl4nZD26XY05bBl6Q9qHbUxIDyF8qona3Asa0ElUYSgwTr6AiajR5QiQOB0vKK9tTHrNThfXKbvOJE1Fcjvy/2+iT8=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+	    
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+	<tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_0" class="nav" href="mainc9e1.html?nodeID=939926305&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.012.19</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_0" class="nav" href="mainc9e1.html?nodeID=939926305&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">NAVIGATOR - MAP UPDATING<BR/>Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_1" class="nav" href="main8a4b.html?nodeID=939926336&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.005.19</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_1" class="nav" href="main8a4b.html?nodeID=939926336&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">CODE CARD – ELECTRONIC CODE<BR/>Instructions for electronic code request – Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_2" class="nav" href="main8ab4.html?nodeID=939926316&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.010.16</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_2" class="nav" href="main8ab4.html?nodeID=939926316&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BOSCH/BLAUPUNKT CAR RADIO<BR/>New instructions in case of interventions covered by the warranty - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_3" class="nav" href="main4a50.html?nodeID=939925804&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.11.15</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_3" class="nav" href="main4a50.html?nodeID=939925804&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">VEHICLE KEYS<BR/>Request for replacement keys - Instructions for dealers - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_4" class="nav" href="main6118.html?nodeID=939926297&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.10.14</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_4" class="nav" href="main6118.html?nodeID=939926297&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">RADIO AND NAVIGATOR SYSTEM CODES<BR/>Instructions for requesting the secret code if the card is mislaid</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_5" class="nav" href="mainfccb.html?nodeID=939925818&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.05.13</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_5" class="nav" href="mainfccb.html?nodeID=939925818&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUE&ME<BR/>Software 7.0 update - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_6" class="nav" href="main8ed3.html?nodeID=939926120&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.03.13</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_6" class="nav" href="main8ed3.html?nodeID=939926120&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">AIRBAG - SEAT BELT PRETENSIONERS<BR/>Information about the duration of pyrotechnic components</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_7" class="nav" href="main44d2.html?nodeID=939925706&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.06.12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_7" class="nav" href="main44d2.html?nodeID=939925706&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUE&ME AND BLUE&ME NAV<BR/>Software 5.5 and 5.6 updates - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_8" class="nav" href="main8c81.html?nodeID=939926233&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.02.12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_8" class="nav" href="main8c81.html?nodeID=939926233&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">FRONT HEADLIGHTS<BR/>Presence of condensation - Network information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_9" class="nav" href="mainab37.html?nodeID=939926127&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.01.12</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_9" class="nav" href="mainab37.html?nodeID=939926127&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BATTERY<BR/>Warnings in case of removing/refitting - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_10" class="nav" href="main8ea6.html?nodeID=939926222&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.12.11</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_10" class="nav" href="main8ea6.html?nodeID=939926222&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">RADIONAVIGATOR - BOSE SYSTEMS<BR/>Whistles and/or hissing – Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_11" class="nav" href="maine622.html?nodeID=939926182&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.09.11</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_11" class="nav" href="maine622.html?nodeID=939926182&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">VOLUMETRIC SENSORS <BR/>Missed deactivation – Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_12" class="nav" href="mainc52c.html?nodeID=939925814&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.19.10</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_12" class="nav" href="mainc52c.html?nodeID=939925814&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">STEERING LOCK DEVICE<BR/>Failed operation, with error 9001 - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_13" class="nav" href="main6ee6.html?nodeID=939925796&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.14.10</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_13" class="nav" href="main6ee6.html?nodeID=939925796&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUE&ME™ SYSTEM<BR/>Software update (Version 5.5) - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_14" class="nav" href="maind710.html?nodeID=939926234&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.13.10</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_14" class="nav" href="maind710.html?nodeID=939926234&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUE & ME™ NAV (C3) SYSTEM<BR/>Missed update to software release 5.5, with error USB 10 on the instrument panel – Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_15" class="nav" href="main8921.html?nodeID=939925768&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.11.10</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_15" class="nav" href="main8921.html?nodeID=939925768&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">INSTANT NAV / RADIO NAV NAVIGATION SYSTEM<BR/>Various faults - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_16" class="nav" href="main64d7.html?nodeID=939925771&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.08.10</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_16" class="nav" href="main64d7.html?nodeID=939925771&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">ENGINE COMPARTMENT WIRING<BR/>Interference with engine management control unit - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_17" class="nav" href="main7e45.html?nodeID=939925746&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.05.10</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_17" class="nav" href="main7e45.html?nodeID=939925746&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BOSCH/BLAUPUNKT CAR RADIO<BR/>New instructions in case of interventions covered by the warranty - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_18" class="nav" href="mainab8c.html?nodeID=939925727&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.01.10</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_18" class="nav" href="mainab8c.html?nodeID=939925727&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BATTERIES<BR/>Check condition, battery charge status and recharging methods - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_19" class="nav" href="main8a53.html?nodeID=939925065&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.11.09</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_19" class="nav" href="main8a53.html?nodeID=939925065&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">RADIONAV NAVIGATION SYSTEM<BR/>SD-Card activation procedure and system description - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_20" class="nav" href="main0a7f.html?nodeID=939925374&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.08.09</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_20" class="nav" href="main0a7f.html?nodeID=939925374&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BATTERIES<BR/>Check condition, battery charge status and recharging methods - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_21" class="nav" href="main221a.html?nodeID=939925048&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.02.09</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_21" class="nav" href="main221a.html?nodeID=939925048&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">DOORS NOT UNLOCKED USING REMOTE CONTROL<BR/>Cold start operation - Service solution  </a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_22" class="nav" href="main2910.html?nodeID=939925047&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.15.08</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_22" class="nav" href="main2910.html?nodeID=939925047&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">MICROPHONE FOR HANDS-FREE SYSTEM<BR/>Excessive background noise - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_23" class="nav" href="mainf656.html?nodeID=939925141&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.14.08</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_23" class="nav" href="mainf656.html?nodeID=939925141&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUE&ME™ SYSTEM (C1V2)<BR/>Language change - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_24" class="nav" href="maine0b9.html?nodeID=939925419&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.11.08</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_24" class="nav" href="maine0b9.html?nodeID=939925419&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUE & ME Nav™ SYSTEM (C3)<BR/>Irregular message in Spanish - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_25" class="nav" href="maine473.html?nodeID=939925413&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.10.08</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_25" class="nav" href="maine473.html?nodeID=939925413&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUE&ME™ NAV CONTROL UNIT<BR/>Instructions for replacement - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_26" class="nav" href="maind4e8.html?nodeID=939925358&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.05.08</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_26" class="nav" href="maind4e8.html?nodeID=939925358&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUE & ME nav™ SYSTEM (C3)<BR/>Impossible to enable services / order control unit - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_27" class="nav" href="main81be.html?nodeID=939925309&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.03.08</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_27" class="nav" href="main81be.html?nodeID=939925309&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">ADDITIONAL JUNCTION UNIT IN THE BOOT<BR/>Removing-refitting procedure - Service Manual update</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_28" class="nav" href="main9731.html?nodeID=939925405&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.02.08</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_28" class="nav" href="main9731.html?nodeID=939925405&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">ENGINE PREWIRING<BR/>Instructions for repairing connectors - Service Manual update</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_29" class="nav" href="main614a.html?nodeID=939006991&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.17.07</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_29" class="nav" href="main614a.html?nodeID=939006991&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">TWIN SIM CARDS ON THE CONNECT<BR/>Use - Italian Market Network Information </a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_30" class="nav" href="main923a.html?nodeID=939006970&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.16.07</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_30" class="nav" href="main923a.html?nodeID=939006970&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLAUPUNKT (BOSCH) RADIO <BR/>CD player intermittent malfunction - Network Information </a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_31" class="nav" href="main415a.html?nodeID=939006924&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.14.07</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_31" class="nav" href="main415a.html?nodeID=939006924&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUE & ME™ SYSTEM (C1)<BR/>Failed operation / milometer flashing - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_32" class="nav" href="maina799.html?nodeID=939006915&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.13.07</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_32" class="nav" href="maina799.html?nodeID=939006915&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BATTERY<BR/>Battery run down after a stop - Diagnostic procedure</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_33" class="nav" href="main2ed2.html?nodeID=939006909&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.12.07</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_33" class="nav" href="main2ed2.html?nodeID=939006909&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">ENGINE EARTH LEAD<BR/>Difficulties in starting - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_34" class="nav" href="main39dd.html?nodeID=939006957&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.11.07</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_34" class="nav" href="main39dd.html?nodeID=939006957&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">ANTI-THEFT DEVICE VOLUMETRIC SENSORS<BR/>Alarm self-activation - Service Solution </a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_35" class="nav" href="main26db.html?nodeID=939003083&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.08.07</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_35" class="nav" href="main26db.html?nodeID=939003083&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BATTERY<BR/>Maintaining charge - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_36" class="nav" href="main1582.html?nodeID=939006629&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.04.07</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_36" class="nav" href="main1582.html?nodeID=939006629&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">INTEGRATED SYSTEM FOR HOMELINK REMOTE CONTROLS<BR/>Main specifications - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_37" class="nav" href="mainf753.html?nodeID=939006596&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.02.07</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_37" class="nav" href="mainf753.html?nodeID=939006596&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">RADIO SPEAKERS <BR/>Irregular reproduction - Technical Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_38" class="nav" href="mainc933.html?nodeID=939006560&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.30.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_38" class="nav" href="mainc933.html?nodeID=939006560&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">FUEL PUMP RELAY<BR/>Failed operation - Service Solution.</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_39" class="nav" href="maine67f.html?nodeID=939006342&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.27.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_39" class="nav" href="maine67f.html?nodeID=939006342&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BATTERY<BR/>Warnings in case of Removing-Refitting - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_40" class="nav" href="maind2ae.html?nodeID=939006522&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.25.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_40" class="nav" href="maind2ae.html?nodeID=939006522&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">SMS READER IN BLUE&ME™ SYSTEM<BR/>SMS reader installation - Network Information and Service Manual Update</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_41" class="nav" href="main8462.html?nodeID=939006175&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.22.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_41" class="nav" href="main8462.html?nodeID=939006175&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">RADIO<BR/>RESTORE DEFAULT procedure in routine P.D.I. on new SB05 radio - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_42" class="nav" href="mainc645.html?nodeID=939006169&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.21.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_42" class="nav" href="mainc645.html?nodeID=939006169&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUETOOTH® (C1V1) and BLUE&ME™ (C1V2) SYSTEMS<BR/>Instructions for using language change CD - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_43" class="nav" href="mainb33f.html?nodeID=939006135&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.17.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_43" class="nav" href="mainb33f.html?nodeID=939006135&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">TEG ELECTRONIC KEY<BR/>Badge wear - Service Solution</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_44" class="nav" href="main7ebd.html?nodeID=939006129&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.16.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_44" class="nav" href="main7ebd.html?nodeID=939006129&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BODY COMPUTER<BR/>Instructions in case of replacement - Italian Market Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_45" class="nav" href="main1390.html?nodeID=939006161&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.15.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_45" class="nav" href="main1390.html?nodeID=939006161&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BODY COMPUTER - FUEL LEVEL<BR/>Incorrect fuel level reading/reserve warning light flashing - Network Information.</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_46" class="nav" href="main6e4b.html?nodeID=939006111&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.12.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_46" class="nav" href="main6e4b.html?nodeID=939006111&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">BLUE&ME™ SYSTEM<BR/>New hands-free version with multimedia player (opt. 4J3) - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_47" class="nav" href="maina944.html?nodeID=939006065&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.10.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_47" class="nav" href="maina944.html?nodeID=939006065&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">STEERING COLUMN SWITCH UNIT<BR/>Failed return of the direction indicators control lever to the centre position - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_48" class="nav" href="main16b8.html?nodeID=939006068&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.09.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_48" class="nav" href="main16b8.html?nodeID=939006068&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">RADIO <BR/>Poor reception - Technical Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_49" class="nav" href="main85f9.html?nodeID=939004940&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.02.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_49" class="nav" href="main85f9.html?nodeID=939004940&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">HANDS-FREE SYSTEM WITH VOICE RECOGNITION AND Bluetooth® TECHNOLOGY<BR/>Software and language update - Network Information and Service Manual Update</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_50" class="nav" href="main84d1.html?nodeID=939005725&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.01.06</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_50" class="nav" href="main84d1.html?nodeID=939005725&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">INSTRUMENT PANEL<BR/>Seat belt not fastened warning light - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_51" class="nav" href="main2648.html?nodeID=939005336&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.19.05</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_51" class="nav" href="main2648.html?nodeID=939005336&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">HANDS-FREE SYSTEM WITH VOICE RECOGNITION AND Bluetooth® TECHNOLOGY<BR/>Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_52" class="nav" href="mainc107.html?nodeID=939003209&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.16.05</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_52" class="nav" href="mainc107.html?nodeID=939003209&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">HEATER PLUGS<BR/>New spanners for Removing-Refitting - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_53" class="nav" href="mainb828.html?nodeID=939023739&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.15.05</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_53" class="nav" href="mainb828.html?nodeID=939023739&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">IGNITION KEY<BR/>Instructions for use - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_54" class="nav" href="main9692.html?nodeID=939023240&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.14.05</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_54" class="nav" href="main9692.html?nodeID=939023240&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">LOGISTIC MODE<BR/>Deactivation procedure and description - Network Information</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_55" class="nav" href="main3553.html?nodeID=5014204&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.10.05</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_55" class="nav" href="main3553.html?nodeID=5014204&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent"> CD PLAYERS<BR/>Reading impossible - Technical Informative Report</a></TD>
+				</td>
+	</tr><tr style="white-space:nowrap;">
+		<td valign="top" style="height:12px;">
+					
+					</TD>
+				</td><td valign="top" style="height:12px;">
+					<a id="NavigationControl1_grdNav_hypCode_56" class="nav" href="main7724.html?nodeID=5014196&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent">55.09.05</a></TD>
+				</td><td valign="top">
+					<a id="NavigationControl1_grdNav_hypName_56" class="nav" href="main7724.html?nodeID=5014196&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Service%20News&amp;validityName=2.4%20JTD%2020V" target="_parent"> AIR BAGS<BR/>Details on the life of components</a></TD>
+				</td>
+	</tr>
+</table></P>
+
+	</body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=5014195&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:12:10 GMT -->
+</HTML>

@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925065&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:58:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925065&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Service+News&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="jdmwJh6IBK4b97vKnpX4nZ3LblShw/F33uXkUOsyTpttsE7pOsy7GuRq6kc3bHjIBmzZs4qDakQWbDsNmOQNrcyR41sV2GQHyrT3MVVkK9GDthSAa5sNSiIrtrau88Lhipz9o5RphHl2nrlBh1sJHJiWes8TjcEeoidFEtmwN9+bHL8jfUkJGXj5cDSK+PjHI+rOHI80EPXCs5U9r7rtCdQqNUZcx9wHg20kc3Fv8K1Y9bEyINM5k9Wx7lkNlH8z76eVJKn9YNttZIEnXrTA2RLkcoPhwjvGRWy3my0ulbTosJpEATLmGPFD4sd1uLgSb9sWeILHLVMneQnvaA5xAqZk8X0tsLtfpOvYdDjuzeHmKK6q2hC7lPg8+9GEl69h9TTD5HC4t4Z84cmGuUhAtjBwfONECWbrKTjY0ZkumjH4jWMAu6eKiP/ue1YvSuWjMJBf2laj1Fdjuc0iZYgCXX+ngwUftC6UztWrUbi0lLupp6PTWP7sSKG4K1JESccxc86NAn0nJVi+JHpVk+XYjvBP7QCLRX1e413s9pdu2O3mIhXqZoSJK4HcWm4oHhEF" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/service.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/contents_print.css">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td class="rete">
+          <div class="printservice">
+            <table width="100%">
+              <tr>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news1alfa.jpg">
+                  <img class="snfiat" src="images/serv_news1fiat.jpg">
+                  <img class="snlancia" src="images/serv_news1lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news1abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news1fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news1Chrysler.jpg">
+                </td>
+                <td height="30">
+                </td>
+                <td width="100" rowspan="3" valign="bottom">
+                  <img class="snalfa" src="images/serv_news2alfa.jpg">
+                  <img class="snfiat" src="images/serv_news2fiat.jpg">
+                  <img class="snlancia" src="images/serv_news2lancia.jpg">
+                  <img class="snAbarth" src="images/serv_news2abarth.jpg">
+                  <img class="snfiatPro" src="images/serv_news2fiatpro.jpg">
+                  <img class="snChrysler" src="images/serv_news2Chrysler.jpg">
+                </td>
+              </tr>
+              <tr>
+                <td valign="bottom">
+                  <font style="font-family:verdana;font-size:22;">
+                    <b>Service News</b>
+                  </font>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-bottom-style:solid; border-bottom-width:1" valign="bottom">
+                  <table width="100%">
+                    <tr>
+                      <td align="left">
+                        <span style="font-size:9">
+                          <i>
+    Copyright By FCA Italy S.p.A. - Printed 21/05/2010</i>
+                        </span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <br>
+          </div>
+          <table border="0" width="100%" cellspacing="10">
+            <tr>
+              <td colspan="2">
+                <div class="printservice">
+                  <span style="font-size=20">Various models</span>
+                </div>
+                <br>
+                <br>
+                <span style="font-size=13">
+                  <b>All models (Alfa 159 - Brera/Spider)</b>
+                </span>
+              </td>
+              <td>
+                <div class="printservice">
+                  <table border="1" width="100%" height="100%" cellspacing="0" cellpadding="0" style="border-style:solid;border-width:1;" align="center">
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:27">55</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <span style="font-size:14">11.09</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+            <tr height="10">
+              <td colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td width="100" valign="top">
+                <span style="font-size:11">
+                  <b>5570 T 000 AA</b>
+                </span>
+              </td>
+              <td>
+                <span style="font-size:11">
+                  <b>RADIONAV NAVIGATION SYSTEM</b>
+                </span>
+                <br>
+                <span style="font-size:11">
+                  <b>SD-Card activation procedure and system description - Network Information</b>
+                </span>
+              </td>
+              <td width="100">
+              </td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="nota">
+            <tr>
+              <td>
+                <img border="0" src="images/jpg/767_2.jpg">
+              </td>
+              <td>
+                <span class="contents_testonota ">
+                  <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">
+                    <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Cancels and replaces SN 55.11.09 of 17/09/2009 for the addition of on-line activation of the SD-Card.</p>
+                  </p>
+                </span>
+              </td>
+            </tr>
+          </table>
+          <h2 class="bigtext2">General information</h2>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Upon demand, the car can be supplied with a navigation system, available in the following two outfits:</p>-<b>RADIONAV combined with the "basic" radio:</b> in this case, the mobile is not handled; the navigation functions are managed by the radionavigator and displayed as maps.-<b>RADIONAV combined with the "Blue&amp;Me":</b> in this case the radionavigator manages navigation and Blue&amp;Me manages the Media Player and Bluetooth mobile functions;<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Fig. 1</b></p><center><img src="images/jpg/939008852_2.jpg" border="0" style="margin-top:20px"></center><br><br><ul class="elencolegenda"></ul><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The radio navigator module, located in the middle of the dashboard, includes:</p>-radio module with dual aerial and dual tuner;-CD Audio and CD MP3 player;-SD card reader;-GPS module;-autonomous navigation module with maps;-6.5" TFT colour, high-resolution display;-interfacing with steering wheel controls (where specified)<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">For further information, descriptions and operation, fault diagnosis, tests, repair procedures and wiring diagrams, refer to the Service Manual.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The key below describes the functions of the buttons shown in Fig. 1.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Some controls have different functions depending on the currently-activated application. The activation of the function selected is controlled, in some cases, by how long the button is pressed (short or long pressing) as described in the table below:</p></p></span></td></tr></table><table class="contents_table" cellspacing="0" cellpadding="0"><tr><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Button</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Short button pressing </b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>(less than 2 seconds)</b></p></td><td class="header_table" colspan="" rowspan=""> 
+
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Long pressing of the button</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>(over 2 seconds)</b></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1 - DARK</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Pressing on the button:</b> system switching-on/DARK function activation</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Knob rotation:</b> volume level setting</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Pressing on the button:</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">system switching on/off</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Radio Mode:</b> display of radio station names in the selected band</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CD Mode:</b> display of tracks available on the CD</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CD MP3 mode:</b> displaying of folder and track list</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Radio mode:</b> station list updating</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(pressing for over 5 seconds)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3 - MEM</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Access to the menu to select stored radio stations</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Access to the menu to store the selected radio station</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>4 - Radio</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Radio Mode activated:</b> radio band selection (FM1, FM2, FMAST, AM)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Radio Mode deactivated:</b> displaying of special menu and radio band selection (FM1, FM2, FMAST, AM)</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Radio mode:</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">activation of AutoSTore function</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>5 - MEDIA</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Source selection: Media Player or CD</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- -</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>6 -</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Eject audio CD or CD MP3</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>7 - </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Audio CD or CD MP3 housing</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- -</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>8 - </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">SD-Card housing</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>9 Arrow Up</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Radio mode:</b> frequency increase (FM or AM mode)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CD - MP3 mode:</b> select next folder</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Map Mode:</b> map scrolling upwards</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Media Player Mode:</b> select genre/author/album/folder/next Playlist depending on the selection mode currently activated</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>9 Right - Left Arrow</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Radio Mode:</b> scanning function to search for the first audible radio station with frequency lower/higher than the starting one (FM or AM mode)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CD/CD MP3/Media Player Mode:</b> select next/previous track</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Map Mode:</b> map scrolling to the left/to the right</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>9 Arrow Down </b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Radio mode:</b> frequency decrease (FM or AM mode)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CD - MP3 mode:</b> select previous folder</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Map Mode:</b> map scrolling downwards</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Media Player Mode:</b> select genre/author/album/folder/previous Playlist depending on the selection mode currently activated</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>10 - Menu</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Main Menu Display</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Access to the navigation simulation function</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>11 - ESC</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Exit from the selection</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">System reset</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(if pressed for more than 8 seconds)</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>12 - OK</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Pressing on the button:</b> open special menu;</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Confirm selection</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Knob rotation:</b> select menu items</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>13 - NAV</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Navigation map displaying</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>14 - TRIP</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">TRIP data displaying</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>15 - TEL</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Mobile data displaying (only if the <b>Blue&amp;MeTM system is available)</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>16 - MUSIC</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Music information display</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>17</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Audio Menu Display</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- -</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>18</b></p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Activation/deactivation of Audio function</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+
+						<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"></p></td></tr></table><h2 class="bigtext2">Sd-card activation procedure</h2><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Foreword</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Unless it has already been activated for map management, the navigation system uses the SD-Card map for the first 1000 km run by the car.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>How to enable an SD-Card</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">An activation code is needed for unlimited map SD-Card access in your system.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The activation code can be requested by phone or on-line, connecting to the Web site.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Data required to receive the activation code</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To receive the activation code, you need to know the following information:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1. Device Code </b> (it can be obtained as follows)</p>-A. Press the button MENU (10 – Fig. 1) to enter the navigation system menu.-B. Turn the right knob, select "CONFIGURATIONS" and press the knob to confirm.-C. In the menu, select the "SD CARD - MEDIA AND MAPS" option.-D. In the menu, select the option "SYSTEM CODE FOR MAP ACTIVATION" and press the knob to confirm: an 11 alphanumeric digit code is displayed.-E. Note down the serial number required to get the activation code.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2</b>. <b>Map serial number</b> (shown on the SD-Card package cover and visible under the protection plastic).</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3. Area covered by the map.</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>4</b>. <b>Personal data</b> (*) Name, Surname, Date of Birth, address and possible e-mail address.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The e-mail address is recommended, even if not compulsory, to send the confirmation of the activation code and for further activations.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">(*) Personal data shall be handled according to NAVTEQ Privacy Policy, see: http://navteq.com/ - click on "Privacy Policy".</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>How to get the activation code by phone</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To get the activation code, contact NAVTEQ Customer Service from Monday to Friday, 09:00 a.m. to 06:00 p.m, using one of the toll free numbers below, then give your data as above stated.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Toll free numbers: 800 781 145 (from Italy only)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">00800 18 23 53 22 (from all over Europe)</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Direct number (in case there is no toll free number): 0031 555 384 245</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The NAVTEQ Call Center shall give you the activation code, formed by 16 alphanumeric digits, that must be entered in the car navigation system. The activation code shall also be sent by e-mail to the address given during the activation process.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>How to get the activation code on-line (Internet)</b></p>-Connect to the web site <b>http://alfaromeo.navigation.com</b>-If you are already registered, select "Sign In" in the right top corner and enter user name and password. To register, refer to the paragraph "How to register" at the end of the Service News. At the end of the registration, the account page opens automatically.-Under "Activate Service" select "Generate Unlock Key", then, depending if the navigator is already registered or is a new one, follow the instructions below.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CASE A: the map must be activated on a device which is already registered</b></p>-Click on the button "Add New Service".-Enter the map serial number (see item 2).-Select a map coverage area from the drop-down box and click on "Unlock Map Product".<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>CASE B: the map must be activated on a new device</b></p>-Enter the code of the new device (see item 1).-Enter one name for the device and click on "Add New Device".-A screen with three options is displayed:<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Edit Device Details – to edit the device name.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Add a New Service – to activate a map.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">- Add a New Device – to add another navigation system.</p>-Click on the button "Add New Service".-Enter the map serial number (see item 2).-Select a map coverage area from the drop-down box and click on "Unlock Map Product".-The page with the list of devices opens; under the device, you find the activated service and the activation code. The activation code will also be sent by e-mail to the address given during the registration process.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Activation code entering in the "INSTANT NAV" navigation system</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To enter the activation code in the navigation system, proceed as follows:</p>-Correctly place the SD-Card in the navigator.-Press the button MENU (10 – Fig. 1) to enter the navigation system menu.-Turn the right knob, select "CONFIGURATIONS" and press the knob to confirm.-In the menu, select the "SD CARD - MEDIA AND MAPS" option.-In the menu, select the option "MAP LICENSE ACTIVATION" and enter the activation code.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">To check the map activation, go back to the "SD CARD - MEDIA AND MAPS" menu and select the option "MAP LICENSE STATUS".</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">If it is activated, the following is displayed:</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Status: activated</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Km limit: unlimited</b></p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>Further info</b></p>-The SD-Card with the maps must be used on the navigation system as it is and should not be used in other devices.-No further data can be added to the SD-Card (e.g. music tracks, pictures, other maps, etc...), or the system functions can be affected.-Up to 10 nations/versions can be activated. By entering the eleventh activation code, the less recently used map is automatically removed.-A map on SD-Card can get the activation code for only one system.-If you buy the map of another nation, you need to activate it as above described.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>How to register</b></p>-To get the activation code on-line you need to register, creating an account.<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>1</b>. Click on "Register" in top right corner; a screen for entering personal details <b> (*)</b>, such as name, address, e-mail address for future activations is displayed.</p><table class="nota"><tr><td><img border="0" src="images/jpg/767_2.jpg"></td><td><span class="contents_testonota "><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Please note that the e-mail address is not compulsory, but is should be given to receive activation codes by e-mail.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The fields marked by an asterisk "*" are compulsory.</p></p></span></td></tr></table><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>2</b>. You need to give / create a user name. Write an easy-to-remember name, because you need to use it later on for each activation of a map. Once registered, the user name cannot be changed. The user name must:</p>-contain at least six (6) characters-contain only alphanumeric characters, excluding special characters or symbols-e-mail addresses cannot be used as user name<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>3</b>. You need to give / create a password. The password can be changed after the registration. The password must:</p>-contain at least six (6) characters and do not exceed twenty (20) characters-it must include at least one small letter and one number-the password cannot correspond to the user name<p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>4</b>. Select one of the three security questions and give a security answer. If you forget the password, you will be asked to reply to this question.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The reply to the security question is case sensitive; please write the reply all caps or all small letters.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>5</b>. After entering the required information, click on "Register Now" in the bottom right corner.</p><p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;"><b>(*)</b> Personal details are processed according to the terms of the NAVTEQ privacy policy, available on the page www.navteq.com, clicking on the privacy policy.</p></td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939925065&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Service+News&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 16:58:33 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

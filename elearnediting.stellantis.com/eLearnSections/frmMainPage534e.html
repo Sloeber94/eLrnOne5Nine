@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011328&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=CENTRE+REAR+SEAT+BELT+-+R.R.&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:42:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011328&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=CENTRE+REAR+SEAT+BELT+-+R.R.&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4+JTD+20V" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="vc2XaifHyllGREcVSNFEL+DqU7DTZY9OTAfpJrgu8laLfxfwi3qK43lTS/oF3XbntEWD7CaXiFP0n/Sy4S5VXwmZ4DvqqF6ZfYCU3wMOYUxTSnqOF0aiRTsObTRSr43XYaWhs90SHhH44iU4iztBHwQjzcWcLBBfqSLNMrBiL3bIN6Pw52PCAVsuw5zsKzv3XmVPyILMORxc1eHzu2RdSJUC6emI/sMfHHeox7BtnCPfXgSV92AaEQORF9LSLQuD3NQuIdZoKacJhzRigdyt2b1FVvQv/gxabfAEP0Xbx+FmwN8Qh97Z6rA006km4cgOGJzivfmGRjcll8rarf9j5IZOPUP9OgbgTqOvZGMaHU+DJ42Zds+NVGvTvMVMRcuNxbT3FgBYyGsXcM0yt3jeXYO796peVdvxNw41kPei9EPKKVbozH9/BgbLDk9/YsI4rNGv76z+YtfEgIJ+N6+sbC/8M1Ss6YPVkWwwC7qg4wGcsHz4/9H+AxvzE4DcRxEs2/MT5uz+wG/WzDHIoR00Jt/cBjg/onVs78w1JsmVQHNKv3z7eyVI6lIvJstJ8hIgwDV9dXmtv9fTfz/ESQLdLJKpHmxYl8BgBFIrUZMtkt7/rCxpcBcooXt2ZZB1EEtTxuqgHdx/B+ogHsN/U2GkTAgYNKsUxhU4lxNpjIGI0PsYF06B8/ddEy2AUai2lx6HZXM0zFAIdQlHSAm9K1zOnAnZdn4PQEmLjXcFNxRIuOOxlUF3AqjxaZmu9e3gyUg3Dr3ETBMPnj7dirLkVobgvZ2vzXZG1qkSpVHLACh8Ao+8zWnx4GTQxSckZbcvBh+9zvNRbh+Zv0kSBnieT8mOGJWfFU8RKx4PqtdFBtwuYY2S5/rTxPAlbHyBHbSZbg44TafSq6+sdknvqcbNNFNnyDkzQ0lhKJM8NDbcsNP97h++FfRS6D1BJxm39fVqBjlYMSf4KxzPLeu2zoWPdjo/4Cg5G18bf5POETIKT68E1+XeHYL13b5ySDUSqo6YPaj26mNo07boAu7IJ0MVfz3Ol2r0AXkZA2W6JA+cozUkaWDDprq4vgXvmSg11mbfM1DdfIP7iuEwAIQkRyWb4bAUXg==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="QG25kCwPM1/rqO5L7nI5MqkjpNcJoVwkj+e1cc0ek2xtXTf28Jp0i3C+wsMerT9mM5tWKfORm40K92evKLRbbZb6LXfPTjplMgUqgRZ5qYLbDADLdN0pDaJy5cEGfUOr" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspSKI FLAP IN REAR SEAT BACKREST - R.R.&nbsp&nbsp&nbsp7050A78&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right"><a id="hypBack" class="contents_link" href="javascript:history.back()" target="_parent">Go back to  CENTRE REAR SEAT BELT - R.R.</a>
+	                    
+                            <div id="toolbar_div" style="text-align:left;">
+                                <div id="Div1" style="text-align:left;float:left; width:250px;">
+                                    <img id="Image1" src="images/espandi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label1">Detail</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <img id="Image3" src="images/chiudi_legenda.gif" style="height:15px;width:15px;" />
+                                    <span id="Label3">Detail</span>
+                                </div>                            
+                                <div id="closeMe" style="text-align:left; width:450px; vertical-align:middle;visibility:hidden;">
+                                    <img alt="close" src="images/icona_chiudi.jpg" width="15px" height="15px" border="0" onclick="DisposeAll()" />
+                                    <a href="#" id="dispose_a" onclick="DisposeAll()">Minimize the details</a>
+                                    <input name="TextBox1" type="text" id="TextBox1" style="height:0px;visibility:hidden;height:0px;" />
+                                </div>
+                            </div>
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <p><b>APPLICABLE TO VERSIONS WITH:  One-piece rear seat</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939000734_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <img src="images/jpg/20_2.jpg" border="0">Removing<a class="title" name="0"></a>
+		(
+		<a href="#1" class="title_link">Refitting<img src="images/jpg/21_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale "><span class="testo_link"> </span><a class="contents_link" href="main08b8.html?nodeID=939011250&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=SKI%20FLAP%20IN%20REAR%20SEAT%20BACKREST%20-%20R.R.&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040B20 BACK TRIM FOR LUGGAGE COMPARTMENT/LOAD PLATFORM - ARRANGE</a></p><p class="contents_testonormale ">1. Release the retaining buttons using the special tool.</p><table class="contents_table" cellspacing="0"><tr><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Tool</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Description</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Function</p></td><td class="header_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Validity</p></td></tr><tr><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">1823015000</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Knife</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale ">Retainer removal</p></td><td class="body_table" colspan="" rowspan=""> 
+ 
+						<p class="contents_testonormale "></p></td></tr></table><p class="contents_testonormale ">2. Remove the ski flap.</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939011328&languageID=2&modelID=939500000&valID=939000001&prodID=939000001&markID=2&dhb=CENTRE+REAR+SEAT+BELT+-+R.R.&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Diagnosi&validityName=2.4+JTD+20V by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 19:42:16 GMT -->
+</html><p><b>APPLICABLE TO VERSIONS WITH:  One-piece rear seat</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+              </td>
+              <td valign="top">
+                <img src="images/jpg/21_2.jpg" border="0">Refitting<a class="title" name="1"></a>
+		(
+		<a href="#0" class="title_link">Removing<img src="images/jpg/20_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">- Check that the ski flap is not damaged.</p><p class="contents_testonormale ">- Place the ski flap in position.</p><p class="contents_testonormale ">- Attach the retaining buttons.</p><p class="contents_testonormale "><span class="testo_link"> </span><a class="contents_link" href="main08b8.html?nodeID=939011250&amp;languageID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;markID=2&amp;dhb=SKI%20FLAP%20IN%20REAR%20SEAT%20BACKREST%20-%20R.R.&amp;modelName=Alfa%20-%20140%20-%20Alfa%20159&amp;langDesc=English&amp;sectionName=Diagnosi&amp;validityName=2.4%20JTD%2020V" target="_parent" id="a1">  Op. 7040B20 BACK TRIM FOR LUGGAGE COMPARTMENT/LOAD PLATFORM - ARRANGE</a></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Split rear seat</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939004818_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <img src="images/jpg/20_2.jpg" border="0">Removing<a class="title" name="0"></a>
+		(
+		<a href="#1" class="title_link">Refitting<img src="images/jpg/21_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">1. Operate the lever (1a) to release the left backrest (1b), then fold forward to the end of its travel.</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Split rear seat</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939004819_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <p class="contents_testonormale ">1. Remove the rear frame (1a) releasing the inner retainers (1b).</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Split rear seat</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+                <img src="images/jpg/939004820_2.jpg" class="contents_jpeg" style="border-style:solid; border-width:1px; width:250px;"><BR></td>
+              <td valign="top">
+                <p class="contents_testonormale ">- Lift up the backrest to the end of its travel and and attach it to the striker.</p>
+                <p class="contents_testonormale ">1. Lower the armrest until it is in the end of travel position.</p>
+                <p class="contents_testonormale ">2. Rotate the release knob (2a) and lower the ski flap (2b).</p>
+                <p class="contents_testonormale ">3. Release the inner retainers (3a) and move the front frame (3b) slightly forwards.</p>
+                <p class="contents_testonormale ">4. Remove the frame and ski flap (4a) lifting it up to release the lower retainers (4b).</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html><p><b>APPLICABLE TO VERSIONS WITH:  Split rear seat</b></p><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:asp="remove">
+  <body>
+    <table class="codep" width="100%">
+      <tr>
+        <td>
+          <table class="gruppofase">
+            <tr>
+              <td valign="top" align="right" width="250px">
+                <img src="images/none.gif" width="250px" height="1px" class="contents_jpeg">
+              </td>
+              <td valign="top">
+                <img src="images/jpg/21_2.jpg" border="0">Refitting<a class="title" name="1"></a>
+		(
+		<a href="#0" class="title_link">Removing<img src="images/jpg/20_2.jpg" border="0"></a>
+		)
+	<p class="contents_testonormale ">- Check that the ski flap and frame are not damaged.</p><p class="contents_testonormale ">- Place the ski flap and frame in position and attach the lower retainers and then the other perimeter retainers.</p><p class="contents_testonormale ">- Lift up the ski flap and secure it using the knob.</p><p class="contents_testonormale ">- Raise the armrest.</p><p class="contents_testonormale ">- Operate the lever to release the backrest, then fold it forward to the end of its travel.</p><p class="contents_testonormale ">- Position the rear frame and attach the inner retainers.</p><p class="contents_testonormale ">- Lift up the backrest to the end of its travel and and attach it to the striker.</p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>

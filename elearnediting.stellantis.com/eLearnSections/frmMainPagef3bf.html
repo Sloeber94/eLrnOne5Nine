@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003511&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="head"><title>
+	Contents
+</title><meta content="Microsoft Visual Studio 7.0" name="GENERATOR" /><meta content="C#" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><link rel="stylesheet" media="screen" type="text/css" href="css/contents.css"><link rel="stylesheet"  type="text/css" href="css/contents_alfa.css">
+        <!--[if lte IE 6]>
+            <script type="text/javascript" src="js/supersleight.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="js/jquery-1.4.1-vsdoc.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+        <script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FSXK7VK1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-7FSXK7VK1F');
+        </script>
+        <script type="text/javascript" language="javascript">
+            var myId;
+
+            function DisposeAll() {
+                window.parent.location.reload();
+            }
+
+
+            function ViewiFrame(btnID) {
+                if (btnID[0] != null) {
+                    myId = "iFrame_" + btnID[0].id.substr(4);
+                }
+                else {
+                    myId = "iFrame_" + btnID.id.substr(4);
+                }
+                var myFrame = $(myId);
+                if (myFrame != null) {
+                    var btn2
+                    if (btnID[0] != null) {
+                        btn2 = document.getElementById(btnID[0].id);
+                    }
+                    else {
+                        btn2 = document.getElementById(btnID.id);
+                    }
+                    if (btn2.src.indexOf("espandi.html") > 0) {
+                        btn2.src = "images/chiudi.gif";
+                        $('#' + myId).css('visibility', 'visible');
+                        $('#' + myId).width('100%');
+                        $('#' + myId).height('100%');
+                        $('#' + myId).html("<b><i>caricamento procedura in corso...</i></b>");
+                        CallServer(myId.substr(7), "");
+
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                    }
+                    else {
+                        btn2.src = "images/espandi.gif"
+                        if (document.body.innerHTML.indexOf('chiudi.html') > -1) {
+                            document.getElementById('closeMe').style.visibility = 'visible';
+                        }
+                        else {
+                            document.getElementById('closeMe').style.visibility = 'hidden';
+                        }
+                        $('#' + myId).css('visibility', 'hidden');
+                        $('#' + myId).height('0px');
+                        $('#' + myId).html("");
+                    }
+                }
+            }
+
+            function ReceiveServerData(rValue) {
+                if (document.getElementById(myId) != null) {
+                    var doc = document.getElementById(myId);
+                    var beforeString = '</td></tr></table><table style=\"height:0;margin-left:20px;\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr><td>';
+                    var afterString = '</td></tr></tbody></table><table class=\"gruppofase\"><tbody><tr><td valign=\"top\" align=\"right\" width=\"250px\" height=\"1px\"><img src=\"./images/none.gif\" width=\"250px\" height=\"1px\" class=\"contents_jpeg\"><img src=\"\" visible=\"false\" height=\"1px\" class=\"contents_jpeg\"></td><td>';
+                    $('#' + myId).html(rValue);
+                    //                    doc.previousSibling.insertAdjacentHTML('afterEnd',beforeString);
+                    //                    doc.nextSibling.insertAdjacentHTML('beforeBegin',afterString);
+                }
+            }
+
+            function hideLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='hidden';
+                //document.getElementById('closeMe').style.visibility='hidden';
+            }
+
+            function showLegenda() {
+                //document.getElementById('toolbar_div').style.visibility='visible';
+                //document.getElementById('closeMe').style.visibility='visible';
+            }
+    </script>
+        <script type="text/javascript">
+            function getQSParam(ParamName) {
+                // Memorizzo tutta la QueryString in una variabile
+                var QS = window.location.toString();
+                // Posizione di inizio della variabile richiesta
+                var indSta = QS.indexOf(ParamName);
+                // Se la variabile passata non esiste o il parametro è vuoto, restituisco null
+                if (indSta == -1 || ParamName == "") return null;
+                // Posizione finale, determinata da una eventuale &amp; che serve per concatenare più variabili
+                var indEnd = QS.indexOf('&amp;', indSta);
+                if (indEnd == -1) indEnd = QS.indexOf('&', indSta);
+                // Se non c'è una &amp;, il punto di fine è la fine della QueryString
+                if (indEnd == -1) indEnd = QS.length;
+                // Ottengo il solore valore del parametro, ripulito dalle sequenze di escape
+                var valore = QS.substring(indSta + ParamName.length + 1, indEnd);
+                while (valore.indexOf("+") >= 0) {
+                    valore = valore.replace("+", "%20");
+                }
+                //valore = decodeURIComponent(QS.substring(indSta + ParamName.length + 1, indEnd));
+                // Restituisco il valore associato al parametro 'ParamName'
+                valore = decodeURIComponent(valore);
+                return valore;
+            }
+        </script>
+	</head>
+	<body onbeforeprint="hideLegenda()" onafterprint="showLegenda()">			        
+        <form method="post" action="http://elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003511&amp;languageID=2&amp;markID=2&amp;modelID=939500000&amp;valID=939000001&amp;prodID=939000001&amp;modelName=Alfa+-+140+-+Alfa+159&amp;langDesc=English&amp;sectionName=Descrizioni&amp;validityName=2.4+JTD+20V&amp;isExaminer=" id="_target" style="height:0px;position:relative;margin-bottom:25px;">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="d3Bt5QezBWxLjV0jASrs1vNafFfTE6h5EA4BOIgrCazNOEUV7DMK2paFIymbbGFJbFOV2iMoWCFJCoAX3PQ8lT0paVWmfLZwnmevA2C6zDFeXcu48nNJLFdkJzjmH2ApalVdXXL4BvGUxwWI6FmN0GsEUSxKxe5BZ8ixDfbI7XkoljgyjFp1Hq92gkkzgxkOMYw+Jg8MpOTr7LIxD9ZrYgZeBznvemjKV1TbC4j0UzVnpc8Z/p1KvbqSRYRspdj0vF8NYDhG3QPtg7tJnRxMx30jvYbLMvj6yE2J6oo20khVjpewg6zBk+C7K+jQwf/yQ0MPQfn2mbEdXS2zLZGg7o1Tar81zkTCwawCAJBrXJTM8vrvhDltV7gIrBSPu60DPmhVZsmLBrxIsplKGA70/pc5fpdt3X7vp8/9GexAjBlDwKbjk5KBxdY5dGTGKr9SFR8bol3AQlA1+7ahKQg6KFiq4Hb88EDXryR/clI/U9pAubJDBMqRggFsfUgoYw6ZBiNCv7vqaOfV423mhyUGcLNUFmrpPIhrcfGWOfB3gCT5xyHte2y9mo1thGJwYhdUjWliXMHQxYqwBbEHtJDhznohGHY+qmdnk1Vrty7+8lF1HoUnIq4b1gnS2lFZvvDZC8PmivdbEvi+usoXMcpCOsE83vdjU86XGfYbyKtR8Ye1mchnD1hDXWCpdGt+r4cPWOohWNX0Hxux5efF+2li7sW+ftuskLG65w3OZ+oVBdkbC98CvFXLheyyYgJBu3HrwBz4zdljCLXjx6/NcteUAkKaqNYM00f9GJiQoNyBSGhkfDBmNafv4kBDT2EgUZLg" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['_target'];
+if (!theForm) {
+    theForm = document._target;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourcee00c.js?d=pynGkmcFUV13He1Qd6_TZBnlldtfO4Z60nYXzwbVWxnE-qBsyxPqedpVa0m6shn1CzfTLbN9v3Zi6zQQHPOMag2&amp;t=639190905332169432" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false);}//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4A829531" />
+</div>
+            <DIV class="print"><center><font size=4>140 - Alfa 159&nbsp&nbsp&nbsp2.4 JTD 20V&nbsp&nbsp&nbspINTRODUCTION - MECHANICAL GEARBOX (4X2)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></center></DIV><BR>
+            <TABLE id="Table1" cellSpacing="1" cellPadding="1" width="100%" border="0">
+                <TR>
+	                <TD align="right">
+	                    
+                            
+	                    <HR id="separator" style="WIDTH: 100%; HEIGHT: 1px" width="100%" SIZE="1"></HR>	                    
+                        <span id="myValues" style="display:inline-block;height:0px;visibility:hidden;height:0px;"></span>
+	                </TD>
+                </TR>
+            </TABLE>
+		
+<script>(function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1 * new Date();a = s.createElement(o),m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m)})(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');ga('create', 'UA-41258196-2', 'fiat.com');ga('send', 'pageview');var dimensionValue = getQueryStringParam('modelName');ga('set', 'dimension8', dimensionValue);var dimensionValue2 = getQueryStringParam('langDesc');ga('set', 'dimension6', dimensionValue2);var dimensionValue3 = getQueryStringParam('sectionName');ga('set', 'dimension7', dimensionValue3);var dimensionValue4 = getQueryStringParam('validityName');ga('set', 'dimension10', dimensionValue4);function getQueryStringParam(ParamName) {var QS = window.location.toString();var indSta = QS.indexOf(ParamName);if (indSta == -1 || ParamName == "") return null;var indEnd = QS.indexOf('&amp;', indSta);if (indEnd == -1) indEnd = QS.indexOf('&', indSta);if (indEnd == -1) indEnd = QS.length;var valore = QS.substring(indSta + ParamName.length + 1, indEnd);while (valore.indexOf("+") >= 0) {valore = valore.replace("+", "%20");} valore = decodeURIComponent(valore);return valore;}</script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+	    
+
+
+
+	    <html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <body>
+    <table width="100%" border="0">
+      <tr>
+        <td>
+          <h1 class="bigtext1">CO-AXIAL HYDRAULIC OPERATION (CSC)</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The (CSC) operating system comprises an actuating cylinder located on the bell housing which controls the clutch, working co-axially in relation to the main shaft.</p>
+          <center>
+            <img src="images/jpg/939003341_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+            <li class="elemento_legenda">1. Air bleed plug</li>
+            <li class="elemento_legenda">2. Oil pressure inlet</li>
+            <li class="elemento_legenda">3. Co-axial hydraulic operation assembly</li>
+          </ul>
+          <h1 class="bigtext1">F40 GEARBOX</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The diagrams show the F40 gearbox assembly with three propeller shafts.</p>
+          <center>
+            <img src="images/jpg/939003342_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+            <li class="elemento_legenda">1. Gear engagement assembly</li>
+            <li class="elemento_legenda">2. Layshaft C</li>
+            <li class="elemento_legenda">3. Main shaft A</li>
+            <li class="elemento_legenda">4. Main shaft B</li>
+          </ul>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The configuration of the gearbox is transverse with three shafts: one main shaft (A) and two layshafts (B and C).</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Five fixed gears are formed on main shaft A; these are designed to transmit power to the gears for 1st, 2nd, 3rd, 4th, 5th, 6th and Reverse speeds on the two layshafts B and C which they mesh with constantly.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The two layshafts B and C both have a pinion which meshes constantly with the differential ring gear.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">Layshaft B contains the 1st and 2nd speed and the 5th and 6th speed gear packs, whilst layshaft C contains the 3rd and 4th speed and the reverse gear packs.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The components inside the gearbox are lubricated dynamically, by means of the oil flowing through the ducts in the casings and the ports in the shafts as well as additional plastic ducts; all of this allows improved torque transmission and better protection against wear.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The clutch is hydraulically operated with the C.S.C. co-axial system on the main shaft inside the gearbox.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This system produces the following advantages:</p>
+          <p class="titolo_lista"></p>
+          <ul class="elenco">
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">clutch plate wear take-up, which allows the load on the clutch pedal to remain constant throughout the life of the vehicle</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">improved acoustic comfort</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">reduction of the engagement force</p>
+            </li>
+            <li class="elemento_lista">
+              <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">no vibrations / shuddering of the lever</p>
+            </li>
+          </ul>
+          <h1 class="bigtext1">Gearbox in neutral position</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The diagram below shows the position of the gearbox when no gear is engaged.</p>
+          <center>
+            <img src="images/jpg/939003343_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+            <li class="elemento_legenda">1. 1st speed gear</li>
+            <li class="elemento_legenda">2. 1st and 2nd speed synchronizer</li>
+            <li class="elemento_legenda">3. 2nd speed gear</li>
+            <li class="elemento_legenda">4. 3rd speed gear</li>
+            <li class="elemento_legenda">5. 3rd and 4th speed synchronizer</li>
+            <li class="elemento_legenda">6. 4th speed gear</li>
+            <li class="elemento_legenda">7. 5th speed gear</li>
+            <li class="elemento_legenda">8. 5th and 6th speed synchronizer</li>
+            <li class="elemento_legenda">9. 6th speed gear</li>
+            <li class="elemento_legenda">10. Reverse gear</li>
+            <li class="elemento_legenda">11. Reverse synchroniser</li>
+            <li class="elemento_legenda">12. Differential</li>
+            <li class="elemento_legenda">A. Main shaft</li>
+            <li class="elemento_legenda">B. Layshaft</li>
+            <li class="elemento_legenda">C. Layshaft</li>
+          </ul>
+          <h1 class="bigtext1">TRANSMISSION OF POWER IN THE VARIOUS GEARS</h1>
+          <h1 class="bigtext1">First speed</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The power enters the gearbox via mainshaft A and is transmitted, through the fixed drive gear, to the driven gear for 1st speed on layshaft B.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When 1st speed is engaged, synchronizer 2 joins driven gear 1 to layshaft B and the power is transmitted to differential 12, thereby completing the drive chain.</p>
+          <center>
+            <img src="images/jpg/939003344_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+            <li class="elemento_legenda">A. Main shaft</li>
+            <li class="elemento_legenda">B. Layshaft</li>
+            <li class="elemento_legenda">1. 1st speed gear</li>
+            <li class="elemento_legenda">2. Synchronizer</li>
+            <li class="elemento_legenda">12. Differential</li>
+          </ul>
+          <h1 class="bigtext1">Second speed</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The power enters the gearbox via mainshaft A and is transmitted, through the fixed drive gear, to driven gear 3 for the 2nd speed on layshaft B.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When 2nd speed is engaged, synchronizer 2 joins driven gear 3 to layshaft B and the power is transmitted to differential 12, thereby completing the drive chain.</p>
+          <center>
+            <img src="images/jpg/939003345_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+            <li class="elemento_legenda">A. Main shaft</li>
+            <li class="elemento_legenda">B. Layshaft</li>
+            <li class="elemento_legenda">2. Synchronizer</li>
+            <li class="elemento_legenda">3. 2nd speed gear</li>
+            <li class="elemento_legenda">12. Differential</li>
+          </ul>
+          <h1 class="bigtext1">Third speed</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The power enters the gearbox via mainshaft A and is transmitted, through the fixed drive gear, to driven gear 4 for 3rd speed on layshaft C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When 3rd speed is engaged, synchronizer 5 joins driven gear 4 to layshaft C and the power is transmitted to differential 12, thereby completing the drive chain.</p>
+          <center>
+            <img src="images/jpg/939003346_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+            <li class="elemento_legenda">A. Main shaft</li>
+            <li class="elemento_legenda">C. Layshaft</li>
+            <li class="elemento_legenda">4. 3rd speed gear</li>
+            <li class="elemento_legenda">5. Synchronizer</li>
+            <li class="elemento_legenda">12. Differential</li>
+          </ul>
+          <h1 class="bigtext1">Fourth speed</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The power enters the gearbox via mainshaft A and is transmitted, through the fixed drive gear, to driven gear 6 for 4th speed on layshaft C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When 4th speed is engaged, synchronizer 5 joins driven gear 6 to layshaft C and the power is transmitted to differential 12, thereby completing the drive chain.</p>
+          <center>
+            <img src="images/jpg/939003347_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+            <li class="elemento_legenda">A. Main shaft</li>
+            <li class="elemento_legenda">C. Layshaft</li>
+            <li class="elemento_legenda">5. Synchronizer</li>
+            <li class="elemento_legenda">6. 4th speed gear</li>
+            <li class="elemento_legenda">12. Differential</li>
+          </ul>
+          <h1 class="bigtext1">Fifth speed</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The power enters the gearbox via mainshaft A and is transmitted, through the fixed drive gear, to driven gear 7 for 5th speed on layshaft B.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When 5th speed is engaged, synchronizer 8 joins driven gear 7 to layshaft B and the power is transmitted to differential 12, thereby completing the drive chain.</p>
+          <center>
+            <img src="images/jpg/939003348_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+            <li class="elemento_legenda">A. Main shaft</li>
+            <li class="elemento_legenda">B. Layshaft</li>
+            <li class="elemento_legenda">7. 5th speed gear</li>
+            <li class="elemento_legenda">8. Synchronizer</li>
+            <li class="elemento_legenda">12. Differential</li>
+          </ul>
+          <h1 class="bigtext1">Sixth speed</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The power enters the gearbox via mainshaft A and is transmitted, through the fixed drive gear, to driven gear 9 for 6th speed on layshaft B.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When 6th speed is engaged, synchronizer 8 joins driven gear 9 to layshaft B and the power is transmitted to differential 12, thereby completing the drive chain.</p>
+          <center>
+            <img src="images/jpg/939003349_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+            <li class="elemento_legenda">A. Main shaft</li>
+            <li class="elemento_legenda">B. Layshaft</li>
+            <li class="elemento_legenda">8. Synchronizer</li>
+            <li class="elemento_legenda">9. 6th speed gear</li>
+            <li class="elemento_legenda">12. Differential</li>
+          </ul>
+          <h1 class="bigtext1">Reverse gear</h1>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">The power enters the gearbox via main shaft A through drive gear 1 for the 1st speed on layshaft B.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">This gear remains free on its shaft and only works as an idler for the power between main shaft A and driven gear 10 for reverse on layshaft C.</p>
+          <p class="contents_testonormale " style="margin-top:1px;margin-bottom:0px;">When reverse is engaged, synchronizer 11 joins reverse gear 10 to layshaft C and the power is transmitted to differential 12, thereby completing the drive chain.</p>
+          <center>
+            <img src="images/jpg/939003350_2.jpg" border="0">
+          </center>
+          <br>
+          <ul class="elencolegenda">
+            <li class="elemento_legenda">A. Main shaft</li>
+            <li class="elemento_legenda">C. Layshaft</li>
+            <li class="elemento_legenda">1. 1st speed gear (neutral on the shaft)</li>
+            <li class="elemento_legenda">10. Reverse gear</li>
+            <li class="elemento_legenda">11. Reverse synchroniser</li>
+            <li class="elemento_legenda">12. Differential</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+<!-- Mirrored from elearnediting.stellantis.com/eLearnSections/frmMainPage.aspx?nodeID=939003511&languageID=2&markID=2&modelID=939500000&valID=939000001&prodID=939000001&modelName=Alfa+-+140+-+Alfa+159&langDesc=English&sectionName=Descrizioni&validityName=2.4+JTD+20V&isExaminer= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Oct 2026 17:26:40 GMT -->
+</html>
+<p>
+	<!-- VIS ultime service news pubblicate-->
+<P></P>
+
+<!--------------------------------------------->
+<P><table class="nav" cellspacing="0" id="NavigationControl1_grdNav" style="border-style:None;font-family:Verdana;border-collapse:collapse;FONT-SIZE: 10pt; FONT-COLOR: Black">
+
+</table></P>
+
+	</body>
+</HTML>
